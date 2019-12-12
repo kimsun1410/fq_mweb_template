@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>연봉계산기_FIAA04Z07_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_dna.css" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 : FIAA04Z07 -->
+	<div id="contents" class="finance_dna">
+		<!-- 업데이트 추가 2019-01-22 ock -->
+		<p class="update">
+			<span>업데이트<!--  오늘 --></span><em class="date">2018.10.25</em><em class="time">11:30</em><a href="#none"><i class="ico ico_reload"><span class="blind">Refresh</span></i></a>
+		</p>
+		<!-- 업데이트 중 2019-01-22 ock -->
+		<!-- <p class="update">
+			<span class="txt_loading">업데이트 중</span><a href="#none"><i class="ico ico_reload loading"><span class="blind">Refresh</span></i></a>
+		</p> -->
+
+		<div class="form_type_dna01 in_dna01">
+			<article class="sec_input_wrap">
+				<dl>
+					<dt class="square_tab">
+						<ul class="tab_purple up_three unBold">
+							<li class="recently_income on"><button type="button">최근소득</button></li><!-- recently_income 추가 2019-01-23 ock -->
+							<li><button type="button">홈택스</button></li>
+							<li class="direct_control"><button type="button">직접입력</button></li>
+						</ul>
+					</dt>
+					<!-- input type="tel" 로 변경 2019-01-16 ock -->
+					<dd class="direct_wrap item">
+						<input type="tel" data-name="inpFocus" placeholder="" class="inp_money comma_wonhan" value="30,000,000 원">
+						<div class="btn_text05 income_more"><a href="#none">소득정보 확인</a></div><!-- 소득정보확인 버튼 추가 2019-01-23 ock -->
+					</dd>
+				</dl>
+				<dl>
+					<dt class="input_tit">연간 공제액</dt>
+					<dd class="input_cont item">
+						<input type="text" data-name="inpFocus" placeholder="" class="inp_money comma_wonhan" value="2,891,040 원" disabled="disabled">
+					</dd>
+				</dl>
+				<dl>
+					<dt class="input_tit">연간 예상 실 수령액</dt>
+					<dd class="input_cont item">
+						<input type="text" data-name="inpFocus" placeholder="" class="inp_money comma_wonhan" value="27,108,960 원" disabled="disabled">
+					</dd>
+				</dl>
+				<dl>
+					<dt class="input_tit">월 환산 소득</dt>
+					<dd class="input_cont item">
+						<input type="text" data-name="inpFocus" placeholder="" class="inp_money comma_wonhan" value="2,259,000 원">
+					</dd>
+				</dl>
+			</article>
+			<article class="subtract_wrap add_dotline3">
+				<h2 class="tit">매월 공제 내역</h2>
+				<div class="cal_wrap03">
+					<dl class="cal">
+						<dt class="tit">국민연금(<span class="num">4.5%</span>)</dt>
+						<dd class="cont"><span class="num bold">108,000</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">건강보험(<span class="num">3.12%</span>)</dt>
+						<dd class="cont"><span class="num bold">74,880</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">고용보험(<span class="num">0.65%</span>)</dt>
+						<dd class="cont"><span class="num bold">15,600</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">근로소득세(간이세액)</dt>
+						<dd class="cont"><span class="num bold">221,889</span>원</dd>
+					</dl>
+					<div class="cal_total">
+						<dl class="cal">
+							<dt class="tit">월 공제액(세금)</dt>
+							<dd class="cont"><span class="num bold">612,689</span>원</dd>
+						</dl>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<div class="sec_basic_txt1 bul_guide">
+			<p class="star_type indent">최근 <span class="num">30</span>일 이내 소득으로 추정한 금액입니다.<br>실제 금액과 차이가 있을 수 있습니다.</p>
+		</div>
+		
+
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	//최근소득 클릭시 소득정보 확인 보이기 2019-01-23
+	$(".square_tab").on("click", "button", function(){
+		if ($(this).parents('li').hasClass('recently_income')){
+			$(this).parents('.square_tab').next('.direct_wrap').find('.income_more').removeClass('hide');
+		} else {
+			$(this).parents('.square_tab').next('.direct_wrap').find('.income_more').addClass('hide');
+		}
+	});
+
+	
+});
+</script>
+</body>
+</html>

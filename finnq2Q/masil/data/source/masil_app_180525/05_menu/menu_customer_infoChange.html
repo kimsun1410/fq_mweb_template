@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko" class="md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Finnq_Well Living_Masil</title>
+    <link rel="stylesheet" href="../css/omo.css">
+  <link rel="stylesheet" href="../css/finnqUi.css">
+</head>
+
+<body>
+
+<div id="app">
+
+
+	<div class='top_nav bg1 hr1'>
+		<button class='close'></button>
+		<div class='nav_title'>실명, 휴대전화번호 변경 안내</div>
+	</div>
+
+	<div class="page">
+
+<!-- contents -->
+<div class='body_frame top_pad_type1'>
+
+		<ul class='info_change_wrap'>
+			<li>
+				<p>실명과 휴대전화번호를 변경하시려면 본인인증을 다시 하셔야 합니다. </p>
+			</li>
+			<li>
+				<label class="ms_comp ms_check">
+					<input type="checkbox" class='ms_icon' name="agree_all" value="" />
+					<div class="ms_comp_cont">[필수] 통신사 이용약관 동의</div>
+				</label>
+				<button class='agree_term_btn'></button>
+			</li>
+		</ul>
+		<br/>
+
+
+
+<div class='body_box'>
+
+		<div class='app_form_wrap'><form name=''>
+
+			<div class='app_form_box'>
+				<div class='app_form_input'>
+					<input type='text' placeholder='홍길동' name='' />
+				</div>
+			</div>
+
+			<div class='app_form_box'>
+				<div class='app_form_input'>
+					<ul class='app_form_jumin'>
+						<li><input type='text' placeholder='생년월일(6자리)' maxlength='6' name='' /></li>
+						<li><input type='text' placeholder='●' maxlength='1' name='' /></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class='app_form_box'>
+				<div class='app_form_input'>
+					<ul class='app_form_cell'>
+						<li>
+							<div class='app_form_select'>
+								<select>
+									<option>통신사</option>
+									<option>SKT</option>
+									<option>KT</option>
+									<option>LG U+</option>
+								</select>
+							</div>
+						</li>
+						<li><input type='text' placeholder="숫자만 입력" maxlength='11' name='' /></li>
+						<li><button class='finnq_btn finnq_type2'>인증요청</button></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<div class='app_form_box'>
+				<div class='app_form_input'>
+					<input type='text' placeholder='인증번호 (6자리 숫자)' maxlength='6' name='' />
+					<div class='cert_timer'>03:00</div>
+				</div>
+				<p id="msg2"><span class='cert_timer'>인증 번호가 정확하지 않습니다.<br>다시 확인 해주시거나 [다시요청] 버튼을 눌러주세요</span></p>
+				<p id="msg3"><span class='cert_timer'>입력시간이 초과되었습니다.<br> [다시요청] 버튼을 눌러주세요.</span></p>
+				<p class='cert_warn'>입력 정보가 정확하지 않거나 고객센터 번호 (12345 - 6789)를 차단한 경우 인증 문자를 받지 못 할 수 있습니다.</p>
+				<br/>
+				<button class='finnq_btn solo_btn finnq_type3'>확인</button>
+			</div>
+
+
+	</form></div>
+
+	
+
+
+</div>
+</div>
+<!-- contents -->
+</div><!-- page:end -->
+
+
+</div><!-- app:end -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.event.drag-1.5.1.min.js"></script>
+<script src="../js/jquery.touchSlider.js"></script>
+<script src="../js/underscore.js"></script><script src="../js/underscore.js"></script>
+<script src="../js/finnqUi.js"></script>
+
+</body></html>

@@ -1,0 +1,226 @@
+@charset 'UTF-8';
+
+/* Color Palett */
+/* black */
+$black: #222; /* #000 사용안함 2018-04-11 ock */ /* $black-two 사용안함 #222로 합침 */
+$brownish_grey: #666;
+$warm_grey: #999;
+$pinkish_grey: #c8c8c8;
+
+/* white */
+$white_two: #e0e0e0; /* 습관저금 박스라인 */
+$white_three: #eee;
+$white_four: #f8f8f8;
+$white: #fff;
+
+/* purple */
+$purply_blue: #731aed;
+$purply_blue_two: #731aed;
+$purply_blue_three: #6516d0;
+$violet_blue: #5008b2;
+$lavender: #aa96f2;
+$pale_lavender: #f5eeff; /* 습관저금 버튼 활성화 백그라운드 */
+$pale_lavender_two: #eaddfd;
+$lighter_purple: #8848ff;
+$purpley: #8a6fea;
+$light_periwinkle: #dbd2fc;
+$bluish_purple: #7a3cee;
+$lavender_two: #ccc2f3;
+$light_violet: #dac5fc;
+$periwinkle: #9d68ff; /* dna add */
+
+/* etc color */
+$clear_blue: #278df5;
+$sun_yellow: #ffdb15;
+$seafoam_blue:#66d9d4;
+$reddish_orange: #f74b20;
+$green_blue: #00b389;
+$pumpkin: #f07400;
+$dark_sky_blue: #4a90e2;
+
+
+
+/* Size Variables */
+$line-height:1.3em;
+$font-head: 26px;
+
+/* width Variables */
+$min-width:320px;
+
+/* test */
+$title-font: normal 24px/1.5 'Open Sans', sans-serif;
+$base-font: "DeviceF", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial",  sans-serif;
+$cool-red: #F44336;
+$box-shadow-bottom-only: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+
+/*clearfix */
+.clearfix { }
+.clearfix:after {content:' '; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+
+@mixin font($size:14px) {
+	@if $size == 11px {
+		font-size:11px;
+		line-height:14px;
+	} @else if $size == 12px {
+		font-size:12px;
+		line-height:14px;
+	} @else if $size == 14px {
+		font-size:14px;
+		line-height:18px;
+	} @else if $size == 16px {
+		font-size:16px;
+		line-height:20px;
+	} @else if $size == 18px {
+		font-size:18px;
+		line-height:22px;
+	} @else if $size == 20px {
+		font-size:20px;
+		line-height:24px;
+	} @else if $size == 24px {
+		font-size:24px;
+		line-height:28px;
+	} @else if $size == 26px {
+		font-size:26px;
+		line-height:30px;
+	} @else if $size == 30px {
+		font-size:30px;
+		line-height:34px;
+	} @else if $size == 34px {
+		font-size:34px;
+		line-height:40px;
+	} @else if $size == 40px {
+		font-size:40px;
+		line-height:40px;
+	} @else {
+		font-size:14px;
+		line-height:18px;
+	}
+}
+
+@mixin marginTop ($size:10px) {
+	@if $size == 5px {margin-top: 5px;}
+	@else if $size == 3px {margin-top: 3px;}
+	@else if $size == 6px {margin-top: 6px;}
+	@else if $size == 8px {margin-top: 8px;}
+	@else if $size == 10px {margin-top: 10px;}
+	@else if $size == 11px {margin-top: 11px;}
+	@else if $size == 13px {margin-top: 13px;}
+	@else if $size == 15px {margin-top: 15px;}
+	@else if $size == 16px {margin-top: 16px;}
+	@else if $size == 18px {margin-top: 18px;}
+	@else if $size == 20px {margin-top: 20px;}
+	@else if $size == 21px {margin-top: 21px;}
+	@else if $size == 23px {margin-top: 23px;}
+	@else if $size == 25px {margin-top: 25px;}
+	@else if $size == 26px {margin-top: 26px;}
+	@else if $size == 28px {margin-top: 28px;}
+	@else if $size == 30px {margin-top: 30px;}
+	@else if $size == 31px {margin-top: 31px;}
+	@else if $size == 33px {margin-top: 33px;}
+	@else if $size == 35px {margin-top: 35px;}
+	@else if $size == 36px {margin-top: 36px;}
+	@else if $size == 38px {margin-top: 38px;}
+	@else if $size == 40px {margin-top: 40px;}
+	@else if $size == 41px {margin-top: 41px;}
+	@else if $size == 43px {margin-top: 43px;}
+	@else if $size == 45px {margin-top: 45px;}
+	@else if $size == 46px {margin-top: 46px;}
+	@else if $size == 48px {margin-top: 48px;}
+	@else if $size == 50px {margin-top: 50px;}
+}
+
+@mixin marginBottom ($size:10px) {
+	@if $size == 5px {margin-bottom: 5px;}
+	@else if $size == 3px {margin-bottom: 3px;}
+	@else if $size == 6px {margin-bottom: 6px;}
+	@else if $size == 8px {margin-bottom: 8px;}
+	@else if $size == 10px {margin-bottom: 10px;}
+	@else if $size == 11px {margin-bottom: 11px;}
+	@else if $size == 13px {margin-bottom: 13px;}
+	@else if $size == 15px {margin-bottom: 15px;}
+	@else if $size == 16px {margin-bottom: 16px;}
+	@else if $size == 18px {margin-bottom: 18px;}
+	@else if $size == 20px {margin-bottom: 20px;}
+	@else if $size == 21px {margin-bottom: 21px;}
+	@else if $size == 23px {margin-bottom: 23px;}
+	@else if $size == 25px {margin-bottom: 25px;}
+	@else if $size == 26px {margin-bottom: 26px;}
+	@else if $size == 28px {margin-bottom: 28px;}
+	@else if $size == 30px {margin-bottom: 30px;}
+	@else if $size == 31px {margin-bottom: 31px;}
+	@else if $size == 33px {margin-bottom: 33px;}
+	@else if $size == 35px {margin-bottom: 35px;}
+	@else if $size == 36px {margin-bottom: 36px;}
+	@else if $size == 38px {margin-bottom: 38px;}
+	@else if $size == 40px {margin-bottom: 40px;}
+	@else if $size == 41px {margin-bottom: 41px;}
+	@else if $size == 43px {margin-bottom: 43px;}
+	@else if $size == 45px {margin-bottom: 45px;}
+	@else if $size == 46px {margin-bottom: 46px;}
+	@else if $size == 48px {margin-bottom: 48px;}
+	@else if $size == 50px {margin-bottom: 50px;}
+}
+
+@mixin paddingTop ($size:10px) {
+	@if $size == 5px {padding-top: 5px;}
+	@else if $size == 3px {padding-top: 3px;}
+	@else if $size == 6px {padding-top: 6px;}
+	@else if $size == 8px {padding-top: 8px;}
+	@else if $size == 10px {padding-top: 10px;}
+	@else if $size == 11px {padding-top: 11px;}
+	@else if $size == 13px {padding-top: 13px;}
+	@else if $size == 15px {padding-top: 15px;}
+	@else if $size == 16px {padding-top: 16px;}
+	@else if $size == 18px {padding-top: 18px;}
+	@else if $size == 20px {padding-top: 20px;}
+	@else if $size == 21px {padding-top: 21px;}
+	@else if $size == 23px {padding-top: 23px;}
+	@else if $size == 25px {padding-top: 25px;}
+	@else if $size == 26px {padding-top: 26px;}
+	@else if $size == 28px {padding-top: 28px;}
+	@else if $size == 30px {padding-top: 30px;}
+	@else if $size == 31px {padding-top: 31px;}
+	@else if $size == 33px {padding-top: 33px;}
+	@else if $size == 35px {padding-top: 35px;}
+	@else if $size == 36px {padding-top: 36px;}
+	@else if $size == 38px {padding-top: 38px;}
+	@else if $size == 40px {padding-top: 40px;}
+	@else if $size == 41px {padding-top: 41px;}
+	@else if $size == 43px {padding-top: 43px;}
+	@else if $size == 45px {padding-top: 45px;}
+	@else if $size == 46px {padding-top: 46px;}
+	@else if $size == 48px {padding-top: 48px;}
+	@else if $size == 50px {padding-top: 50px;}
+}
+
+@mixin paddingBottom ($size:10px) {
+	@if $size == 5px {padding-bottom: 5px;}
+	@else if $size == 3px {padding-bottom: 3px;}
+	@else if $size == 6px {padding-bottom: 6px;}
+	@else if $size == 8px {padding-bottom: 8px;}
+	@else if $size == 10px {padding-bottom: 10px;}
+	@else if $size == 11px {padding-bottom: 11px;}
+	@else if $size == 13px {padding-bottom: 13px;}
+	@else if $size == 15px {padding-bottom: 15px;}
+	@else if $size == 16px {padding-bottom: 16px;}
+	@else if $size == 18px {padding-bottom: 18px;}
+	@else if $size == 20px {padding-bottom: 20px;}
+	@else if $size == 21px {padding-bottom: 21px;}
+	@else if $size == 23px {padding-bottom: 23px;}
+	@else if $size == 25px {padding-bottom: 25px;}
+	@else if $size == 26px {padding-bottom: 26px;}
+	@else if $size == 28px {padding-bottom: 28px;}
+	@else if $size == 30px {padding-bottom: 30px;}
+	@else if $size == 31px {padding-bottom: 31px;}
+	@else if $size == 33px {padding-bottom: 33px;}
+	@else if $size == 35px {padding-bottom: 35px;}
+	@else if $size == 36px {padding-bottom: 36px;}
+	@else if $size == 38px {padding-bottom: 38px;}
+	@else if $size == 40px {padding-bottom: 40px;}
+	@else if $size == 41px {padding-bottom: 41px;}
+	@else if $size == 43px {padding-bottom: 43px;}
+	@else if $size == 45px {padding-bottom: 45px;}
+	@else if $size == 46px {padding-bottom: 46px;}
+	@else if $size == 48px {padding-bottom: 48px;}
+	@else if $size == 50px {padding-bottom: 50px;}
+}

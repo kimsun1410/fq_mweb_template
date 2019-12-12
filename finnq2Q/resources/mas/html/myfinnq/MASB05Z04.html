@@ -1,0 +1,90 @@
+<html lang="ko"><head>
+	<meta charset="utf-8">
+	<title>금액 직접입력 팝업</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body data-device="ios" class="ios">
+<div class="wrap" id="MASB05Z04">
+	<div id="contents" class="myfinnq add_sticky">
+		<section class="charge_price">
+			<div class="sec_title">
+				<h3 class="accent_txt">이체할 계좌를 <strong>직접 입력</strong>하세요</h3>
+			</div>
+
+			<div class="sec_bank_confirm">
+				<div class="input_wrap item">
+					<!-- <button type="button" name="button" class="btn_select btn_type_a open_modal" data-triger="MASA05Z04">KEB하나</button> -->
+					<a href="#none"class="btn_select btn_type_a open_modal" data-triger="MASA05Z04">KEB하나</a><!-- a로 태그 변경 -->
+				</div>
+				<div class="input_wrap item">
+					<input type="number" data-name="inpFocus" placeholder="계좌번호 ‘-‘ 없이 입력" class="">
+				</div>
+			</div>
+		</section>
+
+		<div id="MASA05Z04" class="modal_wrap full visible">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">계좌를 선택하세요</h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_select">
+						<ul class="flex_wrap set_type1">
+							<li class="item main_acc"><a data-name="acc-button" class="btn_type_d ico_dot"><strong>KEB하나</strong><em class="cash">987-654-321098</em> <span>(주계좌)</span></a></li><!-- 주계좌 class : main_acc -->
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>국민</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+						</ul>
+					</div>
+
+					<!-- <div class="sec_text_btn">
+						<div class="btn_text01">
+							<a href="#none" class="ico_arrow">직접입력</a>
+						</div>
+					</div> 삭제  -->
+
+					<div class="flex_wrap set_type2">
+						<span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
+						<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+					</div>
+				</div><!-- //scroll_wrap -->
+			</div>
+		</div><!-- //modal_wrap -->
+		
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">확인</button>
+		</div>
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//선택버튼
+	$(".btn_sellist").on("click", "button", function(){
+		var thisTxt = $(this).text();
+		console.log(thisTxt);
+		//if( $(this).parent().hasClass('disabled') ) { return false; } //비활성 막기
+		//if( $(this).text() == "") { return false; } //빈 a태그 막기
+		$(this).parent('li').siblings().find('button').removeClass('on');
+		$(this).parents('article').siblings().find('li > button').removeClass('on'); //은행,증권사 중 단일선택
+		$(this).toggleClass('on');
+		$(this).parents('.modal_wrap').removeClass('visible');
+	});
+});
+</script>
+</body>
+</html>

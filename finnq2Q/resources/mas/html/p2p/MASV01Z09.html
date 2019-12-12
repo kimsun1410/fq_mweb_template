@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>투자신청철회 선택</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180406" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market p2p_wrap">
+		<div class="flex_wrap set_type1" style="padding:20px;">
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASV01Z09">투자신청철회 선택</button>
+			</span>
+		</div>
+
+		<div id="MASV01Z09" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">투자신청을 <strong>철회</strong>하시겠습니까?</h3>
+				</div>
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn_type_f close_modal">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="btn_type_f close_modal">확인</button></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+<!--
+//퍼블리싱용 : 내부호출 함수 (이벤트로 호출하는 경우)
+commModal.event();
+
+/*
+	퍼블리싱용 : 외부호출 합수 (function으로 호출하는 경우)
+	호출방법   = commModal.action($mpopID, $mpopType, $mpopClose);
+	$mpopID    = ('ModalID')
+	$mpopType  = (fullpop | nomal)
+	$mpopClose = (true | false) Dim Close
+*/
+//commModal.open('MASV02Z02', '', '');
+//commModal.close('MASV02Z02', '', '');
+//-->
+</script>
+</body>
+</html>

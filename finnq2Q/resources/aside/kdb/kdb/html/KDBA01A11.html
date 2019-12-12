@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>요구불 적요 인증 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kdb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+
+		<!-- Header 영역 -->
+		<div class="sec_ows_head finnq">
+			<button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button><!-- 19.09.11 이전 버튼 추가  -->
+			<h2 class="ows_title">KDB 산업은행 입출금통장</h2><!-- 19.09.11 타이틀 수정 -->
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+		<!-- //Header 영역 -->
+
+		<section class="emergency_account">
+
+			<div class="sec_step step_green">
+				<ol>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete">
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>계좌 인증</h2>
+			</div>
+
+			<div class="sec_select"><!-- 19.09.11 : pdb30 클래스 삭제 -->
+				<ul class="flex_wrap set_type1">
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>KEB하나</strong><em class="cash bold">987-654-321098</em>
+						</button>
+					</li>
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>DGB대구</strong><em class="cash bold">987-654-321098</em>
+						</button>
+					</li>
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>KDB산업</strong><em class="cash bold">987-654-321098</em>
+						</button>
+					</li>
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>계좌번호 직접입력</strong>
+						</button>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 19.09.11 : 추가 -->
+			<div class="kdb_copyright white ex">Provided by KDB 산업은행</div>
+			<!-- //19.09.11 : 추가 -->
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">다음</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script type="text/javascript">
+$(function(){
+
+	// Radio 선택 시 하단 버튼 이벤트, 자세한 Flow는 화면 정의서 참조
+	// 라디오 버튼 클릭 시 다음 스텝으로 이동
+	$(document).on('click', '.flex_wrap button[data-name=acc-button]', function(){
+        $('.sticky_wrap .btn').removeAttr('disabled');
+    });
+
+    // Radio 선택 이벤트
+    $('.sec_select').on('click','[data-name=acc-button]', function(event){
+        $(this).addClass("ico_dot").parent('li').siblings().find('[data-name=acc-button]').removeClass("ico_dot");
+    });
+});
+</script>
+</body>
+</html>

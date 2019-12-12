@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04채우기_03즉시채우기_05타은행계좌로채우기_01계좌번호복사팝업</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASB04Z03">04채우기_03즉시채우기_05타은행계좌로채우기_01계좌번호복사팝업</button>
+			</span>
+		</div>
+
+		<div id="MASB04Z03" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">계좌번호가 복사되었습니다</h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_info round_box">
+						<h4 class="account_copy">KEB하나은행 01000000000123</h4>
+						<div class="bul_guide">
+							<p class="star_type indent">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</p>
+						</div>
+					</div>
+					<div class="flex_wrap flex">
+						<span class="item"><button type="button" name="button" class="btn_type_f close_modal">취소</button></span>
+						<span class="item on"><button type="button" name="button" class="btn_type_f">KB스타뱅킹 앱 열기</button></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

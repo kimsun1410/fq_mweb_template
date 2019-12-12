@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>개인 정보 입력 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+
+<div class="wrap bg_list">
+	<div id="contents" class="cashback_profile add_sticky">
+
+		<section class="dgb_account">
+			<div class="sec_ows_head finnq">
+				<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+				<h2 class="ows_title">DGB입출금 통장</h2>
+				<button class="btn_cancel" onclick="">취소</button>
+			</div>
+
+			<div class="sec_step step_green">
+				<ol>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete">
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>계좌설정</h2>
+			</div>
+
+			<div class="sec_input com_box_wrap pdb30">
+
+				<div class="input_wrap">
+					<dl>
+						<dt class="input_tit">
+							<strong>계좌 비밀번호 설정</strong>
+						</dt>
+						<dd class="item">
+							<input type="text" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+						</dd>
+						<dd class="item">
+							<input type="text" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+							<p class="remark hide">비밀번호를 입력해 주세요.</p>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- 에러가 날 경우 -->
+				<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+				<div class="input_wrap">
+					<dl>
+						<dt class="input_tit">
+							<strong>계좌 비밀번호 설정</strong>
+						</dt>
+						<dd class="item inp_error">
+							<input type="text" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+						</dd>
+						<dd class="item inp_error">
+							<input type="text" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+							<p class="remark">비밀번호를 입력해 주세요.</p>
+						</dd>
+					</dl>
+				</div>
+				<!-- //에러가 날 경우 -->
+
+				<div class="input_wrap">
+					<dl>
+						<dt class="input_tit">
+							<strong>과세우대</strong>
+							<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+							<div class="layer_wrap p20">
+								<p>핀크계좌 <strong>잔액이 부족</strong>할 경우, 송금/핀크카드 결제에 한해 부족한 금액의 1만원 단위로 <strong>자동충전하여 거래를 진행</strong>하며, 카드 및 단말기 분실 시에도 자동충전될 수 있습니다.</p>
+							</div>
+						</dt>
+						<dd class="item"><!-- 에러일때 inp_error 추가 -->
+							<!-- 탭 비활성 케이스 추가 : 19.05.20 -->
+							<ul class="tab_purple up_two">
+								<li class="on"><a href="#none">일반과세</a></li>
+								<li class="disabled"><a href="#none">비과세</a></li>
+							</ul>
+							<!-- //탭 비활성 케이스 추가 : 19.05.20 -->
+							<div class="add_info">
+								<ul class="split">
+									<li>
+										<span class="tit">전체 한도</span>
+										<span class="cont bold"><em class="num bold">6,000,000</em>원</span>
+									</li>
+									<li>
+										<span class="tit">잔여 한도</span>
+										<span class="cont bold"><em class="num bold">30,000</em>원</span>
+									</li>
+									<!-- 19.05.20 입력 필드 추가 -->
+									<li class="input_area">
+										<span class="tit">신청 금액</span>
+										<span class="cont bold">
+											<input type="number" data-name="inpFocus" class="comma_wonhan">
+											<i class="placeholder">0원</i>
+											<i class="guide_txt">원</i>
+										</span>
+									</li>
+									<!-- //19.05.20 입력 필드 추가 -->
+								</ul>
+							</div>
+
+							<!-- 19.05.20 안내 문구 위치 변경 -->
+							<p class="star_type indent mgt10">비과세 종합저축은 만 <em class="num">65</em>세 이상인 경우에만 가입이 가능합니다.</p>
+							<!-- //19.05.20 안내 문구 위치 변경 -->
+						</dd>
+					</dl>
+				</div>
+
+				<!-- 조건에 따라 노출
+					: 고객 정보 변경 필드 노출 시
+					<div class="wrap">에 bg_list 추가
+					고객 정보 변경 항목이 노출되지 않을 경우
+					<div class="wrap">에 bg_list 삭제
+				 -->
+				<div><!-- 클래스 hide 로 제어 : hide 추가비 비노출 -->
+					<hr class="line_division no_line mgt30">
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>고객 정보 변경</strong>
+								<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap p20">
+									<p>핀크계좌 <strong>잔액이 부족</strong>할 경우, 송금/핀크카드 결제에 한해 부족한 금액의 1만원 단위로 <strong>자동충전하여 거래를 진행</strong>하며, 카드 및 단말기 분실 시에도 자동충전될 수 있습니다.</p>
+								</div>
+							</dt>
+							<dd class="item">
+								<div class="gray_box">
+									<p class="txt_cont">
+										DGB 대구은행에 등록된 휴대폰 번호가<br>
+										현재 번호 <strong><em class="num bold">010-1234-5678</em>로 변경</strong>됩니다.
+									</p>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+			</div>
+			<!-- //sec_input com_box_wrap -->
+
+		</section><!-- // -->
+
+		<!-- 항목 입력 완료 시 Disable 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script type="text/javascript">
+	// 일반과세 / 비과세
+	// 스크립트 비활성 케이스 추가 : 19.05.20
+	$('.tab_purple > li > a').on('click', function(event){
+
+		var status = $(this).parent().hasClass('disabled');
+		if (status) { return; }
+
+		event.preventDefault();
+		var idx = $(this).parent().index();
+		$(this).parent().addClass('on').siblings().removeClass('on');
+
+		if (idx == 1) {
+			$('.dgb_account .input_wrap .add_info').slideDown();
+		} else {
+			$('.dgb_account .input_wrap .add_info').slideUp();
+		}
+	});
+
+	// 신청금액 입력
+	// 19.05.20 추가 START
+	$('.input_area input.comma_wonhan').on('focusin', function(){
+		inputAreaFunc( $('.input_area input.comma_wonhan') );
+		$('.input_area input.comma_wonhan').on('keyup change', function(){
+			inputAreaFunc( $('.input_area input.comma_wonhan') );
+		});
+	})
+	.on('focusout', function(){
+		$(this).parents('.input_area').removeClass('active');
+	});
+
+	function inputAreaFunc(_target)
+	{
+		var inpVal = $(_target).val().length;
+		if (inpVal > 0) { $(_target).parents('.input_area').addClass('on active'); }
+		else { $(_target).parents('.input_area').removeClass('on'); }
+	}
+	// 19.05.20 추가 END
+</script>
+</body>
+</html>

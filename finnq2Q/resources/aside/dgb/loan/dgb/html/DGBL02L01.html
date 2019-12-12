@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>대출심사 | 비상금 대출</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="add_sticky">
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">비상금대출</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section>
+
+			<div class="sec_step">
+				<!--
+					1) 활성화 단계에 li에 클래스 "on"
+						ex) <li class="on">
+					2) 진행 완료된 step은 클래스 "complete" 추가
+						ex) <li class="on complete">
+				 -->
+				<ol>
+					<li class="on">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2 class="accent_txt normal">대출약정</h2>
+			</div>
+
+			<div class="list_expend_wrap dgb">
+				<ul class="list_expend dgb loan">
+					<li>
+						<div class="box_layout_com">
+							<div class="tooltip_wrap">
+								<span class="title">대출구분</span>
+								<button class="btn_ico ico_circle_help" data-name="open_fp_layer"><span class="blind">도움말</span></button>
+								<div class="layer_wrap">
+									<p>자동이체 계좌는 신청서에서 <em>입력하신 출금 계좌로 자동으로 등록</em>되며, 입출금통장 동시 신규 개설시에는 해당 입출금통장 계좌로 자동으로 등록됩니다.</p>
+								</div>
+							</div>
+
+							<!-- 탭 및 컨텐츠 순서변경 19.08.07 -->
+							<ul class="tab_purple up_two option_sel">
+								<li class="on"><a href="#none">만기일시상환</a></li>
+								<li><a href="#none">마이너스통장</a></li>
+							</ul>
+
+							<div class="tab_detail loan-result-wrap mt10">
+								<div class="info-wrap on">
+									<ul class="list">
+										<li>
+											<span class="tit">대출가능금액</span>
+											<span class="desc"><em class="num bold">1,000,000</em>원</span>
+										</li>
+										<li>
+											<span class="tit">금리</span>
+											<span class="desc">연 <em class="num bold">3.28</em>%</span>
+										</li>
+									</ul>
+								</div>
+
+								<div class="info-wrap">
+									<ul class="list">
+										<li>
+											<span class="tit">대출금액</span>
+											<span class="desc"><em class="num bold">1,000,000</em>원</span>
+										</li>
+										<li>
+											<span class="tit">금리</span>
+											<span class="desc">연 <em class="num bold">3.28</em>%</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //순서변경 19.08.07 -->
+
+						</div>
+					</li>
+					<li>
+						<div class="box_layout_com">
+
+							<div class="number_field_wrap input_wrap"><!-- //스타일 변경 19.08.07 -->
+								<dl>
+									<dt class="input_tit">
+										<span class="title">대출신청 금액</span>
+									</dt>
+									<dd class="item number_field input_area"><!-- 300만원 이상 신청 에러일 시 inp_error 추가 -->
+										<input type="number" data-name="inpFocus" class="comma_wonhan">
+										<i class="mark guide_txt">원</i>
+										<p class="remark hide">3,000,000원까지 가능합니다</p> <!-- 에러일 시 hide 삭제 -->
+									</dd>
+								</dl>
+							</div>
+
+							<div class="input_wrap mgt0">
+								<dl>
+									<dt class="input_tit">
+										<strong>대출계좌</strong>
+									</dt>
+									<dd class="item soft_select">
+										<select data-name="inpFocus">
+											<option value="">선택해 주세요</option>
+											<option value="">DBG대구 373810202712103</option>
+											<option value="">DBG대구 373810202712103</option>
+											<option value="">DBG대구 373810202712103</option>
+										</select>
+										<p class="remark type2 hide">계좌개설 목적을 선택해 주세요.</p><!-- 에러일때 hide를 빼주세요. -->
+									</dd>
+									<dd class="input_wrap item">
+										<input type="password" data-name="inpFocus" placeholder="계좌 비밀번호" class="">
+										<p class="remark type2 hide">계좌 비밀번호를 입력해 주세요.</p>
+									</dd>
+								</dl>
+
+								<!-- 클래스 : inp_error 추가, remark에 hide 삭제  -->
+								<!-- 에러가 날 경우 -->
+								<!--
+								<dl>
+									<dt class="input_tit">
+										<strong>대출계좌</strong>
+									</dt>
+									<dd class="item soft_select inp_error">
+										<select data-name="inpFocus">
+											<option value="">선택해 주세요</option>
+											<option value="">DBG대구 373810202712103</option>
+											<option value="">DBG대구 373810202712103</option>
+											<option value="">DBG대구 373810202712103</option>
+										</select>
+										<p class="remark type2">계좌개설 목적을 선택해 주세요.</p>
+									</dd>
+									<dd class="input_wrap item inp_error">
+										<input type="password" data-name="inpFocus" placeholder="계좌 비밀번호" class="">
+										<p class="remark type2">계좌 비밀번호를 입력해 주세요.</p>
+									</dd>
+								</dl>
+								 -->
+								<!-- //에러가 날 경우 -->
+
+								<p class="star_type tab-guide-txt">마이너스 한도 이용 및 이자납부용 계좌</p>
+							</div><!-- //account_opt_wrap -->
+
+							<div class="input_wrap add_cont">
+								<dl>
+									<dt class="input_tit">
+										<strong>대출사용 용도</strong>
+									</dt>
+									<dd class="item soft_select">
+										<select data-name="inpFocus">
+											<option value="">선택해 주세요</option>
+											<option value="">생계자금</option>
+											<option value="">학자금</option>
+											<option value="">공과금납부</option>
+											<option value="">내부소비재 구입자금</option>
+										</select>
+										<p class="remark hide">계좌개설 목적을 선택해 주세요.</p><!-- 에러일때 hide를 빼주세요. -->
+									</dd>
+								</dl>
+							</div>
+
+							<div class="add_cont col2">
+								<dl>
+									<dt class="input_tit">
+										<span class="title">대출기간</span>
+									</dt>
+									<dd class="item"><span class="num">1</span>년</dd>
+								</dl>
+								<!-- 19.07.29 추가 -->
+								<p class="star_type mgt0">대출계약 기간은 1년이며, 대출만료시 재 심사후 최장 5년까지<br> 자동연장이 가능합니다.</p>
+								<!-- //19.07.29 추가 -->
+							</div>
+
+							<div class="add_cont">
+								<div class="input_tit">
+									<span class="title mgb10">이자납입일</span>
+								</div>
+
+								<div class="transfer_cont">
+									<div class="gray_box transfer">
+										<div class="item soft_select">
+											<select data-name="inpFocus"><!-- 19.07.29 수정 : disabled 속성 삭제, 스크립트 수정 -->
+												<option value="">매월 1일</option>
+												<option value="">매월 2일</option>
+												<option value="">매월 3일</option>
+												<option value="">매월 4일</option>
+												<option value="">매월 5일</option>
+												<option value="">매월 6일</option>
+											</select>
+										</div>
+										<p class="txt_cont mgt20">
+											<em class="num">2019</em>년 <em class="num">6</em>월 <em class="num">01</em>일부터
+											<strong>매월 <em class="num bold">16</em>일</strong>에<br>
+											대출계좌에서 이자가 납입됩니다.
+										</p>
+									</div>
+								</div>
+								<p class="star_type word-break transfer">대출 잔여한도보다 납부할 이자금액이 큰 경우에는 대출 계좌에 이자금액을 입금해야 합니다.</p><!-- 19.07.29 수정 : transfer 클래스 추가 -->
+							</div>
+
+							<!-- 19.07.29 수정 -->
+							<div class="add_cont">
+								<p class="title">변동금리 알림받기</p>
+								<ul class="tab_purple up_two">
+									<li class="on"><a href="#none">예</a></li>
+									<li class=""><a href="#none">아니오</a></li>
+								</ul>
+								<p class="star_type">금리가 변동될때 SMS로 알려드립니다.</p>
+							</div>
+							<!-- //19.07.29 수정 -->
+						</div><!-- //box_layout_com -->
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- 19.08.07 수정 -->
+		<div class="modal_wrap fullpop">
+			<div class="modal_content loan-guide-desc">
+
+				<div class="scroll_wrap" style="">
+					<div>
+						<p class="title big">대출을 <em class="num bold">100</em>만원 받을때,<br> <span class="txt_purple">차이점</span>은?</p>
+						<article class="cont-desc">
+							<p class="title">만기일시상환</p>
+							<p class="desc">지정한 계좌로 100만원이 한번에 입금되는 <br>대출 방식</p>
+							<div class="img_desc img2">
+								<p class="text">매달 이자만 납부하고<br> 대출 만기 시 원금을 한번에 갚음</p>
+							</div>
+						</article>
+
+						<article class="cont-desc">
+							<p class="title">마이너스통장</p>
+							<p class="desc">100만원 한도 내에서 필요한 만큼만 사용하는 <br>대출 방식</p>
+							<div class="img_desc img1">
+								<p class="text">사용중인 <em class="num bold">10</em>만원에 대한 이자만 부담</p>
+							</div>
+						</article>
+					</div>
+				</div>
+				<button type="button" class="btn_close">닫기</button>
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //19.08.07 수정 -->
+
+
+		<!-- 입력값이 모두 입력되면 disabled 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+
+	</div><!-- //contents -->
+</div>
+<script type="text/javascript">
+$(function(){
+
+	// 탭 이벤트
+	$('.tab_purple > li > a').on('click', function(event){
+		event.preventDefault();
+
+		var status = $(this).parent().hasClass('disabled'),
+			idx = $(this).parent().index();
+
+		if (status) { return; }
+
+		$(this).parent().addClass('on')
+			.siblings().removeClass('on')
+			.parent().next('.tab_detail')
+			.find('> div').eq(idx)
+			.addClass('on').siblings().removeClass('on');
+
+		// 대출신청 금액 (19.08.07 수정 START)
+		var option_add = $(this).parents('.tab_purple').hasClass('option_sel');
+		if (option_add && idx == 0) {
+			$('.number_field_wrap').show();
+			// $('.transfer_cont [data-name=inpFocus]').removeAttr('disabled');
+			$('.tab-guide-txt').text('대출금 입금 및 이자납부용 계좌');
+			$('.star_type.transfer').addClass('hide')
+		} else {
+			$('.number_field_wrap').hide();
+			// $('.transfer_cont [data-name=inpFocus]').attr('disabled','disabled');
+			$('.tab-guide-txt').text('마이너스 한도 이용 및 이자납부용 계좌');
+			$('.star_type.transfer').removeClass('hide')
+		}
+		// (19.08.07 수정 END)
+	});
+
+	// 툴팁 이벤트
+	$('body').on('click','button[data-name=open_fp_layer]', function(e) {
+
+		$body = $("body");
+		//Contents Size Cal;
+		var winH, docH;
+		winH = $(window).height();
+		docH = $('.modal_wrap > .modal_content').height();
+
+		$('.modal_wrap.fullpop').addClass('visible');
+		if (winH <= docH) {
+			$('.modal_wrap > .modal_content').css({height: docH});
+		} else {
+			$('.modal_wrap > .modal_content').css({height: winH});
+		}
+	});
+
+	$('body').on('click','.modal_wrap .btn_close', function(e) {
+		$('.modal_wrap.fullpop').removeClass("visible");
+		return false;
+	});
+
+	// 금액 입력
+	$('.comma_wonhan').on('focusin', function(){
+		inputAreaFunc( $('.comma_wonhan') );
+		$('.comma_wonhan').on('keyup change', function(){
+			inputAreaFunc( $('.comma_wonhan') );
+		});
+	})
+	.on('focusout', function(){
+		$(this).parents('.input_area').removeClass('active');
+	});
+
+	function inputAreaFunc(_target)
+	{
+		var inpVal = $(_target).val().length;
+		if (inpVal > 0) { $(_target).parents('.input_area').addClass('on active'); }
+		else { $(_target).parents('.input_area').removeClass('on'); }
+	}
+});
+</script>
+</body>
+</html>

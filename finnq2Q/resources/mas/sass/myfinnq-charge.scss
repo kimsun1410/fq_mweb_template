@@ -1,0 +1,324 @@
+@charset 'UTF-8';
+
+/* 채우기 */
+.charge_price .sec_bank_confirm{padding:0}
+/* 채울 금액 입력 */
+.charge_price_input .flex_wrap{position:relative}
+.charge_price_input .sec_charge{margin-top:28px}
+.charge_price_input .kor_txt{line-height:46px}
+/* 즉시 채우기 */
+.charge_price_direct .flex_wrap{position:relative}
+.charge_price_direct .sec_charge{margin-top:28px;padding-bottom:35px}
+/* .charge_price_direct .sec_top_bar + .sec_input{margin-top:30px} */
+/* .charge_price_direct .sec_top_bar + .sec_input .input_wrap{margin-top:0}
+.charge_price_direct{}
+
+/* 자동 채우기
+.charge_price_auto .flex_wrap{position:relative}
+.charge_price_auto .sec_desc{margin:0}
+.charge_price_auto .sec_tab{margin-top:20px}
+.charge_price_auto .sec_tab_cont{margin-top:20px}
+.charge_price_auto .sec_input{margin-top:0}
+.charge_price_auto .sec_input .input_wrap{margin-top:28px}
+.charge_price_auto .item.basic_select:after{right:15px}
+.charge_price_auto .item.basic_select select{padding: 0 10px;}
+.charge_price_auto .item.basic_select.on select{border-color:#731aed;background:#f5eeff;color:#731aed} */
+
+/* 자동,즉시 채우기 */
+.charge_price_collabo .flex_wrap{position:relative}
+.charge_price_collabo .sec_charge{margin-top:38px;padding-bottom:35px}/*2018-04-23 margin 수정 phj*/
+.charge_price_collabo .sec_desc{margin:0}
+.charge_price_collabo .sec_desc p{margin-top:8px}
+.charge_price_collabo .sec_tab{margin-top:20px}
+/*.charge_price_collabo .sec_tab_cont{margin-top:20px}*/ /*2018-02-09 삭제 phj*/
+.charge_price_collabo .sec_input{margin-top:0}
+.charge_price_collabo .sec_input .input_wrap{margin-top:28px}
+
+.charge_price_collabo .kor_txt{line-height:40px}
+.charge_price_collabo .remark{position:absolute;text-align:right;/*margin-top:7px;*/ top:53px;}/*2018-04-23 static에서 absolute로 phj*/
+.charge_price_collabo .item.inp_error input {}
+/* .charge_price_collabo .inp_error .comma_wonhan + em {color:$purply_blue !important;} 999 가 맞음, */
+.charge_price_collabo .sec_comment {margin:46px 0 25px}/*2018-04-23 추가 phj*/
+
+.price_auto input.inp_money{border-style:solid;/* border-color:$reddish_orange !important; 잘못 들어감 ock */}
+.price_auto .input_wrap .flex_wrap .item{position:relative}
+.price_auto .sec_desc .star_type{color:$reddish_orange}
+.price_auto .sec_desc .star_type::before{color:$reddish_orange}
+.price_direct input.inp_money{border-style:solid}
+
+.charge_price_collabo .item.soft_select:after{right:15px}
+.charge_price_collabo .item.soft_select select{padding: 0 10px;}
+.charge_price_collabo .item.soft_select.on:after{background-position:0 -75px}
+.charge_price_collabo .item.soft_select.on select{border:1px solid $purply_blue;background:$purply_blue;color:$white;/* font-weight:bold 버튼에 bold 빠지면서 삭제함 */}
+
+.sec_auto_method{margin-top:19px}
+.sec_auto_method > ul{}
+.sec_auto_method > ul li{text-align: center;}
+.sec_auto_method input[type="radio"] + label span{color:$black;@include font(16px);}
+
+
+.charge_price_collabo .edit_mode{}
+.charge_price_collabo .edit_mode .inp_money{border-color:$purply_blue; color:$black; background:$pale_lavender;}
+
+.charge_price_collabo .btn_type_c{border:1px solid $white_two;color:$pinkish_grey;}
+.charge_price_collabo .btn_type_c:disabled{border:1px dashed $white_three;background:$white_four;color:$white_two}
+
+/* 하나머니로 채우기 */
+/* .charge_price_hana .sec_top_bar + .sec_input{margin-top:27px} */
+/* .charge_price_hana .sec_top_bar + .sec_input .input_wrap{margin-top:0} */
+.charge_price_hana .sec_notice{border-top:1px solid $white-two}
+.charge_price_hana .flex_wrap{position:relative}
+.charge_price_hana .flex_wrap input{padding: 0 40px 0 20px;}
+.charge_price_hana .sec_tab_cont .sec_input{padding-bottom: 45px;}
+.charge_price_hana .sec_tab_cont .sec_notice{background:$white_three; margin:0 -20px;}
+.charge_price_hana .sec_tab_cont .sec_notice > ul{padding:30px 20px 0}
+.charge_price_hana input.inp_money{border-style:solid}
+.charge_price_hana .sec_input {margin:0;}
+
+.sec_charge .item.on .btn_type_b{background:$purply_blue;border:1px solid $purply_blue;color:$white;}
+
+/* MY핀크 즉시채우기 18.08.08 */
+.charge_wrap {@include marginTop(28px);}
+.charge_wrap .benefit_guide > strong {margin-right:6px;}
+.charge_wrap .on.ico_circle_help[data-name=open_help]::before {z-index:2;}
+.charge_wrap .benefit_guide {margin-top:0;}
+.charge_wrap .benefit_guide.charge_layer .layer_wrap {left:20px; right:20px;}
+.charge_wrap .bank_sel_list {@include marginTop(8px);}
+.charge_wrap .bank_sel_list li.disabled button {background:$white_three; color:$pinkish_grey;}
+.charge_wrap .bank_sel_list li.on button {border: 1px solid #731aed; color: #731aed; background-color: #f5eeff; z-index: 1;}
+.charge_wrap .full_border {@include marginTop(28px);}
+.charge_info_wrap {padding:30px 20px; margin:0 -20px; background:$white_three;}
+.charge_info_wrap .sec_new_count {position:relative; bottom: initial; left: initial; margin-top:0;}
+.charge_info_wrap .sec_new_count .guide_txt {margin-top:11px; @include font(14px);}
+.charge_info_wrap .sec_new_count .box_btn {width:160px; margin: 18px auto 0;}
+.charge_info_wrap .sec_new_count .wrap_count {border-color:$white_two; margin:0;}
+/* 09.14 추가 수정  */
+.charge_info_wrap.sec_make {padding:43px 20px;}
+/* 09.17 하단 고정 메뉴에서 스크롤 메뉴로 변경 수정 */
+/* .charge_info_wrap.fix_btm {position:fixed; width:100%; bottom:0; left:0; box-sizing: border-box; margin:0; border-top:1px solid $white_two; border-bottom:1px solid $white_two;} */
+.charge_info_wrap.fix_btm.bottom {position:fixed; width:100%; bottom:0; left:0; box-sizing: border-box; box-sizing: border-box; margin: 45px 0 0;}
+.charge_info_wrap.fix_btm {box-sizing: border-box; margin:45px -20px 0; border-top:1px solid $white_two; border-bottom:1px solid $white_two;}
+.charge_info_wrap.sec_make .sec_make_count {text-align:center; @include font(14px); color:$warm_grey;}
+.charge_info_wrap .btn_text01 {vertical-align: text-top}
+.charge_info_wrap .btn_text01 a {margin-left:5px;}
+
+.sec_form .charge_account {position:relative; @include marginTop(15px);}
+.sec_form .charge_account .i_txt {background:$white;}
+.sec_form .charge_account .i_txt.inp_focus {background:#f5eeff;}
+.sec_form .charge_account.inp_error {@include paddingBottom(28px);}
+.sec_form .charge_account.inp_error .i_txt {border-color:$reddish_orange;}
+.sec_form.round_box.charge {position:relative; margin-bottom:0px;}
+.bg_bottom.charge {padding-bottom:23px; width:100%; height:1px; border-bottom:1px solid $white_two;}
+/* .sec_form.round_box.charge .bg_bottom {padding-bottom:23px; font-size:0; text-indent:100%; white-space:nowrap; overflow:hidden; border-bottom:1px solid $white_two;} */
+.sec_form.round_box.charge dt {position:relative;}
+
+.sec_form.round_box.charge .bul_guide.charge .star_type {padding-right:15px;}
+.agree_wrap.charge {position:relative; box-sizing: border-box;}
+.agree_wrap.charge label span {word-break: keep-all}
+/* //MY핀크 즉시채우기 18.08.08 */
+
+/* 핀크 계좌 */
+.secede_inquiry.add_info {border-top:0;}
+.secede_inquiry.add_info li .thumb_tit{float: right; margin-right: 3px; font-size: 12px; color:$clear_blue;}
+
+.secede_inquiry.add_info .auto_switch {position:relative;}
+.secede_inquiry.add_info .auto_switch .switch_wrap {display:inline-block; position: absolute; top: 50%; margin-top: -13px; right: 20px;}
+.secede_inquiry.add_info .auto_switch .ico_circle_help {margin-left:4px; margin-top:-2px;}
+.secede_inquiry.add_info .auto_switch .layer_wrap {top:52px; left:39px; right:39px;}
+
+.sec_insinfo {padding: 0 20px; margin-top: 22px; border-bottom: 1px solid #e0e0e0;}
+.ins_info { position: relative; width: 100%; padding-top: 30px;}
+.ins_info:before { content: ''; position: absolute; left: 0; width: 100%; height: 1px; background: url(../images/common/bg-dotline-type1.png) 0 0 repeat-x; background-size: 18px auto; opacity: 1;}
+.ins_info:after { content: '.'; display: block; clear: both; height: 0; line-height: 0; visibility: hidden;}
+.ins_info li { color: #222; font-size: 16px; line-height: 20px; margin-top: 15px; list-style: none !important;}
+.ins_info li:first-of-type { margin-top: 0;}
+.ins_info li:after { content: '.'; display: block; clear: both; height: 0; line-height: 0; visibility: hidden;}
+.ins_info li .tit { float: left; color: #666; font-family: "AppleSDGothicNeo-Light", "LatoL";}
+
+.ins_info li .info, .ins_info li .money_total { float: right;}
+.ins_info div span, .ins_info div em, .ins_info div { font-size: 16px; line-height: 20px;}
+.ins_info.split {padding-bottom:40px;}
+.ins_info.split li.rate .info em.date, .ins_info.split li.rate .info { color: #278df5;}
+.ins_info.split .list_type {margin-top:11px; color:$pinkish_grey;}
+
+.ins_info.split .btn_link {display:inline-block; position:relative; padding-right:15px; font-size:16px; color:$black; border-bottom: 1px solid $black;}
+.ins_info.split .btn_link .ico_arrow_more {position:absolute; right:0px; top:50%; margin-top:-6px; width:7px; height:11px; background-position:0 -85px;}
+
+/* 금결원 오픈 플렛폼 계좌 등록 */
+.account_progress_wrap {background:$white_three;}
+.account_wrap {padding:27px 20px; border-top:1px solid $white_two; border-bottom:1px solid $white_two; background:$white;}
+.account_wrap.terms {padding:15px 20px;}
+.account_wrap.single {border-bottom:0;}
+.account_wrap:first-of-type {border-top:0;}
+
+.account_wrap ~ .account_wrap {margin-top:4px;}
+.account_wrap .title {position:relative; font-size:16px; color:$black; font-weight:bold; margin-bottom:7px; text-align:left;}
+.account_wrap .title.type2 {margin-bottom:14px;}
+.account_wrap .title a {position:absolute; top:0; right:0; font-weight:normal;}
+.account_wrap .btn_text02 .ico_arrow_more:after {background-position:0 -84px; background-size:40px auto;}
+.account_wrap .agree_wrap input[type="checkbox"] + label {margin-right:0;}
+
+.account_wrap .agree_wrap .ico_arrow_more {background: url(../images/common/ico-arrow-list.png) no-repeat; width: 30px; height: 30px; background-size: 30px auto;}
+.account_wrap .agree_wrap .ico_arrow_more, .agree_wrap .ico_arrow_more2 {right:0; margin-top: -16px;}
+
+.account_progress_wrap .set_target { width: 100%; box-sizing: border-box; }
+.account_progress_wrap .set_target:after { content: '.'; display: block; clear: both; height: 0; line-height: 0; visibility: hidden; }
+.account_progress_wrap .set_target li:first-of-type {margin-top: 0px; }
+.account_progress_wrap .set_target li { position: relative; margin-top: 13px; }
+.account_progress_wrap .set_target li span { display: inline-block; margin-top: 2px; font-size: 16px; line-height: 20px; }
+.account_progress_wrap .set_target li input[type="radio"] + label span { color: #222; padding-top: 2px; }
+.account_progress_wrap .set_target li .form_wrap { float: left; }
+.account_progress_wrap .set_target li .form_wrap .layer_wrap { top: 37px; }
+.account_progress_wrap .set_target li .form_wrap button { margin-top: 5px; }
+.account_progress_wrap .set_target li.custom .form_wrap { position: relative; width: 105px; z-index: 2; }
+.account_progress_wrap .set_target li:after {content: ''; display: block; clear: both;}
+.account_progress_wrap .set_target li.custom .user { position: relative; width: 100%; padding-left: 105px; box-sizing: border-box; }
+.account_progress_wrap .set_target li.custom .user input { display: inline-block; @include font(16px); border: 0; border-bottom: 1px solid $pinkish_grey; padding: 2px 1px 3px; height: auto; border-radius: 0; margin-top: 0px; text-align: left; }
+.account_progress_wrap .set_target li.custom .user input[type='tel']:disabled { background-color: $white; }
+.account_progress_wrap .set_target li.custom .single_tit {float:left;}
+/* 19.01.16 각 페이지 마다 은행 호출 페이지 다름, 은행 이름 다름, 별도의 정책이 없어서 해당 페이지만 임시로 추가 적용. */
+.account_progress_wrap .set_target li.custom .single_tit + .user {padding:0; float:right; width:calc(100% - 50px)}
+.account_progress_wrap .set_target li.custom.bank .single_tit + .user {width:calc(100% - 90px)}
+.account_progress_wrap .set_target li.custom.form .form_wrap {width: 125px;}
+.account_progress_wrap .set_target li.custom.form .user {padding-left: 125px;}
+
+/* //19.01.16  */
+
+.charge_wrap .sec_apply_guide {padding:0; border:0;}
+.charge_wrap .sec_apply_guide .point {color:$clear_blue;}
+.charge_wrap .sec_apply_guide ul {text-align:left; padding:0 30px;}
+.charge_wrap .sec_apply_guide ul li:before {margin-right: 3px;}
+
+.list_expend .label_wrap {position:relative; margin-top:5px;}
+.list_expend .label_wrap + .label_wrap {margin-top:15px;}
+.list_expend .label_wrap span {display:inline-block; position:relative; height:18px; padding:0 8px; text-align:center; font-size:11px; line-height:18px; color:$white; border-radius:2px; background:$pinkish_grey;}
+
+.list_expend .re_err .label_wrap .btn_re_confirm {position:absolute; width:54px; height:20px; font-size:12px; border:1px solid $reddish_orange; border-radius:14px; color:$reddish_orange; box-sizing: border-box; text-align: left;
+    padding-left: 7px;}
+.list_expend .re_err .label_wrap .btn_re_confirm:after {display: inline-block; position: absolute; top: 4px; right: 6px; width: 5px; height: 13px; content: ""; background: url(../images/common/ir-arrow-set.png) 0 -43px no-repeat; background-size: 40px auto;}
+.list_expend .re_err .label_wrap .info {position:relative; font-size: 11px; line-height: 14px; color:$reddish_orange; padding-left: 72px; margin-right:-30px}
+.list_expend .re_err .label_wrap .info:before {display:inline-block; content:"*"; font-size:10px; position:absolute; top:3px; left:66px}
+.list_expend .re_err .btn_type_e:disabled {color:$pinkish_grey;}
+
+.list_expend .label_wrap span + span {margin-left:2px;}
+.list_expend .label_wrap span.on {background:$purply_blue;}
+.list_expend.charge > li .subject a i {top:33px; margin-top:0;}
+
+
+.join_guide_wrap.sec_info_cont.myfinnq div dl:before {background-image: url(../images/myfinnq/img_info_account.png)}
+
+/* 기존 ui agree_wrap charge2 로 변경 */
+.agree_wrap.charge2 { position: relative; padding: 14px 20px; border-top: 5px solid #eee; border-bottom: 1px solid #e0e0e0; }
+.agree_wrap.charge2:before { display: block; position: absolute; top: 0; left: 0; right: 0; height: 1px; border-top: 1px solid #e0e0e0; content: ""; }
+.agree_wrap.charge2 .ico_arrow_more2 {right:20px}
+
+/* 송금 관련 화면 추가 */
+.split_add_info {padding:10px 0 40px;}
+.split_add_info div:first-of-type {float:left;}
+.split_add_info div {float:right; width:50%; text-align:center; box-sizing: border-box;}
+.split_add_info div dl {position:relative; padding-top:78px;}
+.split_add_info div dl:before {display: inline-block; position: absolute; top:-10px; left: 50%; margin-left:-35px; width: 70px; height: 70px; content: "";  background-repeat: no-repeat; background-size: 70px auto; background-position: 0 0; background-image: url(../images/myfinnq/img_info_account.png);}
+.split_add_info div:first-of-type dl:before {background-position: 0 -140px;}
+.split_add_info dt {font-size:16px; color:$black; font-weight:bold;}
+.split_add_info div:first-of-type dt:after {display:block; content:""; position:absolute; top:0; right:0; width:1px; height:105px; border-right:1px dashed $white_two;}
+.split_add_info dd {margin-top:3px; font-size:14px; color:$brownish_grey;}
+.split_add_info:before {}
+.split_add_info:after {display:block; clear:both; content:"";}
+
+.sec_apply_guide.account {border:0; margin-top:0;}
+.sec_apply_guide.account > div {padding: 28px 30px 30px; border:0; background:$white_four;}
+.sec_apply_guide.account > div .box_btn {display:inline-block; width:inherit; margin:15px auto 0;}
+.sec_apply_guide.account .box_btn .btn_type_i {box-sizing:border-box; padding:0 20px;}
+.sec_apply_guide.account dt {border-bottom:1px dashed $white_two; padding-bottom:10px; margin-bottom:18px;}
+.sec_apply_guide.account dd {font-size:16px;}
+.sec_apply_guide.account dd .title {font-size:16px; font-weight:bold; color:$black;}
+.sec_apply_guide.account dd .account {font-size:16px; margin-top:4px; color:$brownish_grey;}
+
+.sec_payment_step.send {margin:24px 20px 45px; padding:26px 30px 23px; border-radius:8px; background:$white_four;}
+.sec_payment_step.send .title {font-size:16px; line-height:20px; color:$black; padding-bottom:15px; border-bottom:1px dashed $white_two;}
+.sec_payment_step.send .title em {color:$clear_blue; font-weight:bold;}
+.sec_payment_step.send ol {padding-top:0;}
+.sec_payment_step.send ol li {background: url(../images/myfinnq/bg_send_step.png) no-repeat;      background-size: 70px auto;}
+.sec_payment_step.send ol li.step1 {background-position: 0 0;}
+.sec_payment_step.send ol li.step2 {background-position: 0 -70px;}
+.sec_payment_step.send ol li.step3 {background-position: 0 -140px;}
+.sec_payment_step.send ol li > dl dt {font-size:16px; color:$black; font-weight:bold;}
+.sec_payment_step.send ol li > dl dd {font-size:14px; line-height:18px; color:$brownish_grey;}
+
+/* 마이핀크 개선 */
+.week_opt {margin-top:38px;}
+.week_opt .tit_info {position:relative; margin-bottom:13px; padding-left:32px; line-height:30px; font-size:16px; color:$warm_grey;}
+.week_opt .tit_info:before {display:block; content:""; position:absolute; top:0; left:0; width:30px; height:30px; background: url(../images/common/ico_clock.png) no-repeat; background-size: 100% auto;}
+.week_opt .btn_sellist.set_type7 li {width:14.39%}
+
+.notice_wrap.gray {background:$white_three; border-top:1px solid $white_two;}
+.com_box_wrap.week_opt + .notice_wrap {margin-top:45px;}
+
+.sec_impossible_list.small.charge {margin:0 -20px 0;}
+.sec_impossible_list.small.charge ul li> a:after {background-size:30px auto;}
+
+/* 계좌 관리 (등록 전, 등록 후) */
+
+.fqsave.com_opt .secede_inquiry.tel ul li {height:75px; line-height:75px;}
+.fqsave.com_opt .ico_circle_help {margin:-3px 0 0 4px;}
+.fqsave.com_opt .ico_circle_help[data-name=open_help]:before {bottom:-14px;}
+    body.ios .fqsave.com_opt .ico_circle_help[data-name=open_help]:before {bottom:-13px;}
+.fqsave.com_opt .sec_title .title a:after {display:block; content:""; position:absolute; top:50%; right:0; margin-top:-8px; width:17px; height:16px; background: url(../images/common/ico_modify.png) no-repeat 0 0; background-size: 100% auto;}
+.fqsave.com_opt .ins_info {padding:0; margin:38px 0 27px;}
+
+.fqsave.com_opt .sec_title .title {}
+.fqsave.com_opt .sec_title .title a {display:inline-block; position:relative; font-weight:bold; padding-right:23px;}
+.fqsave.com_opt .ins_info:before {display:none;}
+.fqsave.com_opt .ins_info li {margin-top:23px;}
+.fqsave.com_opt .ins_info li:first-of-type {margin-top:0;}
+.fqsave.com_opt .ins_info li .tit {font-family:'AppleSDGothicNeo-Medium'; color:$black; font-size:16px;}
+.fqsave.com_opt .ins_info li .info,
+.fqsave.com_opt .ins_info div em,
+.fqsave.com_opt .ins_info div span {font-size:12px;}
+.fqsave.com_opt .ins_info .auto_switch {position: relative}
+.fqsave.com_opt .ins_info.split .btn_link {position:relative; font-size:12px; border-bottom:0; color:$black;}
+.fqsave.com_opt .ins_info .switch_wrap {display: inline-block; position: absolute; top: 50%; margin-top: -13px; right:0;}
+.fqsave.com_opt .ins_info ul + ul {padding-top:27px; margin-top:25px; width: 100%; height: 1px; background: url(../images/common/bg-dotline-type1.png) 0 0 repeat-x; background-size: 18px auto;}
+
+.fqsave .ins_info.split .btn_link.before,
+.fqsave.com_opt .ins_info.split .btn_link.before {color:$clear_blue;}
+
+/* 계좌 복사 */
+.account_copy_wrap {padding-top:43px; margin:0 -20px 0; text-align:center; font-size:14px; background:$white_three;}
+.account_copy_wrap .guide_txt {color:$warm_grey;}
+.account_copy_wrap .account_num {margin-top:5px;}
+.account_copy_wrap .account_num .accout {font-weight:bold; text-decoration:underline; color:$black;}
+.account_copy_wrap .account_num button {height:21px; padding:0 10px; margin-left:6px; border-radius:14px; line-height:21px; text-align:center; font-size:12px; background:$white; color:$warm_grey;}
+
+/* 송금 완료 19.03.11 */
+.myfinnq .sec_title.send_finish {margin-top:83px;}
+.myfinnq .send_cont_wrap {margin-top:57px; padding:0 30px 45px;}
+.myfinnq .send_cont_wrap .user_info {position:relative; background:url(../images/common/bg-dotline-type3.png) repeat-x 0 100%; background-size: 18px auto; padding-bottom:20px; padding-right:40px;color:$black; font-size:16px; font-weight:bold;}
+.myfinnq .send_cont_wrap .user_info .ico {display:inline-block; text-indent:-999em; overflow:hidden;}
+.myfinnq .send_cont_wrap .user_info .finnq_user {width:56px; height:20px; margin-left:4px; margin-top:-4px; background-image:url(../images/common/ico_finnq_logo.png); background-position:0 0; background-repeat:no-repeat; background-size:100% auto; vertical-align:middle;}
+.myfinnq .send_cont_wrap .user_info .bookmark {width:30px; height:30px; position:absolute; top:3px; right:0; background-image:url(../images/common/ico_star_off.png); background-position:0 0; background-repeat:no-repeat; background-size:100% auto;}
+.myfinnq .send_cont_wrap .user_info .bookmark.on {background-image:url(../images/common/ico_star_on.png);}
+.myfinnq .send_cont_wrap .user_info .bookmark:disabled {background-image:url(../images/common/ico_star_gray.png);}
+.myfinnq .send_cont_wrap .total_info {padding-top:18px; font-size:16px;}
+.myfinnq .send_cont_wrap .total_info:after {display:block; clear:both; content:"";}
+.myfinnq .send_cont_wrap .total_info .title {float:left; color:$brownish_grey;}
+.myfinnq .send_cont_wrap .total_info > span {display:inline-block;}
+.myfinnq .send_cont_wrap .total_info .cash_wrap {float:right;  color:$black; font-weight:bold;}
+.myfinnq .send_info_wrap {border-top:1px solid $white_two; padding:30px 20px; background:$white_three;}
+.myfinnq .send_info_wrap .list_type {}
+.myfinnq .send_info_wrap .list_type li {font-size:12px; line-height:14px; color:$warm_grey; word-break: keep-all}
+.myfinnq .send_info_wrap .list_type li span {color:$reddish_orange;}
+.myfinnq .send_info_wrap .list_type.star.single:before,
+.myfinnq .send_info_wrap .list_type.star>li:before {top:2px;}
+
+/* 2019.08.27 DGB비상금 대출 내계좌 채우기 */
+.myfinnq .sec_top_bar.dgb strong{line-height:20px;}
+.myfinnq .sec_top_bar.dgb .btn_type_new{float:right;line-height:22px;}
+.myfinnq .sec_top_bar.dgb .pay_num{margin-left:6px;}
+
+@media screen and (max-width:320px){
+    .charge_price_collabo .item.soft_select select{padding:0 8px}
+    .charge_price_collabo .item.soft_select:after{right: 8px;}
+    .sec_payment_step.send {padding:26px 25px 23px;}
+}
+

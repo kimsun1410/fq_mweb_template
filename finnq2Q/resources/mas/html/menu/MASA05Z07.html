@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>서비스 해지 실패 안내_MASA05Z07</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASA05Z07">서비스 해지 실패 안내_MASA05Z07</button>
+			</span>
+		</div>
+
+		<div id="MASA05Z07" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">
+						서비스가 원활하지 않아,<br>
+						<strong>대기중인 송금 내역 취소</strong>에 <br>실패하였습니다.<br/>
+						<!-- 실패 서비스 명: 
+															  대기중인 송금 내역 취소, 
+															  계좌 자동 채우기 해제, 
+															  계좌 비우기 중 하나
+						-->
+						다시 시도하겠습니까?
+					</h3>
+					
+				</div>
+
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">다시 시도</button></span><!-- 2018-01-24 버튼명 변경 phj -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

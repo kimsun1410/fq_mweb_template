@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트구매_작품구매완료_01_AIBA11Z13</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap bg_list no_after"><!-- AIBA11Z13 -->
+	<!-- contents -->
+	<div id="contents" class="art_wrap add_sticky">
+
+		<!-- section -->
+		<section class="pt10">
+
+			<div class="coupon_info">
+				<div class="info">
+					보유쿠폰 <em class="num bold">2</em>개
+					<button type="button" class="btn">쿠폰등록</button>
+				</div>
+
+				<div class="add_coupon">
+					<div class="input_wrap col_box item">
+					<!--
+						error 일 때 inp_error 추가
+						<div class="input_wrap col_box item inp_error">
+					-->
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="쿠폰번호를 입력해 주세요" class="" data-placeholder="쿠폰번호를 입력해 주세요">
+							<p class="remark hide">유효하지 않은 쿠폰번호입니다.</p><!-- 에러일때 hide 를 빼주세요. -->
+						</span>
+						<span>
+							<button type="button" name="button" class="btn_type_f">등록</button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap_result">
+				<div class="no_result">
+					<i class="ico ico_chat_no2"></i>
+					<p>쿠폰이 없습니다.</p>
+				</div>
+			</div>
+
+			<div class="fixed_cont">
+				<div class="gray_box">
+					<p class="tit">쿠폰 이용안내</p>
+					<ul class="list_type star">
+						<li>아트상품 구매시, 쿠폰입력 단계에서 등록된 쿠폰을 선택하시면 자동으로 할인금액이 적용됩니다.</li>
+						<li>쿠폰 이용시의 최소 구매금액 기준은 없으며, 중복 할인은 불가합니다.</li>
+					</ul>
+				</div>
+
+			</div><!-- //tab_content_wrap -->
+
+		</section>
+		<!-- //section -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">사용하기</button>
+		</div>
+
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.art_wrap .coupon_info .btn').on('click', function(){
+		var status = $('.art_wrap .coupon_info').hasClass('on');
+		if (!status) {
+			$('.art_wrap .coupon_info').addClass('on');
+		}else{
+			$('.art_wrap .coupon_info').removeClass('on');
+		}
+	});
+
+	$('.art_wrap .coupon_list article').on('click', function(){
+		$(this).addClass('on').siblings().removeClass('on');
+	});
+});
+</script>
+</body>
+</html>

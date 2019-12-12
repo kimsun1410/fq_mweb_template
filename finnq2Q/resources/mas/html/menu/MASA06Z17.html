@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>자동충전결제_web_MASA06Z17</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- bg_list 삭제 하고 하단 버튼 test -->
+	<div id="contents" class="menu">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" name="button" class="btn_select btn_type_a open_modal" data-triger="MASA06Z17" data-mtype="fullpop">자동충전결제_web_MASA06Z17</button>
+			</span>
+		</div>
+
+
+		<div id="MASA06Z17" class="modal_wrap fullpop omt_common"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content add_sticky width_full">
+
+				<!-- <div class="scroll_wrap gray" style=""> 하단 bg_color 제어 : gray 컬러 적용시 -->
+				<div class="scroll_wrap white"><!--  하단 bg_color 제어 : white 컬러 적용시 -->
+					<!-- 여기부터 -->
+					<div class="auto_fillingup">
+						<div class="sec_title pop_title">
+							<h3 class="accent_txt">카드 결제할 때<br>민망한 <strong>잔액 부족은 NO!</strong></h3>
+							<p class="guide_txt">핀크계좌 잔액이 부족하면 자동으로 충전해서<br>바로 결제해주는 자동충전 결제가 있으니까요!</p>
+						</div>
+
+						<div class="sec_decoration">
+							<p class="blind">핀크카드 자동충전 결제</p>
+						</div>
+					</div>
+					<!-- 여기까지 -->
+					
+				</div><!-- //scroll_wrap -->
+
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_type_apply">자동충전 결제 설정하기</button>
+				</div>
+
+			</div><!-- //modal_content -->
+		</div>
+
+		
+	</div>
+	<!-- #contents -->
+</div>
+
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+//팝업 ui 확인용 js
+$(document).ready(function(){
+	$body = $("body");
+	//Contents Size Cal;
+	var docH, docW;
+	docW = $(window).width();
+	docH = $(window).height();
+	//모달팝업
+		/* modal popup */
+		$("button.open_modal,a.open_modal").on("click", function(){
+			var $mpop = $(this);
+
+			var $mpopType = $mpop.data("mtype");
+			var $mpopID = "#"+$mpop.data("triger");
+			var $mpopClose = $mpop.data("bgclose");
+			var conH = $($mpopID).find(".modal_content").outerHeight();
+
+
+			//popup contents height < window height
+			if(conH >= docH || ($mpopType=="fullpop")) {
+				$($mpopID +"> .modal_content").css({
+					height: docH
+				});
+			}else {
+				$($mpopID).addClass("normal");
+			}
+			if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+			switch($mpopType) {
+				case "fullpop":
+					$($mpopID).toggleClass("visible");
+					break;
+				case "doublepop":
+					$($mpopID).addClass("double").toggleClass("visible");
+					break;
+				default:
+					$($mpopID).toggleClass("visible");
+			}
+			return false;
+		});
+		$(".modal_wrap").on("click","button.close_modal", function(){
+			$(this).closest('.modal_wrap').toggleClass("visible");
+			return false;
+		});
+		$(".modal_wrap").on("click", function(e){
+			var status = $(this).data("bgclose");
+			if(!$(".modal_content").has(e.target).length && status ) { 
+				if($(this).data("bgclose")) $(this).toggleClass("visible");
+			} 
+		}); 
+
+});
+</script>
+
+</body>
+</html>

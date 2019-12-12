@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01더보기_01프로필_02캐시백신청_01신청화면_MASA02Z03</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- bg_list 삭제 하고 하단 버튼 test -->
+	<div id="contents" class="menu">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" name="button" class="btn_select btn_type_a open_modal" data-triger="MASA02Z03" data-mtype="fullpop">01더보기_01프로필_02캐시백신청_01신청화면</button>
+			</span>
+		</div>
+
+
+		<div id="MASA02Z03" class="modal_wrap fullpop cashback_terms"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content add_sticky no_fixed"><!-- 개별 팝업 Class pop_direct_input --> <!-- 2018-04-11 기획요청에 의한 no_fixed 클래스 추가 phj -->
+
+				<!-- <div class="sec_head">
+					<h2 class="modal_title">하나멤버스 약관동의</h2>
+					<button class="close_modal" onclick="self.close();"><span class="blind">창닫기</span></button>
+				</div> --> <!-- 2018-02-08 개발팀과 협의 후 풀팝업의 타이틀 일괄 삭제 phj -->
+
+				
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_title">
+						<h2>개인정보 등록</h2> <!-- 2018-03-21 문구 수정 phj -->
+						<p class="guide_txt">핀크계좌와 습관저금 캐시백 지급을 위해<br />주민등록번호와 주소를 입력해 주세요.</p>
+					</div>
+
+					<div class="sec_personal_input">
+						<ul class="flex_wrap set_type1">
+							<li class="input_wrap item name_gap">
+								<input type="text" data-name="inpFocus" placeholder="" class=""  value="홍길동" disabled="disabled">
+								<p class="remark hide">이름을 입력해 주세요.</p>
+							</li>
+
+							<!-- 2018-03-27 주민번호 뒷자리 입력 폼 다시 원복 phj -->
+							<li class="input_wrap type_3">
+								<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="901221" disabled="disabled"></div>
+								<div class="item">-</div>
+								<div class="item inp_error">
+									<div class="pw_input accountPwd"><!-- 개발 사용 class -->
+										<p class="on">
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+										</p>
+										<p>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+										</p>
+										<div class="box_password" data-name="inpFocus"></div>
+									</div>
+								</div>
+								<p class="remark show">주민번호 뒷자리를 입력해 주세요</p>
+							</li><!-- //2018-03-27 주민번호 뒷자리 다시 원복 phj -->
+
+							<li class="input_wrap item address_input">
+								<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소검색" maxlength="800" class="inp_count"></textarea>
+								<input type="text" data-name="inpFocus" placeholder="상세주소">
+								<p class="remark hide">주소를 입력해 주세요.</p>
+							</li>
+							<!-- 입력 안된경우 -->
+							<li class="input_wrap item inp_error address_input">
+								<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소검색" maxlength="800" class="inp_count"></textarea>
+								<input type="text" data-name="inpFocus" placeholder="상세주소 직접 입력">
+								<p class="remark show">주소를 입력해 주세요.</p>
+							</li>
+
+						</ul>
+					</div>
+
+					<!-- <div class="sec_agree">
+						<ul>
+							<li class="agree_wrap">
+								<input type="checkbox" id="purpleTwo1" name="test-img" class="purple"><label for="purpleTwo1" name="test-img"><span>고유식별정보 동의 (필수)</span></label>
+								<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>2018-02-06 클래스 변경 phj
+							</li>
+							<li class="agree_wrap">
+								<input type="checkbox" id="purpleTwo2" name="test-img" class="purple"><label for="purpleTwo2" name="test-img"><span>개인정보동의 (필수)</span></label>
+								<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>2018-02-06 클래스 변경 phj
+							</li>
+						</ul>
+					</div> -->
+
+					<div class="sec_all_check">
+						<div class="agree_all_terms">
+							<input type="checkbox" id="all_chk" name="test-img" class="purple"><label for="all_chk" name="test-img"><span>아래 약관에 모두 동의합니다.</span></label>
+						</div><!-- //agree_all_terms -->
+					
+						<div class="agree_terms term1">
+							<dl class="toggle_list">
+								<dt class="agree_wrap on"><!-- 모두 열기 class : on 2018-03-15 ock -->
+									<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101" name="check_action"><span>서비스 신청 동의</span></label>
+									<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+								</dt>
+								<dd style="display:block"><!-- 모두 열기 style 추가 : 2018-03-15 ock -->
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102" name="check_action"><span>고유식별정보 수집·이용 동의</span></label>
+										<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103" name="check_action"><span>개인정보 제공동의</span></label>
+										<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+									</div>
+								</dd>
+							</dl>
+						</div><!-- //agree_terms term1 -->
+
+
+						<div class="agree_terms term2">
+							<dl class="toggle_list">
+								<dt class="agree_wrap on"><!-- 모두 열기 class : on 2018-03-15 ock -->
+									<input type="checkbox" id="chk0201" name="check_action" class="purple"><label for="chk0201" name="check_action"><span>실명확인 동의</span></label>
+									<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+								</dt>
+								<dd style="display:block"><!-- 모두 열기 style 추가 : 2018-03-15 ock -->
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0202" name="check_action" class="purple"><label for="chk0202" name="check_action"><span>개인정보 수집·이용 동의</span></label>
+										<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0203" name="check_action" class="purple"><label for="chk0203" name="check_action"><span>개인정보 제공동의</span></label>
+										<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0204" name="check_action" class="purple"><label for="chk0204" name="check_action"><span>고유식별정보 처리 동의</span></label>
+										<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+									</div>
+								</dd>
+							</dl>
+						</div><!-- //agree_terms term2 -->
+					</div>
+
+
+				</div><!-- //scroll_wrap -->
+
+				<!-- <ul class="flex_wrap set_type1"> 5개
+					<li class="item on"><button type="button" name="button" class="btn btn_type_f">확인</button></li>
+				</ul> -->
+
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">등록하기</button><!-- 2018-03-21 텍스트 수정 phj -->
+				</div>
+
+			</div><!-- //modal_content -->
+		</div>
+
+		
+	</div>
+	<!-- #contents -->
+</div>
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible');
+
+	$(".toggle_list > dt").on("click", 'button', function(){
+		$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+
+	var residentNum = function () {
+		// 주민번호 앞자리
+		$('input:password[data-name="resident_num"]').on('keydown change', function(e){
+		var imgSum = $('.resident_dot span').length;
+			if ( e.keyCode == 8) {
+				$('.resident_dot span:last').remove();
+			} else {
+				if( imgSum == 1 ) { return false ; }
+				$('.resident_dot').append("<span></span>");
+			}
+		});
+	};	residentNum();
+
+});
+</script>
+
+
+</body>
+</html>

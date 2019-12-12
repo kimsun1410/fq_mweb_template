@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>해외송금_계좌연결해제</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASP06Z01">계좌연결해제</button>
+			</span>
+		</div>
+
+		<div id="MASP06Z01" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title"><!-- 20180312 내용수정 -->
+					<h3 class="accent_txt"><strong>계좌 연결을 해제</strong>하시겠습니까?</h3>
+				</div>
+
+				<div class="round_box bul_guide sub_box"><!-- 20180308 추가 -->
+					<p class="item">실명 인증 완료된 계좌<br />KEB하나 <span class="num">6548456156813</span></p><!-- 20180312 추가 -->
+					<p class="star_type indent fs12">다시 인증할 경우 재인증 필요</p>
+				</div>
+
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn_type_f close_modal">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="btn_type_f close_modal">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

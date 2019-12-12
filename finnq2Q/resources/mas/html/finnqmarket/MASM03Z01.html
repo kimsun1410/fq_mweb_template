@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>05입출금통장_01상세_web_MASM03Z01</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+
+<!-- 18.08.13 수정 -->
+<div class="wrap bg_list">
+	<!-- 18.08.13 하단 플로팅 버튼이 삭제되면서 <div id="contents">에 class="add_sticky" 삭제 -->
+	<div id="contents" class="market">
+		<section class="market_wrap bankbook_main">
+
+			<div class="sec_bankbook_visual type">
+				<p class="txt">쉽고 빠르게 만드는<br>
+				입출금통장</p>
+
+				<div class="dues line_btm">유의사항</div>
+				<div class="dis_table">
+					<p class="dis_cell">본인 확인을 위한 신분증(여권, 주민등록증, 운전면허증)을 준비해주세요.</p>
+				</div>
+
+			</div><!-- //sec_bankbook_visual -->
+
+			<!-- 2018-03-06 삭제 phj -->
+			<!--div class="sec_bankbook_eplus">
+				<p class="tit"><em class="num">e-</em>플러스 통장 기본 혜택</p>
+
+				<p class="img1">e-통장전환 우대금리혜택(특징), 개인(대상), 가능(수수료우대), 연 0.5%(금리우대)</p>
+				<p class="sub">(<em class="num">2016.8.31</em> 기준, 세전)</p>
+				<dl>
+					<dt>우대금리</dt>
+					<dd><em class="num">1</em>원만 맡겨도 <strong>연 <em class="num">0.5%</em>(세전)</strong> 우대금리</dd>
+					<dt>수수료 면제</dt>
+					<dd>전자금융 수수료 면제이벤트 조건 충족 후 <strong>월 최대 <em class="num">35</em>회 면제</strong></dd>
+					<dt>환율 우대</dt>
+					<dd>환전/ 송금 시 <strong><em class="num">30%</em></strong> 수수료 우대</dd>
+				</dl>
+			</div--><!-- //sec_bankbook_eplus -->
+
+			<div class="sec_bankbook_benefit new_type">
+				<!--
+				<p class="tit"><strong class="num bold">e-</strong>플러스 통장 만들고 <br>핀크 혜택 한가득 받기</p>
+				<p class="img">핀크계좌 자동충전, 핀크 적금/대출 이용</p>
+				-->
+				<p class="tit">계좌 개설 시 혜택</p>
+				<!-- <div class="img_cont"><img src="../../images/finnqmarket/img-bankbook-benefit.png" alt="" /></div> -->
+				<div class="img_cont">핀크계좌 자동충전, 핀크 적금/대출 이용</div>
+			</div><!-- //sec_bankbook_benefit -->
+
+
+			<!-- <div class="sec_bankbook_process">
+				<p class="tit">공인인증서 없이 <strong class="num">3</strong>단계 개설</p>
+				<ul>
+					<li>
+						<span class="ico ico_bankbook_process1"></span>
+						<div class="box">
+							<p class="tit"><em class="num">1.</em> 약관동의 및 확인</p>
+						</div>
+					</li>
+					<li>
+						<span class="ico ico_bankbook_process2"></span>
+						<div class="box">
+							<p class="tit"><em class="num">2.</em> 가입정보 입력</p>
+							<p>훼손되지 않은 신분증<br>(여권, 주민등록증, 운전면허증)</p>
+						</div>
+					</li>
+					<li>
+						<span class="ico ico_bankbook_process3"></span>
+						<div class="box">
+							<p class="tit"><em class="num">3.</em> 은행 확인 및 완료</p>
+						</div>
+					</li>
+				</ul>
+			</div> -->
+			<!-- //sec_bankbook_process -->
+
+			<div class="market_account_list">
+				<div><!-- 은행의 영문명은 span 태그로 그루핑 -->
+					<!-- 18.11.01 -->
+					<p class="bank_name">
+                        <span>KEB</span>하나은행
+                        <em class="btn_text01 add_link">
+                            <a href="#none">이용안내
+                            	<i class="ico ico_arrow_more"></i>
+                        	</a>
+                        </em>
+                    </p>
+                    <!-- //18.11.01 -->
+					<p class="detail_info">
+						<em class="num">1</em>원만 맡겨도 연 <em class="num">0.5%</em> 우대금리<br />
+						<strong>e-플러스 통장</strong>
+					</p>
+					<div class="btn_wrap">
+						<a href="#" class="btn off">개설 현황 보기</a><!-- 개설 현황 보기 : 클래스 off 추가 -->
+					</div>
+				</div>
+				<div>
+					<p class="bank_name">카카오뱅크</p>
+					<p class="detail_info">
+						까다로운 계좌 개설도 정말 손쉽게<br />
+						<strong>카카오뱅크 입출금통장</strong>
+					</p>
+					<div class="btn_wrap">
+						<a href="#" class="btn">개설하기</a>
+					</div>
+				</div>
+			</div>
+			<!-- //18.08.13 -->
+
+			<!-- 2018-03-06 숨김처리 display:none; 스타일 추가 phj -->
+			<div class="sec_bankbook_cate" style="display:none;">
+				<ul class="list_expend">
+					<!-- 상품 정보 -->
+					<li>
+						<div class="subject">
+							<a href="#open">상품 정보<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate2">
+								<p class="txt">가입대상</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">인터넷뱅킹에 가입한 개인고객</li>
+									</ul>
+								</div>
+								<p class="txt">예금종류</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">저축예금, 보통예금</li>
+									</ul>
+								</div>
+								<p class="txt">가입방법</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">영업점에서 예금주의 요청에 의해 신규 가입 및 전환 </li>
+										<li class="dash_type indent">비대면 계좌개설 서비스를 통한 신규 가입</li>
+
+										<li class="dash_type indent">예금주가 인터넷뱅킹, 스마트폰뱅킹, 콜센터를 이용하여 전환</li>
+									</ul>
+								</div>
+								<p class="txt">거래방법</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">인터넷뱅킹(스마트폰뱅킹 포함), 폰뱅킹 및 자동화기기를 이용한 거래에 한합니다.</li>
+									</ul>
+								</div>
+								<p class="txt">통장발급</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">이 예금은 통장을 발급하지 않으며, 전환된 계좌는 이전의 통장을 사용할 수 없습니다.</li>
+										<li class="dash_type indent">예금주가 이 예금의 통장 발급을 요청할 경우 은행은
+요청일 당시 고시된 수수료를 부과 후 통장을 발급 합니다.</li>
+									</ul>
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //상품 정보 -->
+
+					<!-- 금리 -->
+					<li>
+						<div class="subject">
+							<a href="#open">금리<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate3">
+								<p class="txt"><span class="tbl_info">(기준일자 : 2017.11.30)</span></p>
+								<table class="tbl_type1 mar_t10" summary="구분, 1년제, 2년제">
+									<caption>기본 금리정보</caption>
+									<colgroup>
+										<col style="width:20%">
+										<col style="width:*">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">구분</th>
+											<th scope="col">금리(연율,세전)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>-</td>
+											<td>저축예금, 보통예금 상품별 금리 + <em class="num">0.5</em>%</td>
+										</tr>
+									</tbody>
+								</table>
+								<p class="txt">우대금리</p>
+								<div class="bul_guide">
+									<ul class="list_gray mar_t10">
+										<li class="dash_type indent">연 <em class="num">0.5%</em>
+										<span class="add">(단, 은행거래 실적에 따라서 우대금리를 제공하는 입출금이 자유로운 통장을 <em class="num">e-</em>플러스 통장으로 전환 시 <em class="num">e-</em>플러스 통장의 우대금리는 제공되지 않고 최초 상품의 우대금리 기준으로 적용됩니다.)</span></li>
+									</ul>
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //금리 -->
+
+					<!-- 수수료우대  -->
+					<li>
+						<div class="subject">
+							<a href="#open">수수료우대 <i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate3">
+								<p class="txt">제공 서비스</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">수수료 면제</li>
+									</ul>
+								</div>
+								<p class="txt">내용</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">전자금융(폰뱅킹/인터넷/스마트폰) 타행이체수수료 및 당행 자동화기기 수수료, 납부자이체 수수료 통합 월 <em class="num">10</em>회 면제</li>
+										<li class="dash_type indent">인터넷으로 <em class="num">e</em>-플러스 상품 또는 펀드 가입 시 월 <em class="num">5</em>회 추가 면제</li>
+										<li class="dash_type indent">전월 평균잔액이 <em class="num">10</em>만원 이상인 경우 월 <em class="num">20</em>회 추가 면제
+											<div class="bul_guide mar_t10">
+												<ul>
+													<li class="dot_type indent"><em class="num">e</em>-플러스 통장 계좌가 2개 이상인 경우 : 합산 평잔이 <em class="num">10</em>만원 이상인 경우 월 <em class="num">20</em>회 수수료 추가 면제</li>
+													<li class="dot_type indent">신규가입 계좌인 경우 : 익월 말일까지 평잔과 관계없이 월<em class="num">20</em>회 수수료 추가 면제
+													<span class="add">(단, 은행거래 실적에 따라서 우대금리를 제공하는 입출금이 자유로운 통장을 <em class="num">e-</em>플러스 통장으로 전환 시 <em class="num">e-</em>플러스 통장의 우대금리는 제공되지 않고 최초 상품의 우대금리 기준으로 적용됩니다.)</span></li>
+													<li class="dot_type indent">한도대출 약정 계좌인 경우 : 예금 평잔이 <em class="num">10</em>만원 이상인 경우 월 <em class="num">20</em>회 수수료 추가 면제 (일반 계좌와 동일)</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="bul_guide bul_info">
+									<ul class="list_gray">
+										<li class="info_type indent">상기 수수료 면제 이벤트는 은행 사정에 따라 변경될 수 있습니다.</li>
+										<li class="info_type indent">납부자 이체 및 예약 이체 수수료 면제는 <em class="num">e</em>-플러스 통장으로 전환 후 다음 영업일부터 적용됩니다.</li>
+									</ul>
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //수수료우대  -->
+
+					<!-- 부가서비스 -->
+					<li>
+						<div class="subject">
+							<a href="#open">부가서비스<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate3">
+								<h1><em class="num">1.</em> 현금 리펀트</h1>
+								<p class="txt">온라인 쇼핑몰에서 <em class="num">e</em>-플러스통장으로 결제 시 현금 리펀드 제공</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">「하나 <em class="num">e</em>-플러스통장」 을 출금계좌로 하고, ‘실시간계좌이체’를 통해 결제할 경우, 결제금액의 0.5%를 해당계좌로 실시간 리펀드</li>
+										<li class="dash_type indent">결제금액이 최소 <em class="num">5</em>천원 이상인 경우에 적용</li>
+										<li class="dash_type indent">건당 최고 리펀드 금액 : <em class="num">750</em>원 (취소포함 월<em class="num">30</em>회 / 실명번호 기준)</li>
+									</ul>
+								</div>
+								<p class="txt">실시간계좌이체란?</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">인터넷쇼핑몰의 결제수단에는 신용카드, 실시간계좌이체, 무통장입금, 휴대폰결제 등이 있으며, 이 중 ‘실시간계좌이체’는 결제페이지에 입력한 구매자의 계좌에서 구매대금을 실시간으로 출금하여 결제를 완료하는 서비스임 (공인인증서 기반)
+										<span class="add">(사후에 계좌로 송금하는 방식인 "무통장 입금"과 다름)</span></li>
+										<li class="dash_type indent">유의사항 : 리펀드 기간, 비율, 최고금액, 횟수 등은 은행의 사정에 따라 변경 가능하며, 변경시행일 전 <em class="num">1</em>개월 동안 은행 홈페이지 또는 영업점에 고시합니다.</li>
+									</ul>
+								</div>
+								<h1><em class="num">2.</em> 환율우대</h1>
+								<p class="txt">환전송금 연동 거래 시 환율 <em class="num">spread 30%</em> 우대</p>
+								<h1><em class="num">3.</em> 가계부 발송</h1>
+								<p class="txt">월 1회 이메일로 동 상품의 입금 및 지급내역 송부</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">홈페이지에서만 신청 가능</li>
+									</ul>
+								</div>
+								<div class="bul_guide bul_info">
+									<ul class="list_gray">
+										<li class="info_type indent">이 예금은 예금자 보호법에 따라 예금보험공사가 보호하되, 보호한도는 본 은행에 있는 귀하의 모든 예금보호대상 금융상품의 원금과 소정의 이자를 합하여 <em class="num">1</em>인당 “최고 <em class="num">5</em>천만원”이며, <em class="num">5</em>천만원을 초과하는 나머지 금액은 보호하지 않습니다.</li>
+										<li class="info_type indent">자세한 사항은 상품설명서 및 <em class="num">KEB</em>하나은행 홈페이지(<a href="http://www.kebhana.com" class="num" target="_blank">www.kebhana.com</a>), <em class="num">KEB</em>하나은행 콜센터(<a href="tel:1566-4949" class="num">1599-1111</a>) 또는 가까운 영업점에 문의하시기 바랍니다.</li>
+									</ul>
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //부가서비스 -->
+
+				</ul><!-- //list_expend -->
+			</div><!-- //sec_bankbook_cate -->
+
+			<!-- 2018-03-06 삭제 phj -->
+			<!-- <div class="sec_bankbook_info">
+				<div class="bul_guide">
+					<ul>
+						<li class="info_type indent">본 공시내용의 유효기간 : <em class="num">2016.08.29 ~ 2019.08.28</em></li>
+						<li class="info_type indent">하나은행 준법감시인 심사필 제<em class="num">2016</em>-상품-<em class="num">924</em>호(<em class="num">2016.08.29</em>)</li>
+					</ul>
+				</div>
+			</div> --><!-- //sec_bankbook_info -->
+
+			<!-- sec_sns_share -->
+			<!-- 20180315 SNS공유하기 컨텐츠변경 --><!-- SNS 공유 삭제 2018-03-16 ock -->
+			<!-- <div class="sec_sns_share">
+				<div class="cont_wrap">
+					<p class="txt">핀크의 좋은 혜택을 친구에게<br>SNS로 공유해 보세요 :)</p>
+				</div>
+				<button type="button" class="btn btn_type_j"><i class="ico ico_share"></i> 공유하기</button>
+			</div> --><!-- //sec_sns_share -->
+
+		</section><!-- //bankbook_main -->
+
+		<!-- 하단 붙임 -->
+		<!-- 점검 중 케이스 추가 2018-03-21 ock -->
+		<!-- 2018-08-14 하단 버튼 삭제 -->
+		<!--
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_apply" disabled="disabled">점검 중</button>
+		</div>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_apply">신청하기</button>
+		</div> -->
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+</body>
+</html>

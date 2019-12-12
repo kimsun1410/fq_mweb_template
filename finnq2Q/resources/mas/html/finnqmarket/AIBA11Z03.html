@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트구매_02아트구매신청_AIBA11Z03</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- AIBA11Z03 -->
+	<div id="contents" class="art_wrap add_sticky no_fixed">
+
+		<section>
+			<div class="sec_title">
+				<h2>개인정보 입력</h2>
+				<p class="guide_txt"><!-- 19.04.19 문구 변경 -->
+					아트투자 서비스 이용을 위해 개인정보를<br>
+					제휴사인 아트투게더에 제공합니다.
+				</p>
+			</div>
+
+			<div class="sec_member_input">
+				<p class="inp_title">개인정보</p>
+				<ul class="flex_wrap set_type1">
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" placeholder="이름 (성 + 이름)" class="" disabled="disabled" value="김핀크">
+						<p class="remark hide">이름을 입력해 주세요.</p>
+					</li>
+
+					<!-- 주민번호 START -->
+					<li class="input_wrap type_3 new_marsking">
+						<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="901221" disabled="disabled"></div>
+						<div class="item">-</div>
+
+						<div class="item">
+							<input type="password" data-name="inpFocus" placeholder="주민번호 뒷자리" value="">
+						</div>
+						<p class="remark hide">주민번호 뒷자리를 입력해 주세요.</p>
+						<p class="remark gray">주민번호는 제휴사에서 수집 이용하며, 핀크는 저장하지 않습니다.</p>
+					</li>
+
+					<!-- 주민번호 ERROR  -->
+					<!-- <li class="input_wrap type_3 new_marsking">
+						<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="901221" disabled="disabled"></div>
+						<div class="item">-</div>
+
+						<div class="item inp_error">
+							<input type="password" data-name="inpFocus" placeholder="주민번호 뒷자리" value="">
+						</div>
+						<p class="remark">주민번호 뒷자리를 입력해 주세요.</p>
+						<p class="remark gray hide">주민번호는 제휴사에서 수집 이용하며, 핀크는 저장하지 않습니다.</p>
+					</li> -->
+					<!-- // 주민번호 ERROR  -->
+					<!-- //주민번호 END -->
+
+					<!-- 이메일 START -->
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" placeholder="이메일" class="" value="finnq@finnq.com">
+						<p class="remark hide">이메일을 입력해 주세요.</p>
+					</li>
+
+					<!-- 이메일 ERROR -->
+					<!-- <li class="input_wrap item inp_error">
+						<input type="text" data-name="inpFocus" placeholder="이메일" class="" value="">
+						<p class="remark">이메일을 입력해 주세요.</p>
+					</li> -->
+					<!-- //이메일 ERROR -->
+					<!-- //이메일 END -->
+
+					<!--  주소 입력 START-->
+					<li class="input_wrap item address_input">
+						<input type="text" data-name="inpFocus" placeholder="주소검색" value="서울특별시 중구 을지로 100">
+						<input type="text" data-name="inpFocus" placeholder="상세주소" value="파인애비뉴 B동 20층">
+						<p class="remark hide">주소를 입력해 주세요.</p>
+					</li>
+
+					<!-- 주소 입력 ERROR -->
+					<!-- <li class="input_wrap item address_input inp_error">
+						<input type="text" data-name="inpFocus" placeholder="주소검색">
+						<input type="text" data-name="inpFocus" placeholder="상세주소 직접 입력">
+						<p class="remark">주소를 입력해 주세요.</p>
+					</li> -->
+					<!-- //주소 입력 ERROR -->
+					<!--  //주소 입력 END -->
+				</ul>
+
+				<hr class="dot_division">
+
+				<div class="return_account_wrap">
+
+					<div class="inp_title_wrap">
+						<p class="inp_title">예치금 상환 계좌</p>
+						<a href="#" class="btn_pop_link">직접입력</a>
+					</div>
+
+					<div class="item soft_select">
+						<div class="account">
+							<button type="button">KEB하나 <em class="
+								num">987-654-321098</em></button>
+						</div>
+					</div>
+
+					<!-- 계좌 연결 없을 시  item soft_select 에 클래스 disabled 추가-->
+					<!-- <div class="item soft_select disabled">
+						<div class="account">
+							<button type="button">연결계좌가 없습니다.</button>
+						</div>
+					</div> -->
+
+					<div class="add_connect">
+						<p>은행 계좌를 연결하면<br>
+						최대 <em class="num">200</em>만원까지 구매할 수 있습니다.</p>
+						<span class="btn_text05"><a href="#none">연결하기</a></span>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- 약관 확인 -->
+			<div class="agree_check">
+				<div class="sec_agree">
+					<ul>
+						<li class="agree_wrap">
+							<input type="checkbox" id="grayTwo1" name="test-img" class="purple"><label for="grayTwo1" name="test-img"><span>아트구매 작품 알림 받기</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</li>
+						<!-- 19.06.03 : 주석처리 -->
+						<!--
+						<li class="agree_wrap">
+							<input type="checkbox" id="grayTwo2" name="test-img" class="purple"><label for="grayTwo2" name="test-img"><span>[필수] 아트구매 서비스 이용동의</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</li>
+						<li class="agree_wrap">
+							<input type="checkbox" id="grayTwo3" name="test-img" class="purple"><label for="grayTwo3" name="test-img"><span>[필수] 아트투게더 제휴 서비스 이용동의</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</li>
+						<li class="agree_wrap">
+							<input type="checkbox" id="grayTwo4" name="test-img" class="purple"><label for="grayTwo4" name="test-img"><span>[선택] 아트투게더 마케팅 수신동의</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</li>
+						-->
+					</ul>
+				</div><!-- //sec_agree -->
+
+				<!-- 19.06.03 : 약관 타입 변경 추가  -->
+				<div class="agree_terms term2 art_invest">
+					<dl class="toggle_list term2">
+						<dt class="agree_wrap on">
+							<input type="checkbox" id="chk0201" name="check_action" class="purple">
+							<label for="chk0201" name="check_action"><span class="txt depth02">아트투자 이용 약관</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</dt>
+						<dd style="display: block;">
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0202" name="check_action" class="purple"><label for="chk0202" name="check_action"><span>[필수] 아트투게더 서비스 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0203" name="check_action" class="purple"><label for="chk0203" name="check_action"><span>[필수] 아트투게더 개인정보취급방침</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0204" name="check_action" class="purple"><label for="chk0204" name="check_action"><span>[선택] 아트투게더 마케팅정보 선택적 수집</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+						</dd>
+					</dl>
+				</div>
+				<!-- //19.06.03 : 약관 타입 변경 추가  -->
+			</div>
+
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+
+	</div>
+	<!-- #contents -->
+
+
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// 약관 토글 추가 19.06.03
+	$(".toggle_list > dt > button").on("click", function(){
+		$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+});
+</script>
+</body>
+</html>

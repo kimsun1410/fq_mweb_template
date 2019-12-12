@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트투자_작품상세보기_01_AIBA11Z08</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+
+
+	 <!-- # chart # -->
+	<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+	<!-- rMateChartH5 라이센스 -->
+	<!-- <script src="rMateChartH5/LicenseKey/rMateChartH5License.js" ></script> -->
+	<!-- 실제적인 rMateChartH5 라이브러리 > 수정불가-! -->
+	<script language="javascript" type="text/javascript" src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+	<script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+
+
+	<script type="text/javascript">
+	// -----------------------차트 설정 시작-----------------------
+
+	// rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+	var chartVars = "rMateOnLoadCallFunction=chartReadyHandler";
+
+	// rMateChart 를 생성합니다.
+	// 파라메터 (순서대로)
+	//  1. 차트의 id ( 임의로 지정하십시오. )
+	//  2. 차트가 위치할 div 의 id (즉, 차트의 부모 div 의 id 입니다.)
+	//  3. 차트 생성 시 필요한 환경 변수들의 묶음인 chartVars
+	//  4. 차트의 가로 사이즈 (생략 가능, 생략 시 100%)
+	//  5. 차트의 세로 사이즈 (생략 가능, 생략 시 100%)
+	rMateChartH5.create("chart1", "chartHolder", chartVars, "100%", "100%");
+
+	// 차트의 속성인 rMateOnLoadCallFunction 으로 설정된 함수.
+	// rMate 차트 준비가 완료된 경우 이 함수가 호출됩니다.
+	// 이 함수를 통해 차트에 레이아웃과 데이터를 삽입합니다.
+	// 파라메터 : id - rMateChartH5.create() 사용 시 사용자가 지정한 id 입니다.
+	function chartReadyHandler(id) {
+		document.getElementById(id).setLayout(layoutStr);
+		document.getElementById(id).setData(chartData);
+	}
+
+	// 차트 데이터
+	var chartData = [
+		{"Year":"2002", "Price":2002},
+		{"Year":"2003", "Price":5002},
+		{"Year":"2004", "Price":10220},
+		{"Year":"2005", "Price":15205},
+		{"Year":"2006", "Price":19105}
+	];
+
+	var layoutStr =
+		'<rMateChart backgroundColor="#FFFFFF"  borderStyle="none">'
+				+'<Options>'
+				// +'<Caption text="Null Data"/>'
+				+'</Options>'
+			+'<Line2DChart showDataTips="true" paddingTop="0">'
+				+'<horizontalAxis>'
+					+'<CategoryAxis categoryField="Year"/> '
+				+'</horizontalAxis>'
+				+'<verticalAxis fontFamily="LatoM">'
+					+'<LinearAxis minimum="0" maximum="20000" interval="5000" />'
+				+'</verticalAxis>'
+				+'<series>'
+					+'<Line2DSeries yField="Price" displayName="Price" itemRenderer="CircleItemRenderer" fontSize="11" radius="3" fontFamily="LatoM" fill="#222" color="#222">'
+						+'<showDataEffect>'
+							// +'<SeriesInterpolate/> '
+							+'<SeriesInterpolate duration="500"/> '
+						+'</showDataEffect>'
+						+'<lineStroke>'
+								+'<Stroke color="#222" weight="1"/>'
+						+'</lineStroke>'
+						+'<stroke>'
+							+'<Stroke color="#222" weight="1" alpha="0" />'
+						+'</stroke>'
+					+'</Line2DSeries>'
+				+'</series>'
+			+'</Line2DChart>'
+		 +'</rMateChart>';
+
+		/**
+		 * rMateChartH5 3.0이후 버전에서 제공하고 있는 테마기능을 사용하시려면 아래 내용을 설정하여 주십시오.
+		 * 테마 기능을 사용하지 않으시려면 아래 내용은 삭제 혹은 주석처리 하셔도 됩니다.
+		 *
+		 * -- rMateChartH5.themes에 등록되어있는 테마 목록 --
+		 * - simple
+		 * - cyber
+		 * - modern
+		 * - lovely
+		 * - pastel
+		 * -------------------------------------------------
+		 *
+		 * rMateChartH5.themes 변수는 theme.js에서 정의하고 있습니다.
+		 */
+		rMateChartH5.registerTheme(rMateChartH5.themes);
+
+		/**
+		 * 샘플 내의 테마 버튼 클릭 시 호출되는 함수입니다.
+		 * 접근하는 차트 객체의 테마를 변경합니다.
+		 * 파라메터로 넘어오는 값
+		 * - simple
+		 * - cyber
+		 * - modern
+		 * - lovely
+		 * - pastel
+		 * - default
+		 *
+		 * default : 테마를 적용하기 전 기본 형태를 출력합니다.
+		 */
+		function rMateChartH5ChangeTheme(theme){
+			document.getElementById("chart1").setTheme(theme);
+		}
+
+	// -----------------------차트 설정 끝 -----------------------
+	</script>
+
+</head>
+<body>
+<div class="wrap"><!-- AIBA11Z01 -->
+	<!-- contents -->
+	<div id="contents" class="market art_wrap add_sticky">
+		<!-- section -->
+		<section class="pt10">
+
+			<div class="main_view_detail">
+				<article>
+					<div class="swiper-container top">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+
+					<div class="com_box_wrap">
+						<div class="art_info_guide">
+							<span class="ico_info_label">전시중</span>
+							<p class="author">마리킴 Mari Kim werdtews</p>
+							<p class="art_name">CinderellaCinderekka12</p>
+							<p class="date_wrap"><em class="date">2019.01.01</em> ~ <em class="date">2019.04.31</em></p>
+						</div>
+
+						<div class="p2p_wrap big">
+							<!-- 모집 진행중 그래프 -->
+							<div class="figuer_graph first ing">
+								<div class="svg_graph" data-value="25">
+									<svg class="basic"><circle  /></svg>
+									<svg class="ing"><circle  /></svg>
+									<p class="tit">모집중</p>
+									<span class="label animate"></span>
+								</div>
+							</div>
+							<!-- //모집 진행중 그래프 -->
+
+							<!-- 모집 예정 그래프 -->
+							<!--
+							<div class="figuer_graph first due">
+								<div class="svg_graph xs">
+									<svg class="complete"><circle  /></svg>
+									<p class="tit">모집예정</p>
+									<span class="label">D-<em class="num bold">3</em></span>
+								</div>
+							</div>
+							-->
+							<!-- //모집 예정 그래프 -->
+
+							<!-- 모집 완료 그래프 -->
+							<!--
+							<div class="figuer_graph first end">
+								<div class="svg_graph active">
+									<svg class="basic"><circle></circle></svg>
+									<p class="tit">모집완료</p>
+									<span class="label"><em class="num bold">19.04.31</em></span>
+								</div>
+							</div>
+							-->
+							<!-- //모집 완료 그래프 -->
+
+							<div class="figuer_graph">
+								<div class="svg_graph thin active">
+									<svg class="basic"><circle></circle></svg>
+									<p class="tit">모집주수</p>
+									<span class="label">완료
+										<em class="tot">/<em class="num">1500</em>주</em>
+									</span>
+								</div>
+							</div>
+
+							<div class="figuer_graph">
+								<div class="svg_graph thin active">
+									<svg class="basic"><circle></circle></svg>
+									<p class="tit"><em class="num">1</em>주당 금액</p>
+									<span class="label"><em class="num">10000</em>원</span>
+								</div>
+							</div>
+
+						</div><!-- //p2p_wrap big -->
+					</div><!-- //com_box_wrap -->
+				</article>
+
+				<article>
+					<div class="com_box_wrap">
+						<p class="title">작품정보</p>
+						<div class="box_avi">
+							<iframe src="https://www.youtube.com/embed/KQYjPnGOwk8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+
+						<ul class="list_split line_dot">
+							<li>
+								<span class="tit">작가</span>
+								<span class="cont">마리킴</span>
+							</li>
+							<li>
+								<span class="tit">작품명</span>
+								<span class="cont">Cinderaella</span>
+							</li>
+							<li>
+								<span class="tit">제작연도</span>
+								<span class="cont"><em class="num">2010</em>년</span>
+							</li>
+							<li>
+								<span class="tit">재료</span>
+								<span class="cont">Ultrachrome ink printed on white velvet</span>
+							</li>
+							<li>
+								<span class="tit">규격</span>
+								<span class="cont"><em class="num">93☓73cm, 36.6☓28.7in</em></span>
+							</li>
+							<li>
+								<span class="tit">비고</span>
+								<span class="cont">Seoul AucBon</span>
+							</li>
+						</ul>
+						<div class="detail_link">
+							<a href="#">자세히보기</a>
+						</div>
+					</div><!-- //com_box_wrap -->
+				</article>
+
+				<article>
+					<div class="com_box_wrap">
+						<p class="title">투자포인트</p>
+						<div class="swiper-container add">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+							<div class="swiper_guide_wrap">
+								<div class="swiper_guide">가이드</div>
+							</div>
+						</div>
+
+						 <div class="credit_chart_wrap mgt40">
+							<!-- 차트 추가 -->
+							<div class="_chart1">
+								<div class="chart_head">
+									<strong class="chart_tit">가격변동지수</strong>
+									<em class="legend_credit">유사작품 변동 추이</em>
+								</div>
+								<div class="chart_area">
+									<div class="chart Combination2DChart" id="chartHolder"></div>
+								</div>
+							</div>
+							<!-- //차트 추가 -->
+						</div>
+
+						<div class="detail_link">
+							<a href="#">자세히보기</a>
+						</div>
+
+					</div><!-- //com_box_wrap -->
+				</article>
+
+				<article>
+					<a href="#" class="more_detail_link">전시정보</a>
+				</article>
+
+				<article>
+					<a href="#" class="more_detail_link">투자후기</a>
+				</article>
+
+				<article>
+					<div class="btn_share_wrap">
+						<button type="button" class="btn_share">
+							<span>공유하기</span>
+						</button>
+					</div>
+				</article>
+			</div><!-- //main_view_detail -->
+
+		</section>
+		<!-- //section -->
+
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">투자하기</button>
+		</div>
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//SVG그래프 Active
+	svgGraph();
+
+
+	// Swipe
+	var swipeTop = new Swiper ('.swiper-container.top', {
+		loop: true,
+		pagination: {
+			el: '.swiper-container.top .swiper-pagination',
+			clickable: true,
+		},
+	});
+
+	var swiperAdd = new Swiper ('.swiper-container.add', {
+		loop: true,
+		pagination: {
+			el: '.swiper-container.add .swiper-pagination',
+			type: 'fraction',
+		},
+	});
+
+	swiperAdd.on('slideChange', function () {
+		if (swiperAdd.activeIndex != 1) {
+			$('.swiper_guide_wrap').hide();
+		}
+	});
+
+
+
+});
+</script>
+</body>
+</html>

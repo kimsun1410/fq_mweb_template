@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>계좌 오류_HTML</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="OWSD01Z04">계좌 오류_HTML</button>
+			</span>
+		</div>
+
+		<div id="OWSD01Z04" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">해당계좌가 존재하지 않습니다.<br />
+					본인 명의의 계좌를 입력해 주세요.<br /><br />
+					<strong>은 행 : KB국민</strong><br />
+					<strong>계좌번호 : <em class="num bold">80130101357985</em></strong></h3>
+				</div>
+
+				<div class="flex_wrap set_type1">
+					<span class="item on"><button type="button" name="button" class="btn_type_f">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../libs/jquery-2.2.4.min.js"></script>
+<script src="../libs/ui.js"></script>
+<script src="../libs/ows.js"></script>
+<script src="../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

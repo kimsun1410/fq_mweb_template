@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>10핀크카드_02카드내역_01지역별_web_MASC02Z02</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+
+<div class="wrap bg_list">
+	<div id="contents" class="market"><!-- //add_sticky 하단 버튼 있는 경우 -->
+		<section class="twoplus_card finnqcard_history"><!-- 핀크카드 -->
+
+			<div class="sec_head">
+				<p class="update">
+					업데이트 오늘<em class="num">13:20</em>
+					<a href="#none"><i class="ico ico_reload"><span class="blind">Refresh</span></i></a><!-- 2018-02-12 회전시 ico에 loading 클래스 추가 -->
+				</p><!-- 2018-01-26 업데이트 추가 phj -->
+				<div class="date_control">
+					<button type="button" name="button" class="btn ico_prev">previous month</button>
+					<strong class="date">2017.11</strong>
+					<button type="button" name="button" class="btn ico_next end" disabled="disabled">next month</button><!-- Class: "end", disable둘다 화면표시는 같습니다 -->
+				</div>
+			</div><!-- //sec_head -->
+			<div class="sec_insinfo twoplus"><!-- installment info, 적금상세정보 투쁠 이용내역 -->
+				<!-- <button class="btn_account_mng"><span>관리</span></button> 삭제 2018-01-23 -->
+				<div class="ins_info">
+					<ul>
+						<li class="use">
+							<div class="tit">11월 20일 이용금액</div><!-- 2018-03-22 이용금액으로 텍스트 변경 -->
+							<div class="info">
+								<em class="cash">862,300</em><span>원</span>
+							</div>
+						</li>
+						<li class="basic">
+							<div class="tit">예상 기본적립</div><!-- 예상 텍스트 추가 2018-02-27 -->
+							<div class="info">
+								<em class="cash">8,623</em><span>원</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- //sec_insinfo -->
+
+			<div class="sec_cspend">
+				<div class="tab-container">
+					<!-- <div class="on" data-tab="status">
+						<span>혜택현황</span>
+					</div> -->
+					<div data-tab="price">
+						<span>금액별</span>
+					</div>
+					<div data-tab="category">
+						<span>항목별</span>
+					</div>
+					<div data-tab="time">
+						<span>시간별</span>
+					</div>
+					<div class="on" data-tab="area">
+						<span>지역별</span>
+					</div>
+				</div><!-- //tab-container -->
+				<div class="cspend_detail" data-tab="area"><!-- 소비내역 상세 -->
+					<div id="tab-0" class="tab-content on">
+						<div class="listup spend_type1"><!-- 2018-04-11 spend_type1 클래스 추가 phj -->
+							<dl>
+								<dt><em class="num">1.</em> <em>서울 중구</em></dt>
+								<!-- <dd><em class="cash">18,650</em>원 / <em class="num">15</em>회</dd> 슬래시 사이즈 수정으로 태그 추가 2018-02-21 -->
+								<dd><em class="num">115</em><span>회</span> <span class="dash">/</span> <em class="cash">99,918,650</em><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt><em class="num">2.</em> <em>서울 서초구</em></dt>
+								<!-- <dd><em class="cash">18,650</em>원 / <em class="num">15</em>회</dd> 슬래시 사이즈 수정으로 태그 추가 2018-02-21 -->
+								<dd><em class="num">15</em><span>회</span> <span class="dash">/</span> <em class="cash">18,650</em><span>원</span></dd>
+							</dl>
+							<dl>
+								<dt><em class="num">3.</em> <em>경기 과천</em></dt>
+								<!-- <dd><em class="cash">18,650</em>원 / <em class="num">15</em>회</dd> 슬래시 사이즈 수정으로 태그 추가 2018-02-21 -->
+								<dd><em class="num">15</em><span>회</span> <span class="dash">/</span> <em class="cash">18,650</em><span>원</span></dd>
+							</dl>
+						</div>
+
+					</div><!-- //tab-content -->
+				</div><!-- //cspend_detail -->
+			</div><!-- //sec_category -->
+
+			<div class="sec_history spend_detail">
+				<ul class="summary">
+					<li class="category">사용내역</li>
+					<li class="category_choice arrow_select"><!-- MASC01Z02-1 : selectbox 로 변경요청한 페이지 씽크 맞춤  -->
+						<!-- <button type="button" class="expend">전체<span class="ico ico_arrow_down_type_b"></span></button> -->
+						<select name="" id="" dir="rtl"> <!-- dir="rtl" 추가 2018-03-29 ock -->
+							<option value="">전체</option>
+							<option value="">옵션1</option>
+							<option value="">옵션2</option>
+						</select>
+						<span class="ico ico_arrow_down_type_b"></span>
+					</li>
+				</ul>
+				<!-- 반복문 -->
+				<ul class="list_wrap">
+					<li>
+						<dl>
+							<dt>
+								<strong>케이비손해보험 11월</strong>
+								<div><em class="cash bold">216,000</em><span>원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">11.02 20:53</strong></div>
+								<div><strong class="point">적립 <em class="cash">2,160</em>원</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 보험</a></blockquote><!-- 링크 기능이 없으면 a태그 삭제해주세요. -->
+								<blockquote><a href="#"># 고정비</a></blockquote>
+								<blockquote><a href="#"># 그뤠잇</a></blockquote>
+							</div>
+						</div>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<strong>하나로마트</strong>
+								<div><em class="cash bold">27,000</em><span>원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">11.01 21:11</strong></div>
+								<div><strong class="point">적립 <em class="cash">270</em>원</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 생활비</a></blockquote>
+								<blockquote><a href="#"># 마트</a></blockquote>
+								<blockquote><a href="#"># 생필품</a></blockquote>
+							</div>
+						</div>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<strong>스타벅스코리아</strong>
+								<div><em class="cash bold">5,100</em><span>원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">11.21 12:55</strong></div>
+								<div><strong class="point">적립 <em class="cash">51</em>원</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 스벅</a></blockquote>
+								<blockquote><a href="#"># 다이어리겟</a></blockquote>
+								<blockquote><a href="#"># 프리퀀시</a></blockquote>
+							</div>
+							<button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button>
+						</div>
+					</li>
+
+					<!-- 2018-04-06 부분 취소 케이스 추가 phj 2018-04-09 구조 변경 -->
+					<li>
+						<dl>
+							<dt>
+								<strong>이니시스(쇼핑몰일반)</strong>
+								<div><em class="cash bold">216,000</em><span>원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">11.21 12:55</strong></div>
+								<div><strong class="point"><em class="cash">2,160</em>원</strong></div>
+							</dd>
+						</dl>
+					</li>
+					<li class="partial">
+						<dl>
+							<dt>
+								<strong>이니시스(쇼핑몰일반)</strong>
+								<div><em class="cash bold">25,000</em><span>원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">11.21 12:55</strong>, 부분취소</div>
+								<div><strong class="point"><em class="cash">-250</em>원</strong></div>
+							</dd>
+						</dl>
+					</li>
+					<!-- //2018-04-06  부분 취소 케이스 추가 phj 2018-04-09 구조 변경 -->
+
+					<li>
+						<dl class="cancel">
+							<dt>
+								<strong class="strike">(주)신세계페이먼츠</strong>
+								<div><em class="cash bold">216,000</em><span>원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">11.21 20:53, 결제취소</strong></div>
+								<div></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 보험</a></blockquote>
+								<blockquote><a href="#"># 고정비</a></blockquote>
+								<blockquote><a href="#"># 그뤠잇</a></blockquote>
+							</div>
+						</div>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<strong>케이비손해보험 11월</strong>
+								<div><em class="cash bold">216,000</em><span>원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">11.21 20:53</strong></div>
+								<div><strong class="point">적립 <em class="cash">2,160</em>원</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 보험</a></blockquote>
+								<blockquote><a href="#"># 고정비</a></blockquote>
+								<blockquote><a href="#"># 그뤠잇</a></blockquote>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>			
+		</section>
+		<!-- 하단 붙임 -->
+
+
+	</div><!-- #contents -->
+
+
+
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	var result = Math.floor(Math.random() * 100) + 1;
+
+	$('#tempMovie').radialIndicator({
+		radius: 34,
+		barBgColor:'#aa96f2',
+		barColor: '#ffdb15',
+		barWidth: 3,
+		displayNumber: false,
+		initValue: result,
+		roundCorner : true,
+		percentage: true
+	});
+	$('#tempCoffee').radialIndicator({
+		radius: 34,
+		barBgColor:'#aa96f2',
+		barColor: '#ffdb15',
+		barWidth: 3,
+		displayNumber: false,
+		initValue: result,
+		roundCorner : true,
+		percentage: true
+	});
+	$('#tempFood').radialIndicator({
+		radius: 34,
+		barBgColor:'#aa96f2',
+		barColor: '#ffdb15',
+		barWidth: 3,
+		displayNumber: false,
+		initValue: result,
+		roundCorner : true,
+		percentage: true
+	});
+});
+</script>
+
+
+
+
+</body>
+</html>

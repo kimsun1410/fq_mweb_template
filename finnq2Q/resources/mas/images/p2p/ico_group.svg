@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="370" viewBox="0 0 320 370">
+    <defs>
+        <path id="a" d="M0 21.613V18.37C0 8.225 8.059 0 18 0s18 8.225 18 18.37v5.404c0 3.58-2.844 6.484-6.353 6.484H20.81l-1.734 3.768a1 1 0 0 1-1.817 0l-1.734-3.768H6.353C2.844 30.258 0 27.355 0 23.774v-2.161z"/>
+        <rect id="b" width="25.412" height="10.909" x="4.32" y="11.52" rx="5.455"/>
+        <path id="c" d="M0 21.613V18.37C0 8.225 8.059 0 18 0s18 8.225 18 18.37v5.404c0 3.58-2.844 6.484-6.353 6.484H20.81l-1.734 3.768a1 1 0 0 1-1.817 0l-1.734-3.768H6.353C2.844 30.258 0 27.355 0 23.774v-2.161z"/>
+        <rect id="d" width="25.412" height="10.909" x="5.143" y="11.143" rx="5.455"/>
+        <path id="e" d="M0 21.513v-3.227C0 8.186 7.96 0 17.778 0c9.818 0 17.778 8.187 17.778 18.286v5.377c0 3.565-2.81 6.455-6.275 6.455h-8.73l-1.7 3.723a1 1 0 0 1-1.819 0l-1.7-3.723H6.275C2.809 30.118 0 27.228 0 23.664v-2.151z"/>
+        <rect id="f" width="25.098" height="10.859" x="5.689" y="11.467" rx="5.429"/>
+        <path id="g" d="M0 21.613V18.37C0 8.225 8.059 0 18 0s18 8.225 18 18.37v5.404c0 3.58-2.844 6.484-6.353 6.484H20.81l-1.734 3.768a1 1 0 0 1-1.817 0l-1.734-3.768H6.353C2.844 30.258 0 27.355 0 23.774v-2.161z"/>
+        <rect id="h" width="25.412" height="10.909" x="5.04" y="11.52" rx="5.455"/>
+        <path id="i" d="M0 21.613V18.37C0 8.225 8.059 0 18 0s18 8.225 18 18.37v5.404c0 3.58-2.844 6.484-6.353 6.484H20.81l-1.734 3.768a1 1 0 0 1-1.817 0l-1.734-3.768H6.353C2.844 30.258 0 27.355 0 23.774v-2.161z"/>
+        <rect id="k" width="25.412" height="10.909" x="19.44" y="11.52" rx="5.455"/>
+        <path id="l" d="M0 21.613V18.37C0 8.225 8.059 0 18 0s18 8.225 18 18.37v5.404c0 3.58-2.844 6.484-6.353 6.484H20.81l-1.734 3.768a1 1 0 0 1-1.817 0l-1.734-3.768H6.353C2.844 30.258 0 27.355 0 23.774v-2.161z"/>
+        <rect id="n" width="25.412" height="10.909" x="19.44" y="11.52" rx="5.455"/>
+        <path id="o" d="M0 21.613V18.37C0 8.225 8.059 0 18 0s18 8.225 18 18.37v5.404c0 3.58-2.844 6.484-6.353 6.484H20.81l-1.734 3.768a1 1 0 0 1-1.817 0l-1.734-3.768H6.353C2.844 30.258 0 27.355 0 23.774v-2.161z"/>
+        <rect id="p" width="25.412" height="10.909" x="8.174" y="11.629" rx="5.455"/>
+        <path id="q" d="M55 53.667V5H19v48.667z"/>
+        <circle id="r" cx="7.4" cy="43.167" r="6.167"/>
+        <circle id="s" cx="66.4" cy="43.167" r="6.167"/>
+        <rect id="t" width="40" height="18" rx="2"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(50)">
+            <rect width="100" height="105" fill="#F8F8F8" rx="4"/>
+            <text fill="#666" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="11" font-weight="400" letter-spacing="-1">
+                <tspan x="23.509" y="70">물품을 담보로</tspan> <tspan x="6.302" y="84">어디 돈 빌릴데 없을까</tspan> <tspan x="88.616" y="84">?</tspan>
+            </text>
+            <g transform="translate(32 15)">
+                <use fill="#FFF" xlink:href="#a"/>
+                <path stroke="#222" stroke-width="2" d="M1 18.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C35 8.773 27.384 1 18 1S1 8.773 1 18.37z"/>
+                <use fill="#66D9D4" xlink:href="#b"/>
+                <rect width="23.412" height="8.909" x="5.32" y="12.52" stroke="#222" stroke-width="2" rx="4.455"/>
+                <rect width="3.176" height="3.273" x="9.36" y="15.12" fill="#222" rx="1.588"/>
+                <rect width="3.176" height="3.273" x="18.72" y="15.12" fill="#222" rx="1.588"/>
+            </g>
+        </g>
+        <g transform="translate(170)">
+            <rect width="100" height="105" fill="#F8F8F8" rx="4"/>
+            <text fill="#666" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="11" font-weight="400" letter-spacing="-1">
+                <tspan x="11.236" y="70">사업확장하고 싶은데</tspan> <tspan x="7.263" y="84">은행 대출이 까다롭네..</tspan> <tspan x="91.052" y="84">.</tspan>
+            </text>
+            <g transform="translate(32 15)">
+                <use fill="#FFF" xlink:href="#c"/>
+                <path stroke="#222" stroke-width="2" d="M1 18.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C35 8.773 27.384 1 18 1S1 8.773 1 18.37z"/>
+            </g>
+            <g transform="translate(32 15)">
+                <use fill="#999" xlink:href="#d"/>
+                <rect width="23.412" height="8.909" x="6.143" y="12.143" stroke="#222" stroke-width="2" rx="4.455"/>
+            </g>
+            <g stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M43.143 30l3.703 1.714-3.703 1.715M56.372 33.429l-3.703-1.715L56.372 30"/>
+            </g>
+            <path fill="#47C7FF" d="M39.594 39.4c.89.323 1.93-.289 2.322-1.367.261-.72.14-2.054-.367-4.004-1.642 1.169-2.593 2.112-2.855 2.831-.392 1.079.01 2.215.9 2.54zM60.406 39.4c-.89.323-1.93-.289-2.322-1.367-.261-.72-.14-2.054.367-4.004 1.642 1.169 2.593 2.112 2.855 2.831.392 1.079-.01 2.215-.9 2.54z"/>
+        </g>
+        <g transform="translate(0 125)">
+            <rect width="100" height="105" fill="#F8F8F8" rx="4"/>
+            <text fill="#666" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="11" font-weight="400" letter-spacing="-1">
+                <tspan x="14.047" y="70">물품을 담보로 어디 </tspan> <tspan x="15.764" y="84">돈 빌릴데 없을까</tspan> <tspan x="79.154" y="84">?</tspan>
+            </text>
+            <g transform="translate(32.222 15.883)">
+                <use fill="#FFF" xlink:href="#e"/>
+                <path stroke="#222" stroke-width="2" d="M1 18.286v5.378c0 3.018 2.368 5.454 5.275 5.454h9.7l1.967 4.308 1.967-4.308h9.372c2.907 0 5.275-2.436 5.275-5.454v-5.378C34.556 8.733 27.037 1 17.778 1 8.518 1 1 8.733 1 18.286z"/>
+                <use fill="#66D9D4" xlink:href="#f"/>
+                <rect width="23.098" height="8.859" x="6.689" y="12.467" stroke="#222" stroke-width="2" rx="4.429"/>
+                <rect width="3.137" height="3.258" x="12.089" y="15.05" fill="#222" rx="1.569"/>
+                <rect width="3.137" height="3.258" x="21.333" y="15.05" fill="#222" rx="1.569"/>
+            </g>
+            <g fill="#FFF">
+                <path d="M69.733 9.433c.295 0 .534.24.534.534v1.083a.533.533 0 1 1-1.067 0V9.967c0-.295.239-.534.533-.534zm0 7.167c.295 0 .534.239.534.533v1.084a.533.533 0 1 1-1.067 0v-1.084c0-.294.239-.533.533-.533zM65.7 11.762a.533.533 0 0 1 .728-.195l.938.542a.533.533 0 1 1-.533.924l-.939-.542a.533.533 0 0 1-.195-.729zm6.206 3.584a.533.533 0 0 1 .728-.195l.938.541a.533.533 0 1 1-.533.924l-.938-.542a.533.533 0 0 1-.195-.728zM65.7 16.42a.533.533 0 0 1 .194-.728l.939-.541a.533.533 0 1 1 .533.923l-.938.542a.533.533 0 0 1-.729-.195zm6.206-3.583a.533.533 0 0 1 .195-.728l.938-.542a.533.533 0 1 1 .533.924l-.938.542a.533.533 0 0 1-.728-.196z"/>
+            </g>
+            <g fill="#FFF">
+                <path d="M28.489 18.033c.294 0 .533.24.533.534v.09a.533.533 0 0 1-1.066 0v-.09c0-.295.238-.534.533-.534zm0 3.86c.294 0 .533.238.533.533v.09a.533.533 0 1 1-1.066 0v-.09c0-.295.238-.534.533-.534zM25.98 20.542c0-.295.24-.534.534-.534h.09a.533.533 0 0 1 0 1.067h-.09a.533.533 0 0 1-.533-.533zm3.86 0c0-.295.238-.534.533-.534h.09a.533.533 0 1 1 0 1.067h-.09a.533.533 0 0 1-.533-.533z"/>
+            </g>
+            <path fill="none" d="M18 8.717h64v43H18z"/>
+        </g>
+        <g transform="translate(220 125)">
+            <rect width="100" height="105" fill="#F8F8F8" rx="4"/>
+            <text fill="#666" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="11" font-weight="400" letter-spacing="-1">
+                <tspan x="11.478" y="70">6개월 정도 여유자금</tspan> <tspan x="16.71" y="84">투자할데 없을까</tspan> <tspan x="78.208" y="84">?</tspan>
+            </text>
+            <g transform="translate(32 15)">
+                <use fill="#FFF" xlink:href="#g"/>
+                <path stroke="#222" stroke-width="2" d="M1 18.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C35 8.773 27.384 1 18 1S1 8.773 1 18.37z"/>
+            </g>
+            <g transform="translate(32 15)">
+                <use fill="#FFDB15" xlink:href="#h"/>
+                <rect width="23.412" height="8.909" x="6.04" y="12.52" stroke="#222" stroke-width="2" rx="4.455"/>
+            </g>
+            <g fill="#FFA1C2" transform="translate(38.48 35.16)">
+                <ellipse cx="2.52" cy="1.8" rx="2.52" ry="1.8"/>
+                <ellipse cx="19.8" cy="1.8" rx="2.52" ry="1.8"/>
+            </g>
+            <g stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                <path d="M46.88 32.52a1.8 1.8 0 1 0-3.6 0M56.24 32.52a1.8 1.8 0 0 0-3.6 0"/>
+            </g>
+        </g>
+        <g>
+            <g transform="translate(170 250)">
+                <rect width="100" height="120" fill="#F8F8F8" rx="4"/>
+                <text fill="#666" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="11" font-weight="400" letter-spacing="-1">
+                    <tspan x="19.251" y="71">펀드는 가입이나</tspan> <tspan x="21.825" y="85">환매가 복잡해.. </tspan> <tspan x="7.248" y="99">간편히 투자할데 없나</tspan> <tspan x="87.669" y="99">?</tspan>
+                </text>
+                <g transform="translate(32 15)">
+                    <mask id="j" fill="#fff">
+                        <use xlink:href="#i"/>
+                    </mask>
+                    <use fill="#FFF" xlink:href="#i"/>
+                    <path stroke="#222" stroke-width="2" d="M1 18.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C35 8.773 27.384 1 18 1S1 8.773 1 18.37z"/>
+                    <g mask="url(#j)">
+                        <g transform="translate(3.6)">
+                            <use fill="#66D9D4" xlink:href="#k"/>
+                            <rect width="23.412" height="8.909" x="20.44" y="12.52" stroke="#222" stroke-width="2" rx="4.455"/>
+                            <rect width="3.176" height="3.273" x="25.92" y="15.12" fill="#222" rx="1.588"/>
+                            <rect width="3.176" height="3.273" x="35.28" y="15.12" fill="#222" rx="1.588"/>
+                        </g>
+                    </g>
+                </g>
+                <path stroke="#222" stroke-width="2" d="M33 33.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C67 23.773 59.384 16 50 16s-17 7.773-17 17.37z"/>
+                <g>
+                    <g transform="translate(32 15)">
+                        <mask id="m" fill="#fff">
+                            <use xlink:href="#l"/>
+                        </mask>
+                        <use fill="#FFF" xlink:href="#l"/>
+                        <path stroke="#222" stroke-width="2" d="M1 18.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C35 8.773 27.384 1 18 1S1 8.773 1 18.37z"/>
+                        <g mask="url(#m)">
+                            <g transform="translate(3.6)">
+                                <use fill="#66D9D4" xlink:href="#n"/>
+                                <rect width="23.412" height="8.909" x="20.44" y="12.52" stroke="#222" stroke-width="2" rx="4.455"/>
+                                <rect width="3.176" height="3.273" x="25.92" y="15.12" fill="#222" rx="1.588"/>
+                                <rect width="3.176" height="3.273" x="35.28" y="15.12" fill="#222" rx="1.588"/>
+                            </g>
+                        </g>
+                    </g>
+                    <path stroke="#222" stroke-width="2" d="M33 33.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C67 23.773 59.384 16 50 16s-17 7.773-17 17.37z"/>
+                </g>
+            </g>
+            <g transform="translate(50 250)">
+                <rect width="100" height="120" fill="#F8F8F8" rx="4"/>
+                <text fill="#666" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="11" font-weight="400" letter-spacing="-1">
+                    <tspan x="18.305" y="71">땅은 있는데 건물 </tspan> <tspan x="13.205" y="85">지을 돈이 부족하네. </tspan> <tspan x="20.968" y="99">어디서 빌리지</tspan> <tspan x="73.951" y="99">?</tspan>
+                </text>
+                <g transform="translate(32 15)">
+                    <use fill="#FFF" xlink:href="#o"/>
+                    <path stroke="#222" stroke-width="2" d="M1 18.37v5.404c0 3.033 2.401 5.484 5.353 5.484h9.811l2.002 4.35 2.002-4.35h9.48c2.95 0 5.352-2.45 5.352-5.484v-5.403C35 8.773 27.384 1 18 1S1 8.773 1 18.37z"/>
+                    <use fill="#66D9D4" xlink:href="#p"/>
+                    <rect width="23.412" height="8.909" x="9.174" y="12.629" stroke="#222" stroke-width="2" rx="4.455"/>
+                    <rect width="4.32" height="1.44" x="14.4" y="18" fill="#222" rx=".72"/>
+                    <rect width="4.32" height="1.44" x="23.76" y="18" fill="#222" rx=".72"/>
+                </g>
+            </g>
+        </g>
+        <g>
+            <path fill="none" d="M123 150h74v65h-74z"/>
+            <g transform="translate(123 161)">
+                <use fill="#FFF" xlink:href="#q"/>
+                <path stroke="#222" stroke-width="2" d="M54 52.667V6H20v46.667h34zM19.042 35h35-35zM19.042 27h35-35zM19.255 19h35-35z"/>
+                <rect width="74" height="2" y="52" fill="#222" rx="1"/>
+                <use fill="#FFDB15" xlink:href="#r"/>
+                <circle cx="7.4" cy="43.167" r="5.167" stroke="#222" stroke-width="2"/>
+                <rect width="2.467" height="8.6" x="6.167" y="44.4" fill="#222" rx="1.233"/>
+                <use fill="#FFDB15" xlink:href="#s"/>
+                <circle cx="66.4" cy="43.167" r="5.167" stroke="#222" stroke-width="2"/>
+                <rect width="2.467" height="8.6" x="65.167" y="44.4" fill="#222" rx="1.233"/>
+                <path stroke="#222" stroke-width="2" d="M18 4.515c0 .552.453.999.997.999h36.006A1 1 0 0 0 56 4.515V.998C56 .447 55.547 0 55.003 0H18.997A1 1 0 0 0 18 .998v3.517z"/>
+                <path fill="#D8D8D8" stroke="#222" stroke-width="2" d="M42 52v-7a5 5 0 0 0-10 0v7"/>
+                <path stroke="#222" stroke-width="2" d="M31 7.514v26.722M43 7.514v26.722"/>
+            </g>
+            <g transform="translate(140 155)">
+                <use fill="#8848FF" xlink:href="#t"/>
+                <rect width="38" height="16" x="1" y="1" stroke="#222" stroke-width="2" rx="2"/>
+            </g>
+            <text fill="#FFF" font-family="Lato-Bold, Lato" font-size="11" font-weight="bold" transform="translate(140 155)">
+                <tspan x="10" y="13">P2P</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08해외송금_05송금정보_web_</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="orsremt add_sticky">
+		<section class="orsremt_from agree_check">
+
+			<div class="sec_title">
+				<h3 class="accent_txt"><strong><span>송금 정보</span></strong>를 입력해 주세요.</h3>
+			</div>
+
+			<div class="orsremt_input">
+				<div class="sec_input bor_bn">
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>보내는 국가</strong>
+						</dt>
+
+						<!-- 2019-01-04 Defalt: 캐나다, 캐나다 행 추가-->
+						<!-- Default : 캐나다 -->
+						<dd class="item soft_select soft_lang">
+							<p class="ico_lang"><img src="../../images/orsremt/img-ca-gray.png" alt="CA" class="flag_img size-min"></p><!-- 20181217 국가선택, 기본국기 수정 -->
+							<select data-name="inpFocus">
+								<option value="">국가를 선택해주세요</option>
+								<option value="">캐나다 (Canada)</option>
+								<option value="">일본 (Japan)</option>
+								<!-- <option value="">호주 (Australia)</option> -->
+								<option value="">필리핀 (Philippines)</option>
+								<option value="">태국 (Thailand)</option>
+								<option value="">베트남 (Vietnam)</option>
+							</select>
+						</dd>
+						<!-- //2019-01-04 -->
+					</dl>
+				</div>
+
+				<div class="sec_input bor_bn hide">
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>보내는 방법
+								<!-- 예상 소요시간 3가지로 나눠짐 2018-12-12 ock -->
+								<span class="input_blue hide">(예상 소요시간: <em class="num">1</em>영업일 내외)</span><!-- 캐나다 -->
+								<span class="input_blue hide">(예상 소요시간: <em class="num">2</em>영업일 내외)</span><!-- 일본, 태국 -->
+								<span class="input_blue">(예상 소요시간: <em class="num">10</em>분 내외)</span><!-- 그외 선택시 -->
+							</strong>
+							<!-- <strong>보내는 방법 <span class="input_blue">(예상 소요시간: <span class="num">10</span>분)</span></strong>20180308 예상 소요시간추가 -->
+						</dt>
+						<dd class="item">
+							<ul class="set_target">
+		     					<li class="custom">
+		    						<div class="form_wrap"><input type="radio" id="aa1" name="ryellow"/><label for="aa1"><span>KEB하나은행 계좌로 보내기</span></label></div>
+		     					</li>
+		     					<li class="custom">
+		    						<div class="form_wrap"><input type="radio" id="aa2" name="ryellow"/><label for="aa2"><span>필리핀 KEB하나은행 영업점으로 보내기</span></label></div>
+		     					</li>
+		     					<li class="custom">
+		    						<div class="form_wrap"><input type="radio" id="aa3" name="ryellow"/><label for="aa3"><span>다른 은행 계좌로 보내기</span></label></div>
+		     					</li>
+		     					<li class="custom">
+		    						<div class="form_wrap"><input type="radio" id="aa4" name="ryellow"/><label for="aa4"><span>Cebuana Pawnshop으로 보내기</span></label></div>
+		     					</li>
+		     				</ul>
+						</dd>
+					</dl>
+
+					<div class="bul_guide">
+						<!-- <p class="star_type indent type_gray">현지 사정에 따라 예상 소요시간은 변경될 수 있습니다.</p> --><!-- 20180418 문구추가 --><!-- 20180419 문구삭제 -->
+						<!-- <p class="star_type indent type_gray">보내는 방법 옵션에 따라 가이드 문구 제공 유무.</p> --><!-- 20180418 문구추가 --><!-- 20180419 문구삭제 -->
+						<div class="select_case2 hide"><!-- case2 필리핀 KEB하나은행 영업점으로 보내기 -->
+							<p class="star_type indent type_gray">수취인이 가까운 <span>(국가명)</span> KEP하나은행 영엽점을 방문하여 수취할 수 있습니다.</p><!-- 20180418 문구추가 -->
+						</div>
+						<div class="select_case4 hide"><!-- case4 필리핀 KEB하나은행 영업점으로 보내기 -->
+							<p class="star_type indent type_gray">수취인이 가까운 Cebuana Pawnshop을 방문하여 수취할 수 있습니다.</p><!-- 20180419 문구추가 -->
+							<div class="btn_text02 txt_l"><a href="#none" class="ico ico_arrow_more">Pawnshop 위치 찾기</a></div><!-- 20180419 링크추가 -->
+						</div>
+					</div>
+				</div>
+
+				<div class="sec_input bor_bn hide">
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>보내는 목적</strong>
+						</dt>
+						<dd class="item">
+							<ul class="set_target">
+		     					<li class="custom">
+		    						<div class="form_wrap"><input type="radio" id="bb1" name="rellow"/><label for="bb1"><span>물품 구입</span></label></div>
+		     					</li>
+		     					<li class="custom">
+		    						<div class="form_wrap"><input type="radio" id="bb2" name="rellow"/><label for="bb2"><span>여행 경비</span></label></div>
+		     					</li>
+		     					<li class="custom">
+		    						<div class="form_wrap"><input type="radio" id="bb3" name="rellow"/><label for="bb3"><span>증여 및 기타</span></label></div>
+		     					</li>
+		     				</ul>
+						</dd>
+					</dl>
+
+					<div class="bul_guide">
+						<p class="star_type indent type_red">해외 부동산 취득, 해외 직접 투자, 해외 주식 취득, FX마진거래등 외국환거래법상 신고를 요하는 거래는 송금이 불가능합니다.</p><!-- 20180312 줄바꿈 수정 -->
+					</div>
+				</div>
+
+				<div class="sec_input bor_bn hide">
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>보내는 자금 원천</strong>
+						</dt>
+						<dd class="item soft_select">
+							<select data-name="inpFocus"><!-- 20180308 클래스제거 -->
+								<option value="">선택해주세요</option>
+								<option value="">근로 및 연금소득</option>
+								<option value="">퇴직소득</option>
+								<option value="">사업소득</option>
+								<option value="">부동산 임대 소득</option>
+								<option value="">부동산 양도 소득</option>
+								<option value="">금융 소득(이자 및 배당)</option>
+								<option value="">상속/증여</option>
+								<option value="">기타</option>
+							</select>
+						</dd>
+						<dd class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="기타 자금 원천 직접 입력">
+							<p class="remark">보내는 자금 원천을 선택해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">확인</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+	function setSpyScroll(target){
+		var targetPos = $(target).offset().top;
+		$('html, body').stop().animate({scrollTop:targetPos}, 500);
+	}
+	function setAddSticky(){
+		if ($('.orsremt_from.agree_check').outerHeight() > $('#contents').outerHeight()){
+			$('.add_sticky').addClass('no_fixed');
+		}
+	}
+	$(document).on('change', '.sec_input select', function(){
+		//보내는국가 다음컨텐츠를 보여준 후
+		var target = $(this).parents('.sec_input').next('.sec_input');
+		$(target).removeClass('hide'); //퍼블리싱 테스트용
+		if ($(target).prev().hasClass('bor_bn')){$(target).prev().removeClass('bor_bn')};
+
+		setAddSticky();
+	})
+	$(document).on('click', '.sec_input input[type=radio]', function(){
+		//보내는국가 다음컨텐츠를 보여준 후
+		var target = $(this).parents('.sec_input').next('.sec_input');
+		var guide = $(this).parents('.sec_input').find('.input_tit .input_blue');
+		$(target).removeClass('hide'); //퍼블리싱 테스트용
+		if ($(target).prev().hasClass('bor_bn')){$(target).prev().removeClass('bor_bn')};
+		setAddSticky();
+	})
+</script>
+</body>
+</html>

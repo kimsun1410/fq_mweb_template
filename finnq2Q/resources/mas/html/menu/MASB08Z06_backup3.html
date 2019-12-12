@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>05계좌등록_02계좌등록_01연결계좌가있는경우</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" /><!-- 메뉴에 있는 계좌 관련 페이지는 myfinnq 불러옴 2018-03-28 ock -->
+</head>
+<body>
+
+<div class="wrap bg_list" id="MASB08Z06"><!-- 19.01.22 클래스 추가 -->
+	<div id="contents" class="myfinnq add_sticky">
+
+		<section>
+			<!-- sec_step -->
+			<div class="sec_step">
+				<!-- <ol class="step01">
+					<li class="on">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong>
+					</li>
+				</ol> -->
+
+				<!-- 19.05.30 케이스에 따라서 스탭수가 달라짐 -->
+				<ol>
+					<li class="on complete"><strong>1</strong><i class="step_dot"></i></li>
+					<li class="on"><strong>2</strong><i class="step_dot"></i></li>
+					<li><strong>3</strong><i class="step_dot"></i></li>
+					<li><strong>4</strong></li>
+				</ol>
+				<!-- //19.05.30 케이스에 따라서 스탭수가 달라짐 -->
+			</div>
+
+			<div class="sec_title">
+				<h2>계좌 선택</h2>
+				<!-- 19.05.30 문구 삭제 -->
+				<!-- <p class="guide_txt">등록할 계좌를 선택/입력하세요.</p> -->
+			</div>
+
+			<div class="account_progress_wrap">
+
+				<!-- 은행 선택 -->
+				<div class="account_wrap single">
+					<!-- <p class="title">은행 선택</p> --><!-- 19.05.30 문구 삭제 -->
+					<ul class="btn_sellist set_type4 charge">
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+						<li><button type="button">KEB하나</button></li>
+					</ul>
+				</div>
+				<!-- //은행 선택 -->
+
+				<!-- 계좌 선택 // 계좌번호 입력-->
+				<!-- 19.01.22
+					라디오 선택이 없을 경우 타이틀을 계좌번호 입력으로 변경
+				-->
+				<div class="account_wrap" style="display:none;">
+					<div class="title btn_text02">
+						계좌 선택
+						<!-- 계좌번호 입력 -->
+						<a href="#none" class="ico ico_arrow_more">비대면 개설 계좌 조회</a>
+					</div>
+					<ul class="set_target">
+						<li >
+							<div class="form_wrap">
+								<input type="radio" id="selVal1" name="account_sel" />
+								<label for="selVal1"><span>KEB하나 <em class="num">1231*******123</em></span></label>
+							</div>
+						</li>
+						<li >
+							<div class="form_wrap">
+								<input type="radio" id="selVal2" name="account_sel" />
+								<label for="selVal2"><span>KEB하나 <em class="num">1231*******123</em></span></label>
+							</div>
+						</li>
+						<li >
+							<div class="form_wrap">
+								<input type="radio" id="selVal3" name="account_sel" />
+								<label for="selVal3"><span>KEB하나 <em class="num">1231*******123</em></span></label>
+							</div>
+						</li>
+						<li class="custom form">
+							<div class="form_wrap">
+								<input type="radio" id="selVal4" name="account_sel"/>
+								<label for="selVal4"><span>KEB하나은행</span></label>
+							</div>
+							<div class="user">
+								<input type="tel" placeholder="계좌번호 ‘-‘ 없이 입력" class="notwon" disabled="disabled">
+							</div>
+						</li>
+						<li class="custom bank">
+							<span class="single_tit">우체국</span>
+							<div class="user">
+								<input type="tel" placeholder="계좌번호 ‘-‘ 없이 입력" class="notwon" disabled="disabled">
+							</div>
+						</li>
+					</ul>
+					<!-- //set_target -->
+				</div>
+				<!-- //계좌 선택 -->
+
+				<!-- 19.05.30 비밀번호 입력도 케이스에 따라 노출 / 비노출 -->
+				<!-- 비밀번호 입력 -->
+				<div class="account_wrap" style="display:none;">
+					<p class="title">비밀번호 입력</p>
+					<div class="wrap_password four_area">
+						<p class="bg_password bg_gray">
+							<i class="on"><img src="../../images/common/ico-pw.png"></i>
+							<i class="on"><img src="../../images/common/ico-pw.png"></i>
+							<i></i>
+							<i></i>
+						</p>
+					</div>
+				</div>
+				<!-- //비밀번호 입력 -->
+				<!-- //19.05.30 비밀번호 입력도 케이스에 따라 노출 / 비노출 -->
+
+				<!-- 19.01.22 출금 이체를 타이틀 추가 및 terms 클래스 삭제 -->
+				<div class="account_wrap" style="display:none;">
+					<p class="title type2">출금 이체 동의</p>
+					<div class="agree_wrap charge">
+						<input type="checkbox" id="chkVal01" name="check_action" class="purple">
+						<label for="chkVal01">
+							<span>개인정보 제<em class="num">3</em>자 제공동의</span>
+						</label>
+						<button type="button" class="ico ico_arrow_more">
+							<span class="blind">더보기</span>
+						</button>
+					</div>
+				</div>
+				<!-- //출금 이체를 위한 동의 -->
+
+				<!-- 19.01.22 자동충전 레이어 추가 -->
+				<div class="account_wrap terms layer_common" style="display:none;">
+					<div class="agree_wrap charge">
+						<input type="checkbox" id="chkVal02" name="check_action" class="purple">
+						<label for="chkVal02">
+							<span>잔액 부족 시 자동충전 설정</span>
+						</label>
+						<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+						<div class="layer_wrap">
+							<p>핀크계좌 <strong>잔액이 부족</strong>할 경우, 송금/핀크카드 결제에 한해<br class="ios320 close">
+							부족한 금액의 1만원 단위로 <strong>자동충전하여 거래를 진행</strong>하며,<br class="ios320 close">
+							카드 및 단말기 분실 시에도 자동충전될 수 있습니다.</p>
+						</div>
+					</div>
+				</div>
+				<!-- //19.01.22 -->
+			</div>
+
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">다음</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	// 은행 선택
+	$('.btn_sellist').on('click', 'button', function() {
+		$('.btn_sellist button').removeClass('on');
+		$(this).addClass('on');
+
+		$('.account_progress_wrap .account_wrap').eq(0).removeClass('single')
+		$('.account_progress_wrap .account_wrap').eq(1).fadeIn();
+		$('.wrap').addClass('bg_list');
+	});
+
+	// 직접 입력
+	$(".set_target .form_wrap input[type=radio]").on('click',function(){
+			var reason = $(this).parents('.set_target').find('.custom input[type=tel]');
+			if($(".set_target .custom input[type=radio]").is(":checked")){
+				reason.prop("disabled",false).focus();
+			} else {
+				reason.prop("disabled",true).blur();
+			}
+		});
+
+	// 계좌 등록 단계별 스탭
+	$('.account_wrap').eq(1).find('input:radio').change(function(){
+	 	$('.account_wrap').eq(2).fadeIn();
+    });
+
+    // 임시 : 보안 키패드 입력 완료시 제공 동의 필드 활성화
+    // 보안키패드 비밀번호 입력 완료시 필드 활성화
+    $('.account_wrap .bg_password').on('click',function(){
+	 	$('.account_wrap').eq(3).fadeIn();
+	 	$('.account_wrap').eq(4).fadeIn();
+    });
+
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01이벤트_02이벤트상세_04보상금내역_01보상금있을경우_web_MASA06Z16-1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id=""><!-- 내역 없는 경우 : bg_list 삭제 2018-02-28 -->
+
+
+	<div id="contents" class="menu">
+		<section class="menu_wrap friend_invite_reward">
+
+			<div class="sec_head">
+				<div class="reward_info">
+					<div class="money_tit">누적 보상금</div>
+					<div class="money_total">
+						<em class="cash bold">0</em> <span>원</span>
+					</div>
+				</div>
+				<!-- 19.02.13 그래프 삭제 -->
+				<!--
+				<div class="invite_bar_wrap">
+					<ul class="invite_status">
+						<li class="friend_finish"><strong>초대완료</strong> <em class="num bold">0</em></li>
+						<li class="friend_all"><strong>내 주소록 전체</strong> <em class="num bold">320</em></li>
+					</ul>
+					<div class="invite_bar">
+						<div class="join_cnt" style="width:0;"></div>
+					</div>
+				</div>
+				-->
+			</div>
+
+			<div class="sec_history wrap_result"><!-- 따로 div wrap_result를 만들지 말고 no_result를 감싸고 있는 div에 wrap_result 클래스를 줄것 -->
+				<div class="no_result">
+					<i class="ico ico_chat_no2"></i>
+					<p>초대 완료 내역이 없습니다.</p>
+				</div>
+			</div>
+
+		</section>
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	//Search Input
+	//2018-02-09 search 포커스 추가 ock
+	$('.sec_notice_search .box_search input[data-name=inpFocus]').each(function(){
+		var focusArea = $(this).parent(".item");
+		$(this).focus(function(){
+			//$(this).addClass('inp_focus');
+			focusArea.addClass('search_focus');
+		}).blur(function(){
+			//$(this).removeClass('inp_focus');
+			focusArea.removeClass('search_focus');
+		});
+	});
+	//2018-02-09 search 검색어 삭제 on
+	$('.sec_notice_search .box_search input[data-name=inpFocus]').on("keyup", function(e) {
+		var textSum = $(this).val();
+		 if(textSum.length < 1) { //1보다 작은 경우
+			$(this).next('.search_del').removeClass('on');
+		 } else {
+			$(this).next('.search_del').addClass('on');
+		 }
+	});
+	//2018-02-09 search 검색어 삭제 ock
+	$('.sec_notice_search .box_search').on('click','.search_del',function(){
+		$(this).prev('input').attr('placeholder','Search').val('');
+		$(this).removeClass('on');
+		$(this).prev('input').focus();
+	});
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market">
+		<!-- 풀팝업 오픈버튼 샘플 -->
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP05Z02" data-mtype="fullpop">상세보기</button></span>
+		<div id="MASP05Z02" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail">
+						<div class="sec_title">
+							<h2>해외송금 상세내역</h2>
+							<button type="button" class="btn_close_modal close_modal ico ico_closed"><span class="blind">닫기</span></button>
+						</div>
+						<div class="box_detail2 round_box_cut">
+							<div class="define header">
+								<div class="define_row">
+									<p class="th"><span class="num">EUNG JUN MIN</span></p>
+									<p class="td"><span class="num">PHP 5,000.00</span></p>
+								</div>
+								<p class="txt_info"><span class="num">01.31  11:22</span>, 송금중</p>
+								<div class="define_error">
+									오류 사유 : 요청하신 계좌에서 출금하지 못하여 송금 실패 하였습니다. [다시 송금하기]에서 다시 시도해주세요.
+								</div>
+							</div>
+							<div class="define line_dash">
+								<div class="define_row">
+									<p class="th">거래번호</p>
+									<p class="td"><span class="num">A1B2C3D4E5F6G78</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">출금시 적용환율</p>
+									<p class="td"><span class="num">22.20</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">출금 금액</p>
+									<p class="td">
+										<span class="num">000,000,000</span>원
+										<small>송금수수료 <span class="num">00,000</span>원<br>수취수수료 <span class="num">00,000</span>원 포함</small>
+									</p>
+								</div>
+								<div class="define_row">
+									<p class="th">출금 계좌</p>
+									<p class="td">
+										KEB하나<br><span class="num">12312341231234</span>
+									</p>
+								</div>
+							</div>
+							<div class="define w_min line_dash">
+								<h4 class="title">받는 사람 정보</h4>
+								<div class="define_row">
+									<p class="th">국가</p>
+									<p class="td"><span class="num">Philippines</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">연락처</p>
+									<p class="td"><span class="num">+00 000-0000-0000</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">주소</p>
+									<p class="td"><span class="num">100, Eulji-ro, Jung-gu, Seoul, Republic of Korea</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">방법</p>
+									<p class="td">KEB 하나은행 계좌로 입금</p>
+								</div>
+								<div class="define_row">
+									<p class="th">은행</p>
+									<p class="td">KEB하나은행</p>
+								</div>
+								<div class="define_row">
+									<p class="th">계좌번호</p>
+									<p class="td"><span class="num">00000000000000</span></p>
+								</div>
+							</div>
+							<div class="btn_wrap">
+								<span class="item on"><button type="button" name="button" class="btn btn_type_c btn_xl">다시 송금하기</button></span>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$body = $("body");
+	//Contents Size Cal;
+	var docH, docW;
+	docW = $(window).width();
+	docH = $(window).height();
+
+	//모달팝업
+	/* modal popup */
+
+	$("button.open_modal,a.open_modal").on("click", function(){
+		var $mpop = $(this);
+
+		var $mpopType = $mpop.data("mtype");
+		var $mpopID = "#"+$mpop.data("triger");
+		var $mpopClose = $mpop.data("bgclose");
+		var conH = $($mpopID).find(".modal_content").outerHeight();
+
+		//popup contents height < window height
+		if(conH >= docH || ($mpopType=="fullpop")) {
+			$($mpopID +"> .modal_content").css({
+				height: docH
+			});
+		}else {
+			$($mpopID).addClass("normal");
+		}
+		if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+		switch($mpopType) {
+			case "fullpop":
+				$($mpopID).toggleClass("visible");
+				break;
+			case "doublepop":
+				$($mpopID).addClass("double").toggleClass("visible");
+				break;
+			default:
+				$($mpopID).toggleClass("visible");
+		}
+		return false;
+	});
+	$(".modal_wrap").on("click","button.close_modal", function(){
+		$(this).closest('.modal_wrap').toggleClass("visible");
+		return false;
+	});
+	$(".modal_wrap").on("click", function(e){
+		var status = $(this).data("bgclose");
+		if(!$(".modal_content").has(e.target).length && status ) {
+			if($(this).data("bgclose")) $(this).toggleClass("visible");
+		}
+	});
+
+	$('.open_modal').trigger('click');
+});
+</script>
+</body>
+</html>

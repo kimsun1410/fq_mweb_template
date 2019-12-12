@@ -1,0 +1,294 @@
+@charset 'UTF-8';
+
+
+.dis_table {display:table; width:100%;} /* 2018-03-20 변경 phj */
+.dis_cell {display:table-cell}
+.w25p {width:25%;}
+.w50p {width:50%;}
+.f_bold {font-weight:bold !important;}
+.f_normal {font-weight:normal !important;}
+.txt_l {text-align:left;}
+.txt_c {text-align:center;}
+.txt_r {text-align:right;}
+.mar_t0 {margin-top:0px !important;}
+.mar_t10 {margin-top:10px !important;}
+.mar_t20 {margin-top:20px !important;}
+.mar_t28 {margin-top:28px !important;} /* 추가 2018-03-15 ock */
+.mar_t25 {margin-top:25px !important;}
+.mar_t30 {margin-top:30px !important;}
+.mar_l5 {margin-left:5px !important;}
+.fl {float:left;}
+.fr {float:right;}
+.fs12 {font-size:12px;} /* 추가 2018-03-21 jck */
+
+.tit_type1 {background:$white_three; color:$warm_grey; padding:9px 20px 7px; @include font(14px);}
+
+.list_gray li {position:relative;@include font(16px);color:$brownish_grey; font-family:'AppleSDGothicNeo-Light', 'LatoL'; font-weight:lighter;}
+.list_gray li .num {font-family:'LatoL' !important; }
+.list_gray li a.num {color:inherit; vertical-align:unset;}
+.list_gray li .tel_num {vertical-align:unset;}
+.list_gray li i {position:absolute; left:0; top:0px;}
+.list_gray .very {color:$black; font-family:'AppleSDGothicNeo-Medium', 'LatoM';}
+.list_gray li a {color:$brownish_grey;}
+
+/* 이용약관 MASA04Z02, MASA04Z17 */
+#contents > .sec_common_terms {border-bottom:1px solid $white_two; padding-top:10px;}
+.sec_common_terms .term_list {padding:22px 20px;}
+.sec_common_terms .term_list li {position:relative; margin-top:14px; @include font(16px);}
+.sec_common_terms .term_list li:first-child {margin-top:0px;}
+.sec_common_terms .term_list li a {position:relative; display:block; padding:6px 0 4px;}
+.sec_common_terms .term_list li .ico_arrow_more2 {position:absolute; right:0px; top: 50%; margin-top: -15px; background:url('../images/common/ico-arrow-list.png') no-repeat; background-size:30px auto; width:30px; height:30px;
+ text-indent:-9999px; overflow:hidden;}
+.sec_common_terms .term_list.check input[type="checkbox"] + label span {padding:5px 0 5px 39px; color:$black;}
+
+/* 01회원_02본인인증_02계좌인증_01계좌번호입력_MASF05Z01 */
+.transfer_agree .sec_bank_confirm {padding:0 20px;}
+.transfer_agree .sec_bank_confirm .item {margin-top:30px;}
+.transfer_agree .sec_bank_confirm .item:first-child {margin-top:0;}
+.transfer_agree .sec_title .guide_txt em {color:$black;}
+.transfer_agree .sec_title .guide_txt strong {color:$purply_blue; font-weight:bold; font-family:'LatoB';}
+
+.transfer_agree .deposit_name {text-align:center;margin-bottom:45px}
+.transfer_agree .deposit_name .txt{@include font(16px);}
+.transfer_agree .deposit_name .txt strong {color:$purply_blue; font-weight:bold;@include font(16px);}
+.transfer_agree .deposit_name .regist {position:relative; height:46px; border:1px solid #e0e0e0; -webkit-appearance: none; border-radius: 4px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0 19px; background:$white; margin:13px 0 7px;}
+.transfer_agree .deposit_name .regist .num {position:absolute; top:9px; left:50%; margin-left:- 59px; @include font(20px); font-weight:bold; }
+.transfer_agree .deposit_name .regist .img_password {position:absolute; width:50%; top:0; right:0; display:block; height:46px; background: url("../images/common/bg_password_3.png") no-repeat left center; background-size:auto 12px; margin-right:-9px;}
+.transfer_agree .deposit_name .regist input {height:46px; line-height:46px; border:none; padding:0; opacity:0;}
+.transfer_agree .deposit_name .regist .resident_dot span {left:0;}
+.transfer_agree .deposit_name .regist .resident_dot span + span {left:21px;}
+.transfer_agree .deposit_name .regist .resident_dot span + span + span {left:42px;}
+.transfer_agree .deposit_name .limit {display:block; @include font(11px); color:$warm_grey; text-align:left; margin-bottom:27px;}
+.transfer_agree .deposit_name .limit.purple-blue {color:$purply_blue;}
+.transfer_agree .deposit_name .img_ex {display:inline-block; background: url("../images/common/img-regist-bank.png") no-repeat; background-size:220px auto; width:220px; height:124px; text-indent:-9999px;}
+.transfer_agree .wrap_password .bg_password input {caret-color:transparent;}/*2018-04-20 추가 phj*/
+
+/* 01회원_04회원가입_01정회원_04회원가입완료_정상_MASA01Z03 */
+.sec_member_complete {padding:0 20px;}
+.sec_member_complete .join_finish {background: $white ;/* background: $white url("../images/common/bg-benefit-main.png") no-repeat center center; background-size: 300px auto; */ text-align:center;}
+.sec_member_complete .join_finish h2 {display:inline-block; width:160px; height:105px; padding-top:55px; @include font(20px); color:$white; font-weight:bold; background:$clear_blue; border-radius:80px; }
+.sec_member_complete .sec_join_info {text-align:center; margin-top:41px; }
+.sec_member_complete .sec_join_info h3 {@include font(16px); font-weight:bold;}
+.sec_member_complete .sec_join_info dt {@include font(16px);}
+.sec_member_complete .sec_join_info dd {@include font(16px); margin-top:8px;color:$warm_grey;font-weight:bold}
+.sec_member_complete .sec_join_info em {color:$clear_blue;font-family:'LatoB';font-weight:bold}
+.sec_member_complete .sec_join_info .round_box {margin:28px 0 0;border:1px solid $white_two}
+.sec_join_finish .sec_decoration {margin-top:55px;}
+.sec_join_finish .sec_member_complete .sec_join_info {margin-top:44px;}
+
+/*03전체메뉴_02보안/설정_02탈퇴하기_05탈퇴사유및완료_MASA05Z08 */
+/*.secede_reason {padding:0 40px;}*/
+.secede_reason h2 {text-align:center; @include font(20px); margin-bottom:25px;}
+.secede_reason .sec_decoration {margin-top:117px;}
+.secede_reason .reason_list li {margin-top:13px;}
+.secede_reason .reason_list li:first-child {margin-top:0}
+.secede_reason .reason_list input[type="radio"] + label span {color:$black;}
+.secede_reason .reason_list .custom {position:relative; padding-left:39px;}
+.secede_reason .reason_list .custom input[type=radio]+label {position:absolute; left:0;}
+.secede_reason .reason_list .custom input[type=text] {@include font(14px); border: 0; border-bottom: 1px solid #c8c8c8; padding: 0; height: auto; border-radius: 0; margin-top:3px;}
+.secede_reason .thanks {text-align:center; margin-top:50px; padding:53px 0; border-top:1px dashed $white_three; color:$warm_grey; @include font(16px);}
+.secede_reason .thanks em {color:$purply_blue; font-weight:bold;}
+
+/* 03전체메뉴_02보안/설정_05핀크사업자정보_MASA04Z15 */
+.sec_security_license {padding:0 20px;}
+.sec_security_license h2 {@include font(20px); text-align:center; margin-bottom:4px;font-weight:bold}
+.sec_security_license dt {margin-top:22px; @include font(16px); font-weight:bold;}
+.sec_security_license dd {margin-top:10px; @include font(16px); color:$brownish_grey;}
+
+/* Event_5종료(팝업)_MASA06Z09 */  /* 바뀐디자인 적용, 네이티브로 바꼇다함 2018-04-04 ock */
+.sec_app_close {text-align:center;margin:-30px -20px 0}
+.sec_app_close img {width:100%; border-radius:8px 8px 0 0; /* margin:0 -1px; */}
+.sec_app_close .txt {margin:18px 0 7px; @include font(16px); font-weight:bold;}
+
+/* 01회원_06로그인및인증_01비밀번호인증_MASA01Z04 */
+.password_confirm .sec_password,
+.password_confirm .sec_text_btn {margin-top:100px;}
+
+/* 01회원_07비밀번호재설정_01비밀번호인증_MASF06Z01 */
+.wrap_password .sec_title h2 {@include font(20px); font-weight:bold; padding:0 20px;}
+
+
+/* 인증이 완료 */
+.sec_text_btn .btn_finger_print {background:url('../images/common/ir-icon-set.png') no-repeat; background-size:40px auto; background-position:0 -238px; padding-left:22px; @include font(14px); color:$black; border-bottom:none; display:inline-block;}
+.sec_text_btn .btn_finger_print:after {content:""; display:inline-block; width: 8px; height: 14px; background:url('../images/common/ir-arrow-set.png') no-repeat; background-size:40px auto; background-position:0 -11px; margin-left:5px; margin-top:-2px; vertical-align:middle;}
+
+/* SNS */
+.sec_sns_list {border-top:1px solid $white_two; padding:45px 0; text-align:center;}
+.sec_sns_list .tit {@include font(20px);}
+.sec_sns_list .txt_info {@include font(14px); color:$warm_grey;}
+.sec_sns_list .txt_info + .tit {margin-top:10px;}
+.sec_sns_list ul {margin-top:28px; display:inline-block;}
+.sec_sns_list ul li {float:left; margin-left:20px;}
+.sec_sns_list ul li:first-child {margin-left:0;}
+@media screen and (max-width:320px){
+	.sec_sns_list ul li {margin-left:10px;}
+	.sec_security_license{margin-bottom:45px}
+}
+
+/* SNS 20180315 공통변경 */
+.sec_sns_share {padding:39px 0 45px 0; background-color:$white_three; text-align:center;}
+.sec_sns_share .cont_wrap {margin-bottom:17px;}
+.sec_sns_share .txt {@include font(16px); color:$black;}
+
+/* 탈퇴 */
+.member_out .sec_title {padding-bottom:0px;}
+.member_out .round_box {margin-bottom:30px;}
+.member_out .round_box li {color:$brownish_grey; margin-top:8px;}
+.member_out .round_box li:first-child {margin-top:0}
+.member_out .sec_secede_form {background:$white_three; padding:28px 40px 0;}
+.member_out .sec_secede_form h2 {text-align:center; @include font(18px); margin-bottom:25px; font-weight:bold}
+.member_out .sec_secede_form h2 strong {font-weight:bold; color:$purply_blue;}
+.member_out .sec_secede_form h2 em {font-weight:bold;}
+.member_out .sec_secede_form .reason_list li {margin-top:13px; @include font(16px);}
+.member_out .sec_secede_form .reason_list li:first-child {margin-top:0}
+.member_out .sec_secede_form .reason_list input[type="radio"] + label span {color:$black;}
+.member_out .sec_secede_form .reason_list .custom {position:relative; padding-left:39px;}
+.member_out .sec_secede_form .reason_list .custom input[type=radio]+label {position:absolute; left:0;}
+.member_out .sec_secede_form .reason_list .custom input[type=text] {@include font(16px); border: 0; border-bottom: 1px solid #c8c8c8; padding: 0; height: auto; border-radius: 0; margin-top:3px;}
+.member_out .sec_secede_form .thanks {text-align:center; margin-top:50px; padding:53px 0; border-top:1px dashed $white_three; color:$warm_grey; @include font(16px);}
+.member_out .sec_secede_form .thanks em {color:$purply_blue; font-weight:bold;}
+
+/* 탈퇴 안내 상세 페이지 */
+.secede_guide .round_box h4 {text-align:center; color:$purply_blue; @include font(26px); font-weight:bold;}
+.secede_guide .round_box .txt {text-align:center; color:$warm_grey; margin-top:8px;}
+.secede_guide .round_box dl {margin-top:24px; border-top:1px dashed $white; padding-top:15px; overflow:hidden; }
+.secede_guide .round_box dl dt {float:left; width:40%; font-family: 'AppleSDGothicNeo-Light', 'LatoL'; color:$brownish_grey; clear:left; @include font(16px); margin-top:13px;}
+.secede_guide .round_box dl dd {float:right; width:60%; text-align:right; @include font(16px); margin-top:13px;}
+.secede_guide .round_box dl dd strong {color:$clear_blue}
+.secede_guide .round_box.twoplus dl dt {width:50%;}
+.secede_guide .round_box.twoplus dl dd {width:50%;}
+.secede_guide .round_box.type_2 dl dt {width:32%;}
+.secede_guide .round_box.type_2 dl dd {width:68%;}
+.secede_guide .round_box.cashback dl dt {width:50%;}
+.secede_guide .round_box.cashback dl dd {width:50%;}
+.secede_guide .round_box.cashback dl .cash_date {margin-top:25px}
+.secede_guide .round_box.cashback dl dd .remark{position:absolute;right:40px;font-size:11px;color:$warm_grey}
+.secede_guide .remark.p_rel {font-size:11px;color:$warm_grey; text-align:right; margin-top:6px;}
+.secede_guide .bul_guide.info_cashback {background:$white_three; padding:14px 20px 0;}
+.secede_guide .bul_guide.info_cashback .star_type {@include font(11px); color:$reddish_orange;}
+
+/* 2018-04-09 탈퇴 캐시백 안내 풀팝업 */
+.secede_cashbag .modal_content .sec_title h3 {font-size:20px; line-height:24px; color:#222;}
+.secede_cashbag .modal_content .sec_title h3 > strong {color:$purply_blue;}
+.secede_cashbag .modal_content .secede_guide {padding-top:28px;}
+.secede_cashbag .modal_content .round_box {margin-top:28px}
+.secede_cashbag .modal_content.add_sticky .scroll_wrap::after {background:$white;}
+
+/* 기본 화살표 리스트 */
+.secede_inquiry {border-top:1px solid $white_two; background:$white_three; overflow:auto}
+.secede_inquiry h5 {background:$white_three; padding:9px 20px 7px; color:$warm_grey;}
+.secede_inquiry ul li {background:$white; height:58px; line-height:58px; font-size:16px; margin-top:4px; border-top:1px solid $white_two; border-bottom:1px solid $white_two; padding:0 20px;}
+.secede_inquiry h5 + ul {margin-top:-4px;}
+.secede_inquiry .tel{float:right; color:$purply_blue;}
+.secede_inquiry .tel:before {content:""; display: inline-block; width: 13px; height: 13px; background:url("../images/common/ir-icon-set.png") no-repeat; background-size: 40px auto; background-position: 0 -146px; text-indent: 20px; margin:0 5px -1px 0;}
+.secede_inquiry ul li .web {position:relative; overflow:hidden; display:block; margin:0 -20px; padding:0 35px 0 20px; }
+.secede_inquiry ul li .web i {position:absolute; right:20px; top:50%; margin-top:-6px; width:7px; height:11px; background-position:0 -85px;}
+
+
+/* #### 그래프  ####  */
+.rMateH5__rMateChart > .rMateH5__ContentPane {padding:0 !important;}
+.sec_chart {padding:0 20px;}
+.rMateH5__Legend, .rMateH5__SubLegend {border:none !important;}
+.chart_area { position:relative;width:100%;min-height:180px;margin-top:0;text-align:center;} /* overflow:hidden;*/
+.chart_area .chart { position:absolute;top:0;left:0;right:0;width:100%;height:100%;text-align:center;border:none;} /*background-color:none;*/
+
+.chart_area .stat{ position:absolute;z-index:2;bottom:-5px;left:0;right:0;opacity:0;}
+.chart_area .stat dt { display:inline-block;overflow:hidden;margin:0 auto;}
+.chart_area .stat dt span { display:inline-block;float:left;margin-right:20px;font-size:11px;line-height:1.5;}
+.chart_area .stat dt strong  { display:inline-block;font-family:'UbuntuR';float:right;font-size:15px;line-height:1}
+.chart_area .stat dt strong em { font-size:11px;}
+.chart_area .stat dd ._money {font-size:39px;color:#264193;}
+
+.chart_area .stat .caption { margin-top:12px;}
+.chart_area .stat .caption span { display:inline-block;padding-right:10px;font-size:11px;color:#d4d4d4;}
+.chart_area .stat .caption span::before { display:inline-block;width:6px;height:6px;margin-right:5px;margin-bottom:2px;line-height:20px;background:#4b68e1;border-radius:50%;content:'';}
+.chart_area .stat .caption .stat02::before { background:#2cdcc8;}
+
+/* _chart01 */
+/* half pie chart */
+.account-box .chart_area { min-height:140px;}
+.chart_area .chart.type-hf_pie { width:100%;min-height:140px;top:-20px;text-align:center;}
+
+/* _chart02 line2d chart */
+._chart02 .chart_area { min-height:160px; }
+._chart02 .rMateH5__Line2DChart {font-family:"LatoM";  font-size:14px; color:#fff; letter-spacing:0;}
+/*._chart02 {padding:20px 20px;}
+
+.rMateH5__rMateChart._chart02 {padding:0;}
+
+.chart_area ._subCaption { position:absolute;top:13px;right:13px;z-index:5;}
+.chart_area ._subCaption span { font-size:11px;color:#999;padding-left:5px;}
+.chart_area ._subCaption span.rate {color:#6097f6;}
+.chart_area ._subCaption span em{ font-size:11px;}
+._chart02 .rMateH5__Line2DChart { font-size:14px; color:#fff; letter-spacing:0; overflow:visible;}
+._chart02 .rMateH5__AxisMarker {left:0 !important; width:100% !important;overflow:visible;}
+._chart02 .rMateH5__Line2DSeries {overflow:visible;}
+._chart02 .rMateH5__Line2DSeriesLabelLayer {overflow:visible;}*/
+
+/* _chart03 pie chart */
+._chart03 {padding:20px; background:$white;}
+._chart03 .chart_area {min-height:140px; letter-spacing:0;}
+._chart03 .rMateH5__Pie2DChart {font-size:14px; font-family:"LatoB"; letter-spacing:0;}
+._chart03 .rMateH5__ContentPane .rMateH5__LegendItem { font-size:16px; /*width:150px !important;*/ display:block; }
+._chart03 .rMateH5__ContentPane .rMateH5__LegendItem .rMateH5__LegendMarker {width:6px !important; height:6px !important; border-radius:3px; top:7px !important;}
+._chart03 .rMateH5__ContentPane .rMateH5__LegendItem .rMateH5__UITextField {left:12px !important;}
+._chart03 .rMateH5__ContentPane .rMateH5__LegendItem .tit {margin-right:7px; max-width:80px; text-overflow:ellipsis; white-space: nowrap; word-wrap: normal; display: inline-block; overflow:hidden; float:left;}
+._chart03 .rMateH5__ContentPane .rMateH5__LegendItem:nth-of-type(1) .tit {font-weight:bold;}
+._chart03 .rMateH5__ContentPane .rMateH5__LegendItem .num {vertical-align:top; float:right;}
+
+/* stack column */
+/* ._chart04 {} */
+._chart04 .chart_area .chart.type-stack { min-height:140px;}
+
+/* _chart05 */
+/* combi chart - line + column */
+._chart05 .chart_area { width:100%;min-height:140px;}
+.chart_area .chart.type-combi { min-height:50px;padding-top:10px;}
+
+/* _chart06 */
+._chart06 .chart_area .chart { min-height:170px;}
+._chart06 .rMateH5__LegendItem:nth-of-type(2) {left:103px !important}
+._chart06 .rMateH5__GridLines {display:none;}
+
+._chart06 .rMateH5__LegendMarker,
+._chart07 .rMateH5__LegendMarker,
+._chart09 .rMateH5__LegendMarker{width:6px !important; height:6px !important; border-radius:3px;}
+
+._chart06 .rMateH5__UITextField,
+._chart07 .rMateH5__UITextField,
+._chart09 .rMateH5__UITextField { left:11px !important; font-size:12px;}
+
+._chart06 .rMateH5__Area2DChart,
+._chart07 .rMateH5__Column2DChart {font-size:11px; color:#222; letter-spacing:0;}
+
+/* ._chart07 stack column */
+._chart07 .chart_area .chart { min-height:170px;}
+._chart07 .rMateH5__show_data_tip {text-align:left;}
+._chart07 .rMateH5__show_data_tip table p {font-size:12px;}
+._chart07 .rMateH5__show_data_tip table p .tit01 {margin-right:5px;}
+
+/* _chart08 pie chart */
+._chart08 .rMateH5__ContentPane {background:#fff;}
+._chart08 .chart_area {min-height:180px;}
+._chart08 .rMateH5__Pie2DChart {font-size:14px; font-family:"LatoB"; letter-spacing:0;}
+._chart08 .rMateH5__ContentPane .rMateH5__LegendItem { font-size:16px; width:100% !important}
+._chart08 .rMateH5__ContentPane .rMateH5__LegendItem .rMateH5__LegendMarker {width:6px !important; height:6px !important; border-radius:3px; top:7px !important;}
+._chart08 .rMateH5__ContentPane .rMateH5__LegendItem .rMateH5__UITextField {left:10px !important;}
+._chart08 .rMateH5__ContentPane .rMateH5__LegendItem p {font-size:16px;}
+._chart08 .rMateH5__ContentPane .rMateH5__LegendItem:nth-of-type(2) {top:50px !important;}
+._chart08 .rMateH5__UITextField {text-align:left;}
+
+
+/* ._chart09 Combination Area + Column */
+._chart09 .chart_area .chart { min-height:180px;}
+._chart09 .rMateH5__LegendItem:last-child {display:none;}
+._chart09 .rMateH5__Combination2DChart { font-size:11px; font-family:"LatoM"; letter-spacing:0; color:#222;}
+
+/* ._chart10 Gauge */
+._chart10 .chart_area .average {position:relative; padding-top:3px; text-align:center; color:$brownish_grey; @include font(11px); z-index:5; }
+._chart10 .chart_area .average i {position:absolute; bottom:-11px; left:50%; margin-left:-5.5px; width: 0; height: 0; border-style:solid; border-width: 9px 5.5px 0 5.5px; border-color: #999999 transparent transparent transparent;}
+._chart10 .chart_area .chart { min-height:200px;}
+._chart10 .chart_area .chart div {letter-spacing:0 !important;}
+._chart10 .rMateH5__ContentPane {color:#fff !important;}
+/* #### 그래프  ####  */
+

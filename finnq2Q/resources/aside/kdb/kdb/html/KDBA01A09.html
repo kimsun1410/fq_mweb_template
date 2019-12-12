@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>개인 정보 입력 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kdb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="cashback_profile add_sticky">
+
+		<section class="kdb_account">
+			<div class="sec_ows_head finnq">
+				<button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button><!-- 19.09.11 이전 버튼 추가  -->
+				<h2 class="ows_title">KDB 산업은행 입출금통장</h2><!-- 19.09.11 타이틀 수정 -->
+				<button class="btn_cancel" onclick="">취소</button>
+			</div>
+
+			<div class="sec_step step_green">
+				<ol>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>정보 입력</h2>
+			</div>
+
+			<div class="sec_input com_box_wrap pdb30">
+				<div class="sec_info_list zero">
+					<dl>
+						<dt>이름</dt>
+						<dd>홍길동</dd>
+					</dl>
+					<dl>
+						<dt>휴대폰 번호</dt><!-- 19.09.11 문구 수정 -->
+						<dd class="num">SKT 010-0000-0000</dd>
+					</dl>
+					<dl>
+						<dt>생년월일</dt>
+						<dd class="num">2018.01.10</dd>
+					</dl>
+				</div>
+			</div>
+
+			<article>
+				<p class="gray_title">개인 정보 입력</p>
+
+				<div class="sec_input com_box_wrap pdb30">
+
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>집 주소</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item">
+								<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소 검색" maxlength="" class="inp_count" data-placeholder="주소 검색"></textarea>
+							</dd>
+							<dd class="item text">
+								<input type="text" data-name="inpFocus" placeholder="상세 주소" data-placeholder="상세 검색">
+								<p class="remark hide">집 주소를 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>집 주소</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item inp_error">
+								<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소 검색" maxlength="" class="inp_count" data-placeholder="주소 검색"></textarea>
+							</dd>
+							<dd class="item text inp_error">
+								<input type="text" data-name="inpFocus" placeholder="상세 주소" data-placeholder="상세 검색">
+								<p class="remark">집 주소를 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+
+					<div class="input_wrap">
+						<p class="input_tit">
+							<strong>집 전화번호</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+						</p>
+						<div class="item col_box phone">
+							<span class="item soft_select field">
+								<select data-name="inpFocus">
+									<option value="">선택</option>
+									<option value="">02</option>
+									<option value="">031</option>
+									<option value="">032</option>
+								</select>
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+							<p class="remark hide">집 전화번호를 입력해 주세요.</p>
+						</div>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<p class="input_tit">
+							<strong>집 전화번호</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+						</p>
+						<div class="item col_box phone inp_error">
+							<span class="item soft_select field">
+								<select data-name="inpFocus">
+									<option value="">선택</option>
+									<option value="">02</option>
+									<option value="">031</option>
+									<option value="">032</option>
+								</select>
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+							<p class="remark">집 전화번호를 입력해 주세요.</p>
+						</div>
+					</div>
+
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>이메일 주소</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item col_box email">
+								<span>
+									<input type="text" data-name="inpFocus" placeholder="이메일">
+								</span>
+								<span>@</span>
+								<span>
+									<input type="text" data-name="inpFocus" placeholder="직접입력">
+								</span>
+							</dd>
+							<dd class="item soft_select">
+								<select data-name="inpFocus">
+									<option value="">선택해주세요</option>
+									<option value="">hanmail.net</option>
+									<option value="">naver.com</option>
+									<option value="">nate.com</option>
+									<option value="">gmail.com</option>
+									<option value="">ffdaum.net</option>
+									<option value="">hotmail.com</option>
+									<option value="">icloud.com</option>
+									<option value="">직접 입력</option>
+								</select>
+								<p class="remark hide">이메일을 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>이메일 주소</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item col_box email inp_error">
+								<span>
+									<input type="text" data-name="inpFocus" placeholder="이메일">
+								</span>
+								<span>@</span>
+								<span>
+									<input type="text" data-name="inpFocus" placeholder="직접입력">
+								</span>
+							</dd>
+							<dd class="item soft_select inp_error">
+								<select data-name="inpFocus">
+									<option value="">선택해주세요</option>
+									<option value="">hanmail.net</option>
+									<option value="">naver.com</option>
+									<option value="">nate.com</option>
+									<option value="">gmail.com</option>
+									<option value="">ffdaum.net</option>
+									<option value="">hotmail.com</option>
+									<option value="">icloud.com</option>
+									<option value="">직접 입력</option>
+								</select>
+								<p class="remark">이메일을 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+
+					<!-- 19.09.11 추가 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>소득 구분</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item soft_select">
+								<!-- 디폴트: 급여소득자 -->
+								<select data-name="inpFocus" class="color_change">
+									<option value="">선택해주세요</option>
+									<option value="" selected="selected">급여소득자</option>
+								</select>
+								<p class="remark">소득 구분을 선택해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>소득 구분</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item soft_select inp_error">
+								<select data-name="inpFocus">
+									<option value="">선택해주세요</option>
+									<option value="">급여소득자</option>
+								</select>
+								<p class="remark">소득 구분을 선택해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+					<!-- //19.09.11 추가 -->
+
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>직장명</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item">
+								<input type="text" data-name="inpFocus" placeholder="입력해주세요">
+								<p class="remark hide">직장명을 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>직장명</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item inp_error">
+								<input type="text" data-name="inpFocus" placeholder="입력해주세요">
+								<p class="remark">직장명을 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>직장 주소</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item">
+								<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소 검색" maxlength="" class="inp_count" data-placeholder="주소 검색"></textarea>
+							</dd>
+							<dd class="item text">
+								<input type="text" data-name="inpFocus" placeholder="상세 주소" data-placeholder="상세 검색">
+								<p class="remark hide">직장 주소를 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>직장 주소</strong> <span class="txt_blue normal">(필수)</span> <!-- 19.09.11 필수 추가 -->
+							</dt>
+							<dd class="item inp_error">
+								<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소 검색" maxlength="" class="inp_count" data-placeholder="주소 검색"></textarea>
+							</dd>
+							<dd class="item text inp_error">
+								<input type="text" data-name="inpFocus" placeholder="상세 주소" data-placeholder="상세 검색">
+								<p class="remark">직장 주소를 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+
+					<div class="input_wrap">
+						<p class="input_tit">
+							<strong>직장 전화번호</strong>
+						</p>
+						<div class="item col_box phone">
+							<span class="item soft_select field">
+								<select data-name="inpFocus">
+									<option value="">선택</option>
+									<option value="">010</option>
+									<option value="">011</option>
+									<option value="">016</option>
+								</select>
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+							<p class="remark hide">직장 전화번호를 입력해 주세요.</p>
+						</div>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<p class="input_tit">
+							<strong>직장 전화번호</strong>
+						</p>
+						<div class="item col_box phone inp_error">
+							<span class="item soft_select field">
+								<select data-name="inpFocus">
+									<option value="">선택</option>
+									<option value="">010</option>
+									<option value="">011</option>
+									<option value="">016</option>
+								</select>
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+
+							<em>-</em>
+
+							<span class="field item">
+								<input type="number" data-name="inpFocus">
+							</span>
+							<p class="remark">직장 전화번호를 입력해 주세요.</p>
+						</div>
+					</div>
+					<!-- //에러가 날 경우 -->
+				</div>
+				<!-- //sec_input com_box_wrap -->
+			</article>
+
+			<article>
+				<p class="gray_title">계좌 정보 입력</p>
+				<div class="sec_input com_box_wrap pdb30">
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>계좌 비밀번호 설정</strong>
+								<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap p20" style="display: none;">
+									<p>
+										3자리 이상 연속된 숫자 입력 불가(역순 포함)<br>
+										주민등록번호와 4자리 이상 일치하는 숫자 입력 불가(역순 포함)<br>
+										모든 전화번호와 4자리 이상 일치하는 숫자 입력 불가(역순 포함)
+									</p>
+								</div>
+							</dt>
+							<dd class="item">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+							</dd>
+							<dd class="item">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+								<p class="remark hide">비밀번호를 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>계좌 비밀번호 설정</strong>
+								<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap p20" style="display: none;">
+									<p>3자리 이상 연속된 숫자 입력 불가(역순 포함)<br>
+										주민등록번호와 4자리 이상 일치하는 숫자 입력 불가(역순 포함)<br>
+										모든 전화번호와 4자리 이상 일치하는 숫자 입력 불가(역순 포함)</p>
+								</div>
+							</dt>
+							<dd class="item inp_error">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+							</dd>
+							<dd class="item inp_error">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+								<p class="remark">비밀번호를 입력해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>과세 구분</strong>
+								<button class="btn_ico ico_circle_help" data-name="open_fp_layer"><span class="blind">도움말</span></button>
+								<div class="layer_wrap p20" style="display: none;">
+									<p>핀크계좌 <strong>잔액이 부족</strong>할 경우, 송금/핀크카드 결제에 한해 부족한 금액의 1만원 단위로 <strong>자동충전하여 거래를 진행</strong>하며, 카드 및 단말기 분실 시에도 자동충전될 수 있습니다.</p>
+								</div>
+							</dt>
+							<dd class="item type_sel"><!-- 에러일때 inp_error 추가 -->
+								<!--
+									탭 비활성화(클릭X) 시 li에 class="disabled" 추가
+									<li class="disabled"><a href="#none">비과세</a></li>
+								-->
+								<ul class="tab_purple up_two">
+									<li class="on"><a href="#none">일반</a></li>
+									<li class=""><a href="#none">비과세</a></li>
+								</ul>
+								<div class="add_info">
+									<ul class="split">
+										<li>
+											<span class="tit">전체 한도</span>
+											<span class="cont bold"><em class="num bold">6,000,000</em>원</span>
+										</li>
+										<li>
+											<span class="tit">잔여 한도</span>
+											<span class="cont bold"><em class="num bold">30,000</em>원</span>
+										</li>
+										<li class="input_area">
+											<span class="tit">신청 금액</span>
+											<span class="cont bold">
+												<input type="number" data-name="inpFocus" class="comma_wonhan">
+												<i class="placeholder">0원</i>
+												<i class="guide_txt">원</i>
+											</span>
+										</li>
+									</ul>
+								</div>
+
+								<p class="star_type indent mgt10">만 <em class="num">65</em>세 이상 비과세종합저축 가입 가능</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+			</article>
+
+			<article>
+				<p class="gray_title">거래 확인</p>
+
+				<div class="sec_input com_box_wrap pdb30">
+
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>거래 목적</strong>
+							</dt>
+							<dd class="item soft_select">
+								<select data-name="inpFocus" class="color_change">
+									<option value="">급여 및 생활비</option>
+									<option value="">급여 및 생활비</option>
+									<option value="">급여 및 생활비</option>
+								</select>
+								<p class="remark hide">거래 목적을 선택해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>거래 목적</strong>
+							</dt>
+							<dd class="item soft_select inp_error">
+								<select data-name="inpFocus" class="color_change">
+									<option value="">급여 및 생활비</option>
+									<option value="">급여 및 생활비</option>
+									<option value="">급여 및 생활비</option>
+								</select>
+								<p class="remark">거래 목적을 선택해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>거래자금 원천</strong>
+							</dt>
+							<dd class="item soft_select">
+								<select data-name="inpFocus" class="color_change">
+									<option value="">근로 및 연금소득</option>
+									<option value="">근로 및 연금소득</option>
+									<option value="">근로 및 연금소득</option>
+								</select>
+								<p class="remark hide">거래자금 원천을 선택해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>거래자금 원천</strong>
+							</dt>
+							<dd class="item soft_select inp_error">
+								<select data-name="inpFocus" class="color_change">
+									<option value="">근로 및 연금소득</option>
+									<option value="">근로 및 연금소득</option>
+									<option value="">근로 및 연금소득</option>
+								</select>
+								<p class="remark">거래자금 원천을 선택해 주세요.</p>
+							</dd>
+						</dl>
+					</div>
+					<!-- //에러가 날 경우 -->
+				</div>
+			</article>
+
+			<!-- 19.09.11 : 추가 -->
+			<div class="kdb_copyright">Provided by KDB <span>산업은행</span></div>
+			<!-- //19.09.11 : 추가 -->
+
+		</section><!-- // -->
+
+		<!-- 과세 구분 툴팁 팝업 -->
+		<div class="modal_wrap fullpop">
+			<div class="modal_content loan-guide-desc">
+
+				<div class="scroll_wrap" style="">
+					<div>
+						<p class="title big"><span class="txt_purple">비과세종합저축</span>이란?</p>
+						<article class="cont-desc">
+							<p class="title">비과세종합저축 가입한도</p>
+							<p class="dash_type">2015년 1월 1일부터 생계형저축은 비과세종합저축으로 통합되었으며, 전 금융기관 합하여 1인당 한도 5천만원까지 비과세됩니다.</p>
+							<p class="dash_type">기존 세금우대종합저축과 생계형저축을 유지하고 있는 경우 5천만원에서 세금우대종합저축과 생계형저축 가입한도를 차감한 금액만큼 가입 가능합니다.</p>
+							<p class="star_type">총 저축금액은 비과세종합저축 설정액까지만 가능합니다.</p>
+						</article>
+
+						<article class="cont-desc">
+							<p class="title">비과세종합저축 가입</p>
+							<p class="dash_type">비과세종합저축 최종가입 여부는 본 계좌개설 신청 후 계좌개설 최종 완료 시점의 비과세종합저축 가입 가능액에 따라 결정되며, 가입 가능액 부족 시 비과세종합저축 가입이 불가능할 수 있습니다.</p>
+							<p class="dash_type">장애인, 독립유공자 및 그 유족 또는 가족, 상이자, 기초생활보장수급자 등의 비과세종합저축 대상자는 계좌개설 신청 전에 영업점에 관련 증빙자료를 제출해야 비과세종합저축으로 가입할 수 있습니다.</p>
+						</article>
+					</div>
+				</div>
+				<button type="button" class="btn_close">닫기</button>
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //과세 구분 툴팁 팝업 -->
+
+
+		<!-- 항목 입력 완료 시 Disable 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+
+
+
+<script type="text/javascript">
+$(function(){
+	// 탭 클릭 활성화
+	$('.tab_purple > li > a').on('click', function(){
+		$(this).parent().addClass('on').siblings().removeClass('on');
+	});
+
+	// 일반과세 / 비과세
+	// 스크립트 비활성 케이스 추가
+	$('.tab_purple > li > a').on('click', function(event){
+
+		var status = $(this).parent().hasClass('disabled');
+		if (status) { return; }
+
+		event.preventDefault();
+		var idx = $(this).parent().index();
+		$(this).parent().addClass('on').siblings().removeClass('on');
+
+		if (idx == 1) {
+			$('.kdb_account .input_wrap .add_info').slideDown();
+		} else {
+			$('.kdb_account .input_wrap .add_info').slideUp();
+		}
+	});
+
+	// 신청금액 입력
+	$('.input_area input.comma_wonhan').on('focusin', function(){
+		inputAreaFunc( $('.input_area input.comma_wonhan') );
+		$('.input_area input.comma_wonhan').on('keyup change', function(){
+			inputAreaFunc( $('.input_area input.comma_wonhan') );
+		});
+	})
+	.on('focusout', function(){
+		$(this).parents('.input_area').removeClass('active');
+	});
+
+	function inputAreaFunc(_target){
+		var inpVal = $(_target).val().length;
+		if (inpVal > 0) {
+			$(_target).parents('.input_area').addClass('on active');
+		}
+		else {
+			$(_target).parents('.input_area').removeClass('on');
+		}
+	}
+
+	// 툴팁 이벤트
+	$('body').on('click','button[data-name=open_fp_layer]', function(e) {
+
+		$body = $("body");
+		//Contents Size Cal;
+		var winH, docH;
+		winH = $(window).height();
+		docH = $('.modal_wrap > .modal_content').height();
+
+		$('.modal_wrap.fullpop').addClass('visible');
+		if (winH <= docH) {
+			$('.modal_wrap > .modal_content').css({height: docH});
+		} else {
+			$('.modal_wrap > .modal_content').css({height: winH});
+		}
+	});
+
+	$('body').on('click','.modal_wrap .btn_close', function(e) {
+		$('.modal_wrap.fullpop').removeClass("visible");
+		return false;
+	});
+});
+</script>
+</body>
+</html>

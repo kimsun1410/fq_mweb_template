@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=800">
+<title>Finnq2_Home Contents Publishing Index</title>
+<style type="text/css">
+body,
+html{margin:0;padding:0}
+html{overflow-y:scroll;}
+body{color:#444;background-color:#fff;font-size:12px;line-height:1.3em;}
+h1,h2,h3 { font-family:tahoma;font-weight:600;margin:0;padding:0;line-height:1.5em;}
+h1 { font-size:24px;text-align:center;}
+h1:first-child { margin-top:20px;}
+h2 { font-size:20px;}
+a {color:#27e;text-decoration:none}
+a:active,
+a:focus,
+a:hover{text-decoration:underline}
+.strike { text-decoration:line-through;}
+.wrap { padding:8px;}
+.extend { position:absolute;right:12px;top:8px;}
+.extend button { display:inline-block;min-width:58px;height:20px;font-size:12px;color:#fff;border:1px solid #5d9cec;background-color:#5d9cec;border-radius:2px;text-align:center;cursor:pointer;outline:0;opacity:0.7;vertical-align:top;}
+.extend button.native { border:1px solid #ED5565;background-color:#ED5565;}
+.extend button.EXCEL_Link,
+.extend button.EXCEL { background:red;color:#fff;border:1px solid red;}
+.section { padding:8px;}
+section { position:relative;margin:4px 0;}
+section button { position:absolute;right:4px;top:0px;display:block;width:100%;height:30px;cursor:pointer;font-size:0;border:0;background-color:transparent;outline:0;}
+section button:after { position:absolute;right:3px;top:4px;width:20px;height:16px;font-size:0;border:1px solid #5d9cec;background-color:#5d9cec;border-radius:2px;content:"▲";font-size:12px;color:#fff;outline:0;opacity:0.7}
+section button.close:after {
+	animation-name: toggle-up;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+}
+section button.open:after {
+	animation-name: toggle-down;
+	animation-duration: 0.75s;
+	animation-fill-mode: forwards;
+}
+section button.close + h2 { border-bottom:1px solid #666;}
+section button.close ~ .tb-wrap { display:none;}
+.progress { position: relative;display:block;height: 20px;margin-bottom:4px;overflow: hidden;background-color:#d2d2d2;border-radius:4px;}
+.progress > .progress-type {position: absolute;left: 0px;font-weight: 800;height:100%;min-width:100px;text-align:left;padding:3px 12px 2px;color: rgb(255, 255, 255);background-color: rgba(25, 25, 25, 0.2);box-sizing:border-box;}
+.progress > .progress-type em { position:absolute;right:-20px;top:2px;text-decoration:none;min-width:40px;text-align:center;}
+.progress > .progress-completed {position: absolute;right: 0px;font-weight: 800;padding: 3px 10px 2px;}
+.progress-bar { float: left;width: 0;height: 100%;font-size: 12px;line-height: 20px;color: #fff;text-align: center;background-color: #428bca;
+	transform: translate3d(0, 0, 0);
+	will-change: width;
+	animation-duration: 0.9s;
+	animation-name: progressing;
+	animation-timing-function: ease-in-out;
+}
+@keyframes progressing {
+  from {
+    width: 0;
+  }
+}
+.progress-all {background-color: #731aed;}
+.progress-common {background-color: #FFCE54;}
+.progress-fingo {background-color: #ED5565;}
+.progress-menu {background-color: #5D9CEC;}
+.progress-market {background-color: #48CFAD;}
+.progress-myfinnq {background-color: #A0D468;}
+.progress-orsremt {background-color: #0000ff;}
+.progress-p2p {background-color: #e6ed1a;}
+.progress-dna {background-color: #ed143d;}
+.progress-terms {background-color: #649e25;}
+.tb-wrap { overflow:hidden;}
+/* table */
+table {width:100%;border-collapse:collapse;border-spacing:0;}
+table thead th{color:#333;background-color:#eee;text-align:center}
+table tbody th{text-align:left;color:#333;background-color:#f7f7f7}
+table td,
+table th{padding:6px 3px 2px;border:1px solid #ddd;text-align:left;font-size:12px;}
+/* table td:nth-of-type(2) { font-size:10px;font-weight:bold;color:#222; */}
+table tr:first-child td[rowspan] { text-align:center;}
+table tr td.status,
+table td:nth-of-type(6),
+table td:nth-of-type(5),
+table td:nth-of-type(4),
+table td:nth-of-type(7){ text-align:center;}
+table td:last-child { word-break:break-all;word-wrap:break-word}
+/*table tr td:nth-of-type(2) { text-align:center;}
+table tr:first-child td:nth-of-type(2) { text-align:left;}*/
+table tr td.multi,
+table tr.even{background-color:#fafafa}
+table tr.add td{background-color:#fd0}
+table tr.modify td{background-color:#fffeb4}
+section.project table tr:hover td{background-color:#5d9cec;color:#000;}
+table tr:first-child:hover td[rowspan] { background-color:#fff;}
+table tr[data-type=native] td { opacity:0.5;}
+table tr:nth-of-type(odd) td { background:#efefef;}
+table tr td.small { font-size:8px;text-align:center;}
+
+span.icon[data-status] { display:inline-block;width:20px;height:20px;background:url(ico-status.png) 0 0 no-repeat;background-size:60.3px 62.98px;vertical-align:middle;margin-top:-2px;
+text-indent:-99em;overflow:hidden;text-align:left;
+}
+span.icon[data-status=done] { background-position:-5.02px -5.9px;} /* 완료 */
+span.icon[data-status=ing] { background-position:-35.43px -5.9px;} /* 작업중 */
+span.icon[data-status=none] { background-position:-35.43px -35.11px} /* 제외 삭제 */
+span.icon[data-status=edit] { background-position:-5.02px -35.11px}
+span.icon[data-status=wait] { background-position:-35.43px -5.9px;filter: grayscale(100%);opacity:0.5;}
+span.icon[data-status=check] { background-position:-5.02px -5.9px;filter: grayscale(100%);opacity:0.5;}
+ul.notice { }
+ul.notice li {line-height:22px;}
+body.js .section .title{padding:.5em;border:1px solid #ccc;background-color:#ddd;cursor:pointer}
+body.js .section+.section .title{border-top:0}
+body.js .section .title .page-count{color:#666;font-weight:400}
+
+.guide { width:100%;background:#efefef;border:1px solid #efefef;border-radius:4px;margin-top:4px;padding:4px;line-height:1.3;}
+.guide a { display:inline-block;padding:2px 8px;border:1px solid #666;background-color:#666;border-radius:4px;margin:4px 2px;color:#fff;font-size:10px;}
+.guide a:hover { text-decoration:none;}
+
+table tr td.status.copy span.icon {background:none;text-indent:0;width:auto;}
+.msg{color:#731aed}
+
+/*animations*/
+@keyframes toggle-up {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+@keyframes toggle-down {
+  0% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+</style>
+</head>
+
+<body>
+<div class="wrap">
+	<!-- <div class="extend">
+		<button class="native-extend">WEB Only</button>
+		<button class="EXCEL">엑셀용</button>
+		<button class="EXCEL_Link">엑셀링크</button>
+		<button class="all-extend">전체닫기</button>
+	</div> -->
+	<h1>Finnq2_Home Contents</h1>
+	<!-- <section>
+		<button>More...</button>
+		<h2 class="title">DashBoard</h2>
+		<div class="progress-wrap">
+			<div class="progress">
+				<div class="progress-bar progress-all" role="progressbar" style="width:0;"></div>
+				<span class="progress-type">TOTAL<em></em></span>
+				<span class="progress-completed">60%</span>
+			</div>
+			<a class="progress" href="#common">
+				<div class="progress-bar progress-common" role="progressbar" style="width:0;"></div>
+				<span class="progress-type">Common<em></em></span>
+				<span class="progress-completed">60%</span>
+			</a>
+		</div>//progress-wrap
+	</section> -->
+
+	<!-- //알림-->
+	<!-- <section>
+		<button>More...</button>
+		<h2>Notice &amp; Guide</h2>
+		<div class="tb-wrap">
+	
+			<table>
+				<colgroup>
+					<col style="width:50%">
+					<col style="width:50%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">개발자 알림</th>
+						<th scope="col">퍼블리셔 알림</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-type="web">
+						<td></td>
+						<td>
+							<ul class="notice">
+								<li>
+									<span class="icon" data-status="done"></span>작업완료 |
+									<span class="icon" data-status="ing"></span>진행중 |
+									<span class="icon" data-status="none"></span>제외(삭제)
+								</li>
+								<li>수정 이력이 발생한 경우 note에 주석처리 표시</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="guide">
+				<a href="history.html" target="_blank">:: History ::</a>
+				<a href="guide/guide.html" target="_blank">Guide INDEX</a>
+				<a href="guide/guide_agree_terms.html" target="_blank">Guide agree terms</a>
+				<a href="guide/guide-icon.html" target="_blank">Guide Icon</a>
+				<a href="guide/guide-chart.html" target="_blank">Guide Chart</a>
+				<a href="guide/guide-modal.html" target="_blank">Guide Modal</a>
+				<a href="guide/guide-tab.html" target="_blank">Guide Tab</a>
+				<a href="guide/guide-bul.html" target="_blank">Guide Bul</a>
+				<a href="guide/guide-gap.html" target="_blank">Guide Gap</a>
+				<a href="guide/templete.html" target="_blank">페이지템플릿</a>
+				<a href="guide/templete_modal.html" target="_blank">페이지템플릿(모달팝업)</a>
+				<a href="guide/guide-loading.html" target="_blank">페이지 로딩</a>
+				<a href="/masil/masil_app/index.html" target="_blank">마실 index</a>
+				<a href="/finnq2_home/page_index.html" target="_blank">홈페이지 index</a>
+			</div>
+		</div>
+	</section> -->
+	<!-- //알림-->
+
+<!--
+done : 작업완료
+ing : 진행중
+wait : 작업대기(기획미완료)
+edit : 수정중
+none : 제외(삭제)
+
+data-status="done">작업완료</span></td>
+-->
+<!-- 07.KDB하이파이브 PASS 패스 kty -->
+<section class="project" id="common">
+		<button>More...</button>
+		<h2>07.KDB하이파이브 PASS 패스</h2>
+		<div class="tb-wrap">
+			<table>
+				<colgroup>
+					<col style="width:20%" />
+					<col style="width:14%" />
+					<col style="width:20%;" />
+					<col style="width:13%" />
+					<col style="width:13%" />
+					<col style="width:20%" />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">Link</th>
+					<th scope="col">Status.</th>
+					<th scope="col">Date.</th>
+					<th scope="col">Note.</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>KDB하이파이브 PASS 패스</td>
+					<td>이벤트 페이지</td>
+					<td><a href='event/th5kdbpass/index.html' target='_blank'>index.html</a></td>
+					<td class="status">●</td>
+					<td>2019-09-06</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</section>
+	<!-- //07.KDB하이파이브 PASS 패스 -->
+
+<!-- 06.KDB하이파이브 적금 Bridge kty -->
+<section class="project" id="common">
+		<button>More...</button>
+		<h2>06. KDB하이파이브 적금 Bridge</h2>
+		<div class="tb-wrap">
+			<table>
+				<colgroup>
+					<col style="width:20%" />
+					<col style="width:14%" />
+					<col style="width:20%;" />
+					<col style="width:13%" />
+					<col style="width:13%" />
+					<col style="width:20%" />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">Link</th>
+					<th scope="col">Status.</th>
+					<th scope="col">Date.</th>
+					<th scope="col">Note.</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>KDB하이파이브 적금 Bridge</td>
+					<td>이벤트 페이지</td>
+					<td><a href='event/kdbfq_bridge/index.html' target='_blank'>index.html</a></td>
+					<td class="status">●</td>
+					<td>2019-09-06</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</section>
+	<!-- //06.KDB하이파이브 적금 Bridge -->
+
+	<!-- 05.t전화 x 캐시백live 안내페이지 kty -->
+	<section class="project" id="common">
+		<button>More...</button>
+		<h2>05. T전화 x 캐시백 LIVE</h2>
+		<div class="tb-wrap">
+			<table>
+				<colgroup>
+					<col style="width:20%" />
+					<col style="width:14%" />
+					<col style="width:20%;" />
+					<col style="width:13%" />
+					<col style="width:13%" />
+					<col style="width:20%" />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">Link</th>
+					<th scope="col">Status.</th>
+					<th scope="col">Date.</th>
+					<th scope="col">Note.</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>T전화 x 캐시백live</td>
+					<td>이벤트 페이지</td>
+					<td><a href='event/tphone_cashback/index.html' target='_blank'>index.html</a></td>
+					<td class="status">●</td>
+					<td>2019-09-06</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</section>
+	<!-- //05.t전화 x 캐시백live 안내페이지 -->
+
+	<!-- 04.DGB핀크비상금대출 Bridge kty -->
+	<section class="project" id="common">
+		<button>More...</button>
+		<h2>04. DGB핀크비상금대출 Bridge</h2>
+		<div class="tb-wrap">
+				<table>
+					<colgroup>
+						<col style="width:20%" />
+						<col style="width:14%" />
+						<col style="width:20%;" />
+						<col style="width:13%" />
+						<col style="width:13%" />
+						<col style="width:20%" />
+					</colgroup>
+
+					<thead>
+						<tr>
+							<th scope="col">1depth</th>
+						<th scope="col">2depth</th>
+						<th scope="col">Link</th>
+						<th scope="col">Status.</th>
+						<th scope="col">Date.</th>
+						<th scope="col">Note.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>DGB핀크비상금대출 Bridge</td>
+						<td>이벤트 페이지</td>
+						<td><a href='event/dgbfq_bridge/index.html' target='_blank'>index.html</a></td>
+						<td class="status">●</td>
+						<td>2019-09-06</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<!-- //04.DGB핀크 비상금대출 Bridge -->
+
+	<!-- 03.Thigh5 하이파이브 kty -->
+	<section class="project" id="common">
+		<button>More...</button>
+		<h2>03. Thigh5 하이파이브 & Thigh5 하이파이브6% Bridge</h2>
+		<div class="tb-wrap">
+			<table>
+				<colgroup>
+					<col style="width:20%" />
+					<col style="width:14%" />
+					<col style="width:20%;" />
+					<col style="width:13%" />
+					<col style="width:13%" />
+					<col style="width:20%" />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th scope="col">1depth</th>
+						<th scope="col">2depth</th>
+						<th scope="col">Link</th>
+						<th scope="col">Status.</th>
+						<th scope="col">Date.</th>
+						<th scope="col">Note.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Thigh5 하이파이브</td>
+						<td>이벤트 페이지</td>
+						<td><a href='event/high5/index.html' target='_blank'>index.html</a></td>
+						<td class="status">●</td>
+						<td>2019-05-26</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Thigh5 하이파이브6% Bridge</td>
+						<td>이벤트 페이지</td>
+						<td><a href='event/hight5_bridge6/index.html' target='_blank'>index.html</a></td>
+						<td class="status">●</td>
+						<td>2019-05-26</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<!-- //03.Thigh5 Thigh5 하이파이브 -->
+
+	<!-- 02. T전화 X 핀크송금 -->
+	<section class="project" id="common">
+		<button>More...</button>
+		<h2>02. T전화 X 핀크송금</h2>
+		<div class="tb-wrap">
+			<table>
+				<colgroup>
+					<col style="width:10%" />
+					<col style="width:24%" />
+					<col style="width:20%;" />
+					<col style="width:13%" />
+					<col style="width:13%" />
+					<col style="width:20%" />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th scope="col">1depth</th>
+						<th scope="col">2depth</th>
+						<th scope="col">Link</th>
+						<th scope="col">Status.</th>
+						<th scope="col">Date.</th>
+						<th scope="col">Note.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- <tr>
+						<td></td>
+						<td>T전화송금 소개 - 슬라이드 교체전</td>
+						<td><a href='collabo/tphone/tphone_info01.html' target='_blank'>tphone_info01.html</a></td>
+						<td class="status">○</td>
+						<td>2019-01-28</td>
+						<td></td>
+					</tr> -->
+					<tr>
+						<td>T전화 X 핀크송금</td>
+						<td>소개 - 슬라이드 교체후 - 진입시 좌측 > 우측</td>
+						<td><a href='collabo/tphone/tphone_intro.html' target='_blank'>tphone_intro.html</a></td>
+						<td class="status">●</td>
+						<td>2019-01-29</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<!-- //02. T전화송금 -->
+
+	<!-- 01. 11Pay -->
+	<section class="project" id="common">
+		<button>More...</button>
+		<h2>01. 11Pay</h2>
+		<div class="tb-wrap">
+			<table>
+				<colgroup>
+					<col style="width:10%" />
+					<col style="width:24%" />
+					<col style="width:20%;" />
+					<col style="width:13%" />
+					<col style="width:13%" />
+					<col style="width:20%" />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th scope="col">1depth</th>
+						<th scope="col">2depth</th>
+						<th scope="col">Link</th>
+						<th scope="col">Status.</th>
+						<th scope="col">Date.</th>
+						<th scope="col">Note.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td>약관동의</td>
+						<td><a href='collabo/11pay/11pay_03.html' target='_blank'>11pay_03.html</a></td>
+						<td class="status">●</td>
+						<td>2019-01-21</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>약관상세-풀팝업:충전 권한 위임장</td>
+						<td><a href='collabo/11pay/11pay_03.html' target='_blank'>11pay_03.html</a></td>
+						<td class="status">●</td>
+						<td>2019-01-21</td>
+						<td>11pay_03에 있음</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>약관상세-풀팝업:제3자 정보제공 동의</td>
+						<td><a href='collabo/11pay/11pay_03.html' target='_blank'>11pay_03.html</a></td>
+						<td class="status">●</td>
+						<td>2019-01-21</td>
+						<td>11pay_03에 있음</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>비밀번호입력</td>
+						<td><a href='collabo/11pay/11pay_05.html' target='_blank'>11pay_05.html</a></td>
+						<td class="status">●</td>
+						<td>2019-01-21</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>비밀번호입력_에러</td>
+						<td><a href='collabo/11pay/11pay_06.html' target='_blank'>11pay_06.html</a></td>
+						<td class="status">●</td>
+						<td>2019-01-21</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<!-- //01. 11Pay -->
+
+	<!-- 00. 홈페이지 -->
+	<section class="project" id="common">
+		<button>More...</button>
+		<h2>00. 홈페이지</h2>
+		<div class="tb-wrap">
+			<table>
+				<colgroup>
+					<col style="width:10%" />
+					<col style="width:24%" />
+					<col style="width:20%;" />
+					<col style="width:13%" />
+					<col style="width:13%" />
+					<col style="width:20%" />
+				</colgroup>
+
+				<thead>
+					<tr>
+						<th scope="col">1depth</th>
+						<th scope="col">2depth</th>
+						<th scope="col">Link</th>
+						<th scope="col">Status.</th>
+						<th scope="col">Date.</th>
+						<th scope="col">Note.</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>메인</td>
+						<td></td>
+						<td><a href='index.html' target='_blank'>index</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td><a href='index_v1.html' target='_blank'>index(카테고리 개편)</a></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 습관저금</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=0&tabCode=finnqmasmpq.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 핀크카드</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=1&tabCode=finnqmascrd.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 투뿔카드</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=2&tabCode=finnqmascpq.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > T핀크적금</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=3&tabCode=finnqmasmpw.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 비상금대출</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=4&tabCode=finnqmaslon.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > P2P 투자</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=5&tabCode=finnqmasvpq.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 보험맞춤추천</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=6&tabCode=finnqmasins.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 해외송금</td>
+						<td><a href='product/finnqmarket.html?tabNum=0&tabItem=7&tabCode=finnqmasppq.html' target='_blank'>product/finnqmarket.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 카드 (변경)</td>
+						<td><a href='product/finnqmarket-card.html?tabNum=0&tabItem=0' target='_blank'>product/finnqmarket-card.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td>2019.05.15 GNB메뉴 변경</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 예적금 (변경)</td>
+						<td><a href='product/finnqmarket-saving.html?tabNum=0&tabItem=0' target='_blank'>product/finnqmarket-saving.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td>2019.05.15 GNB메뉴 변경</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 대출 (변경)</td>
+						<td><a href='product/finnqmarket-loan.html?tabNum=0&tabItem=0' target='_blank'>product/finnqmarket-loan.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td>2019.05.15 GNB메뉴 변경</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 투자 (변경)</td>
+						<td><a href='product/finnqmarket-investment.html?tabNum=0&tabItem=0' target='_blank'>product/finnqmarket-investment.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td>2019.05.15 GNB메뉴 변경</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 보험 맞춤 추천 (변경)</td>
+						<td><a href='product/finnqmarket-insurance.html?tabNum=0&tabItem=0' target='_blank'>product/finnqmarket-insurance.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td>2019.05.15 GNB메뉴 변경</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>핀크마켓 > 해외송금 (변경)</td>
+						<td><a href='product/finnqmarket-remittance.html?tabNum=0&tabItem=0' target='_blank'>product/finnqmarket-remittance.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td>2019.05.15 GNB메뉴 변경</td>
+					</tr>
+
+					<tr>
+						<td></td>
+						<td>공인인증센터</td>
+						<td><a href='cert/cert.html' target='_blank'>cert/cert.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>약관 > 서비스이용약관</td>
+						<td><a href='policy/service.html' target='_blank'>policy/service.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>약관 > 개인정보처리방침</td>
+						<td><a href='policy/privacy.html' target='_blank'>policy/privacy.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>약관 > 고객정보취급방침</td>
+						<td><a href='privacy/customer_information..html' target='_blank'>privacy/customer_information..html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>하나금융그룹</td>
+						<td><a href='hfg/vision_group.html' target='_blank'>hfg/vision_group.html</a></td>
+						<td class="status">●</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	<!-- //00. 홈페이지>
+
+	
+
+</div><!-- //wrap-->
+
+
+<script src="../libs/jquery-2.2.4.min.js"></script>
+<script>
+(function($) {
+	var lcache = false //localStore
+	if(typeof(Storage) !== "undefined") lcache = true;
+	var $subproject = $('section.project'); //project객체
+	var $pbar = $('.progress-wrap .progress'); //상태진행바
+	var pbarcnt = $pbar.length;
+	var scnt = $subproject.length;
+	var total = new Array;
+	var done = new Array;
+	var openstatus = new Array;
+	var projectcnt = 0;
+	var projectdone = 0;
+
+	$subproject.each(function(index){
+		total[index] = $(this).find('tr[data-type="web"] .status > span:not([data-status="none"])').length;
+		done[index] =$(this).find('tr[data-type="web"]').find('.icon[data-status="done"]').length; //.icon[data-status="ing"] 제외 2018-11-09
+		projectcnt += total[index];
+		projectdone += done[index];
+	})
+	for(i=0;i<$pbar.length;i++) {
+
+		var temp = 0;
+		$graphObj = $pbar.eq(i);
+		if(i==0) temp = parseInt((projectdone/projectcnt)*100);
+		else temp = parseInt((done[i-1]/total[i-1])*100);
+		//temp = Math.floor(Math.random() * 100) + 1;; //임시코드, 실제 작업시에 주석처리
+		$graphObj.find('.progress-bar').css('width',temp+"%")
+
+		if(i==0) $graphObj.find('.progress-type em').text(projectdone+"/"+projectcnt);
+		else $graphObj.find('.progress-type em').text(done[i-1]+"/"+total[i-1]);
+
+		$graphObj.find('.progress-completed').text(temp+"%");
+		if(temp > 90) $graphObj.find('.progress-completed').css('color', '#fff');
+	}
+	$(document).ready(function() {
+		//localStroge Check!!
+		if(lcache) {
+			var webview = false;
+			var cache = localStorage['openStatus'];
+			if(cache) openstatus = JSON.parse(cache);
+			else {
+				for(i=0;i<scnt;i++) openstatus[i] = true;
+				localStorage['openStatus'] = JSON.stringify(openstatus);
+			}
+			var cnt = 0;
+			for (key in openstatus) {
+				if(openstatus[key] == true) $('section.project').eq(key).find('button').removeClass('close').end().find('div').show();
+				else {
+					cnt += 1;
+					$('section.project').eq(key).find('button').addClass('close').end().find('div').hide();
+				}
+			}
+			if(cnt >= 6) {
+				$('.wrap .extend button.all-extend').addClass('close').text('전체열기');
+			}
+			cache = localStorage['webview'];
+			if(cache) webview = JSON.parse(cache);
+			if(webview == true) {
+				$('section.project').find('tr[data-type="native"]').hide();
+				$('.wrap .extend button.native-extend').text("Native View").addClass("native");
+			}
+		}
+		//section open and close
+		$('section').on('click','> button',function(){
+			var clickobj = $(this).parent();
+			if($(this).is('.close')) {
+				clickobj.find("> div").stop().show('slow',function(obj){
+					clickobj.find('button').removeClass('close').addClass('open');
+				});
+				if(clickobj.is('.project') || lcache) openstatus[clickobj.index()-4] = true;
+			} else {
+				clickobj.find("> div").stop().hide('slow', function(obj){
+					clickobj.find('button').addClass('close').removeClass('open');
+				});
+				if(clickobj.is('.project') || lcache) openstatus[clickobj.index()-4] = false;
+			}
+			if(lcache) {
+				localStorage['openStatus'] = JSON.stringify(openstatus);
+			}
+		});
+		//엑셀용
+		$('.wrap').on('click','.extend button.EXCEL',function(){
+			$('.tb-wrap').show();
+			$('h1').hide();
+			$('section').eq(0).hide();
+			$('section').eq(1).hide();
+			$('section > button, section > h2').hide();
+			$('thead').hide();
+
+			$('tbody tr').each(function(){
+				$(this).find('td').hide();
+				$('.extend').hide();
+				//$(this).find('td').eq(0).show(); //엑셀 번호와 매칭이 필요할때
+				$(this).find('td').eq(7).addClass('copy').show();
+
+			})
+//			$('tbody tr td').eq(0).hide();
+//			$('tbody tr td:nth-of-type(0)').show();
+
+
+		})
+
+		$('.wrap').on('click','.extend button.EXCEL_Link',function(){
+			var $obj;
+			var $obj_td;
+			var templink;
+			var local_server = "http://192.168.0.75:8000../../html/"
+			$('.tb-wrap').show();
+			$('h1').hide();
+			$('section').eq(0).hide();
+			$('section').eq(1).hide();
+			$('section > button, section > h2').hide();
+			$('thead').hide();
+			$('tbody tr').each(function(){
+
+				$(this).find('td').hide();
+				$('.extend').hide();
+				$obj_td = $(this).find('td').eq(6);
+				$obj_td.show();
+				$obj = $obj_td.find('a');
+				if($obj.is('a')){
+					templink = $obj.attr("href");
+					$obj.text(local_server+templink);
+				}else {
+					$obj_td.text("-");
+				}
+
+//
+//				console.log(templink);
+//				if(templink===undefined) obj.ap.text("123") obj.text(templink);
+//				else ;
+			})
+			/*
+
+
+
+			$('tbody tr').each(function(){
+				$(this).find('td').hide();
+				$('.extend').hide();
+				$(this).find('td').eq(6).addClass('copy').show();
+
+			})*/
+		})
+
+		//all open and close
+		$('.wrap').on('click','.extend button.all-extend',function(){
+			//전체 열고닫기
+			if($(this).is('.close')) {
+				// All Project Close
+				$('section.project').find("> div").stop().show('slow').end().find('button').removeClass('close').addClass('open');
+				$(this).toggleClass('close').text('전체닫기');
+				if(lcache) {
+					for(i=0;i<scnt;i++) openstatus[i] = true;
+					localStorage['openStatus'] = JSON.stringify(openstatus);
+				}
+			}else {
+				// All Project Open
+				$('section.project').find("> div").stop().hide('slow').end().find('button').addClass('close').removeClass('open');
+				$(this).toggleClass('close').text('전체열기');
+				if(lcache) {
+					for(i=0;i<scnt;i++) openstatus[i] = false
+					openstatus = [false, false, false, false, false, false];
+					localStorage['openStatus'] = JSON.stringify(openstatus);
+				}
+			}
+		})
+
+		//web || native View
+		$('.wrap').on('click','.extend button.native-extend',function(){
+			if($(this).text() == "WEB Only") {
+				//web only
+				$(this).text("Native View").addClass("native");
+				if(lcache) localStorage['webview'] = JSON.stringify(true);
+			}
+			else {
+				//native with
+				$(this).text("WEB Only").removeClass("native");
+				if(lcache) localStorage['webview'] = JSON.stringify(false);
+			}
+			$('section.project').find('tr[data-type="native"]').toggle();
+		});
+	});
+}(jQuery));
+</script>
+</body>
+</html>

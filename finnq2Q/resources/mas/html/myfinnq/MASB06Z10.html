@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>내 계좌간 이체 - 내 출금계좌 선택</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASB06Z10 -->
+	<div id="contents" class="open-banking">
+		<section>
+			<div class="sec_title txt_l">
+				<h2>여러개 계좌에 한번에, 천만원까지!<br>
+				<strong>내 계좌끼리 무료 이체</strong>하세요 :)</h2>
+			</div>
+
+			<div class="list__account-wrap">
+				<p class="title">출금계좌 선택</p>
+				<!-- 은행 아이콘은 개발에서 사용하는 코드와 동일
+					방법(클래스) : bank_ + 코드명
+
+					002 : KDB산업은행
+				003 : IBK기업은행
+				004 : 국민은행
+				007 : 수협중앙회
+				011 : 농협은행
+				020 : 우리은행
+				023 : SC제일은행
+				027 : 한국시티은행
+				031 : 대구은행
+				032 : BNK부산은행
+				034 : 광주은행
+				035 : 제주은행
+				037 : 전북은행
+				039 : 경남은행
+				064 : 산림조합중앙회
+				050 : 상호저축은행
+				045 : 새마을금고
+				048 : 신협중앙회
+				071 : 우체국
+				081 : KEB하나은행
+				089 : 케이뱅크
+				088 : 신한은행
+				090 : 카카오은행
+
+				054 : HSBC
+				055 : 도이치뱅크
+				057 : JP모간
+				060 : BOA은행
+				061 : BNP파리바
+				062 : 중국공상
+
+				209 : 유안타증권
+				218 : 현대증권 ==> KB증권으로 변경
+				222 : 한양증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				223 : 리딩투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				224 : BNK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				225 : IBK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				226 : KB투자증권
+				227 : KTB투자증권
+				238 : 미래에셋대우
+				240 : 삼성증권
+				243 : 한국투자증권
+				247 : NH투자증권
+				261 : 교보증권
+				262 : 하이투자증권
+				263 : HMC ==> 현대차증권 변경
+				264 : 키움증권
+				265 : 이베스트투자증권
+				266 : SK증권
+				267 : 대신증권
+				268 : 솔로몬 투자(삭제) ==> 메리츠종합금융증권 으로 변경
+				269 : 한화투자증권
+				270 : 하나금융투자
+				278 : 신한금융투자
+				279 : DB금융증권
+				280 : 유진투자증권
+				287 : 메리츠종합금융증권
+				290 : 부국증권
+				291 : 신영증권
+				292 : 케이프투자증권
+				294 : 펀드온라인코리아 ==> 한국포스증권 변경
+
+					EX ) bank_004 : 국민은행
+					예외) finnq는 클래스 finnq
+				-->
+				<!--
+					계좌 이름과 금액이 같이 노출될 경우에만 클래스 half 추가
+					list__account : <ul class="list__account half">
+				-->
+				<ul class="list__account bank-list half">
+					<!-- 데이터 Load 완료 시 클래스 gradient 삭제 -->
+					<li class="gradient">
+						<div class="block--wrap">
+							<div class="ico__account finnq">핀크</div>
+
+							<div class="account__info">
+								<span class="account__info--name">핀크계좌</span>
+								<span class="account__info--money" data-event-target="account1">
+									<em class="num bold">1,200,000</em>원
+								</span>
+							</div>
+							<div class="account__info--detail">
+								KEB하나 <em class="num">01000001234-137</em>
+							</div>
+						</div>
+					</li>
+					<li class="gradient">
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장마이너스통장마이너스통장</span>
+								<span class="account__info--money" id="account2" data-event-target="account2">
+									<em class="num bold">1,200,000</em>원
+								</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+								<div class="account__info--thumb">
+									<span class="thumb">대출약정</span>
+									<span class="thumb">적금이체</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장마이너스통장마이너스통장</span>
+								<span class="account__info--money" data-event-target="account3">
+									<em class="num bold">1,200,000</em>원
+								</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+								<div class="account__info--thumb">
+									<span class="thumb">대출약정</span>
+									<span class="thumb">적금이체</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_048">신협중앙회</div>
+
+							<div class="account__info">
+								<!-- 펌뱅킹계좌는 잔액 비노출 : 계좌명에 클래스 full 추가 -->
+								<span class="account__info--name full">월급통장월급통장월급통장월급통장</span>
+								<!-- <span class="account__info--money" data-event-target="account4">
+									<em class="num bold">100,000,000</em>원
+								</span> -->
+							</div>
+							<div class="account__info--detail">
+								KEB하나 <em class="num">01000001234-137</em>
+							</div>
+						</div>
+					</li>
+					<li class="account__more">
+						<a href="#" class="btn__account--more">
+							<div class="ico__account more">추가 계좌 연결</div>
+							계좌연결
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	// 임시 마스크 스크립트
+	setTimeout(function(){
+		$('.list__account-wrap .list__account li').removeClass('gradient')
+	}, 500);
+	// 임시 마스크 스크립트
+
+	function initLoadingFunc( _target )
+	{
+		// 금액을 확인할 Element를 매개변수로 전달받아서 체크
+		// 매개변수 Type은 ID, 클래스, Data등 선택자로 쓸 수 있는건 모두 가능
+		$(_target).html('').addClass('loading');
+
+		// Settime은 예시. 통시 Ajax가 성공으로 되었을 때
+		setTimeout(function(){
+			$(_target).removeClass('loading').html('<em class="num bold">1,200,000</em>원');
+		},2000);
+	}
+
+	// initLoadingFunc( '[data-event-target="account1"]' );
+	// initLoadingFunc( '#account2' );
+	// initLoadingFunc( '[data-event-target="account3"]' );
+})
+</script>
+</body>
+</html>

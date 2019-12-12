@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>내 계좌간 이체 - 내 출금계좌 선택</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASB06Z10 -->
+	<div id="contents" class="open-banking add_sticky">
+		<section>
+			<div class="sec_title line">
+				<h2 class="big txt_l"><strong><em class="num bold animate-num">10,000,000</em>원</strong><br> 이체 완료</h2>
+
+				<dl class="account-desc">
+					<dt>출금계좌</dt>
+					<dd>KB국민 <em class="num">123123123119</em></dd>
+				</dl>
+
+				<div class="add-desc--layer">
+					여러번 나누어 이체했어요
+					<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">자세히 보기</span></button>
+					<div class="layer_wrap">
+						<p>내 계좌간 이체는 <strong>핀크계좌를 이용한 이체서비스</strong>로 핀크계좌의 법적 한도 때문에 계좌내역에 <strong>출금/입금 금액이 여러번 나뉘어</strong> 있을 수 있습니다. 총 출금액과 입금액은 동일하니 안심하세요! :)</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="list__account-wrap scroll pt0">
+				<!-- 은행 아이콘은 개발에서 사용하는 코드와 동일
+					방법(클래스) : bank_ + 코드명
+
+					002 : KDB산업은행
+					003 : IBK기업은행
+					004 : 국민은행
+					007 : 수협중앙회
+					011 : 농협은행
+					020 : 우리은행
+					023 : SC제일은행
+					027 : 한국시티은행
+					031 : 대구은행
+					032 : BNK부산은행
+					034 : 광주은행
+					035 : 제주은행
+					037 : 전북은행
+					039 : 경남은행
+					064 : 산림조합중앙회
+					050 : 상호저축은행
+					045 : 새마을금고
+					048 : 신협중앙회
+					071 : 우체국
+					081 : KEB하나은행
+					089 : 케이뱅크
+					088 : 신한은행
+					090 : 카카오은행
+
+					054 : HSBC
+					055 : 도이치뱅크
+					057 : JP모간
+					060 : BOA은행
+					061 : BNP파리바
+					062 : 중국공상
+
+					209 : 유안타증권
+					218 : 현대증권 ==> KB증권으로 변경
+					222 : 한양증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+					223 : 리딩투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+					224 : BNK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+					225 : IBK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+					226 : KB투자증권
+					227 : KTB투자증권
+					238 : 미래에셋대우
+					240 : 삼성증권
+					243 : 한국투자증권
+					247 : NH투자증권
+					261 : 교보증권
+					262 : 하이투자증권
+					263 : HMC ==> 현대차증권 변경
+					264 : 키움증권
+					265 : 이베스트투자증권
+					266 : SK증권
+					267 : 대신증권
+					268 : 솔로몬 투자(삭제) ==> 메리츠종합금융증권 으로 변경
+					269 : 한화투자증권
+					270 : 하나금융투자
+					278 : 신한금융투자
+					279 : DB금융증권
+					280 : 유진투자증권
+					287 : 메리츠종합금융증권
+					290 : 부국증권
+					291 : 신영증권
+					292 : 케이프투자증권
+					294 : 펀드온라인코리아 ==> 한국포스증권 변경
+
+					EX ) bank_004 : 국민은행
+					예외) finnq는 클래스 finnq
+				-->
+
+				<!--
+					이체 : 케이스에 따라서 클래스 분기
+					success : 성공  (V)
+					fail    : 실패  (X)
+					alert   : 그 외 (!)
+
+					스트로크 종료시 클래스 end 추가
+				 	( 이 부분은 추가로 설명 드리겠습니다.)
+				 		- 회색선이 필요한 경우 end gray
+				 		- 성공처럼 보라색선이 필요한 경우 end purple
+
+					EX : <div class="ico__account bank_090 cercle1 success">카카오은행</div>
+				-->
+				<!--
+					계좌 이름과 금액이 같이 노출될 경우에만 클래스 half 추가
+					list__account : <ul class="list__account half">
+				-->
+				<ul class="list__account half">
+					<li class="end gray">
+						<div class="block--wrap">
+							<div class="ico__account bank_090">카카오은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">핀크계좌</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								KEB하나 <em class="num">01000001234-137</em>
+							</div>
+						</div>
+					</li>
+					<li class="end gray">
+						<div class="block--wrap">
+							<div class="ico__account bank_004 end gray">국민은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+							</div>
+						</div>
+					</li>
+					<li class="success end purple">
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+							</div>
+						</div>
+					</li>
+					<li class="fail">
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+
+								<!-- 에러시 노출 -->
+								<p class="error-txt">[입금계좌 한도 초과] 출금된금액은 핀크계좌에 남아있습니다.</p>
+								<!-- //에러시 노출 -->
+							</div>
+						</div>
+					</li>
+					<li class="alert">
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sticky_wrap set_type1">
+				<button type="button" name="apply" class="btn btn_apply">확인</button>
+			</div>
+
+		</section>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	// 하단 메뉴 노출갯수에 따라 컨텐츠 자동 스크롤 (MAX5)
+	function menuScrollHeightCalc (){
+		var topMenuHeight = $(".sec_title");
+		var scrollContentHeight = parseInt(topMenuHeight.outerHeight(true), 10) + 18;
+
+		var windowH = $(window).height();
+		var compareListHeight = parseInt($(".list__account-wrap.scroll").outerHeight(), 10) + scrollContentHeight;
+
+		// wiidow 높이와 스크롤할 List 높이 비교
+		if (windowH < compareListHeight)
+		{
+			$(".list__account-wrap").css('top', scrollContentHeight +'px');
+
+			$('.list__account-wrap').scroll(function(event){
+				var _scrollTop = $(this).scrollTop();
+				if (_scrollTop > 0) {
+					$('.open-banking .sec_title.line').addClass('on');
+				}
+				else {
+					$('.open-banking .sec_title.line').removeClass('on');
+				}
+			});
+		}
+		else
+		{
+			$(".list__account-wrap").removeClass('scroll');
+		}
+	}
+	menuScrollHeightCalc ();
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+@charset 'UTF-8';
+
+/* 마켓--01_습관저금_만들기 */
+.make_deposit {padding:28px 0 36px;}
+.make_deposit .sub_tit { text-align:center;}
+.make_deposit .sub_tit	 span { @include font(14px);color:$purply_blue;font-weight:bold; letter-spacing:0;}
+.make_deposit .sub_tit h2 { @include font(20px);color:$black;font-weight:bold;}
+.make_deposit .sec_choice {margin-top:43px;padding:0px 25px;}
+.make_deposit .sec_choice .btn_percent {margin-top:26px;border-bottom:transparent;box-sizing: border-box;width:100%;}
+.make_deposit .sec_choice .btn_percent::after{content:""; display:block; height:0; clear:both;}
+.make_deposit .sec_choice .btn_percent li {float:left;text-align:center;position:relative;box-sizing: border-box;width:(100%/3);height:46px;margin:-1px -1px 0px 0px;}
+.make_deposit .sec_choice .btn_percent li button { position:absolute;top:0;left:0;@include font(14px);width:100%;height:100%;border:1px solid $white_two;margin:0px;z-index:0; font-family:"LatoB"; color:$warm_grey;} /* 2018-01-23 font-family, color 수정 by phj */
+.make_deposit .sec_choice .btn_percent li button.on {border:1px solid $purply_blue;color: $purply_blue;background-color: $pale_lavender;z-index:1;} /* animation-name: pulse;animation-duration: 0.5s;animation-fill-mode: both; */
+
+/* 마켓--01_습관저금_카테고리 */
+.market .slide_wrap { overflow:hidden;width:100%;padding-top:28px;}
+.market .slide_wrap .market_category {position:relative;margin:0px -70px 0;height: 180px;box-sizing: border-box;}
+.market .slide_wrap .market_category .swiper-slide {position:relative;@include font(16px);background: $white;border-radius:4px;border:1px solid $white_two;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.market .slide_wrap .market_category input[type="radio"].yellow + label {height:26px;}
+.market .slide_wrap .market_category input[type="radio"].yellow + label:before { width:26px;height:26px;margin:0;background:url(../images/common/ir-form-radio-yellow.png) 0 0 no-repeat;background-size:26px auto;}
+.market .slide_wrap .market_category input[type="radio"].yellow:checked + label:before { background:url(../images/common/ir-form-radio-yellow.png) 0 -29px no-repeat;background-size:26px auto;}
+.market .slide_wrap .market_category .swiper-slide.on  { background-color:$purply_blue;transition: background-color 0.7s ;/*margin-top:-1px;*/border-color:$purply_blue;transition: border-color 0.7s ;}
+.market .slide_wrap .market_category .swiper-slide.on input[type="radio"] + label:before {background:url(../images/common/ir-form-radio-yellow.png) 0 -29px no-repeat;background-size:26px auto;}
+.market .slide_wrap .market_category .swiper-slide[data-category*="fastfood"].on .category_tit,
+.market .slide_wrap .market_category .swiper-slide[data-category*="fastfood"] .category_tit { padding-left:50px;}
+
+.market .slide_wrap .market_category .swiper-slide.on .category_tit { color:$white;}
+.market .slide_wrap .market_category .swiper-slide.on .category_ico { filter:none;transition: filter 0.5s;}
+.market .slide_wrap .form_wrap { position:absolute;left:15px;top:15px;}
+.market .slide_wrap .category_tit { display:block;width:100%;height:19px;margin-top:16px;padding:0px 0 3px 40px;@include font(16px);color:$black;text-align:center;font-weight:900;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;word-break:break-all;word-wrap:break-word;}
+.market .slide_wrap .category_tit span {display:block;text-indent:-32px; font-weight:normal;}
+.market .slide_wrap .category_tit:after {content:' ';display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.market .slide_wrap .category_ico { display:block;width:80px;height:106px;margin:12px auto 0;}
+/* filter: grayscale(100%) opacity(20%);-webkit-filter: grayscale(100%) opacity(20%);*/
+.market .slide_wrap .category_ico.ico_cvs { background:url(../images/finnqmarket/ir-market-category.png) 0 0 no-repeat;background-size:100% auto;}
+.market .slide_wrap .category_ico.ico_fastfood { background:url(../images/finnqmarket/ir-market-category.png) 0 -106px no-repeat;background-size:100% auto;}
+.market .slide_wrap .category_ico.ico_coffee { background:url(../images/finnqmarket/ir-market-category.png) 0 -212px no-repeat;background-size:100% auto;}
+.market .slide_wrap .category_ico.ico_chicken { background:url(../images/finnqmarket/ir-market-category.png) 0 -318px no-repeat;background-size:100% auto;}
+.market .slide_wrap .category_ico.ico_bread { background:url(../images/finnqmarket/ir-market-category.png) 0 -424px no-repeat;background-size:100% auto;}
+.market .slide_wrap .category_ico.ico_shopping { background:url(../images/finnqmarket/ir-market-category.png) 0 -530px no-repeat;background-size:100% auto;}
+.market .slide_wrap .swiper-button-next,
+.market .slide_wrap .swiper-button-prev { top:25px;background:transparent;width:19%;height:180px;opacity:0.5;}
+.market .slide_wrap .swiper-button-next { right:70px;}
+.market .slide_wrap .swiper-button-prev { left:70px;}
+
+/* 마켓--01_습관저금_수정 */
+
+.make_deposit .choice_catogory {margin-top:28px;height:120px;}
+.make_deposit .choice_catogory.modify { position:relative;}
+.make_deposit .choice_catogory.modify:before { content:" ";position:absolute;left:50%;top:0;width:293px;height:124px;margin-left:-146.5px;background:url(../images/finnqmarket/bg_category_pang.png) 0 0 no-repeat;background-size:100% 100%; display:none} /* 2018-02-02 디자인 변경으로 인해 삭제 phj */
+.make_deposit .choice_catogory .category_ico {position:relative;display:block;width:80px;height:106px;margin:28px auto 0;}
+.make_deposit .choice_catogory .category_ico.ico_cvs { background:url(../images/finnqmarket/ir-market-category.png) 0 0 no-repeat;background-size:100% auto;}
+.make_deposit .choice_catogory .category_ico.ico_fastfood { background:url(../images/finnqmarket/ir-market-category.png) 0 -106px no-repeat;background-size:100% auto;}
+.make_deposit .choice_catogory .category_ico.ico_coffee { background:url(../images/finnqmarket/ir-market-category.png) 0 -212px no-repeat;background-size:100% auto;}
+.make_deposit .choice_catogory .category_ico.ico_chicken { background:url(../images/finnqmarket/ir-market-category.png) 0 -318px no-repeat;background-size:100% auto;}
+.make_deposit .choice_catogory .category_ico.ico_bread { background:url(../images/finnqmarket/ir-market-category.png) 0 -424px no-repeat;background-size:100% auto;}
+.make_deposit .choice_catogory .category_ico.ico_shopping { background:url(../images/finnqmarket/ir-market-category.png) 0 -530px no-repeat;background-size:100% auto;}
+.make_deposit .choice_catogory .category_ico .tooltip { position:absolute;left:100%;top:50%;margin-top:-13px;}
+
+/* 습관저금 상세 */
+.deposit_inquiry .sec_inquiry_money .update .num{margin-left:2px}
+.deposit_inquiry .sec_category { position:relative;/* height:200px; */padding:20px 0 28px;background-color:$purply_blue;background-size:0 0;/* overflow:hidden; */}
+.deposit_inquiry .sec_category .scrollx_wrap { width:100%;/* margin:20px 0 0 0; */overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0);} /* 탭 전체 효과 삭제 ios */
+/* .deposit_inquiry .sec_history { padding-bottom:45px;} */
+.tab-container { border-bottom:1px solid rgba(255, 255, 255, 0.12);width:auto;height:64px;padding:20px 0 10px 0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.tab-container .swiper-slide { position:relative;width:auto;height:43px;text-align:center;margin-bottom:-1px;margin-right:24px;}
+.tab-container .swiper-slide:after { content:'';position:absolute;left:-10px;top:-10px;width:100%;height:100%;padding:10px; z-index:2;}
+.tab-container .swiper-slide span { display:block;letter-spacing:-1px;@include font(16px);color:$white;margin-top:9.4px;}
+.tab-container .swiper-slide.on { border-bottom:1px solid $sun_yellow;}
+.tab-container .swiper-slide.on span { color:$sun_yellow;}
+.tab-container .swiper-slide.off span { border:1px dashed $lavender;border-radius:5px;height:34px;margin-top:0px;padding:0px 12px 0px;vertical-align:middle;color:$lavender;@include font(14px);-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.market_wrap .tab-container .swiper-slide.off span { line-height:32px;}
+.tab-container .swiper-slide.off span:before {content:'+';position:relative;padding-right:6px;}
+.tab-container > .grd_next { position:absolute;right:0;top:0;width:26px;height:63px;background:url(../images/finnqmarket/bg_grd_next.png) no-repeat;background-size:100% auto;z-index:1;}
+.deposit_inquiry .sec_category + .sec_history{position:relative}
+.deposit_inquiry .sec_history .no_result {padding-top:15%;}
+/* 탭 개별 효과 적용 2018-05-31 ock */
+.deposit_inquiry .sec_category .scrollx_wrap .swiper-slide {-webkit-tap-highlight-color:rgba(0,0,0,0.18);outline:none;}
+.deposit_inquiry .sec_category .scrollx_wrap .swiper-slide.off{height:34px}
+
+/* 2018-04-16 말줄임 표시 위해 추가 phj */
+.deposit_inquiry .sec_history dl dd {position:relative; padding-left:160px; height:23px;}
+.deposit_inquiry .sec_history dl dd div {float:none;}
+.deposit_inquiry .sec_history dl dd div:first-child {position:absolute; left:0; top:0;}
+.deposit_inquiry .sec_history dl dd div .date + em {width:100px; display:inline-block; overflow:hidden; white-space:nowrap; vertical-align:top;}
+.deposit_inquiry .sec_history dl dd .save_info:after {content:""; clear:both; display:block; height:0;}
+.deposit_inquiry .sec_history dl dd .save_info .place {float:left; display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; text-align:right;}
+.deposit_inquiry .sec_history dl dd .save_info .save_org {float:left; display:block; vertical-align:top; text-align:right; margin-left:5px;}
+
+/* 습관저금-조회 날짜 */
+.sec_inquiry_money { }
+.sec_inquiry_money .update {/*margin-top:20px;*/ @include font(11px); color:$pinkish_grey;}/*2018-02-09 상단 여백 조절 margin삭제*/
+.sec_inquiry_money .update .num {margin-left:4px;}
+/*.sec_inquiry_money .update a {display:inline-block; vertical-align:middle;}
+.sec_inquiry_money .update a i {margin:9px 9px 8px;}*/ /* 2018-01-23 update 추가 phj *//* 2018-04-05 common공틍으로 정리 phj */
+.sec_inquiry_money .sub_tit { position:relative;overflow:hidden;text-align:center;padding-bottom:45px;}
+.sec_inquiry_money .sub_tit .date_control { margin-top:17px;} /* 2018-01-23 margin 값 22에서 변경 phj */ /* 2018-03-29 margin 3에서 값 17로 변경 phj */
+.sec_inquiry_money .sub_tit .account_info + .flex_wrap { padding:0 20px;margin-top:23px;}
+.deposit_inquiry .notice {font-weight:bold}
+
+/* 습관저금-조회 카테고리별 설정 */
+.deposit_detail_wrap { position:relative;/* height:135px;overflow:hidden; */height:110px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;/* overflow:hidden; */}
+.deposit_detail_wrap:after { content:' ';position:absolute;left:22.22%;top:22px;width:120px;height:158px;opacity:0.1;}
+.deposit_detail_wrap[data-tab="all"]:after { background:url(../images/finnqmarket/ir-market-category.png) 0 -954px no-repeat;background-size:100% auto;z-index:0;-webkit-filter: grayscale(100%); }
+.deposit_detail_wrap[data-tab="cvs"]:after { background:url(../images/finnqmarket/ir-market-category.png) 0 0 no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%); }
+.deposit_detail_wrap[data-tab="fastfood"]:after { background:url(../images/finnqmarket/ir-market-category.png) 0 -159px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%); }
+.deposit_detail_wrap[data-tab="coffee"]:after { background:url(../images/finnqmarket/ir-market-category.png) 0 -318px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%); }
+.deposit_detail_wrap[data-tab="chicken"]:after { background:url(../images/finnqmarket/ir-market-category.png) 0 -477px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%); }
+.deposit_detail_wrap[data-tab="bread"]:after { background:url(../images/finnqmarket/ir-market-category.png) 0 -636px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%); }
+.deposit_detail_wrap[data-tab="shopping"]:after { background:url(../images/finnqmarket/ir-market-category.png) 0 -795px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%); }
+.make_deposit .choice_catogory .category_ico {position:relative;display:block;width:80px;height:106px;margin:28px auto 0;}
+.deposit_detail_wrap .tab-content { position:relative;width:100%;padding:4px 20px 0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;z-index:1;display:none;}
+.deposit_detail_wrap .tab-content.on { display:block;}
+.deposit_detail_wrap .tab-content dl { width:100%;color:$white;margin-top:14px;}
+.deposit_detail_wrap .tab-content dl:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.deposit_detail_wrap .tab-content dl dt { float:left; @include font(16px);}
+.deposit_detail_wrap .tab-content dl dt em{vertical-align:middle}
+.deposit_detail_wrap .tab-content dl dt .ico_circle_help2{display:inline-block;margin-left:3px;vertical-align:middle}
+.deposit_detail_wrap .tab-content dl dd { float:right; @include font(16px); font-weight:bold;}
+.deposit_detail_wrap .tab-content dl dd .num,
+.deposit_detail_wrap .tab-content dl dd .cash,
+.deposit_detail_wrap .tab-content dl dd .date,
+.deposit_detail_wrap .tab-content dl dd .time {font-family:"LatoB" !important;}
+.deposit_detail_wrap .tab-content dl dd span.dash { display:inline-block;padding:0 4px; font-family:"LatoB"; @include font(12px);}
+.deposit_detail_wrap .tab-content dl dd button.ico { margin:-4px 0 0 2px;}
+
+.deposit_detail_wrap .tab-content dl.cumulative{position:relative;}
+.deposit_detail_wrap .tab-content dl.cumulative .layer_wrap{left:0;right:auto}
+.deposit_detail_wrap .tab-content dl.cumulative .layer_wrap > p{opacity:0;}
+.deposit_detail_wrap .tab-content dl.cumulative .layer_wrap.on > p{opacity:1}
+
+
+.make_deposit .modal_content.add_sticky .scroll_wrap::after{background:$white}
+
+/* 18.09.19 습관저금 날짜 SORT수정 */
+.account_info.save {margin-top:12px;}
+.diposit_sort_wrap {position: relative;}
+.diposit_sort_wrap .sort_info {position:relative; padding:8px 20px 7px; background:$white_three;}
+.diposit_sort_wrap .tit {color:$warm_grey; font-size:14px;}
+.diposit_sort_wrap .btn_detail {position:absolute; top:0; right:20px; text-indent:-999em; width:34px; height:34px; background:url(../images/finnqmarket/ico_sp_diposit.png) 0 0 no-repeat;background-size:cover;}
+.diposit_sort_wrap.on .btn_detail {background-position:right 0 ;}
+.diposit_sort_wrap .sort_detail {display:none; padding:20px; border-top:1px solid $white_two; background:$white_four;}
+.diposit_sort_wrap.on .sort_detail {display:block;}
+.diposit_sort_wrap .sort_detail .btn_wrap {overflow:hidden;}
+.diposit_sort_wrap .sort_detail .btn_wrap button {float: left; margin-left:5px; width:calc( ( 100% - 15px )/4); text-align:center; background:$white_three; border:1px solid $pinkish_grey; height:30px; box-sizing:border-box; line-height:28px; color:$brownish_grey; font-size:14px; border-radius:4px;}
+.diposit_sort_wrap .sort_detail .btn_wrap button:first-child {margin-left:0px;}
+.diposit_sort_wrap .sort_detail .date_wrap {margin-top:10px; overflow:hidden;}
+.diposit_sort_wrap .sort_detail .date_wrap > div {position:relative; width:calc( 100% - 65px ); overflow:hidden; float:left;}
+.diposit_sort_wrap .sort_detail .date_wrap > div:after {position:absolute; display:block; left:50%; margin-left:-3px; top:19px; content:"-"; width:6px; height:1px; color:$brownish_grey; overflow:hidden; border-top:1px solid #666;}
+.diposit_sort_wrap .sort_detail .date_wrap > div .i_txt {position:relative; padding:0; width:calc( ( 100% - 15px )/2); float:right; border-radius:4px; box-sizing:border-box; height:40px; border:1px solid $white_three; color:$brownish_grey; font-size:16px; line-height:39px; text-align:center; background:$white;}
+.diposit_sort_wrap .sort_detail .date_wrap > div .i_txt input {position:absolute; top:0; left:0; right:0; bottom:0; width:100%; font-size:0; background:transparent; z-index:10; border:0; padding:0; height:100%;}
+.diposit_sort_wrap .sort_detail .date_wrap > div .i_txt span {display:block;}
+.diposit_sort_wrap .sort_detail .date_wrap > div .i_txt:first-child {float:left;}
+.diposit_sort_wrap .sort_detail .date_wrap .btn_search {width:60px; height:40px; background:$warm_grey; text-align:center; font-size:14px; color:$white; box-sizing:border-box; float:right; border-radius:4px;}

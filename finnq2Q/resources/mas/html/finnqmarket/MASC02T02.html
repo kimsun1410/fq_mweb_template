@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">
+    <title>17_혁신금융대출_10T신용등급_03상세_01기본_MASC02T02_web</title><!-- 임시 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20190918" />
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- 하단 버튼 scrollup down시 class="show" 추가 -->
+            <div id="contents" class="one_stop add_sticky">
+                <!-- 상품상세 페이지 class="view" t신용등급 class="view tcredit"추가 -->
+                <section class="view tcredit">
+                    <div class="sec_head">
+                        <h3 class="tcredit_title">핀크 T스코어<i class="stiker"><em class="blind">T</em></i></h3>
+                        <div class="tcredit_box">
+                            <dl class="list">
+                                <dt><span class="dot">통신사</span></dt>
+                                <dd class="num">SKT</dd>
+                                <dt><span class="dot">멤버십</span></dt>
+                                <dd class="num">SILVER</dd>
+                                <dt><span class="dot">가입기간</span></dt>
+                                <dd class="num">10년 초과</dd>
+                            </dl>
+                            <div class="circle_box">
+                                <!-- class="up down" 추가시 글자 색변경  data-cp-lank(등급), data-cp-number(신용점수), data-cp-updown(신용점수 up ~ down), data-cp-udtext(날짜)-->
+                                <div class="counter down" data-cp-lank="1" data-cp-number="845"  data-cp-updown="14" data-cp-udtext="06.30" data-cp-color="#731aed"></div>
+                            </div>
+                        </div>  
+                        <div class="tit_info_box">
+                            <p class="info"><em class="num">4</em>개 금융기관에서<br />대출 금리 <em class="red">최대 <mark class="num">0.7%</mark></em>추가 인하 가능</p>
+                            <div class="btn_box">
+                                <button type="button" class="add_btn">맞춤 대출상품 조회</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec_history">
+                        <div class="loan_info">
+                            <strong class="title">최근 이용내역</strong>
+                            <ul class="list_tbl">
+                                <li>
+                                    <div class="prd_guide">
+                                        <span>요금제</span>
+                                        <span class="txt_b">Band 데이터 퍼펙트</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prd_guide">
+                                        <span>데이터 사용</span>
+                                        <span class="txt_b">5GB 이하</span>
+                                    </div>
+                                </li>
+                                <li class="line">
+                                    <div class="prd_guide">
+                                        <span>통화건수</span>
+                                        <span class="txt_b">200건 이하</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prd_guide">
+                                        <span>납부금액</span>
+                                        <span class="txt">10만원 이하</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prd_guide">
+                                        <span>납부방법</span>
+                                        <span class="txt">카드 자동결제</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="loan_info">
+                            <strong class="title">기타 이용내역</strong>
+                            <ul class="list_tbl">
+                                <li>
+                                    <div class="prd_guide">
+                                        <!-- OSTOPOAN-295 class="half" 추가 -->
+                                        <span class="half">소액결제<em>(6개월 기준)</em></span>
+                                        <span class="txt">10만원 이하 / 2건 이하</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prd_guide">
+                                        <!-- OSTOPOAN-295 class="half" 추가 -->
+                                        <span class="half">요금미납<em>(6개월 기준)</em></span>
+                                        <span class="txt">2건 이하</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="prd_guide">
+                                        <!-- OSTOPOAN-295 class="half" 추가 -->
+                                        <span class="half">해외로밍<em>(12개월 기준)</em></span>
+                                        <span class="txt">2건 이하</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="loan_notice">
+                            <!-- OSTOPOAN-295-->
+                            <p class="noti_txt">핀크는 회원님의 금융생활에 혜택을 제공할 수 있도록 통신사 제휴를 통해<br>통신신용등급 평가 모델을 제공합니다.</p>     
+                            <p class="noti_txt">최근 이용내역은 회원님의 전월 통신이용 데이터를 기준으로 생성됩니다.<br>(납부금액은 전전월 기준)</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- #contents -->
+        </div>
+        <script src="../../libs/jquery-2.2.4.min.js"></script>
+        <script src="../../libs/ui.js"></script>
+        <script src="../../libs/contents.js"></script>
+        <!--<script src="../../libs/rollingcount.js"></script>
+        <script src="../../libs/jquery.easing.js"></script> -->
+        <script type="text/javascript">//<![CDATA
+            $(document).ready(function(){
+                var circleProgress = (function(selector) {
+                    var wrapper = $(selector);
+                    Array.prototype.forEach.call(wrapper, function(wrapper, i) {
+                        var wrapperWidth, wrapperHeight, percent, lank, uplank, uplanktext, innerHTML, context, lineWidth, centerX, centerY, radius, lineCap, newPercent, speed, from, to, duration, start, strokeStyle, textlank, textupdown, text;
+                        var getValues = function() {
+                            wrapperWidth = parseInt(window.getComputedStyle(wrapper).width);
+                            wrapperHeight = wrapperWidth;
+                            percent = wrapper.getAttribute('data-cp-number');
+                            lank = wrapper.getAttribute('data-cp-lank');
+                            uplank = wrapper.getAttribute('data-cp-updown');
+                            uplanktext = wrapper.getAttribute('data-cp-udtext');
+                            innerHTML = //'<ul id="countList" class="countlank"><li class="item"><div class="count num">' + lank + '</div>등급</li></ul>'+
+                                        '<p class="countlank">' + lank + '등급</p>' +
+                                        '<span class="count_num num bold"><strong>' + percent + '</strong></span>' +
+                                        '<canvas class="circleProgressCanvas" width="' + (wrapperWidth * 2) + '" height="' + wrapperHeight * 2 + '"></canvas>' +
+                                        '<span class="lank_text"><span class="updown num">' + uplank + '</span> (<em class="num">' + uplanktext + ' 대비</em>)</span>';
+                            wrapper.innerHTML = innerHTML;
+                            text = wrapper.querySelector(".count_num");
+                            textlank = wrapper.querySelector(".lank_num");
+                            textupdown = wrapper.querySelector(".lank_text");
+                            canvas = wrapper.querySelector(".circleProgressCanvas");
+                            wrapper.style.height = canvas.style.width = canvas.style.height = wrapperWidth + "px";
+                            context = canvas.getContext('2d');
+                            centerX = canvas.width / 2;
+                            centerY = canvas.height / 2;
+                            newPercent = 0;
+                            speed = 1;
+                            from = 0;
+                            to = percent;
+                            duration = 800;
+                            lineWidth = 15;
+                            radius = canvas.width / 2 - lineWidth;
+                            strokeStyle = wrapper.getAttribute('data-cp-color');
+                            start = new Date().getTime();
+                            lineCap = ['butt','round','square'];
+                        };
+
+                        function animate() {
+                            requestAnimationFrame(animate);
+                            var time = new Date().getTime() - start;
+                            if (time <= duration) {
+                                var x = easeInOutQuad(time, from, to - from, duration);
+                                newPercent = x;
+                                text.innerHTML = Math.round(newPercent);
+                                drawArc();
+                            }
+                        }
+
+                        function drawArc() {
+                            var circleStart = 1.5 * Math.PI; // 그리는 스타트
+                            var circleEnd = circleStart + (newPercent / 500) * Math.PI; // 넘버 카운터
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                            context.beginPath();
+                            context.arc(centerX, centerY, radius, circleStart, 4 * Math.PI, false);
+                            context.lineWidth = 1; // 뒷라인
+                            context.strokeStyle = "#eee"; // 뒷라인 색깔
+                            context.stroke();
+                            context.beginPath(1);
+                            context.arc(centerX, centerY, radius, circleStart, circleEnd, false);
+                            context.lineWidth = lineWidth; // 그리는라인 가로값
+                            context.strokeStyle = strokeStyle; // 그리는라인 컬러
+                            context.lineCap = 'round'; // 그리는라인 둥글게
+                            context.stroke();
+                        }
+                        var update = function() {
+                            getValues();
+                            animate();
+                        }
+                        update();
+
+                        var resizeTimer;
+                        var width = $(window).width();
+                        $(window).resize(function() {
+                            if ($(window).width() != width) {
+                                clearTimeout(resizeTimer);
+                                resizeTimer = setTimeout(function() {
+                                    clearTimeout(resizeTimer);
+                                    start = new Date().getTime();
+                                    update();
+                                });
+                            }
+                        });
+                    });
+                    function easeInOutQuart(t, b, c, d) {
+                        if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
+                        return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+                    }
+                    function easeInOutQuad(t, b, c, d) {
+                        if ((t/=d/2) < 1) return c/2*t*t + b;
+                        return -c/2 * ((--t)*(t-2) - 1) + b;
+                    }
+                });circleProgress('.counter');
+            });
+        </script>
+    </body>
+</html>

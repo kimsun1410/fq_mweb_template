@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>07분석알림설정_02체크카드잔액알림_02리스트_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="CBSM69Z07-1"><!-- 페이지 검색을 위한 아이디 --><!-- class 추가 2018-02-08 ock -->
+	<div id="contents" class="fingo">
+
+		<section class="add_guide_wrap">
+
+			<div class="sec_title">
+				<h3><strong>체크카드</strong>&nbsp;Keeper!</h3>
+				<p>체크카드 계좌 잔액이 5만원 미만일 때 알림</p>
+			</div>
+
+			<div class="sec_alarm">
+
+				<div class="finalarm">
+					
+					<ul class="summary">
+						<li class="category">전체 <em class="num">2</em>개</li>
+					</ul>
+
+					<ul class="alarm_list">
+						<li class="title">
+							<em class="date">2017.12.01 설정</em>
+							<strong>삼성카드</strong>
+							<span class="anum">신한은행 보통예금 (<em class="num">01000001234-137</em>)</span>
+							<!-- button type="button" class="ico ico_arrow_down_type_a"><span class="blind">더보기</span></button --><!-- // 확장될때 on Class추가  -->
+						</li>
+						<!-- li class="expend" style="display:none;">
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">삭제</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">변경</button></span>
+							</div>
+						</li -->
+					</ul>
+
+					<ul class="alarm_list">
+						<li class="title">
+							<em class="date">2017.12.01 설정</em>
+							<strong>하나 해피포인트 체크카드</strong>
+							<span class="anum">신한은행 보통예금 (<em class="num">01000001234-137</em>)</span>
+							<!-- button type="button" class="ico ico_arrow_down_type_a on"><span class="blind">더보기</span></button --><!-- // 확장될때 on Class추가  -->
+						</li>
+						<!-- li class="expend">
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">삭제</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">변경</button></span>
+							</div>
+						</li -->
+					</ul>
+				</div>
+			</div><!-- //sec_alarm -->
+
+			<div class="sec_add_btn bg_wrap"><!-- 등록 --><!-- class 추가 2018-02-08 ock -->
+				<div class="add_finlink"><!-- 금융기관 연결 -->
+					<button type="button" class="ico ico_circle_plusbig"><span class="blind">등록</span></button>
+					<span class="desc">알림 추가</span>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- sticky_wrap place -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		$(".btn_sellist").find("button").removeClass();
+		$(this).addClass("on");
+	});
+
+	$('.expend').on('click','button.ico',function(){
+		//$(this).toggleClass('on').next().toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>

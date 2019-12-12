@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>01회원_02본인인증_02계좌인증_01계좌번호입력_02타행계좌인증_MASF05Z02</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+<link rel="stylesheet" href="../../css/ios-x.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+
+
+	<div id="contents" class="common add_sticky">
+		<section class="common_wrap transfer_agree">
+
+			<!-- 19.11.11 수정 : 스탭삭제 -->
+			<!-- <div class="sec_step">
+				<ol class="step01">
+					<li class="complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>2</strong>
+					</li>
+				</ol>
+			</div> -->
+			<!-- //19.11.11 수정 -->
+
+			<div class="sec_title">
+				<h2>계좌인증</h2><!-- 19.06.13 띄어쓰기 수정 -->
+				<p class="guide_txt"><em>입력한 계좌(KB국민 570702********)</em>로<br>
+				<strong>1원</strong>을 보냈습니다.</p>
+			</div>
+
+			<div class="deposit_name round_box">
+				<!-- 19.06.13 문구 변경 -->
+				<p class="txt">
+					<span class="bold"><i class="num bold">1</i>원이 입금된 거래 내역의<br>
+					<strong>Finnq 뒤 숫자 <i class="num bold">3</i>자리</strong></span>를 입력해 주세요.</p>
+				<!-- //19.06.13 -->
+
+				<div class="new_regist">
+					<!-- <span class="num bold">Finnq</span> --><!-- 19.06.13 변경 -->
+					<div class="wrap_password three_area">
+						<p class="bg_password">
+							<i class="on"><input type="tel" data-name="resident_num" placeholder="" maxlength="1" value="3"></i>
+							<i><input type="tel" data-name="resident_num" placeholder="" maxlength="1"></i>
+							<i><input type="tel" data-name="resident_num" placeholder="" maxlength="1"></i>
+						</p>
+					</div>
+
+				</div>
+				<!-- //2018-03-24 비밀번호 형식 변경 ock -->
+				<!-- <div class="regist">
+					<span class="num bold">Finnq</span>
+					<span class="inp_resident img_password">
+						<input type="password" data-name="resident_num" placeholder="" maxlength="3">
+						<div class="resident_dot"></div>
+					</span>
+				</div> -->
+
+				<span class="limit star_type"> 인증번호 유효시간 : 10분</span>
+				<p class="img_ex">예제</p>
+			</div>
+
+			<!-- 19.11.11 수정 -->
+			<div class="btn_text02 confirm">
+				<a href="#none" class="ico ico_arrow_more bold">다른 계좌로 인증하기</a>
+			</div>
+			<!-- 19.11.11 수정 -->
+		</section>
+
+		<!-- 19.11.11 수정 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">인증하기</button>
+		</div>
+		<!-- 19.11.11 수정 -->
+
+	</div><!-- #contents -->
+</div>
+
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var residentNum = function () {
+		// 주민번호 앞자리
+		$('input:password[data-name="resident_num"]').on('keydown change', function(e){
+		var imgSum = $('.resident_dot span').length;
+			if ( e.keyCode == 8) {
+				$('.resident_dot span:last').remove();
+			} else {
+				if( imgSum == 3 ) { return false ; }
+				$('.resident_dot').append("<span></span>");
+			}
+		});
+	};	residentNum();
+
+	//커서 안보이는 class 테스트용
+	$('input:password[data-name="resident_num"]').focus(function(){
+		$(this).addClass('inp_blind');
+	});
+
+
+
+});
+</script>
+</body>
+</html>

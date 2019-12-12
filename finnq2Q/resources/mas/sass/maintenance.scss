@@ -1,0 +1,83 @@
+@charset 'UTF-8';
+
+
+.ows_wrap .common_members .sec_title{min-height:95px}
+.sec_decoration{margin-top:73px}
+.common_members .sec_decoration > div{margin: 0 auto;background:url(../images/common/ir-member-deco.png?v=1) no-repeat; background-size:216px auto;width:216px;height:162px;}
+/* 비상금 대출 안내 추가 */
+.common_members .sec_decoration.reject {margin-top:43px;}
+.common_members .sec_decoration.reject > div {width:120px; height:140px; background:url(../images/common/img_reject.png) no-repeat; background-size:100% auto; overflow:hidden; text-indent:-999em;}
+.common_members .sec_decoration .member_status01{background-position:center 0;}
+.common_members .sec_decoration .member_status02{background-position:center -162px;}
+.common_members .sec_decoration .member_status03{background-position:center -327px;}
+.common_members .sec_decoration .member_status04{background-position:center -490px;}
+.common_members .sec_decoration .member_status05{background-position:center -654px;}
+/* 비상금 대출 추가건 18.09.10 */
+.common_members .sec_decoration .member_status06{background-position:center -816px;}
+.emergency_decline .sub_txt.hana {}
+.emergency_decline .sub_txt.hana span {color:$green_blue;}
+
+.common_certify .sec_decoration > div{margin: 0 auto;background:url(../images/common/ir-certify-deco.png) no-repeat; background-size:160px auto;width:160px;height:160px;}
+.common_certify .sec_decoration .certify_finger{background-position:center 0;}
+.common_certify .sec_decoration .certify_faceid{background-position:center bottom;}
+.common_certify .sec_notice{margin-top:43px;margin-bottom:45px}
+.common_certify .sec_notice li {color:$brownish_grey;}
+
+.common_error .sec_decoration > div{margin: 0 auto;background:url(../images/common/ir-error-deco.png) no-repeat; background-size:160px auto;width:160px;height:160px;}
+.common_error .sec_decoration .error_status01{background-position:center 0;}
+.common_error .sec_decoration .error_status02{background-position:center -163px;}
+.common_error .sec_decoration .error_status03{background-position:center -326px;}
+
+
+.common_error .sec_decoration{margin-top:10px} /*2018-04-17 20에서 10으로 수정 phj*/
+.sec_common_error{margin-top:41px}
+.sec_common_error h3{@include font(20px);color:$black;font-weight:bold;text-align:center}
+.sec_common_error .round_box{margin-top:23px;margin-bottom:45px;text-align:center}
+.sec_common_error .round_box p{font-size:16px;line-height:22px;color:$black;}
+.sec_common_error .round_box p .num{vertical-align:0}
+
+/* 초대코드 입력 추가 2018-10-31 ock */
+.common_members .sec_decoration .member_status07{margin:0 auto;background:url(../images/common/bg_member_deco01.svg) no-repeat; background-size:260px auto;width:260px;height:260px;}
+.common_members .sec_decoration .member_status07 dl{padding-top:165px;text-align:center}
+.common_members .sec_decoration .member_status07 dt {@include font(16px);font-weight:bold}
+.common_members .sec_decoration .member_status07 dd {@include font(16px); margin-top:4px;color:$warm_grey;font-weight:bold}
+.common_members .sec_decoration .member_status07 em {color:$clear_blue;font-family:'LatoB';font-weight:bold;letter-spacing:-1px}
+
+.sec_invite_code{margin-top:30px;border-top:1px solid $white_two;background:$white_three}
+.sec_invite_code .inner{margin:30px 20px -15px;padding:28px 20px;border:1px solid $white_two;border-radius:8px;background:$white_four}
+.sec_invite_code.join .inner{margin:20px 20px -25px;}
+.sec_invite_code .inner dl{text-align:center}
+.sec_invite_code .inner dl dt{@include font(16px);}
+.sec_invite_code .inner dl dd{margin-top:6px;@include font(14px);color:$warm_grey}
+.sec_invite_code .inner .col_box{margin-top:12px}
+.sec_invite_code .inner .col_box span:first-child{float:left;background:$white;width:calc(100% - 90px)}
+.sec_invite_code .inner .col_box span:last-child{width:80px}
+.sec_invite_code .inner button{height:46px;}
+.sec_invite_code .inner .sec_desc{margin:0}
+.sec_invite_code .inner .sec_desc p{@include font(11px);margin-top:8px}
+.sec_desc p.point_txt8:before{color:$clear_blue}
+
+.user_info.join {text-align:center; margin-top:20px;}
+.user_info.join dt {font-size:18px; color:$black; font-weight:bold;}
+.user_info.join dd {margin-top:3px; font-size:16px; color:$warm_grey; font-weight:bold;}
+.user_info.join dd .num {color:$clear_blue;}
+.sec_join_finish .sec_decoration.join {margin-top:28px;}
+
+/* 핀크카드 자동 충전 결제 2018-11-28 ock */
+.modal_wrap.otm_common {-webkit-overflow-scrolling: auto;}
+.auto_fillingup .sec_decoration {margin:43px auto 0; background:url(../images/common/bg_auto_fillingup.png?v=1) no-repeat; background-size:contain;width:284px;height:318px;}
+
+/*
+- OMT는 멀티클래스를 붙여서 작업.
+    - OMT + 숫자로 멀티 클래스 추가.
+- 각 각의 멀티클래스가 어떤 내용의 OMT인지 주석으로 표기.
+
+    OMT1 : 간편송금 안내
+*/
+
+.auto_fillingup .sec_decoration.omt1 {margin:20px auto 0; background:url(../images/common/bg_easy_transfer.png) no-repeat; background-size:contain; width:300px;height:254px;}
+
+
+@media screen and (max-width:320px){
+    .auto_fillingup .sec_decoration{width:252px;height:282px;}
+}

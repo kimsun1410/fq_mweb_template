@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트구매_소유작품_01_AIBA11Z18</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- AIBA11Z18 -->
+	<!-- contents -->
+	<div id="contents" class="art_wrap add_sticky">
+		<!-- section -->
+		<section class="pt10">
+
+			<div class="main_view_detail no_line">
+				<article class="other_cont btm_line">
+					<div class="com_box_wrap mgt0">
+						<!-- 이미지 Swiper -->
+						<div class="swiper-container defalut">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+								<div class="swiper-slide"><img src="../../images/finnqmarket/temp_img_swipe.jpg" alt=""></div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+						<!-- //이미지 Swiper -->
+					</div>
+
+					<div class="com_box_wrap">
+						<div class="art_info_guide">
+							<!-- label 종류 : 4가지 (전시중/모집중/완료/예정)
+								Default / 전시중 : <span class="ico_info_label">전시중</span>
+								ing / 모집중 : <span class="ico_info_label ing">모집중</span>
+								end / 완료 : <span class="ico_info_label end">완료</span>
+								due / 예정 : <span class="ico_info_label due">예정</span>
+							 -->
+							<span class="ico_info_label">전시중</span>
+							<span class="ico_info_label ing">모집중</span>
+							<span class="ico_info_label end">완료</span>
+							<span class="ico_info_label due">예정</span>
+
+							<p class="author">마리킴 Mari Kim werdtews</p>
+							<p class="art_name">CinderellaCinderekka12</p>
+						</div>
+
+						<div class="mgt45">
+							<ul class="list_split add_thumb font16">
+								<li>
+									<span class="tit">모집 주수</span>
+									<span class="cont black"><em class="num">1500</em>주(<em class="num">15,000,000</em>원)</span>
+								</li>
+								<li>
+									<span class="tit">구매 주수</span>
+									<span class="cont purple"><em class="num">30</em>주(<em class="num">333,000</em>원)</span>
+									<p class="remark">구매금액의 11% 구매수수료 포함</p>
+								</li>
+								<li>
+									<span class="tit">쿠폰사용</span>
+									<span class="cont black">-<em class="num">50,000</em>원</span>
+								</li>
+								<li>
+									<span class="tit">최종 결제 금액</span>
+									<span class="cont black"><em class="num">150,000</em>원</span>
+								</li>
+								<li>
+									<span class="tit">지분율</span>
+									<span class="cont purple"><em class="num">0.02</em>%</span>
+								</li>
+							</ul>
+						</div>
+					</div><!-- //com_box_wrap -->
+				</article>
+
+				<!-- 19.05.31 나의 구매 후기 추가 -->
+				<div class="buying_write_wrap">
+					<p class="txt">나의 구매 후기</p>
+					<div class="buying_write_info">
+						“정말 좋아하는 작가라 고민없이 소장했어요.<br>
+						3년뒤에 대박도 나면 좋겠어요.”
+					</div>
+				</div>
+				<!-- //19.05.31 나의 구매 후기 추가 -->
+
+				<article class="other_cont mgt0 border_change"><!-- 19.05.31 클래스 수정 -->
+					<div class="com_box_wrap">
+						 <div class="credit_chart_wrap mgt40">
+							<div class="_chart1">
+								<div class="chart_head">
+									<strong class="chart_tit">가격변동지수</strong>
+									<em class="legend_credit">유사작품 변동 추이</em>
+								</div>
+								<!-- 차트 : 이미지로 변경 -->
+								<div class="chart_area">
+									<img src="../../images/finnqmarket/temp_art_chart.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div><!-- //com_box_wrap -->
+				</article>
+
+				<article>
+					<a href="#" class="more_detail_link">작품 상세정보</a>
+				</article>
+
+				<article>
+					<a href="#" class="more_detail_link">전시정보</a>
+				</article>
+
+				<article>
+					<a href="#" class="more_detail_link">구매후기</a>
+				</article>
+
+			</div><!-- //main_view_detail -->
+
+		</section>
+		<!-- //section -->
+
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">구매취소</button>
+		</div>
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//SVG그래프 Active
+	svgGraph();
+
+	// Swipe
+	var swipe = new Swiper ('.swiper-container.defalut', {
+		loop: true,
+		pagination: {
+			el: '.swiper-container.defalut .swiper-pagination',
+			clickable: true,
+		},
+	});
+
+	var swiperCount = new Swiper ('.swiper-container.count', {
+		loop: true,
+		pagination: {
+			el: '.swiper-container.count .swiper-pagination',
+			type: 'fraction',
+		},
+	});
+
+	swiperCount.on('slideChange', function () {
+		if (swiperCount.activeIndex != 1) {
+			$('.swiper_guide_wrap').hide();
+		}
+	});
+});
+</script>
+</body>
+</html>

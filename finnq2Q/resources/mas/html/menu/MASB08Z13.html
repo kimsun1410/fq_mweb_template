@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>은행계좌 연결</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASB08Z13 -->
+	<div id="contents" class="open-banking add_sticky">
+
+		<section>
+
+			<!--
+				팝업 사용 UI 방법
+				1) 호출 하려는 팝업의 이름을 data-modal-open, data-modal-content : 안에  동일하게 선언
+				2) 오픈 / 닫기 모두 매개변수는 $(this)
+				3) 해당 UI는 ui.js에 선언 / 단 팝업 안에 내용이 스크롤이 되어야 하는 팝업에선는
+				바닥 스크롤 막기 사용 금지 (컨텐츠도 스크롤 안됨.)
+			-->
+			<button type="button" data-modal-open="popup-open-cont">팝업 호출 버튼</button>
+
+			<!-- 클래스 : is-visible로 제어 -->
+			<div class="modal-toast is-visible" data-modal-content="popup-open-cont">
+				<div class="modal-toast-container">
+					<div class="conts_box">
+						<strong class="title">핀크계좌와 연결을 끊겠습니까?</strong>
+						<p>
+							선택 계좌는 월정액 자동충전, 해외송금 출금, 비상금대출약정, 잔액 부족시 자동충전 계좌입니다.
+						</p>
+					</div>
+					<div class="sticky_wrap set_type2">
+						<button type="button" name="" class="btn btn_cancel">아니오</button>
+						<button type="button" name="" class="btn btn_type_apply">네</button>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function () {
+	// 팝업 호출
+	$('[data-modal-open]').on('click', function(e) {
+		// 팝업 호출
+		modalPopupOpen( $(this) );
+	});
+
+	// 팝업 닫기
+	$(".modal-toast .btn").on('click', function(e) {
+		// 팝업 닫기 공통
+		modalPopupClose( $(this) );
+	});
+
+});
+</script>
+</body>
+</html>

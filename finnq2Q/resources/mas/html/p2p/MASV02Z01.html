@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+</head>
+<body>
+<div class="wrap" id="MASV02Z01">
+	<div id="contents" class="market p2p_wrap add_sticky">
+		<section class="sec_MASV02Z01">
+			<div class="sec_info1 in_sec">
+				<div class="sec_title">
+					<h2 class="xs">[헬로펀딩] 울산 우정동 근린생활시설 준공자금 1차</h2>
+				</div>
+				<div class="benefit_calWrap">
+					<div class="txt_cal">
+						<!-- 2018-05-18 수정 잔여, 완료 순서 적용 -->
+						<!-- 2018-05-30 수정 기획,디자인,마크업변경 -->
+						<span class="item item_comp">모집완료 <span class="item_value"><em class="num numHan numMan">10000</em>원</span></span>
+						<span class="item item_residual">모집잔여 <span class="item_value num bold"><em class="numHan numMan">149990000</em>원</span></span>
+					</div>
+					<div class="benefit_cal flexible"><!-- 2018-05-30 디자인표현변경 revert삭제 -->
+						<span class="active" data-value="10000000" data-total="150000000"></span>
+						<span class="bar"></span>
+					</div>
+				</div>
+				<div class="cal_wrap8">
+					<dl class="cal">
+						<dt class="tit">헬로펀딩 전체 한도</dt>
+						<dd class="money"><span class="num numComma">1000000</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">상품 투자 한도</dt>
+						<dd class="money"><span class="num numComma">1853271</span>원</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="line_divid"></div>
+
+			<div class="sec_info2 in_sec">
+				<div class="sec_info21">
+					<div class="input_wrap">
+						<div class="sec_title">
+							<h3>투자금액</h3><!-- 2018-05-28 class="unbold" 삭제 -->
+						</div>
+						<div class="flex_wrap set_type1">
+							<div class="item ico_won"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+								<!-- 2018-06-25 data-minVal="만" maxlength="5" -->
+								<!-- 2018-05-18 추가 백만단위까지 maxlength -->
+								<!-- 2018-05-15 수정 숫자타입으로 변경 -->
+								<input type="tel" data-name="inpFocus" data-minVal="만" maxlength="5" placeholder="0만원" value="" class="comma_wonhan ico_won"/><!-- placeholder="0만원" 추가 2018-07-18 -->
+								<!-- <em></em> 2018-06-25 만단위입력 변경으로 삭제 -->
+							</div>
+							<!-- 2018-05-03 수정 문구수정 및 정상/에러 구분방법 적용 -->
+							<!-- 2018-05-30 수정 가이드 문구수정 -->
+							<!-- Dev Request : inp_remark 요소 내에서 조건처리 요청드립니다. -->
+							<p class="inp_remark">
+								<!-- 정상문구 -->
+								최소 <span class="num">1</span>만원 / 최대 <span class="num">200</span>만원
+								<!-- Case - 4-7 : 최소 투자 금액 미만 입력 시
+								최소 투자는 <span class="num numComma">10000</span>원 부터 입니다.
+								 -->
+								<!-- Case - 4-8 : 상품 투자한도 초과 입력 시
+								상품 투자한도는 <span class="num numComma">1000000</span>원 까지 입니다.
+								-->
+								<!-- Case - 4-9 : 잔여모집액 초과 입력 시
+								잔여모집액은 <span class="num numComma">1000000</span>원 까지 입니다.
+								-->
+								<!-- Case - 4-10 : 최대 금액 초과 입력 시
+								투자 가능 금액 <span class="num">180</span>만원 / <span class="num">1</span>일 최대 <span class="num">200</span>만원
+								-->
+								<!-- Case - 4-11 : 핀크계좌 잔액 초과 입력 시
+								핀크계좌 잔액이 부족합니다. 계좌를 채우세요.
+								-->
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 19.04.24 : 핀크 계좌 채우기 수정 -->
+				<div class="sec_info22 line_dash finnq_fill">
+					<div class="cal_wrap5 mar_t0">
+						<dl class="cal">
+							<dt class="tit">핀크계좌 잔액</dt>
+							<dd class="money point bold txt_r">
+								<button type="button" class="btn btn_type_g">전체입력</button>
+								<p class="total"><span class="num numComma bold">2000000</span>원</p>
+							</dd>
+						</dl>
+					</div>
+
+					<!-- CASE 1 -->
+					<div class="fill_info_box">
+						<p class="info">핀크 계좌 잔액이 <span class="txt_red"><em class="num">100,000</em>원 부족</span>합니다.</p>
+						<button type="button" class="btn btn_type_h"><span>핀크 계좌 채우기</span></button>
+					</div>
+					<!-- //CASE 1 -->
+
+					<!-- CASE 2 -->
+					<div class="fill_info_box">
+						<p class="info">
+							주계좌에서 부족한 금액 <br>
+							<span class="txt_purple"><em class="num">200,000</em>원은 자동으로 충전</span>됩니다.
+						</p>
+					</div>
+					<!-- //CASE 2 -->
+
+				</div>
+				<!-- //19.04.24 : 핀크 계좌 채우기 수정 -->
+			</div>
+			<!-- //sec_info2 -->
+
+			<!-- 2018-05-18 교체 안내 가이드 변경 -->
+			<div class="sec_info3">
+				<div class="gray_box">
+					<h3>투자 주의사항 안내</h3>
+					<p>본 투자상품은 원리금 수취권을 매입하는 형태입니다. 연체 및 부도 발생 시 헬로펀딩이 1차 추심에 나서며, 조기상환, 연체, 부실 발생에 따른 대출채권의 상태가 변동될 경우 투자자 분들께 해당 내역에 대한 즉시 안내문이 발송될 것입니다.</p>
+				</div>
+			</div>
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script>
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

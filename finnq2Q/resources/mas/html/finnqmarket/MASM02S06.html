@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02T핀크적금_13적금상세내역_01개설_web_MASM02S03</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- MASM02S06 -->
+	<div id="contents">
+		<section class="fqsave_detail kdb_fund_wrap">
+
+			<div class="sec_head">
+				<div class="account_info">
+
+					<div class="bank_data underline">
+						<strong>KDB산업 </strong><em class="num">111-111-111111</em>
+					</div>
+					<div class="money_total">
+						<em class="cash bold">600,000</em><span>원</span>
+						<!-- <p class="benefit">예상금리 연 <em class="num">5.0%</em></p> -->
+					</div>
+				</div>
+			</div>
+
+			<!-- 그래프 -->
+			<div class="kdb_fund_graph">
+				<p class="count num bold">D-325</em></p>
+
+				<span class="graph_guide left">개설</span>
+
+				<div class="benefit_cal flexible easing">
+					<span class="active" data-value="40" data-total="365"></span>
+					<span class="bar"></span>
+				</div>
+
+				<span class="graph_guide right"><em class="num">20.08.20</em> 만기</span>
+			</div>
+
+			<div class="btn_wrap">
+				<!-- 비 활성화시 disabled 추가 -->
+				<button type="button" class="btn" disabled="disabled">추가납입</button>
+			</div>
+			<!--  //그래프 -->
+
+			<div class="sec_history new">
+				<dl>
+					<dt>
+						<strong><em class="num">5</em>회차</strong>
+						<div><em class="num bold">150,000</em><span>원</span></div>
+					</dt>
+					<dd>
+						<div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+						<div><em class="num">600,000</em><span>원</span></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<strong><em class="num">4</em>회차</strong>
+						<div><em class="num bold">150,000</em><span>원</span></div>
+					</dt>
+					<dd>
+						<div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+						<div><em class="num">600,000</em><span>원</span></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<strong><em class="num">3</em>회차</strong>
+						<div><em class="num bold">150,000</em><span>원</span></div>
+					</dt>
+					<dd>
+						<div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+						<div><em class="num">600,000</em><span>원</span></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<strong><em class="num">2</em>회차</strong>
+						<div><em class="num bold">150,000</em><span>원</span></div>
+					</dt>
+					<dd>
+						<div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+						<div><em class="num">600,000</em><span>원</span></div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<strong><em class="num">1</em>회차 적금 시작</strong>
+						<div><em class="num bold">150,000</em><span>원</span></div>
+					</dt>
+					<dd>
+						<div><strong class="date">2017.10.10</strong><strong class="date mar_l5">02:50</strong></div>
+						<div><em class="num">600,000</em><span>원</span></div>
+					</dd>
+				</dl>
+			</div><!-- //sec_history -->
+
+		</section>
+		<!-- 하단 붙임 -->
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('#payment_step').hide();
+	setTimeout(function(){
+		$('#payment_step').show();
+		drawProgress('#payment_step'); //2018-03-14 그래프 추가
+	}, 200)
+});
+</script>
+</body>
+</html>

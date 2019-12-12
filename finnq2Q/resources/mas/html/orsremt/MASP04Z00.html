@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08해외송금_04개인정보확인_web_</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="orsremt add_sticky">
+		<section class="orsremt_from orsremt_info1">
+
+			<div class="sec_title">
+				<h3 class="accent_txt"><strong>보내는 사람 정보</strong>를 확인해주세요.</h3><!-- 20180423 제목문구수정 -->
+			</div>
+
+			<div class="orsremt_input">
+				<div class="sec_input">
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>성명</strong>
+							</dt>
+							<dd class="item">
+								<input type="text" data-name="inpFocus" placeholder="김핀크" disabled="disabled">
+							</dd>
+						</dl>
+					</div>
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>영문명</strong>
+							</dt>
+							<dd class="item col_box">
+								<span>
+									<input type="text" data-name="inpFocus" placeholder="Finnq" disabled="disabled">
+								</span>
+								<span>
+									<input type="text" data-name="inpFocus" placeholder="Kim" disabled="disabled">
+								</span>
+							</dd>
+						</dl>
+						<!-- 20180424 비활성페이지 삭제
+						<div class="bul_guide">
+							<p class="star_type indent">여권과 동일한 영문명을 기입</p>
+						</div>
+						-->
+					</div>
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>국적</strong>
+							</dt>
+							<dd class="item soft_lang"><!-- 20180308 국기추가 -->
+								<p class="ico_lang gray_scal"><img src="../../images/orsremt/img-ko.png" alt="KO" class="flag_img size-min"></p><!-- 20180313 gray_scal 클래스추가 -->
+								<input type="number" data-name="inpFocus" placeholder="대한민국 (Repubilc of Korea)" disabled="disabled">
+							</dd>
+						</dl>
+					</div>
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>연락처</strong>
+							</dt>
+							<dd class="item">
+								<input type="number" data-name="inpFocus" placeholder="+82-10-2616-3303" class="num" disabled="disabled">
+							</dd>
+						</dl>
+					</div>
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>직업</strong>
+							</dt>
+							<dd class="item soft_select">
+								<select data-name="inpFocus"><!-- 20180308 클래스제거 -->
+									<option value="">선택해주세요</option>
+									<option value="">직장인</option>
+									<option value="">개인사업자</option>
+									<option value="">공무원</option>
+									<option value="">전문직</option>
+									<option value="">자유직/프리랜서</option>
+									<option value="">학생</option>
+									<option value="">군인</option>
+									<option value="">전업주부</option>
+									<option value="">무직</option>
+									<option value="">기타</option>
+								</select>
+							</dd>
+							<dd class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+								<input type="text" data-name="inpFocus" placeholder="기타 직업 직접 입력">
+								<p class="remark hide">직업을 선택해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+							</dd>
+						</dl>
+					</div>
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>한글 주소</strong>
+							</dt>
+							<dd class="item inp_error"><!-- 에러일때 inp_error 추가해주세요. -->
+								<textarea cols="30" rows="2" data-name="inpFocus" maxlength="800" class="inp_count">35 제주특별자치도 서귀포시 안덕면 중산간서로1615번길 251-24</textarea>
+							</dd>
+							<dd class="item inp_error"><!-- 에러일때 inp_error 추가해주세요. -->
+								<input type="text" data-name="inpFocus" value="파인에비뉴 B동 20층">
+								<p class="remark">한글 주소를 입력해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+							</dd>
+						</dl>
+					</div>
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>영문 주소</strong>
+							</dt>
+							<dd class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+								<textarea cols="30" rows="3" data-name="inpFocus" maxlength="800" class="inp_count">93 Dangjin Yeongdeok Expressway. Munui-myeon, Sangdang-gu, Cheongju-si, Chungcheongbuk-do</textarea>
+							</dd>
+							<dd class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+								<input type="text" data-name="inpFocus" value="#201, fineavenue">
+								<p class="remark hide">영문 주소를 입력해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+							</dd>
+						</dl>
+						<div class="sec_notice bul_guide">
+							<p class="star_type indent">영문명, 국적 변경은 My핀크 &gt; 해외송금 &gt; 관리 에서 수정 할 수 있습니다.</p><!-- 20180314 줄내림 -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">확인</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

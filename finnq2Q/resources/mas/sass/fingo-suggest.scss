@@ -1,0 +1,76 @@
+@charset 'UTF-8';
+/*
+* 2018-01-11 Park Heejung
+* Fingo - sugest
+*/
+.modal_wrap.pop_fingo_suggest {background:$white_four;} /*2018-04-18 추가 phj*/
+.modal_content.fingo_suggest {padding-bottom:0;}
+.sec_suggest_title {padding:29px 0 28px; text-align:center;}
+.sec_suggest.page {padding:0 20px;}
+.sec_suggest.page .sec_suggest_title {padding:0 0 28px;}
+.sec_suggest_title .sub {color:$warm_grey;}
+.sec_suggest_title .tit {font-size:24px; margin-top:4px;}
+.sec_suggest_title .tit strong {color:$purply_blue;}
+.sec_suggest_title .tit i {font-family:"AppleSDGothicNeo-Light"}
+
+.sec_suggest .tbl_suggest {display:table;width:100%;}
+.sec_suggest .tbl_suggest p {display:table-cell;}
+
+.sec_card_warn {@include font(14px); color:$warm_grey;}
+
+.sec_suggest_card { text-align:center; padding:0 0px 42px;}
+.sec_suggest_card .card_img {width:240px; height:150px; margin:0 auto;}
+.sec_suggest_card .card_img img {width:240px; height:150px; border:1px solid $white_two; border-radius:10px;}
+.sec_suggest_card .card_img.vertical {width:150px; height:240px;}
+.sec_suggest_card .card_img.vertical img {width:150px; height:240px;}
+
+.sec_suggest_card .card_info {margin-top:28px; font-size:15px; line-height:20px;}
+.sec_suggest_card .card_info em {color:$purply_blue;}
+.sec_suggest_card .dues {border-bottom:1px solid $white_two; font-size:16px; line-height:20px;margin:36px 0 10px;padding-bottom:5px;text-align:left;}
+.sec_suggest_card .dis_table{display:table;width:100%}
+.sec_suggest_card .dis_cell {font-size:14px; line-height:18px; text-align:left;}
+.sec_suggest_card .dis_cell span {display:block; color:$brownish_grey; margin-top:4px; letter-spacing:-1px;}
+
+
+.sec_card_benefit {background:$white_four; border-top:1px solid $white_two; padding:39px 0px 40px; overflow:hidden; margin:0 -20px;-webkit-tap-highlight-color:transparent;} /* 스크롤 수정때문에 */
+.sec_card_benefit .tit {font-size:16px;padding:0 20px;}
+.sec_card_benefit .list_cate {position:relative;}
+.sec_card_benefit .wrap_goods {padding:0 20px 40px;}
+.sec_card_benefit .scrollx_wrap {width:100%; overflow:hidden;}
+.sec_card_benefit .scrollx_wrap .tab-container {padding:11px 0 30px; height:100px; border-bottom:none;}
+.card_samex .sec_card_benefit .scrollx_wrap .tab-container { height:60px;} /* 삼성아멕스 */
+.sec_card_benefit .scrollx_wrap .tab-container > .grd_next {position: absolute;
+ right: -10px; top: 10px; width: 26px; height: 63px; background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), color-stop(80%, $white_four)); z-index: 1;}
+/*  .sec_card_benefit .tab-container:before { content:" ";display:block;position:absolute;left:0px;top:10px;width:26px;height:63px;background:-webkit-gradient(linear, left top, right top, color-stop(0, #f8f8f8), color-stop(80%, rgba(255, 255, 255, 0)));z-index:2;} */
+.sec_card_benefit .tab-container .swiper-slide:first-of-type { margin-left:20px;}
+.sec_card_benefit .tab-container .swiper-slide:last-of-type {margin-right:20px;}
+.sec_card_benefit .tab-container .swiper-slide {width:60px; height:60px; margin-right:10px;}
+.sec_card_benefit .tab-container .swiper-slide span {margin-top:0;}
+.sec_card_benefit .tab-container .swiper-slide.on {border-bottom:none;}
+.sec_card_benefit .tab-container .swiper-slide:after {padding:0;}
+.sec_card_benefit .list_goods li {color:$brownish_grey; font-size:16px; line-height:20px; margin-top:10px;font-family:"AppleSDGothicNeo-Light";}
+.sec_card_benefit .list_goods li:first-child {margin-top:0;}
+.sec_card_benefit .sec_card_warn {padding:0 20px;}
+
+.wrap_suggest {padding-bottom:44px;}
+.wrap_suggest .tbl_suggest.black p {color:$black;}
+.wrap_suggest .tbl_suggest.dues {border-bottom:1px dashed $white_three; padding-bottom:11px; margin-top:9px;}
+.wrap_suggest .tbl_suggest.dues strong {font-weight:bold;}
+.wrap_suggest .tbl_suggest strong {color:$purply_blue; }
+.wrap_suggest .tbl_suggest {margin-top:13px;}
+.wrap_suggest .tbl_suggest p {width:50%; text-align:right; color:$brownish_grey; @include font(16px);}
+.wrap_suggest .tbl_suggest p:first-child {text-align:left; font-family:"AppleSDGothicNeo-Light";}
+.wrap_suggest .tbl_suggest.ex_tit p {width:35%;}
+.wrap_suggest .tbl_suggest.ex_tit p:first-child {width:65%;}
+.wrap_suggest .remark {text-align:right; @include font(11px); color:$pinkish_grey; margin-top:13px;}
+.wrap_suggest .remark span.date{padding-left:3px}
+
+.sec_suggest_info {background:$white_four; margin:0 -20px; padding:42px 20px; border-top:1px solid $white_two;}
+.sec_suggest_info .tbl_type1 {margin-top:10px;}
+.sec_suggest_info .tbl_type1 th,
+.sec_suggest_info .tbl_type1 td {font-family:"AppleSDGothicNeo-Medium","LatoM"; text-align:left; color:$black; border-bottom:1px solid $pinkish_grey; padding-left:20px;}
+.sec_suggest_info .tbl_type1 th {color:$brownish_grey; background:$white_three;}
+.sec_suggest_info .tbl_type1 td .txt {display:block; margin-top:8px;}
+.sec_suggest_info .sec_card_warn {margin-top:28px;}
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>회원_01본인인증_02계좌인증_02계좌번호입력</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+
+<div class="wrap"><!-- MASF05Z04 -->
+	<div id="contents" class="myfinnq add_sticky">
+
+		<section>
+			<!-- sec_step -->
+			<div class="sec_step">
+				<ol>
+					<li class="on complete"><strong>1</strong><i class="step_dot"></i></li>
+					<li class="on complete"><strong>2</strong><i class="step_dot"></i></li>
+					<li class="on"><strong>3</strong><i class="step_dot"></i></li>
+					<li><strong>4</strong></li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>KEB 하나</h2> <!-- 선택한 은행명 -->
+			</div>
+
+			<!-- account-sel -->
+			<div class="account-sel">
+				<ul class="account-sel__list">
+					<li>
+						<input type="radio" id="selVal1" name="account_sel" />
+						<label for="selVal1"><em class="account-sel__list--num num">1231*******123</em></label>
+					</li>
+					<li>
+						<input type="radio" id="selVal2" name="account_sel" />
+						<label for="selVal2"><em class="account-sel__list--num num">1231*******123</em></label>
+					</li>
+					<li>
+						<input type="radio" id="selVal3" name="account_sel" />
+						<label for="selVal3"><em class="account-sel__list--num num">1231*******123</em></label>
+					</li>
+					<li class="account-sel--custom">
+
+						<input type="radio" id="selVal4" name="account_sel"/>
+						<label for="selVal4">
+							<span class="account-sel__custom--input-wrap">
+								<input type="tel" placeholder="계좌번호 ‘-‘ 없이 입력" class="account-sel__custom--input">
+							</span>
+						</label>
+					</li>
+				</ul>
+			</div>
+			<!-- //account-sel -->
+			<!-- //계좌 선택 -->
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">다음</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>06비상금대출_04관리_web_MASN01Z22</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="market add_hana_logo">
+		<section class="emergency_admin">
+
+			<div class="sec_title">
+				<!--p class="update">
+					업데이트 오늘<em class="num">13:20</em>
+					<a href="#none"><i class="ico ico_reload loading"><span class="blind">Refresh</span></i></a>
+				</p--><!-- 2018-02-12 회전시 ico에 loading 클래스 추가 --><!-- 2018-02-26 삭제 -->
+				<h3 class="accent_txt"><strong>하나핀크 비상금대출 (마이너스 통장)</strong></h3>
+				<p class="guide_txt">KEB하나은행 제휴상품</p>
+			</div>
+
+			<div class="sec_insinfo">
+				<div class="ins_info add_dotline mgb45"><!-- 19.04.15 mgb45 클래스 추가 -->
+					<ul>
+						<li>
+							<div class="tit">계좌번호</div>
+							<div class="money_total">
+								<em class="num">KEB</em>하나 <em class="date">562-851235-64710</em>
+							</div>
+						</li>
+						<li>
+							<div class="tit">대출기간</div>
+							<div class="money_total">
+								<em class="num">2018.03.01 ~ 2018.11.30</em>
+							</div>
+						</li>
+						<li>
+							<div class="tit">이자율</div>
+							<div class="money_total">
+								연 <em class="num">5.85%</em> <!-- (<em class="num">2018.05.30</em> 기준)
+								<span class="sub">금융채 6개월물 + 1.52%</span> --> <!-- 2018-02-27 문구 삭제 phj -->
+							</div>
+						</li>
+						<li>
+							<div class="tit">한도</div>
+							<div class="money_total">
+								<em class="num">500,000</em>원
+							</div>
+						</li>
+						<li>
+							<div class="tit">연체여부</div>
+							<div class="money_total">
+								정상
+							</div>
+						</li>
+					<!--
+						19.04.15 삭제
+						<li>
+							<div class="tit">사용중인 대출금</div>
+							<div class="money_total">
+								<strong><em class="num">200,000</em>원</strong>
+							</div>
+						</li>
+						<li>
+							<div class="tit">잔여한도</div>
+							<div class="money_total">
+								<strong><em class="num">300,000</em>원</strong>
+							</div>
+						</li> -->
+					</ul>
+				</div><!-- //ins_info -->
+
+				<!-- 19.04.15 삭제
+				<div class="btn_interest">
+					<button type="button" name="button" class="btn btn_type_e">대출이자 조회</button>
+					<p>사용한 대출 이자는 <strong><em class="num bold">15,500</em>원</strong>입니다.</p>
+				</div>
+				-->
+
+			</div><!-- //sec_insinfo -->
+
+			<div class="secede_inquiry">
+				<ul>
+					<li>
+						<a href="#none" target="_blank" class="web">약정서 보기<i class="ico ico_arrow_more"></i></a>
+					</li>
+					<li>
+						<a href="#none" target="_blank" class="web">대출약정 해지<i class="ico ico_arrow_more"></i></a>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<div class="hana_logo mar_b34"><em class="num">Provided by KEB</em>하나은행</div><!-- iosX 에서만 마진 버툼 34 class 추가 2018-02-27 -->
+
+		</section>
+		<!-- 하단 붙임 -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	//2018-02-14 이자조회 추가
+	$(".btn_interest button").on("click", function(){
+		$(this).next('p').fadeIn();
+	});
+});
+</script>
+</body>
+</html>

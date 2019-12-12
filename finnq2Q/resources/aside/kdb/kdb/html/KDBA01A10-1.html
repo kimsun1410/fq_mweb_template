@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>하이파이브적금_02예금_08주소검색</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kdb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="cashback_profile address">
+
+		<section>
+			<div class="sec_ows_head finnq">
+				<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+				<h2 class="ows_title">주소검색</h2>
+				<button class="btn_cancel close" onclick="">취소</button>
+			</div>
+
+			<div class="sec_input com_box_wrap pdb30">
+
+				<!-- 19.10.07 탭 추가 및 탭 컨텐츠 그루핑 -->
+				<ul class="tab_purple up_two">
+					<li class="on"><a href="#">도로명</a></li>
+					<li><a href="#">지번</a></li>
+				</ul>
+
+				<div class="tab_cont_addr">
+					<article class="on">
+						<div class="input_wrap mgt0">
+							<dl>
+								<dt class="input_tit">
+									<strong>시/도</strong>
+								</dt>
+								<dd class="item soft_select sel_first">
+									<select data-name="inpFocus" placeholder="선택해 주세요">
+										<option value="0">선택해주세요</option>
+										<option value="">서울</option>
+										<option value="">경기도</option>
+									</select>
+									<p class="remark hide">시/도를 선택해 주세요.</p>
+								</dd>
+							</dl>
+						</div>
+
+						<!-- 에러가 날 경우 -->
+						<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+						<!--
+						<div class="input_wrap mgt0">
+							<dl>
+								<dt class="input_tit">
+									<strong>시/도</strong>
+								</dt>
+								<dd class="item soft_select sel_first inp_error">
+									<select data-name="inpFocus">
+										<option value="0">선택해주세요</option>
+										<option value="">서울</option>
+										<option value="">경기도</option>
+									</select>
+									<p class="remark hide">시/도를 선택해 주세요.</p>
+								</dd>
+							</dl>
+						</div>
+						-->
+						<!-- //에러가 날 경우 -->
+
+						<div class="input_wrap">
+							<dl>
+								<dt class="input_tit">
+									<strong>도로명</strong>
+								</dt>
+								<dd class="item text detail">
+									<input type="text" data-name="inpFocus" placeholder="예) 당산로, 당산로1" data-placeholder="예) 당산로, 당산로1">
+									<button type="button" class="btn_reset">Reset</button>
+									<p class="remark hide">도로명을 입력해 주세요.</p>
+								</dd>
+							</dl>
+						</div>
+
+						<!-- 에러가 날 경우 -->
+						<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+						<!-- <div class="input_wrap">
+							<dl>
+								<dt class="input_tit">
+									<strong>도로명</strong>
+								</dt>
+								<dd class="item text inp_error">
+									<input type="text" data-name="inpFocus" placeholder="예) 당산로, 당산로1" data-placeholder="예) 당산로, 당산로1">
+									<button type="button" class="btn_reset">Reset</button>
+									<p class="remark hide">도로명을 입력해 주세요.</p>
+								</dd>
+							</dl>
+						</div> -->
+						<!-- //에러가 날 경우 -->
+					</article>
+
+					<article>
+						<div class="input_wrap">
+							<dl>
+								<dt class="input_tit">
+									<strong>동/읍/면</strong>
+								</dt>
+								<dd class="item text detail">
+									<input type="text" data-name="inpFocus" placeholder="예) 압구정동, 백구면, 주문진읍" data-placeholder="예) 압구정동, 백구면, 주문진읍">
+									<button type="button" class="btn_reset">Reset</button>
+									<p class="remark hide">동/읍/면을 입력해 주세요.</p>
+								</dd>
+							</dl>
+						</div>
+
+						<!-- 에러가 날 경우 -->
+						<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+						<!-- <div class="input_wrap">
+							<dl>
+								<dt class="input_tit">
+									<strong>도로명</strong>
+								</dt>
+								<dd class="item text inp_error">
+									<input type="text" data-name="inpFocus" placeholder="예) 당산로, 당산로1" data-placeholder="예) 당산로, 당산로1">
+									<button type="button" class="btn_reset">Reset</button>
+									<p class="remark hide">도로명을 입력해 주세요.</p>
+								</dd>
+							</dl>
+						</div> -->
+						<!-- //에러가 날 경우 -->
+					</article>
+				</div>
+				<!-- //19.10.07 탭 추가 및 탭 컨텐츠 그루핑 -->
+
+			</div>
+			<!-- //sec_input com_box_wrap -->
+
+			<!-- 검색 필드 항목 모두 입력 완료 시 disabled 속성 삭제 -->
+			<div class="btn_wrap">
+				<button type="button" name="" class="btn btn_type_apply" disabled="disabled">검색</button>
+			</div>
+
+			<p class="star_info">주소가 검색 되지 않을 경우 도로명주소(www.juso.go.kr)에서 정확한 주소를 확인해주세요.</p>
+
+		</section><!-- // -->
+	</div>
+	<!-- #contents -->
+</div>
+<script type="text/javascript">
+	// 셀렉트 박스 선택시 비활성 초기화
+	$('.sel_first select').on('change', function(){
+		$('.sel_second').removeClass('disabled');
+		$('.sel_second select').removeAttr('disabled');
+	});
+
+	/* 19.10.07 탭 스크립트 수정 및 추가  */
+
+	// 인풋 필드 입력시 초기화 버튼 활성화
+	// 19.10.07 탭 스크립트 수정
+	$('.address .detail input').on('keyup change', function(e){
+		var inpVal = $(this).val().length;
+		if (inpVal > 0) {
+			 $(this).parent('.detail').addClass('on');
+		} else {
+			$(this).parent('.detail').removeClass('on');
+		}
+	});
+
+	// 인풋 필드 초기화
+	$('.address .detail .btn_reset').on('click', function(){
+		$(this).parent('.detail').removeClass('on');
+		$(this).parent().find('input').val('').attr({'placeholder' : "입력해 주세요"}).focus();
+	});
+
+	// 19.10.07 탭 스크립트 추가
+	$('.tab_purple > li > a').on('click', function(event){
+		event.preventDefault();
+
+		var status = $(this).parent().hasClass('disabled');
+		if (status) { return; }
+
+		var idx = $(this).parent().index();
+		$(this).parent().addClass('on').siblings().removeClass('on');
+
+		$('.tab_cont_addr article').eq(idx).addClass('on').siblings().removeClass('on');
+
+		// 19.10.22 추가
+		$('.search_wrap > article').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+
+
+	// 주소 검색 1단계 스탭 이벤트 숨김 / 2단계 스탭 활성화
+	$('.address .search_step1 .search_list button').on('click', function(event){
+		$(this).parents('.search_step1').addClass('hide');
+		$('.search_step2').removeClass('hide');
+	});
+
+	/* //19.10.07 탭 스크립트 수정 및 추가  */
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* header */
+.collabo_wrap .header{position:relative;overflow:hidden;height:54px;padding-top:10px;background:#fff;box-sizing:border-box}
+
+.collabo_wrap .header .btn{display:inline-block;width:34px;height:34px}
+.collabo_wrap .header .btn_back{position:absolute;top:10px;left:10px;background:url('../../image/v2/collabo/common/ico_btn_back.png') 10px 0  no-repeat;background-size:contain}
+.collabo_wrap .header .btn_close{position:absolute;top:10px;right:10px;background:url('../../image/v2/collabo/common/ico_btn_close.png') -10px 0 no-repeat;background-size:contain}
+.collabo_wrap .header .finnq_logo{position:absolute;width:58px;height:30px;left:50%;margin-left:-29px;top:12px;background:url('../../image/v2/collabo/common/img_finnq_logo.png') 0 0  no-repeat;background-size:contain}
+.collabo_wrap .header .finnq_title{display:table;margin:0 auto}
+.collabo_wrap .header .finnq_title > span{display:table-cell;height:44px;vertical-align:middle;font-size:18px}
+.collabo_wrap .fullpop_header{position:relative;overflow:hidden;height:54px;padding-top:10px;background:#fff;box-sizing:border-box}
+.collabo_wrap .fullpop_header .btn{display:inline-block;width:34px;height:34px}
+.collabo_wrap .fullpop_header .btn_back{position:absolute;left:10px;background:url('../../image/v2/collabo/common/ico_btn_back.png') 10px 0  no-repeat;background-size:contain}
+.collabo_wrap .fullpop_header .btn_close{position:absolute;right:10px;background:url('../../image/v2/collabo/common/ico_btn_close.png') -10px 0 no-repeat;background-size:contain}
+.collabo_wrap .fullpop_header .finnq_logo{position:absolute;width:58px;height:30px;left:50%;margin-left:-29px;top:12px;background:url('../../image/v2/collabo/common/img_finnq_logo.png') 0 0  no-repeat;background-size:contain}
+
+.collabo_wrap .header.fixed{position:fixed;top:0;left:0;right:0;z-index:999}
+.collabo_wrap .header.fixed + .sec_title{padding-top:74px}
+.collabo_wrap .fullpop_header.fixed{position:fixed;left:0;right:0;}
+
+/* sec_title */
+.collabo_wrap .sec_title{padding:30px 20px 0 20px;text-align:center;background:#fff}
+.collabo_wrap .sec_title > h2{font-size:24px;line-height:28px;color:#222}
+.collabo_wrap .sec_title > h3{font-size:20px;line-height:24px;color:#222}
+.collabo_wrap .sec_title .accent_txt{font-weight:bold;}
+.collabo_wrap .sec_title .accent_txt > strong{font-weight:inherit}
+/* 약관 */
+.sec_terms{padding-top:28px;background:#fff}
+.agree_terms dl {border-bottom:1px solid #e0e0e0}
+.agree_terms dl dt{position:relative;padding: 15px 20px;background:#fff;}
+.agree_terms dl dd{display:block;border-top:1px solid #e0e0e0}
+.agree_terms dl dd > div{position:relative;padding:14px 20px;background:#f8f8f8;}
+.agree_terms dl dd > div input[type="checkbox"] + label span{font-size:16px;line-height:20px;color:#666;}
+.sec_agree .agree_wrap{position:relative;margin-top:4px;padding:17px 20px;background:#fff;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;}
+.agree_wrap .ico_arrow_more{position:absolute;top:50%;margin-top:-7px;right:20px;background:url('../../image/v2/collabo/common/ico_arrow_list.png') no-repeat; width:30px; height:30px; background-size:30px auto; margin-top:-15px;}
+.agree_wrap input[type="checkbox"] + label > span{padding-top:4px;font-size:16px;line-height:20px}
+.agree_wrap.terms_tit input[type="checkbox"] + label span{color:#222}
+/* sticky_wrap */
+.sticky_wrap { position:fixed;bottom:0;width:100%;height:auto;z-index:50;transform: translateZ(0);-moz-transform: translatez(0);-ms-transform: translatez(0);-o-transform: translatez(0);-webkit-transform: translateZ(0);-webkit-font-smoothing: antialiased;}
+.sticky_wrap	button {border-radius:0;font-size:18px;font-weight: bold;}
+/* 최하단 fixed 버튼 1개 스타일(100%) */
+.sticky_wrap.set_type1 button {width:100%;height:100%;min-height:60px;background:#731aed;color:#fff;}
+/* 최하단 fixed 버튼 2개 스타일(50%) */
+.sticky_wrap.set_type2 button {float:left;width:50%;height:100%;min-height:60px;background:#731aed;color:#fff;}
+.sticky_wrap.set_type2 button:last-child { float:right;}
+.sticky_wrap.set_type2 button.btn_cancel { background-color:#999;}
+.sticky_wrap.set_type2 button.btn_function { background-color:#5008b2;}
+.sticky_wrap.set_type2 button:disabled,
+.sticky_wrap.set_type1 button:disabled { background:#c8c8c8;color:#e0e0e0;}
+/* 비밀번호입력 */
+.sec_new_password {position:relative; margin-top:40px; padding:0 20px; }
+.sec_new_password .password_remark {position:absolute; margin-top:13px; left:0; right:0;width:100%;text-align:center;color:#f74b20;font-size:11px;}
+.wrap_password{position:relative;margin:0 auto}
+.wrap_password .bg_password{overflow:hidden}
+.wrap_password .bg_password i{position:relative;float:left;}
+.wrap_password .bg_password i{display:inline-block; box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.4), 1px 1px 1px 0px rgba(255,255,255,1); border-radius:4px; box-sizing: border-box;}
+.wrap_password .bg_password i img{position:absolute;top:50%;left:50%;margin:-5px 0 0 -5px;width:10px;height:10px;}
+.wrap_password.six_area {width:100%; max-width:374px;}
+.wrap_password.six_area i{position:relative;float:left;margin-left:calc((100% - 300px)/5);width:50px;height:50px;}
+.wrap_password.six_area i:first-child {margin-left:0}
+@media screen and (max-width:320px){
+	.wrap_password.six_area i{width:43px; height:43px;margin-left:calc((100% - 258px) / 5);}
+}
+/* 컬러 값 */
+.wrap_password i{background:#fff}
+.wrap_password .bg_gray i{background:#eee}
+.wrap_password .bg_password i.on{background:#731aed;}
+.wrap_password .bg_error i,
+.wrap_password .bg_error i.on{background:#f74b20}

@@ -1,0 +1,438 @@
+<!-- //************************************************
+    decrition by : kim tae yang
+    update : 2019-11-01
+    원스탑 혁신금융대출
+************************************************// -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>17_혁신금융대출_05소득정보_01_MASC03Q01</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+</head>
+<body>
+
+<div class="wrap">
+	<div id="contents" class="one_stop show add_sticky white">
+		<section>
+			<div class="sec_title">
+				<h2>소득정보 확인</h2>
+			</div>
+			<div class="sec_member_input mgt38">
+                <dl class="input_wrap">
+                    <dt class="input_tit">
+                        <strong>연소득</strong>
+                    </dt>
+                    <dd class="flex_wrap set_type1">
+                        <!-- 만원 input 스타일  class="comma_money" , 추가 -->
+                        <span class="item" style="position:relative;">
+                            <input type="text" pattern="[0-9]*" inputmode="numeric" data-name="inpFocus" placeholder="입력해주세요" value="" class="comma_money" maxlength="7">
+                            <em class="">만원</em>
+                        </span>
+                    </dd>
+                </dl>
+                <dl class="input_wrap">
+                    <dt class="input_tit">
+                        <strong>소득구분</strong>
+                    </dt>
+                    <dd class="flex_wrap set_type1">
+                        <!-- data-popup = "1" 추가 팝업 불러오기 data-popup-con = "1" 셀렉트 스타일  -->
+                        <a href="#none" class="btn_select btn_type_a popup-trigger" data-popup="job1">선택해주세요</a>
+                    </dd>
+                </dl>
+                <!-- 숨길시 class="hide_box" 추가-->
+                <div class="hide_box">
+                    <dl class="input_wrap">
+                        <dt class="input_tit">
+                            <strong>입사일자</strong>
+                        </dt>
+                        <dd class="flex_wrap">
+                            <!-- type=date 달력 스타일 -->
+                            <input type="date" data-name="inpFocus" min="2019-11-01" max="2019-11-11" step="7" id="fancyDate" required placeholder="선택해주세요" data-placeholder="선택해주세요" onchange="this.className=(this.value!=''?'has-value':'')">
+                        </dd>
+                    </dl>
+                    <dl class="input_wrap">
+                        <dt class="input_tit">
+                            <strong>고용형태</strong>
+                        </dt>
+                        <dd class="flex_wrap">
+                            <!-- data-popup = "1" 추가 팝업 불러오기 data-popup-con = "1" 셀렉트 스타일  -->
+                            <a href="#none" class="btn_select btn_type_a popup-trigger" data-popup="job2">선택해주세요</a>
+                        </dd>
+                    </dl>
+                    <dl class="input_wrap type">
+                        <dt class="input_tit">
+                            <strong>직장</strong>
+                        </dt>
+                        <dd class="flex_wrap item">
+                            <!-- class="btn_type_b" 전체팝업 스타일, data-popup = "1" 추가 팝업 불러오기 data-popup-con = "1" 셀렉트 스타일  -->
+                            <a href="#none" class="btn_select btn_type_b popup-trigger" data-popup="jobsearch">직장명을 검색해주세요</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        
+		<div class="sticky_wrap set_type1">
+            <!-- 비홝성 disabled="disabled" 추가-->
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">확인</button>
+        </div>
+        
+        <!-- 전체창 하단 선택 class="select 추가" -->
+        <div class="bt-popup select" data-popup-con="job1"  role="alert">
+            <div class="bt-popup-container">
+                <a href="#none" class="bt-popup-close">창닫기</a>
+                <div class="conts_box">
+                    <strong class="title">소득구분</strong>
+                    <ul class="list_set">
+                        <li><a href="#none">근로소득자(4대보험 가입)</a></li>
+                        <li><a href="#none">근로소득자(4대보험 미가입)</a></li>
+                        <li><a href="#none">개인사업자(자영업자)</a></li>
+                        <li><a href="#none">프리랜서</a></li>
+                        <li><a href="#none">기타</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 전체창 하단 선택 class="select 추가" -->
+        <div class="bt-popup select" data-popup-con="job2" role="alert">
+            <div class="bt-popup-container">
+                <a href="#none" class="bt-popup-close">창닫기</a>
+                <div class="conts_box">
+                    <strong class="title">고용형태</strong>
+                    <ul class="list_set">
+                        <li><a href="#none">정규직</a></li>
+                        <li><a href="#none">계약직</a></li>
+                        <li><a href="#none">파견직</a></li>
+                        <li><a href="#none">기타</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 전체창 팝업 class="fullopen 추가" -->
+        <div class="bt-popup fullopen" data-popup-con="jobsearch" role="alert">
+            <div class="bt-popup-container">
+                <a href="#none" class="bt-popup-close">창닫기</a>
+                <div class="conts_box">
+                    <div class="sec_member_input item">
+                        <div class="search_wrap">
+                            <form>
+                                <input type="text" style="display:none;" /><!-- 의미 없는 텍스트 박스-->
+                                <input type="search" placeholder="직장명을 입력해주세요" data-placeholder="직장명을 입력해주세요" required class="search" maxlength="30">
+                                <button class="ic_close" type="reset"></button>
+                            </form>
+                        </div>
+                        <!--<div class="search_hide">
+                            <div class="search_box">
+                                <div class="keyboard">
+                                    <span>검색 결과에 없을 경우 직접 입력해주세요</span>
+                                    <button class="btn_submit">직접입력</button>
+                                </div>
+                                <input type="text" pattern="[0-9]*" inputmode="numeric" data-name="inpFocus" placeholder="사업자번호를 입력해주세요" data-placeholder="사업자번호를 입력해주세요" class="license" maxlength="12">
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <!--
+                <div class="conts_search">
+                    <div class="search_view">
+                        <p class="title"><strong>'핀크'</strong> 검색 결과</p>
+                        <ul class="list">
+                            <li>
+                                <div class="list_item no_search">
+                                    <p>검색 결과가 없습니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="list_item">
+                                        <dl>
+                                            <dt>(주)핀크</dt>
+                                            <dd>
+                                                <span>사업자번호</span>
+                                                <p class="num">299-81-00502</p>
+                                            </dd>
+                                            <dd>
+                                                <span>주소</span>
+                                                <p>서울 중구 을지로 100, 20층 (을지로2가, 파인에비뉴 B동 20층)</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="list_item">
+                                        <dl>
+                                            <dt>에스케이핀크스(주)</dt>
+                                            <dd>
+                                                <span>사업자번호</span>
+                                                <p class="num">299-81-00502</p>
+                                            </dd>
+                                            <dd>
+                                                <span>주소</span>
+                                                <p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="list_item">
+                                        <dl>
+                                            <dt>(주)핀크래프트엔지니어링</dt>
+                                            <dd>
+                                                <span>사업자번호</span>
+                                                <p class="num">299-81-00502</p>
+                                            </dd>
+                                            <dd>
+                                                <span>주소</span>
+                                                <p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="list_item">
+                                        <dl>
+                                            <dt>(주)핀크</dt>
+                                            <dd>
+                                                <span>사업자번호</span>
+                                                <p class="num">299-81-00502</p>
+                                            </dd>
+                                            <dd>
+                                                <span>주소</span>
+                                                <p>서울 중구 을지로 100, 20층 (을지로2가, 파인에비뉴 B동 20층)</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="list_item">
+                                        <dl>
+                                            <dt>에스케이핀크스(주)</dt>
+                                            <dd>
+                                                <span>사업자번호</span>
+                                                <p class="num">299-81-00502</p>
+                                            </dd>
+                                            <dd>
+                                                <span>주소</span>
+                                                <p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="list_item">
+                                        <dl>
+                                            <dt>(주)핀크래프트엔지니어링</dt>
+                                            <dd>
+                                                <span>사업자번호</span>
+                                                <p class="num">299-81-00502</p>
+                                            </dd>
+                                            <dd>
+                                                <span>주소</span>
+                                                <p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sticky_wrap set_type1">
+                    <button type="button" name="" class="btn btn_type_apply">확인</button>
+                </div>-->
+            </div>
+        </div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){  
+        $('input.search').on('click',function(e) { 
+        }).keyup(function (e) {
+            if(e.keyCode == '13'){
+                e.preventDefault();
+               $('.search').blur();
+               $('html, body').css('overflow','hidden');
+               $(this).parents('.item').find('.search_hide').addClass('on');
+               var box = $(".fullopen .conts_box");
+               var boxhei = box.outerHeight(true);
+               $(".conts_search, .conts_line").show();
+               $(".conts_search").css('top', boxhei +'px');
+            }
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }).focus(function(){
+            $(this).addClass("inp_focus");
+        }).blur (function(){
+            $(this).removeClass("inp_focus");
+        });
+        $('.license').keydown(function (event) {
+             var key = event.charCode || event.keyCode || 0;
+             $text = $(this); 
+             if (key !== 8 && key !== 9) {
+                 if ($text.val().length === 3) {
+                     $text.val($text.val() + '-');
+                 }
+                 if ($text.val().length === 6) {
+                     $text.val($text.val() + '-');
+                 }
+             }
+             return (key == 8 || key == 9 || key == 46 || (key >= 48 && key <= 57) || (key >= 96 && key <= 105));
+        }).focus(function(){
+            $(".fullopen .sticky_wrap").show();
+            $(".fullopen .list").addClass('up');
+        });
+        $(".btn_submit").on("click",function(){
+            $('.search_box').addClass("active");
+            $('.license').focus();
+        });
+        $(".fullopen .search_wrap, .fullopen .search_hide").each(function() {
+            var $inp = $(this).find("input"),
+                $cle = $(this).find(".ic_close");
+            $inp.on("input", function(){
+                $cle.toggle(!!this.value);
+            });
+            $cle.on("touchstart click", function(e) {
+                e.preventDefault();
+                $inp.val("").trigger("input");
+                $inp.value = "";
+			    $inp.attr('placeholder', $inp.attr('data-placeholder'));
+            });
+        });
+
+        function popup() {
+            var openBtn = '[data-popup]',
+                closeBtn = '.bt-popup-close';
+
+            function getTarget(t) {
+                return $(t).attr('data-popup')
+            }
+            function open(t) {
+                var showTarget = $('[data-popup-con="' + t + '"]');
+                showTarget.addClass('is-visible').focus();
+                showTarget.find('.bt-popup-close').data('is-visible', t);
+            }
+            function close(t) {
+                var activeTarget = $('[data-popup-con="' + t + '"]');
+                $('[data-popup="' + t + '"]').focus();
+                activeTarget.removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                $('.popup-trigger').removeClass('on');
+            }
+            $(document).on('click', openBtn, function(e) {
+                e.preventDefault();
+                open(getTarget(e.target));
+                $(this).addClass('on');
+                $('.bt-popup').on('scroll touchmove mousewheel', function(e){
+                    if($(this).hasClass('select')){
+                        e.preventDefault();
+                        e.stopPropagation();
+                        return false;
+                    }else{
+                        $('html, body').css('overflow','hidden');
+                    }
+                });
+                var inputHeight=$(this).offset().top;
+                $("html, body").animate({ scrollTop: inputHeight}, 600);
+                return false;  
+            }).on('click', closeBtn, function(e) {
+                e.preventDefault();
+                close($(this).data('is-visible'));
+                $(this).removeClass('on');
+                $('.search_hide').removeClass("on");
+                $('.search_box').removeClass("active");
+                $('input').removeClass(".inp_focus").val('');
+                $('.bt-popup').off('scroll touchmove mousewheel');
+                $('html, body').css('overflow','unset');
+                $('.license + .ic_close').hide();
+            })
+            $(".bt-popup .bt-popup-close").on('click', function(e) {
+                $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                $('.popup-trigger, .btn_type_a.popup-trigger').removeClass('on');
+                $('.bt-popup.select').off('scroll touchmove mousewheel');
+                $(".fullopen .sticky_wrap, .conts_search, .conts_line").hide();
+                $(".fullopen .list").removeClass('up');
+                $('html, body').css('overflow','unset');
+                $('.license + .ic_close').hide();
+            });
+            $(".bt-popup.select .list_set > li > a").on('click', function(e) {
+                $('.hide_box').show();
+                $('.btn_type_a.popup-trigger.on').text($(this).text()).css('color','#222');
+                $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                $('.popup-trigger, .btn_type_a.popup-trigger').removeClass('on');
+                $('html, body').css('overflow','unset');
+            });
+            $(".bt-popup.agree .btn").on('click', function(e) {
+                $('.hide_box').show();
+                $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                $('.bt-popup').off('scroll touchmove mousewheel');
+                $('html, body').css('overflow','unset');
+            }); 
+        }
+        popup();
+
+        $("input.comma_money").on("keypress propertychange change keyup paste input", function(event) {
+            if (event.which && (event.which < 48 || event.which > 57)) {   //숫자만 받기
+                event.preventDefault();
+            }
+            $(this).keyup(function () {
+                if ($(this).val() != null && $(this).val() != '') {
+                    var text = $(this).val().replace(/[^0-9]/g, '');
+                    $(this).val(comma(text));
+                }
+            }).focus(function(){
+                $(this).parents().find('em').removeClass('on');
+            });
+            var currentVal = $(this).val();
+            if(currentVal == oldVal) {
+                return;   
+            }
+            var oldVal = currentVal;
+            $(this).blur (function(){
+                $(this).parents().find('em').addClass('on');
+            });
+            if(currentVal =! oldVal){
+                $(this).blur (function(){
+                    $(this).parents().find('em').removeClass('on');
+                });
+            }
+        });
+
+        //콤마찍기
+        function comma(x) {
+            var temp = "";
+            num_len = x.length;
+            co = 3;
+            while (num_len > 0) {
+                num_len = num_len - co;
+                if (num_len < 0) {
+                    co = num_len + co;
+                    num_len = 0;
+                }
+                temp = "," + x.substr(num_len, co) + temp;
+            }
+            return temp.substr(1);
+        }
+    });
+
+    
+</script>
+</body>
+</html>

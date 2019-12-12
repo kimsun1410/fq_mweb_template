@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<title>투자_진행중탭</title>
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<!-- # chart # -->
+	<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+	<!-- rMateChartH5 라이센스 -->
+	<script src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+	<!-- rMateChartH5 라이브러리(수정불가) -->
+	<script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+	<script type="text/javascript">
+	<!--
+		// -----------------------차트 설정 시작-----------------------
+		// 02
+		var chartVars2 = "rMateOnLoadCallFunction=chartReadyHandler2";
+		//rMateChartH5.create("chart2", "chartHolder2", chartVars2, "100%", "100%"); 탭이 있는 경우 jquery로 실행
+		function chartReadyHandler2(id) {
+			document.getElementById(id).setLayout(layoutStr2);
+			document.getElementById(id).setData(chartData2);
+		}
+		var layoutStr2 =
+			'<rMateChart backgroundColor="#f8f8f8"  borderStyle="none">'
+			 +'<Pie2DChart id="chart2" innerRadius="0.91" showDataTips="false" selectionMode="single">'
+				  +'<series>'
+					   +'<Pie2DSeries nameField="Name" field="Value" startAngle="270" renderDirection="clockwise" color="#ffffff">'
+							+'<fills>'
+								+'<SolidColor color="#731aed"/>'
+								+'<SolidColor color="#f74b20"/>'
+								+'<SolidColor color="#e0e0e0"/>'
+							+'</fills>'
+							+'<showDataEffect>'
+								+'<SeriesZoom duration="1000"/>'
+							+'</showDataEffect>'
+					  +'</Pie2DSeries>'
+				 +'</series>'
+			  +'</Pie2DChart>'
+		  +'</rMateChart>';
+
+		// 차트 데이터
+		var chartData2 = [{"Name":"상환", "Value":6300000},{"Name":"부도", "Value":700000},{"Name":"예정", "Value":0}];
+	-->
+	</script>
+</head>
+<body>
+<div class="wrap bg_list" id="MASV07Z03">
+	<div id="contents" class="market p2p_wrap">
+		<!-- 페이지명 -->
+		<section class="sec_MASV07Z03">
+			<div class="tab_wrap set_type2 in_sec">
+				<span class="tab on"><a href="#none">진행중(1)</a></span>
+				<span class="tab"><a href="#none">완료(4)</a></span>
+			</div>
+			<div class="tab_content_wrap">
+				<div id="tab-0" class="tab_content on">
+					<!-- sec_info1 -->
+					<div class="sec_info1 sec_repay_summary in_sec">
+						<div class="cal_wrap5">
+							<dl class="cal">
+								<dt class="tit bul">투자원금</dt>
+								<dd class="money bold"><span class="num">0</span>원</dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit bul">예상 세후 이자</dt>
+								<dd class="money bold"><span class="num">0</span>원</dd>
+							</dl>
+							<!-- 2018-05-18 삭제 예상 세후 수익률
+							<dl class="cal">
+								<dt class="tit bul">예상 세후 수익률</dt>
+								<dd class="money ing"><span class="num bold">0%</span></dd>
+							</dl>
+							-->
+						</div>
+						<div class="repay_graph_wrap revert v_line3">
+							<!-- 2018-05-09 추가 상환완료인 경우 -->
+							<div class="alert_wrap">
+								<i class="ico ico_alert_done"></i>
+								<p>투자가 모두 상환 완료되었습니다.</p>
+							</div>
+							<!-- 상환중 + 연체 (마크업구조 참고용)
+							<div class="repay_define">
+								MASV07Z03.html 참고
+							</div>
+							<div class="figuer_graph">
+								MASV07Z03.html 참고
+							</div>
+							 -->
+						</div>
+						<div class="btn_wrap txt_c">
+							<button type="button" class="btn btn_type_i btn_fixed">상환일정</button>
+						</div>
+					</div>
+					<!-- //sec_info1 -->
+					<div class="line_divid"></div>
+					<!-- sec_info2 -->
+					<div class="sec_info2 in_sec">
+						<div class="cal_wrap5">
+							<dl class="cal">
+								<dt class="tit">상환계좌</dt>
+								<dd class="money medium">KEB하나 <span class="num">562-851235-64710</span></dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit">예치금</dt>
+								<dd class="money medium"><span class="num numComma">0</span>원</dd>
+							</dl>
+						</div>
+						<!-- 출금가능액이 없는경우
+						<div class="link_wrap">
+							<a href="#" class="link_type_c ico_arrow">출금요청</a>
+						</div>
+						-->
+					</div>
+					<!-- //sec_info2 -->
+					<!-- sec_info3 -->
+					<div class="list_repeat">
+						<div class="list_stateBar in_sec">
+							<span class="fl text">
+								투자 내역
+							</span>
+						</div>
+						<div class="stateBar in_sec">
+							<div class="tab_order type_normal"><!-- 2018-05-15 추가 기본타입 클래스 추가 -->
+								<span class="on"><a href="#none">최신순</a></span>
+								<span><a href="#none">투자금액순</a></span>
+							</div>
+						</div>
+						<!-- 추가 상환완료인 경우 -->
+						<div class="wrap_result">
+							<div class="no_result">
+								<i class="ico ico_chat_no2"></i>
+								<p>투자하신 내역이 없습니다.</p>
+							</div>
+						</div>
+						<!-- list_box 반복 샘플데이터
+						<div class="list_box top_noLine">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt>
+									<dd class="money ready">대기</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt>
+									<dd class="money overdue">연체</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt>
+									<dd class="money overdue">부실</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt>
+									<dd class="money ing">투자중</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt>
+									<dd class="money ing">투자중</dd>
+								</dl>
+							</div>
+						</div>
+						 -->
+					</div>
+					<!-- //sec_info3 -->
+				</div>
+				<div id="tab-1" class="tab_content">
+					<!-- sec_info1 -->
+					<div class="sec_info1 sec_repay_summary in_sec">
+						<div class="cal_wrap5">
+							<dl class="cal">
+								<dt class="tit bul">투자원금</dt>
+								<dd class="money bold"><span class="num numComma">4000000</span>원</dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit bul">세후 이자</dt>
+								<dd class="money bold"><span class="num numComma">400000</span>원</dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit bul">부도 원금</dt>
+								<dd class="money overdue">- <span class="num bold">0</span>원</dd>
+							</dl>
+						</div>
+						<div class="repay_graph_wrap revert v_line2">
+							<!-- 상환중 + 연체 -->
+							<div class="repay_define">
+								<div class="legend">
+									<dl class="legend_repay">
+										<dt>상환</dt>
+										<dd><span class="num numComma">6300000</span>원</dd>
+									</dl>
+									<dl class="legend_giveup">
+										<dt>부도</dt>
+										<dd><span class="num numComma">700000</span>원</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="figuer_graph">
+								<div class="rmate_graph xl">
+									<div id="chartHolder2" class="rmate_item"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //sec_info1 -->
+					<div class="line_divid"></div>
+					<!-- sec_info2 -->
+					<div class="sec_info2 in_sec">
+						<div class="cal_wrap5">
+							<dl class="cal">
+								<dt class="tit">상환계좌</dt>
+								<dd class="money medium">KEB하나 <span class="num">562-851235-64710</span></dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit">예치금</dt>
+								<dd class="money medium"><span class="num numComma">500000</span>원</dd>
+							</dl>
+						</div>
+						<div class="link_wrap">
+							<a href="#" class="link_type_c ico_arrow">출금요청</a>
+						</div>
+					</div>
+					<!-- //sec_info2 -->
+					<!-- sec_info3 -->
+					<div class="list_repeat">
+						<div class="list_stateBar in_sec">
+							<span class="fl text">
+								투자 내역
+							</span>
+						</div>
+						<div class="stateBar in_sec">
+							<div class="tab_order type_normal">
+								<span class="on"><a href="#none">최신순</a></span>
+								<span><a href="#none">투자금액순</a></span>
+							</div>
+						</div>
+						<!-- list_box 반복 -->
+						<div class="list_box top_noLine">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt><!-- -->
+									<dd class="money complete">완료</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt><!-- -->
+									<dd class="money complete">완료</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt><!-- -->
+									<dd class="money giveup">부도</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt><!-- -->
+									<dd class="money complete">완료</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="list_box">
+							<div class="cal_wrap5 in_sec">
+								<div class="sec_title">
+									<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+								</div>
+								<dl class="cal">
+									<dt class="tit">투자금액</dt>
+									<dd class="money"><span class="num numComma">900000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit">예상 상환금액</dt>
+									<dd class="money point"><span class="num numComma">1000000</span>원</dd>
+								</dl>
+								<dl class="cal">
+									<dt class="tit info"><span class="info_revenue">수익률 <span class="num">15.21</span>%</span> <span class="info_date">기간 <span class="num">4</span>개월</span></span></dt><!-- -->
+									<dd class="money complete">완료</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="more_loading"></div>
+					</div>
+					<!-- //sec_info3 -->
+				</div>
+			</div>
+		</section>
+		<!-- //페이지명 -->
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script>
+	//퍼블 테스트용 (개발에서 데이터처리후 호출해주세요)
+	$(document).ready(function(){
+		$('.tab_wrap .tab a').on('click', function(){
+			setTimeout(function(){
+				//원그래프
+				svgGraph();
+
+				//정렬탭
+				tabOrder();
+
+				//차트실행
+				var idx = $('.tab_wrap .tab.on').index() + 1;
+				if (idx == 2){
+					if(!document.getElementById("chart2"))
+					rMateChartH5.create("chart2", "chartHolder2", chartVars2, "100%", "100%")}
+
+				//탭전환시 체크
+				bgListDisplay();
+			},100);
+		});
+	})
+
+	//정렬탭
+	tabOrder();
+
+	//2018-05-18 투자내용이 없을때 배경색처리
+	function bgListDisplay(){
+		if ($('.wrap_result:visible').length > 0){
+			$('.wrap').removeClass('bg_list');
+		} else {
+			$('.wrap').addClass('bg_list');
+		}
+	}
+
+	//탭전환시 체크
+	bgListDisplay();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>개설완료 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">적금 해지</h2>
+			<button class="btn_cancel" onclick="">취소</button> <!-- 19.04.23 : 버튼 수정 / close 클래스 삭제  -->
+		</div>
+
+		<section class="dgb_result">
+
+			<div class="sec_title">
+				<h2>적금 해지 금액</h2>
+			</div>
+
+			<div class="dgb_fund_info">
+				<div class="tot_info">
+					<ul>
+						<li class="dash_line">
+							<span class="tit"><strong>받는 금액 (세후)</strong></span>
+							<span class="cont"><strong><em class="num bold">626,900</em>원</strong></span>
+						</li>
+						<li>
+							<span class="tit">원금</span>
+							<span class="cont"><em class="num bold">600,000</em>원</span>
+						</li>
+						<li>
+							<span class="tit">받은 혜택</span>
+							<span class="cont"><em class="num bold">26,900</em>원</span>
+						</li>
+					</ul>
+				</div>
+				<div class="detail_info">
+					<ul>
+						<li>
+							<span class="tit"><strong>이자 (<em class="num">4</em>%)</strong></span>
+							<span class="cont"><strong><em class="num">24,000</em>원</strong></span>
+						</li>
+						<li>
+							<span class="tit">소득세</span>
+							<span class="cont"><em class="num">- 2,200</em>원</span>
+						</li>
+						<li class="dash_line">
+							<span class="tit">지방소득세</span>
+							<span class="cont"><em class="num">- 900</em>원</span>
+						</li>
+						<li>
+							<span class="tit"><strong>캐시백 (<em class="num">1</em>%)</strong></span>
+							<span class="cont"><strong><em class="num">6,000</em>원</strong></span>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="list_type star">
+					<li>해지 금액은 선택하신 입금 계좌로 입금되며, 만기 전 해지 시에는 중도해지 이자율이 적용됩니다.</li>
+					<li>해지 신청계좌에 지급 제한 등의 사유가 있는 경우 해지가 제한될 수 있습니다.</li>
+				</ul>
+			</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">해지신청</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script type="text/javascript">
+	// 탭 이벤트
+	$('.tab_purple > li > a').on('click', function(event){
+		event.preventDefault();
+		var idx = $(this).parent().index()
+		$(this).parent().addClass('on').siblings().removeClass('on');
+		$('.tab_detail > div').eq(idx).addClass('on').siblings().removeClass('on');
+	});
+</script>
+</body>
+</html>

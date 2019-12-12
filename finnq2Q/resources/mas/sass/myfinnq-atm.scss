@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+
+/* ATM 출금 */
+.atm_payment .sec_title{margin:28px 0 0}
+.sec_payment_step{margin-bottom:45px; text-align:center;}
+.sec_payment_step ol{padding-top:8px; display:inline-block;}
+.sec_payment_step ol li{display:table;margin:20px 0 0; padding-left:90px;height:70px;background:url(../images/myfinnq/bg-payment-step.png) no-repeat;background-size:70px auto; text-align:left; /* width:100%; */} /* 2018-02-02 320 관련margin 변경 phj */ /* 가로스크롤 발생 width 제거 ock */
+.sec_payment_step ol li.step1{background-position:0 -70px}
+.sec_payment_step ol li.step2{background-position:0 0}
+.sec_payment_step ol li.step3{background-position:0 -140px}
+.sec_payment_step ol li.step4{background-position:0 -210px}
+
+.sec_payment_step ol li > dl{display:table-cell;vertical-align:middle}
+.sec_payment_step ol li > dl dt{@include font(11px);color:$warm_grey}
+.sec_payment_step ol li > dl dd{margin-top:3px; @include font(16px);}
+
+.available_time .box_btn {text-align:center;}
+.available_time .box_btn button {width:162px; @include font(14px);}
+
+/* 채우기_01등록한계좌가없을경우_web_MASB04Z01 */
+.sec_bankcopy {margin-top:26px;  border-radius:7px; text-align:center;}
+.sec_bankcopy .tit {background:$purply_blue; color:$white; font-weight:bold; height:44px; line-height:44px; border-radius:7px 7px 0 0;}
+.sec_bankcopy .bot {border:1px solid $purply_blue; border-width:0 1px 1px 1px; border-radius:0 0 7px 7px; padding-bottom:21px;}
+.sec_bankcopy .count {font-weight:bold; @include font(16px); padding-top:18px;}
+.sec_bankcopy .box_btn {width:100px; margin:8px auto 0;}
+.sec_new_count {position:fixed; bottom:30px; left:0px; width:100%; margin-top:30px;}
+.sec_new_count .wrap_count {background:$white_four; border:1px solid $white_three; border-radius:7px; padding:28px 20px 30px; margin:0 20px; text-align:center; }
+.sec_new_count .tit {@include font(16px);}
+.sec_new_count .guide_txt {color:$warm_grey; margin-top:10px;}
+.sec_new_count .guide_txt strong {color:$clear_blue;}
+.sec_new_count .box_btn {width:105px; margin:16px auto 0;}
+
+/* 채우기 하나멤버스 약관동의 MASB03Z0*/
+.hana_terms .modal_content {padding:0; background:$white_three;}
+.hana_terms .sec_head,
+.hana_terms .scroll_wrap {background:$white;}
+.hana_terms{background:$white_three}
+.hana_terms .sec_all_check {text-align:left}
+/*.hana_terms .sec_title {padding-top:35px;}*/
+.hana_terms .modal_content .flex_wrap {padding:20px; margin-top:0;}
+.hana_terms .agree_terms dl dt.agree_wrap input[type="checkbox"] + label span {font-weight:normal;}
+
+/* 채우기 하나머니 전화 자동 해제 MASB03Z06 */
+.charge_price_hana .sec_title {margin-top:28px;}
+.charge_price_hana .sub_txt {width:160px; height:160px; background:$lighter_purple; border-radius:80px; margin:26px auto 14px; text-align:center; font-weight:bold; color:$white; }
+.charge_price_hana .sub_txt div {width:160px; height:160px; display:table-cell; vertical-align:middle;}
+.charge_price_hana .sub_txt strong {color:$sun_yellow; @include font(20px); font-weight:bold;}
+.charge_price_hana .sub_txt span {display:block; margin-top:8px; @include font(16px); font-weight:bold;}
+.charge_price_hana .sub_remark {position:relative; color:$reddish_orange; @include font(11px); height:31px;}
+.charge_price_hana .sub_remark p {position:absolute; text-align:center; width:100%; @include font(11px); }

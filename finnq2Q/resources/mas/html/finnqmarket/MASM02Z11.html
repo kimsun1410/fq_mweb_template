@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02T핀크적금_07이동통신비신청2_web - MASM02Z11-1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="market add_sticky">
+		<section class="fqsave fqsave_skt">
+
+			<div class="sec_step">
+				<ol class="step02"><!-- 2019.07.24 스탭 변경 -->
+					<li class="on complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>2</strong>
+					</li>
+				</ol>
+			</div>
+
+			<!-- 2019.07.24 문구 수정 -->
+			<div class="sec_title">
+				<h2>우대금리</h2>
+				<p class="guide_txt">KEB하나은행 계좌로 SKT이동통신비 자동이체 신청 시</p>
+				<p class="point_txt2 accent_txt">우대 금리 연 <em class="num bold">1.0%</em> 제공</p>
+			</div>
+			<!-- //2019.07.24 문구 수정 -->
+
+			<div class="sec_withdrawal">
+				<ul class="summary">
+					<li class="category">자동이체신청 (<em class="num">010-1234-5678</em>)</li><!-- 2019.07.24 문구 수정 -->
+				</ul>
+				<ul class="choice">
+					<li class="c">
+						<input type="radio" id="aa11" name="ryellow-default" checked="checked" value="1"><label for="aa11"><span>신청 <em class="point_color num">(+1.0%)</em></span></label><br><!-- 2019.07.24 문구 수정 -->
+					</li>
+					<li class="i">
+						<input type="radio" id="aa12" name="ryellow-default" value="2"><label for="aa12"><span>다음에 신청</span></label><br><!-- 2019.07.24 문구 수정 -->
+					</li>
+				</ul>
+			</div><!-- //sec_agree -->
+
+			<div class="show" style="display:block;">
+
+				<div class="wdrawal_list">
+					<ul class="set_target">
+						<li>
+							<div class="form_wrap"><input type="radio" id="aa2" name="ryellow" checked="checked">
+								<label for="aa2"><span>KEB하나 <em class="num">987-654-321098</em></span></label>
+							</div>
+							<div class="form_wrap"><input type="radio" id="aa3" name="ryellow" checked="checked">
+								<label for="aa3"><span>KEB하나 <em class="num">987-654-321098</em></span></label>
+							</div>
+							<div class="form_wrap"><input type="radio" id="aa4" name="ryellow" checked="checked">
+								<label for="aa4"><span>KEB하나 <em class="num">987-654-321098</em></span></label>
+							</div>
+							<div class="form_wrap"><input type="radio" id="aa5" name="ryellow" checked="checked">
+								<label for="aa5"><span>KEB하나 <em class="num">987-654-321098</em></span></label>
+							</div>
+						</li>
+						<li class="custom">
+							<div class="form_wrap"><input type="radio" id="aa1" name="ryellow"><label for="aa1"><span></span></label></div>
+							<div class="user"><input type="text" placeholder="KEB하나 계좌 직접 입력" disabled="disabled"></div>
+						</li>
+					</ul>
+				</div><!-- //wdrawal_list -->
+
+				<div class="sec_agree">
+					<ul>
+						<li class="agree_wrap">
+							<input type="checkbox" id="purpleTwo1" name="test-img" class="purple"><label for="purpleTwo1" name="test-img"><span>개인정보 제 3자 제공동의</span></label>
+							<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+						</li>
+					</ul>
+				</div>
+				<div class="sec_notice bul_guide">
+					<ul>
+						<li class="star_type indent">은행계좌로 자동이체를 신청하시면 자동이체 신청 결과가 금융기관으로부터 3일(은행영업일 기준)후에 SKT에 반영되오니, 정상적으로 신청되었는지 추후에 반드시 확인하시기 바랍니다.</li>
+						<li class="star_type indent">매월 5일 이후 자동이체를 신청하는 경우 다음달에 반영되므로 이번 달에는 자동이체 되지 않을 수 있음을 참고하시기 바랍니다.</li>
+						<li class="star_type indent">자동이체 해지 시점 및 고객님의 납부방법에 따라 일부 차이가 있을 수 있으니 추가문의는 SKT 고객센터 &lt;국번없이 <a href="tel:15990011" class="num tel_num">1599-0011</a>(유료) / 휴대폰 <a href="tel:114" class="num tel_num">114</a>&gt;를 이용해 주시기 바랍니다.</li>
+						<li class="star_type indent">정기 청구작업으로 인해 매월 5일 21시부터 6일 04시 까지 자동이체 신청이 불가합니다.</li><!-- 문구 추가 2018-03-14 ock -->
+					</ul>
+				</div>
+			</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled" >다음</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('input:radio').change(function(){
+		var tt = $(this).val();
+		if(tt==1){$(".show").fadeIn();}
+		else if (tt==2){$(".show").fadeOut();}
+	});
+
+	//2018-02-13 계좌 직접 입력 추가
+	$(".wdrawal_list .set_target input[type=radio]").on('click',function(){
+		var reason = $(this).parents('.wdrawal_list').find('.custom input[type=text]');
+		if($(".wdrawal_list .custom input[type=radio]").is(":checked")){
+			reason.prop("disabled",false).focus();
+		} else {
+			reason.prop("disabled",true).blur();
+		}
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>개인 정보 입력 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+	<div id="contents" class="cashback_profile add_sticky">
+
+		<section class="dgb_account">
+			<div class="sec_ows_head finnq">
+				<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+				<h2 class="ows_title">T high<em class="num">5</em> 적금</h2>
+				<button class="btn_cancel" onclick="">취소</button>
+			</div>
+
+			<div class="sec_step">
+				<ol>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete">
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>적금계좌 비밀번호 설정</h2>
+			</div>
+
+			<div class="sec_input com_box_wrap pdb30">
+
+				<div class="input_wrap">
+					<div class="item pw">
+						<input type="text" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+					</div>
+					<div class="item re_pw">
+						<input type="text" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+						<p class="remark hide">비밀번호를 입력해 주세요.</p>
+					</div>
+				</div>
+
+				<!-- 에러가 날 경우 -->
+				<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+				<!--
+				<div class="input_wrap">
+					<div class="item pw inp_error">
+						<input type="text" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+					</div>
+					<div class="item re_pw inp_error">
+						<input type="text" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+						<p class="remark">비밀번호를 입력해 주세요.</p>
+					</div>
+				</div>
+				-->
+				<!-- //에러가 날 경우 -->
+
+			</div>
+			<!-- //sec_input com_box_wrap -->
+
+		</section><!-- // -->
+
+		<!-- 항목 입력 완료 시 Disable 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script type="text/javascript">
+$(function(){
+	// Input 필드 키보드 이벤트
+	$(this).on("keyup","[data-name=inpFocus]", function(e) {
+		var pwVal 	= $('.pw [data-name=inpFocus]').val(),
+			pwReVal = $('.re_pw [data-name=inpFocus]').val();
+
+		if(pwVal.length > 0 && pwReVal.length > 0) {
+			$('.sticky_wrap .btn_type_apply').removeAttr('disabled');
+		} else {
+			$('.sticky_wrap .btn_type_apply').attr('disabled', 'disabled');
+		}
+	});
+});
+</script>
+</body>
+</html>

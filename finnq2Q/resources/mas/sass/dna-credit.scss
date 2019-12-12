@@ -1,0 +1,140 @@
+@charset 'UTF-8';
+/* 신용관리 */
+/* 확장형 리스트 */
+.extend_history{background:$white_three}
+.extend_history .summary{background:$white_three;color:$warm_grey;border-bottom: 1px solid $white_two;}
+.extend_history > dl{background:$white;margin-top:4px; border-top: 1px solid $white_two; border-bottom: 1px solid $white_two;}
+.extend_history > dl:first-of-type {border-top:none; margin-top:0;}
+.extend_history .extend_head{}
+.extend_history .extend_head > a{position:relative;display:block;padding:19px 20px 18px 20px;background:$white}
+.extend_history .extend_body{display:none;padding:20px;border-top:1px solid $white_two}
+.extend_history .extend_body.open{}
+.extend_history .extend_head .in_arrow:after{content:"";position:absolute; top:25px; right:0; display: inline-block; background: url("../images/common/ir-arrow-set.png") no-repeat; background-size: 40px auto; width: 13px; height: 7.67px; background-position: 0 0; margin-right:20px;}
+.extend_history .extend_head.on .in_arrow:after{-webkit-transform: rotateX(180deg); transform: rotateX(180deg);}
+
+/* 라운드 라벨 */
+.finance_dna [class*="label_round"]{float:left;/* padding:0 10px; */margin-right:8px;max-width:38px;width:38px;height:20px;border-radius:10px;color:$white;font-size:11px;line-height:20px;text-align:center;box-sizing:border-box}
+.finance_dna .label_round01{background:$clear_blue}
+.finance_dna .label_round02{background:$purply_blue}
+.finance_dna .label_round03{background:$reddish_orange}
+.finance_dna .label_round04{background:$white_two;}
+
+.list_wrap .status_stop > .label_round04{max-width:59px;width:59px;margin-right:0;margin-top:2px;height:21px;font-size:12px;line-height:21px;}
+
+/* 정보 컨텐츠 영역 */
+.finance_dna [class*="cal_wrap"] .cal{position:relative}
+.finance_dna [class*="cal_wrap"] .cal:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.finance_dna [class*="cal_wrap"] .cal .tit{float:left;color:$brownish_grey;}
+.finance_dna [class*="cal_wrap"] .cal .cont{float:right}
+.finance_dna .cal_wrap01 > .cal_stit{padding-bottom:18px;}
+.finance_dna .cal_wrap01 > .cal_stit p{overflow:hidden;font-weight:bold;font-size:16px;height:20px}
+.finance_dna .cal_wrap01 > .cal_stit:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.finance_dna .cal_wrap01 .cal .cont{color:$black}
+.finance_dna .cal_wrap01.in_arrow > .cal_stit p{margin-right:20px}
+.finance_dna .cal_wrap02 .cal .tit,
+.finance_dna .cal_wrap02 .cal .cont{height:30px;font-size:12px;line-height:30px;color:$brownish_grey}
+
+.finance_dna .cal_wrap03{background:$white_four;}
+.finance_dna .cal_wrap03 .cal{padding:0 20px;height:47px;line-height:47px;border-top:1px solid $white_three}
+.finance_dna .cal_wrap03 > .cal{border-left:1px solid $white_three;border-right:1px solid $white_three;}
+.finance_dna .cal_wrap03 .cal .tit{font-size:16px;font-family: "AppleSDGothicNeo-Light", "LatoL";}
+.finance_dna .cal_wrap03 .cal .cont{font-size:16px;font-weight:bold;color:$brownish_grey}
+.finance_dna .cal_wrap03 .cal_total{border:1px solid $warm_grey;background:$white}
+.finance_dna .cal_wrap03 .cal_total .cal{border-top:none}
+.finance_dna .cal_wrap03 .cal_total .cal .tit{font-family: "AppleSDGothicNeo-Mideum", "DeviceF";font-weight:bold;color:$black}
+.finance_dna .cal_wrap03 .cal_total .cal .cont{color:$purply_blue}
+
+
+/* 상단 구분선 정보 영역 */
+.finance_dna [class*="info_box"]{position:relative;}
+.finance_dna [class*="info_box"]::after{content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.finance_dna [class*="info_box"] dl{position:relative;float:left;display:inline-block;padding-top:30px;text-align:center;}
+.finance_dna [class*="info_box"] dl.border::before{content:'';display:inline-block;position:absolute;top:30px;left:0;width:1px;height:calc(100% - 30px);background:$lighter_purple}
+.finance_dna [class*="info_box"] dl.border::after{content:'';display:inline-block;position:absolute;bottom:0px;left:0;width:1px;height:5px;background:$purply_blue}
+.finance_dna [class*="info_box"] dl dt{@include font(14px);color:$white;font-family:"AppleSDGothicNeo-Light";}
+.finance_dna [class*="info_box"] dl dd{margin-top:10px;font-size:30px;line-height:34px;font-family: 'LatoB';color:$white}
+.finance_dna .info_box02 > dl{width:50%;}
+.finance_dna .info_box03 > dl{width:33.33%;}
+
+/* 신용관리 서브메인 */
+.sec_time_cycle.dna {margin:18px 0 35px;}
+.sec_time_cycle.dna .cycle_wrap {display:table;position:static;margin:0 auto;width:280px; height:280px; border:12px solid $white_three; text-align:center; line-height:inherit;box-sizing:border-box}
+.sec_time_cycle.dna .clock {opacity:0;position:relative; top:0; margin:-280px auto 0;width:280px; z-index:1;}
+.sec_time_cycle.dna .cycle_wrap .user_info {display:table-cell;vertical-align:middle}
+.sec_time_cycle.dna .cycle_wrap .user_info .tit {font-size:16px; color:$black;}
+.sec_time_cycle.dna .cycle_wrap .user_info .grade {font-size:26px; margin-top:8px; color:$purply_blue;font-weight:bold}
+.sec_time_cycle.dna .cycle_wrap .user_info .grade .num {font-size:50px;font-weight:normal}
+.sec_time_cycle.dna .cycle_wrap .user_info .credit_num {font-size:14px; color:$pinkish_grey; margin-top:2px;}
+.sec_time_cycle.dna .cycle_wrap .user_info .credit_num .num {font-size:14px; color:$pinkish_grey;}
+.sec_time_cycle.dna .cycle_wrap .user_info .credit_num em.num {color:$black;}
+
+.sec_time_cycle.dna .user_credit_info {margin:30px 40px 0; overflow:hidden;text-align:center;}
+.sec_time_cycle.dna .user_credit_info div {float:left;width:50%;height:30px; text-align:center;font-size:16px; line-height:30px; color:$brownish_grey;box-sizing:border-box;}
+.sec_time_cycle.dna .user_credit_info div:first-of-type {border-right:1px solid $white_three;}
+
+.finance_dna .credit_info_box {padding:26px 0 30px; text-align:center; background:$purply_blue;}
+.finance_dna .credit_info_box .tit {font-size:16px; color:$white;}
+.finance_dna .credit_info_box .thumb_tit {font-size:14px; margin-top:6px; color:$lavender;}
+.finance_dna .credit_info_box .btn {margin-top:15px; font-size:14px; height:40px; line-height:40px; width:162px; text-align:center; background:$lighter_purple; color:$white; border-radius:4px;}
+
+.finance_dna .list_box_wrap {padding:30px 20px; border-bottom:$white_two;}
+.finance_dna .list_box_wrap .tit {font-weight:bold; color:$black;}
+.finance_dna .list_box_wrap .tit.title {font-size:16px;}
+.finance_dna .list_box_wrap > div {margin-top:20px; padding:28px 20px; border-radius:8px; border:1px solid $white_three; background:$white_four}
+.finance_dna .list_box_wrap > div:first-of-type {margin-top:0;}
+.finance_dna .list_box_wrap > div .tit {font-size:20px; margin-bottom:16px;}
+.finance_dna .list_box_wrap > div .tit a {position:relative; padding:0 17px 0 28px;}
+.finance_dna .list_box_wrap > div .tit a:before {display: inline-block; content:""; position: absolute; top:4px; left:0; width:20px; height: 20px; background: url(../images/dna/ico_dna_credit.png) no-repeat; background-size: 20px auto;}
+.finance_dna .list_box_wrap > div .tit.ico1 a:before {background-position: 0 0;}
+.finance_dna .list_box_wrap > div .tit.ico2 a:before {background-position: 0 -20px;}
+.finance_dna .list_box_wrap > div .tit.ico3 a:before {background-position: 0 -40px;}
+.finance_dna .list_box_wrap > div .tit.ico4 a:before {background-position: 0 -60px;}
+.finance_dna .list_box_wrap > div .tit a:after {display: inline-block; content:""; position: absolute; top:7px; right:0; width: 7px; height: 11px; background: url(../images/common/ir-arrow-set.png) no-repeat; background-position: 0 -85px;  background-size: 40px auto;}
+
+.finance_dna .list_box_wrap > div dl {overflow:hidden;}
+.finance_dna .list_box_wrap > div dl + dl {margin-top:10px;}
+.finance_dna .list_box_wrap > div dl dt {float:left; font-size:16px; color:$brownish_grey;}
+.finance_dna .list_box_wrap > div dl dt.stit {font-family:"AppleSDGothicNeo-Light"}
+.finance_dna .list_box_wrap > div dl dd {float:right; font-size:16px; color:$black;}
+.finance_dna .credit_chart_wrap{border-top:1px solid $white_two;border-bottom:1px solid $white_two;background:$white_three;padding-top:4px;}
+.finance_dna .credit_chart_wrap ._chart12{background:$white;padding-bottom:20px}
+.finance_dna .credit_chart_wrap ._chart12 .chart_head{overflow:hidden;border-top:1px solid $white_two;padding:28px 20px 20px}
+.finance_dna .credit_chart_wrap ._chart12 .chart_head .chart_tit{float:left;font-weight:bold;font-size:16px}
+.finance_dna .credit_chart_wrap ._chart12 .chart_head .legend_credit{float:right;display:inline-block;padding-top:4px;padding-right:1px;color:#fff;font-size:12px;color:$black}
+.finance_dna .credit_chart_wrap ._chart12 .chart_head .legend_credit:before{content:"";display:inline-block;margin-right:3px;width:6px;height:6px;border-radius:3px;vertical-align:2px;background:$purply_blue;}
+.finance_dna .credit_chart_wrap ._chart12 .chart_area{min-height:162px}
+
+/* 11px ico guide */
+.txt_ico_guide{text-align:left;}
+.txt_ico_guide.right,
+.txt_ico_guide.top_right{text-align:right;padding-top:10px;padding-bottom:10px;}
+.txt_ico_guide p{@include font(11px);color:$pinkish_grey;word-break: keep-all;}
+.txt_ico_guide p i{margin-right:4px}
+.txt_ico_guide p.in_sec{margin:0 20px}
+.txt_ico_guide p.indent{padding-left:13px;text-indent:-13px}
+.txt_ico_guide.top_right p.indent{padding:0;text-indent:0}
+
+.sec_head.bg_purply .txt_ico_guide{background-color:$purply_blue;}
+.sec_head.bg_purply .txt_ico_guide p{color:$periwinkle}
+
+.finance_dna .credit_guide .sec_notice_faqlist .list_expend{padding-top:4px;background:$white_three;border-top:1px solid $white_two}
+.finance_dna .credit_guide .sec_notice_faqlist .list_expend > li .detail_set .con{position:relative;border-top:none;padding-top:28px;padding-bottom:28px}
+.finance_dna .credit_guide .sec_notice_faqlist > li{border-top:1px solid $white_two}
+
+.finance_dna .repay_rate_wrap ul{}
+.finance_dna .repay_rate_wrap ul:after {display:block; clear:both; content:""}
+.finance_dna .repay_rate_wrap ul li:first-of-type{float:left}
+.finance_dna .repay_rate_wrap ul li:last-of-type{float:right}
+.finance_dna .repay_rate_wrap ul li strong{padding-right:6px;}
+.finance_dna .repay_rate_wrap ul li{color:$brownish_grey}
+.finance_dna .repay_rate_wrap ul.cash li:first-of-type strong{color:$black}
+.finance_dna .repay_rate_wrap .row_graph{margin:6px 0}
+
+.finance_dna .full_size .row_graph .bar{height:6px;border-radius:3px;background:$white_three;}
+.finance_dna .full_size .row_graph.flexible{height:6px}
+.finance_dna .full_size .row_graph.flexible .active{height:6px;border-radius:3px}
+.finance_dna .full_size.repay_rate_wrap .cash > li,
+.finance_dna .full_size.repay_rate_wrap .date > li{font-size:12px}
+
+.cal_wrap02 .cal.repay_rate_wrap{padding-top:4px;padding-bottom:16px}
+.cal_wrap02 .cal.repay_rate_wrap + .cal{padding-top:16px}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01회원_06로그인및인증_02회원가입OR로그인선택_MASA01Z01</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="MASA01Z01">
+	<div id="contents" class="common">
+		<section class="finnq_login_new">
+			<div class="login_head">
+				<!-- <p class="finnq">Finnq</p> 삭제 2018-04-04 ock -->
+				<p class="txt">비밀번호 인증이 필요한 서비스 입니다.</p>
+				<p class="img"></p>
+			</div>
+			<!-- 2018-03-24 비밀번호 형식 변경 phj -->
+			<div class="sec_new_password">
+				<p class="password_remark">5회 인증 실패 시, 비밀번호 재설정이 필요합니다. (2회 실패)</p>
+				<div class="wrap_password six_area">
+					<!-- <p class="type_password">
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+					</p> -->
+					<p class="bg_password bg_gray">
+						<i class="on"><img src="../../images/common/ico-pw.png"></i>
+						<i class="on"><img src="../../images/common/ico-pw.png"></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+					</p>
+				</div>
+			</div><!-- //2018-03-24 비밀번호 형식 변경 phj -->
+			<div class="sec_login_option">
+				<ul class="login_check">
+					<input type="checkbox" id="loginChk" name=""  class=""><label for="loginChk" name=""><span>자동 로그인</span></label><!-- checkbox class : gray 삭제 2018-03-24 ock -->
+				</ul>
+				<ul class="login_support">
+					<a href="#none"><i class="ico ico_finger_print3"></i>지문으로 로그인</a>
+				</ul>
+
+				<!-- 2018-03-28 버튼 케이스 추가 phj -->
+				<ul class="login_support">
+					<a href="#none"><i class="ico ico_finger_print3"></i>Touch ID로 로그인</a>
+				</ul>
+				<ul class="login_support">
+					<a href="#none"><i class="ico ico_face_id"></i>Face ID로 로그인</a>
+				</ul>
+				<!-- //2018-03-28 버튼 케이스 추가 phj -->
+
+			</div>
+
+			<div class="sec_for_login">
+				<div class="forget_password">
+					<span>비밀번호를 잊으셨다면,</span> <!-- 2018-03-26 오타 수정 phj -->
+					<em class="btn_text01 ico">
+						<a href="#none" class="ico_arrow">비밀번호 재설정</a>
+					</em>
+				</div>
+
+				<div class="join_us">
+					<p class="tit">아직, 핀크 회원이 아니신가요?</p> <!-- 2018-03-28 물음표 추가 phj -->
+					<p class="box_btn">
+						<button type="button" name="button" class="btn btn_type_a">회원가입</button>
+					</p>
+				</div>
+			</div>
+
+
+			
+		</section>
+		
+	</div>
+	<!-- #contents -->
+
+			
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var dotAni = function () {
+		//ani 확인용
+		$('.img_dot > span').on('click', function(e){
+			$(this).addClass('focus_in');
+			$(this).prev().removeClass('focus_in').addClass('focus_out');
+		});
+	};	dotAni();
+
+
+});
+</script>
+</body>
+</html>

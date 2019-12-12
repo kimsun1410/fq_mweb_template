@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>은행계좌 연결</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASF10Z05 -->
+	<div id="contents" class="open-banking add_sticky">
+
+		<section>
+
+			<!--
+				팝업 사용 UI 방법
+				1) 호출 하려는 팝업의 이름을 data-modal-open, data-modal-content : 안에  동일하게 선언
+				2) 오픈 / 닫기 모두 매개변수는 $(this)
+				3) 해당 UI는 ui.js에 선언 / 단 팝업 안에 내용이 스크롤이 되어야 하는 팝업에선는
+				바닥 스크롤 막기 사용 금지 (컨텐츠도 스크롤 안됨.)
+			-->
+			<button type="button" data-modal-open="popup-open-cont">팝업 호출 버튼</button>
+
+			<!-- 클래스 : is-visible로 제어 -->
+			<div class="modal-toast agree is-visible" data-modal-content="popup-open-cont">
+				<div class="modal-toast-container">
+					<!-- 타이틀 및 닫기 버틑 추가 19.11.21 수정 -->
+					<a href="#none" class="btn modal-toast-close">창 닫기</a>
+					<div class="conts_box">
+						<!-- 타이틀 및 닫기 버틑 추가 19.11.21 수정 -->
+						<strong class="title">이용약관</strong>
+						<div class="agree_terms">
+							<!-- 마크업 구조 변경 : 항목 추가 19.11.21 수정 -->
+							<dl>
+								<dt class="agree_wrap">
+									<input type="checkbox" id="all_chk" class="all_chk"><label for="all_chk"><span>전체 동의</span></label>
+								</dt>
+								<dd>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101"><span>오픈뱅킹 서비스약관(필수)</span></label>
+										<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102"><span>오픈뱅킹 금융거래정보제공동의서(필수)</span></label>
+										<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103"><span>오픈뱅킹 개인신용정보 수집이용제공 동의서(필수)</span></label>
+										<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104"><span>잔액부족시 자동충전 설정(선택)</span></label>
+									</div>
+								</dd>
+							</dl>
+							<!-- // 마크업 구조 변경 -->
+						</div>
+					</div><!-- //conts_box -->
+					<div class="sticky_wrap set_type1">
+						<button type="button" name="" class="btn btn_type_apply">확인</button>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+
+		<div class="modal-toast fullopen" data-modal-content="agreeprivacy" role="alert">
+			<div class="modal-toast-containerr privacy">
+				<!-- 창 닫기도 NATIVE로 불러오는 HEADER이면 주석처리 : 혁신금융대출 사용 O -->
+				<!-- <a href="#none" class="btn modal-toast-close">창 닫기</a> -->
+
+				<!-- 요안에 내용 만  변경하시면 됩니다. 구분(role="privacym-01"), 인클루드(data-include="MASC03M01.html")  -->
+				<div class="agree_details" role="privacym-01" data-include="../provision/000167_20191218.html"></div><!-- // (필수)주식회사 핀크 오픈뱅킹 서비스약관 //  -->
+				<!--<div class="agree_details" role="privacym-02" data-include="../provision/000168_20191218.html"></div> // 오픈뱅킹서비스 개인신용정보 수집이용제공 동의서 // -->
+				<!--<div class="agree_details" role="privacym-03" data-include="../provision/000169_20191218.html"></div> // 오픈뱅킹서비스 금융거래정보제공동의서 // -->
+
+				<!-- 하단 버튼은 GUI에 맞게 사용하시면 됩니다. : 혁신금융대출 사용 X  -->
+				<!-- <div class="sticky_wrap set_type1">
+				   <button type="button" name="약관동의 버튼" class="btn btn_type_apply">확인</button>
+			   </div> -->
+			</div>
+		</div>
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function () {
+	// 팝업 호출
+	$('[data-modal-open]').on('click', function(e) {
+		// 팝업 호출
+		modalPopupOpen( $(this) );
+	});
+
+	// 팝업 닫기
+	$(".modal-toast .btn").on('click', function(e) {
+		// 팝업 닫기 공통
+		modalPopupClose( $(this) );
+	});
+
+	// 19.11.21 추가
+	function includeLayout(){
+		var includeArea = $('[data-include]');
+		var self, url;
+		$.each(includeArea, function() {
+			self = $(this);
+			url = self.data("include");
+			self.load(url, function() {
+				self.removeAttr("data-include");
+			});
+		});
+	}
+
+	includeLayout();
+
+});
+</script>
+</body>
+</html>

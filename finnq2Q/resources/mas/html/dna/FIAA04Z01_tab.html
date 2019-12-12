@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04금융생활_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_dna.css" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 : FIAA04Z01 -->
+	<div id="contents" class="finance_dna">
+
+		<section class="finance_life">
+			<div class="sec_top_notice"><!-- 숨김 class : hide -->
+				<p><span class="ico ico_circle_alert"><span class="blind">알림</span></span> 소득정보가 없어요.</p>
+				<span class="setting_link"><a href="#none">소득설정</a></span>
+			</div>
+
+			<div class="sec_head">
+				<h2 class="money_tit">오늘까지 입금된 금액</h2>
+				<div class="money_cont more_arrow">
+					<em class="cash bold">3,000,000</em><span>원</span>
+				</div>
+			</div>
+
+			<div class="sec_today_info">
+				<ul>
+					<li>
+						<a href="#none">
+							<strong class="num bold">85</strong>
+							<p>F.스코어</p>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<strong class="num bold">7</strong>
+							<p>연결계좌</p>
+						</a>
+					</li>
+					<li class="ico_salary">
+						<a href="#none">
+							<p>예상연봉</p>
+						</a>
+					</li>
+					<li class="ico_the_age">
+						<a href="#none">
+							<p>또래설정</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 구조 변경 2018-12-28 -->
+			<div class="sec_tab tab_wrap set_type2">
+				<span class="tab on"><a href="#none">소비</a></span>
+				<span class="tab"><a href="#none">저축/투자</a></span>
+			</div>
+
+			
+			<div class="tab_content_wrap"><!-- div 추가 2018-12-28 -->
+				<!-- 소비 tab_cont -->
+				<div class="tab_content on"><!-- div 추가 2018-12-28 -->
+					<div class="finance_life_cont" id="cont-1">
+						<article class="life_report">
+							<!-- 오늘까지 소비한 금액 -->
+							<div class="today_report">
+								<h3 class="today_tit">오늘까지 소비한 금액</h3>
+								<div class="today_money">
+									<em class="cash bold">3,000,000</em><span>원</span>
+								</div>
+
+								<div class="report_detail add_dotline3">
+									<dl class="row_type">
+										<dt class="info_tit">고정비</dt><!-- 문구수정 2019-01-16 ock -->
+										<dd class="info_cont"><strong class="cash bold">500,000</strong><span>원</span></dd>
+									</dl>
+									<dl class="row_type">
+										<dt class="info_tit">고정비 외</dt><!-- 문구수정 2019-01-16 ock -->
+										<dd class="info_cont"><strong class="cash bold">500,000</strong><span>원</span></dd>
+									</dl>
+								</div>
+							</div>
+							<!-- 적정소비 그래프 -->
+							<div class="graph_report">
+								<h4>이번달 적정소비까지<br><strong><em class="num">70%</em> 여유</strong>있어요!</h4>
+
+								<!-- finance_graph -->
+								<div class="finance_graph">
+									<div class="graph_wrap">
+										<div class="graph_group">
+											<div class="item percent">
+												<em class="label_value _left">0%</em>
+												<span class="bar" data-max="100" data-value="30"><strong class="num bold"></strong></span>
+												<em class="label_value _right">100%</em>
+											</div>
+										</div>
+									</div>
+								</div><br><br><br>
+
+								<!-- 100% 이상 케이스 색상변경 추가 2019-01-25 ock -->
+								<h4>이번달 적정소비보다<br><strong><em class="num">50%</em> 초과</strong>했어요!</h4>
+
+								<!-- finance_graph -->
+								<div class="finance_graph">
+									<div class="graph_wrap">
+										<div class="graph_group">
+											<div class="item percent">
+												<em class="label_value _left">0%</em>
+												<span class="bar" data-max="100" data-value="150"><strong class="num bold"></strong></span>
+												<em class="label_value _right">100%</em>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								
+								<div class="proper_info">
+									<dl>
+										<dt>이번달 소비</dt>
+										<dd><strong class="num bold">750,000</strong><span>원</span></dd>
+									</dl>
+									<dl class="proper_money">
+										<dt>적정 소비</dt>
+										<dd><strong class="num bold">2,200,000</strong><span>원</span></dd>
+									</dl>
+								</div>					
+							</div>
+
+
+							<div class="graph_report no_data">
+								<p>소득정보가 없어서<br>적정 소비 금액을 알려드릴 수 없어요</p>
+								<div class="btn_wrap"><button type="button" name="button" class="btn btn_type_a">소득정보 확인</button></div>
+							</div>
+
+
+
+							<!-- 소비 레벨 평가 -->
+							<div class="level_report">
+								<ul>
+									<li>
+										<div class="tit">
+											<span>소비절제일</span>
+										</div>
+										<div class="help_layer_area">
+											<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">자세히 보기</span></button>
+											<div class="layer_wrap">
+												<p>5천원 이하 사용한 날</p>
+											</div>
+										</div>
+											
+										<p class="cont">상</p>
+										<div class="sub_cont"><strong class="num">3</strong><span>일</span> / <strong class="num">7</strong><span>일</span></div>
+									</li>
+									<li>
+										<div class="tit">소비관심도</div><!-- 문구수정 2019-01-15 ock -->
+										<p class="cont">중</p>
+										<div class="sub_cont"><strong class="num">3</strong><span>건</span> / <strong class="num">20</strong><span>건</span></div>
+									</li>
+								</ul>
+							</div>
+						</article>
+						<!-- 나의 소비생활 -->
+						<article class="life_detail">
+							<h3>나의 소비생활</h3>
+							<!-- 한줄 평 -->
+							<div class="life_review_box">
+								<p><span class="num">30</span>대 남자 평균 보다 <em><span class="num">40</span>만원을<br>덜 썼네요.</em> 소비 칭찬해 :)</p>
+							</div>
+							<!-- 오늘까지 많이 소비한 곳 --><!-- 금액표기 수정 2019-01-14 ock -->
+							<div class="today_incom_ranking">
+								<h4>오늘까지 많이 소비한 곳</h4>
+								<!-- 카테고리 12가지 모두 노출 ock -->
+								<div class="today_graph">
+									<ul class="legend_wrap">
+										<li>
+											<span>나</span>
+										</li>
+										<li>
+											<span>또래</span>
+										</li>
+									</ul>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">1</span> 식비</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">39만5천</span></strong>
+													<div><span class="bar" data-max="100" data-value="100">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">39만5천</span></strong>
+													<div><span class="bar" data-max="100" data-value="100">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">2</span> 생활/쇼핑</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">3,954만</span></strong>
+													<div><span class="bar" data-max="100" data-value="69">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">3억9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="80">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">3</span> 패션/미용</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">395만</span></strong>
+													<div><span class="bar" data-max="100" data-value="20">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">3만9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="25">또래</span></div>
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">4</span> 교통/자동차</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">1만</span></strong>
+													<div><span class="bar" data-max="100" data-value="12">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천9백</span></strong>
+													<div><span class="bar" data-max="100" data-value="45">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">5</span> 주거/통신</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">6</span> 교육</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">7</span> 건강의료</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">8</span> 문화</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">9</span> 금융</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">10</span> 경조사/회비</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">11</span> 지출미포함</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">12</span> 주거비</dt>
+											<dd>
+												<div class="item my_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_income">
+													<strong class="label_value"><span class="num">9천</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</article>
+						<!-- tbd 배너 삭제 2019-01-15 ock -->
+						<!-- <div class="bnner_wrap hide">
+							<img src="../../images/dna/card_banner_201812.png" alt="">
+						</div> -->
+					</div>
+				</div>
+				<!-- 저축/투자 tab_cont -->
+				<div class="tab_content"><!-- div 추가 2018-12-28 -->
+					<div class="finance_life_cont" id="cont-2">
+						<article class="life_report">
+							<!-- 오늘까지 소비한 금액 -->
+							<div class="today_report">
+								<h3 class="today_tit">오늘까지 저축/투자 금액</h3>
+								<div class="today_money">
+									<em class="cash bold">2,000,000</em><span>원</span>
+								</div>
+
+								<div class="report_detail add_dotline3">
+									<dl class="row_type">
+										<dt class="info_tit">금융자산</dt>
+										<dd class="info_cont ico_more_arrow"><strong class="cash bold">105,500,000</strong><span>원</span></dd>
+									</dl>
+									<dl class="row_type">
+										<dt class="info_tit">기타자산</dt>
+										<dd class="info_cont ico_more_arrow"><strong class="cash bold">1</strong><span>건</span></dd>
+									</dl>
+								</div>
+							</div>
+
+							<!-- 소비 레벨 평가 -->
+							<!-- <div class="level_report">
+								<ul>
+									<li>
+										<div class="tit">
+											<span>소비절제일</span>
+										</div>
+										<div class="help_layer_area">
+											<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">자세히 보기</span></button>
+											<div class="layer_wrap">
+												<p>5천원 이하 사용한 날</p>
+											</div>
+										</div>
+											
+										<p class="cont">상</p>
+										<div class="sub_cont"><strong class="num">3</strong><span>일</span> / <strong class="num">7</strong><span>일</span></div>
+									</li>
+									<li>
+										<div class="tit">소비평가</div>
+										<p class="cont">중</p>
+										<div class="sub_cont"><strong class="num">3</strong><span>건</span> / <strong class="num">20</strong><span>건</span></div>
+									</li>
+								</ul>
+							</div> -->
+						</article>
+						<!-- 나의 저축/투자 생활 -->
+						<article class="life_detail"><!-- class 삭제 : sec_btline 2019-01-15 ock -->
+							<h3>나의 저축/투자 생활</h3>
+							<!-- 한줄 평 -->
+							<div class="life_review_box">
+								<p><span class="num">30</span>대 남자 평균 금융자산보다<br><em><span class="num">40</span>% 더 많네요.</em> 짱 부자얌!</p>
+							</div>
+							<!-- 금융자산을 모으는 방법 -->
+							<div class="saving_method">
+								<h4>금융자산을 모으는 방법</h4>
+								<div class="method_graph">
+									<ul class="legend_wrap">
+										<li class="my_data">
+											<span>나</span>
+										</li>
+										<li class="friend_data">
+											<span>또래</span>
+										</li>
+									</ul>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">1</span> 예금/적금</dt>
+											<dd>
+												<div class="item my_method">
+													<strong class="label_value"><em class="num bold">1,200,000</em><span>원</span></strong>
+													<div><span class="bar" data-max="100" data-value="100">나</span></div>
+												</div>
+												<div class="item friend_method">
+													<strong class="label_value"><em class="num bold">900,000</em><span>원</span></strong>
+													<div><span class="bar" data-max="100" data-value="70">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">2</span> 펀드/투자</dt>
+											<dd>
+												<div class="item my_method">
+													<strong class="label_value"><em class="num bold">500,000</em><span>원</span></strong>
+													<div><span class="bar" data-max="100" data-value="20">나</span></div>
+												</div>
+												<div class="item friend_method">
+													<strong class="label_value"><em class="num bold">10,000</em><span>원</span></strong>
+													<div><span class="bar" data-max="100" data-value="10">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">3</span> P2P</dt>
+											<dd>
+												<div class="item my_method">
+													<strong class="label_value"><em class="num bold">250,000</em><span>원</span></strong>
+													<div><span class="bar" data-max="100" data-value="25">나</span></div>
+												</div>
+												<div class="item friend_method">
+													<strong class="label_value"><em class="num bold">0</em><span>원</span></strong>
+													<div><span class="bar" data-max="100" data-value="0">또래</span></div>
+											</dd>
+										</dl>
+									</div>
+									<!-- 반복 -->
+									<div class="graph_group">
+										<dl>
+											<dt><span class="num bold">4</span> 연금/보험</dt>
+											<dd>
+												<div class="item my_method">
+													<strong class="label_value"><span class="num bold">0</span>원</strong><!-- 오타수정 2019-01-14 ock -->
+													<div><span class="bar" data-max="100" data-value="0">나</span></div>
+												</div>
+												<div class="item friend_method">
+													<strong class="label_value"><span class="num bold">800,000</span>원</strong><!-- 오타수정 2019-01-14 ock -->
+													<div><span class="bar" data-max="100" data-value="45">또래</span></div>
+												</div>								
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+	$(document).ready(function(){
+		//layer_wrap 위치
+		ico = $('.ico_circle_help');
+		icoLeft = ico.position().left;
+		icoGap = ico.width()/2;
+		layerGap = $('.layer_wrap').width()/2;
+		layerMargin = icoGap + layerGap;
+		$('.layer_wrap').css({'left': icoLeft, 'margin-left':-layerMargin});
+	});
+
+	function barsGraph4()
+	{
+		setTimeout(function()
+		{
+			$('.graph_group .bar:visible').each(function(){
+				var $this = $(this);
+				//그래프 채우기
+				var maxValue = $this.attr('data-max');
+				var thisValue = $this.attr('data-value');
+				var barWidth = thisValue;
+
+				//100% 이상 케이스 색상변경 추가 2019-01-25 ock
+				if (barWidth >= 100)	{
+					$this.parents('.finance_graph').prev('h4').find('strong').addClass('orange');
+					$this.addClass('orange').find('strong').text(thisValue+'%').css({'opacity':'1'},500);
+				} else if (barWidth < 100)	{
+					$this.css({width:barWidth+'%'}).find('strong').text(thisValue+'%').css({'opacity':'1'},500);
+				}
+
+			});
+		}, 500);
+	} //barsGraph4
+	barsGraph4();
+
+	// 오늘까지 많이 소비한 곳
+	barsGraph2();
+
+	
+	//탭 Fixed 2019-01-25 ock
+	function tabFixed() {
+		var topH = $(".sec_tab").offset().top;
+		$(window).scroll(function(){
+			var stickyTab = $(".sec_tab");
+			var scroll = $(window).scrollTop();
+
+			console.log(scroll);
+			console.log(topH);
+			if (scroll >= topH) {
+				stickyTab.addClass('fixed');
+				$('.tab_content_wrap').css('margin-top',56);
+			} else {
+				stickyTab.removeClass('fixed');
+				$('.tab_content_wrap').css('margin-top',0);
+			}
+		});
+	} tabFixed();
+
+	//탭 클릭시 2019-01-25 ock
+	function tabAction() {
+		var topH = $(".sec_tab").offset().top; //누락되어서 추가
+		//탭 클릭시
+		$('.tab_wrap').on('click','.tab',function(){
+			//탭상단 고정된 상태일때
+			if($(this).parent('.sec_tab').hasClass('fixed')){
+				$('body,html').animate({ scrollTop: topH }, 300);
+			}	
+			// 금융자산을 모으는 방법
+			setTimeout(function(){
+				$('.graph_group .bar:visible').each(function(){
+					var $this = $(this);
+
+					//라벨 배치
+					$this.next('.label_value').show();
+					var barValueWidth = Math.ceil($this.find('.bar').outerWidth()/2);
+					$this.find('.bar_value').css({marginLeft:-barValueWidth});
+
+					//그래프 채우기
+					var maxValue = $this.attr('data-max');
+					var thisValue = $this.attr('data-value');
+					var barWidth = (thisValue/maxValue) * 100;
+						$this.css({width:barWidth+'%'});
+
+					$this.parent().on('click', function(){
+						$(this).addClass('on').siblings().removeClass('on');
+					})
+				})
+			}, 500);
+		});
+	} tabAction();
+</script>
+
+</body>
+</html>

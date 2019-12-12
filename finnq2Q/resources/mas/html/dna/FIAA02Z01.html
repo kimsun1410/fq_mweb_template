@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02F스코어_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_dna.css" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 : FIAA02Z01 -->
+	<div id="contents" class="finance_dna">
+
+		<section class="fscore_wrap sec_space0">
+			<div class="fscore_head">
+				<!-- 기준 -->
+				<p class="standard">
+					<span>업데이트</span><em class="date">2018.10.25</em><em class="time">11:30</em>
+				</p>
+				<div class="fsc_tit">쓸땐 쓰고 받을 땐 받는<br>‘똑똑한 실속파’</div>
+				<div class="fsc_score">
+					<em class="num bold">82</em><span>점</span>
+					<!-- 도움말 물음표 추가 2019-01-08 -->
+					<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">자세히 보기</span></button>
+					<div class="layer_wrap">
+						<p>F.스코어는 국세청, KCB, 통계청 자료를 바탕으로 나의 금융 DNA를 분석한 핀크만의 점수입니다.</p><!-- 문구반영 2019-01-15 ock -->
+					</div>
+				</div>
+				<div class="fsc_detail">
+					<ul>
+						<li>
+							<strong class="num bold">85</strong>
+							<p>소득</p>
+						</li>
+						<li class="border">
+							<strong class="num bold">85</strong>
+							<p>소비</p>
+						</li>
+						<li class="border">
+							<strong class="num bold">85</strong>
+							<p>저축/투자</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="sec_tab fscore_tab">
+				<div class="tab_wrap set_type3">
+					<span class="tab on"><a href="#none">소득</a></span>
+					<span class="tab"><a href="#none">소비</a></span>
+					<span class="tab"><a href="#none">저축/투자</a></span>
+				</div>
+			</div>
+
+			<div class="fscore_cont">
+				<!-- 소득 -->
+				<article class="score_info incom">
+					<div class="score_label num">Score 01</div>
+					<!-- score_user_info 추가 2019-01-24 ock -->
+					<!-- <div class="score_user_info">30대/ 남자/ 직장인 기준</div> 유의사항 문구 유형으로 변경 2019-01-29 ock -->
+					<div class="title">소득<strong class="num bold">80</strong><span>점</span></div>
+					<p class="trait_ment">30대 여성 소득 1분위, 직장인 전체 50%</p>
+					<p class="advice_ment">연령 대비 최고 수준!</p>
+					<div class="money_box">
+						<dl>
+							<dt>나의 소득</dt>
+							<dd><em class="num bold">5,500,000</em><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- 나의 소득 레벨 -->
+					<dl>
+						<dt class="sub_title">나의 소득 레벨</dt><!-- 텍스트 변경 2019-01-08 -->
+						<!-- D: 활성화 영역 li 에 클래스 on 추가
+							ex ) <li class="on">
+						 -->
+						 <dd>
+							<ul class="graph_wrap">
+								<li>
+									<span>5</span>
+									<p><em class="num">500</em>만</p>
+								</li>
+								<li>
+									<span>4</span>
+									<p><em class="num">6,000</em>만</p>
+								</li>
+								<li>
+									<span>3</span>
+									<p><em class="num">8,000</em>만</p>
+								</li>
+								<li>
+									<span>2</span>
+									<p><em class="num">10,000</em>만</p>
+								</li>
+								<li class="on">
+									<span>1</span>
+									<p><em class="num">10,000</em>만+</p>
+								</li>
+							</ul>
+
+						 </dd>
+					</dl>
+					<!-- 직장인 전체 소득 대비 몇 % -->
+					<dl class="add_dotline3">
+						<dt class="sub_title">직장인 전체 소득 대비 몇 %</dt>
+						<!-- D: 활성화 영역 li 에 클래스 on 추가
+							ex ) <li class="on">
+						 -->
+						 <dd>
+							<!-- finance_graph -->
+							<div class="finance_graph">
+								<div class="graph_wrap">
+									<div class="graph_group">
+										<div class="item percent">
+											<em class="label_value _left">100%</em>
+											<span class="bar" data-max="101" data-value="78"><strong class="num bold"></strong></span>
+											<em class="label_value _right">1%</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- list_type -->
+							<ul class="list_type star">
+								<li>30대 남자 직장인 기준</li><!-- 사용자 정보 위치 이동 2019-01-29 ock -->
+							</ul>
+							<!-- guide_round_box -->
+							<div class="guide_round_box bg_white">
+								<p class="guide_text">또래 대비 상위 <strong class="num">10%,</strong><br>조금 더 힘내서 억대연봉 가즈아!</p>
+								<div class="view_more"><button type="button" class="btn btn_type_j">오늘까지 입금 내역 보기</button></div>
+							</div>
+						 </dd>
+					</dl>
+				</article>
+
+				<!-- 소비 -->
+				<article class="score_info spend bg_white">
+					<div class="score_label num">Score 02</div>
+					<!-- score_user_info 추가 2019-01-24 ock -->
+					<!-- <div class="score_user_info">30대/ 남자/ 직장인 기준</div> 유의사항 문구 유형으로 변경 2019-01-29 ock -->
+					<div class="title">소비<strong class="num bold">80</strong><span>점</span></div>
+					<p class="trait_ment">자린고비의 부활! 절제의 신!</p>
+					<p class="advice_ment">수입의 <span class="num">25%</span>를 소비하고 있습니다.</p>
+					<!-- money_box -->
+					<div class="money_box">
+						<dl>
+							<dt>최근 <span class="num">30</span>일 소비</dt>
+							<dd><em class="num bold">1,050,000</em><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- 나의 소비 레벨 -->
+					<dl>
+						<dt class="sub_title">나의 소비 레벨</dt><!-- 텍스트 변경 2019-01-08 -->
+						<!-- D: 활성화 영역 li 에 클래스 on 추가
+							ex ) <li class="on">
+						 -->
+						 <dd>
+							<ul class="graph_wrap">
+								<li>
+									<span>5</span>
+									<p><em class="num">80</em>만</p>
+								</li>
+								<li>
+									<span>4</span>
+									<p><em class="num">160</em>만</p>
+								</li>
+								<li>
+									<span>3</span>
+									<p><em class="num">200</em>만</p>
+								</li>
+								<li>
+									<span>2</span>
+									<p><em class="num">300</em>만</p>
+								</li>
+								<li class="1">
+									<span>5</span>
+									<p><em class="num">300</em>만+</p>
+								</li>
+							</ul>
+						 </dd>
+					</dl>
+					<!-- 나의 소득 대비 소비 수준 -->
+					<dl class="add_dotline3">
+						<dt class="sub_title">나의 소득 대비 소비 수준</dt>
+						<!-- D: 활성화 영역 li 에 클래스 on 추가
+							ex ) <li class="on">
+						 -->
+						 <dd>
+							<!-- finance_graph -->
+							<div class="finance_graph">
+								<div class="graph_wrap">
+									<div class="graph_group">
+										<div class="item percent">
+											<em class="label_value _left">0%</em>
+											<span class="bar" data-max="100" data-value="30" data-guide="60"><strong class="num bold"></strong></span>
+											<span class="bar guide_bar" data-max="100" data-value="60"><em>적정소비</em><strong class="num bold"></strong></span>
+											<em class="label_value _right">100%</em>
+										</div>
+									</div>
+								</div>
+							</div><br><br><br>
+							<!-- 적정 소비 초과 한 경우 -->
+							<div class="finance_graph">
+								<div class="graph_wrap">
+									<div class="graph_group">
+										<div class="item percent">
+											<em class="label_value _left">0%</em>
+											<span class="bar" data-max="100" data-value="80" data-guide="60"><strong class="num bold"></strong></span>
+											<span class="bar guide_bar" data-max="100" data-value="60"><em>적정소비</em><strong class="num bold"></strong></span>
+											<em class="label_value _right">100%</em>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- list_type -->
+							<ul class="list_type star">
+								<li>30대 남자 직장인 기준</li><!-- 사용자 정보 위치 이동 2019-01-29 ock -->
+							</ul>
+							<!-- guide_round_box -->
+							<div class="guide_round_box">
+								<p class="guide_text">총 수입의 <strong class="num">60%(2,200,000원)</strong>까지만<br>소비하는게 좋아요</p><!-- 적정 소비 초과 한 경우 -->
+								<div class="view_more"><button type="button" class="btn btn_type_j">오늘까지 소비 내역 보기</button></div>
+							</div>
+						 </dd>
+					</dl>
+				</article>
+
+				<!-- 저축/투자 -->
+				<article class="score_info save">
+					<div class="score_label num">Score 03</div>
+					<!-- score_user_info 추가 2019-01-23 ock -->
+					<!-- <div class="score_user_info">30</span>대/ 남자 기준</div> 유의사항 문구 유형으로 변경 2019-01-29 ock -->
+					<div class="title">저축/투자<strong class="num bold">80</strong><span>점</span></div>
+					<p class="trait_ment">쓸때 잘쓰고 관리도 잘하는 꼼꼼파</p>
+					<p class="advice_ment">어서와, 저축은 처음이지?</p>
+					<!-- money_box -->
+					<div class="money_box">
+						<dl>
+							<dt>나의 금융자산</dt>
+							<dd><em class="num bold">50,000,000,000</em><span>원</span></dd>
+						</dl>
+					</div>
+					<!-- 나의 금융자산 레벨 -->
+					<dl class="my_asset_level add_dotline3"><!-- class 추가 : my_asset_level add_dotline3 2019-01-29 ock -->
+						<dt class="sub_title">나의 금융자산 레벨</dt><!-- 텍스트 변경 2019-01-08 -->
+						<!-- D: 활성화 영역 li 에 클래스 on 추가
+							ex ) <li class="on">
+						 -->
+						 <dd>
+							<ul class="graph_wrap">
+								<li>
+									<span>5</span>
+									<p><em class="num">2</em>천만</p>
+								</li>
+								<li>
+									<span>4</span>
+									<p><em class="num">4</em>천만</p>
+								</li>
+								<li>
+									<span>3</span>
+									<p><em class="num">6</em>천만</p>
+								</li>
+								<li>
+									<span>2</span>
+									<p><em class="num">8</em>천만</p>
+								</li>
+								<li class="on">
+									<span>1</span>
+									<p><em class="num">1</em>억+</p>
+								</li>
+							</ul>
+						 </dd>
+					</dl>
+
+					<!-- money_box 추가 2019-01-29 ock -->
+					<div class="money_box">
+						<dl>
+							<dt>내 저축/투자</dt>
+							<dd><em class="num bold">57,2000,000</em><span>원</span></dd>
+						</dl>
+					</div>
+
+					<!-- 나의 소득 대비 저축 수준 -->
+					<dl class="my_saving_level"><!-- class 추가 : my_saving_level 2019-01-29 ock -->
+						<dt class="sub_title">나의 소득 대비 저축 수준</dt>
+						<!-- D: 활성화 영역 li 에 클래스 on 추가
+							ex ) <li class="on">
+						 -->
+						 <dd>
+							<!-- finance_graph -->
+							<div class="finance_graph">
+								<div class="graph_wrap">
+									<div class="graph_group">
+										<div class="item percent">
+											<em class="label_value _left">0%</em>
+											<span class="bar" data-max="100" data-value="12" data-guide="30"><strong class="num bold"></strong></span>
+											<span class="bar guide_bar" data-max="100" data-value="30"><em>추천</em><strong class="num bold"></strong></span>
+											<em class="label_value _right">100%</em>
+										</div>
+									</div>
+								</div>
+							</div><br><br><br>
+							<!-- 추천 저축 초과 한 경우 -->
+							<div class="finance_graph">
+								<div class="graph_wrap">
+									<div class="graph_group">
+										<div class="item percent">
+											<em class="label_value _left">0%</em>
+											<span class="bar" data-max="100" data-value="50" data-guide="30"><strong class="num bold"></strong></span>
+											<span class="bar guide_bar" data-max="100" data-value="50"><em>추천</em><strong class="num bold"></strong></span>
+											<em class="label_value _right">100%</em>
+										</div>
+									</div>
+								</div>
+							</div><br><br><br>
+
+							<!-- 추천 저축 초과 한 경우 -->
+							<div class="finance_graph">
+								<div class="graph_wrap">
+									<div class="graph_group">
+										<div class="item percent">
+											<em class="label_value _left">0%</em>
+											<span class="bar" data-max="100" data-value="50" data-guide="30"><strong class="num bold"></strong></span>
+											<span class="bar guide_bar" data-max="100" data-value="5"><em>추천</em><strong class="num bold"></strong></span>
+											<em class="label_value _right">100%</em>
+										</div>
+									</div>
+								</div>
+							</div><br><br><br>
+
+							<!-- 추천 저축 초과 한 경우 -->
+							<div class="finance_graph">
+								<div class="graph_wrap">
+									<div class="graph_group">
+										<div class="item percent">
+											<em class="label_value _left">0%</em>
+											<span class="bar" data-max="100" data-value="150" data-guide="30"><strong class="num bold"></strong></span>
+											<span class="bar guide_bar" data-max="100" data-value="30"><em>추천</em><strong class="num bold"></strong></span>
+											<em class="label_value _right">100%</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- list_type -->
+							<ul class="list_type star">
+								<li>30대 남자 기준</li><!-- 사용자 정보 위치 이동 2019-01-29 ock -->
+							</ul>
+							<!-- guide_round_box -->
+							<div class="guide_round_box bg_white">
+								<p class="guide_text">총 수입의 <strong class="num">30%(1,500,000원)</strong>까지<br>저축하는게 좋아요</p>
+								<!-- <p class="guide_text">총 수입의 <strong class="num">50%</strong>를<br>저축하셨네요!</p> --><!-- 추천 저축 초과 한 경우 -->
+								<div class="view_more"><button type="button" class="btn btn_type_j">오늘까지 저축 내역 보기</button></div>
+							</div>
+						 </dd>
+					</dl>
+				</article>
+			</div>
+		</section>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+	var top1 = $('.score_info.incom').offset().top;
+	var top2 = $('.score_info.spend').offset().top;
+	var top3 = $('.score_info.save').offset().top;
+	$(window).scroll(function(){
+		scroll = $(window).scrollTop();
+		if (scroll < top1 + 20) {
+			$('.fscore_tab').removeClass('fixed').stop().animate({'top':'-60','opacity':'0'},60);
+		}	else if ( top1 + 20 <= scroll && scroll < top2 - 60) {
+			$('.fscore_tab').addClass('fixed').stop().animate({'top':'0','opacity':'1'},60);
+			$('.fscore_tab .tab_wrap .tab:eq(0)').addClass('on').siblings().removeClass('on');
+		} else if (top2 - 60 <= scroll && scroll < top3 - 90) {
+			$('.fscore_tab .tab_wrap .tab:eq(1)').addClass('on').siblings().removeClass('on');
+		} else if (top3 - 90 <= scroll) {
+			$('.fscore_tab .tab_wrap .tab:eq(2)').addClass('on').siblings().removeClass('on');
+		}
+	});
+
+	$('.tab_wrap').on('click','.tab',function(){
+		var tabIdx = $(this).index();
+		if (tabIdx == 0)	{
+			$('html,body').stop().animate({scrollTop:top1}, '500');
+		} else if (tabIdx == 1)	{
+			$('html,body').stop().animate({scrollTop:top2-50}, '500');
+		} else{
+			$('html,body').stop().animate({scrollTop:top3-50}, '500');
+		}		
+	});
+
+
+	// 직장인 전체 소득 대비
+
+	function barsGraph4()
+	{
+		$(window).scroll(function()
+		{
+			if ($(window).scrollTop() > 0)
+			{
+				setTimeout(function()
+				{
+					$('.graph_group .bar:visible').each(function(){
+						var $this = $(this);
+
+						//라벨 배치
+						$this.next('.label_value').show();
+						var barValueWidth = Math.ceil($this.find('.bar').outerWidth()/2);
+						$this.find('.bar_value').css({marginLeft:-barValueWidth});
+
+						//그래프 채우기
+						var maxValue = $this.attr('data-max');
+						var thisValue = $this.attr('data-value');
+						var guideValue = $this.attr('data-guide');
+						
+						var barWidth = thisValue;
+
+						//소득
+						if ($this.parents('.score_info').hasClass('incom')){
+							var barWidth = (maxValue - thisValue);
+						} else{
+							var barWidth = thisValue;
+						}
+						//소비
+						if ($this.parents('.score_info').hasClass('spend')){
+							if (thisValue > guideValue)	{
+								$this.addClass('orange');
+								if ($this.next().hasClass('guide_bar')){
+									$this.next('.guide_bar').addClass('purply');
+								}
+							} else if (thisValue > 100){
+								barWidth = 100;
+								$this.addClass('orange');
+								if ($this.next().hasClass('guide_bar')){
+									$this.next('.guide_bar').addClass('purply');
+								}
+							} 
+						//저축
+						} else if ($this.parents('.score_info').hasClass('save')){
+							if (thisValue > guideValue)	{
+								$this.addClass('yellow');
+								if ($this.next().hasClass('guide_bar')){
+									$this.next('.guide_bar').addClass('purply');
+								}
+							} else if (thisValue > 100){
+								barWidth = 100;
+								$this.addClass('yellow');
+								if ($this.next().hasClass('guide_bar')){
+									$this.next('.guide_bar').addClass('purply');
+								}
+							}
+						}
+
+
+						$this.css({width:barWidth+'%'}).find('strong').text(thisValue+'%').css({'opacity':'1'},500);
+
+						/*	 if (barWidth >= 100)	{
+							$this.css({width:100+'%'}).find('strong').text(thisValue+'%').css({'opacity':'1'},500);
+						$this.addClass('red');
+							if ($this.next().hasClass('guide_bar')){
+								$this.next('.guide_bar').addClass('purply');
+							}
+						} */
+
+						/* var guideWidth = $this.width();
+						if ($this.hasClass('guide_bar')){
+							if (guideWidth <= 50){
+								$this.addClass('right');
+							} else{
+								$this.addClass('left');
+							}
+						} */
+
+						
+					});
+				}, 500);
+			}
+		});
+	} //barsGraph4
+	barsGraph4();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>FDS 이상거래 탐지_위험도 높음</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASB06Z07">FDS 이상거래 탐지_위험도 높음</button>
+			</span>
+		</div>
+
+		<div id="MASB06Z07" class="modal_wrap">
+			<div class="modal_content">
+
+				<!-- 2018-04-06 팝업 형식 변경 -->
+				<div class="sec_title">
+					<h3 class="accent_txt"><strong>이상거래로 탐지되었습니다.</strong></h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_info round_box">
+						<h4 class="account_copy">일부 서비스의 이용이 중단됩니다.<br><!-- 문구 수정 2018-04-25 ock -->
+						(채우기, 송금, 내계좌로 이체 등)</h4><!-- 문구 수정 2018-04-25 ock -->
+						<div class="bul_guide">
+							<p class="star_type indent">Finnq 고객센터(<a href="tel:1566-4949" class="tel_num">1566-4949</a>)로 문의해 주세요.</p>
+						</div>
+					</div><!-- //round_box -->
+					<div class="flex_wrap set_type1">
+						<span class="item on"><button type="button" name="button" class="btn_type_f">확인</button></span>
+					</div>
+				</div><!-- //scroll_wrap -->
+				<!-- //2018-04-06 팝업 형식 변경 -->
+
+			</div><!-- //modal_content -->
+		</div><!-- //modal_wrap -->
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

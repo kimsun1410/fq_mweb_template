@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02소비내역_01날짜별_01_web_CBSJ69Z00</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo">
+
+		<section class="spend_date">
+			
+			<div class="sec_head spend_common">
+				<div class="date_control">
+					<button type="button" name="button" class="btn ico_prev">previous month</button>
+					<strong class="date">2017.02</strong>
+					<button type="button" name="button" class="btn ico_next end" disabled="disabled">next month</button><!-- Class: "end", disable둘다 화면표시는 같습니다 -->
+				</div>
+
+				<!-- account_info : 01_습관저금_조회 -->
+				<div class="account_info">
+					<div class="money_total">
+						<em class="cash bold">320,650</em><span>원</span>
+						<button class="btn_ico ico_circle_plus"><span class="blind">추가</span></button>
+					</div>
+				</div>
+
+				<div class="budget_info add_topline">
+					<div class="tit">예산</div>
+					<div class="money_total">
+						<em class="cash">600,000</em><span>원</span>
+						<button class="btn_ico ico_pen_edit"><span class="blind">편집</span></button>					
+					</div>
+				</div>
+			</div><!-- //sec_head -->
+
+			<div class="sec_tab">
+				<div class="tab_wrap set_type3"> <!-- 3개 -->
+					<span class="tab on"><a href="#none">날짜별</a></span>
+					<span class="tab"><a href="#none">분류별</a></span>
+					<span class="tab"><a href="#none">수단별</a></span>
+				</div>
+			</div>
+			<div class="sec_history spend_detail wrap_result">
+				<div class="no_result">
+					<i class="ico ico_chat_no2"></i>
+					<p>등록된 소비 내역이 없습니다.</p>
+				</div>
+			</div><!-- //spend_detail -->
+		</section>
+		<!-- 하단 붙임 -->
+
+
+		<!-- sticky_wrap place -->
+		<!--div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">완료</button>
+		</div --><!-- 1차 수정 : 완료버튼 삭제 -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	var topH = $(".sec_head").outerHeight();
+	var ViewH = $("section").outerHeight();
+	$(window).scroll(function(){
+	  if(ViewH >= 800) {
+		  var sticky = $('.sec_tab'),
+			  scroll = $(window).scrollTop();
+		//2018-03-30 스크립트 변경 phj
+		var graph = $('.sec_history.spend_detail.spend_history');
+
+		if (scroll >= topH) {
+			sticky.addClass('fixed');
+			$('.sec_graph').css('margin-top',56);
+			$('.sec_history.spend_detail').not(graph).css('margin-top',56);
+		} else {
+			sticky.removeClass('fixed');
+			$('.sec_graph').css('margin-top',0);
+			$('.sec_history.spend_detail').not(graph).css('margin-top',0);
+		}
+		//2018-03-30 스크립트 변경 phj
+	  }
+	});
+});
+</script>
+</body>
+</html>

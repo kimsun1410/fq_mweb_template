@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>대출심사 | 비상금 대출</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal">대출심사 중단 팝업</button>
+			</span>
+		</div>
+
+		<!--
+			클래스 visible로 제어
+			인증번호 오입력
+		-->
+		<div class="modal_wrap visible normal">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">
+						대출한도 확인을 중단하겠습니까?
+					</h3>
+					<p class="star_type">한도조회는 신용등급에 영향을 미치지 않습니다.
+				</div>
+
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="close_modal btn_type_f">아니오</button></span>
+					<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">네</button></span>
+				</div>
+
+			</div>
+		</div>
+		<!-- //인증번호 오입력 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+</body>
+</html>

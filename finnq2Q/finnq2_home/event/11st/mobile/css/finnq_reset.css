@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* reset */
+html, body {height: 100%; min-height: 100%; font-family: "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; font-size: 100%; line-height: 1.3; text-decoration: none; color: #222; vertical-align: middle; -webkit-font-smoothing: antialiased; background: #fff;}
+body {-webkit-text-size-adjust: none;}
+
+/*뷰표트 변환시 폰트크기 자동확대 방지*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {font-family: "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; margin: 0; padding: 0; font-size: 14px; letter-spacing: -1px; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased;}
+address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section {display: block; margin: 0; padding: 0;}
+figcaption {display: block; width: 0; height: 0; position: absolute; top: -9999px; font-size: 0; text-indent: -9999px;}
+hr, caption, legend {display: none; text-indent: -999px;}
+h1, h2, h3, h4, h5, h6 {font-family: "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; letter-spacing: -1px; word-break: break-all; white-space: normal;}
+fieldset, img {border: none; vertical-align: middle;}
+ol, ul, li, dl, dt, dd {font-family: "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; list-style: none; word-break: break-all; white-space: normal;}
+table, th, td {border: 0px; border-spacing: 0px; border-collapse: collapse; word-break: break-all; white-space: normal; font-family: "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif;}
+table {width: 100%;}
+fieldset, iframe {width: 100%; border: 0px;}
+em, i, address, strong {font-style: normal; font-weight: normal; word-break: break-all; white-space: normal;}
+button, a, select, input, label {border: none; background: none; font-family: "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; letter-spacing: -1px; vertical-align: middle; word-break: break-all; white-space: normal;}
+button::-moz-focus-inner {padding: 0px;}
+
+a { -webkit-tap-highlight-color:transparent;}
+
+
+/*
+button, a {-webkit-tap-highlight-color: rgba(0, 0, 0, 0.18);}
+*/
+/* a, 버튼에만 적용으로 수정 2018-03-24 ock */
+.no_highlight {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+
+/* highlight 없는 class 추가 2018-04-18 ock */
+/* 웹접근성 */
+.blind {position: absolute; top: -9999px; left: -9999px; visibility: hidden; width: 0; height: 0; overflow: hidden;}
+.inp_blind {visibility: hidden;}
+.ellipsis {white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; overflow: hidden;}
+.clearfix:after {content: '.'; display: block; clear: both; height: 0; line-height: 0; visibility: hidden;}
+.hide {display: none;}
+.po_static {position: static !important;}
+.num_space {letter-spacing: 0 !important;}
+
+input:focus, select:focus, button:focus, textarea:focus {outline: none;}
+a, a:hover, a:focus, a:active, a:visited, a:link {font-family: "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; text-decoration: none; color: #222; word-break: break-all; white-space: normal;}
+input[type='text'], input[type='password'], input[type='submit'], input[type='search'], input[type='date'], input[type='tel'], input[type='email'], input[type='number'] {width: 100%; height: 46px; border: 1px solid #e0e0e0; -webkit-appearance: none; border-radius: 4px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 1px 20px 0; font-size: 16px; caret-color: #731aed;}
+textarea {caret-color: #731aed;}
+
+input[type='text'].inp_focus, input[type='password'].inp_focus, input[type='submit'].inp_focus, input[type='search'].inp_focus, input[type='date'].inp_focus, input[type='tel'].inp_focus, input[type='email'].inp_focus, input[type='number'].inp_focus {border-color: #731aed; color: #731aed; background: #f5eeff;}
+
+input:checked[type='checkbox'] {background-color: #666; -webkit-appearance: checkbox;}
+.ios input[type='text'], .ios input[type='password'], .ios input[type='submit'], .ios input[type='search'], .ios input[type='date'], .ios input[type='tel'], .ios input[type='number'] {padding: 0 20px 2px;}
+input[type='text']:disabled, input[type='password']:disabled, input[type='submit']:disabled, input[type='search']:disabled, input[type='date']:disabled, input[type='tel']:disabled, input[type='number']:disabled, select:disabled {background-color: #eee; color: #999; opacity: 1;}
+
+/* 비활성화 폰트 컬러만 변경 */
+input[type='text'].readonly, input[type='password'].readonly, input[type='submit'].readonly, input[type='search'].readonly, input[type='date'].readonly, input[type='tel'].readonly, input[type='number'].readonly, select.readonly {background-color: #eee; color: #999; opacity: 1;}
+input.copy_test {position: absolute; opacity: 0; top: -9999em; left: -9999em; /* height:1px; width:inherit; border:none;*/}
+select {width: 100%; height: 46px; border: 1px solid #e0e0e0; -webkit-appearance: none; border-radius: 4px; -webkit-box-sizing: border-box; box-sizing: border-box; background: #fff; font-size: 16px; line-height: 20px;}
+textarea {width: 100%; border: 1px solid #e0e0e0; -webkit-appearance: none; border-radius: 4px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 15px 20px; font-size: 16px; line-height: 20px;}
+.ios textarea {padding-left: 17px;}
+button, input[type='button'], input[type='submit'], input[type='reset'], input[type='file'] {-webkit-appearance: button; border-radius: 0;}
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance: none;}
+input:focus, select:focus, button:focus, textarea:focus {outline: none;}
+

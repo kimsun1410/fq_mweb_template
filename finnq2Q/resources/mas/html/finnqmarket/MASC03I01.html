@@ -1,0 +1,76 @@
+<!-- //************************************************
+    decrition by : kim tae yang
+    update : 2019-11-01
+    원스탑 혁신금융대출
+************************************************// -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>17_혁신금융대출_03실명정보확인_01_MASC03I01_web</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+</head>
+<body>
+
+<div class="wrap">
+	<div id="contents" class="one_stop add_sticky white">
+		<section>
+
+			<div class="sec_title">
+				<h2>주민등록번호 확인</h2>
+			</div>
+
+			<div class="sec_member_input mgt40">
+
+				<ul class="flex_wrap set_type1">
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" placeholder="이름 (성 + 이름)" class="" disabled="disabled" value="홍길동">
+						<p class="remark hide">이름을 입력해 주세요.</p>
+					</li>
+
+					<li class="input_wrap type_3">
+						<div class="item"><input type="number"  pattern="\d*" data-name="inpFocus" placeholder="주민번호 앞자리" disabled value="920222"></div>
+						<div class="item mgt0">-</div>
+                        <div class="item mgt0"><input type="number" pattern="\d*"  data-name="inpFocus" placeholder="주민번호 뒷자리" max="9999999"></div>
+                        <!-- 인풋 오류시 class="hide" 삭제  -->
+                        <p class="remark ">주민등록번호를 확인해 주세요.</p>
+                    </li>
+
+                    <!-- 인풋 오류시 
+                    <li class="input_wrap type_3 mgt4">
+                        <div class="item"><input type="number" pattern="\d*" data-name="inpFocus" placeholder="주민번호 앞자리" disabled value="920222"></div>
+                        <div class="item mgt0">-</div>
+                        // 인풋 오류시 class="inp_error" 추가 
+                        <div class="item mgt0 inp_error"><input type="number" pattern="\d*" data-name="inpFocus" placeholder="주민번호 뒷자리" max="9999999"></div>
+                        // 인풋 오류시 class="hide" 삭제 
+                        <p class="remark ">주민등록번호를 확인해 주세요.</p>
+                    </li> -->
+				</ul>
+			</div>
+		</section>
+    </div>
+    <div class="sticky_wrap set_type1">
+        <!-- disabled="disabled" 추가 버튼 비활성 -->
+        <button type="button" name="" class="btn btn_type_apply" disabled="disabled">확인</button>
+    </div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){  
+        $('input[type=number][max]:not([max=""])').on('input', function(ev) {
+            var $this = $(this);
+            var maxlength = $this.attr('max').length;
+            var value = $this.val();
+            if (value && value.length >= maxlength) {
+            $this.val(value.substr(0, maxlength));
+            }
+        });
+    }); 
+</script>
+</body>
+</html>

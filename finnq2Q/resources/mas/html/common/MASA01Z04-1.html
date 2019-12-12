@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>로그인 - 임시 풀팝업 : MASA01Z04-1</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" name="button" class="btn_select btn_type_a open_modal" data-triger="MASA01Z04-1" data-mtype="fullpop">로그인 - 임시 풀팝업 : </button>
+			</span>
+		</div>
+
+
+		<div id="MASA01Z04-1" class="modal_wrap fullpop "><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content pop_password"><!-- 개별 팝업 Class pop_direct_input -->
+
+				<!-- <div class="sec_head">
+					<h2 class="modal_title">비밀번호 인증</h2>
+					<button class="close_modal"><span class="blind">창닫기</span></button>
+				</div> --> <!-- <button class="close_modal" onclick="self.close();"><span class="blind">창닫기</span></button> 팝업 형태의 페이지인 경우 --> <!-- 2018-02-08 개발팀과 협의 후 풀팝업의 타이틀 일괄 삭제 phj -->
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+
+					<!-- 2018-03-24 비밀번호 형식 변경 phj -->
+					<div class="sec_new_password">
+						<div class="wrap_password six_area">
+							<!-- <p class="type_password">
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</p> -->
+							<p class="bg_password"> <!-- bg_error -->
+								<i class="on"><img src="../../images/common/ico-pw.png"></i>
+								<i class="on"><img src="../../images/common/ico-pw.png"></i>
+								<i class="on"><img src="../../images/common/ico-pw.png"></i>
+								<i class="on"><img src="../../images/common/ico-pw.png"></i>
+								<i class="on"><img src="../../images/common/ico-pw.png"></i>
+								<i></i>
+							</p>
+						</div>
+						<p class="password_remark hide">세 자리 이상의 연속된 숫자는 사용할 수 없습니다.</p>
+					</div><!-- //2018-03-24 비밀번호 형식 변경 phj -->
+
+					<div class="forget_password">
+						<span>비밀번호를 잊으셨다면,</span> <!-- 2018-03-26 오타 수정 phj -->
+						<em class="btn_text01 ico">
+							<a href="#none" class="ico_arrow">비밀번호 재설정</a>
+						</em>
+					</div>
+
+
+
+						<!-- <div class="sec_password">
+							<div class="password_box">
+								<p class="img_password">
+									테스트용 이미지 추가 2018-03-08
+									<img src="../../images/common/password-dot-on.png">
+									<img src="../../images/common/password-dot-on.png">
+									<img src="../../images/common/password-dot-on.png">
+									<img src="../../images/common/password-dot-on.png">
+									<img src="../../images/common/password-dot-on.png">
+									<img src="../../images/common/password-dot-on.png">
+								</p>
+							</div>
+						</div>
+						
+						<div class="sec_text_btn">
+							<div class="btn_text01">
+								<a href="#none" class="ico_arrow">비밀번호 재설정</a>
+							</div>
+						</div>//비밀번호 인증 -->
+					
+				</div>
+
+			</div><!-- //modal_content -->
+		</div>
+
+		
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible');
+
+	
+});
+</script>
+
+
+</body>
+</html>

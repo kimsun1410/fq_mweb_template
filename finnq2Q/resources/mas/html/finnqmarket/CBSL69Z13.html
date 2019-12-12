@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01메인_02내계좌현황_03계좌내역_03관리_만기일시상환_CBSL69Z13</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="market">
+		<section class="emergency_inquiry dgbloan">
+
+			<div class="sec_title">
+				<!-- <h2 class="title"><a href="#" class="no_highlight">통장별칭</a></h2> -->
+				<h2 class="subject black">비상금대출</h2>
+				<p class="guide_txt">DGB대구 <em class="num">562-851235-64710</em></p>
+
+				<!-- <div class="thumb_lable_wrap mgt10">
+					<span class="on">주계좌</span>
+					<span>해외송금</span>
+					<span>대출약정</span>
+					<span>월정액충전</span>
+				</div> -->
+			</div>
+
+			<!-- 19.08.26 추가 -->
+			<div class="my-loan-account">
+				<ul>
+					<li>
+						<div class="title">출금가능금액</div>
+						<div class="cont">
+							<p><em class="num bold">1,000,000</em>원</p>
+							<button type="button" class="btn-out">꺼내쓰기</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 19.08.26 추가 -->
+
+			<!-- <div class="adm_list">
+				<ul>
+					<li>
+						<div class="tit">핀크계좌에 연결</div>
+						<div class="info">
+							<a href="#" class="btn_link">
+								연결중
+								<i class="ico ico_arrow_more"></i>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div> -->
+
+			<div class="sec_insinfo">
+				<div class="ins_info add_dotline mgb45">
+					<ul>
+						<!-- 19.08.26 추가 -->
+						<li>
+							<div class="tit">대출구분</div>
+							<div class="money_total">만기일시상환</div>
+						</li>
+						<!-- //19.08.26 추가 -->
+						<li>
+							<div class="tit">최초 대출금액</div>
+							<div class="money_total">
+								<em class="num">500,000</em>원
+							</div>
+						</li>
+						<li>
+							<div class="tit">대출잔액</div>
+							<div class="money_total">
+								<em class="num">200,000</em>원
+							</div>
+						</li>
+						<li>
+							<div class="tit">대출기간</div>
+							<div class="money_total">
+								<em class="num">1년(2020.07.11까지)</em>
+							</div>
+						</li>
+						<li>
+							<div class="tit">금리</div>
+							<div class="money_total">
+								연 <em class="num">5.85%</em>
+							</div>
+						</li>
+						<li>
+							<div class="tit">이자납입일</div>
+							<div class="money_total">매월 <em class="num">16</em>일</div>
+						</li>
+						<li>
+							<div class="tit">연체여부</div>
+							<div class="money_total">정상</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="loan_info_add">
+				<div class="info_wrap">
+					<p class="tit">다음 이자납입 안내</p>
+					<ul>
+						<li>출금일시 : <em class="num">2019.08.10</em></li>
+						<li>출금계좌 : KEB하나 1234****7898</li>
+					</ul>
+
+					<!-- 19.08.26 추가 -->
+					<button type="button" class="btn-insert">이자넣기</button>
+					<!-- //19.08.26 추가 -->
+				</div>
+			</div>
+			<div class="secede_inquiry">
+				<ul>
+					<li>
+						계좌 및 금리관련
+						<a href="tel:1800-1111" class="tel num">DGB<em class="dft">대구</em> 0000-0000</a>
+					</li>
+					<li>
+						<a href="#none;" target="_blank" class="web">원금/이자 납입 내역<i class="ico ico_arrow_more"></i></a>
+					</li>
+					<!-- 19.07.29 수정 -->
+					<!-- <li>
+						<a href="#none;" target="_blank" class="web">약정서 보기<i class="ico ico_arrow_more"></i></a>
+					</li> -->
+					<!-- //19.07.29 수정 -->
+					<li>
+						<a href="#none;" target="_blank" class="web">대출 상환하기<i class="ico ico_arrow_more"></i></a>
+					</li>
+				</ul>
+
+			</div>
+		</section>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('#fund_inquiry').hide();
+	setTimeout(function(){
+		$('#fund_inquiry').show();
+		drawProgress('#fund_inquiry');
+	}, 400)
+
+	$(".btn_interest button").on("click", function(){
+		$(this).next('p').stop().animate({'opacity':'1'}, 400)
+	});
+});
+</script>
+</body>
+</html>

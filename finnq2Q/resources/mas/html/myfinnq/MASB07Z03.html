@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>ATM 출금</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="MASB07Z03">
+	<div id="contents" class="myfinnq add_sticky">
+
+		<section class="available_time">
+			<!-- sec_title -->
+			<div class="sec_title">
+				<h3 class="accent_txt"><em class="num">ATM</em>기기에 아래 <strong>인증번호를<br>입력</strong>해 주세요</h3> <!-- 2018-02-02 텍스트 변경 phj -->
+				<p class="guide_txt">
+					<strong>유효시간</strong> <em><span>04</span>분 <span>29</span>초</em>
+				</p>
+			</div>
+			<div class="sec_time_cycle">
+				<div class="cycle_wrap">
+					<strong>654321</strong>
+				</div>
+				<div id="indicatorContainer" class="clock" style="position:relative;z-index:1;"></div>
+			</div>
+			<div class="box_btn">
+				<button type="button" name="button" class="btn btn_type_h">인증번호 재발행</button>
+			</div>
+		</section>
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button> <!-- 2018-02-02 텍스트 변경 phj -->
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<!-- 임시 -->
+<script>
+//radialIndicator.js v1.3.1, Sudhanshu Yadav, released under the MIT license.
+//http://ignitersworld.com/lab/radialIndicator.html#documentation
+//2018-02-02 원형 크기 변경에 따른 radius 값 수정 phj
+var i = 0;
+var radialObj = radialIndicator('#indicatorContainer', {
+	radius: 97,
+	barWidth: 6,
+	barBgColor : 'transparent',
+	barColor: '#8848ff',
+	minValue: 0,
+	maxValue: 60,
+	roundCorner: true,
+	displayNumber: false
+	//frameTime: 15
+});
+setInterval(function () {
+	radialObj.value(i+=1);
+}, 3000);
+</script>
+
+</body>
+</html>

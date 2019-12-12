@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>09신용관리_01서브메인</title><!-- 임시 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <link rel="stylesheet" href="../../css/ui_dna.css" />
+
+    <!-- # chart # -->
+    <link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+    <!-- rMateChartH5 라이센스 -->
+    <!-- <script src="rMateChartH5/LicenseKey/rMateChartH5License.js" ></script> -->
+    <!-- 실제적인 rMateChartH5 라이브러리 > 수정불가-! -->
+    <script language="javascript" type="text/javascript" src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+    <script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+
+
+    <script type="text/javascript">
+    // -----------------------차트 설정 시작-----------------------
+
+    // rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+    var chartVars12 = "rMateOnLoadCallFunction=rMateChartOnLoad12";
+
+
+    // ------- 테스트용 임시데이터
+
+    // 차트 데이터
+    var chartData12 = [
+        {"Month":"3", "grade_num":0},
+        {"Month":"4", "grade_num":750},
+        {"Month":"5", "grade_num":820},
+        {"Month":"6", "grade_num":1000},
+        {"Month":"7", "grade_num":840},
+        {"Month":"8", "grade_num":890}
+    ];
+
+
+    // @ 차트 로드 - setData
+    function rMateChartOnLoad12(){
+        chart12.setLayout(layoutStr12);
+        chart12.setData(chartData12);
+    }
+
+    // rMateChart 를 생성합니다.
+    // 파라메터 (순서대로)
+    //  1. 차트의 id ( 임의로 지정하십시오. )
+    //  2. 차트가 위치할 div 의 id (즉, 차트의 부모 div 의 id 입니다.)
+    //  3. 차트 생성 시 필요한 환경 변수들의 묶음인 chartVars
+    //  4. 차트의 가로 사이즈 (생략 가능, 생략 시 100%)
+    //  5. 차트의 세로 사이즈 (생략 가능, 생략 시 100%)
+    rMateChartH5.create("chart12", "chartHolder12", chartVars12, "100%", "100%");
+
+    // 차트의 속성인 rMateOnLoadCallFunction 으로 설정된 함수.
+    // rMate 차트 준비가 완료된 경우 이 함수가 호출됩니다.
+    // 이 함수를 통해 차트에 레이아웃과 데이터를 삽입합니다.
+    // 파라메터 : id - rMateChartH5.create() 사용 시 사용자가 지정한 id 입니다.
+
+
+    // 스트링 형식으로 레이아웃 정의.
+    var layoutStr12 =
+        '<rMateChart styleName="_chart12">'
+          +'<Options>'
+              //+'<Caption text="월별 지수 비교" color="#fff" />'
+              //+'<SubCaption text=""/>'
+              //+'<Legend />'
+         +'</Options>'
+
+         +'<NumberFormatter id="numfmt" useThousandsSeparator="false"/>'
+
+           +'<Combination2DChart showDataTips="false" mouseSensitivity="10" selectionMode="none"  gutterLeft="20" gutterRight="20">'
+
+            +'<horizontalAxis >'
+                +'<CategoryAxis categoryField="Month" padding="0.2" labelJsFunction="axisLabelFuncX" id="hAxis"/>' //숫자 잘림 현상으로 padding 설정
+            +'</horizontalAxis>'
+            +'<verticalAxis>'
+                +'<LinearAxis  formatter="{numfmt}" maximum="1200" minimum="-50" interval="10" id="vAxis"/>' //차트 위아래 짤림 수정 2019-01-14
+            +'</verticalAxis>'
+
+                //series
+                +'<series>'
+                    //신용도 추이
+                  +'<Line2DSeries yField="grade_num" displayName="신용평점" labelPosition="up" color="#731aed" fontSize="11" labelJsFunction="labelFriend" fontFamily="LatoM" itemRenderer="CircleItemRenderer" radius="4" fill="#fff">'
+                        +'<lineStroke>'
+                            +'<Stroke color="#731aed" weight="2" />'
+                        +'</lineStroke>'
+                        +'<showDataEffect>'
+                            +'<SeriesInterpolate duration="500"/> '
+                        +'</showDataEffect>'
+                  +'</Line2DSeries>'
+                +'</series>'
+
+                // 세로축 삭제
+                +'<verticalAxisRenderers >'
+                    +'<Axis2DRenderer axis="{hAxis}" visible="false"/>' //includeInLayout="false"
+                +'</verticalAxisRenderers>'
+
+                // 바닥 수평 구분선
+                // +'<horizontalAxisRenderers >'
+                //   +'<Axis2DRenderer axis="{hAxis}" visible="true" showLine="true" >' //includeInLayout="false"
+                //      +'<axisStroke>'
+                //          +'<Stroke color="#8848ff" weight="1"/>'
+                //      +'</axisStroke>'
+                //  +'</Axis2DRenderer>'
+                // +'</horizontalAxisRenderers>'
+                //단계 선
+                +'<backgroundElements >'
+                     +'<GridLines  direction="none" showEdgeHorizontalStroke="false" showEdgeVerticalStroke="false"/>'
+                     //+'<AxisMarker>'
+                        //+'<lines>'
+                            //+'<AxisLine value="0" lineStyle="normal">'
+                            //  +'<stroke>'
+                            //      +'<Stroke color="#8848ff" weight="1" />'
+                            //  +'</stroke>'
+                            //+'</AxisLine>'
+                        //  +'</lines>'
+                    //+'</AxisMarker>'
+                +'</backgroundElements>'
+
+          +'</Combination2DChart>'
+      +'</rMateChart>';
+
+
+
+    function axisLabelFuncX(id, value){
+        return "<font color='#222' name='LatoM' size='11px'>" + value + '월' + "</font>";
+
+    }
+
+
+    /**
+     * rMateChartH5 3.0이후 버전에서 제공하고 있는 테마기능을 사용하시려면 아래 내용을 설정하여 주십시오.
+     * 테마 기능을 사용하지 않으시려면 아래 내용은 삭제 혹은 주석처리 하셔도 됩니다.
+     *
+     * -- rMateChartH5.themes에 등록되어있는 테마 목록 --
+     * - simple
+     * - cyber
+     * - modern
+     * - lovely
+     * - pastel
+     * -------------------------------------------------
+     *
+     * rMateChartH5.themes 변수는 theme.js에서 정의하고 있습니다.
+     */
+    rMateChartH5.registerTheme(rMateChartH5.themes);
+
+    /**
+     * 샘플 내의 테마 버튼 클릭 시 호출되는 함수입니다.
+     * 접근하는 차트 객체의 테마를 변경합니다.
+     * 파라메터로 넘어오는 값
+     * - simple
+     * - cyber
+     * - modern
+     * - lovely
+     * - pastel
+     * - default
+     *
+     * default : 테마를 적용하기 전 기본 형태를 출력합니다.
+     */
+    function rMateChartH5ChangeTheme(theme){
+      document.getElementById("chart1").setTheme(theme);
+    }
+
+    // -----------------------차트 설정 끝 -----------------------
+    </script>
+</head>
+<body>
+<div class="wrap bg_list">
+    <div id="contents" class="finance_dna"><!-- 페이지 검색을 위한 아이디 : FIAA05Z04 -->
+
+        <section class="credit_main sec_space0"><!-- class 추가 2018-11-23 ock -->
+			<!-- 업데이트 추가 2018-11-23 ock -->
+            <p class="standard">
+				<span>업데이트</span><em class="date">2018.10.25</em><em class="time">11:30</em>
+			</p>
+
+            <div class="sec_time_cycle dna">
+
+                <div class="cycle_wrap">
+                    <div class="user_info">
+                        <p class="tit">나의 신용등급</p>
+                        <p class="grade"><span class="num bold">2</span>등급</p>
+                        <p class="credit_num"><em class="num bold">935</em> / <span class="num bold">1000</span></p>
+                    </div>
+                </div>
+                <div id="indicatorContainer" class="clock"></div>
+
+                <div class="user_credit_info">
+                    <div>상위 <span class="num">9</span>%</div>
+                    <div><span class="num">555</span>점 상승</div>
+                </div>
+            </div>
+
+            <div class="credit_info_box">
+                <p class="tit"><em class="num">52</em>점만 올리면 신용 <em class="num">1</em>등급!</p>
+                <p class="thumb_tit">대출이자 <em class="num">1</em>% 절약</p>
+                <button type="button" name="button" class="btn">신용점수 관리하기</button><!-- 문구변경 2019-01-16 ock -->
+            </div>
+
+            <div class="list_box_wrap">
+                <!-- <p class="tit title">금융현황</p>타이틀 삭제 2019-01-16 ock -->
+                <div>
+                    <p class="tit ico1"><a href="#">카드</a></p>
+                    <dl>
+                        <dt class="stit">보유 카드</dt><!-- 문구변경 2019-01-16 ock -->
+                        <dd><em class="num">5</em>개</dd>
+                    </dl>
+                    <dl>
+                        <dt class="stit">9월 이용금액</dt>
+                        <dd><em class="num">782,000</em>원</dd>
+                    </dl>
+                </div>
+                <div>
+                    <p class="tit ico2"><a href="#">대출</a></p>
+                    <dl>
+                        <dt class="stit">이용 대출</dt><!-- 문구변경 2019-01-16 ock -->
+                        <dd><em class="num">5</em>건</dd>
+                    </dl>
+                    <dl>
+                        <dt class="stit">대출 잔액</dt>
+                        <dd><em class="num">2,000,000</em>원</dd>
+                    </dl>
+                </div>
+                <div>
+                    <p class="tit ico3"><a href="#">연체 및 연대보증</a></p>
+                    <dl>
+                        <dt class="stit">연체</dt>
+                        <dd><em class="num">1</em>건</dd>
+                    </dl>
+                    <dl>
+                        <dt class="stit">연대보증</dt>
+                        <dd><em class="num">0</em>건</dd>
+                    </dl>
+                </div>
+                <div>
+                    <p class="tit ico4"><a href="#">신용조회 및 변동</a></p>
+                    <dl>
+                        <dt class="stit">신용조회</dt>
+                        <dd><em class="num">5</em>건</dd>
+                    </dl>
+                    <dl>
+                        <dt class="stit">변동내역</dt>
+                        <dd><em class="num">0</em>건</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="credit_chart_wrap">
+                <!-- 차트 추가 -->
+                <div class="_chart12">
+					<div class="chart_head">
+						<strong class="chart_tit">신용점수 추이</strong><!-- 문구변경 2019-01-16 ock -->
+						<em class="legend_credit">신용점수</em><!-- 문구변경 2019-01-16 ock -->
+					</div>
+                    <div class="chart_area">
+                        <div class="chart Combination2DChart" id="chartHolder12"></div>
+                    </div>
+                </div>
+                <!-- //차트 추가 -->
+            </div>
+        </section>
+
+    </div>
+    <!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script type="text/javascript">
+$(function(){
+    $('#indicatorContainer').radialIndicator({
+        radius: 128, //값 수정 2019-01-25 ock
+        barWidth: 12,
+        barBgColor : 'transparent',
+        //barColor: {
+           //0  : '#e6dfff',
+           //40 : '#d1c4ff',
+           //60 : '#a086ff',
+           //80 : '#731aed',
+           //100 : '#5906b4'
+          //},
+		barColor : "#731aed",
+        roundCorner: true,
+        displayNumber: false,
+        frameTime: 7,
+		frameNum:100
+    });
+
+
+    /* 19.01.14 */
+    // Number Animate START
+    var rn = 935; // 신용등급 내 점수 : Max 1000
+    var $el = $(".credit_num .num").first();
+    $({ val : 0 }).animate({ val : rn }, {
+            duration: 1000,
+            step: function() {
+            $el.text(Math.floor(this.val));
+        },
+            complete: function() {
+            $el.text(Math.floor(this.val));
+        }
+    });
+    // Number Animate END
+    // * 19.01.14 */
+
+	$('#indicatorContainer').stop().animate({opacity: '1'}, 1000);
+    var radialObj = $('#indicatorContainer').data('radialIndicator');
+    var _dataNum = 935; // 신용등급 내 점수 : Max 1000
+    var percentVal = _dataNum / 1000 * 100; // 신용등급 값을 기준으로 나오는 Percent
+	radialObj.animate(percentVal);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+		<section class="sec_certify_check">
+			<!-- 20180309 클래스수정 -->
+			<div class="sec_step step_perple">
+				<ol class="step02">
+					<li class="on complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete">
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>3</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>신분증 정보 확인</h2>
+				<p class="guide_txt">
+					촬영된 신분증 정보와 아래 정보가<br>일치하지 않을 경우 직접 수정해주세요.
+				</p>
+			</div>
+
+			<div class="round_border_box fixed">
+				<div class="inner">
+					<img src="../../images/orsremt/img-jumin-sample.png" alt="" class="img">
+				</div>
+			</div>
+
+			<div class="sec_member_input">
+				<dl class="input_wrap">
+					<dt class="input_tit">
+						<strong>주민등록번호</strong>
+					</dt>
+					<!-- 20180320 주민번호편집불가 -->
+					<dd class="input_wrap type_3">
+						<div class="item"><input type="text" data-name="inpFocus" disabled placeholder="주민번호 앞자리"></div>
+						<div class="item">-</div>
+						<div class="item">
+							<div class="pw_input accountPwd box_disabled">
+								<p class="on">
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<p>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<div class="box_password" data-name="inpFocus"></div>
+							</div>
+						</div>
+						<p class="remark hide">주민번호 뒷자리를 입력해 주세요</p>
+					</dd>
+				</dl>
+				<dl class="input_wrap">
+					<dt class="input_tit">
+						<strong>운전면허번호</strong>
+					</dt>
+					<dd class="flex_wrap set_type1">
+						<span class="item"><input type="text" data-name="inpFocus" placeholder="12-12345678-123" value=""></span>
+					</dd>
+				</dl>
+				<dl class="input_wrap">
+					<dt class="input_tit">
+						<strong>발급일자</strong>
+					</dt>
+					<dd class="flex_wrap set_type1">
+						<span class="item"><input type="text" data-name="inpFocus" placeholder="yyyy.mm.dd" value=""></span>
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+		<div class="sticky_wrap set_type2">
+			<button type="button" name="" class="btn btn_cancel">다시 촬영</button>
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+
+<script>
+$(document).ready(function(){
+	var residentNum = function () {
+		// 주민번호 앞자리
+		$('input:password[data-name="resident_num"]').on('keydown change', function(e){
+		var imgSum = $('.resident_dot span').length;
+			if ( e.keyCode == 8) {
+				$('.resident_dot span:last').remove();
+			} else {
+				if( imgSum == 3 ) { return false ; }
+				$('.resident_dot').append("<span></span>");
+			}
+		});
+	};	residentNum();
+});
+</script>
+
+</body>
+</html>

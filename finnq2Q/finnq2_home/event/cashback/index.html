@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Finnq - 캐시백 라이브 이벤트</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/finnq_reset.css">
+	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
+	<link rel="stylesheet" type="text/css" href="css/finnq_common.css">
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/flipclock.min.js"></script>
+	<script type="text/javascript" src="js/ui_common.js"></script>
+	<script type="text/javascript" src="js/TweenMax.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="contents" class="add_sticky"><!-- FQA-2410 수정 class="no_fixed" 삭제 -->
+			<section class="menu_wrap">
+				<div class="sec_event_detail cashback">
+					<article class="sec_event_visual">
+						<div class="inner">
+							<span class="cash_total">
+								<p><em class="num">14,500,000</em>원 남음</p>
+							</span>
+							<div class="cash_counter">
+								<span class="cnt_box">7.1~7.31</em></span>
+								<h3 class="cnt_title">캐시백<em>LIVE</em></h3>
+								<!-- FQA-2460 문구수정 -->
+								<p class="cnt_text">연락처 송금, 핀크카드 결제하면 캐시백 즉시 지급</p>
+								<!--// FQA-2460 문구수정 //-->
+								<!-- LIVE 종료 class="close" 추가해주세요. -->
+								<!-- LIVE 준비중 class="wait" 추가해주세요. -->
+								<div class="cnt_list">
+									<p>매 <em class="num bold">1000</em>번째 거래는<br ><span class="ft_l">무조건</span> <em class="num bold">10%!</em></p>
+									<div class="cnt_wrap">
+										<div class="wrap_inner">
+											<div class="check"></div>
+											<!-- 새로고침 버튼 수정 없어짐 
+											<div class="check_btn">
+												<button class="reload">
+												  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" width="36px" height="52px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+												    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.011 20c0-0.002 0-0.003 0-0.005 0-4.421 3.578-8.005 7.991-8.005 2.683 0 5.051 1.329 6.5 3.361l1.26-1.644c-1.834-2.254-4.627-3.696-7.76-3.696 -5.519 0-9.994 4.471-10.001 9.989H8.013l3.018 4.013L13.987 20H12.011zM32 20l-2.969-3.985L26 20h1.992c-0.003 4.419-3.579 8.001-7.99 8.001 -2.716 0-5.111-1.36-6.555-3.435l-1.284 1.644c1.832 2.314 4.66 3.803 7.84 3.803 5.524 0 10.001-4.478 10.001-10.001 0-0.004-0.001-0.008-0.001-0.012H32z"/>
+												  </svg>
+												</button>
+											</div>-->
+										</div>
+									</div>
+									<!-- LIVE 준비중, 종료 -->
+									<div class="cnt_ranking">
+										<ul class="rank_box">
+											<li>
+												<div class="box_list">
+													<strong>핀크카드</strong>
+													<p>
+														<span>권*탁</span>
+														<span class="fr"><em class="num">7,000</em>원</span>
+													</p>
+												</div>
+											</li>
+											<li>
+												<div class="box_list">
+													<strong>연락처송금</strong>
+													<p>
+														<span>양*아<i class="cnt_box yellow"><em class="num bold">10%</em></i></span>
+														<span class="fr"><em class="num">5,000</em>원</span>
+													</p>
+												</div>
+											</li>
+											<li>
+												<div class="box_list">
+													<strong>핀크카드</strong>
+													<p>
+														<span>나*영가나<i class="cnt_box green"><em class="num bold">x2</em></i></span>
+														<span class="fr"><em class="num">50,000</em>원</span>
+													</p>
+												</div>
+											</li>
+											<li>
+												<div class="box_list">
+													<strong>T전화송금</strong>
+													<p>
+														<span>이*진</span>
+														<span class="fr"><em class="num">200</em>원</span>
+													</p>
+												</div>
+											</li>
+											<li>
+												<div class="box_list">
+													<strong>핀크카드</strong>
+													<p>
+														<span>양*원</span>
+														<span class="fr"><em class="num">700</em>원</span>
+													</p>
+												</div>
+											</li>
+											<li>
+												<div class="box_list">
+													<strong>테스트</strong>
+													<p>
+														<span>김가나다라</span>
+														<span class="fr"><em class="num">50,000</em>원</span>
+													</p>
+												</div>
+											</li>
+										</ul>
+										<div class="live_box">
+											<span class="waiting">LIVE 준비중</span>
+											<span class="close">LIVE 종료</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cash_info">
+								<div class="info_list">
+									<dl>
+										<!-- FQA-2460 문구수정 -->
+										<dt>연락처 송금, 결제,<br>채우기 하면<br>최대 <em class="num">10%</em> 쿠폰 지급!</dt>
+										<!--// FQA-2460 문구수정 //-->
+										<dd>
+											<a href="javascript:void(0);" class="link"><span class="txt bold">송금<br>하기</span></a>
+										</dd>
+									</dl>
+								</div>
+								<div class="info_list">
+									<dl>
+										<dt>T전화 연락처 송금은<br >캐시백  X <em class="num">2</em>배!</dt>
+										<dd>
+											<a href="javascript:void(0);" class="link"><span class="txt bold"><em class="num">T</em>전화<br>가기</span></a>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</article>
+					<article class="sec_event_counter">
+						<div class="inner">
+							<span class="inner_title">
+								<p><strong>총 지급액 <em class="num bold">2000</em>만원!</strong><br>모두 가져가세요~</p>
+							</span>
+							<div class="chart_box">
+					            <div class="box_inner">
+					                <span class="text">
+					                	<span>현재 남은 금액</span>
+					                	<strong><em class="num bold">20,000,000</em>원</strong>
+					                </span>
+					                <span class="percent" data-width="88" style="">&nbsp;</span>
+					            </div>
+							</div>
+						</div>
+					</article>
+					<article class="sec_event_share">
+						<div class="inner">
+							<span class="inner_title">
+								<p><strong>오늘 캐시백 <em class="num bold">1</em>등은?</strong><br>얘- 너두 될 수 있어!</p>
+							</span>
+							<!-- 두줄일떄 class="depth" 한줄일때 추가해주세요 -->
+							<div class="chart_box">
+					            <div class="box_inner">
+					                <span class="text">
+					                	<span class="ico"><em class="ft_b bold">나*영</em>님이 제일 많이 받았어요!</span>
+					                	<!-- 기본값 말고 추가 되었을떄 -->
+					                	<strong><em id="counter_num" class="num bold" data-count="325000">0</em>원</strong>
+					                </span>
+					            </div>
+							</div>
+							<div class="share_box">
+								<button><span class="icon"></span>공유하기</button>
+							</div>
+						</div>
+					</article>
+					<article class="sec_event_info">
+						<div class="info_listbox">
+							<ul class="list">
+								<li>
+									<span class="tit">대상</span>
+									<span class="conts">만 18세 이상 핀크회원</span>
+								</li>
+								<li>
+									<span class="tit">기간</span>
+									<span class="conts">
+										<em class="num">2019.06.01</em>(토) <em class="ft_m">~</em> <em class="num">2019.06.30</em>(일)
+									</span>
+								</li>
+								<li class="depth">
+									<span class="tit">참여방법</span>
+									<span class="conts">
+										<ol>
+											<!-- FQA-2460 문구수정 -->
+											<li>연락처 송금 or 핀크카드 결제 후</li>
+											<li>도착한 Push 메시지를 누르거나 <br>현재 페이지 하단의 캐시백 쿠폰 확인하기를 눌러</li>
+											<li>&#145;캐시백 현황&#146; 페이지에서 &#145;캐시백 받기&#146;를 클릭!</li>
+											<li>캐시백 즉시 입금!</li>
+											<!--// FQA-2460 문구수정 //-->
+										</ol>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</article>
+					<article class="sec_account_info">
+						<dl class="event_info">
+							<dt>유의사항</dt>
+							<dd class="dash_type indent">건당 최대 지급 가능 캐시백은 5만원입니다.</dd><!-- FQA-2410 수정 내용추가 -->
+							<dd class="dash_type indent">캐시백은 기간내 총 <!-- FQA-2460 문구수정 개발 진행 예정 -->xx회까지만 지급 됩니다.<br>(취소포함)</dd>
+							<dd class="dash_type indent">동일 연락처 송금은 1일 1회만 지급 됩니다.</dd>
+							<dd class="dash_type indent">계좌번호 송금은 캐시백이 지급되지 않습니다.</dd>
+							<dd class="dash_type indent">총 지급 캐시백 금액 소진시 캐시백 LIVE가 조기 종료 될 수 있습니다.</dd>
+							<dd class="dash_type indent">캐시백 지급 후 원거래(송금/결제) 취소시 캐시백은 환수 됩니다.</dd>
+							<dd class="dash_type indent">기간내 캐시백 미확인시 캐시백은 지급되지 않습니다.</dd>
+							<dd class="dash_type indent">캐시백 LIVE의 상세내용은 별도의 고지없이 변경될 수 있습니다.</dd>
+						</dl>
+					</article>
+				</div>
+			</section><!-- //menu_event -->
+
+			<div class="sticky_wrap set_type1">
+				<button type="button" name="apply" class="btn btn_type_apply">내 캐시백 보기</button><!-- // disabled="disabled" -->
+			</div>
+		</div><!-- #contents -->
+	</div>
+	<script type="text/javascript">init();</script>
+</body>
+</html>

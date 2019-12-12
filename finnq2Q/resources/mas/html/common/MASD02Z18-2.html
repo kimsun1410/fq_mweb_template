@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>RCS송금 - 실명확인 - 보내기 - 비밀번호 검증 - 완료</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASD02Z18-1 -->
+	<div id="contents" class="add_sticky bg_rcs">
+		<section>
+			<div class="rcs-send-wrap txt_center">
+				<div class="rcs-title big">
+					<span class="bold"><span class="txt_purple"><em class="num bold">350,000</em>원</span></span><br>
+					<span class="bold block mgt10">무료송금 완료!</span>
+				</div>
+
+				<div class="rcs-detail-info">
+					<div class="user-detail">
+						<span class="user-info">나선영 (국민 <em class="num bold">85-02-1234321</em>)</span>
+						<!-- 활성화 시 클래스 on 추가됨 -->
+						<!-- 비활성화 시 속성:disabled 추가 /
+							<button type="button" class="ico bookmark" disabled="disabled">즐겨찾기</button>
+						-->
+						<button type="button" class="ico bookmark">즐겨찾기</button>
+					</div>
+					<div class="finnq-detail">
+						<dl>
+							<dt>핀크계좌 잔액</dt>
+							<dd><em class="num bold">10,000</em>원</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<div class="rcs-box-cont guide-txt">
+				<p class="star_type">나선영님에게 송금링크를 전달하였습니다.</p>
+				<p class="star_type"><span class="txt_red">익일 <em class="num">17</em>시</span>까지 송금을 받지 않으면 송금 금액이 반환됩니다.</p>
+			</div>
+
+		</section>
+
+		<div class="sticky_wrap set_type1 rcs">
+			<button type="button" name="" class="btn btn_type_apply"><em class="loading">Loading</em>메세지 앱으로 이동합니다</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.rcs-detail-info .bookmark').on('click', function(){
+		$( this ).toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+@charset 'UTF-8';
+
+/* 공통 */
+.flag_img.size-min {height:20px; position:relative; top:-1px;}
+.flag_img.size-min + .flag_txt {margin-left:10px;}
+
+.line_bold {height:4px; overflow:hidden; background-color:$white_three; border-top:1px solid $white_two; border-bottom:1px solid $white_two;} /* 굵은 구분선 */
+
+.graph_bar {position:relative; width:100%; height:4px; margin-top:12px; border-radius:3px; overflow:hidden; background-color:$white_two; text-indent:-999rem;} /* 막대 그래프 */
+.graph_bar:before {content:attr(data-percent);}
+.graph_bar .percent {display:inline-block; position:absolute; left:0; top:0; width:0; height:100%; background-color:$purply_blue; border-radius:3px; transition: width 0.7s linear;}
+
+.round_border_box {padding:0 20px; margin:27px auto;}
+.round_border_box .inner {position:relative;}
+.round_border_box .inner:after {content:''; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:url(../images/orsremt/img-outline.png) no-repeat 0 0; background-size:100%;}
+.round_border_box.fixed {max-width:320px;}
+.round_border_box .img {width:100%;}
+
+.round_box_cut {position:relative; margin:28px 20px 0; border-radius:8px 8px 0 0; background-color:$white_four;}
+.round_box_cut:after {content:''; display:block; position:absolute; bottom:-5px; left:0; width:100%; height:5px; background:url(../images/orsremt/img_box_cut.png) no-repeat 0 0; background-size:100%;}
+
+.sec_detail {margin:29px 20px 0 20px;}
+.sec_detail h4 {margin-bottom:11px; @include font(14px); color:$brownish_grey;}
+
+.info_guide .list_gray li {padding-left:10px; @include font(14px); color:$warm_grey;}
+.info_guide .list_gray li:before {margin-left:-10px; margin-right:2px;}
+.info_guide .list_gray li + li {margin-top:8px;}
+
+.cal_wrap {margin-top:20px;}
+.cal_wrap .tit_total {@include font(20px); font-weight:bold; padding-top:28px; margin-top:30px; border-top:1px dashed $white_three;}
+.cal_wrap .cal {position:relative; display:table; width:100%; background:$white_four; border:1px solid $white_three; margin-bottom:-1px;}
+.cal_wrap .cal .tit,
+.cal_wrap .cal .money {display:table-cell; padding:13px 20px 13px 20px; @include font(16px);text-align:left;  vertical-align:middle;}
+.cal_wrap .cal .money {color:$purply_blue; text-align:right;}
+.cal_wrap .cal .money .txt {color:$brownish_grey; @include font(12px);}
+.cal_wrap .cal .money strong {font-weight:bold;}
+.cal_wrap .cal.total {background:$white; border:1px solid $warm_grey; margin-bottom:0;}
+.cal_wrap .cal.total .tit {padding:0 10px 3px 20px; @include font(20px); font-weight:bold;}
+.cal_wrap .cal.total .money {padding-top:27px; padding-bottom:27px; padding-left:10px;}/* 2018-04-25 16:20 */
+.cal_wrap .cal.total .money strong {@include font(20px); display:block; font-weight:bold;}
+.cal_wrap .cal.total .money .txt {@include font(12px); color:$brownish_grey; font-weight:normal;}
+
+.cal_wrap2 .cal:after {content:''; clear:both; display:block;}
+.cal_wrap2 .cal + .cal {margin-top:10px;}
+.cal_wrap2 .cal .tit {float:left; color:$brownish_grey; @include font(16px); font-family:"DeviceF", "AppleSDGothicNeo-Light";}
+.cal_wrap2 .cal .money {float:right; color:$black; @include font(16px); text-align:right;}
+.cal_wrap2 .cal.total .tit {color:$black; font-family:"DeviceF", "AppleSDGothicNeo-Medium";}
+.cal_wrap2 .cal.total .money {color:$purply_blue; font-weight:bold;}
+.cal_wrap2 .cal .tit.tit_eng {letter-spacing:0;}
+.cal_wrap2 .cal .money.len_v2 {line-height:40px;}
+
+.cal_wrap3 .cal:after {content:''; clear:both; display:block;}
+.cal_wrap3 .cal + .cal {margin-top:9px;}
+.cal_wrap3 .cal .tit {float:left; color:$brownish_grey; @include font(16px); font-family:"DeviceF", "AppleSDGothicNeo-Light";}
+.cal_wrap3 .cal .money {float:right; color:$black; @include font(16px);}
+
+.cal_wrap4 .cal:after {content:''; clear:both; display:block;}
+.cal_wrap4 .cal {position:relative;}
+.cal_wrap4 .cal + .cal {margin-top:8px;}
+.cal_wrap4 .cal .tit {float:left; color:$black; @include font(16px);}
+.cal_wrap4 .cal .tit .txt_state {display:block; margin-top:8px; color:$pinkish_grey; @include font(14px);}
+.cal_wrap4 .cal .tit .txt_state.txt_warning {color:$reddish_orange;}
+.cal_wrap4 .cal .money {position:absolute; right:0; top:0; color:$black; font-weight:bold; @include font(16px);}
+
+.box_detail {padding:27px 20px 28px;}
+.box_detail .define + .define {margin-top:16px;}
+.box_detail .define > .tit {color:$black; @include font(16px); font-weight:bold;}
+.box_detail .define > .cont {@include font(16px);}
+.box_detail .define > .tit + .cont {margin-top:11px;}
+.box_detail .define > .cont:after {content:''; clear:both; display:block;}
+.box_detail .define > .cont .stit {float:left;}
+.box_detail .define > .cont .money {float:right; color:$black; font-weight:bold;}
+.box_detail .txt_info {margin-top:5px; color:$brownish_grey; @include font(12px);}
+.box_detail .line_dash {border-top:1px dashed $white_two; margin-top:16px; padding-top:16px;}
+.box_detail .line_dotted {border-top:1px dotted $white_two; margin-top:16px; padding-top:16px;}
+.box_detail .define.type_flag + .line_dash {margin-top:20px;}
+
+.box_detail2 {padding:25px 20px 17px;}
+.box_detail2 .define {padding:17px 0;}
+.box_detail2 .define .txt_info {margin-top:5px; color:$pinkish_grey;}
+.box_detail2 .define .define_row {display:table; width:100%;}/* 2018-06-11 320해상도 고려 */
+.box_detail2 .define .define_row + .define_row {margin-top:6px;}
+.box_detail2 .define .th,
+.box_detail2 .define .td {display:table-cell; @include font(14px); word-break: break-word;}
+.box_detail2 .define .th {color:$warm_grey;}/* 해외송금삭제내역 너비조절 width:115px; 삭제 */
+.box_detail2 .define.w_min .th {width:70px;}
+.box_detail2 .define .td {width:auto; color:$black; text-align:right;}
+.box_detail2 .define .td small {display:block; color:$pinkish_grey; @include font(11px); margin-top:5px;}
+.box_detail2 .define .td .txt_warning {color:$reddish_orange;}
+.box_detail2 .define.header {padding-top:0;}
+.box_detail2 .define.header .th,
+.box_detail2 .define.header .td {@include font(16px);}
+.box_detail2 .define.header .th {color:$black;}
+.box_detail2 .define.header .td {font-weight:bold;}
+.box_detail2 .define_error {margin-top:14px; color:$reddish_orange;}/* 2018-06-28 추가 오류Case  */
+.box_detail2 .line_double {border-top:3px double $white_two;}
+.box_detail2 .line_dash {border-top:1px dashed $white_two;}
+.box_detail2 .title {margin-bottom:10px; color:$black;}
+.box_detail2 .btn_wrap {padding-bottom:13px;}
+.box_detail2 .define +  .btn_wrap {margin-top:10px;}
+
+.box_detail_alert.round_box {padding:24px 20px 24px 20px;}
+.box_detail_alert .txt_wrap {@include font(16px);}
+.box_detail_alert .txt_wrap.warm_grey {color:$warm_grey;}
+.box_detail_alert .line_dash {border-top:1px dashed $white_two; margin-top:16px; padding-top:16px;}
+
+/* 휴대폰 인증 */
+.orsremt_from .sec_title + .sec_text_btn {margin-top:0;}
+
+/* 약관동의 */
+.orsremt_term input[type="checkbox"] + label > span {padding-top:4px; color:$black; @include font(18px);}
+.orsremt_term .sec_agree .agree_wrap input[type="checkbox"] + label > span {font-weight:bold;}
+.orsremt_term .sec_agree + .sec_term_type1 {margin-top:0; padding-top:4px; background-color:$white_three;}
+.orsremt_term .sec_agree + .sec_term_type1 .agree_all_terms {border-top:1px solid $white_two;}
+.orsremt_term .sec_term_type1 .agree_terms {padding-top:0; border-top:none; border-bottom:0;}/* 2018-04-26 */
+/*.orsremt_term.agree_check_all .sec_term_type1:last-child {border-bottom:none;} 2018-04-24 */
+.orsremt_term .sec_title h2 + p.guide_txt {margin-top:5px;}
+/*.orsremt_term .sec_term_type1 .agree_terms dl dd > div:last-child {border-bottom:1px solid $white_two;} 2018-04-24 */
+
+/* 계좌 실명인증 */
+.orsremt_account_choice {margin-bottom:43px;} /* 2018-04-23 13:10 문구하단고정 JCK */
+.orsremt_account_choice .account_choice {min-height:calc(100vh - 340px);} /* 문구 추가, 수치 변경 ock */ /* 2018-04-23 13:10 문구하단고정 JCK */
+.orsremt_account_choice .sec_select {margin-bottom:30px;}
+.orsremt_account_choice .sec_notice p {padding-top:0;word-break: keep-all;}
+.orsremt_account_choice .sec_notice p + p {margin-top:8px;} /* 문구 추가, 여백 추가 ock */
+.orsremt .sec_select ul li {padding-top:15px;}
+.orsremt .sec_select ul li:first-child {padding-top:0px;}
+
+/* 송금정보 */
+.orsremt .sec_title .accent_txt > strong {font-weight:bold;}
+.orsremt .sec_title .accent_txt > strong span {font-weight:bold;}
+.orsremt .item.soft_select select {font-size:16px;}
+.orsremt .item.soft_select2 select {font-size:16px;}
+.orsremt_from {padding-bottom:45px;}
+.no_fixed .orsremt_from {padding-bottom:0;}
+.no_fixed .orsremt_from + .sticky_wrap {background-color:transparent;}
+.orsremt_from .sec_title {padding-bottom:25px;}
+.orsremt_from .orsremt_list .sec_remitDetail {padding-bottom:0;}
+.orsremt_from .orsremt_list .sec_title {padding-bottom:0;}
+.orsremt_from .orsremt_input {background-color:$white_three;}
+.orsremt_from .sec_input {margin-top:4px; padding:0 20px 30px; border-top:1px solid $white_two; border-bottom:1px solid $white_two; background-color:$white;}
+.orsremt_from .sec_input.bor_bn {border-bottom:0;}
+.orsremt_from .orsremt_list .sec_input {margin-top:0; border-top:none;}
+.orsremt_from .orsremt_list .orsremt_out {margin:0 -20px;}
+.orsremt_from .sec_input:first-child {margin-top:0; padding-bottom:30px; border-top:none;}
+.orsremt_from .orsremt_list .sec_input:first-child {padding-bottom:20px;}
+.orsremt_from .sec_input:last-child {border-bottom:none; padding-bottom:0;}
+.orsremt_from .sec_input .input_wrap {margin-top:0; padding-top:30px;}
+.orsremt_from .orsremt_list .sec_input .input_wrap {padding-top:0;}
+.orsremt_from .sec_input:first-child .input_wrap:first-child {padding-top:0;}
+.orsremt_from .sec_input .input_tit {margin-bottom:12px;}
+.orsremt_from .sec_input .input_tit .input_blue {font-weight:normal; color:$purply_blue;}
+.orsremt_from .set_target li {margin-bottom:15px;}
+.orsremt_from .set_target li:last-child {margin-bottom:0px;}
+
+.orsremt_from .input_wrap .remark.address {top:74px;} /* 2018-04-25 16:20 */
+.orsremt_from .input_wrap .bul_guide p {color:$pinkish_grey;}
+.orsremt_from .input_wrap .bul_guide p.remark {color:$reddish_orange;}
+.orsremt_from .input_wrap .bul_guide p .num {letter-spacing:0;}
+.orsremt_from .input_wrap .bul_guide p.remark.pos_static {position:static;}
+.orsremt_from .input_wrap + .bul_guide p {margin-top:28px; padding-top:0;}
+.orsremt_from .input_wrap + .bul_guide p.type_red {color:$reddish_orange;}
+.orsremt_from .input_wrap + .bul_guide p.type_gray {color:$warm_grey;}
+.orsremt_from .input_wrap + .bul_guide p + .btn_text02 {padding-left:10px; margin-top:5px;}
+.orsremt_from .input_wrap + .sec_notice {margin-top:28px;}
+.orsremt_from .sec_notice + .sec_notice p {padding-top:0px;}
+.orsremt_from .item {position:relative;}
+.orsremt_from .item + .item {margin-top:15px;}
+.orsremt_from .type_3 .item + .item {margin-top:0;}
+.orsremt_from input[type="radio"] + label span {font-size:16px; color:$black;}
+
+.orsremt_info2 .inp_search4 {position:relative;}
+.orsremt_info2 .inp_search4 button {position:absolute; right:12px; top:50%; width:34px; height:34px; margin-top:-17px; padding:9px;}
+.orsremt_info2 .input_wrap .ico_search4 {padding-right:53px;}
+.orsremt_info2 .box_detail {margin:0;}
+.orsremt_info2 .sec_title {margin-bottom:25px; padding-bottom:0;}
+.orsremt_info2 .input_wrap + .sec_notice {margin:28px 0 0;}
+.orsremt_info2 .input_wrap .input_tit strong {font-weight:normal;}
+.orsremt_info2 .input_wrap:first-child .input_tit strong {font-weight:bold;}
+.orsremt_info2 .sec_notice {margin:7px 0 0;}
+.orsremt_info2 .sec_notice p {@include font(14px);}
+.orsremt_info2 textarea {padding:12px 19px; @include font(16px); vertical-align:top;}
+.ios .orsremt_info2 textarea {padding-left:16px; vertical-align:top;}
+.orsremt_info2 .input_wrap.input_line {padding-bottom:30px; border-bottom:1px solid $white_two;}
+.orsremt_info2 .input_wrap.input_line + .input_wrap {padding-top:28px;}
+.orsremt_info2 .input_wrap .bul_guide p {color:$warm_grey;}
+.orsremt_info2 .input_wrap .bul_guide p.type_red {color:$reddish_orange;}
+.orsremt_info2 .col_tit span,
+.orsremt_info2 .col_txt span {@include font(16px); line-height:46px;}
+.orsremt_info2 .col_tit span.num,
+.orsremt_info2 .col_txt span.num {font-weight:normal;}
+.orsremt_info2 .row {position:relative;}
+.orsremt_info2 .row .col_tit {position:absolute; left:0;}
+.orsremt_info2 .row1 {padding:0 39% 0 60px;}
+.orsremt_info2 .row1.single {padding:0 0 0 60px;}
+.orsremt_info2 .row1 .col_input2 {position:absolute; right:0; top:0; width:37.5%;}
+.orsremt_info2 .row2 {padding-left:129px;} /* 2018-06-01 제목길이변경 */
+.orsremt_info2 .row2 .col_txt {position:absolute; left:85px; width:67px;} /* 2018-06-01 제목길이변경 */
+.orsremt_info2 .row3 {padding-left:101px;}
+.orsremt_info2 .row3 .flex_wrap .item {position:relative;}
+
+.soft_lang {position:relative;}
+.soft_lang .ico_lang {position:absolute; left:19px; top:50%; width:32px; height:20px; margin-top:-10px;}
+.soft_lang .ico_lang.gray_scal{filter: grayscale(100%) opacity(40%); -webkit-filter: grayscale(100%) opacity(40%);}
+.soft_lang.item.soft_select select {padding:0 20px 0 61px; font-size:16px;}
+.soft_lang.item input {padding:0 19px 0 61px;}
+.item.soft_select2 {position:relative;}
+.item.soft_select2 select {padding:0 28px 0 20px; color:$pinkish_grey;}
+.item.soft_select2:after {position:absolute; right:20px; top:50%; display:inline-block; content:''; margin-top:-4px; width:13px; height:7.67px; background:url("../images/common/ir-arrow-set.png") no-repeat;
+  background-size:40px auto; background-position:0 0;}
+.item.soft_select2 select.color_change {color:$black;}
+.item.soft_select2.sel_ellipsis select {width:100%; padding-right:35px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.item.soft_select2 select.w91 {width:91px;}
+
+/* 휴대폰 인증 */
+.orsremt_from .sec_title + .sec_text_btn {margin-top:7px;}
+.orsremt_from.orsremt_hp {padding-bottom:0px;}
+.orsremt_from.orsremt_hp .sec_title {padding-bottom:19px;}
+.orsremt_from.orsremt_hp .sec_title h2 + p.guide_txt {margin-top:4px;}
+.orsremt_from.orsremt_hp .item + .item {margin-top:30px;}
+.orsremt_from.orsremt_hp .type_3 .item + .item {margin-top:0; vertical-align:top;}
+.orsremt_from.orsremt_hp .input_wrap .bul_guide {margin-top:6px;}
+.orsremt_from.orsremt_hp .input_wrap .bul_guide p {color:$warm_grey;}
+.orsremt_from.orsremt_hp .sec_member_input {margin-top:8px; margin-bottom:0px;} /* 2018-05-03 JCK */
+.orsremt_from.orsremt_hp .sec_member_input + .sec_terms {margin-top:0;}
+.orsremt_from.orsremt_hp .sec_term_type1 {margin-top:10px; border-bottom:0;} /* 2018-05-03 JCK */
+
+/* 유의사항 공통 */
+.sec_guide_wrap {padding:28px 0 28px;}
+.sec_guide_wrap .sec_title {padding:0; margin-bottom:26px;}
+.sec_guide_wrap .sec_title h2 {@include font(18px); text-align:left; font-weight:bold;}
+.sec_guide_wrap h5 {padding-bottom:20px; @include font(14px); color:$black; font-weight:bold;}
+.sec_guide_wrap .bul_guide p {@include font(16px);}
+.sec_guide_wrap .bul_guide .dash_type + .info_type {margin-top:25px;}
+.sec_guide_wrap .bul_guide .dash_type + .info_type.indent {padding-left:17px; text-indent:-20px;}
+
+/* 계좌실명인증 - 개인정보 입력 */
+.orsremt_info1 .sec_title {margin-bottom:1px;}
+.orsremt_info1 .input_wrap input + input {margin-top:15px;}
+.orsremt_info1 textarea {padding:12px 19px; @include font(16px); vertical-align:top;}
+.ios .orsremt_info1 textarea {padding-left:16px;}
+.orsremt_info1 .col_box span:first-child {width:calc(100% - 146px);}
+.orsremt_info1 .input_wrap.eng_name .bul_guide {position:relative;}
+.orsremt_info1 .input_wrap.eng_name .bul_guide:after {content:''; clear:both; display:block;}
+.orsremt_info1 .input_wrap.eng_name .bul_guide p:first-child {float:left; width:calc(100% - 146px);}
+.orsremt_info1 .input_wrap.eng_name .bul_guide p:last-child {float:right; width:136px;}
+.orsremt_info1 .input_wrap.eng_name .bul_guide p.remark {position:absolute; right:0; top:0; color:$reddish_orange; text-align:right;}
+.orsremt_info1 .col_box span:last-child {width:136px;}
+.orsremt_info1 .sec_notice {margin:0;}
+.orsremt_info1 .sec_notice p {@include font(14px);}
+.orsremt_info1 .input_wrap .bul_guide p {color:$warm_grey;}
+
+
+/* 수취은행 */
+.modal_wrap .modal_content.orsremt_list {padding-bottom:0;}
+.sec_remitDetail.orsremt_list {padding-bottom:0;}
+.orsremt_list .sec_history {height:calc(100vh - 159px); overflow:auto;}
+.orsremt_list.type_tab .sec_history {height:calc(100vh - 181px); overflow:auto;}
+.orsremt_list .sec_history .wrap_result {position:relative; height:100%}/* 2018-04-23 16:30 거래내역없습니다 화면채우기 */
+.orsremt_list .sec_history .wrap_result .no_result {position:absolute; z-index:2; left:0; top:50%; margin-top:-37px; width:100%; text-align:center; padding-top:0;}/* 2018-04-23 16:30 거래내역없습니다 화면채우기 */
+.orsremt_list .sec_history .wrap_result .no_result {text-align:center; border-bottom:0 solid $white_two; background-color:$white;}/* 2018-04-24 16:33 수정 조찬기 */
+.orsremt_list .sec_history .wrap_result .no_result p {margin-top:18px; color:$warm_grey;}
+.orsremt_list .sec_history .inner {padding-bottom:45px; background-color:$white_three;}
+.orsremt_list .sec_history a {display:block;}
+.orsremt_list .sec_history dl {padding:10px 19px; margin-top:0; border-top:none;}
+.orsremt_list .sec_history dl dd {margin-top:2px; @include font(14px);}
+.orsremt_list .sec_history dl dd address {color:$brownish_grey;}
+.orsremt_list .sec_notice_search {padding-top:25px;}
+.orsremt_list .sec_notice_search .box_search {margin-top:0;}
+.orsremt_list .sec_notice_search .bul_guide {margin-top:6px;}
+.orsremt_list .sec_notice_search .bul_guide p {@include font(11px); color:$warm_grey; text-indent:-33px; padding-left:33px;}
+.ios .orsremt_list .sec_notice_search .bul_guide p {text-indent:-31px; padding-left:31px;}
+
+.list_title {height:33px; padding:0 19px; @include font(14px); color:$warm_grey; line-height:33px; border-bottom:1px solid $white_two; background-color:$white_three;}
+input.inp_search3 {width:100%; height:40px; line-height:40px; background:$white_three; border:1px dashed $pinkish_grey; color:$black; border-radius:4px; letter-spacing:0;}
+.input_wrap .inp_search3 {position:relative;}
+.input_wrap .inp_search3 .ico_search2 {position:absolute; left:20px; top:50%; margin-top:-10px;}
+
+.input_wrap .inp_search3 input[data-name=inpFocus] {padding-left:52px;}
+.orsremt_list .sec_input {border-bottom:none;}
+.bul_guide + .info_guide {margin-top:25px;}
+.sec_input.sec_notice_search .soft_select select,.sec_notice_search .box_search input {border:1px solid $white_two;}
+.sec_notice_search .box_search input:focus {border:1px solid $purply_blue;}
+
+/* 계좌실명인증 - 안내 */
+.sec_certify .guide_txt {margin-top:11px;}
+.sec_certify .sec_decoration {margin-top:43px; height:164px; background:url(../images/orsremt/img-certify-info.png) no-repeat center 0; background-size:180px 164px;}
+
+/* 계좌실명인증 - 적요 */
+.sec_certify_apply .guide_txt strong {font-weight:bold;}
+.sec_certify_apply .guide_txt .black-two {color:$black;}
+.sec_certify_apply .guide_txt .purply-blue {color:$purply_blue;}
+
+/* 계좌실명인증 - 촬영 */
+.sec_photoZone {padding-bottom:45px;}
+.sec_photoZone .photoZone {height:160px; margin-top:43px; background:url(../images/orsremt/img-jumin-zone.png) no-repeat center 0; background-size:160px; height:160px;}
+@media screen and (max-width:359px){
+.sec_photoZone .photoZone {margin-top:28px;}
+}
+.sec_photoZone .sec_title .guide_txt {margin-top:28px;}
+.sec_photoZone .sec_title .guide_txt li + li {margin-top:10px;}
+
+/* 계좌실명인증 - 면허증 */
+.sec_certify_check .sec_step + .sec_title {padding-top:26px;}
+.sec_certify_check .round_border_box {min-height:175px; margin-bottom:0;}
+.sec_certify_check .sec_member_input {margin-top:26px;}
+.sec_certify_check .sec_member_input .input_wrap {margin-top:27px;}
+.sec_certify_check .sec_member_input .input_wrap:after {content:''; clear:both; display:block;}
+.sec_certify_check .sec_member_input .input_wrap .input_wrap {margin-top:13px;}
+.sec_certify_check .sec_member_input .input_wrap .input_tit + .flex_wrap {margin-top:13px;}
+.sec_certify_check .sec_member_input .input_wrap:first-child {margin-top:0;}
+
+/* 계좌실명인증 - 신분증제출 */
+.sec_repoting {margin-bottom:43px; text-align:center;} /* 2018-04-25 16:00 */
+.sec_repoting .guide_txt {margin-top:12px;}
+.sec_repoting .sec_title + .bul_guide {margin:30px 0px 0; padding:0 20px; box-sizing:border-box; width:100%; color:$warm_grey; @include font(14px);} /* 2019-03-15 */
+.sec_repoting .sec_decoration {margin-top:30px; height:271px; background:url(../images/orsremt/img-repoting-info.png?v=1) no-repeat center 0; background-size:184px 271px;}
+.sec_repoting .bul_guide {display:inline-block;}
+.sec_repoting .bul_guide .star_type.indent {text-indent:-11px; padding-left:11px;}
+.sec_repoting .bul_guide .star_type:before {padding-top:3px;}
+
+/* 정보페이지 */
+.sec_detail_wrap {margin-bottom:43px;} /* 2018-04-25 16:00 */
+.sec_detail_wrap .info_guide {margin-top:30px;}
+
+/* 보내기완료 */
+.sec_sendConfirm {padding-bottom:45px;}
+.sec_sendConfirm .sec_title h3 {@include font(24px); font-weight:normal;}
+.sec_sendConfirm .sec_title h3 + p.guide_txt {margin-top:5px;}
+.sec_sendConfirm .round_box {margin-top:28px;}
+.sec_sendConfirm .sec_sns_list {border-top:0; padding-top:43px;}
+
+/* 해외송금 상세내역 - 목록 */
+.sec_remitInfo .tab_wrap.set_type3 {padding:0 20px;}
+.sec_remit_info1 .inp_remark {color:$warm_grey;}
+.sec_remit_info1 .btn_type_c.bg-gray:disabled {background-color:$pinkish_grey; border:0;}
+.sec_remit_info1 {padding:0 20px; padding-bottom:30px;}
+.sec_remit_info1 .txt_reload {text-align:center; color:$pinkish_grey; @include font(11px); letter-spacing:-1px;}
+.sec_remit_info1 .txt_reload .ico {position:relative; top:-1px; margin-left:5px; vertical-align:middle;}
+.sec_remit_info1 .cal_wrap3 {margin-top:25px;}
+.sec_remit_info1 .btn_wrap {margin-top:27px;}
+.sec_remit_info2 .set_type2 {margin-top:12px;}
+.sec_remit_info2 .wrap_result {position:relative; height:calc(100vh - 364px);}/* 2018-04-23 16:30 거래내역없습니다 화면채우기 */
+.sec_remit_info2 .wrap_result .no_result {position:absolute; z-index:2; left:0; top:50%; margin-top:-14px; width:100%; text-align:center; padding-top:0;}/* 2018-04-23 16:30 거래내역없습니다 화면채우기 */
+.sec_remit_info2 .wrap_result:after {content:''; position:absolute; z-index:1; left:0; bottom:-45px; width:100%; height:45px; background-color:#fff;}/* 2018-04-23 16:30 거래내역없습니다 화면채우기 */
+.sec_remit_info2 .tab_content {background-color:$white_three;}
+.sec_remit_info2 .tab_content .info_list {padding:26px 20px 30px; background-color:$white; border-bottom:1px solid $white_two;}
+.sec_remit_info2 .tab_content .info_list + .info_list {margin-top:4px;}
+
+/* 해외송금 상세내역 - 상세 */
+.sec_remitDetail {padding-bottom:45px;}
+.sec_remitDetail .box_detail2 {margin-top:16px;}
+.sec_remitDetail .round_box_cut {margin-right:0; margin-left:0;}
+.sec_remitDetail .sec_title {margin:11px 0 13px; position:relative;}
+.sec_remitDetail .sec_title h2 {font-size:18px;}
+.sec_remitDetail .btn_close_modal {position:absolute; right:0; top:8px;}
+.sec_remitDetail .item.on .btn_type_c:disabled { background-color:$pinkish_grey; border:0;}
+
+/* 해외송금 상세내역 - 송금진행단계 2018-06-11 */
+.step_orsremt {margin-top:13px; margin-bottom:27px;}
+.step_orsremt .step_bar {position:relative; height:12px;}
+.step_orsremt .step_bar .bg {position:absolute; left:0; top:50%; z-index:1; width:100%; height:2px; margin-top:-1px; background:$white_two;}
+.step_orsremt .step_bar .active {position:absolute; left:0; top:50%; z-index:2; width:0; height:2px; margin-top:-1px; background-color:$purply_blue;}
+.step_orsremt .step_bar .target {position:absolute; left:0; top:50%; z-index:10; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%);}
+.step_orsremt .ico_step_target {width:34px; height:23px; background:url(../images/orsremt/ico-step-target.png); background-size:100% 100%;}
+.step_orsremt .step_table {position:relative; margin-top:20px; height:18px;}
+.step_orsremt .step_table .step_label {position:absolute; top:0;}
+.step_orsremt .step_table .step_label:before {content:''; position:absolute; left:0; z-index:5; top:-32px; width:8px; height:8px; margin-left:-6px; border:2px solid $white_two; border-radius:50%; background-color:$white; opacity:1;}
+.step_orsremt .step_table .step_label > span {display:inline-block; color:$brownish_grey; transform:translate(-50%, 0); -webkit-transform:translate(-50%, 0);}
+.step_orsremt .step_table .step_label:first-child:before {margin-left:0;}
+.step_orsremt .step_table .step_label:last-child:before {left:inherit; right:0; margin-left:0;}
+.step_orsremt .step_table .step_label:first-child > span {transform:translate(0, 0); -webkit-transform:translate(0, 0);}
+.step_orsremt .step_table .step_label:last-child > span {transform:translate(0, 0); -webkit-transform:translate(0, 0);}
+.step_orsremt .step_table .step_label.active > span {color:$purply_blue; font-weight:bold;}
+.step_orsremt .step_table .step_label.active:before {border-color:$purply_blue;}
+.step_orsremt .step_table .step_label.active.current:before {opacity:0;}
+.step_orsremt.e-trans .step_bar .active {transition:width 0.4s; -webkit-transition:width 0.4s;}
+.step_orsremt.e-trans .step_bar .target {transition:left 0.4s; -webkit-transition:left 0.4s;}
+
+/* 관리 기본 */
+.sec_setBasic .sec_title {padding-bottom:28px;}
+.sec_setBasic .sec_title .accent_txt small {display:block; margin-top:5px; color:$black;}
+.sec_setBasic .sec_title .accent_txt + .btn_wrap {margin-top:30px;}
+.sec_setBasic .sec_account .account_header,
+.sec_setBasic .sec_account .account_list {padding:0 20px;}
+.sec_setBasic .sec_account .account_header {background-color:$white_three; border-bottom:1px solid $white_two; border-top:1px solid $white_two;}
+.sec_setBasic .sec_account .account_header h4 {@include font(14px); line-height:31px; color:$warm_grey;}
+.sec_setBasic .sec_account .account_body {background-color:$white_three;}
+.sec_setBasic .sec_account .account_list {padding:26px 20px 28px; border-bottom:1px solid $white_two; background-color:$white;}
+.sec_setBasic .sec_account .account_list + .account_list {margin-top:4px; border-top:1px solid $white_two;}
+.sec_setBasic .sec_account .define:after {content:''; clear:both; display:block;}
+.sec_setBasic .sec_account .define dt {float:left; @include font(16px); color:$black;}
+.sec_setBasic .sec_account .define dd {float:right; @include font(14px); color:$black;}
+.sec_setBasic .sec_account .define dd .txt_success {color:$clear_blue;}
+.sec_setBasic .sec_account .define dd .txt_warning {color:$reddish_orange;}
+.sec_setBasic .sec_account .define + .flex_wrap {margin-top:11px;}
+.sec_setBasic .sec_account .flex_wrap .btn_type_h {font-weight:normal;}
+.sec_setBasic .item.on .btn_type_c:disabled { background-color:$pinkish_grey; color:$white_two;border:0;}
+.sec_setBasic .sec_title .bul_guide {margin-top:6px;}
+.sec_setBasic .sec_title .star_type {@include font(11px); color:$warm_grey; text-align:left;}
+.sec_setBasic .sec_title .star_type:before {position:relative; top:1px;}

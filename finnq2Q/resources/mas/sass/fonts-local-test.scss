@@ -1,0 +1,53 @@
+@charset 'UTF-8';
+
+/* 개발확인용입니다. 반영되면 알아서 하세요. */
+
+@font-face {
+  font-family: 'AppleSDGothicNeo-Medium';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../images/test/font/NotoSansKR-Thin.woff2) format('woff2'),
+       url(../images/test/font/NotoSansKR-Thin.woff) format('woff'),
+       url(../images/test/font/NotoSansKR-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'AppleSDGothicNeo-Medium';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../images/test/font/NotoSansKR-Light.woff2) format('woff2'),
+       url(../images/test/font/NotoSansKR-Light.woff) format('woff'),
+       url(../images/test/font/NotoSansKR-Light.otf) format('opentype');
+}
+@font-face {
+   font-family: 'AppleSDGothicNeo-Medium';
+   font-style: normal;
+   font-weight: 400;
+   src: url(../images/test/font/NotoSansKR-Regular.woff2) format('woff2'),
+        url(../images/test/font/NotoSansKR-Regular.woff) format('woff'),
+        url(../images/test/font/NotoSansKR-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'AppleSDGothicNeo-Medium';
+   font-style: normal;
+   font-weight: 500;
+   src: url(../images/test/font/NotoSansKR-Medium.woff2) format('woff2'),
+        url(../images/test/font/NotoSansKR-Medium.woff) format('woff'),
+        url(../images/test/font/NotoSansKR-Medium.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'AppleSDGothicNeo-Medium';
+   font-style: normal;
+   font-weight: 700;
+   src: url(../images/test/font/NotoSansKR-Bold.woff2) format('woff2'),
+        url(../images/test/font/NotoSansKR-Bold.woff) format('woff'),
+        url(../images/test/font/NotoSansKR-Bold.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'AppleSDGothicNeo-Medium';
+   font-style: normal;
+   font-weight: 900;
+   src: url(../images/test/font/NotoSansKR-Black.woff2) format('woff2'),
+        url(../images/test/font/NotoSansKR-Black.woff) format('woff'),
+        url(../images/test/font/NotoSansKR-Black.otf) format('opentype');
+ }
+

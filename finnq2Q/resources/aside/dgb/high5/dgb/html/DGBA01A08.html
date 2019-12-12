@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>입금인증 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="add_sticky">
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">계좌번호 직접입력</h2>
+			<button class="btn_cancel close" onclick="">취소</button>
+		</div>
+
+		<section>
+			<div class="padding_add btm_add account_confirm">
+				<div class="flex_wrap input_wrap mt6">
+					<a href="#none" class="pop_link open_modal">금융기관 선택<span class="ico ico_arrow_more2">더보기</span></a>
+					<input type="tel" data-name="inpFocus" placeholder="계좌번호 입력" class="mt10 account_num">
+				</div>
+			</div>
+		</section>
+
+		<!-- 은행,증권사 선택 풀 팝업
+			클래스 visible로 제어
+		-->
+		<div class="modal_wrap fullpop visible">
+			<div class="modal_content ">
+
+				<div class="sec_head">
+					<h2 class="modal_title">은행/증권사 선택</h2>
+					<button class="close_modal"><span class="blind">창닫기</span></button>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_fincategory">
+						<article>
+							<!-- 은행 -->
+							<h3>은행</h3>
+							<ul class="btn_sellist set_type4">
+								<li><button type="button" class="on">KEB하나</button></li>
+								<li><button type="button">국민</button></li>
+								<li><button type="button">신한</button></li>
+								<li><button type="button">우리</button></li>
+								<li><button type="button">농협</button></li>
+								<li><button type="button">기업</button></li>
+								<li><button type="button">경남</button></li>
+								<li><button type="button">광주</button></li>
+								<li><button type="button">대구</button></li>
+								<li><button type="button">도이치뱅크</button></li>
+								<li><button type="button">부산</button></li>
+								<li><button type="button">산업</button></li>
+								<li><button type="button">상호저축은행</button></li>
+								<li><button type="button">새마을금고</button></li>
+								<li><button type="button">수협중앙회</button></li>
+								<li><button type="button">신용협동조합</button></li>
+								<li><button type="button">전북</button></li>
+								<li><button type="button">케이뱅크</button></li>
+								<li><button type="button">제주</button></li>
+								<li><button type="button">씨티</button></li>
+								<li><button type="button">우체국</button></li>
+								<li><button type="button">BOA</button></li>
+								<li><button type="button">HSBC</button></li>
+								<li><button type="button">JP모간</button></li>
+								<li><button type="button">SC제일</button></li>
+								<li><button type="button">산림조합</button></li>
+								<li><button type="button">중국공상</button></li>
+								<li><button type="button">BNP파리바</button></li>
+							</ul>
+						</article>
+
+						<article>
+							<!-- 증권사 -->
+							<h3>증권사</h3>
+							<ul class="btn_sellist set_type4">
+								<li><button type="button">교보</button></li>
+								<li><button type="button">대신</button></li>
+								<li><button type="button">미래에셋대우</button></li>
+								<li><button type="button">동부</button></li>
+								<li><button type="button">유안타</button></li>
+								<li><button type="button">메리츠</button></li>
+								<li><button type="button">부국</button></li>
+								<li><button type="button">삼성</button></li>
+								<li><button type="button">솔로몬투자</button></li>
+								<li><button type="button">신영</button></li>
+								<li><button type="button">신한금융</button></li>
+								<li><button type="button">NH투자</button></li>
+								<li><button type="button">유진투자</button></li>
+								<li><button type="button">이베스트</button></li>
+								<li><button type="button">키움</button></li>
+								<li><button type="button">하나대투</button></li>
+								<li><button type="button">하이투자</button></li>
+								<li><button type="button">한국투자</button></li>
+								<li><button type="button">한화</button></li>
+								<li><button type="button">현대</button></li>
+								<li><button type="button">HMC</button></li>
+								<li><button type="button">LIG투자</button></li>
+								<li><button type="button">SK</button></li>
+								<li><button type="button">KB투자</button></li>
+								<li><button type="button">KTB투자</button></li>
+								<li><button type="button">펀드온라인<br>코리아</button></li>
+							</ul>
+						</article>
+						<!-- //은행 선택 풀 팝업 적용 해야함 -->
+					</div>
+				</div>
+
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //은행,증권사 선택 풀 팝업 -->
+
+		<!-- 모든 항목이 선택되면 disabled 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">확인</button>
+		</div>
+	</div><!-- //contents -->
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	// 팝업 호출 버튼
+	$(this).on('click', '.open_modal', function(event) {
+		$('.modal_wrap').addClass('visible');
+	});
+
+	$(".modal_wrap").on("click","button.close_modal", function(){
+		$(this).closest('.modal_wrap').toggleClass("visible");
+		return false;
+	});
+
+	// 팝업 목록 선택버튼
+	var chkNum = 0;
+
+	$(".btn_sellist").on("click", "button", function(){
+		var thisTxt = $(this).text();
+
+		//if( $(this).parent().hasClass('disabled') ) { return false; } //비활성 막기
+		if( $(this).text() == "") { return false; } //빈 a태그 막기
+		$(this).parent('li').siblings().find('button').removeClass('on');
+		$(this).parents('article').siblings().find('li > button').removeClass('on'); //은행,증권사 중 단일선택
+		$(this).toggleClass('on');
+		$(this).parents('.modal_wrap').removeClass('visible');
+		$('.open_modal').text(thisTxt).css('color','#222');
+		chkNum = 1;
+
+		var account_num = $('.account_confirm .account_num[data-name=inpFocus]').val();
+		if (account_num > 0 ) {
+			$('.sticky_wrap .btn_type_apply').removeAttr('disabled');
+		} else {
+			$('.sticky_wrap .btn_type_apply').attr('disabled', 'disabled');
+		}
+	});
+
+	// Input 필드 키보드 이벤트
+	$(this).on("keyup",".account_confirm .account_num[data-name=inpFocus]", function(e) {
+		var textSum = $(this).val();
+		if(textSum.length > 0) {
+			if ( (chkNum != 0)) {
+				$('.sticky_wrap .btn_type_apply').removeAttr('disabled');
+			}
+		} else {
+			$('.sticky_wrap .btn_type_apply').attr('disabled', 'disabled');
+		}
+	});
+});
+</script>
+</body>
+</html>

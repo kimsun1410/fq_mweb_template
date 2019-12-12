@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08해외송금_06송금정보입력2_01_web_MASP03Z03</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="orsremt add_sticky no_fixed"><!-- no_fixed class 추가 2018-03-20 ock -->
+		<section class="orsremt_from orsremt_hp">
+
+			<!-- 2018-04-20 스탭추가 phj -->
+			<div class="sec_step">
+				<ol class="step01">
+					<li class="on"><!-- 진행:on, 완료: complete -->
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>3</strong>
+					</li>
+				</ol>
+			</div><!-- //2018-04-20 스탭추가 phj -->
+
+			<div class="sec_title">
+				<h2>본인 인증</h2>
+				<!-- 20180412 문구수정 -->
+				<p class="guide_txt">
+					주민번호는 금융 실명법상 실명확인을 위해 사용되며, <br>법적 용도 이외에는 활용하지 않습니다. <!-- 20180418 문구수정 -->
+				</p>
+			</div>
+
+			<div class="sec_member_input">
+				<ul class="flex_wrap set_type1">
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" placeholder="이름 (성 + 이름)" class="">
+						<p class="remark hide">이름을 입력해 주세요.</p>
+					</li>
+					<li class="input_wrap type_3"><!-- 20180313 마크업변경 -->
+						<div class="item"><input type="text" data-name="inpFocus" placeholder="주민번호 앞자리"></div>
+						<div class="item">-</div>
+						<!-- 20180327 주민번호 뒷자리 변경 -->
+						<div class="item inp_focus"><!-- 에러일때 inp_error 추가 -->
+							<div class="pw_input accountPwd">
+								<p class="on">
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<p>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<div class="box_password" data-name="inpFocus"></div>
+							</div>
+							<p class="remark hide">주민번호 뒷자리를 입력해 주세요</p><!-- 20180327 에러일때 hide 삭제 -->
+						</div>
+					</li>
+					<li class="input_wrap soft_select item">
+						<select data-name="inpFocus"><!-- 20180313 통신사변경 -->
+							<option value="">통신사</option>
+							<option value="">SKT</option>
+							<option value="">KT</option>
+							<option value="">LGU+</option>
+							<option value="">알뜰폰SK</option>
+							<option value="">알뜰폰KT</option>
+							<option value="">알뜰폰LGU+</option>
+						</select>
+						<p class="remark hide">통신사를 선택해 주세요.</p>
+					</li>
+					<li class="input_wrap col_box item inp_error">
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="휴대폰번호" class="">
+							<p class="remark">휴대폰번호를 입력해 주세요.</p><!-- 에러일때 hide 를 빼주세요. -->
+						</span>
+						<span>
+							<button type="button" name="button" class="btn btn_type_f">인증번호 받기</button><!-- disabled="disabled" -->
+							<!-- <p class="remark show">dddd</p> -->
+						</span>
+					</li>
+					<li class="input_wrap pin_number item">
+						<input type="number" data-name="inpFocus" placeholder="인증번호" class="">
+						<p class="remark hide">인증시간이 초과되었습니다.</p>
+						<div class="time_count">03:00</div><!-- 20180313 시간수정 -->
+						<div class="bul_guide">
+							<p class="star_type indent">SMS재전송은 3회까지만 가능합니다.</p>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="sec_terms">
+				<div class="agree_terms sec_term_type1"><!-- 20180423 sec_term_type1 클래스추가 -->
+					<dl>
+						<dt class="agree_wrap">
+							<input type="checkbox" id="all_chk" class="all_chk"><label for="all_chk"><span>본인 인증 이용 동의(필수)</span></label>
+						</dt>
+						<dd>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101"><span>개인정보 이용동의</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102"><span>고유식별정보 처리동의</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103"><span>통신사 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104"><span>서비스 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+						</dd>
+					</dl>
+				</div><!-- //agree_terms -->
+			</div><!-- //sec_terms -->
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">확인</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

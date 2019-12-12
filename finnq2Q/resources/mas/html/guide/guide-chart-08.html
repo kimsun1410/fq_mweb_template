@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>rMate 그래프</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+		
+		<!-- ## style ## -->
+		<link rel="stylesheet" href="../../css/ui.css" />
+		<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+		<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+		<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+		
+		<style media="screen">
+			#GUIDE-CHART .chart_area { margin-bottom: 20px; }
+		</style>
+		
+		<!-- # chart # -->
+		<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+		<!-- rMateChartH5 라이센스 -->
+		<!-- <script src="rMateChartH5/LicenseKey/rMateChartH5License.js" ></script> -->
+		<!-- 실제적인 rMateChartH5 라이브러리 > 수정불가-! -->
+		<script language="javascript" type="text/javascript" src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+		<script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+		<script>
+		// -----------------------차트 설정 시작 01 -----------------------
+		// @ rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+		
+		var chartVars08 = "&rMateOnLoadCallFunction=rMateChartOnLoad8";
+		
+		function chartReadyHandler(id) {
+			// document.getElementById(id).setLayout(id == "chart05_1" ? layoutStr05_1 : layoutStr05_2);
+			document.getElementById(id).setLayout(layoutStr05_2);
+			document.getElementById(id).setData(chartData05);
+		}
+
+		// ------- 테스트용 임시데이터 
+	
+		var chartData08 = [
+			{"Type":"고정비", "Value":70, "Legend":"<strong class='tit'>고정비</strong><p><i class='num bold'>350,000</i>원</p>"},
+			{"Type":"변동비", "Value":30, "Legend":"<strong class='tit'>변동비</strong><p><i class='num bold'>150,000</i>원</p>"}
+		];
+		
+		
+	// @ 차트 로드 - setData
+		function rMateChartOnLoad(){
+			// @ xml 
+			// chart01.setLayoutURL(layoutURL);
+			chart01.setLayout(layoutStr01);
+			chart01.setData(chartData01);
+			
+			// @ 데이터 체크 함수
+			checkData(chartData01); // 데이터가 존재하는지 판별한다.
+			// 0 이면 이미지 띄우는걸로 -
+			
+			// # loading 이미지 노출 / 제거 
+			// showPreloader();
+			// hidePreloader();
+		}
+
+		function rMateChartOnLoad8(){
+			chart08.setLayout(layoutStr08);
+			chart08.setData(chartData08);
+		}
+		
+		// @ 차트 생성		
+		rMateChartH5.create("chart08", "chartHolder08", chartVars08, "100%", "100%"); 
+		
+		// @ 차트생성 - 함수내부에 onloadcallfunction 등록
+		// # 참고 - /rMateChartH5Web_v5.0_EN_trial/Samples/createOnLoadCallFunction.html
+		// chartVars 대신 creat함수 마지막 파라메터에 차트가 준비가 완료될 경우 호출할 함수를 설정합니다.
+		// rMateChartH5.create("chart1", "chartHolder", "", "100%", "100%", function(id){
+		// 	document.getElementById(id).setLayout(layoutStr);
+		// 	document.getElementById(id).setData(chartData);
+		// });
+		
+		// @ itemClickJsFunction="chartClick"
+		// @ dataTipJsFunction="dataTipFunc"
+		
+		// 삭제 -- 
+	
+			function fillFunc(id, index, data, values){
+				if(values[1] > 0)
+					return "#a185fa";
+				else {
+					return "#eee9fe";
+				}
+			}
+		// -- 삭제 
+		
+		// @Pie2
+		var layoutStr08 =	'<rMateChart styleName="_chart08">'
+				+'<Options>'
+					+'<Legend useVisibleCheck="false" legendAllCheck="true" position="right" direction="vertical" width="40%" paddingLeft="15" color="#222" fontSize="16" styleName="_legend"/>'
+				+'</Options>'
+				+'<CurrencyFormatter id="nft" precision="0" currencySymbol="%" alignSymbol="right" />'
+					+'<Pie2DChart formatter="{nft}" id="chart" innerRadius="0" showDataTips="false" selectionMode="none" explodable="false" itemClickJsFunction="chartClick_08">' /* dataTipDisplayMode="axis" selectionMode="single" */
+						+'<series>'
+							+'<Pie2DSeries formatter="{nft}" labelPosition="inside" nameField="Legend" field="Value" startAngle="270" renderDirection="clockwise" color="#fff" insideLabelRatio="0.5">'
+								+'<fills>'
+									+'<SolidColor color="#731aed"/>' // 고정비
+									+'<SolidColor color="#c7b9fa"/>' // 변동비
+								+'</fills>'
+								+'<showDataEffect>'
+									+'<SeriesInterpolate duration="1000"/>'
+								+'</showDataEffect>'
+						+'</Pie2DSeries>'
+					+'</series>'
+				+'</Pie2DChart>'
+			+'</rMateChart>';
+		
+						
+		// -----------------------함수-----------------------
+		// @ 데이터 체크
+		
+		/* @ 데이터 없는 경우 대응 : checkData() - hasNoData(false) 이미지로 대체 ---*/ 
+		// hasNoData(false); 데이터가 존재하지 않으므로 차트의 기본 구조도 보이지 않아야 한다면 
+		// false로 주어 차트 전체의 visible을 false로 설정합니다.
+		// hasNoData(true); 데이터가 존재하지 않아도 차트의 기본 구조는 보여야 한다면 true로 주어 
+		// visible을 true로 설정합니다.
+		// 데이터가 없을 경우 hasNoData함수를 실행하여 메세지창을 출력한다.
+		
+		function rangeFunc(type, x, y){
+			for(var o in rMateChartH5.instances)
+				rMateChartH5.instances[o].updateCrossRange(type, x, y);
+		}
+		// 프리로더를 보이게 합니다.
+			function showPreloader(){
+				document.getElementById("chart01").showAdditionalPreloader();
+			}
+			// 프리로더를 제거합니다.
+			function hidePreloader(){
+				document.getElementById("chart01").removeAdditionalPreloader();
+			}
+		function checkData(data){
+			if( data.length <= 0 ) {
+				alert('no data');
+				// document.getElementById('chart01').hasNoData(true);
+			}
+		}
+		function _stackLabelFunc(id,value){
+			return value + "%";
+		}
+		
+		// 스택 수치 합 사용자 정의 함수
+		function totalFunc(index, data, value){
+			if( index == 6 )
+				return value + " 원";
+			return "";
+		}
+		
+		// 스택 수치 합 사용자 정의 함수
+		function totalFunc2(index, data, value){
+			if(index == 6)
+				return insertComma(value);
+			return "";
+		}
+		
+		//숫자에 천단위 콤마 찍어 반환하는 함수.
+		function insertComma(n) {
+			var reg = /(^[+-]?\d+)(\d{3})/; // 정규식
+			n += "";
+			while (reg.test(n))
+			n = n.replace(reg, '$1' + "," + '$2');
+			return n;
+		}
+		
+		// @ max value
+		function upFunc(seriesId, index, data, values){
+			return '<font color="#6097f6">' + values[1] + '원' + '</font>';
+		}
+		// @ min value
+		function downFunc(seriesId, index, data, values){
+			return '<font color="#6097f6">' + values[1] + '원' + '</font>';
+		}
+		
+		function averFunc(seriesId, index, data, values) {
+			return '<font color="#6097f6">평균 ' + values + '원' + '</font>';
+		}
+		
+		/*		------------------------- 데이터팁 사용자 정의 함수 -----------------------------------
+			챠트에서 showDataTips="true" 설정 후 마우스 오버 시 보이는 데이터팁 정의
+			layout XML 에서 Chart 속성을 넣을때 dataTipJsFunction를 주고, 만든 javascript 함수명을 넣어줍니다
+			예) <Column3DChart showDataTips="true" dataTipJsFunction="dataTipFunc">
+
+			[ # 파라메터 설명 # ]
+				* seriesId : layout XML에서 부여한 series의 id가 있을 경우, 해당 id를 보내줍니다.
+				* seriesName : 시리즈의 displayName 으로 정의한 시리즈 이름을 보내줍니다.
+				* index : 해당 아이템의 인덱스.
+				* xName : X 축에 displayName 을 정의하였다면 X축의 displayName을 보내줍니다.
+				* yName : Y 축에 displayName 을 정의하였다면 Y축의 displayName을 보내줍니다.
+				* data : 해당 item의 값을 표현하기 위해 입력된 data(입력된 데이타중 해당 row(레코드) 자료입니다)
+				* values : 해당 item의 값 (배열로 전달되며, 챠트 종류에 따라 아래와 같이 들어옵니다.)
+						Bar2D, Bar3DSeries							0:x축값 1:y축값
+						Column2D, Columnd3DSeries			  0:x축값 1:y축값
+						Area2DSeries										0:x축값 1:y축값
+						Bubble3DSeries									0:x축값 1:y축값 2:radius값
+						Line2DSeries										0:x축값 1:y축값
+						Candlestick2DSeries						  0:x축값 1:open값 2:close값 3:high값 4:low값
+						Pie2D, Pie3DSeries							0:값 1:퍼센트값 2:nameFiled명
+						Bar2D, Column2DWingSeries			  0:x축값 1:y축값
+						Histogram2D, Histogram3DSeries	0:x축값 1:y축값
+						TreeMapSeries									  0:weight값 1:name값
+						BoxPlotSeries									  0:upper값 1:median값 2:lower값 3:min값 4:hidden값
+						Vector2DSeries								  0:degree값 1:velocity값 2:meter값
+						WordCloudSeries								  0:weight값 1:text값
+		*/
+		</script>
+		
+	</head>
+
+	<body id="GUIDE-CHART">
+		<!-- Wrapper -->
+		<div class="wrap">
+
+				<!-- contents -->
+				<div id="contents">
+					<div class="parallax bg_typeD"></div>
+					<section class="guide_wrap" >
+					
+						<div class="sec_chart">
+							<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">고정비_얼마썼어</h3>
+							
+							
+							<!-- 얼마나남나 -->
+							<div class="_chart08">
+								<div class="chart_area">
+									<div class="chart type-pie" id="chartHolder08"></div>
+								</div>	
+							</div>
+						</div>
+					
+					</section><!-- //section : analysis_wrap -->
+				</div><!-- //contents -->
+		</div><!-- //wrap -->
+		
+		<!--// # chart # -->
+		<!-- ## script ## -->
+		<script src="../../libs/jquery-2.2.4.min.js"></script>
+		<script src="../../libs/ui.js"></script>
+		<script src="../../libs/contents.js"></script>
+		
+		<!--// # chart # -->
+	</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>핀크적금_02신청서작성_01자동이체안함</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+<script type="text/javascript">
+$(function(){
+	calculation();
+	function calculation() {
+		var valW  = 0; //.active - width
+		var valL  = 0; //.knob - left
+		var durW  = 0; //.active - duration
+		var durL  = 0; //.knob - duration
+		var delay = 0;
+		var theLast = false;
+		$(".benefit_cal ul li").each(function(num){
+			var $this = $(this);
+			var dur   = 600;
+			var bar   = $this.parents('.benefit_cal').find(".bar");
+			var active= $this.parents('.benefit_cal').find(".active");
+			var knob  = $this.parents('.benefit_cal').find(".knob");
+			var liww  = $this.parents('.benefit_cal').find("ul li").width()+20;
+			var aww   = $this.parents('.benefit_cal').find("ul li a").width()/2;
+			var liww2 = $this.parents('.benefit_cal').find("ul li").width()-aww;
+			var size  = $this.parents('.benefit_cal').find("ul li").size();
+
+			//마크업 구조변경
+			if (!$(this).parents('.benefit_cal').hasClass('flexible')){
+				active.after(knob);
+			}
+
+			//길이로 퍼센트구하기 = 실제길이/전체길이 * 전체비율
+			var calPer = function(valNow, valMax){return valNow/valMax * 100}
+
+			//퍼센트로 시간구하기 = 퍼센트값/전체비율 * 전체시간
+			var calDur = function(valNow, valMax){return (calPer(valNow, bar.width())/100) * dur}
+
+			//Active Animate
+			var action = function(numW, numL){
+
+				valW = liww*num+liww/2;
+				valL = liww*num+liww/2;
+				durW = calDur(Math.abs(valW-numW), bar.width());
+				durL = calDur(Math.abs(valL-numL), bar.width());
+
+				//마지막인 경우
+				if ($this.is(':last-child')){
+					valW = bar.width();
+					valL = liww*num+liww/2;
+					durW = calDur(Math.abs(valW-numW), bar.width());
+					durL = calDur(Math.abs(valL-numL), bar.width());
+					delay = 0;
+					theLast = true;
+				} else {
+					if (theLast == true){
+						valW_Last = liww*(size-1)+liww/2;
+						delay = calDur(Math.abs(valW_Last-numW), bar.width());
+					} else {
+						delay = 0;
+					}
+					theLast = false;
+				}
+
+				active.animate({width:valW}, durW);
+				setTimeout(function(){
+					knob.animate({left:valL}, durL);
+				}, delay)
+			}
+
+			//Init Animate
+			if($this.hasClass('on')){
+				setTimeout(function(){
+					action(valW, valL);
+				},800)
+			}
+
+			//Event Animate
+			$this.on('click',function(){
+				$(this).addClass('on').siblings().removeClass('on');
+				action(valW, valL);
+			});
+		});
+	}
+
+	//help tooltips
+	$('body').on("click","button[data-name=open_help]", function(e){
+		e.stopPropagation();
+		$("button[data-name=open_help]").removeClass('on').next(".layer_wrap").hide().removeClass('on');
+		$(this).addClass("on").next(".layer_wrap").fadeIn(500).addClass("on");
+		//}
+	});
+	//body click closed tooltip
+
+
+	$('body').on('touchend',".wrap, .modal_wrap", function(e) {
+		$("button[data-name=open_help]").removeClass("on");
+		$(".layer_wrap").hide().removeClass("on");
+
+	});
+
+	$('.soft_select').on('change', 'select[data-name=inpFocus]', function (event) {
+		$(this).addClass('color_change');
+	});
+
+
+	function deviceModel(){
+		var currentOS;
+		var mobile = (/iphone|ipad|ipod|android/i.test( navigator.userAgent.toLowerCase() ));
+		if (mobile)
+		{
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (userAgent.search("android") > -1) {
+				currentOS = "android";
+			} else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)) {
+				currentOS = "ios";
+			} else { currentOS = "else"; }
+		}
+		else  {  currentOS = "nomobile"; }
+
+		$('body').addClass(currentOS);
+	}
+	deviceModel();
+
+	// 계좌 선택
+	$('.sec_select').on('click','[data-name=acc-button]', function(event){
+		$(this).addClass("ico_dot").parent('li').addClass('active')
+			.siblings().removeClass('active')
+			.find('[data-name=acc-button]').removeClass("ico_dot");
+	});
+
+	$('.account_opt_wrap .btn_select_pop').on('click', function(event) {
+		$('.modal_wrap').addClass('visible normal');
+		function scrollMake() {
+			scrH = $(window).height()*0.5;
+			$('.pop_acc_select .sec_select').css({'height':scrH});
+		}
+		scrollMake();
+	});
+
+	$(this).on('click', '.modal_wrap .close_modal.btn_type_f', function(event) {
+		var layerSelect 	= $('.modal_content .scroll_wrap .sec_select li .ico_dot'),
+			layerSelStr 	= layerSelect.find('strong').text(),
+			layerSelAcc		= layerSelect.find('em.cash').text(),
+			selectAccount 	= layerSelStr + '<em class="num">' + layerSelAcc + '</em>';
+
+		console.log(layerSelStr)
+		console.log(layerSelAcc)
+		$('.account_opt_wrap .btn_select_pop').addClass('on').html(selectAccount);
+		$('.modal_wrap').removeClass('visible normal');
+	});
+
+});
+</script>
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="add_sticky">
+		<div class="sec_ows_head finnq">
+			<button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button>
+			<h2 class="ows_title">KEB하나 비대면계좌 개설</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section class="tfinnq_wrap">
+
+			<div class="sec_title">
+				<h2 class="accent_txt normal">신청서 작성</h2>
+				<p class="guide_txt btm_padding">T핀크적금 상품 신청서를 작성해 주세요.</p>
+			</div>
+
+			<div class="list_expend_wrap kebhana">
+				<ul class="list_expend kebhana">
+					<li>
+						<div class="txt_info">
+							<p class="tit"><span>적립방법</span></p>
+							<p class="tit">정액 적립식</p>
+						</div>
+					</li>
+					<li>
+						<div class="box_layout_com">
+							<div class="cal_wrap">
+								<span class="tit bold">가입 금액</span>
+								<div class="benefit_cal set_3">
+									<span class="active"><i class="knob"></i></span>
+									<ul class="">
+										<li class="cal1"><a href="#none"><em class="num">5</em>만원</a></li>
+										<li class="cal2 on"><a href="#none"><em class="num">10</em>만원</a></li>
+										<li class="cal3"><a href="#none"><em class="num">15</em>만원</a></li>
+									</ul>
+									<span class="bar"></span>
+								</div>
+							</div>
+
+							<div class="join_date">
+								<div><span class="tit bold">가입 기간</span></div>
+								<ul class="kebhana_opt_wrap col2">
+									<li>
+										<input type="radio" id="opt_val1_1" name="join_date_val">
+										<label for="opt_val1_1"><span><em class="num">12</em>개월</span></label>
+									</li>
+									<li>
+										<input type="radio" id="opt_val1_2" name="join_date_val">
+										<label for="opt_val1_2"><span><em class="num">24</em>개월</span></label>
+									</li>
+								</ul>
+							</div><!-- //join_date -->
+
+						</div><!-- //box_layout_com -->
+					</li>
+					<li>
+
+					</li>
+					<li>
+						<div class="box_layout_com">
+							<!-- group1 -->
+							<div class="group1">
+								<div class="tooltip_wrap">
+									<span class="tit bold">출금계좌 번호</span>
+									<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+									<div class="layer_wrap">
+										<p>출금계좌 안내<br>
+											- 하나은행에 보유하고 계신 입출금 계좌번호를<br>입력해주세요. 인증이 완료되면 예/적금 출금계좌 및<br>적금 <em>자동이체 계좌로 자동 등록</em>됩니다.<br>
+											- 예/적금 가입 또는 수수료 출금이 필요한 경우<br>출금계좌
+											잔액은 예/적금 가입금액 또는 보안매체 발급<br>수수료 이상이어야 하며 부족한 경우<br>
+											<em>추가 입금</em>해 주시기 바랍니다.<br>
+											- 예/적금 가입이 아니거나 수수료 출금이<br>
+											필요하지 않은 경우는 본인 확인용으로만 계좌정보가<br>
+											이용되며 별도 출금은 되지 않습니다.
+										</p>
+									</div>
+								</div>
+
+								<div class="account_opt_wrap">
+								<script type="text/javascript">
+
+								</script>
+
+									<div class="input_wrap soft_select item">
+										<a href="#" class="btn_select_pop">출금계좌 선택</a>
+										<p class="remark show">출금계좌를 선택해 주세요.</p>
+									</div>
+
+									<!-- 클래스 : inp_error 추가 -->
+									<!-- 에러가 날 경우 -->
+									<!--
+									<div class="input_wrap soft_select item inp_error">
+										<a href="#" class="btn_select_pop">출금계좌 선택</a>
+										<p class="remark show">출금계좌를 선택해 주세요.</p>
+									</div>
+									-->
+									<!-- //에러가 날 경우 -->
+
+
+									<div class="input_wrap col_box item">
+										<span>
+											<input type="password" data-name="inpFocus" placeholder="출금계좌 비밀번호" class="">
+											<p class="remark hide">출금계좌 비밀번호를 입력해 주세요.</p>
+										</span>
+										<span>
+											<button type="button" name="button" class="btn btn_type_f">출금계좌 확인</button>
+										</span>
+									</div>
+									<p class="star_type">출금계좌 비밀번호가 T핀크적금 계좌의 비밀번호로 등록됩니다.</p>
+
+									<!-- 클래스 : inp_error 추가 -->
+									<!-- 에러가 날 경우 -->
+									<!--
+									<div class="input_wrap col_box item inp_error">
+										<span>
+											<input type="password" data-name="inpFocus" placeholder="출금계좌 비밀번호" class="">
+											<p class="remark show">출금계좌 비밀번호를 입력해 주세요.</p>
+										</span>
+										<span>
+											<button type="button" name="button" class="btn btn_type_f">출금계좌 확인</button>
+										</span>
+									</div>
+									-->
+									<!-- //에러가 날 경우 -->
+
+								</div><!-- //account_opt_wrap -->
+							</div>
+							<!-- //group1 -->
+
+							<div class="group2">
+								<div class="tooltip_wrap">
+									<span class="tit bold">자동이체 신청</span>
+									<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+									<div class="layer_wrap">
+										<p>자동이체 계좌는 신청서에서 <em>입력하신 출금 계좌로<br>자동으로 등록</em>되며, 입출금통장 동시 신규 개설시에는<br>해당 입출금통장 계좌로 자동으로 등록됩니다.</p>
+									</div>
+								</div>
+
+								<!-- 자동이체 신청에 따른 옵션체크 -->
+								<script type="text/javascript">
+									$(function(){
+										$('.kebhana_opt_wrap.col2.transfer').on('click', 'input[type="radio"]', function() {
+											var status = $('.kebhana_opt_wrap.col2.transfer .chk_ok').prop("checked");
+											if (status) {
+
+												// $('.transfer_detail').css({'display' : 'block'});
+												$('.transfer_detail').slideDown(400);
+											} else {
+												// $('.transfer_detail').css({'display' : 'none'});
+												$('.transfer_detail').slideUp(400);
+											}
+										})
+									});
+								</script>
+
+								<!-- 신청안함 DEFAULT -->
+								<ul class="kebhana_opt_wrap col2 transfer">
+									<li>
+										<input type="radio" id="opt_val2_1" name="account_opt1" checked="checked">
+										<label for="opt_val2_1"><span>신청안함</span></label>
+									</li>
+									<li>
+										<input type="radio" id="opt_val2_2" name="account_opt1" class="chk_ok">
+										<label for="opt_val2_2"><span>신청함</span></label>
+									</li>
+								</ul>
+
+								<div class="transfer_detail">
+									<article class="transfer_info">
+										<div>
+											<p class="tit first"><span>자동이체 금액</span></p>
+											<p class="tit"><em class="num">50,000</em>원</p>
+										</div>
+										<div>
+											<p class="tit first"><span>자동이체 주기</span></p>
+											<p class="tit"><em class="num">1개월</em></p>
+										</div>
+									</article>
+
+									<article>
+										<dl class="input_wrap zero">
+											<dt class="input_tit">
+												<strong>자동이체 지정일</strong>
+											</dt>
+											<dd>
+												<div class="item soft_select mt10">
+													<select data-name="inpFocus" class="color_change">
+														<option value="">1일</option>
+														<option value="">2일</option>
+														<option value="">3일</option>
+														<option value="">4일</option>
+														<option value="">5일</option>
+														<option value="">6일</option>
+													</select>
+												</div>
+											</dd>
+										</dl>
+
+										<dl class="input_wrap">
+											<dt class="input_tit">
+												<strong>자동이체 시작일</strong>
+											</dt>
+											<dd class="flex_wrap set_type1 date_insert">
+												<input type="date" data-name="inpFocus" class="">
+											</dd>
+										</dl>
+									</article>
+								</div>
+								<!-- //transfer_detail -->
+							</div>
+							<!-- //group2 -->
+						</div>
+					</li>
+					<li>
+						<!-- group2 -->
+						<div class="box_layout_com">
+							<div class="tooltip_wrap">
+								<span class="tit bold">만기해지 구분</span>
+								<button class="btn_ico ico_circle_help top" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap top">
+									<p>만기시 자동해지<br>
+										- 예금 계약기간 만료시 <em>원리금이 자동 해지</em>되어 예금<br>
+										가입시 출금계좌로 자동 입금처리 됩니다.<br><br>
+
+										직접해지<br>
+										- 예금 계약기간 만료 후 손님이 <em>직접 해지</em>를 해야만<br>
+										원리금이 예금 가입시 출금계좌로 입금됩니다.<br>
+										<span>(미해지 기간의 이율은 만기 후 이율이 적용되며, 본인인증을 거친 후 해지가 됩니다.)</span>
+									</p>
+								</div>
+							</div>
+
+							<!-- 만기시 자동해 DEFAULT -->
+							<ul class="kebhana_opt_wrap col2">
+								<li>
+									<input type="radio" id="account_end1" name="account_end" checked="checked">
+									<label for="account_end1"><span>만기시 자동해지</span></label>
+								</li>
+								<li>
+									<input type="radio" id="account_end2" name="account_end">
+									<label for="account_end2"><span>직접해지</span></label>
+								</li>
+							</ul>
+							<p class="star_type">미납회차가 있는 경우 자동해지 처리되지 않습니다.</p>
+						</div>
+						<!-- //group2 -->
+					</li>
+					<li><!-- 예적금 만기 SMS통보 Check DEFAULT -->
+						<div class="sms_opt_wrap tooltip_wrap">
+							<div>
+								<input type="checkbox" id="chk_sms_ok" name="check_action" class="purple" checked="checked">
+								<label for="chk_sms_ok" name="check_action"><span>예적금 만기 SMS통보</span></label>
+
+								<button class="btn_ico ico_circle_help top" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap top">
+									<p>- <em>만기일 1주일 전 1회</em>에 한하여 통지합니다.<br>
+									- 문자통지는 통지일 기준 당행에 등록된 고객정보의<br>휴대폰 번호로 통지합니다.<br>
+									- 고객님 사정(휴대폰 전원 꺼짐, 통화불능 지역 등)으로<br>안내되지 않는 경우 은행은 책임지지 않습니다.<br>
+									- 본 서비스의 해지를 원하실 경우 <br>
+									통지 전 가까운 영업점에 내점하여 <em>별도의 해지신청</em>을<br>하셔야 합니다.</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+
+		<!-- 계좌 선택 레이어  -->
+		<div class="modal_wrap pop_acc_select"><!-- visible normal -->
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">계좌를 선택하세요</h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_select">
+						<ul class="flex_wrap set_type1">
+							<li class="item main_acc"><!-- 주계좌 class : main_acc -->
+								<a data-name="acc-button" class="btn_type_d ico_dot">
+									<strong>KEB하나</strong>
+									<em class="cash">987-654-321098</em>
+								</a>
+							</li>
+							<li class="item double"><!-- 구계좌 가 있을경우 -->
+								<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+									<strong>KEB하나</strong>
+									<em class="cash">987-654-321098</em>
+									<span class="account">(구) <span class="cash">320-654-321098</span></span>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+									<strong>국민</strong>
+									<em class="cash">987-654-321098</em>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+									<strong>KEB하나</strong>
+									<em class="cash">987-654-321098</em>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+									<strong>KEB하나</strong>
+									<em class="cash">987-654-321098</em>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+									<strong>KEB하나</strong>
+									<em class="cash">987-654-321098</em>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+									<strong>KEB하나</strong>
+									<em class="cash">987-654-321098</em>
+								</button>
+							</li>
+							<li class="item">
+								<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+									<strong>KEB하나</strong>
+									<em class="cash">987-654-321098</em>
+								</button>
+							</li>
+							<!--
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><em class="txt">계좌번호 직접 입력</em></button></li> -->
+						</ul>
+					</div>
+
+					<div class="flex_wrap set_type2">
+						<span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
+						<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+					</div>
+				</div><!-- //scroll_wrap -->
+			</div>
+		</div><!-- //modal_wrap -->
+
+		<!-- 입력값이 모두 입력되면 disabled 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+
+	</div><!-- //contents -->
+</div>
+
+</body>
+</html>

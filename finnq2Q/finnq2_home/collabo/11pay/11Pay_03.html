@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>11Pay x Finnq</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="../../css/collabo/collabo_reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/collabo/collabo_common.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/collabo/collabo_style.css" />
+</head>
+<body>
+<div class="collabo_wrap bg_list"><!-- 11pay_03 -->
+	<div id="contents" class="eleven_pay add_sticky">
+		
+		<div class="header fixed">
+			<button class="btn btn_back"><span class="blind">뒤로</span></button> 
+			<h1 class="finnq_logo"><span class="blind">Finnq</span></h1>
+			<button class="btn btn_close"><span class="blind">닫기</span></button> 
+		</div>
+
+		<div class="sec_title">
+			<h3 class="accent_txt">11Pay에 핀크계좌를<br><strong class="purply_blue">결제 수단으로 등록</strong>하기</h3>
+		</div>
+
+		<!-- all_chk 있는 구조 -->
+		<div class="sec_terms">
+			<div class="agree_terms">
+				<dl>
+					<dt class="agree_wrap terms_tit">
+						<input type="checkbox" id="all_chk" class="all_chk"><label for="all_chk"><span>항목 동의 (필수)</span></label>
+					</dt>
+					<dd>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0101" name="check_action"><label for="chk0101"><span>충전 권한 위임장</span></label>
+							<button type="button" class="ico ico_arrow_more open_modal" data-triger="elevenpay_0401" data-mtype="fullpop"><span class="blind">상세보기</span></button>
+						</div>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0102" name="check_action"><label for="chk0102"><span>제3자 정보제공 동의</span></label>
+							<button type="button" class="ico ico_arrow_more open_modal" data-triger="elevenpay_0402" data-mtype="fullpop"><span class="blind">상세보기</span></button>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+
+		<!-- 상단 여백 4px 있는 구조 -->
+		<div class="sec_agree">
+			<div class="agree_wrap terms_tit">
+				<input type="checkbox" id="chk0201"><label for="chk0201"><span>잔액 부족시 자동 충전 (선택)</span></label>
+			</div>
+		</div>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">등록하기</button><!--  disabled="disabled" -->
+		</div>
+
+
+
+		<div id="elevenpay_0401" class="modal_wrap fullpop pop_common">
+			<div class="modal_content width_full"><!-- add_sticky -->
+
+				<div class="fullpop_header fixed">
+					<button class="btn btn_back close_modal"><span class="blind">뒤로</span></button> 
+					<h1 class="finnq_logo"><span class="blind">Finnq</span></h1>
+					<!-- <button class="btn btn_close"><span class="blind">닫기</span></button>  -->
+				</div>
+
+				<div class="scroll_wrap" style=""><!-- 하단 bg_color 제어 : gray 컬러 적용시 -->
+					<div class="agree_details">
+						<!-- 여기부터 -->
+						<h3>충전권한 위임장</h3>
+						<p>위임장</p>
+						<p>주식회사 핀크 귀하</p>
+						<p>본인 0 0 0은(는) 하기 날짜에 십일번가주식회사(‘수임인’)에게 아래와 같이 권한을 위임하였음을 (주)핀크에 고지합니다.</p>
+						<p>본인을 대리하여 (주)핀크에 대하여 본인이 지정하는 은행계좌에서 본인이 요청한 금액을 출금하여 (주)핀크가 발급하는 선불전자지급수단(‘핀크머니’)을 본인 명의 핀크계정에 충전하도록 지시(‘거래지시’)할 수 있는 권한</p>
+						<p>(주)핀크는 마지막 ‘거래지시’가 있었던 날로부터 1년 또는 본인으로부터 본 위임의 철회에 권한 통지를 받기 전까지, ‘수임인’이 본인의 대리인으로서 (주)핀크에 대하여 전달하는 ‘거래지시’에 관하여, 이를 본인의 진정한 의사에 따른 적법한 대리인의 행위로 신뢰하고, 본인에게 본인의 의사를 재차 확인할 필요 없이, 전달된 ‘거래지시’대로 업무를 처리해 주기 바랍니다.</p>
+						<p>(주)핀크는 본인의 대리인으로 행위하는 ‘수임인’의 ‘거래지시’를 수령한 경우, 해당지시가 본인의 대리인인 ‘수임인’의 지시인지를 확인하여야 합니다. ‘수임인’이 본인을 대리하여 전달한 ‘거래지시’에 따라 출금 및 충전을 하는 것에 대하여 본인은 여하한 사유로 (주)핀크에 대하여 책임을 묻거나 손해의 배상 등을 청구하지 않습니다. “수임인’의 (주)핀크에 대한 대리행위와 관련된 모든 법률분쟁은 본인과 ‘수임인’사이에서 처리할 것이며, (주)핀크는 면책합니다. 본인은 본 위임장에 따른 ‘수임인’에 대한 위임을 철회하고자 하는 경우 (주)핀크에 그 철회의 의사표시를 제출하기로 하며, 위임의 철회의 의사표시가 도달하기 전까지 (주)핀크가 ‘수임인’을 본인의 대리인으로 정당하게 신뢰하여 처리한 업무에 대하여 본인은 (주)핀크에 여하한 책임을 묻지 않습니다.</p>
+						<br>
+						<p>위임장 교부작성 및 교부인: 20xx년 x 월 x일</p>
+						<p>위임인  0 0 0(인)</p>
+						
+						
+						<!-- 여기까지 -->
+					</div>
+					
+				</div><!-- //scroll_wrap -->
+
+				<!-- <div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_type_apply">확인</button>
+				</div> -->
+
+			</div><!-- //modal_content -->
+		</div>
+
+		<div id="elevenpay_0402" class="modal_wrap fullpop">
+			<div class="modal_content width_full"><!-- add_sticky -->
+
+				<div class="fullpop_header fixed">
+					<button class="btn btn_back close_modal"><span class="blind">뒤로</span></button> 
+					<h1 class="finnq_logo"><span class="blind">Finnq</span></h1>
+					<!-- <button class="btn btn_close"><span class="blind">닫기</span></button>  -->
+				</div>
+
+				<div class="scroll_wrap" style=""><!-- 하단 bg_color 제어 : gray 컬러 적용시 -->
+					<div class="agree_details">
+						<!-- 여기부터 -->
+						<h3>제3자 정보제공 동의</h3>
+						<p>제3자 정보제공 동의(11번가)</p>
+						<p>20xx. Xx. xx </p>
+						<p>11번가(주)는 [신용정보의 이용 및 보호에 관한 법률], [전자금융거래법] 및 [전자금융 감독규정], [개인정보 보호법], [정보통신망 이용촉진 및 정보보호 등에 관한 법률] 등 관련 법규에 따라 이용자로부터 아래와 같이 개인정보 제3자 제공동의를 받고자 합니다. 내용을 자세히 읽으 신 후, 동의하시면 원래 화면으로 돌아가 “동의”, “계속”, “인증번호받기” 등의 해당화면의 안내에 따라 버튼을 눌러 주시기 바랍니다. 보다 자세한 내용은 회사의  개인정보 처리방침을 참조하여 주시기 바랍니다.</p>
+						<div class="tbl_w01">
+							<!-- 강조 표시 span class : str_txt -->
+							<table>
+								<caption></caption>
+								<colgroup>
+									<col style="width:28%">
+									<col style="width:72%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>제공목적</th>
+										<td>핀크결제시 충전 전자 서명에 활용</td>
+									</tr>
+									<tr>
+										<th>제공받는 곳</th>
+										<td>(주)핀크</td>
+									</tr>
+									<tr>
+										<th>제공하는 항목</th>
+										<td>성명, 계좌 정보 일부</td>
+									</tr>
+									<tr>
+										<th>이용 및 보유기간</th>
+										<td>제3자 제공 동의 시부터 해당 서비스 해지/취소 시, 또는 회원탈퇴 시까지(관련법령에 따라 보존할 필요가 있는 경우 해당 보존기간)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p>동의를 거부하는 경우에도 다른 핀크서비스의 이용에는 영향이 없으나, 11번가 핀크결제 서비스 이용이 불가능함을 알려 드립니다.</p>
+						<!-- 여기까지 -->
+					</div>
+					
+				</div><!-- //scroll_wrap -->
+
+				<!-- <div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_type_apply">확인</button>
+				</div> -->
+
+			</div><!-- //modal_content -->
+		</div>
+
+	</div><!-- #contents -->
+</div>
+
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script src="../../js/collabo/collabo_ui.js"></script>
+<script>
+$(document).ready(function(){
+	
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02소비내역_02분류별_02상세_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+	<!-- # chart # -->
+	<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+	<!-- rMateChartH5 라이센스 -->
+	<script src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+	<!-- rMateChartH5 라이브러리(수정불가) -->
+	<script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+	<script type="text/javascript">
+	<!--
+		// -----------------------차트 설정 시작-----------------------
+		// 01
+		var chartVars01 = "rMateOnLoadCallFunction=chartReadyHandler01";
+		rMateChartH5.create("chart01", "chartHolder01", chartVars01, "100%", "100%");
+		function chartReadyHandler01(id) {
+			document.getElementById(id).setLayout(layoutStr01);
+			document.getElementById(id).setData(chartData01);
+		}
+		var layoutStr01 =
+			'<rMateChart backgroundColor="#FFFFFF"  borderStyle="none">'
+			 +'<Pie2DChart id="chart01" innerRadius="0.93" showDataTips="false" selectionMode="single">'
+				  +'<series>'
+					   +'<Pie2DSeries nameField="Name" field="Value" startAngle="270" renderDirection="clockwise" color="#ffffff">'
+							+'<fills>'
+								+'<SolidColor color="#eeeeee"/>'
+								+'<SolidColor color="#278df5"/>'
+							+'</fills>'
+							+'<showDataEffect>'
+								+'<SeriesZoom duration="1000"/>'
+							+'</showDataEffect>'
+					  +'</Pie2DSeries>'
+				 +'</series>'
+			  +'</Pie2DChart>'
+		  +'</rMateChart>';
+
+		// 차트 데이터
+		var chartData01 = [{"Name":"진행", "Value":0},{"Name":"예정", "Value":100}];
+
+		// 02
+		var chartVars02 = "rMateOnLoadCallFunction=chartReadyHandler02";
+		rMateChartH5.create("chart02", "chartHolder02", chartVars02, "100%", "100%");
+		function chartReadyHandler02(id) {
+			document.getElementById(id).setLayout(layoutStr02);
+			document.getElementById(id).setData(chartData02);
+		}
+		var layoutStr02 =
+			'<rMateChart backgroundColor="#FFFFFF"  borderStyle="none">'
+			 +'<Pie2DChart id="chart02" innerRadius="0.93" showDataTips="false" selectionMode="single">'
+				  +'<series>'
+					   +'<Pie2DSeries nameField="Name" field="Value" startAngle="270" renderDirection="clockwise" color="#ffffff">'
+							+'<fills>'
+								+'<SolidColor color="#278df5"/>'
+								+'<SolidColor color="#eeeeee"/>'
+							+'</fills>'
+						   +'<showDataEffect>'
+								+'<SeriesZoom duration="1000"/>'
+						  +'</showDataEffect>'
+					  +'</Pie2DSeries>'
+				 +'</series>'
+			  +'</Pie2DChart>'
+		  +'</rMateChart>';
+
+		// 차트 데이터
+		var chartData02 = [{"Name":"진행", "Value":65},{"Name":"예정", "Value":35}];
+
+		// 03
+		var chartVars03 = "rMateOnLoadCallFunction=chartReadyHandler03";
+		rMateChartH5.create("chart03", "chartHolder03", chartVars03, "100%", "100%");
+		function chartReadyHandler03(id) {
+			document.getElementById(id).setLayout(layoutStr03);
+			document.getElementById(id).setData(chartData03);
+		}
+		var layoutStr03 =
+			'<rMateChart backgroundColor="#FFFFFF"  borderStyle="none">'
+			 +'<Pie2DChart id="chart03" innerRadius="0.93" showDataTips="false" selectionMode="single">'
+				  +'<series>'
+					   +'<Pie2DSeries nameField="Name" field="Value" startAngle="270" renderDirection="clockwise" color="#ffffff">'
+							+'<fills>'
+								+'<SolidColor color="#731aed"/>'
+							+'</fills>'
+						   +'<showDataEffect>'
+								+'<SeriesZoom duration="1000"/>'
+						  +'</showDataEffect>'
+					  +'</Pie2DSeries>'
+				 +'</series>'
+			  +'</Pie2DChart>'
+		  +'</rMateChart>';
+
+		// 차트 데이터
+		var chartData03 = [{"Name":"완료", "Value":100}];
+
+		// 04
+		var chartVars04 = "rMateOnLoadCallFunction=chartReadyHandler04";
+		rMateChartH5.create("chart04", "chartHolder04", chartVars04, "100%", "100%");
+		function chartReadyHandler04(id) {
+			document.getElementById(id).setLayout(layoutStr04);
+			document.getElementById(id).setData(chartData04);
+		}
+		var layoutStr04 =
+			'<rMateChart backgroundColor="#FFFFFF"  borderStyle="none">'
+			 +'<Pie2DChart id="chart04" innerRadius="0.91" showDataTips="false" selectionMode="single">'
+				  +'<series>'
+					   +'<Pie2DSeries nameField="Name" field="Value" startAngle="270" renderDirection="clockwise" color="#ffffff">'
+							+'<fills>'
+								+'<SolidColor color="#731aed"/>'
+								+'<SolidColor color="#f74b20"/>'
+								+'<SolidColor color="#eeeeee"/>'
+							+'</fills>'
+						   +'<showDataEffect>'
+								+'<SeriesZoom duration="1000"/>'
+						  +'</showDataEffect>'
+					  +'</Pie2DSeries>'
+				 +'</series>'
+			  +'</Pie2DChart>'
+		  +'</rMateChart>';
+
+		// 차트 데이터
+		var chartData04 = [{"Name":"상환", "Value":50},{"Name":"연체", "Value":5},{"Name":"잔여", "Value":45}];
+	-->
+	</script>
+	<style type="text/css">
+		section {padding:0 30px 30px 30px;}
+		section .rmate_graph {margin:30px;}
+	</style>
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="market p2p_wrap">
+		<section>
+			<!-- 2018-02-27 차트 추가 -->
+			<div class="rmate_graph xs">
+				<div id="chartHolder01" class="rmate_item"></div>
+			</div>
+			<div class="rmate_graph xs">
+				<div id="chartHolder02" class="rmate_item"></div>
+			</div>
+			<div class="rmate_graph xs">
+				<div id="chartHolder03" class="rmate_item"></div>
+			</div>
+			<div class="rmate_graph xl">
+				<div id="chartHolder04" class="rmate_item"></div>
+			</div>
+			<!-- //2018-02-27 차트 추가 -->
+		</section>
+		<!-- 하단 붙임 -->
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+</body>
+</html>

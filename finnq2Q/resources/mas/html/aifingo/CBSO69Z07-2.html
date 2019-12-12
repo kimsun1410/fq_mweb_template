@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>05금융기관연결_04증권사_web- [CBSO69Z07]</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="CBSO69Z07"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo add_sticky">
+
+		<section class="finins_link">
+
+			<div class="sec_tab">
+				<div class="tab_wrap set_type2"> <!-- 3개 -->
+					<span class="tab"><a href="#none">은행/카드</a></span>
+					<span class="tab on"><a href="#none">증권사</a></span>
+				</div>
+			</div>
+			<div class="scroll" style="height:auto;"><!-- 컨텐츠가 짧아서 스크롤이 필요없음 -->
+				<div class="sec_fincategory wrap_result"><!-- 따로 div wrap_result를 만들지 말고 no_result를 감싸고 있는 div에 wrap_result 클래스를 줄것 -->					
+					<div class="no_result">
+						<i class="ico ico_chat_no2"></i>
+						<p>증권사 연결을 준비중입니다.<br>조금만 기다려주세요.</p>
+					</div>
+				</div><!-- //sec_fincategory -->
+			</div><!-- //scroll -->
+
+
+		</section>
+
+		<!-- sticky_wrap place -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">다음</button><!-- disabled 추가 2018-03-16 ock -->
+		</div>
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		//$(".btn_sellist").find("button").removeClass();
+		$(this).toggleClass("on");
+	});
+
+	$('.expend').on('click','button.ico',function(){
+		//$(this).toggleClass('on').next().toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>

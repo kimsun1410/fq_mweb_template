@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+html,body{background:$white;}
+.wrap { position:relative; min-width:$min-width; width:100%; height:100%;min-height:100%;margin:0;padding:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0.18); */background:$white;} /* a, 버튼에만 적용으로 수정 2018-03-24 ock */ /* bg add : 풀팝업시 배경아래로 컨텐츠 밀려올라오는 문제 해결  */
+.wrap.bg_list { background:$white_three;}
+#contents { position:relative;height:100%;min-height:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+#contents > section { padding-top:28px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;background:#fff;}/*  공통상단여백  */
+.wrap.bg_list #contents:after{ content:' '; position:relative;bottom:0;height:45px;background:$white_three;z-index:-1;width:100%;display:block;}
+.wrap.bg_list #contents.add_sticky:after{height:105px; background:$white_three;}
+#contents.add_sticky:after {content:' '; position:relative;bottom:0;height:60px; background:$white;z-index:-1;width:100%;display:block;}
+
+.wrap #contents.add_sticky.no_fixed:after,
+.wrap.bg_list #contents.add_sticky.no_fixed:after{height:0;}
+.modal_content.add_sticky.no_fixed .scroll_wrap::after {content: ""; display: none;} /* 2018-04-10 풀팝업에 버튼 fixed 아닌경우 추가 */
+
+/* 마켓 */
+#contents.market {  }
+#contents.fingo { }
+#contents.myfinnq { 	}
+/* 하단 붙는 경우 */
+#contents.add_sticky {padding-bottom:60px;}
+
+/* #contents.market .deposit_inquiry {  padding-top:0px;}  습관저금, 최종 22-0 */
+#contents.myfinnq .charge_price { margin:0 20px}  /* 채우기 */
+#contents.myfinnq .charge_price_hana { padding-top:0;padding:0 20px}  /* 하나머니로 채우기 */
+/* #contents.myfinnq .charge_price_auto { padding-top:10px;margin:0 20px}  자동 채우기 */
+/* #contents.myfinnq .charge_price_direct { padding:10px 20px 0} 즉시 채우기 */
+#contents.myfinnq .charge_price_collabo { padding:0 20px 0} /* 즉시,자동 채우기 */
+#contents.myfinnq .charge_price_input { padding-top:10px;margin:0 20px}  /* 채울금액입력 */
+/*#contents.myfinnq .setting_account { padding-top:0;margin-top:10px;}   등록계좌 관리 */
+#contents.myfinnq .atm_payment { padding-top:10px;margin:0 20px}  /* ATM 출금 */
+/*#contents.myfinnq .benefit_main { padding-top:0;}   혜택안내 메인 */
+#contents.myfinnq .provision_agree { padding-top:0;}  /* 하나멤버스 약관동의 */
+#contents.myfinnq .account_direct { padding-top:2px;}  /* 내계좌로 이체 직접입력 */
+
+#contents.ows_wrap .common_members{padding-top:25px} /* ows 회원안내 */
+#contents.ows_wrap .sec_join_finish{padding-top:33px} /* ows 회원안내 */
+
+#contents.fingo .assets_list,  /* 금융기관관리 */
+/*#contents.fingo .spend_category,*/
+#contents.fingo .spend_date,
+#contents.fingo .spend_review{ padding-top:10px; } /* 소비내역 */
+#contents.fingo .finins_link, /*계좌선택 */
+/* #contents.fingo .chat_message{ padding-top:0; } 핀고 챗 메세지*/
+#contents.fingo .fingochat_msg, /* 핑고쳇 소비내역 */
+/*#contents.market .twoplus_card,*/
+#contents.market .twoplus_main,
+#contents.market .account_main,
+#contents.market .bankbook_main, /* 하나은행입출금통장 */
+#contents.market .gifticon_main, /* 마켓 기프티콘몰 */
+#contents.market .gifticon_prd, /* 마켓 기프티콘몰 - 상품리스트 */
+#contents.market .gifticon_prd_detail, /* 마켓 기프티콘몰 - 상품 상세 */
+#contents.fingo .alram_set { padding-top:0px;} /* 계좌 잔액 알림 */
+/*#contents.fingo .spend_target { padding-top:28px;}  소비목표설정 */
+/* #contents.fingo .assets_monitor { padding-top:0px;} 자산모니터링 */
+/* #contents.market .fqsave,
+#contents.fingo .add_guide_wrap { padding-top:30px;} 알림설정 */
+#contents.menu .friend_invite_reward{padding-top:10px} /* 2018-04-09 0에서 10px로 변경 phj */

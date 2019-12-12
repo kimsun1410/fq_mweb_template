@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>오픈뱅킹소개</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</style>
+</head>
+<body>
+<div class="wrap">
+
+	<div id="contents" class="add_sticky">
+		<section class="openbank__info--wrap">
+			<p class="title"><strong>핀크 오픈뱅킹</strong></p>
+			<p class="sub-title mgt10">이제 뱅크 말고 핀크에서 무료 송금, 결제하세요</p>
+
+			<div class="visual mgt25">
+				<img src="../../images/common/img-openbank-visual1.png" alt="">
+			</div>
+
+			<p class="title mgt45">모든 은행계좌<br> <strong>핀크계좌에 연결 가능</strong></p>
+			<p class="sub-title">
+				은행계좌 연결하면,<br>
+				<strong>매일 천만원</strong>까지 채우기 &amp; 무료 송금<br>
+				<strong>최대 <em class="num bold">10</em>개 계좌</strong>로 핀크카드, SK pay 사용<br>
+			</p>
+
+			<div class="visual img2">
+				<img src="../../images/common/img-openbank-visual2.png" alt="">
+			</div>
+			<div class="visual img3">
+				<img src="../../images/common/img-openbank-visual3.png" alt="">
+			</div>
+
+
+			<p class="thumb-desc">간단한 동의 절차면 기존 연결계좌로도 오픈뱅킹 서비스를<br> 이용할 수 있습니다.</p>
+
+			<p class="title" style="margin-top:57px;">여러개의 내 계좌로<br> <strong>한 번에 천만원까지 이체</strong></p>
+			<p class="sub-title">
+				실시간 계좌 잔액 조회<br>
+				이체계좌는 <strong>최대 <em class="num">5</em>개</strong>, 비밀번호 <strong>인증은 단 한 번</strong>
+			</p>
+
+			<div class="visual img4 mgb40">
+				<img src="../../images/common/img-openbank-visual4.png" alt="">
+			</div>
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">은행계좌 연결하기</button>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	// IMG offset값 저장
+	var menuOffsetTop = [
+		$('.visual.img2').offset().top - 250,
+		$('.visual.img4').offset().top - 250
+	];
+
+	// 스크롤 이벤트
+	$(window).scroll(function(){
+		var thisScrollTop = $(this).scrollTop() + 200;
+		if (thisScrollTop >= menuOffsetTop[0]) {
+			$('.visual.img2').addClass('on');
+			$('.visual.img2 img').animate({ bottom : "0" }, 600, 'swing');
+		}
+		if (thisScrollTop >= menuOffsetTop[1]) {
+			$('.visual.img4').addClass('on');
+			$('.visual.img4 img').animate({ bottom : "0" }, 600, 'swing');
+		}
+	});
+});
+</script>
+</body>
+</html>

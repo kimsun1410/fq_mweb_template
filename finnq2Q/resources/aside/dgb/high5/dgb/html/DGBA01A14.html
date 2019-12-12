@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>영업점정보입력 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky add_hana_logo">
+		<section class="emergency_account">
+
+			<div class="sec_step step_green">
+				<ol>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on complete"><!-- 진행 완료된 step은 class : complete 추가 -->
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>계좌 인증</h2>
+				<p class="guide_txt">계좌를 선택해주세요.</p>
+			</div>
+
+			<div class="sec_select pdb30">
+				<ul class="flex_wrap set_type1">
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>KEB하나</strong><em class="cash bold">987-654-321098</em>
+						</button>
+					</li>
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>국민</strong><em class="cash bold">987-654-321098</em>
+						</button>
+					</li>
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>DGB대구</strong><em class="cash bold">987-654-321098</em>
+						</button>
+					</li>
+					<li class="item">
+						<button type="button" name="button" data-name="acc-button" class="btn_type_d">
+							<strong>계좌번호 직접입력</strong>
+						</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="next_step hide">
+				<hr class="line_division no_line" />
+				<div class="pw_box_wrap">
+					<p class="title">계좌 비밀번호</p>
+					<div class="sec_new_password">
+						<div class="wrap_password four_area">
+							<p class="bg_password bg_gray"> <!-- bg_error -->
+								<i class="on"><img src="../images/common/ico-pw.png"></i>
+								<i class="on"><img src="../images/common/ico-pw.png"></i>
+								<i class="on"><img src="../images/common/ico-pw.png"></i>
+								<i></i>
+							</p>
+						</div>
+						<p class="password_remark hide">세 자리 이상의 연속된 숫자는 사용할 수 없습니다.</p><!--  에러시 hide 삭제 -->
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<!--
+			클래스 visible로 제어
+			인증번호 오입력
+		-->
+		<div class="modal_wrap visible normal">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">비밀번호 오류<br>
+					다시 입력해주세요 <strong class="num bold">(1/3)</strong></h3>
+				</div>
+
+				<div class="flex_wrap set_type1">
+					<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+		<!-- //인증번호 오입력 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">다음</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script type="text/javascript">
+$(function(){
+
+	// Radio 선택 시 하단 버튼 이벤트, 자세한 Flow는 화면 정의서 참조
+	// 라디오 버튼 클릭 시 다음 스텝으로 이동
+	$(document).on('click', '.flex_wrap button[data-name=acc-button]', function(){
+		$('.sticky_wrap .btn').removeAttr('disabled');
+		$('.next_step').removeClass('hide');
+		$('.wrap').addClass('bg_list');
+	});
+
+	// Radio 선택 이벤트
+	$('.sec_select').on('click','[data-name=acc-button]', function(event){
+		$(this).addClass("ico_dot").parent('li').siblings().find('[data-name=acc-button]').removeClass("ico_dot");
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+@charset 'UTF-8';
+
+.ico_prev{display:inline-block;position:relative;}
+.ico_prev:before, .ico_prev:after{position: absolute;top: 7px;left: 13px;content: "";display: inline-block;width: 2px;height: 10px;background: $black;transform: rotate(-135deg);border-radius: 3px;}
+.ico_prev:after{top:auto;bottom: 7px;transform: rotate(-45deg);}
+
+.ico_next{display:inline-block;position:relative;}
+.ico_next:before, .ico_next:after{position: absolute;top: 7px;right: 13px;content: "";display: inline-block;width: 2px;height: 10px;background: $black;transform: rotate(-45deg);border-radius: 3px;}
+.ico_next:after{top:auto;bottom: 7px;transform: rotate(-135deg);}
+
+
+.ico_plus{display:inline-block;position:relative;}
+/*
+.ico_plus:before,
+.ico_plus:after{position: absolute;top: 47px;content: "";display: inline-block;width: 1px;height: 20px;background: $white;transform: rotate(0deg);left: 50%;margin-left:-0.5px;border-radius: 1px;}
+.ico_plus:after{transform: rotate(90deg);}
+1차 수정, 이미지로 변경 */
+.ico_plus:after{position: absolute;top:43.7px;left:50%;content: "";display:block;width:23.33px;height:23.33px;margin-left:-11.67px;background:url('../images/common/ir-icon-set.png') no-repeat;background-size:40px auto;background-position:0 -275px;}
+
+
+.ico_close{display:inline-block;position:relative;text-indent:-9999em;width:30px;height:30px;}
+.ico_close:before,
+.ico_close:after{position: absolute;top: 7px;content: "";display: inline-block;width: 1px;height: 15.5px;background: $black;transform: rotate(-135deg);left: 50%;margin-left:-0.5px;border-radius: 1px;}
+.ico_close:after{transform: rotate(-45deg);}
+
+.ico_delete{display:inline-block;position:relative;text-indent:-9999em;width:30px;height:30px;border:1px solid #e0e0e0;border-radius:50%;background:$white}
+.ico_delete:before,
+.ico_delete:after{position: absolute;top: 7px;content: "";display: inline-block;width: 1px;height: 15.5px;background: $white_two;transform: rotate(-135deg);left: 50%;margin-left:-0.5px;border-radius: 1px;}
+.ico_delete:after{transform: rotate(-45deg);}
+
+.ico_arrow{display:inline-block;position:relative;}
+.ico_arrow:before, .ico_arrow:after{position: absolute;right: 0;content: "";display: inline-block;width: 2px;height: 8px;background: $clear_blue;transform: rotate(-45deg);border-radius: 3px;}
+.ico_arrow:before{top:3.5px}
+.ico_arrow:after{bottom:3.5px;transform: rotate(-135deg);}
+
+/* .ico_check{display:inline-block;width:22px;height:18px;background:url('../images/common/ir-icon-set-width150.png') no-repeat;background-size:40px auto;} */
+
+.ico { position:relative;display:inline-block;}
+/*
+	클릭영역확장 샘플코드
+	:after { content:' ';position:absolute;left:-5px;top:-5px;width:100%;height:100%;padding:5px;background:red;opacity:0.5;}
+*/
+
+.after_ico { }
+.after_ico .ico{width:100%;height:auto;background:none}
+.after_ico .ico::after{content: "";display: inline-block;float:right;}
+/* image icon */
+.ico_check_small,
+.ico_tel,
+.ico_reload2,
+.ico_circle_alert,
+.ico_circle_help,
+.ico_circle_help2,
+.ico_circle_plus,
+.ico_pen_edit,
+.ico_pen,
+.ico_circle_info,
+.ico_circle_info_b,
+.ico_search,
+.ico_search2,
+.ico_finger_print,
+.ico_finger_print2,
+.ico_finger_print3,
+.ico_face_id,
+.ico_refresh,
+.ico_plus_s,
+.ico_plus_s2,
+.ico_share{ background:url('../images/common/ir-icon-set.png') no-repeat;background-size:40px auto;}
+.ico_circle_plus { width:20px;height:20px;background-position:0 0;}
+.ico_pen_edit { width:14px;height:14px;background-position:0 -23.33px;}
+.ico_pen { width:12px;height:12px;background-position:0 -22.67px;background-size:38.67px auto;} /* size:12 96.75%  */
+.ico_circle_help { width:18px;height:19px;background-position:0 -39px;}
+.ico_circle_help2 { width:18px;height:19px;background-position:0 -432px;}
+.ico_circle_alert { width:14px;height:14px;background-position:0 -61px;}
+.ico_circle_info {width:13px;height:14px;background-position:0 -129px;}
+.ico_reload,
+.ico_reload_purple {background:url('../images/common/ico-reload.png') no-repeat center center; background-size:30px auto; width:14px; height:14px;}
+.ico_reload_purple {background-image:url('../images/common/ico-reload-purple.png');}
+.ico_reload2 { width:17px;height:14px;background-position:0 -322px;}
+.ico_tel { width:13.33px;height:13.33px;background-position:0 -145.67px;}
+.ico_circle_info_b {width:18px;height:18px;background-position:0 -162px;}
+.ico_search {width:16px;height:16px; background-position:0 -184px;}
+.ico_search2 {width:20px;height:20px; background-position:0 -216px;}
+.ico_check_small { width:15px;height:12px; background-position:0 -203px;}
+.ico_finger_print {width:18px;height:18px; background-position:0 -239px;}
+.ico_finger_print2 {width:18px;height:18px; background-position:0 -302px;}
+.ico_finger_print3 {width:18px;height:18px; background-position:0 -454px;}
+.ico_refresh {width:13px;height:13px; background-position:0 -260px;}
+.ico_plus_s {width:23.33px;height:23.33px; background-position:0 -275px;}
+.ico_plus_s2 {width:20px;height:20px; background-position:0 -383px;}
+.ico_share {width:16px;height:16px; background-position:0 -455px;}
+.ico_face_id {width:18px;height:18px; background-position:0 -475px;}
+
+/* reload 애니매이션 */
+.update .ico.loading,
+.ico_reload.loading{background-image:url('../images/common/ico-reload-blue.png'); background-size:30px auto; -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -webkit-animation: rotation 1s infinite linear; /*background-image:url('../images/common/ico-reload.gif'); background-position:50% 50%; background-size:30px auto;*/ -webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+.spend_common .update .ico_reload {background-image:url('../images/common/ico-reload-purple.png'); background-size:30px auto;}
+.ico_reload_purple.loading,
+.spend_common .update .ico_reload.loading {background-image:url('../images/common/ico-reload-purple.png'); background-size:30px auto; -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -webkit-animation: rotation 1s infinite linear;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+@-webkit-keyframes rotation {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(359deg);}
+}
+@keyframes change_focus1 {
+	1%{ opacity:0;}
+	100%{ opacity:1;}
+}
+
+.ico_arrow_down_type_b,
+.ico_closed,
+.ico_arrow_more,
+.ico_arrow_more2,
+.ico_arrow_more3,
+.ico_arrow_down_type_a,
+.ico_arrow_down_type_c { background:url('../images/common/ir-arrow-set.png') no-repeat;background-size:40px auto;}
+.ico_arrow_down_type_a { width:13px;height:7.67px;background-position:0 0;}
+.ico_arrow_down_type_a.on { transform:rotateX(180deg);}
+.ico_arrow_more { width:8px;height:14px;background-position:0 -11px;}
+.ico_arrow_more2 {width:7px; height:11px; background-position:0 -85px;}
+.ico_arrow_more3 {width:7px; height:11px; background-position:0 -99px;}
+.ico_closed { width:14px;height:14px;background-position:0 -28.33px;}
+.ico_arrow_down_type_b { width:9.33px;height:5.67px;background-position:0 -56px;}
+.ico_arrow_down_type_c {width:14px;height:9px;background-position:0 -167px;}
+.ico_arrow_down_type_c.on { transform:rotateX(180deg);}
+
+/* image size width 150 */
+.ico_clock,
+.ico_circle_plusbig,
+.ico_chat_no,
+.ico_chat_no2{ background:url('../images/common/ir-icon-set-middle.png') no-repeat;background-size:50px auto;}
+.ico_clock { width:26px;height:26px;background-position:0 -49.33px;}
+.ico_circle_plusbig { width:47px;height:47px;background-position:0 0px;}
+.ico_chat_no {width:33px; height:33px;background-position:0 -78px;}
+.ico_chat_no2 {width:33px; height:33px; background-position:0 -113px;}
+
+.ico_card_master {background:url("../images/common/ico-card-master.png") no-repeat; background-size:20px auto; width:20px; height:13px;}
+.ico_black_plus {background:url("../images/common/ir-icon-set.png") no-repeat; background-size:40px auto; background-position:0 -92px; width:33px; height:34px;}
+.ico_talk {background:url("../images/aifingo/ico_talk.png") no-repeat; background-size:18px auto; width:18px; height:18px; text-indent:-9999px; overflow:hidden;}
+.ico_me,
+.ico_friend {background:url("../images/aifingo/ico_person.png") no-repeat; background-size:40px auto; text-indent:-9999px; overflow:hidden;}
+.ico_me {width:14px; height:15px;}
+.ico_friend {width:19px; height:14px; background-position:0 -17px;}
+.tag_new {background: url('../images/common/ico-new.png') no-repeat; background-size:18px auto; width:18px; height:18px;}
+.tag_close {background:$brownish_grey; color:$white; text-align:center; @include font(11px); display:inline-block; width:48px; height:20px; line-height:20px; border-radius:4px;}
+
+/* sns */
+.ico_sns_facebook,
+.ico_sns_kakaotalk,
+.ico_sns_kakaostory,
+.ico_sns_line {background:url("../images/common/ico-sns.png") no-repeat; background-size:60px auto; width:60px; height:61px;}
+.ico_sns_facebook {}
+.ico_sns_kakaotalk {background-position:0 -63px;}
+.ico_sns_kakaostory {background-position:0 -126px;}
+.ico_sns_line {background-position:0 -189px;}
+
+/* notice */
+.ico_notice,
+.ico_push {background:url("../images/menu/ir-icon-notice.png") no-repeat; background-size:20px auto; width:20px; height:20px;}
+.ico_push {background-position:0 -23px;}
+
+/* test */
+.after_ico .ico_arrow_down_type_a::after{background:url('../images/common/ir-arrow-set.png') no-repeat;background-size:40px auto;width:13px;height:15px;background-position:0 4px;}
+
+.ico_cate_item1,
+.ico_cate_item2,
+.ico_cate_item3,
+.ico_cate_item4,
+.ico_cate_item5,
+.ico_cate_item6,
+.ico_cate_item7,
+.ico_cate_item8,
+.ico_cate_item9,
+.ico_cate_item10,
+.ico_cate_item11,
+.ico_cate_item12,
+.ico_cate_item13,
+.ico_cate_item14 {background:url("../images/common/icon-credit-benefit.png") no-repeat; background-size:130px auto; width:61px; height:61px;}
+.ico_cate_item2 {background-position:0 -63px;}
+.ico_cate_item3 {background-position:0 -126px;}
+.ico_cate_item4 {background-position:0 -189px;}
+.ico_cate_item5 {background-position:0 -253px;}
+.ico_cate_item6 {background-position:0 -316px;}
+.ico_cate_item7 {background-position:0 -379px;}
+.ico_cate_item8 {background-position:0 -442px;}
+.ico_cate_item9 {background-position:0 -506px;}
+.ico_cate_item10 {background-position:0 -569px;}
+.ico_cate_item11 {background-position:0 -633px;}
+.ico_cate_item12 {background-position:0 -696px;}
+.ico_cate_item13 {background-position:0 -759px;}
+.ico_cate_item14 {background-position:0 -823px;}
+.ico_cate_item1.on {background-position:-69px 0;}
+.ico_cate_item2.on {background-position:-69px -63px;}
+.ico_cate_item3.on {background-position:-69px -126px;}
+.ico_cate_item4.on {background-position:-69px -189px;}
+.ico_cate_item5.on {background-position:-69px -253px;}
+.ico_cate_item6.on {background-position:-69px -316px;}
+.ico_cate_item7.on {background-position:-69px -379px;}
+.ico_cate_item8.on {background-position:-69px -442px;}
+.ico_cate_item9.on {background-position:-69px -506px;}
+.ico_cate_item10.on {background-position:-69px -569px;}
+.ico_cate_item11.on {background-position:-69px -633px;}
+.ico_cate_item12.on {background-position:-69px -696px;}
+.ico_cate_item13.on {background-position:-69px -759px;}
+.ico_cate_item14.on {background-position:-69px -823px;}
+
+
+.category_area .cate_item > a::before{content:"";display:inline-block;margin-top:15px;width:40px;height:40px;background:url("../images/finnqmarket/ico_category.png") no-repeat; background-size:40px auto;}
+.category_area .cate_item.ico_category01 > a::before{background-position:0 0}
+.category_area .cate_item.ico_category02 > a::before{background-position:0 -40px}
+.category_area .cate_item.ico_category03 > a::before{background-position:0 -80px}
+.category_area .cate_item.ico_category04 > a::before{background-position:0 -120px}
+.category_area .cate_item.ico_category05 > a::before{background-position:0 -160px}
+.category_area .cate_item.ico_category06 > a::before{background-position:0 -200px}
+.category_area .cate_item.ico_category07 > a::before{background-position:0 -320px}
+.category_area .cate_item.ico_category08 > a::before{background-position:0 -360px}
+.category_area .cate_item.ico_category09 > a::before{background-position:0 -240px}
+.category_area .cate_item.ico_category10 > a::before{background-position:0 -280px}
+
+.ico_friend_finnq,
+.ico_friend_finish{background:url("../images/menu/ir_event_friend.png") no-repeat; background-size:56px auto; width:56px; height:20px; display:inline-block;}
+.ico_friend_finnq {background-position:0 -23px}

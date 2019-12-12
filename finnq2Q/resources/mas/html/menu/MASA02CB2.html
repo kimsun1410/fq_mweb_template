@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02캐시백라이브_캐시백확인</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20190618" />
+</head>
+<body>
+<div class="wrap" id="MASA02CB2">
+	<div id="contents" class="cashback money">
+		<section class="sec_cashmy">
+			<!-- 캐시백 이벤트 종료시 class="cashmy_inner end" end추가 -->
+			<div class="cashmy_inner">
+				<div class="close_box">
+					<button class="close">나중에 확인</button>
+					<button class="close animate">X</button>
+				</div>
+				<article class="slide slide-a">
+					<div class="slide-content">
+						<p><strong>캐시백</strong>이 도착했어요</p>
+						<p>이번엔 얼마?</p>
+						<p class="slide-a-child info">하단의 봉투를 터치해주세요</p>
+					</div>
+				</article>
+				<article class="slide slide-b">
+					<div class="slide-content">
+						<p class="slide-b-child">축하합니다!</p>
+						<p class="slide-b-child">1000번째 거래 당첨!</p>
+						<p class="slide-b-child">
+							<strong class="cash_money"><em class="cash_num num bold" data-count="5000">0</em>원</strong>
+						</p>
+					</div>
+				</article>
+				<article class="slide">
+					<div class="slide-content">
+						<p>캐시백 확인 기간이</p>
+						<p><strong>만료</strong>되었어요</p>
+						<p class="info">새로운 LIVE를 기대하세요!</p>
+					</div>
+				</article>
+				<article class="slide_money">
+					<div class="animation_box">
+						<div class="stop">캐시백 종료</div>
+						<div class="play" id="image">캐시백 봉투</div>
+						<div class="play2" id="image2">
+							<div class="share_box">
+								<button class="view" onclick="window.open('http://www.naver.com')">내 캐시백 현황</button>
+								<button class="sns_view">공유하기</button>
+							</div>
+						</div>
+					</div>
+					
+				</article>
+			</div>
+
+		</section>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+	$(window).load(function(){
+		$('.cashmy_inner').each(function () {
+		    if ($(this).hasClass("end")) {
+			      setTimeout(function () {
+		              $('.slide_money').removeClass('shake');
+		          }, 2500);
+	        } else {
+	        	function scrollOff(){
+				   $('body').addClass('scrolloff').on('scroll touchmove mousewheel', function(e){
+				      e.preventDefault();
+				   });
+				}scrollOff();
+	            var tID;
+				var tID2;
+				setTimeout(function () {
+			       animateScript();
+			    }, 1800);
+				setTimeout(function () {
+					$('#image').one('click', function () {
+						stopAnimate();
+						return false;
+					});
+				},3000);
+				function stopAnimate() { 
+					$('.animation_box').addClass('active');
+					clearInterval(tID);
+			   		slide.each(function (i) {
+				        if (i < 1) {
+				            setTimeout(function () {
+				                slide.eq(i).fadeOut();
+				            });
+				        }
+				    });
+				    animateSlideB();
+				    animateScript2();
+				    setTimeout(function () {
+			       		num_cc();
+			       		$('.close_box').addClass('is-visible');
+			    	},100);
+			    	setTimeout(function () {
+			       		$('.share_box').addClass('open');
+			    	},1000);
+			           
+				}
+				function animateScript() {
+					var    position = 280; 
+					const  interval = 50; 
+					const  diff = 280;    
+					tID = setInterval ( () => {
+						document.getElementById("image").style.backgroundPosition = 
+						`-${position}px 0px`; 
+						if (position < 3640){ 
+							position = position + diff;
+						}
+						else{ 
+							position = 280;
+							clearInterval(tID);
+						}
+					}, interval );
+				}
+				function stopAnimate2() {
+					clearInterval(tID2);
+				}
+				function animateScript2() {
+					var    position2 = 320; 
+					const  interval2 = 15; 
+					const  diff2 = 320;    
+					tID2 = setInterval ( () => {
+						document.getElementById("image2").style.backgroundPosition = 
+						`-${position2}px 0px`; 
+						if (position2 < 8640){ 
+							position2 = position2 + diff2;
+						}
+						else{ 
+							position2 = 320;
+							stopAnimate2(); 
+						}
+					}, interval2 );
+				}
+				var slide  = $('.slide'),
+			        slideAelements = $('.slide-a-child'),
+			        slideBelements = $('.slide-b-child'),
+			        slideCelements = $('.slide-c-child');
+
+			    function animateSlideA() {
+			      slideAelements.each(function (i) {
+			          setTimeout(function () {
+			              $('.slide_money').addClass('is-visible');
+			          }, 1000 * (i + 1));
+			          setTimeout(function () {
+			              $('.slide_money').addClass('shake');
+			              slideAelements.eq(i).addClass('is-visible');
+			          }, 2500);
+			      });
+			    }animateSlideA();
+				function changeUp() {
+				  var i = Math.floor((Math.random() * 99999 ));
+				   $('.slide-b').eq(i).addClass('win');
+				}
+
+			    function animateSlideB() {
+			      slideBelements.each(function (i) {
+			          setTimeout(function () {
+			              slideBelements.eq(i).addClass('is-visible');
+			              changeUp();
+			          }, 100 * (i + 1));
+			      });
+			    }
+			    function num_cc(){
+			       $('.cash_num').each(function() {
+			          var $this = $(this),
+			            countTo = $this.attr('data-count');
+			          $({countNum: $this.text()}).animate({countNum: countTo},
+			            {
+			              duration: 500, // 카운터 타임
+			              easing: 'swing',
+			              step: function() {
+			                $this.text(commaSeparateNumber(Math.floor(this.countNum)));
+			              },
+			              complete: function() {
+			                $this.text(commaSeparateNumber(this.countNum));
+			              }
+			            }
+			          );
+			        });
+
+			        function commaSeparateNumber(val) {
+			          while (/(\d+)(\d{3})/.test(val.toString())) {
+			            val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+			          }
+			          return val;
+			        }
+				}
+	        }
+	    });
+	});  		
+});
+</script>
+</body>
+</html>

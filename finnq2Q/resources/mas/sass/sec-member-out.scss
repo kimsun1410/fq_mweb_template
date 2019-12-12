@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+
+/* 탈퇴불가 안내 */
+/* .sec_impossible_list{margin-top:26px;border-top:1px solid $white_three}
+.sec_impossible_list dl{}
+.sec_impossible_list dl dt{overflow:hidden;border-bottom:1px solid $white_three}
+.sec_impossible_list dl dt > a{display:block;margin:9.5px 0;padding:10px 20px;@include font(16px);}
+.sec_impossible_list dl dt > a:after{content:'';display:inline-block;float:right;margin-top:5px;width:13px;height:7.67px;background: url(../images/common/ir-arrow-set.png) no-repeat;background-size: 40px auto;background-position: 0 0;}
+.sec_impossible_list dl dt.on > a:after{transform: rotate(-180deg)}
+.sec_impossible_list dl dd{display:none;padding:20px;border-bottom:1px solid $white_three;background:$white_four}  */
+
+/* 불가 상세 내용
+.impossible_detail{}
+.impossible_detail ul{padding-bottom:15px;background: url(../images/common/bg-dotline-type1.png) 0 bottom repeat-x;background-size: 18px auto;}
+.impossible_detail ul li::after{content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.impossible_detail ul li + li{padding-top:12px}
+.impossible_detail ul li > strong{display:inline-block;float:left;@include font(16px);}
+.impossible_detail ul li > div{display:inline-block;float:right;text-align:right}
+.impossible_detail ul li > div em, .impossible_detail ul li > div span{@include font(16px);}
+.impossible_detail ul li > div .time{margin-top:12px;color:$warm_grey;@include font(12px);}
+
+.impossible_detail ul.automatic + ul.automatic{padding-top:12px}
+
+.impossible_detail ul.automatic li div em, .impossible_detail ul.automatic li > div span{display:inline-block;@include font(12px);color:$brownish_grey;min-height:29px}
+.impossible_detail ul.automatic li .auto_txt{clear:both;@include font(14px);text-align:right}
+
+.impossible_detail ul.central_type li{display:table;width:100%;}
+.impossible_detail ul.central_type li::after{display:none}
+.impossible_detail ul.central_type li > strong{display:table-cell;float:none;vertical-align:middle;text-align:left}
+.impossible_detail ul.central_type li > div{display:table-cell;float:none;vertical-align:middle;text-align:right}
+
+.impossible_detail article{padding:12px 0}
+.impossible_detail article > p{}
+.impossible_detail article > .flex_wrap{margin-top:15px}
+.impossible_detail article > .flex_wrap .ico_tel{padding-right:3px;vertical-align:-2px;}
+.impossible_detail article .bul_guide{margin-top:12px}
+.impossible_detail article .bul_guide > p{@include font(12px);color:$warm_grey} */
+
+.member_out .sec_desc{padding:28px 20px 0;background:$white_three}
+.member_out .sec_desc ul li{color:$brownish_grey}
+.member_out.agree_check .sec_secede_form {display:none;}
+.member_out .sec_agree {background:$white_three; padding-top:4px; border-top:1px solid $white_two;}
+.member_out .sec_agree ul {background:$white;}
+
+.sec_impossible_list{margin-top:26px;border-top:1px solid $white_two;background:$white_three}
+.sec_impossible_list ul{background: #eee;}
+.sec_impossible_list ul li{overflow:hidden;margin-top: 4px;border-top: 1px solid $white_two;border-bottom: 1px solid $white_two;background:$white}
+.sec_impossible_list ul li > a{display:block;padding:19px 20px;@include font(16px);}
+.sec_impossible_list ul li > a:after{content:'';display:inline-block;float:right;margin-top:5px;width:13px;height:7.67px;background: url(../images/common/ir-arrow-set.png) no-repeat;background-size: 40px auto;background-position: 0 0;transform: rotate(-90deg)}
+
+.account_delete{}
+.account_delete .sec_title{padding-bottom:24px;}
+.account_delete .sec_input{margin:0 20px;border-top:1px dashed $white_three}
+.account_delete .sec_input .flex_wrap{position:relative}
+.account_delete .sec_input .flex_wrap input{font-size:16px;padding: 0 38px 0 19px; }
+.account_delete .sec_input .flex_wrap input.comma {font-size:18px;font-weight:bold; color:$reddish_orange;}
+.account_delete .sec_input .flex_wrap .kor_txt{line-height:46px; font-size:18px; font-weight:bold;color:$reddish_orange;}
+.account_delete .sec_input .flex_wrap .inp_remark{color:$clear_blue}
+/*.account_delete .sec_impossible_list ul li > a {margin:9.5px 0;} 2018-03-02 MASA05Z05 때문에 삭제 phj */
+
+.account_delete .btn_right{position:static;margin-top:10px;float:right;}
+.account_delete .btn_right button{margin-left:8px}
+.account_delete .btn_right button::after{}
+
+.account_delete .sec_desc{position:fixed; bottom:74px; margin:0;padding:9px 20px 0;/*background:$white_three*/}
+.account_delete .sec_desc p{margin:0; padding-left:10px; text-indent:-10px;}

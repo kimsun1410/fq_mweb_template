@@ -1,0 +1,745 @@
+@charset 'UTF-8';
+
+.spend_target .modal_content.add_sticky .scroll_wrap::after{background:$white}
+.spend_target .modal_content .sec_title{padding-top:28px}
+.spend_target .modal_content .sec_title h3{font-size:20px;line-height: 24px;color: #222;}
+.spend_target .modal_content .sec_title h3 > strong{color:#731aed}
+.spend_target .modal_content .set_target{padding:0 20px}
+
+/* 소비내역 날짜별 */
+.spend_common.sec_head { background:$purply_blue;margin:0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;padding:22px 20px 30px;}
+.assets_list .spend_common.sec_head { padding:28px 20px 37px;} /* CBSO69Z03 문제로 추가 */
+.spend_common.sec_head .date_control .date { border-bottom:0px solid transparent;color:$white;} /* 언더라인 삭제 */
+.spend_common.sec_head .date_control .ico_prev:before,
+.spend_common.sec_head .date_control .ico_prev:after,
+.spend_common.sec_head .date_control .ico_next:before,
+.spend_common.sec_head .date_control .ico_next:after { background:$white;}
+.spend_common.sec_head .date_control .btn:disabled:before,
+.spend_common.sec_head .date_control .btn:disabled:after,
+.spend_common.sec_head .date_control .ico_prev.end:before,
+.spend_common.sec_head .date_control .ico_prev.end:after,
+.spend_common.sec_head .date_control .ico_next.end:before,
+.spend_common.sec_head .date_control .ico_next.end:after {background:$lighter_purple;}
+.spend_common.sec_head .date_control .btn:disabled,
+.spend_common.sec_head .date_control .btn.ico_prev.end,
+.spend_common.sec_head .date_control .btn.ico_next.end {opacity:1;}
+
+.spend_common.sec_head .account_info { margin-top:24px;} /* CBSL69Z01 */
+.spend_common.sec_head .account_info .bank_data {color:$lavender;}
+.spend_common.sec_head .account_info .bank_data em {display:inline-block;vertical-align:top;color:$lavender}
+.spend_common.sec_head .account_info .money_total { color:$white;vertical-align:top;}
+.spend_common.sec_head .account_info .money_total .cash { display:inline-block;}
+.spend_common.sec_head .account_info .money_total .cash + span { position:relative;top:-7px;display:inline-block;margin-left:3px;}
+.spend_common.sec_head .account_info .money_total em,
+.spend_common.sec_head .account_info .money_total span,
+.spend_common.sec_head .account_info .money_total button {vertical-align:bottom;}
+.spend_common.sec_head .account_info .money_total button {position:relative;top:-15px;margin-left:7px;}
+.spend_common.sec_head .update{color:$lavender;@include font(11px);}
+/* .spend_date:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}  하단 여백이 강제생김 주석처리 */
+/* 소비내역 상세 금액 옆에 화살표 아이콘 추가 */
+
+.assets_list .wrap_result .no_result {padding-top:10%;}
+.spend_date .wrap_result .no_result,
+.spend_category .wrap_result .no_result,
+.means_category .wrap_result .no_result{padding-top:25%;} /* 2018-04-02 여백 조절 phj */
+
+.spend_detail.spend_history.wrap_result {border-top:none;} /* 2018-04-02 내용 없을 때 */
+
+.assets_list .spend_detail dl dt strong + div:after,
+.spend_review .spend_detail dl dt strong + div:after,
+.hashtag_category .spend_detail dl dt strong + div:after,
+.spend_category .spend_detail dl dt strong + div:after,
+.spend_date .spend_detail dl dt strong + div:after {content:""; display:inline-block; background: url("../images/common/ir-arrow-set.png") no-repeat; width:7px; height:11px;
+ background-position: 0 -85px; background-size: 40px auto; margin-left:9px;}
+
+.assets_list .sec_tab .tab,
+.means_category .sec_tab .tab,
+.spend_category .sec_tab .tab,
+.spend_date .sec_tab .tab { height:56px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.assets_list .sec_tab .tab_wrap,
+.means_category .sec_tab .tab_wrap,
+.spend_category .sec_tab .tab_wrap,
+.spend_date .sec_tab .tab_wrap { height:56px;} /*2018-02-12 추가 phj*/
+.assets_list .sec_tab .tab a,
+.means_category .sec_tab .tab a,
+.spend_category .sec_tab .tab a,
+.spend_date .sec_tab .tab a { @include font(16px);padding:18.5px 0;}
+
+.assets_monitor .money_tit { margin-bottom:3px;}
+.account_info .money_tit { font-weight:bold;}
+.assets_monitor .money_total,
+.hashtag_category .money_total,
+.spend_category .money_total { color:$purply_blue;}
+
+.assets_monitor .money_total > span,
+.hashtag_category .money_total > span,
+.spend_category .money_total span { position:relative;padding-left:2px;top:0px;} /* 1차 수정 320,650 원 수직간격 */
+.assets_monitor .money_total > span {top:-1px;}
+
+#contents > section.spend_category {padding-top:10px;}
+#contents > section.spend_category .sec_head {padding-top:18px;}
+/*.spend_category .sec_head {padding-top:0;}*/
+
+.spend_date .sec_history dl dt .cash,
+.spend_category .sec_history dl dt .cash,
+.spend_detail.spend_history .total .cash,
+.hashtag_category .sec_history dl dt .cash{font-weight:bold;}/* 2018-02-09 추가 */
+
+.spend_detail.spend_history {padding-top:4px; border-top:1px solid $white_two;}
+.spend_category > .spend_detail > .summary:first-child {margin-top:-5px;}
+.means_category .spend_detail {padding-top:4px; border-top:1px solid $white_two;}
+
+
+.sec_graph {background-color:$white;}
+.sec_graph .spend_graph_dournut { position:relative;height:180px;background-color:$white;}
+.sec_graph .spend_graph_dournut > img { position:absolute;left:50px;top:30px;} /* 임시 CSS */
+
+/*.sec_graph .spend_graph_dournut:before { content:'rMate After';position:absolute;left:85px;top:45px;color:#f74b20;font-size:8px;z-index:1;opacity:0.8;}*/ /* 임시 CSS */
+.sec_graph .spend_graph_dournut .graph_index { position:absolute;right:20px;top:34px;}/* left:234px; */
+
+.sec_graph .spend_line_chart { position:relative;height:180px;background-color:$purply_blue;text-align:center;}
+.sec_graph .spend_line_chart > img { max-width:100%;} /* 임시 CSS */
+/* .sec_graph .spend_line_chart:before { content:'rMate After';position:absolute;left:0px;top:40px;width:100%;text-align:center;color:#f74b20;font-size:8px;z-index:1;opacity:0.8;} 임시 CSS */
+
+.graph_index li { position:relative;margin-top:5px;padding-left:14px;}
+.graph_index li:first-of-type { margin-top:0;}
+.graph_index li:before { content:'';position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:100%;}
+.graph_index li strong { display:inline-block;@include font(16px);white-space:nowrap;overflow:hidden;vertical-align:top;} /* -o-text-overflow:ellipsis;-ms-text-overflow:ellipsis;text-overflow:ellipsis;word-break:normal;word-wrap:normal; */
+.graph_index li strong + em { display:inline-block;width:32px;padding-left:14px;}
+.graph_index li:first-of-type strong { font-weight:bold;}
+.graph_index li:nth-of-type(1):before { background-color:#ffdb15;}
+.graph_index li:nth-of-type(2):before { background-color:#9882fd;}
+.graph_index li:nth-of-type(3):before { background-color:#b3a1f5;}
+.graph_index li:nth-of-type(4):before { background-color:#c7b9fa;}
+.graph_index li:nth-of-type(5):before { background-color:#eaddfd;}
+.means_category .graph_index li strong { width:56px;}
+#contents.fingo > section.means_category {padding-top:10px;}
+
+.pop_direct_input .detail_set {/*  padding-bottom:24px; */}
+.pop_direct_input .detail_set.off > div > strong > span.essential{display:none}
+.pop_direct_input .detail_set > div {margin-top:20px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.pop_direct_input .detail_set > div.d{margin-top:25px}
+.pop_direct_input .detail_set > div.s{margin-top:15px}
+.pop_direct_input .detail_set > div.ca .btn_select.btn_type_a,
+.pop_direct_input .detail_set > div.d .btn_select.btn_type_a{color:$black !important;position:relative;z-index:0; line-height:45px;}/*2018-04-18 line-height 추가 phj*/
+.pop_direct_input .detail_set > div.ca .btn_select.btn_type_a.disabled,
+.pop_direct_input .detail_set > div.d .btn_select.btn_type_a.disabled{color:#999 !important;background-color: #eee !important;}
+.pop_direct_input .detail_set > div.d .on > .btn_select.btn_type_a{color:#731aed !important}
+.pop_direct_input .detail_set > div.t {position:relative;padding-bottom:26px /* margin-top:15; */}
+.pop_direct_input .detail_set > div.t .txt_count{position:absolute;right:0; bottom:0}
+.pop_direct_input .detail_set > div:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+/* 2440 [AI핀고] 소비내역 상세 화면 개선 3건 */
+.pop_direct_input .detail_set > div > strong { position:relative;@include font(16px);margin-top:13px;font-family:"AppleSDGothicNeo-Light";position:relative;display:block;float:left;/* padding-top:3px;*/padding-left:0px;color:$black;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;} /* 16->14, font-family:"AppleSDGothicNeo-Light";삭제  CBSJ69Z02, 다시복원  */
+.pop_direct_input .detail_set > div > strong > span.essential {position:absolute;top:3px;right:-11px;color:$reddish_orange;font-family:"AppleSDGothicNeo-Medium";line-height:20px;}
+.pop_direct_input .detail_set > div div { padding-left:100px;@include font(16px);line-height:42px} /* line-height:24px;  aifingo/CBSJ69Z02.html*/
+.pop_direct_input .detail_set > div div input,
+.pop_direct_input .detail_set > div div button,
+.pop_direct_input .detail_set > div div select{ @include font(16px);}
+.pop_direct_input .sec_table .detail_set > div div { padding-left:80px;@include font(14px);} /* 예외처리 */
+.pop_direct_input .sec_table .detail_set > div > strong { @include font(14px);font-family:"AppleSDGothicNeo-Medium";}
+
+.pop_direct_input .detail_set.off div.w .disabled ::-webkit-input-placeholder {color: #999;}
+.pop_direct_input .detail_set.off div.t ::-webkit-input-placeholder,
+.pop_direct_input .detail_set.off div.w ::-webkit-input-placeholder,
+.pop_direct_input .detail_set.view_detail.off div.t ::-webkit-input-placeholder {color: $pinkish_grey;}
+
+.pop_direct_input .detail_set > div.d div.date { position:relative;} /* height:100%;제외 개발 디버깅 01/22 */
+.pop_direct_input .detail_set > div.d div.date input.datelocal { position:absolute;left:100px;right:0;top:0;width:calc(100% - 100px); height:46px;opacity:0;z-index:1;}
+.pop_direct_input .detail_set > div.s div.choice label:first-of-type { margin-bottom:10px;}
+.pop_direct_input .detail_set > div div.choice label span { @include font(16px);padding-top:4px;}
+.pop_direct_input .detail_set > div.in div.choice { } /* 수입설정 */
+.pop_direct_input .detail_set > div.in div.choice label { float:left;width:50%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;margin-bottom:10px;}
+.pop_direct_input .detail_set > div.in div.choice label span { color:$black;}
+
+.pop_direct_input .detail_set > div.in div.choice:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.pop_direct_input .detail_set > div.s div span,
+.pop_direct_input .detail_set > div.c div { color:$black;}
+.pop_direct_input .detail_set > div div.cash.prt_won { position:relative;}
+.pop_direct_input .detail_set > div div.cash.prt_won.disabled .won_txt{}
+.pop_direct_input .detail_set > div div.cash.prt_won > input { padding-right:20px;}
+/* .pop_direct_input .detail_set > div div.cash.prt_won:after { content:"원";position:absolute;right:2px;bottom:4px;z-index:1;} */
+.pop_direct_input .detail_set > div.d { position:relative;display:block;color:$black;}
+.pop_direct_input .detail_set > div.d div.date strong { border-bottom:1px solid $black;width:auto;}
+.pop_direct_input .detail_set > div.d > input { position:absolute;left:100px;height:100%;right:0;top:0;border:1px solid green;z-index:50;color:transparent;border:0;opacity:0;}
+.pop_direct_input .detail_set > div.ca div button { border-bottom:1px solid $black;width:auto;}
+
+/* 18.12.31 소비내역 카테고리 추가 */
+.pop_direct_input .detail_set > div.s,
+.pop_direct_input .detail_set > div.ca,
+.pop_direct_input .detail_set > div.e,
+.pop_direct_input .detail_set > div.t {margin-top:30px;}
+.pop_direct_input .detail_set > div.ca .quick_msg {margin-left: -6px; padding-top: 7px; line-height: inherit;}
+.pop_direct_input .detail_set > div.ca div button {border: 1px solid $white_two; font-size:12px; margin-top: 8px; margin-left: 6px; line-height: 1.3em;}
+.pop_direct_input .detail_set > div.ca div button.on {border-color:#6417f3; background-color:$lighter_purple; color:$white;}
+/* //18.12.31 소비내역 카테고리 추가 */
+
+.pop_direct_input .detail_set > div.c div span { display:inline-block;border-bottom:1px solid $black;}
+.pop_direct_input .detail_set > div.w div input,
+.pop_direct_input .detail_set > div.c div input,
+.pop_direct_input .detail_set > div.t div input { /* line-height:24px;border:0;border-bottom:1px solid $pinkish_grey;padding:0;height:auto;border-radius:0; */}
+/* 2440 [AI핀고] 소비내역 상세 화면 개선 3건 */
+.pop_direct_input .detail_set > div.s strong{margin-top:5px}
+.pop_direct_input .detail_set > div.s strong,
+.pop_direct_input .detail_set > div.s .choice{line-height:20px;}
+/* 2440 [AI핀고] 소비내역 상세 화면 개선 3건 */
+.pop_direct_input .detail_set > div.e strong{margin-top:5px}
+.pop_direct_input .detail_set > div.e strong,
+.pop_direct_input .detail_set > div.e .choice{line-height:20px;}
+.pop_direct_input .detail_set > div.e .choice:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.pop_direct_input .detail_set > div.e .choice > em{float:left;}
+.pop_direct_input .detail_set > div.e .choice> em:last-child{margin-left:30px}
+.pop_direct_input .detail_set > div.e .choice label span{color:$black}
+.pop_direct_input .detail_set > div.t.modify{padding-bottom:0}
+.pop_direct_input .detail_set > div.t.modify .txt_count{position:static;margin-top:7px}
+/* .pop_direct_input .detail_set > div.t.modify + div.s{margin-top:-2px} */
+/* tag_history */
+.pop_direct_input .detail_set > div .tag_history{display:none;line-height:1;padding-bottom:28px}
+.pop_direct_input .detail_set > div .tag_history p{padding-top:4px}
+.pop_direct_input .detail_set > div .tag_history p a{display:inline-block;padding:5px 0;color:$brownish_grey;@include font(14px);-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/* //2440 [AI핀고] 소비내역 상세 화면 개선 3건 */
+/* 상세내역 */
+.pop_direct_input .detail_set.view_detail { }
+.pop_direct_input .detail_set.view_detail > div{margin-top:25px}
+.pop_direct_input .detail_set.view_detail > div.d div.date strong { border-bottom:1px solid transparent;}
+
+.pop_direct_input .detail_set.view_detail > div > div strong {color:$pinkish_grey;}
+.pop_direct_input .detail_set.view_detai > div > strong > span{display:none}
+
+.pop_direct_input .detail_set.view_detail input[type="radio"] + label:before{top:7px}
+
+/* 카테고리 선택, 이중팝업 */
+#modal-choice-category.modal_wrap { align-items:flex-end;} /* popup하단 */
+.pop_direct_input .sec_head { margin:0 0 0;padding:0;text-align:center;color:$black;} /* margin-top: 30,  CBSJ69Z02수정 건 */
+.pop_direct_input .sec_head h3 { @include font(16px);font-family:"AppleSDGothicNeo-Light";}
+.pop_direct_input .sec_table .detail_set { margin-top:28px;padding:0 20px;}
+.pop_direct_input .sec_table .detail_set > div { margin-top:10px;}
+.pop_direct_input .sec_table .detail_set > div:first-of-type { margin-top:0;}
+.pop_direct_input .sec_table .detail_set > div > strong { display:inline-block;margin-top:13px;width:80px;}
+.pop_direct_input .sec_table .detail_set .btn_sellist { margin-top:0;}
+.pop_direct_input .sec_table .detail_set .btn_sellist li button { color:$warm_grey;@include font(14px);}
+.pop_direct_input .sec_table .detail_set .btn_sellist li button.on { color:$purply_blue;}
+.pop_direct_input .sec_table .detail_set { padding-bottom:50px;}
+.pop_direct_input .swiper-container-horizontal > .swiper-pagination-bullets { bottom:30px;height:8px;}
+.pop_direct_input .swiper-container-horizontal .swiper-pagination-bullet { vertical-align:top;opacity:0.3;margin:0 3px;}
+.pop_direct_input .swiper-container-horizontal .swiper-pagination-bullet-active { opacity:1;background:$purply_blue;}
+
+.popup .slide_wrap { width:100%;overflow:hidden;}
+.popup .btn_sellist {margin-top:26px;border-bottom:transparent;box-sizing: border-box;width:100%;}
+.popup .btn_sellist li {float:left;text-align:center;position:relative;box-sizing: border-box;width:(100%/3);height:46px;margin:-1px -1px 0px 0px;}
+.popup .btn_sellist li button { position:absolute;top:0;left:0;@include font(14px);width:100%;height:100%;border:1px solid $white_two;margin:0px;z-index:0;}
+.popup .btn_sellist li button.on {border:1px solid $purply_blue;color: $purply_blue;background-color: $pale_lavender;z-index:10;} /* animation-name: pulse;animation-duration: 0.5s;animation-fill-mode: both; */
+
+/* 수단별 */
+.means_category { }
+.means_category .sec_graph .spend_graph_dournut .graph_index { top:46px;}
+
+/* 카테고리별 요약 */
+.means_summary { padding:24px 20px 25px;border-top:1px solid $white_two;border-bottom:1px solid $white_two;margin-top:4px;background-color:$white;}
+.means_summary:first-of-type { margin-top:0;}
+.means_summary > ul { display:table;width:100%;}
+.means_summary > ul > li { display:table-cell;height:46px;vertical-align:middle;}
+.means_summary > ul > li.title { text-align:left;}
+.means_summary > ul > li.title strong { display:block;font-weight:normal;}
+.means_summary > ul > li.title span { display:inline-block;margin-top:6px;color:$pinkish_grey;@include font(14px);}
+.means_summary > ul > li.total { text-align:right;}
+/* .means_summary > ul > li.total em.cash + span,
+.means_summary > ul > li.total em.cash { font-weight:bold;} cash 는 볼드처리가 아님, bold class 로 추가하면됨 */
+.means_summary > ul > li.total em.date + span,
+.means_summary > ul > li.total em.cash + span{ font-weight:bold;}
+/*.means_summary > ul > li .ico { margin-top:-3px;margin-left:6px;}*/
+
+/*  소비목표액 */
+/* .setspend_tit { @include font(20px);}
+.setspend_tit span,
+.setspend_tit em { color:$purply_blue;} sec_title 로 common 에서 사용 가능 */
+.set_target { width:100%;padding:0px 40px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.set_target:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.set_target li:first-of-type { margin-top:23px;}
+.set_target li { position:relative;margin-top:13px;}
+.set_target li span { display:inline-block;margin-top:2px;@include font(16px);}
+.set_target li input[type="radio"] + label span { color:$black;padding-top:2px;}
+.set_target li .form_wrap { float:left;}
+.set_target li .form_wrap .layer_wrap { top:37px;}
+.set_target li .form_wrap button {margin-top:5px;}
+.set_target li .avg { float:right;color:$warm_grey;padding-top:6px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+
+
+.set_target li .avg em { @include font(16px);}
+.set_target li.custom .form_wrap {position:relative; width:110px; z-index:2;}
+.set_target li:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.set_target li.custom .user {position:relative; width:100%;padding-left:110px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.set_target li.custom .user input { display:inline-block;@include font(16px);border:0;border-bottom:1px solid $pinkish_grey;padding:2px 18px 3px;height:auto;border-radius:0;margin-top:0px; text-align:right; }
+.set_target li.custom .user input[type='tel']:disabled {background-color:$white;}
+.set_target li.custom .user i {position:absolute; top:3px; right:0; @include font(16px);}
+.set_target li.custom:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.set_target button.btn_ico { margin-top:6px;margin-left:4px;}
+
+/* 연결계좌 */
+
+.alink_info { position:relative;width:100%;margin:20px 0 22px;}
+.alink_info:before { content:'';position:absolute;left:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size:18px auto;opacity:1;}
+.alink_info:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.alink_info .tit { float:left; font-family:"AppleSDGothicNeo-Light", "LatoL";} /* 2018-01-23 font-family 수정 phj */
+.alink_info .total { float:right;color:$black;}
+.alink_info > div { margin-top:28px;@include font(16px);color:$brownish_grey;}
+.alink_info > div.money_total em + span { padding-left:1px;}
+.alink_info button.ico_pen_edit { margin-top:-4px;}
+
+/* 자산모니터링 */
+.assets_monitor { }
+.assets_monitor .sec_head { margin:0 20px;}
+.assets_monitor .account_info { margin-top:0;}
+.assets_monitor .account_info { }
+.assets_monitor .monitor_detail { padding:0;border-top:1px solid $white_two;border-bottom:0;}
+.assets_monitor .monitor_detail .subject a {overflow:hidden;padding:19px 45px 20px 20px; @include font(16px); font-weight:bold;}
+.assets_monitor .monitor_detail .subject a .total {float:right; color:$purply_blue;}
+.assets_monitor .monitor_detail .detail_set .con {background:$white_four; padding:30px 20px 14px;}
+.assets_monitor .monitor_detail .detail_set .wrap_tag {padding-top:15px;}
+.assets_monitor .monitor_detail .detail_set .wrap_tag:first-child {padding-top:0;}
+.assets_monitor .monitor_detail .detail_set .tag {display:inline-block; @include font(11px); color:$white; background:$pinkish_grey; height:20px; line-height:20px; padding:0 10px; border-radius:10px;}
+.assets_monitor .monitor_detail .detail_set .wrap_tag + ul.monitor_list {margin-top:0;}
+.assets_monitor .monitor_detail .monitor_list {padding:0; margin-top:-14px}
+.assets_monitor .monitor_detail .monitor_list li {display:table; width:100%;border-top:1px solid $white_three; padding:14px 0 12px;}
+.assets_monitor .monitor_detail .monitor_list li:first-child {border-top:none;}
+.assets_monitor .monitor_detail .monitor_list li .cell {display:table-cell; width:auto; @include font(16px);}
+.assets_monitor .monitor_detail .monitor_list li .cell:nth-of-type(2) {text-align:right; vertical-align:middle; width:130px;} /* 2018-04-11 넓이 변경 phj */
+.assets_monitor .monitor_detail .monitor_list li .tit {width:130px; display:block; color:$brownish_grey; margin-bottom:3px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+.assets_monitor .monitor_detail .monitor_list .alert .tit {color:$pinkish_grey}
+.assets_monitor .monitor_detail .monitor_list li .tit .txt_alert {position:relative; display:inline-block; margin-left:10px; color:$reddish_orange; font-size:11px; padding-left:18px; vertical-align:1px;}/* 2018-04-06 alert 문구 추가 phj */
+.assets_monitor .monitor_detail .monitor_list li .tit .txt_alert:before{content:""; position:absolute; left:0; top:3px; display:block; width:14px; height:14px; background:url('../images/common/ir-icon-set.png') no-repeat; background-size:40px auto; background-position:0 -61px; }/* 2018-04-06 alert 문구 추가 phj */
+.assets_monitor .monitor_detail .monitor_list li .account_num {@include font(12px); color:$pinkish_grey;}
+.assets_monitor .monitor_detail .monitor_list li .total {color:$brownish_grey;}
+.assets_monitor .monitor_detail .monitor_list li .ico_arrow_more3 {margin-left:5px;}
+
+.assets_monitor .monitor_detail ul.summary_list { padding:27px 20px 28px;}
+.assets_monitor .monitor_detail ul.summary_list .title.alert strong {color:$pinkish_grey;} /* 2018-01-23 case 추가 phj */
+.assets_monitor .account_summary .expend {background:$white_four; padding:0px 20px 28px;}
+.assets_monitor .account_summary .expend .wrap_tag {padding-top:28px;}
+.assets_monitor .account_summary .expend .tag {display:inline-block; @include font(11px); color:$white; background:$pinkish_grey; height:20px; line-height:20px; padding:0 10px; border-radius:10px;}
+/*.assets_monitor .account_summary .expend .summary { border-top:0; }
+.assets_monitor .account_summary .expend .summary:first-child { border-top:1px solid $white_two;}*/
+
+/* 카테고리별 요약 */
+.account_summary { border-top:1px solid $white_two;border-bottom:1px solid $white_two;margin-top:4px;background:transparent} /* background-color:$white; */
+.account_summary:first-of-type { margin-top:0;}
+.account_summary > ul { display:table;width:100%;padding:25px 20px 27px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.account_summary > ul > li { display:table-cell;vertical-align:middle;}
+.account_summary > ul > li.title { text-align:left;}
+.account_summary > ul > li.title strong { font-weight:bold;}
+.account_summary > ul > li.title span { display:inline-block;margin-top:10px;color:$pinkish_grey;}
+.account_summary > ul > li.total { text-align:right;color:$purply_blue;}
+.account_summary > ul > li .ico { position:relative;margin-top:-2px;margin-left:6px;} /* 0125, margin-top:-2px;margin-left:6px; */
+.account_summary > ul > li .ico:before { content:" ";position:absolute;left:-8.5px;top:-8.5px;padding:8.5px;width:100%;height:100%;z-index:1;}
+.account_summary > ul > li .ico.ico_arrow_down_type_a { position:relative;top:-1px;}
+.account_summary > ul > li .ico.ico_arrow_down_type_a.on { top:-2px;}
+.account_summary > ul > li .ico.ico_arrow_down_type_a { margin-left:12px;}
+.account_summary .summary { background:$white_three;border-top:1px solid $white_two;}
+.account_summary.mylistup { } /* 금융기관연결 */
+.account_summary.mylistup .summary { padding:7px 20px 2px;}
+
+/* 재등록 안내, 마이핑고 계좌 로그인 실패시 */
+div.alert { width:100%;} /* 에러 */
+div.alert span.ico { float:left;display:inline-block;border:1px solid $reddish_orange;@include font(12px);padding:2px 7px 2px 10px;margin-right:10px;border-radius:14px;color:$reddish_orange;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+div.alert span.ico:before { content:" ";float:right;margin-top:3px;margin-left:4px;width:6px;height:9px;background:url('../images/common/ir-arrow-set.png') no-repeat;background-size:40px auto;background-position:0 -45px;}
+div.alert p { @include font(11px);padding:0;max-width:80%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;color:$reddish_orange;text-indent:-8px;padding-left:12px;}
+div.alert [class*='star_type']:before {margin-right:3px; text-indent:-9px;}
+div.alert p {-webkit-line-clamp:inherit;}
+
+/* 금융기관 연결 */
+.myaccount_listup {/*  padding:30px 0 30px;*/margin:30px -20px 0;}
+.myaccount_listup::after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.myaccount_listup > li { float:left;width:20%;text-align:center;color:$white;border-right:1px solid #8848ff;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box; height:50px;} /* 2018-01-24 height추가 phj */
+.myaccount_listup > li:last-child { border-right:0;}
+.myaccount_listup > li strong { display:block;margin-top:-2px;}
+.myaccount_listup > li em.num { display:block;@include font(30px);margin-top:4px;}
+
+/* 자산리스트 */
+.assets_list .sec_head { padding:0;}  /* padding:0; CBSL69Z01 */
+.assets_list .spend_detail ul{margin-top:-1px;}
+.assets_list .spend_detail li:first-child {border-top:none;} /* 2018-01-23 border 수정 phj */
+
+/* 2018-03-27 금융기관 연결 다시 작업 */
+.assets_connect .spend_common.sec_head {padding:21px 20px 37px}
+.assets_connect .myaccount_listup {margin-top:18px;}
+.assets_connect .account_detail {border-bottom:none;}
+.assets_connect .account_summary .summary {border-top:none;}
+.assets_connect .account_summary.mylistup .summary+.summary_list {margin-top:0;}
+.assets_connect .mylistup .summary_list {margin-top:4px; border-top:1px solid $white_two; border-bottom:1px solid $white_two; margin-bottom:0; }
+.assets_connect .mylistup .expend {border-bottom:1px solid $white_two; border-top:none;}
+.assets_connect .mylistup .summary_list.register_again + .alert {margin-top:-1px; padding-top:1px;}
+.assets_connect .mylistup .alert {margin-bottom:0; border-top:none; border-bottom:1px solid $white_two;}
+.assets_connect .mylistup .alert p{margin-top:3px}
+.assets_connect .mylistup .summary_list.register_again.card + .alert {margin-bottom:0;}
+
+.assets_connect .alert + .expend .account_link_wrap{padding-top:25px}
+.assets_connect .alert + .expend .account_link_wrap .account_info:first-child{margin-top: -10px;}
+
+/* 금융기관연결 비활성화 */
+.mylistup .expend { background:$white_four;border-top:1px solid $white_two;}
+
+.add_finlink { display:block;text-align:center;padding:5px 0 45px;}
+.add_finlink { }
+.add_finlink span.desc { display:block;margin-top:9px;color:$warm_grey;}
+
+/* 금융기관 계좌연결 */
+.account_link_wrap { padding:9px 20px 30px;}
+.account_link_wrap ul.account_info { position:relative;display:table;width:100%;margin-top:15px;}
+.account_link_wrap ul.account_info:before { content:' ';position:absolute;left:0;bottom:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size:18px auto;}
+.account_link_wrap ul.account_info li { display:table-cell;vertical-align:middle;padding:6px 0 18px;text-align:left;}
+.account_link_wrap ul.account_info li.switch { text-align:right;}
+.account_link_wrap ul.account_info li.switch label { top:2px;}
+.account_link_wrap ul.account_info li strong { color:$black;display:block;}
+.account_link_wrap ul.account_info li span { display:inline-block;color:$pinkish_grey;margin-top:2px;@include font(12px);}
+.account_link_wrap ul.account_info li span em { padding-left:4px;}
+
+.account_link_wrap ul.account_info li.title.no_data strong{color:$warm_grey}
+
+.mylistup ul.summary_list.disabled li.title strong em,
+.mylistup ul.summary_list.disabled li.title strong { color:$pinkish_grey;}
+.disabled .account_link_wrap ul.account_info li strong { color:$pinkish_grey;}
+
+/* 금융기관 연결-금융선택 */
+.sec_choice { position:relative;margin:0 20px;padding:29px 0 14px;}
+.sec_choice ul.cetichoice { } /* 공인인증, 아이디선택 */
+.sec_choice ul.cetichoice:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.sec_choice ul.cetichoice li { float:left;width:50%;}
+.sec_choice ul.cetichoice li label span { color:$black;}
+
+/* 은행종류 선택 */
+.sec_fincategory { padding:0 20px 45px;}
+.sec_fincategory .help { position:relative;text-align:right;padding:30px 0 0;} /* padding:15px 0 0;0125, CBSO69Z07 */
+.sec_fincategory .help .btn_ico {top:-1px;}
+.sec_fincategory .help span { float:right;padding-left:4px;@include font(12px);padding-top:3px;}
+.sec_fincategory .help .layer_wrap { text-align:center;top:61px;left:auto;right:0;width:205px} /*top:45px;,CBSO69Z07*/
+.sec_fincategory .help .layer_wrap p{word-break: unset;}
+.sec_fincategory > div.list { margin-top:28px;}
+.sec_fincategory > div.list:nth-of-type(2) { margin-top:8px;}
+.sec_fincategory > div.list > strong { font-weight:bold;}
+.sec_fincategory > div.stock_list,
+.sec_fincategory > div.bank_list { margin-top:0px;}
+.sec_fincategory > div:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.sec_fincategory > div > strong { @include font(16px);}
+.sec_fincategory > div ul.btn_sellist { margin-top:8px;}
+
+.sec_choice.add_dotline_under + .scroll .sec_fincategory .help.finstock,
+.sec_choice.add_dotline_under + .scroll .sec_fincategory .help.finbank{padding-top:15px}
+.sec_choice.add_dotline_under + .scroll .sec_fincategory .help .layer_wrap { top:46px;}
+
+.fingo .sec_guide h3 { @include font(24px);} /* 두줄은 20px, 한줄은 24px */
+.fingo .sec_guide p { margin-top:10px;}
+
+/* 연체알리미 */
+.finalarm { border-top:0px solid $white_two;margin-top:26px;background-color:$white_three;}
+.finalarm .summary { border-bottom:1px solid $white_two;}
+.finalarm .alarm_list { background-color:$white;border-top:1px solid $white_two;border-bottom:1px solid $white_two;padding:27px 20px 28px;margin-top:4px;}
+.finalarm .alarm_list .expend { position:relative;padding-top:15px;margin-top:15px;}
+.finalarm .alarm_list .expend:before { content:' ';position:absolute;top:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size:18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.finalarm .alarm_list .title { position:relative;}
+.finalarm .alarm_list .title strong { color:$black;@include font(16px);}
+.finalarm .alarm_list .title em.date { float:right;@include font(11px);color:$pinkish_grey;}
+.finalarm .alarm_list .title span.anum { display:block;margin-top:6px;color:$warm_grey;}
+.finalarm .alarm_list .title span.anum .num{vertical-align:0}
+.finalarm .alarm_list .title .ico { top:32px;right:0;position:absolute;}
+.finalarm .summary + .alarm_list {margin-top:0px;border-top:0;}
+
+.finalarm .alarm_list.alarm_am strong { display:block;padding-right:125px;}
+.finalarm .alarm_list.alarm_am .alarm_info { display:block;margin-top:10px;color:$warm_grey;}
+.finalarm .alarm_list.alarm_am span.time { display:inline-block;@include font(14px);color:$warm_grey;margin-top:10px;}
+.finalarm .alarm_list.alarm_am span.time em.date { @include font(14px);color:$warm_grey;margin-left:0;}
+.finalarm .alarm_list.alarm_am em.date {/* float:none; 우측 정렬 요청 */position: absolute;right: 0;top: 0;display:inline-block;color:$pinkish_grey;vertical-align:top;line-height:17px;padding-top:1px;}
+.finalarm .alarm_list.alarm_am span.set { display:inline-block;color:$warm_grey;@include font(11px);vertical-align:top;padding-top:2px;}
+.finalarm .alarm_list.alarm_am .title .ico { top:32px;}
+
+/* 계좌 잔액 알림 */
+.pop_fingo_alarm {background:$white_three}
+.pop_fingo_alarm.modal_wrap.fullpop .modal_content{padding:10px 0 0;}/* 2018-03-23 풀팝업으로 변경 추가 phj */
+
+/* 알림 설정 : 계좌, 체크카드, 신용카드 공통 */
+.sec_alram_item{padding: 4px 0 0;background: $white_three;border-top: 1px solid $white_two;}
+.sec_alram_item dl{background: $white;border-top: 1px solid $white_two;}
+.sec_alram_item dl dt{position: relative;padding:24px 20px 12px;background: $white;color:$black;font-weight:bold;@include font(16px);}
+.sec_alram_item dl dd {margin:0 20px;padding:14px 0 28px;background: url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size: 18px auto;}
+.sec_alram_item dl dd .user_agree{overflow:hidden}
+
+.sec_alram_item dl dd ul li .info {padding-left:47px;}
+.sec_alram_item dl dd ul li .info strong { display:inline-block;margin-top:4px;}
+.sec_alram_item dl dd ul li .info span { @include font(14px);}
+.sec_alram_item dl dd ul li { margin-top:10px;}
+.sec_alram_item dl dd ul li:first-of-type { margin-top:0;}
+.sec_alram_item dl dd ul li:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.sec_alram_item dl dd ul li .info strong,
+.sec_alram_item dl dd ul li .info span { display:block;margin-left:0}
+.sec_alram_item dl dd ul li .info strong { color:$black;}
+.sec_alram_item dl dd ul li input[type="radio"]:disabled + label .info strong {color:$pinkish_grey;}
+.sec_alram_item dl dd ul li .info span { color:$warm_grey;margin-top:6px;padding-left:0;padding-top:0;}
+.sec_alram_item dl label { float:left;height:auto;}
+.alram_set { border-bottom:1px solid $white_two;}
+.alram_set input + label > span,
+.alram_set input + label div.info { color:$brownish_grey;@include font(16px);}
+.sec_alram_item dl dd .user_agree input + label > span { padding-top:5px;}
+
+.alram_set .user_agree:after{content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.alram_set .user_agree label { @inlcude font(16px);color:$brownish_grey;height:auto;}
+.alram_set .user_agree input[type="radio"] + label {height:auto;}
+
+/* 알림 시간/요일 */
+.sec_alram_item dl.date_setting dd div.time_wrap i{margin-right:6px}
+.sec_alram_item dl.date_setting dd div.time_wrap i,
+.sec_alram_item dl.date_setting dd div.time_wrap strong,
+.sec_alram_item dl.date_setting dd div.time_wrap em{vertical-align:middle; color:$warm_grey;}
+.sec_alram_item dl.date_setting dd ul.btn_sellist{margin-top:13px;}
+.sec_alram_item dl.date_setting dd ul.btn_sellist li{margin-top:0}
+
+.fingo .finins_link .tab_wrap{margin:0 20px}
+.fingo .finins_link .tab_wrap .tab { height:56px;}
+.fingo .finins_link .tab_wrap:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.fingo .finins_link .tab_wrap .tab a { @include font(16px);height:56px;line-height:54px;padding:0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.fingo .finins_link .ico_circle_help[data-name=open_help]::before {bottom:-12px;}
+.fingo .finins_link .scroll {transform:translateZ(0);}/*2018-04-19 테스트 추가*/
+
+.account_detail {border-bottom:1px solid $white_two;} /* 금융기관 관리 */ /* 2018-01-24 border-bottom 삭제 phj */
+.account_detail .account_summary {background:$white; /*border-top:none;*/ } /* 2018-01-24 background 삭제, border-top 삭제 phj */
+/* 금융기관관리메인 CBSO69Z03 적용 */
+.assets_list .account_detail .account_summary { border-top:0;border-bottom:0;}
+.assets_list .account_detail .account_summary.mylistup { margin-top:0;border-top:0;background:$white_three;}
+
+
+/* .account_detail .account_summary .summary {border-top:none;} 2018-01-24 border-top 삭제 phj */
+.fingo .sec_history dl { padding-top:23px;}
+
+/* 알림, CBSM69Z01  */
+.add_guide_wrap .sec_title h3 + p { margin-top:8px;color:$warm_grey;}
+
+/* 핀고챗 */
+.chat_message .account_info { margin-top:0px;}
+.chat_message .account_info .money_total { color:$purply_blue;}
+.chat_message .sec_history{padding-top:4px;border-top:1px solid $white_two}
+.chat_message .sec_history dl dt .cash{font-size:16px}
+.chat_message .means_summary  ul  li.title strong {@include font(16px);}
+.chat_message .means_summary  ul  li.total {@include font(16px);}
+
+.stupid_index{padding-top:30px}
+.stupid_index::before{content:'';display:inline-block;width:100%;height:51px;background:url(../images/aifingo/bg_stupid_index.png) center no-repeat;background-size:contain;}
+.stupid_index::after{content:'';display:block;width:100%;height:76px;background:transparent}
+.stupid_index > div{margin:27px 0 0;}
+.stupid_index .sec_notice{margin:0;margin-bottom:45px}
+.stupid_index .sec_notice p{padding-top:15px}
+.stupid_index dl{position:relative;padding:15px 0 15px 20px;border-top:1px dashed $white_three}
+.stupid_index dl:first-child{border-top:none}
+
+.stupid_index dl dt, .stupid_index dl dd{margin-left:10px;}
+.stupid_index dl dt::after, .stupid_index dl dd::after{content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.stupid_index dl dt .index_name{float:left}
+.stupid_index dl dt .index_name strong{@include font(16px);font-weight:bold}
+.stupid_index dl dt .index_name strong .tag {display:inline-block; vertical-align:-2px; width:34px; height:15px; line-height:18px; background: url("../images/common/ico-new_03.png") no-repeat; background-size:34px auto; text-indent:-9999em; margin-left:7px;} /* 2018-04-13 아이콘 추가 phj */
+.stupid_index dl dt .index_name .num {position:absolute; top:15px; left:0; display:inline-block; width:18px; height:18px; text-align:center; border-radius:9px; font-size:11px;line-height:19px;color:$white;background:$black}
+.ios .stupid_index dl dt .index_name .num {top:16px; line-height:18px;}
+.stupid_index dl dt .index_cash{float:right}
+.stupid_index dl dt .index_cash em, .stupid_index dl dt .index_cash span{@include font(16px);color:$brownish_grey}
+.stupid_index dl dt .index_cash em{font-family: 'LatoB'; letter-spacing:0;}
+.stupid_index dl dt .index_cash span{font-weight:bold;}
+.stupid_index dl dd strong{position:relative;padding-left:12px;@include font(12px);}
+.stupid_index dl dd strong::before{content:'';display:inline-block;position:absolute;top:5px;left:0;width:8px;height:6px;background:url(../images/aifingo/ico_stupid_arrow.png) 0 -10px no-repeat;background-size:8px auto;}
+
+.stupid_index dl dd strong.up::before{background-position:0 top}
+.stupid_index dl dd strong.down::before{background-position:0 bottom}
+
+.live_stupid{position:fixed;left:0;right:0;bottom:0;padding:19px 20px;width:100%;height:76px;box-sizing:border-box;background:rgba(0, 0, 0, 0.8);}
+.live_stupid > .live_badge{position:absolute;top:50%;margin-top:-23px;display:table;width:46px;height:46px;border-radius:23px;background:rgba(0, 0, 0, 0.2);}
+.live_stupid > .live_badge span{display:table-cell;vertical-align: middle;color:$sun_yellow;text-align:center;font-size:11px}
+.live_stupid > .stupid_target{float:left;margin-left:61px;color:$warm_grey;width:calc(100% - 61px);@include font(12px);}
+.live_stupid > dl{float:left;margin-top:5px;margin-left:61px;color:$white;width:calc(100% - 61px);}
+.live_stupid > dl::after{content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.live_stupid > dl dt{float:left;@include font(16px);width:calc(100% - 110px);text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.live_stupid > dl dd{float:right;@include font(16px);width:106px;text-align:right;}
+
+.stupid_index dl dd{position:relative; margin-top:6px; padding-right:25px;}
+.stupid_index dl dd p{position:relative;float:left;color:$warm_grey;padding-left:26px; font-family:"AppleSDGothicNeo-Light";}
+.stupid_index dl dd p::before{content:'';position:absolute;left:0;top:0;display:inline-block;width:18px;height:18px;background:url(../images/aifingo/ico_talk.png) 0 0 no-repeat;background-size:18px auto;}
+.stupid_index dl dd .quotient {position:absolute; right:0; top:0; width:20px; text-align:right;}
+.stupid_index dl dd strong{font-family:"LatoM"; color:$pinkish_grey;}
+.stupid_index dl dd strong.up {color:$reddish_orange;}
+
+/* 상단 소비 금액 */
+/*.spend_info {margin-top:6px}*/
+.spend_info .money_total {color:$purply_blue;}
+.spend_info .money_date {@include font(16px);}
+
+.fingo .account_detail .account_summary li,
+.fingo .spend_detail .means_summary li,
+.fingo .spend_detail .category_summary li { @include font(16px);}
+.fingo .account_detail .account_summary .summary li { @include font(14px);padding-top:3px;}
+.spend_target .sec_title h3 > strong em,
+.spend_target .sec_title h3 > strong { font-weight:bold;} /* 디자인검수 추가 */
+
+
+/* 핀고챗 성적표 */
+.modal_wrap.fullpop .modal_content.fingo_report {padding-bottom:0;}
+.fingo_report .sec_spend_graph .spend {text-align:center; /*margin-top:16px;*/} /* 2018-04-06 margin 삭제 phj */
+.fingo_report .sec_spend_graph .spend .tag {color:$pinkish_grey; @include font(11px); background:$white_four; padding:0 15px; height:20px; line-height:20px; border-radius:10px;}
+.fingo_report .sec_spend_graph .box_graph {width:100%; max-width:320px; /*height:160px;*/ margin:0 auto;}
+.fingo_report .sec_spend_graph .box_graph img {width:100%;}
+
+.fingo_report .sec_spend_summary {margin:27px 0 40px;}
+.fingo_report .sec_spend_summary ul li {display:table; width:100%; margin-top:7px;}
+.fingo_report .sec_spend_summary ul li p {display:table-cell; vertical-align:middle; @include font(16px); width:60%;}
+.fingo_report .sec_spend_summary ul li p:last-child {width:40%; color:$brownish_grey; text-align:right;}
+
+.fingo_report .spend_tit {color:$brownish_grey; text-align:center; @include font(16px);}
+
+.sec_report_ranking {background:$white_four; border-top:1px solid $white_two; padding:42px 20px 16px; margin:0 -20px;}
+.sec_report_ranking .list_ranking {margin-top:-5px;}
+.sec_report_ranking .list_ranking .ranking {padding:29px 0; border-top:1px dashed $white_three;}
+.sec_report_ranking .list_ranking .ranking:first-child {border-top:none;}
+.sec_report_ranking .list_ranking .ranking .intro {display:table; width:100%; margin-bottom:16px;}
+.sec_report_ranking .list_ranking .ranking .intro p {display:table-cell; @include font(18px); width:45%; vertical-align:middle;}
+.sec_report_ranking .list_ranking .ranking .intro .item .num {color:$pinkish_grey; display:inline-block; width:16px;}
+.sec_report_ranking .list_ranking .ranking .intro .level {text-align:right; color:$purply_blue; width:55%;}
+.sec_report_ranking .list_ranking .ranking .intro .level i {@include font(14px);}
+.sec_report_ranking .list_ranking .ranking .graph {display:table; width:100%;}
+.sec_report_ranking .list_ranking .ranking .graph cite,
+.sec_report_ranking .list_ranking .ranking .graph .graph,
+.sec_report_ranking .list_ranking .ranking .graph .total {display:table-cell; height:30px; vertical-align:middle;}
+.sec_report_ranking .list_ranking .ranking .graph cite {width:30px; @include font(14px); color:$brownish_grey; font-style:normal; padding-left:17px;}
+.sec_report_ranking .list_ranking .ranking .graph.friend cite {color:$warm_grey;}
+.sec_report_ranking .list_ranking .ranking .graph .total {width:100px; text-align:right; color:$brownish_grey;}
+.sec_report_ranking .list_ranking .ranking .graph.friend {margin-top:1px;}
+.sec_report_ranking .list_ranking .ranking .graph.friend .total {color:$warm_grey;}
+.sec_report_ranking .list_ranking .ranking .progress_wrap ._progress {margin-top:0; height:30px; background:transparent; border-radius:5px;}
+.sec_report_ranking .list_ranking .ranking .graph .progress_wrap ._progress ._bar {height:30px;  border-radius:0 18px 18px 0; border:none; }
+.sec_report_ranking .list_ranking .ranking .graph.me .progress_wrap ._progress ._bar {background:$lighter_purple;}
+.sec_report_ranking .list_ranking .ranking .graph.friend .progress_wrap ._progress ._bar {background:$light_periwinkle;}
+
+.sec_report_ranking .list_ranking .ranking .graph .progress_wrap .icon {position:absolute; right:0; top:0; width:30px; height:23px; padding-top:7px; border-radius:15px; display:block; text-align:center;}
+.sec_report_ranking .list_ranking .ranking .graph.me .progress_wrap .icon {background:$bluish_purple;}
+.sec_report_ranking .list_ranking .ranking .graph.friend .progress_wrap .icon {background:$lavender;}
+.sec_report_ranking .list_ranking .ranking .graph.friend .progress_wrap .icon .ico_friend {margin-right:-1px;}
+
+.fingo_report .talk {position:relative; color:$warm_grey; padding-left:26px; margin-top:26px; font-family:"AppleSDGothicNeo-Light"; }
+.fingo_report .talk:before {content:''; position:absolute; top:0; left:0; width:18px; height:18px; background:url(../images/aifingo/ico_talk.png) 0 0 no-repeat;background-size:18px auto;}
+
+.sec_report_attend {border-top:1px solid $white_two; padding:42px 20px 45px; margin:0 -20px; background:$white;}
+.sec_report_attend .graph {height:40px;}
+.sec_report_attend .progress_wrap ._progress {margin-top:5px; height:10px; background:$white_three; border-radius:5px; border:none;}
+.sec_report_attend .progress_wrap ._progress ._bar {height:10px; background:$seafoam_blue; border-radius:5px; border:none; top:0; left:0;}
+.sec_report_attend .progress_wrap ._progress i .txt {position:absolute; top:17px; left:0;/*right:0; margin-right:-5px;*/ font-family:"AppleSDGothicNeo-Light"; padding:0 1px; width:35px; text-align:center; margin-left:-17px;}
+.sec_report_attend .progress_wrap ._progress i .txt.min {text-align:left; left:0; margin-left:0}
+.sec_report_attend .progress_wrap ._progress i .txt.max {text-align:right; left:auto; right:0}
+.sec_report_attend .progress_wrap ._progress i .txt em {font-family:"LatoB"; letter-spacing:0;}
+.sec_report_attend .clearfix {margin-top:22px;}
+.sec_report_attend .clearfix .rate {color:$seafoam_blue;}
+
+.sec_report_poll {background:$white_four; border-top:1px solid $white_two; padding:29px 20px 41px; margin:0 -20px; text-align:center;}
+.sec_report_poll .poll_tit {@include font(18px); padding-top:16px;}
+.sec_report_poll .poll_tit i {color:$pinkish_grey; margin-right:2px; font-family:"LatoM";}
+.sec_report_poll ul {display:inline-block; margin:6px 0 0 -8px; padding-bottom:29px;}
+.sec_report_poll ul li {display:inline-block; margin:10px 0 0 8px;}
+/*.sec_report_poll ul li:first-child {margin-left:0;}*/
+.sec_report_poll ul li button {vertical-align:baseline;}
+.sec_report_poll ul li .again {width:94px; padding:0;}
+.sec_report_poll ul li .again .ico_reload2 {vertical-align:middle; margin:-2px 2px 0 0;}
+.sec_report_poll ul li .finish {background:$purply_blue; border-color:$purply_blue; color:$white; width:94px; text-align:center;}
+.sec_report_poll .bul_guide {@include font(14px); color:$warm_grey; text-align:left;}
+
+
+/*2018-04-06 핀고 성적표 데모 */
+.report_demo .demo_top {background:url("../images/common/bg_great2.png") no-repeat 100% 52px $purply_blue; background-size:96px auto; text-align:center; color:$white; padding:29px 20px 27px; margin:0 -20px;}
+.report_demo .demo_top p {font-size:16px; line-height:20px;}
+.report_demo .demo_top strong {color:$sun_yellow;}
+.report_demo .demo_top p + p {margin-top:30px}
+.sec_suggest_title .sample {display:inline-block; background:$pinkish_grey; color:$white; border-radius:10px; width:83px; height:20px; font-size:11px; line-height:20px; margin-bottom:14px;}
+
+
+/* 내 계좌 현황 */
+.assets_monitor.account {}
+.assets_monitor.account .update + .account_info {margin-top:-7px;}
+.assets_monitor.account .money_total {color:$black;}
+.assets_monitor.account .account_info .account_total {margin-top:5px; font-size:16px; color:$brownish_grey; font-family:"AppleSDGothicNeo-Light";}
+.assets_monitor.account .list_expend {padding:0; background:$white; margin-top:13px;}
+.assets_monitor.account .list_expend > li {margin-top:10px; border:0;}
+.assets_monitor.account .list_expend > li:first-of-type {margin-top:0px;}
+.assets_monitor.account .list_expend > li .detail_set {border:0;}
+.assets_monitor.account .monitor_detail {border-top:0;}
+.assets_monitor.account .monitor_detail .subject a {padding:7px 42px 6px 20px; font-size:14px; background-color:$white_three; font-weight:normal;}
+.assets_monitor.account .monitor_detail .subject .tit {color:$warm_grey;}
+.assets_monitor.account .monitor_detail .subject .total {font-weight:bold; color:$black;}
+.assets_monitor.account .sec_add_btn {margin-top:0; background:$white;}
+.assets_monitor.account .sec_add_btn .add_finlink {padding:45px 0;}
+.assets_monitor.account .monitor_detail .detail_set .con {padding:25px 20px 10px 20px; border-top:0; background:$white;}
+.assets_monitor.account .monitor_detail .monitor_list li {display: table; position:relative; width: 100%; border: 1px solid $white_two; padding:26px 20px 27px; background:$white_four; border-radius: 8px; margin-top: 10px; box-sizing: border-box;}
+.assets_monitor.account .monitor_detail .monitor_list li:first-of-type {border-top: 1px solid $white_two;}
+.assets_monitor.account .monitor_detail .monitor_list li .tit ,
+.assets_monitor.account .monitor_detail .monitor_list li .total {font-size:16px; font-weight:bold; color:$black;}
+.assets_monitor.account .monitor_detail .monitor_list li .tit {margin-bottom:0;}
+.assets_monitor.account .monitor_detail .monitor_list li .tit.active {position:relative;}
+.assets_monitor.account .monitor_detail .monitor_list li .tit.active:after {display:inline-block; content:""; width:20px; height:15px; margin-left:3px; margin-top:-3px; vertical-align: middle; background:url(../images/common/add_connect.png) 0 0 no-repeat;background-size:cover;}
+
+/* 사각 레이블 정보 */
+.thumb_lable_wrap {position:relative;}
+.thumb_lable_wrap span {display:inline-block; margin-left:3px; font-size:11px; line-height:18px; height:18px; text-align:center; padding:0 6px; border-radius:2px; background:$pinkish_grey; color:$white;}
+.thumb_lable_wrap span.on {background:$purply_blue_two;}
+.thumb_lable_wrap span:first-of-type {margin-left:0;}
+
+.assets_monitor.account .monitor_detail .thumb_lable_wrap {margin-top:11px;}
+
+.assets_monitor.account .monitor_detail .monitor_list li .account_num .num {margin-left:4px;}
+.assets_monitor.account .monitor_detail .monitor_list li .ico {margin:-3px 0 0 5px;}
+.assets_monitor.account .monitor_detail .monitor_list li .cell:nth-of-type(2) {position:absolute; top:24px; right:20px; width:auto;}
+
+.sec_history dl dt strong + div.spand:after {display:none;}
+
+/* ERROR 메시지 CBSL69Z02-1 참고 */
+.error_msg {position:relative; font-size:14px; height:33px; padding-left:46px; line-height:33px; box-sizing:border-box; background:$black; color:$white; margin-top:10px;}
+.error_msg:before {display:inline-block; position:absolute; top:8px; left:21px; width:20px; height:17px; content:"";
+    background:url(../images/common/ico_error_msg.png) 0 0 no-repeat; background-size:cover;}
+#contents.fingo .error_msg + .assets_list {padding-top:24px}
+.sec_head .re_account .error {display:block; text-align:center; font-size:20px; margin-top:20px; font-weight:bold; color:$reddish_orange;}
+.sec_head .re_account .error .ico {margin:-4px 0 0 4px; vertical-align:middle;}
+
+/* 핀크 계좌 관리 */
+.acc_admin .sec_title .title a {display: inline-block;position: relative;font-weight: bold;padding-right: 23px;}
+.acc_admin .sec_title .title a:after {display: block; content: ""; position: absolute; top: 50%; right: 0; margin-top: -8px; width: 17px; height: 16px; background: url(../images/common/ico_modify.png) no-repeat 0 0; background-size: 100% auto;
+}
+.acc_admin .secede_inquiry {border-top:0;}
+.acc_admin .secede_inquiry.tel ul li {height: 75px; line-height: 75px;}
+
+.acc_admin .adm_list {margin:37px 0 30px; padding:0 20px;}
+.acc_admin .adm_list ul > li {position:relative; margin-top:25px;}
+.acc_admin .adm_list ul > li:after {display:block; clear:both; content:"";}
+.acc_admin .adm_list ul > li:first-of-type {margin-top:0;}
+.acc_admin .adm_list ul > li .tit {float:left; font-size:16px; color:$black;}
+.acc_admin .adm_list ul > li .info {float:right;}
+.acc_admin .adm_list ul > li.auto_switch .info {position:absolute; top:-5px; right:0px;}
+.acc_admin .adm_list ul > li .btn_link {display: inline-block; position: relative; padding-right: 15px; font-size: 12px; color: #278df5;}
+.acc_admin .adm_list ul > li .btn_link .ico_arrow_more {position: absolute; right: 0px; top: 50%; margin-top: -6px; width: 7px; height: 11px; background: url(../images/common/ir-arrow-set.png) no-repeat 0 -85px; background-size: 40px auto;}
+
+@media screen and (max-width:320px){
+    .pop_direct_input .detail_set > div.e  .choice> em:last-child{margin-left:0;float:right}
+	.pop_direct_input .detail_set .btn_select.btn_type_a{padding:0 15px}
+	.pop_direct_input .detail_set .item.soft_select:after{right:15px}
+	.pop_direct_input .detail_set > div div{padding-left:78px;}
+	.pop_direct_input .detail_set > div.d div.date input.datelocal{left:78px;width: calc(100% - 109px);}
+	.pop_direct_input .detail_set > div div input, .pop_direct_input .detail_set > div div button, .pop_direct_input .detail_set > div div select{padding:0 15px}
+	.pop_direct_input .detail_set.view_detail .disabled_box{padding:12px 15px 14px}
+	.pop_direct_input .sec_table .detail_set .btn_sellist button{padding:0}
+
+    .sec_graph .spend_graph_dournut > img { left:20px;}
+    .pop_direct_input .detail_set > div.in div.choice label { float:none;width:100%;}
+    .btn_sellist li button { font-size:12px;}
+
+    .set_target li:not(.custom) .form_wrap,
+    .set_target li:not(.custom) .avg { float:none;}
+    .set_target li:not(.custom) .avg { padding-left:40px;padding-top:0;}
+    .set_target { padding-bottom:60px;}
+
+    .sec_history dl dd div .in_means{display:block}
+    .assets_monitor .monitor_detail .monitor_list li .tit {width:85px;}
+}
+
+/* iPhone 6, 6s, 320 */
+@media only screen and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2){
+    .ios .stupid_index::after{height:0}
+    .ios .live_stupid{position:sticky;box-sizing:content-box;margin:0 0 -20px -20px;height:38px}
+}
+

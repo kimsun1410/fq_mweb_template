@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>비대면계좌개설 | 계좌비밀번호설정 | 영업점찾기</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$(this).on('focus','.box_search input[data-name=inpFocus]',function(){
+		$(this).parents('.box_search').addClass('search_focus');
+	}).on('blur','.box_search input[data-name=inpFocus]',function(){
+		$(this).parents('.box_search').removeClass('search_focus');
+	});
+
+
+	$(this).on("keyup",".box_search input[data-name=inpFocus]", function(e) {
+		var textSum = $(this).val();
+		 if(textSum.length < 1) { //1보다 작은 경우
+			$(this).next('.search_del').removeClass('on');
+		 } else {
+			$(this).next('.search_del').addClass('on');
+		 }
+	});
+
+
+	$('.box_search').each(function(){
+		var placeText = $(this).find('input').attr('placeholder');
+		$(this).on('click','.search_del',function(){
+			$(this).removeClass('on');
+			$(this).prev('input').attr('placeholder', placeText).attr('autofocus','autofocus').val('');
+		});
+	});
+
+});
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents">
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">영업점 선택</h2>
+			<button class="btn_cancel close" onclick="">취소</button>
+		</div>
+
+		<section class="zero">
+			<div class="group_wrap sch_keb">
+
+				<div class="padding_add">
+					<div class="item box_search kebhana">
+						<input type="text" data-name="inpFocus" placeholder="영업점명" class="">
+						<a href="#none" class="search_del">del</a>
+					</div>
+				</div>
+				<div class="sec_top_bar kebhana"><strong>검색 결과</strong></div>
+			</div>
+
+			<div class="sch_result_wrap">
+
+				<div class="keb_hana wrap_result">
+
+					<!-- 영업점을 검색 / 검색결과 없음 -->
+					<div class="no_result">
+						<i class="ico ico_chat_no2"></i>
+						<p>영업점을 검색하세요.</p>
+						<!-- <p>검색 결과가 없습니다.</p> -->
+					</div>
+					<!-- //영업점을 검색 / 검색결과 없음 -->
+
+				</div><!-- //wrap_result -->
+
+			</div>
+
+		</section>
+
+	</div><!-- //contents -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>개인정보 불일치_MASA02Z05-1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASA02Z05-1">개인정보 불일치_MASA02Z05-1</button>
+			</span>
+		</div>
+
+		<div id="MASA02Z05-1" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">실명인증에 실패하였습니다.</h3>
+				</div>
+				<div class="scroll_wrap">
+					<div class="sec_info round_box">
+						<h4 class="account_copy">개인정보가 일치하지 않습니다.<br>
+						<strong class="point_txt1">입력한 정보를 확인</strong>해 주세요.</h4>
+						<!-- <div class="bul_guide">
+							<p class="star_type indent">[에러코드 : 0000000]</p>
+						</div> -->
+					</div>
+					<div class="flex_wrap set_type1">
+						<span class="item on"><button type="button" name="button" class="btn_type_f">확인</button></span>
+					</div>
+				</div><!-- //scroll_wrap -->
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

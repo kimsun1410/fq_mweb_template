@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01이벤트_02이벤트상세_04보상금내역_01보상금있을경우_web_MASA06Z16</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="">
+
+
+	<div id="contents" class="menu">
+		<section class="menu_wrap friend_invite_reward">
+
+			<div class="sec_head">
+				<div class="reward_info">
+					<div class="money_tit">누적 보상금</div>
+					<div class="money_total">
+						<em class="cash bold">320,000</em> <span>원</span>
+					</div>
+				</div>
+				<!-- 19.02.14 그래프 삭제 -->
+				<!--
+				<div class="invite_bar_wrap">
+					<ul class="invite_status">
+						<li class="friend_finish"><strong>초대완료</strong> <em class="num bold">80</em></li>
+						<li class="friend_all"><strong>내 주소록 전체</strong> <em class="num bold">320</em></li>
+					</ul>
+					<div class="invite_bar">
+						<div class="join_cnt" style="width:20%;"></div>
+					</div>
+				</div>
+				-->
+			</div>
+
+			<div class="sec_history line_top_add">
+				<!-- 반복 -->
+				<!-- 19.02.14 전화번호 삭제, 클래스 추가 -->
+				<dl>
+					<dt>
+						<strong>홍 * 동</strong>
+						<div><em class="cash bold">1,000,000</em><span >원</span></div>
+					</dt>
+					<dd>
+						<!-- <div class="masking"><strong class="num">010-<span>****</span>-1234</strong></div> -->
+						<div class="fr"><strong class="date">2018.02.28</strong></div>
+					</dd>
+				</dl>
+				<!-- 반복 -->
+				<dl>
+					<dt>
+						<strong>홍 * 동</strong>
+						<div><em class="cash bold">1,000,000</em><span >원</span></div>
+					</dt>
+					<dd>
+						<!-- <div class="masking"><strong class="num">010-<span>****</span>-1234</strong></div> -->
+						<div class="fr"><strong class="date">2018.02.28</strong></div>
+					</dd>
+				</dl>
+				<!-- 반복 -->
+				<dl>
+					<dt>
+						<strong>홍 * 동</strong>
+						<div class="fr"><em class="cash bold">1,000,000</em><span >원</span></div>
+					</dt>
+					<dd>
+						<!-- <div class="masking"><strong class="num">010-<span>****</span>-1234</strong></div> -->
+						<div class="fr"><strong class="date">2018.02.28</strong></div>
+					</dd>
+				</dl>
+				<!-- 반복 -->
+				<dl>
+					<dt>
+						<strong>홍 * 동</strong>
+						<div class="fr"><em class="cash bold">1,000,000</em><span >원</span></div>
+					</dt>
+					<dd>
+						<!-- <div class="masking"><strong class="num">010-<span>****</span>-1234</strong></div> -->
+						<div class="fr"><strong class="date">2018.02.28</strong></div>
+					</dd>
+				</dl>
+				<!-- 반복 -->
+				<dl>
+					<dt>
+						<strong>홍 * 동</strong>
+						<div class="fr"><em class="cash bold">1,000,000</em><span >원</span></div>
+					</dt>
+					<dd>
+						<!-- <div class="masking"><strong class="num">010-<span>****</span>-1234</strong></div> -->
+						<div><strong class="date">2018.02.28</strong></div>
+					</dd>
+				</dl>
+				<!-- 반복 -->
+			</div>
+
+		</section>
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	//Search Input
+	//2018-02-09 search 포커스 추가 ock
+	$('.sec_notice_search .box_search input[data-name=inpFocus]').each(function(){
+		var focusArea = $(this).parent(".item");
+		$(this).focus(function(){
+			//$(this).addClass('inp_focus');
+			focusArea.addClass('search_focus');
+		}).blur(function(){
+			//$(this).removeClass('inp_focus');
+			focusArea.removeClass('search_focus');
+		});
+	});
+	//2018-02-09 search 검색어 삭제 on
+	$('.sec_notice_search .box_search input[data-name=inpFocus]').on("keyup", function(e) {
+		var textSum = $(this).val();
+		 if(textSum.length < 1) { //1보다 작은 경우
+			$(this).next('.search_del').removeClass('on');
+		 } else {
+			$(this).next('.search_del').addClass('on');
+		 }
+	});
+	//2018-02-09 search 검색어 삭제 ock
+	$('.sec_notice_search .box_search').on('click','.search_del',function(){
+		$(this).prev('input').attr('placeholder','Search').val('');
+		$(this).removeClass('on');
+		$(this).prev('input').focus();
+	});
+});
+</script>
+
+
+</body>
+</html>

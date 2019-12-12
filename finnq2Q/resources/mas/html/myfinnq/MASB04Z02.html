@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04채우기_04하나머니전환_01즉시_web_MASB04Z02</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20190101" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180131" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- MASB04Z02 -->
+	<div id="contents" class="myfinnq add_sticky">
+
+		<section class="charge_price_collabo">
+
+			<div class="sec_input pb15">
+
+				<!-- Default -->
+				<dl class="input_wrap">
+					<dt class="input_tit">출금계좌</dt>
+					<dd class="flex_wrap">
+						<div class="flex_wrap set_type1">
+							<span class="item ico_bankbook">
+								<a href="#none"class="btn_select btn_type_a open_modal" data-triger="MASA05Z04">KEB하나</a>
+							</span>
+							<p class="remark gray">출금계좌 잔액 : <em class="num">358,000</em>원</p>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- 계좌 선택시 -->
+				<dl class="input_wrap">
+					<dt class="input_tit">출금계좌</dt>
+					<dd class="flex_wrap">
+						<div class="flex_wrap set_type1">
+							<span class="item ico_bankbook on"><!-- 활성화 시 클래스 on 추가  -->
+								<a href="#none"class="btn_select btn_type_a open_modal" data-triger="MASA05Z04">KEB하나 987-654-321098</a>
+							</span>
+							<p class="remark gray">출금계좌 잔액 : <em class="num">358,000</em>원</p>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- 연결된 계좌가 없을 경우 -->
+				<dl class="input_wrap no_account">
+					<dt class="input_tit">출금계좌</dt>
+					<dd class="flex_wrap">
+						<a href="#none"class="btn">연결계좌가 없습니다.</a>
+					</dd>
+				</dl>
+
+				<dl class="input_wrap money_type">
+					<dt class="input_tit">채울금액</dt>
+					<div class="flex_wrap set_type1">
+						<span class="item ico_won"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="tel" data-name="inpFocus" placeholder="0원" value="" class="comma_wonhan"/>
+							<em class="">0</em><!-- won_del -->
+						</span>
+						<p class="remark hide">최소 채우기 금액은 10,000원입니다</p>
+						<p class="remark after_price">채운 후 잔액 : 2만 5천원</p>
+					</div>
+				</dl>
+
+				<!-- 에러인 경우 inpFocus 클래스 추가, hide 클래스 추가/삭제 -->
+			 	<dl class="input_wrap money_type">
+					<dt class="input_tit">채울금액</dt>
+					<div class="flex_wrap set_type1">
+						<span class="item ico_won inp_error">
+							<input type="tel" data-name="inpFocus" placeholder="0원" value="" class="comma_wonhan"/>
+							<em class="">0</em>
+						</span>
+						<p class="remark">최소 채우기 금액은 10,000원입니다</p>
+						<p class="remark after_price hide">채운 후 잔액 : 2만 5천원</p>
+					</div>
+				</dl>
+
+				<div class="sec_charge">
+					<div class="flex_wrap set_type4">
+						<span class="item on"><button type="button" name="button" class="btn btn_type_b">+1만원</button></span>
+						<span class="item"><button type="button" name="button" class="btn btn_type_b">+3만원</button></span>
+						<span class="item"><button type="button" name="button" class="btn btn_type_b">+5만원</button></span>
+						<span class="item"><button type="button" name="button" class="btn btn_type_b">+10만원</button></span>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- <hr class="line_division " /> -->
+
+			<div class="sec_impossible_list small charge">
+				<ul>
+					<li>
+						<a href="#none" class="">하나머니로 채우기</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="account_copy_wrap">
+				<p class="guide_txt">핀크계좌로 직접 입금도 가능해요.</p>
+				<div class="account_num">
+					<span class="accout">KEB하나 <em class="num bold">01012341234-767</em></span>
+					<button type="button">복사하기</button>
+				</div>
+			</div>
+
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">채우기</button>
+		</div>
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+
+
+	//2018-03-08 자동 채우기 스크립트 추가
+	/*
+	$(".item.inp_error .comma_wonhan").each(function(){
+		var val = $(this).val();
+		val = val.replace(/[^0-9]/g,'');
+
+		this.value = ui.numComma(val)+" 원";
+
+		$(this).siblings('em').removeClass('won_del');
+		$(this).siblings('em').text(ui.numHan(val));
+	});
+	*/
+
+	// 금액 입력시 버튼 활성화.
+	$('.item.ico_won input').on('keyup', function(){
+		var thisVal = parseInt( $(this).val().substring(0, 1) )
+		if(thisVal == 0) {
+			$(".sticky_wrap.set_type1 button").attr({"disabled" : "disabled"});
+		} else {
+			$(".sticky_wrap.set_type1 button").removeAttr("disabled");
+		}
+	})
+
+
+});
+</script>
+</body>
+</html>

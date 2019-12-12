@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01회원_06로그인및인증_02회원가입OR로그인선택_MASA01Z01</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="MASA01Z01">
+	<div id="contents" class="common">
+		<section class="finnq_login">
+			<div class="sec_login_wrap">
+				<div class="login_box">
+					<div class="img_dot">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<p class="remark">비밀번호 인증에 <em class="num">N</em>회 실패하셨습니다.</p>
+				<ul class="login_check">
+					<li class="auto_login"><input type="checkbox" id="loginChk" name="" checked="checked" class="gray"><label for="loginChk" name=""><span>자동 로그인</span></label></li>
+					<li class="btn_text04"><a href="#none">비밀번호 재설정</a></li>
+				</ul>
+			</div>
+
+			<ul class="login_support">
+				<li class="btn_bionic btn_text04"><a href="#none">지문으로 로그인</a></li>
+				<li class="btn_text04"><a href="#none">회원가입</a></li>
+			</ul>
+		</section>
+		
+	</div>
+	<!-- #contents -->
+
+			
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	var dotAni = function () {
+		//ani 확인용
+		$('.img_dot > span').on('click', function(e){
+			$(this).addClass('focus_in');
+			$(this).prev().removeClass('focus_in').addClass('focus_out');
+		});
+	};	dotAni();
+
+
+});
+</script>
+</body>
+</html>

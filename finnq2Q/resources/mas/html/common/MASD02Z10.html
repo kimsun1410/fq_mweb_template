@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>RCS송금 - 실명확인</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASD02Z10 -->
+	<div id="contents" class="add_sticky">
+		<section>
+			<div class="rcs-send-wrap txt_center">
+				<div class="rcs-title big">
+					<span class="block"><em class="num bold">010-1234-4321</em>에게</span>
+					<span class="block bold"><i class="txt_purple bold"><em class="num bold">50,000</em>원</i> 송금</span>
+				</div>
+
+				<!-- Default -->
+				<div class="rcs-field-wrap">
+					<input type="text" placeholder="받는 분 실명 입력(성+이름)" class="rcs-field">
+					<button type="button" class="btn-reset">Reset</button>
+					<p class="guide-txt">실명이 아니면 송금되지 않습니다</p>
+				</div>
+
+				<!-- 에러일 경우 // 하단 버튼(실명을 정확히 입력했습니다) 클릭 시 벨리데이션 체크 : 클래스 추가 및 문구 변경 -->
+				<div class="rcs-field-wrap error">
+					<input type="text" placeholder="받는 분 실명 입력(성+이름)" class="rcs-field" value="김핀크">
+					<button type="button" class="btn-reset">Reset</button>
+					<p class="guide-txt">실명이 아닙니다</p>
+				</div>
+
+			</div>
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">실명을 정확히 입력했습니다</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 입력필드 버튼 활성화
+	$(this).on("keyup",".rcs-field-wrap .rcs-field", function(e) {
+		var textSum = $(this).val();
+		 if(textSum.length < 1) { //1보다 작은 경우
+			$(this).parent('.rcs-field-wrap').removeClass('on error');
+			$(this).parent('.rcs-field-wrap').find('.guide-txt').text('실명이 아니면 송금되지 않습니다')
+		 } else {
+			$(this).parent('.rcs-field-wrap').addClass('on');
+		 }
+	});
+
+	// 입력필드 초기화 버튼 클릭
+	$(this).on('click','.rcs-field-wrap .btn-reset',function(){
+		var placeText = $('.rcs-field-wrap .rcs-field').attr('placeholder');
+		$(this).parents('.rcs-field-wrap').removeClass('on');
+		$(this).prev('.rcs-field').attr('placeholder', placeText).val('').focus();
+	});
+
+});
+</script>
+</body>
+</html>

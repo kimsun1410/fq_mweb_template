@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>06비상금대출_02비상금신청_02약관동의_web_MASN01Z05</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="market add_sticky add_hana_logo">
+		<section class="emergency_form emergency_term"> <!-- 2018-04-05 emergency_term 클래스 추가 phj -->
+
+			<div class="sec_step step_green">
+				<ol>
+					<li class="on">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>신청</h2>
+				<p class="guide_txt">대출 신청을 위해 약관동의가 필요합니다.</p>
+			</div>
+
+			<div class="sec_term_type1">
+				<div class="agree_all_terms">
+					<input type="checkbox" id="all_chk" name="test-img" class="purple"><label for="all_chk" name="test-img"><span>아래 약관에 모두 동의합니다. (필수)</span></label> <!-- 2018-03-06  (필수) 삭제 phj -->
+				</div><!-- //agree_all_terms -->
+
+				<div class="agree_terms">
+					<dl class="toggle_list">
+						<dt class="hide"></dt>
+						<dd style="display:block;">
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101" ><span>개인(신용)정보 수집.이용 및 제공 관련 고객 권리 안내문</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102" name="check_action"><span>대출신청서 (가계용)</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103" name="check_action"><span>개인(신용)정보 조회 동의서</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104" name="check_action"><span>필수개인(신용)정보 수집, 이용 및 제공 동의서</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0105" name="check_action" class="purple"><label for="chk0105" name="check_action"><span>상품별 필수개인(신용)정보 수집, 이용 및 제공 동의서</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+						</dd>
+					</dl>
+				</div><!-- //agree_terms -->
+			</div><!-- //sec_term_type1 -->
+
+			<!-- 문구 추가 2018-10-12 ock -->
+			<div class="sec_basic_txt1 bul_guide">
+				<p class="star_type indent">KEB하나은행은 핀크앱 연계대출 업무 수행을 위하여 상기 개인(신용)정보의 수집 조사 업무를 (주)핀크에 위탁합니다.</p>
+			</div>
+
+			<div class="hana_logo"><em class="num">Provided by KEB</em>하나은행</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">다음</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	//2018-04-05 약관 쪽만 추가 phj
+	hanalogo2();
+});
+</script>
+</body>
+</html>

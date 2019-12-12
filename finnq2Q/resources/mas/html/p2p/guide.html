@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<style type="text/css">
+	/* 가이드용 */
+	.sec_btnGuide .sticky_wrap {position:static;}
+	.sec_btnGuide .sticky_wrap:after {content:''; clear:both; display:block;}
+	.gSecGuide {border-bottom:1px solid #ddd; padding-bottom:5px;}
+	.gSecGuide:after {content:''; clear:both; display:block;}
+	.gSecGuide > p {float:left; width:50%;}
+	.cal_wrap5 {margin-top:0 !important;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market p2p_wrap add_sticky">
+		<div class="gSecGuide in_sec">
+			<p><a href="#gForm" class="ui_scrollSpy">폼 가이드</a></p>
+			<p><a href="#gTitle" class="ui_scrollSpy">제목 가이드</a></p>
+			<p><a href="#gIcon" class="ui_scrollSpy">아이콘 가이드</a></p>
+			<p><a href="#gGraph" class="ui_scrollSpy">그래프 가이드</a></p>
+			<p><a href="#gCalwrap" class="ui_scrollSpy">금액상세 가이드</a></p>
+			<p><a href="#gTab" class="ui_scrollSpy">탭 가이드</a></p>
+			<p><a href="#gButton" class="ui_scrollSpy">버튼 가이드</a></p>
+			<p><a href="#gLabel" class="ui_scrollSpy">라벨 가이드</a></p>
+			<p><a href="#gSwitches" class="ui_scrollSpy">스위치 가이드</a></p>
+			<p><a href="#gFigure" class="ui_scrollSpy">도형 가이드</a></p>
+			<p><a href="#gStarRating" class="ui_scrollSpy">StarRating 가이드</a></p>
+			<p><a href="#gBox" class="ui_scrollSpy">박스 가이드</a></p>
+			<p><a href="#gBoxsatisfact" class="ui_scrollSpy">만족도 가이드</a></p>
+			<p><a href="#gList" class="ui_scrollSpy">리스트 가이드</a></p>
+			<p><a href="#gAgree" class="ui_scrollSpy">약관동의 가이드</a></p>
+			<p><a href="#gTable" class="ui_scrollSpy">표 가이드</a></p>
+		</div>
+		<!-- 가이드는 페이지명에 관계없이 sec_[가이드] 독립적으로 사용한다. -->
+		<!-- 폼 가이드 -->
+		<section id="gForm" class="in_sec">
+			<p class="point_txt1">[ 폼 가이드 ]</p><br>
+
+			<div class="sec_input">
+				<div class="input_wrap">
+					<div class="flex_wrap set_type1">
+						<span class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="입력 전" value="" class=""/>
+						</span>
+					</div>
+				</div>
+
+				<div class="input_wrap">
+					<div class="flex_wrap set_type1">
+						<span class="item ico_won"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="" value="" class="comma_wonhan ico_won inp_focus"/>
+							<em></em>
+						</span>
+						<p class="inp_remark">잔액을 초과하였습니다.</p>
+					</div>
+				</div>
+
+				<div class="input_wrap">
+					<div class="flex_wrap set_type1">
+						<span class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="위에 inp_remark 있을 때 여백" value="" class=""/>
+						</span>
+					</div>
+				</div>
+
+				<div class="input_wrap">
+					<h3>Title 있을 때</h3>
+					<div class="flex_wrap set_type1">
+						<span class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="입력 전" value="입력 후" class=""/>
+						</span>
+						<p class="inp_remark">잔액을 초과하였습니다.</p>
+					</div>
+				</div>
+
+				<div class="input_wrap"><!-- : 위에가 있을때 -->
+					<h3>Title 있을 때</h3>
+					<div class="flex_wrap set_type1">
+						<span class="item "><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="" value="입력 시" class="inp_focus"/>
+						</span>
+						<p class="inp_remark">잔액을 초과하였습니다.</p>
+					</div>
+				</div>
+
+				<div class="input_wrap">
+					<div class="flex_wrap set_type1">
+						<span class="item inp_error "><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="" value="오류 입력 시" class=""/>
+						</span>
+						<p class="inp_remark">잔액을 초과하였습니다.</p>
+					</div>
+				</div>
+
+				<div class="input_wrap money_type">
+					<div class="flex_wrap set_type1">
+						<span class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="" value="" class="comma_wonhan ico_won"/>
+							<em></em>
+						</span>
+						<p class="inp_remark">잔액을 초과하였습니다.</p>
+					</div>
+				</div>
+
+				<br>
+				<p>Soft Select</p>
+				<div class="input_wrap" style="margin-top:0;">
+					<div class="item soft_select">
+						<select data-name="inpFocus">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+						</select>
+					</div>
+					<p class="inp_remark show">통신사를 선택해 주세요.</p>
+				</div>
+
+				<div class="input_wrap">
+					<div class="item soft_select inp_error">
+						<select data-name="inpFocus">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<p>Sort Select</p>
+				<div class="sort_select">
+					<select data-name="inpFocus">
+						<option value="">선택전</option>
+						<option value="">테스트</option>
+					</select>
+				</div>
+				<div class="sort_select">
+					<select data-name="inpFocus" disabled>
+						<option value="">비활성</option>
+						<option value="">테스트</option>
+					</select>
+				</div>
+				<!-- 선택중 참고용 -->
+				<div class="sort_select">
+					<select data-name="inpFocus" class="color_change inp_focus">
+						<option value="">선택중</option>
+						<option value="">테스트</option>
+					</select>
+				</div>
+				<!-- 선택후 참고용 -->
+				<div class="sort_select">
+					<select data-name="inpFocus" class="color_change">
+						<option value="">선택후</option>
+						<option value="">테스트</option>
+					</select>
+				</div>
+			</div>
+
+			<div style="text-align:left;">
+				<p>radio</p>
+				<input type="radio" id="aa11" name="ryellow-default" checked="checked" /><label for="aa11"><span>css 라디오1</span></label><br/><!-- 숫자가 오는 경우 span에 num,date,cash class add -->
+				<input type="radio" id="aa21" name="ryellow-default" /><label for="aa21"><span>css 라디오1</span></label><br/>
+				<input type="radio" id="aa31" name="ryellow-default" /><label for="aa31"><span>css 라디오1</span></label><br/>
+				<input type="radio" id="aa41" name="ryellow-default" disabled="disabled" /><label for="aa41"><span>css 라디오1</span></label>
+			</div>
+
+			<div style="text-align:left;">
+				<p>radio.yellow</p>
+				<input type="radio" id="aa1" name="ryellow" checked="checked" class="yellow" /><label for="aa1"><span>css 체크박스1</span></label><br/><!-- 숫자가 오는 경우 span에 num,date,cash class add -->
+				<input type="radio" id="aa2" name="ryellow" class="yellow" /><label for="aa2"><span>css 체크박스1</span></label><br/>
+				<input type="radio" id="aa3" name="ryellow" class="yellow" /><label for="aa3"><span>css 체크박스1</span></label><br/>
+			</div>
+
+			<hr style="height:1px;display:block;background:grey;border:0;">
+
+			<div style="text-align:left;">
+				<p>radio.purple</p>
+				<input type="radio" id="grayOne1"  name="test-img" checked="checked" class="purple"/><label for="grayOne1" name="test-img"><span>css 라디오</span></label><br/>
+				<input type="radio" id="grayOne2"  name="test-img"  class="purple"/><label for="grayOne2" name="test-img"><span >css 라디오</span></label><br/>
+			</div>
+
+			<hr style="height:1px;display:block;background:grey;border:0;">
+
+			<div style="text-align:left;">
+				<p>checkbox or .purple</p>
+				<input type="checkbox" id="grayTwo1"  name="test-img" checked="checked" class="purple"/><label for="grayTwo1" name="test-img"><span>css 체크박스</span></label><br/>
+				<input type="checkbox" id="grayTwo2"  name="test-img"  class="purple"/><label for="grayTwo2" name="test-img"><span >css 체크박스</span></label><br/>
+			</div>
+
+			<div style="text-align:left;">
+				<p>checkbox.gray</p>
+				<input type="checkbox" id="gray1"  name="test-img" checked="checked" class="gray"/><label for="gray1" name="test-img"><span>css 체크박스</span></label><br/>
+				<input type="checkbox" id="gray2"  name="test-img"  class="gray"/><label for="gray2" name="test-img"><span >css 체크박스</span></label><br/>
+			</div>
+		</section>
+
+		<section class="sec_MASV08Z03 in_sec">
+			<div class="sec_accountFill">
+				<div class="input_wrap mar_t0">
+					<div class="item soft_select soft_ico ico_bankbook">
+						<select data-name="inpFocus" class="color_change"><!-- 값으로 시작하는 경우 color_change 넣고 시작 -->
+							<option value="">KEB하나 987-654-321098</option>
+						</select>
+					</div>
+				</div>
+				<br>
+				<div class="input_wrap mar_t0">
+					<div class="flex_wrap set_type1">
+						<span class="item ico_bankbook">
+							<a href="#none"class="btn_select btn_type_a open_modal" data-triger="MASA05Z04">KEB하나</a>
+						</span>
+					</div>
+				</div>
+				<br>
+				<div class="input_wrap mar_t0">
+					<div class="flex_wrap set_type1">
+						<span class="item ico_bankbook">
+							<a href="#none"class="btn_select btn_type_a open_modal disabled" data-triger="MASA05Z04">계좌 없음</a>
+						</span>
+					</div>
+				</div>
+				<br>
+				<div class="input_wrap money_type mar_t0">
+					<div class="flex_wrap set_type1">
+						<span class="item ico_won"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+							<input type="text" data-name="inpFocus" placeholder="" value="" class="comma_wonhan ico_won"/>
+							<em></em>
+						</span>
+						<p class="inp_remark point_txt8">채운 후 잔액 : <span class="numHan">1005000</span>원 입니다.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- //폼 가이드 -->
+
+		<br><br>
+
+		<!-- 제목 가이드 -->
+		<section id="gTitle" class="in_sec">
+			<p class="point_txt1">[ 제목 가이드 ]</p><br>
+
+			<!-- 제목 Default -->
+			<div class="sec_title">
+				<h2 class="bold">P2P 통합서비스 이용현황</h2>
+			</div>
+			<br><br>
+
+			<!-- 제목 Default -->
+			<div class="sec_title txt_c">
+				<h2 class="bold">주거래 은행에서<br><em>핀크계좌로 이체</em>하세요</h2>
+			</div>
+			<p class="sec_txt">
+				sec_title 다음순서인 경우 자동으로 여백처리 됩니다.<br>
+				모든 투자상품은 현행 법률상 ‘유사수신행위의 규제에 관한 법률’에 의거하여 원금과 수익을 보장할 수 없습니다.<br>
+				또한 <span class="point_txt8">차입자가 원금의 전부 또는 일부를 상환하지 못할 경우 발생하게 되는 투자금 손실 등의 투자위험은 투자자가 부담하게 됩니다.</span>
+			</p>
+			<br>
+			<p class="sec_txt in_sec">
+				왼쪽정렬 이면서, 이중으로 여백처리되는 경우 in_sec 를 추가합니다.<br>
+				모든 투자상품은 현행 법률상 ‘유사수신행위의 규제에 관한 법률’에 의거하여 원금과 수익을 보장할 수 없습니다.
+			</p>
+			<br>
+			<p class="sec_txt txt_c">
+				예치금 확인 및 출금 요청은 My 투자에서 <br>이용할 수 있습니다.
+			</p>
+			<br><br>
+
+			<!-- 제목 Case2 -->
+			<p class="update">업데이트  오늘  <span class="num">13:20</span> <a href="#none"><i class="ico ico_reload"></i></a></p>
+			<p class="update"><span class="txt_loading">업데이트 중</span> <a href="#none"><i class="ico ico_reload loading"></i></a></p>
+			<div class="sec_title">
+				<h2>[헬로펀딩] 울산 우정동 근린생활시설 준공자금 1차</h3>
+			</div>
+			<br><br>
+
+			<!-- 제목 Case2 -->
+			<div class="sec_title txt_c">
+				<h2 class="xl">큰글자24px  h2.xl</h3>
+			</div>
+			<div class="sec_title txt_c">
+				<h2 class="smll">중간글자18px  h2.smll</h3>
+			</div>
+			<br><br>
+
+			<!-- 제목 Case3 -->
+			<div class="sec_title txt_c">
+				<h3>가입완료</h3>
+			</div>
+			<br><br>
+
+			<!-- 제목 Case4 -->
+			<div class="sec_title">
+				<h3>제휴사 선택</h3>
+			</div>
+
+			<!-- 제목 Case4 -->
+			<div class="sec_title">
+				<h3 class="unbold">굵지 않은 제목</h3>
+			</div>
+
+			<br><br>
+			<p>텍스트강조</p>
+			<span class="point_txt1">.point_txt1 a,</span><br>
+			<span class="point_txt1">.point_txt1{color:$reddish_orange;} /* #f74b20 */</span><br>
+			<span class="point_txt2">.point_txt2{color:$green_blue;} /* #00b389 */</span><br>
+			<span class="point_txt3">.point_txt3{color:$purply_blue;} /* #731aed */</span><br>
+			<span class="point_txt4">.point_txt4{color:$warm_grey;} /* #999 */</span><br>
+			<span class="point_txt5">.point_txt5{color:$brownish_grey;} /* #666 */</span><br>
+			<span class="point_txt6">.point_txt6{color:$black;margin-top:0;}/* #222 */</span><br>
+			<span class="point_txt7">.point_txt7{color:$lighter_purple;margin-top:0;}/* #8848ff */</span><br>
+			<span class="point_txt8">.point_txt8{color:$clear_blue;} /* #278df5 */</span><br>
+			<span class="point_txt9">.point_txt9{color:$pinkish_grey;} /* #c8c8c8 */</span><br>
+		</section>
+		<!-- //제목 가이드 -->
+
+		<br><br>
+
+		<!-- 아이콘 가이드 -->
+		<section id="gIcon" class="in_sec" style="background-color:#654">
+			<p class="point_txt1">[ 아이콘 가이드 ]</p><br>
+			<i class="ico ico_chart_03"></i>
+			<i class="ico ico_chart_04"></i>
+			<i class="ico ico_chart_05"></i>
+			<i class="ico ico_chart_06"></i>
+			<i class="ico ico_investment_risk"></i>
+			<i class="ico ico_guide_01"></i>
+			<i class="ico ico_guide_02"></i>
+			<i class="ico ico_guide_03"></i>
+			<i class="ico ico_guide_04"></i>
+			<i class="ico ico_guide_05"></i>
+			<i class="ico ico_guide_06"></i>
+			<i class="ico ico_guide_07"></i>
+
+			<i class="ico ico_guide_08"></i>
+			<i class="ico ico_guide_09"></i>
+			<i class="ico ico_guide_10"></i>
+			<i class="ico ico_guide_11"></i>
+			<i class="ico ico_guide_12"></i>
+			<i class="ico ico_guide_13"></i>
+			<i class="ico ico_guide_14"></i>
+			<i class="ico ico_guide_15"></i>
+			<i class="ico ico_guide_16"></i>
+			<i class="ico ico_guide_17"></i>
+			<i class="ico ico_guide_18"></i>
+
+			<i class="ico ico_quick_01"></i>
+			<i class="ico ico_quick_02"></i>
+			<i class="ico ico_alert_done"></i>
+			<i class="ico ico_alert_warning"></i>
+
+			<i class="ico ico_tip"></i>
+		</section>
+		<!-- //아이콘 가이드 -->
+
+		<br><br>
+
+		<!-- 그래프 가이드 -->
+		<section id="gGraph" class="in_sec">
+			<p class="point_txt1">[ 그래프 가이드 ]<br>투자기간을 제외한 텍스트디자인은 페이지별 진행</p><br>
+
+			<!-- 투자기간 -->
+			<div class="sec_title txt_l">
+				<h3>투자기간</h3>
+			</div>
+			<div class="benefit_cal set_5">
+				<span class="active"><i class="knob"></i></span>
+				<ul>
+					<li><a href="#none"><em class="num">3</em>개월</a></li>
+					<li><a href="#none"><em class="num">6</em>개월</a></li>
+					<li class="on"><a href="#none"><em class="num">9</em>개월</a></li>
+					<li><a href="#none"><em class="num">12</em>개월</a></li>
+					<li><a href="#none">전체</a></li>
+				</ul>
+				<span class="bar"></span>
+			</div>
+			<!-- //투자기간 -->
+
+			<br>
+
+			<!-- flexible -->
+			<div class="benefit_calWrap">
+				<div class="benefit_cal flexible">
+					<span class="active" data-value="12200" data-total="55000"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+			<br>
+			<div class="benefit_calWrap benefit_invest">
+				<p class="benefit_state">현재 <em>투자중</em>입니다.</p>
+				<div class="benefit_cal flexible">
+					<span class="active" data-value="36.6" data-total="100"><i class="value"><span class="num">36.6</span>%</i></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+			<br>
+			<div class="benefit_calWrap benefit_overdue">
+				<p class="benefit_state">현재 <em>연체중</em>입니다.</p>
+				<div class="benefit_cal flexible">
+					<span class="active" data-value="50.1" data-total="100"><i class="value"><span class="num">50.1</span>%</i></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+			<br><br>
+			<!-- revert -->
+			<div class="benefit_calWrap">
+				<div class="benefit_cal flexible revert">
+					<span class="active" data-value="8000" data-total="15000"></span>
+					<span class="bar"></span>
+				</div>
+			</div>
+			<!-- //revert -->
+
+			<br>
+			<p>Progress</p><br><br>
+			<div class="sec_inquiry_graph">
+				<div class="bar progress_wrap type_2">
+					<div class="_progress" data-value="800" id="fund_invest"><!-- data-value 는 최대값 -->
+						<i class="_bar style_01" data-value="700" data-rate="800"><!-- data-value는 현재값, data-rate 는 최대값 -->
+							<em class="arrow"></em>
+						</i>
+						<div class="step_tooltip">
+							<p class="count"><span class="tit">상환완료</span> <span class="money"><em class="num">80,000</em>원</span></p>
+							<p class="total"><span class="tit">상환예정</span> <span class="money"><em class="num">8,000,000</em>원</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="sec_inquiry_graph">
+				<div class="bar progress_wrap">
+					<div class="_progress" data-value="500000" id="fund_invest2"><!-- data-value 는 최대값 -->
+						<i class="_bar style_01" data-value="460000" data-rate="500000"><!-- data-value는 현재값, data-rate 는 최대값 -->
+							<em class="arrow"></em>
+						</i>
+						<div class="step_tooltip">
+							<p class="count"><span class="money"><em class="num">0</em>원</span></p>
+							<p class="total"><span class="money"><em class="num">500,000</em>원</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment_step step24">
+				<div class="bar progress_wrap">
+					<div class="_progress" data-value="24" id="payment_step"><!-- data-value 는 최대값 -->
+						<i class="_bar style_01" data-value="23" data-rate="24"><!-- data-value는 현재값, data-rate 는 최대값 -->
+							<em class="arrow"></em>
+						</i>
+						<div class="step_tooltip type_2">
+							<p class="count"><em class="num"></em>회 납입</p>
+							<p class="total"><em class="num">24</em>회</p>
+						</div>
+
+						<div class="line step12">
+							<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+						</div>
+						<div class="line step24">
+							<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="sec_inquiry_graph">
+				<div class="bar progress_wrap type_2">
+					<div class="_progress" data-value="800" id="fund_invest4"><!-- data-value 는 최대값 -->
+						<i class="_bar style_01" data-value="100" data-rate="800"><!-- data-value는 현재값, data-rate 는 최대값 -->
+							<em class="arrow"></em>
+						</i>
+						<div class="step_tooltip">
+							<p class="count"><span class="tit">상환완료</span> <span class="money"><em class="num">80,000</em>원</span></p>
+							<p class="total"><span class="tit">상환예정</span> <span class="money"><em class="num">8,000,000</em>원</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="sec_inquiry_graph">
+				<div class="bar progress_wrap">
+					<div class="_progress" data-value="500000" id="fund_invest5"><!-- data-value 는 최대값 -->
+						<i class="_bar style_01" data-value="40000" data-rate="500000"><!-- data-value는 현재값, data-rate 는 최대값 -->
+							<em class="arrow"></em>
+						</i>
+						<div class="step_tooltip">
+							<p class="count"><span class="money"><em class="num">0</em>원</span></p>
+							<p class="total"><span class="money"><em class="num">500,000</em>원</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment_step step24">
+				<div class="bar progress_wrap">
+					<div class="_progress" data-value="24" id="payment_step2"><!-- data-value 는 최대값 -->
+						<i class="_bar style_01" data-value="1" data-rate="24"><!-- data-value는 현재값, data-rate 는 최대값 -->
+							<em class="arrow"></em>
+						</i>
+						<div class="step_tooltip type_2">
+							<p class="count"><em class="num"></em>회 납입</p>
+							<p class="total"><em class="num">24</em>회</p>
+						</div>
+
+						<div class="line step12">
+							<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+						</div>
+						<div class="line step24">
+							<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="gCalwrap">
+			<div class="in_sec">
+				<p class="point_txt1">[ 금색상세 가이드 ]</p><br/>
+				<div class="cal_wrap5">
+					<dl class="cal">
+						<dt class="tit">텍스트</dt>
+						<dd class="money"><span class="num">1,000,000</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">잔액강조</dt>
+						<dd class="money point"><span class="num">1,853,271</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">연체 강조</dt>
+						<dd class="money overdue"><span class="num">1,853,271</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">투자중 강조</dt>
+						<dd class="money invest"><span class="num">1,853,271</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit info">비강조</dt>
+						<dd class="money complete">완료</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit info">비강조</dt>
+						<dd class="money overdue">연체</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit info">비강조</dt>
+						<dd class="money invest">투자중</dd>
+					</dl>
+				</div>
+				<br>
+				<div class="cal_wrap5">
+					<div class="sec_title">
+						<h3>제목 있을 때 여백적용, 제목의 말줄임은 일괄수정을 위해 공통가이드 스타일로 적용합니다. 두 줄 처리되는 경우</h3>
+					</div>
+					<dl class="cal">
+						<dt class="tit">텍스트</dt>
+						<dd class="money"><span class="num">1,000,000</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">텍스트</dt>
+						<dd class="money"><span class="num">1,000,000</span>원</dd>
+					</dl>
+				</div>
+				<br>
+				<div class="cal_wrap5">
+					<dl class="cal">
+						<dt class="tit medium"><span class="num">6</span>회차</dt>
+						<dd class="money bold"><span class="num">1,000,000</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit info"><span class="num">2018.03.01</span></dt>
+						<dd class="money ing">예정</dd>
+					</dl>
+				</div>
+				<div class="cal_detail_wrap">
+					<dl class="cal_detail">
+						<dt class="tit">연체일수</dt><!-- 2018-05-09 수정 오늘 기준 지연일수를 연체일수로 변경 -->
+						<dd class="money overdue"><span class="num">10</span>일</dd>
+					</dl>
+					<dl class="cal_detail">
+						<dt class="tit">지급일</dt>
+						<dd class="money"><span class="num">2018.03.10</span></dd>
+					</dl>
+					<dl class="cal_detail">
+						<dt class="tit">지급일</dt>
+						<dd class="money">+ <span class="num">0,000</span>원</dd>
+					</dl>
+					<dl class="cal_detail">
+						<dt class="tit">연체이자</dt>
+						<dd class="money overdue">- <span class="num">0,000</span>원</dd>
+					</dl>
+				</div>
+			</div>
+
+			<br>
+			<div class="cal_wrap6">
+				<div class="inner">
+					<dl class="cal">
+						<dt class="tit">내 투자금액</dt>
+						<dd class="money"><span class="num">600,000</span>원</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">예상 상환금액</dt>
+						<dd class="money"><span class="num">660,000</span>원</dd>
+					</dl>
+				</div>
+				<div class="inner line_dash">
+					<dl class="cal detail">
+						<dt class="tit">상환완료</dt>
+						<dd class="money"><span class="num">600,000</span>원</dd>
+					</dl>
+					<dl class="cal detail">
+						<dt class="tit">상환예정</dt>
+						<dd class="money"><span class="num">600,000</span>원</dd>
+					</dl>
+				</div>
+			</div>
+
+			<br>
+			<div class="box_detail round_box">
+				<div class="sec_title txt_c">
+					<h3 class="unbold">울산 우정동 근린생활 시설<br>준공자금 1차 자금</h3>
+				</div>
+				<div class="line_dash line_white">
+					<div class="cal_wrap5">
+						<dl class="cal">
+							<dt class="tit">수익률</dt>
+							<dd class="money"><span class="num">19.9</span>%</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit">투자기간</dt>
+							<dd class="money"><span class="num">6</span>개월</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit">모집금액</dt>
+							<dd class="money"><span class="num">10</span>억</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit">잔여모집액</dt>
+							<dd class="money"><span class="num">6</span>억 <span class="num">2,000</span>만원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit">모집상태</dt>
+							<dd class="money">모집중</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit">신청일자</dt>
+							<dd class="money"><span class="num">2018.01.23</span></dd>
+						</dl>
+						<dl class="cal total">
+							<dt class="tit">투자금액</dt>
+							<dd class="money point_txt8"><span class="num">100</span>만원</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="gTab">
+			<p class="point_txt1 in_sec">[ 탭 가이드 ]</p><br>
+			<div class="line_divid"></div>
+			<div class="tab_wrap set_type3"> <!-- 3개 -->
+				<span class="tab on"><a href="#none">날짜별</a></span>
+				<span class="tab"><a href="#none">분류별</a></span>
+				<span class="tab"><a href="#none">수단별</a></span>
+			</div><!-- //tab_wrap -->
+			<div class="tab_content_wrap">
+				<div id="tab-0" class="tab_content on"><!-- ID는 없어도 무방, 필요시 data attr추가 -->
+					<div class="stateBar in_sec">
+						<div class="tab_order type_normal">
+							<span class="on"><a href="#none">최신순</a></span>
+							<span><a href="#none">투자금액순</a></span>
+						</div>
+					</div>
+					<div class="line_divid"></div>
+					<div class="stateBar in_sec">
+						<div class="tab_order">
+							<span class="on"><a href="#none">최신순</a></span>
+							<span><a href="#none">수익률순</a></span>
+						</div>
+						<div class="option_wrap">
+							<button type="button" class="btn"><i class="ico ico_filter">필터</i></button>
+						</div>
+					</div>
+					<div class="line_divid"></div>
+					<div class="stateBar in_sec">
+						<div class="text_wrap">
+							<span class="total">총 <span class="num">89</span>건</span>
+						</div>
+						<div class="option_wrap">
+							<div class="sort_select">
+								<select data-name="inpFocus">
+									<option value="">전체</option>
+									<option value="">테스트</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="list_repeat">
+						<div class="list_box in_sec">
+							분류별 탭에 "검색결과 없는 가이드" 있습니다.
+						</div>
+					</div>
+				</div>
+				<div id="tab-2" class="tab_content">
+					<div class="stateBar in_sec">
+						<div class="tab_order">
+							<span class="on"><a href="#none">최신순</a></span>
+							<span><a href="#none">투자금액순</a></span>
+						</div>7
+					</div>
+					<div class="wrap_result">
+						<div class="no_result">
+							<i class="ico ico_chat_no2"></i>
+							<p>투자중인 상품이 없습니다.</p>
+						</div>
+					</div>
+				</div>
+				<div id="tab-3" class="tab_content">
+					수단별
+				</div>
+			</div>
+			<!-- //tab_content_wrap -->
+
+			<br>
+
+			<div class="in_sec">
+				<div class="sec_title">
+					<h3>제목있을때</h3>
+				</div>
+				<ul class="tab_purple up_three unBold">
+					<li class="on"><a href="#none">테라펀딩</a></li>
+					<li><a href="#none">헬로펀딩</a></li>
+					<li><a href="#none">미드레이트</a></li>
+					<li><a href="#none">소딧</a></li>
+					<li><a href="#none">8퍼센트</a></li><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+					<li><a href="#none">펀디드</a></li>
+					<li><a href="#none">투게더펀딩</a></li>
+					<li><a href="#none">줌펀딩</a></li>
+					<li><a href="#none">올리펀딩</a></li>
+				</ul>
+				<br>
+				<ul class="tab_purple up_three unBold" data-selected="multiple">
+					<li class="on"><button type="button">테라펀딩</button></li>
+					<li class="on"><button type="button">헬로펀딩</button></li>
+					<li><button type="button">미드레이트</button></li>
+					<li><button type="button">소딧</button></li>
+					<li><button type="button">8퍼센트</button></li><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+					<li><button type="button">펀디드</button></li>
+					<li><button type="button">투게더펀딩</button></li>
+					<li><button type="button">줌펀딩</button></li>
+					<li><button type="button">올리펀딩</button></li>
+				</ul>
+			</div>
+
+			<br>
+
+			<!-- 스텝 -->
+			<div class="sec_step step_perple">
+				<ol class="step02">
+					<li class="on complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>3</strong>
+					</li>
+				</ol>
+			</div>
+			<!-- //스텝 -->
+			<div class="sec_title txt_c">
+				<h2 class="xl">제휴사 가입/이용동의</h2>
+			</div>
+			<p class="sec_txt txt_c">
+				14px 일반
+			</p>
+			<p class="sec_txt2 txt_c">
+				16px 일반
+			</p>
+		</section>
+
+		<section id="gButton">
+			<p class="point_txt1 in_sec">[ 버튼 가이드 ]</p><br>
+			<p class="in_sec">Floating Button</p><br>
+			<div class="sec_btnGuide">
+				<!-- Floating Button -->
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="" class="btn btn_type_apply">확인</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+				</div>
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="" class="btn btn_type_apply" disabled>확인</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+				</div>
+				<br>
+				<div class="sticky_wrap set_type2">
+					<button type="button" name="" class="btn btn_cancel">취소</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+					<button type="button" name="" class="btn btn_type_apply">확인</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+				</div>
+				<div class="sticky_wrap set_type2">
+					<button type="button" name="" class="btn btn_cancel">취소</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+					<button type="button" name="" class="btn btn_type_apply" disabled>확인</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+				</div>
+				<!-- //Floating Button -->
+			</div>
+			<br>
+			<p class="in_sec">Contents Button</p><br>
+			<div class="in_sec">
+				<p>Block Type - Default</p>
+				<button type="button" name="button" class="btn btn_type_i">btn_type_i</button>
+				<button type="button" name="button" class="btn btn_type_a">btn_type_a</button>
+				<button type="button" name="button" class="btn btn_type_h">btn_type_h</button>
+				<br><br>
+				<p>Inline Type - .btn_flex</p>
+				<button type="button" name="button" class="btn btn_type_i btn_flex">컬러 활성화</button>
+				<br>
+				<button type="button" name="button" class="btn btn_type_a btn_flex">기본 활성화</button>
+				<button type="button" name="button" class="btn btn_type_h btn_flex">기본 활성화</button>
+				<br>
+				<button type="button" name="button" class="btn btn_type_a btn_flex" disabled>기본 비활성</button>
+				<button type="button" name="button" class="btn btn_type_h btn_flex" disabled>기본 비활성</button>
+				<br><br>
+				<div class="flex_wrap txt_c">
+					<button type="button" name="button" class="btn btn_type_i btn_flex">상환일정</button>
+					<button type="button" name="button" class="btn btn_type_a btn_flex">출금요청</button>
+				</div>
+
+				<br><br>
+				<p>List Inner Button</p>
+				<div class="flex_wrap set_type2"> <!-- 2개 -->
+					<span class="item"><button type="button" name="button" class="btn btn_type_e">btn_type_e</button></span>
+					<span class="item"><button type="button" name="button" class="btn btn_type_e">btn_type_e</button></span>
+				</div>
+				<div class="flex_wrap set_type2"> <!-- 2개 -->
+					<span class="item"><button type="button" name="button" class="btn btn_type_e" disabled>btn_type_e</button></span>
+					<span class="item"><button type="button" name="button" class="btn btn_type_e" disabled>btn_type_e</button></span>
+				</div>
+				<br>
+				<p>ETC Button</p>
+				<div class="flex_wrap set_type2"> <!-- 2개 -->
+					<button type="button" name="button" class="btn btn_type_g">잔액전체</button>
+				</div>
+			</div>
+			<br>
+			<p class="in_sec">Popup Button - btn_type_c</p>
+			<div class="in_sec">
+				<div class="flex_wrap set_type1"> <!-- 1개 -->
+					<span class="item on"><button type="button" name="button" class="btn btn_type_f">확인</button></span>
+				</div>
+				<div class="flex_wrap set_type1"> <!-- 1개 -->
+					<span class="item"><button type="button" name="button" class="btn btn_type_f">취소</button></span>
+				</div>
+				<br>
+				<div class="flex_wrap set_type2"> <!-- 2개 -->
+					<span class="item"><button type="button" name="button" class="btn btn_type_f">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="btn btn_type_f">확인</button></span>
+				</div>
+			</div>
+
+			<br><br>
+			<p class="in_sec">Text Button &amp; Etc Button</p><br>
+			<div class="in_sec">
+				link_type_a : <a href="#" class="link_type_a">직접입력</a><br>
+				link_type_b : <a href="#" class="link_type_b ico_arrow">개인정보처리방침</a><br>
+				link_type_c : <a href="#" class="link_type_c ico_arrow">비밀번호 재설정</a><br>
+				link_type_d : <a href="#" class="link_type_d ico_arrow">e-플러스 통장 만들기</a><br>
+				btn_type_g : <button type="button" name="button" class="btn btn_type_g">모두 가져오기</button><br>
+				btn_type_add : <button type="button" name="button" class="btn btn_type_add"><span>계좌등록</span></button>
+			</div>
+		</section>
+
+		<section id="gLabel" class="in_sec">
+			<p class="point_txt1">[ 라벨 가이드 ]</p><br>
+			<div class="label_wrap">
+				<span class="label_bg type1">헬로펀딩</span>
+				<span class="label_bg type2">부동산</span><!-- 2018-05-03 수정 라벨표기 PF삭제 -->
+			</div>
+			<br>
+			<div class="label_wrap">
+				<span class="label_outline type1">헬로펀딩</span>
+				<span class="label_outline type2">부동산</span><!-- 2018-05-03 수정 라벨표기 PF삭제 -->
+			</div>
+		</section>
+
+		<section id="gSwitches" class="in_sec">
+			<p class="point_txt1">[ 스위치 가이드 ]</p><br>
+
+			<div>
+				<p>checkbox Switch Type</p>
+				<input type="checkbox" id="cb1" class="switch_basic">
+				<label class="switch_basic_btn" for="cb1"></label>
+				<p>checkbox Switch Type</p>
+				<input type="checkbox" id="cb2" class="switch_basic" disabled="disabled">
+				<label class="switch_basic_btn" for="cb2"></label>
+			</div>
+
+		</section>
+
+		<section id="gFigure" class="in_sec">
+			<p class="point_txt1">[ 도형 가이드 ]</p><br>
+			<div class="figuer_circle">
+				<div class="col-3">
+					<dl class="item item1 animated zoomIn">
+						<dt><span class="num">15.21</span>%</dt>
+						<dd>수익률</dd>
+					</dl>
+				</div>
+				<div class="col-3">
+					<dl class="item item2 animated zoomIn">
+						<dt><span class="num">4</span><small>개월</small></dt>
+						<dd>투자기간</dd>
+					</dl>
+				</div>
+				<div class="col-3">
+					<dl class="item item3 animated zoomIn">
+						<dt><small>일시상환</small></dt>
+						<dd>상환방법</dd>
+					</dl>
+				</div>
+			</div>
+			<br><br>
+			<!-- Basic -->
+			<div class="figuer_graph">
+				<div class="svg_graph">
+					<svg class="basic"><circle  /></svg>
+					<span class="label">예정</span>
+				</div>
+			</div>
+
+			<!-- 완료 -->
+			<div class="figuer_graph">
+				<div class="svg_graph">
+					<svg class="complete"><circle  /></svg>
+					<span class="label">완료</span>
+				</div>
+			</div>
+
+			<!-- 진행중 -->
+			<div class="figuer_graph">
+				<div class="svg_graph" data-value="65">
+					<svg class="basic"><circle  /></svg>
+					<svg class="ing"><circle  /></svg>
+					<span class="label animate"></span>
+				</div>
+			</div>
+
+			<!-- 상환중 -->
+			<div class="figuer_graph">
+				<div class="svg_graph xl" data-total="1000000" data-repay="330000">
+					<svg class="basic"><circle  /></svg>
+					<svg class="divider"><circle  /></svg><!-- 구분선 -->
+					<svg class="repay"><circle  /></svg><!-- 상환중 -->
+				</div>
+			</div>
+
+			<!-- 상환중 + 연체 -->
+			<div class="figuer_graph">
+				<div class="svg_graph xl" data-total="1000000" data-repay="330000" data-overdue="50000">
+					<svg class="basic"><circle  /></svg>
+					<svg class="divider"><circle  /></svg><!-- 구분선 -->
+					<svg class="repay"><circle  /></svg><!-- 상환중 -->
+					<svg class="overdue"><circle  /></svg><!-- 연체 -->
+				</div>
+			</div>
+
+			<!-- 부도 + 상환중 -->
+			<div class="figuer_graph">
+				<div class="svg_graph xl" data-total="1000000" data-repay="330000" data-giveup="100000">
+					<svg class="basic"><circle  /></svg>
+					<svg class="divider"><circle  /></svg><!-- 구분선 -->
+					<svg class="giveup"><circle  /></svg><!-- 부도 -->
+					<svg class="repay"><circle  /></svg><!-- 상환중 -->
+				</div>
+			</div>
+		</section>
+
+		<section id="gStarRating" class="in_sec">
+			<p class="point_txt1">[ StarRating 가이드 ]</p><br>
+
+			<p>View Type : data-value="1~5"</p>
+			<div class="starRating" data-value="3">
+				<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+			</div>
+			<br>
+			<p>Write Type : data-role="click"</p>
+			<div class="starRating" data-role="click">
+				<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+			</div>
+			<br>
+			<p>Small Size (View Type)</p>
+			<div class="starRating xs" data-value="3">
+				<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+				<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+			</div>
+		</section>
+
+
+		<section id="gBox" class="in_sec">
+			<p class="point_txt1">[ 박스 가이드 ]</p><br>
+
+			<p>박스 1</p>
+			<div class="box_type_a">
+				<div class="box_header white-four">
+					<h3>신규가입 제휴사</h3>
+				</div>
+				<div class="box_body">
+					<div class="btn_wrap">
+						<button type="button" class="btn btn_type_k">8퍼센트</button><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+						<button type="button" class="btn btn_type_k">헬로펀딩</button>
+					</div>
+					<div class="cont_wrap cont_type1">
+						<dl class="define">
+							<dt class="tit">이메일</dt>
+							<dd class="txt">kimfinnq@finnq.com</dd>
+						</dl>
+						<dl class="define">
+							<dt class="tit">상환계좌</dt>
+							<dd class="txt">하나은행 204-976473-21731</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<div class="box_type_a">
+				<div class="box_header color_blue">
+					<h3>이용동의 제휴사</h3>
+				</div>
+				<div class="box_body">
+					<div class="btn_wrap">
+						<button type="button" class="btn btn_type_l">테라펀딩</button>
+						<button type="button" class="btn btn_type_l">헬로펀딩</button>
+					</div>
+					<div class="cont_wrap cont_type2">
+						<p class="star_type indent"> <em class="point_txt1">이미 가입된 제휴사로</em> 기본정보 및 상환계좌는 <em class="point_txt1">해당 제휴사에  먼저 등록한 정보</em>로 사용됩니다.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="gBoxsatisfact">
+			<p class="point_txt1 in_sec">[ 만족도 가이드 ]</p><br>
+
+			<p class="in_sec">헤더 있는 경우</p>
+			<div class="sec_satisfact">
+				<div class="satisfact_header">
+					<h3>헬로펀딩 투자만족도</h3>
+					<div class="starRating" data-value="3" data-click="false">
+						<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+						<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+						<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+						<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+						<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+					</div>
+				</div>
+				<div class="satisfact_body">
+					<!-- satisfact_detail 반복 -->
+					<div class="satisfact_detail">
+						<div class="row">
+							<p class="fl tit_writer"><em>헬로펀딩</em> 박*희 고객님</p>
+							<div class="fr starRating xs" data-value="3" data-click="false">
+								<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+							</div>
+						</div>
+						<dl class="cont_wrap ellipsis" data-state="compact">
+							<dt class="tit_subject">다른 P2P 대신 헬로펀딩에 투자했어요…</dt>
+							<dd class="txt_content"><span class="txt_inner">처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 소액으로 시험삼아 투자한 결과가 이렇게 좋게나올 줄 몰랐습니다. ㅋ 소액 재테크로  만족합니다.</span></dd>
+						</dl>
+						<div class="cont_toggle">
+							<button type="button" data-compact="간략히보기" data-extend="전체보기"><!-- :before처리(빈값유지) --></button>
+						</div>
+						<p class="tit_part">[ 242호 역삼동 주택담보대출 ]</p>
+					</div>
+					<div class="satisfact_detail">
+						<div class="row">
+							<p class="fl tit_writer"><em>헬로펀딩</em> 박*희 고객님</p>
+							<div class="fr starRating xs" data-value="3" data-click="false">
+								<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+							</div>
+						</div>
+						<dl class="cont_wrap ellipsis" data-state="compact">
+							<dt class="tit_subject">다른 P2P 대신 헬로펀딩에 투자했어요…</dt>
+							<dd class="txt_content"><span class="txt_inner">처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 소액으로 시험삼아 투자한 결과가 이렇게 좋게나올 줄 몰랐습니다. ㅋ 소액 재테크로  만족합니다.</span></dd>
+						</dl>
+						<div class="cont_toggle">
+							<button type="button" data-compact="간략히보기" data-extend="전체보기">버튼버튼</button>
+						</div>
+						<p class="tit_part">[ 242호 역삼동 주택담보대출 ]</p>
+					</div>
+					<!-- //satisfact_detail 반복 -->
+				</div>
+			</div>
+			<br>
+			<p class="in_sec">헤더 없는 경우 + 라인구분(헤더와 관계없음)</p>
+			<div class="line_divid"></div>
+			<div class="sec_satisfact">
+				<div class="satisfact_body">
+					<!-- satisfact_detail 반복 -->
+					<div class="satisfact_detail">
+						<div class="row">
+							<p class="fl tit_writer"><em>헬로펀딩</em> 박*희 고객님</p>
+							<div class="fr starRating xs" data-value="3" data-click="false">
+								<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+							</div>
+						</div>
+						<dl class="cont_wrap ellipsis" data-state="compact">
+							<dt class="tit_subject">다른 P2P 대신 헬로펀딩에 투자했어요…</dt>
+							<dd class="txt_content"><span class="txt_inner">처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 소액으로 시험삼아 투자한 결과가 이렇게 좋게나올 줄 몰랐습니다. ㅋ 소액 재테크로  만족합니다.</span></dd>
+						</dl>
+						<div class="cont_toggle">
+							<button type="button" data-compact="간략히보기" data-extend="전체보기"><!-- :before처리(빈값유지) --></button>
+						</div>
+						<p class="tit_part">[ 242호 역삼동 주택담보대출 ]</p>
+					</div>
+					<div class="satisfact_detail">
+						<div class="row">
+							<p class="fl tit_writer"><em>헬로펀딩</em> 박*희 고객님</p>
+							<div class="fr starRating xs" data-value="3" data-click="false">
+								<button type="button"><i class="ico ico_star">1</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">2</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">3</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">4</i><span class="hide">점</span></button>
+								<button type="button"><i class="ico ico_star">5</i><span class="hide">점</span></button>
+							</div>
+						</div>
+						<dl class="cont_wrap ellipsis" data-state="compact">
+							<dt class="tit_subject">다른 P2P 대신 헬로펀딩에 투자했어요…</dt>
+							<dd class="txt_content"><span class="txt_inner">처음 투자해봤는데 걱정과는 달리 잘 진행되어서 기분 좋네요. 소액으로 시험삼아 투자한 결과가 이렇게 좋게 나올 줄 몰랐습니다. ㅋ 소액 재테크로  만족합니다.</span></dd>
+						</dl>
+						<div class="cont_toggle">
+							<button type="button" data-compact="간략히보기" data-extend="전체보기"><!-- :before처리(빈값유지) --></button>
+						</div>
+						<p class="tit_part">[ 242호 역삼동 주택담보대출 ]</p>
+					</div>
+					<!-- //satisfact_detail 반복 -->
+				</div>
+			</div>
+
+			<!-- 만족도 -->
+		</section>
+
+		<section id="gList" class="">
+			<p class="point_txt1 in_sec">[ 리스트 가이드 ]</p><br>
+			<p class="in_sec">리스트 반복영역</p>
+
+			<div class="list_repeat">
+				<!-- 필요한페이지가 있음 -->
+				<div class="list_stateBar in_sec">
+					<span class="fl month">
+						<span class="num">3</span>월
+					</span>
+					<span class="fr money">
+						<span class="num">3,000,000</span>원
+					</span>
+				</div>
+				<div class="list_stateBar on in_sec">
+					<span class="fl month">
+						<span class="num">3</span>월
+					</span>
+					<span class="fr money">
+						<span class="num">3,000,000</span>원
+					</span>
+				</div>
+
+				<!-- list_box 반복 -->
+				<div class="list_box in_sec">
+					<div class="cal_wrap5">
+						<div class="sec_title">
+							<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+						</div>
+						<dl class="cal">
+							<dt class="tit"><span class="num">1/4</span>회차</dt>
+							<dd class="money"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money overdue">연체</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="list_box">
+					<div class="cal_wrap5 in_sec">
+						<div class="sec_title">
+							<h3>[미드레이트]울산 우정동 근린시설 준공자금 1차 아파트에서 분양</h3>
+						</div>
+						<dl class="cal">
+							<dt class="tit">1/4회차</dt>
+							<dd class="money"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money complete">완료</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<br><br>
+
+			<div class="list_repeat list_toggle">
+				<div class="list_stateBar in_sec">
+					<span class="fl text">
+						상환일정
+					</span>
+				</div>
+				<!-- list_box 반복 -->
+				<a href="javascript:void(0);" class="list_box disabled">
+					<div class="cal_wrap5 in_sec">
+						<dl class="cal">
+							<dt class="tit medium"><span class="num">6</span>회차</dt>
+							<dd class="money bold"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money ing">예정</dd>
+						</dl>
+					</div>
+					<div class="cal_detail_wrap in_sec">
+						<dl class="cal_detail">
+							<dt class="tit">원금</dt>
+							<dd class="money"><span class="num">1,110,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">이자</dt>
+							<dd class="money">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">세금</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">수수료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">보험료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="list_box disabled">
+					<div class="cal_wrap5 in_sec">
+						<dl class="cal">
+							<dt class="tit medium"><span class="num">5</span>회차</dt>
+							<dd class="money bold"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money ing">예정</dd>
+						</dl>
+					</div>
+					<div class="cal_detail_wrap in_sec">
+						<dl class="cal_detail">
+							<dt class="tit">원금</dt>
+							<dd class="money"><span class="num">1,110,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">이자</dt>
+							<dd class="money">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">세금</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">수수료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">보험료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="list_box">
+					<div class="cal_wrap5 in_sec">
+						<dl class="cal">
+							<dt class="tit medium"><span class="num">4</span>회차</dt>
+							<dd class="money bold"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money ing">예정</dd>
+						</dl>
+					</div>
+					<div class="cal_detail_wrap in_sec">
+						<dl class="cal_detail">
+							<dt class="tit">원금</dt>
+							<dd class="money"><span class="num">1,110,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">이자</dt>
+							<dd class="money">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">세금</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">수수료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">보험료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="list_box">
+					<div class="cal_wrap5 in_sec">
+						<dl class="cal">
+							<dt class="tit medium"><span class="num">3</span>회차</dt>
+							<dd class="money bold"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money overdue">연체</dd>
+						</dl>
+					</div>
+					<div class="cal_detail_wrap in_sec">
+						<dl class="cal_detail">
+							<dt class="tit">연체일수</dt><!-- 2018-05-09 수정 오늘 기준 지연일수를 연체일수로 변경 -->
+							<dd class="money overdue"><span class="num">10</span>일</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">원금</dt>
+							<dd class="money"><span class="num">1,110,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">이자</dt>
+							<dd class="money">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">연체이자</dt>
+							<dd class="money overdue">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">세금</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">수수료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">보험료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="list_box">
+					<div class="cal_wrap5 in_sec">
+						<dl class="cal">
+							<dt class="tit medium"><span class="num">2</span>회차</dt>
+							<dd class="money bold"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money complete">완료</dd>
+						</dl>
+					</div>
+					<div class="cal_detail_wrap in_sec">
+						<dl class="cal_detail">
+							<dt class="tit">연체일수</dt>
+							<dd class="money overdue"><span class="num">10</span>일</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">원금</dt>
+							<dd class="money"><span class="num">1,110,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">이자</dt>
+							<dd class="money">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">연체이자</dt>
+							<dd class="money overdue">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">세금</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">수수료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">보험료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+					</div>
+				</a>
+				<a href="javascript:void(0);" class="list_box">
+					<div class="cal_wrap5 in_sec">
+						<dl class="cal">
+							<dt class="tit medium"><span class="num">1</span>회차</dt>
+							<dd class="money bold"><span class="num">1,000,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit info"><span class="num">2018.03.01</span></dt>
+							<dd class="money complete">완료</dd>
+						</dl>
+					</div>
+					<div class="cal_detail_wrap in_sec">
+						<dl class="cal_detail">
+							<dt class="tit">원금</dt>
+							<dd class="money"><span class="num">1,110,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">이자</dt>
+							<dd class="money">+ <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">세금</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">수수료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+						<dl class="cal_detail">
+							<dt class="tit">보험료</dt>
+							<dd class="money">- <span class="num">0,000</span>원</dd>
+						</dl>
+					</div>
+				</a>
+			</div>
+			<br><br>
+			<p class="in_sec">링크목록</p><br>
+			<div class="secede_inquiry">
+				<ul>
+					<li>
+						<a href="#" class="web">투자설명서<i class="ico ico_arrow_more"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="secede_inquiry none_divid">
+				<ul>
+					<li>
+						<a href="#" class="web">투자설명서<i class="ico ico_arrow_more"></i></a>
+					</li>
+				</ul>
+			</div>
+
+			<br><br>
+			<p class="in_sec">아코디언</p><br>
+			<ul class="list_expend">
+				<!-- 투자설명서 -->
+				<li>
+					<div class="subject">
+						<a href="#open">투자설명서<i></i></a>
+					</div>
+
+					<div class="detail_set">
+						<div class="con cate1">
+							투자사설명서 노출
+						</div>
+					</div>
+				</li>
+				<!-- //투자설명서 -->
+
+				<!-- 투자후기 -->
+				<li>
+					<div class="subject">
+						<a href="#open">투자후기<i></i></a>
+					</div>
+
+					<div class="detail_set">
+						<div class="con cate2">
+							투자후기 내용입니다.
+						</div>
+					</div>
+				</li>
+				<!-- //투자후기 -->
+			</ul>
+		</section>
+
+		<section id="gAgree">
+			<p class="in_sec">약관동의</p><br>
+			<div class="sec_agree">
+				<ul>
+					<li class="agree_wrap">
+						<input type="checkbox" id="purpleTwo1" name="test-img" class="purple"><label for="purpleTwo1" name="test-img"><span>투자 이용약관</span></label>
+						<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+					</li>
+				</ul>
+			</div>
+			<br><br>
+			<p class="in_sec">아코디언 약관동의</p>
+			<div style="margin-top:-10px">
+				<!-- 약관동의 -->
+				<ul class="list_expend sec_term_type1">
+					<li class="agree_terms">
+						<div class="subject agree_wrap agree_check_all">
+							<a href="#open">
+								<input type="checkbox" id="all_chk" name="test-img" class="purple">
+								<label for="all_chk" name="test-img"><span>제휴사 서비스 이용동의(필수)</span></label>
+								<i></i>
+							</a>
+						</div>
+						<div class="detail_set">
+							<div class="con cate1">
+								<div class="sec_agree">
+									<ul>
+										<li class="agree_wrap">
+											<input type="checkbox" id="purpleTwo1" name="check_action" class="purple"><label for="purpleTwo1"><span>미드레이트 전체약관 동의</span></label>
+											<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+										</li>
+										<li class="agree_wrap">
+											<input type="checkbox" id="purpleTwo2" name="check_action" class="purple"><label for="purpleTwo2"><span>소딧 전체약관 동의</span></label>
+											<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+										</li>
+										<li class="agree_wrap">
+											<input type="checkbox" id="purpleTwo3" name="check_action" class="purple"><label for="purpleTwo3"><span>펀디드 전체약관 동의</span></label>
+											<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+										</li>
+										<li class="agree_wrap">
+											<input type="checkbox" id="purpleTwo4" name="check_action" class="purple"><label for="purpleTwo4"><span>미드레이트 전체약관 동의</span></label>
+											<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+										</li>
+										<li class="agree_wrap">
+											<input type="checkbox" id="purpleTwo5" name="check_action" class="purple"><label for="purpleTwo5"><span>소딧 전체약관 동의</span></label>
+											<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+										</li>
+										<li class="agree_wrap">
+											<input type="checkbox" id="purpleTwo6" name="check_action" class="purple"><label for="purpleTwo6"><span>펀디드 전체약관 동의</span></label>
+											<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="agree_terms">
+						<div class="subject agree_wrap agree_check_all">
+							<a href="#open">
+								<input type="checkbox" id="all_chk2" name="test-img" class="purple">
+								<label for="all_chk2" name="test-img"><span>제휴사 서비스 이용동의 (선택)</span></label>
+								<i></i>
+							</a>
+						</div>
+						<div class="detail_set">
+							<div class="con cate1">
+								<div class="sec_agree">
+									<ul>
+										<li class="agree_wrap">
+											<input type="checkbox" id="purpleTwo21" name="check_action" class="purple"><label for="purpleTwo21"><span>8퍼센트 마케팅 정보 수집 및 활용 동의</span></label><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+											<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- //약관동의 -->
+			</div>
+		</section>
+
+		<section id="gTable" class="in_sec">
+			<p class="point_txt1">[ 표 가이드 ]</p><br>
+			<table class="tbl_type2">
+				<caption>환불금액</caption>
+				<colgroup>
+					<col style="width:30%">
+					<col style="width:*">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">환불금액</th>
+						<td>100만원</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+
+		<section id="gTable" class="in_sec">
+			<p class="point_txt1">[ noData 가이드 ]</p><br>
+			<div class="alert_wrap"><!-- 2018-05-09 수정 클래스명 변경 -->
+				<i class="ico ico_alert_done"></i>
+				<p>투자가 모두 상환 완료되었습니다.</p>
+			</div>
+			<br>
+			<div class="wrap_result">
+				<div class="no_result alert_wrap">
+					<i class="ico ico_alert_done"></i>
+					<p>투자가 모두 상환 완료되었습니다.</p>
+				</div>
+			</div>
+			<br>
+			<div class="wrap_result">
+				<div class="no_result">
+					<i class="ico ico_chat_no2"></i>
+					<p>투자하신 내역이 없습니다.</p>
+				</div>
+			</div>
+			<br>
+			<div class="wrap_result auto_height">
+				<div class="no_result">
+					<i class="ico ico_chat_no2"></i>
+					<p>투자하신 내역이 없습니다.</p>
+				</div>
+			</div>
+			<script type="text/javascript">
+				//상환일정이 없는경우 HTML Append후에 호출해주세요.
+				//1. 기능 : noDataHeight(선택자); 선택자의 영역을 페이지 남은공간에 모두 차지하도록
+				//2. 상황 : 공간이 부족한 경우 활용하는 의미가 없다.
+				//3. 디자인 : 일반적인 .wrap_result 에 .auto_height 를 줘서 패딩을 제거하였음.
+				//noDataHeight('.wrap_result.auto_height');
+			</script>
+
+
+		</section>
+
+		<section id="gEtc" class="in_sec">
+			<p class="point_txt1">[ 기타 가이드 ]</p><br>
+			<div style="position:relative;">
+				<strong>
+					적립 <button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">자세히 보기</span></button>
+					<div class="layer_wrap" style="width:270px; top:30px; left:10px;">
+						<p>정확한 내역은 하나카드 홈페이지 <strong>[서비스 제공 실적 조회]</strong>를 통해 확인하시기 바랍니다.</p>
+					</div>
+				</strong>
+			</div>
+		</section>
+		<br><br>
+		<div class="more_loading"></div>
+		<br><br><br><br>
+		<!-- //페이지명 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">TOP</button><!-- 활성화되면 disabled이 삭제됩니다. -->
+		</div>
+
+		<!-- MASA05Z04 -->
+		<div id="MASA05Z04" class="modal_wrap pop_acc_select">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">계좌를 선택하세요</h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_select">
+						<ul class="flex_wrap set_type1">
+							<li class="item main_acc"><a data-name="acc-button" class="btn_type_d ico_dot"><strong>KEB하나</strong><em class="cash">987-654-321098</em> <span>(주계좌)</span></a></li><!-- 주계좌 class : main_acc -->
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>국민</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987-654-321098</em></button></li>
+						</ul>
+					</div>
+
+					<!-- <div class="sec_text_btn">
+						<div class="btn_text01">
+							<a href="#none" class="ico_arrow">직접입력</a>
+						</div>
+					</div> 삭제  -->
+
+					<div class="flex_wrap set_type2">
+						<span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
+						<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+					</div>
+				</div><!-- //scroll_wrap -->
+			</div>
+		</div>
+		<!-- //MASA05Z04 -->
+
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script type="text/javascript">
+<!--
+	$(document).ready(function(){
+		$body = $("body");
+		//Contents Size Cal;
+		var docH, docW;
+		docW = $(window).width();
+		docH = $(window).height();
+
+		//모달팝업
+		/* modal popup */
+
+		$("button.open_modal,a.open_modal").on("click", function(){
+			var $mpop = $(this);
+
+			var $mpopType = $mpop.data("mtype");
+			var $mpopID = "#"+$mpop.data("triger");
+			var $mpopClose = $mpop.data("bgclose");
+			var conH = $($mpopID).find(".modal_content").outerHeight();
+
+			//popup contents height < window height
+			if(conH >= docH || ($mpopType=="fullpop")) {
+				$($mpopID +"> .modal_content").css({
+					height: docH
+				});
+			}else {
+				$($mpopID).addClass("normal");
+			}
+			if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+			switch($mpopType) {
+				case "fullpop":
+					$($mpopID).toggleClass("visible");
+					break;
+				case "doublepop":
+					$($mpopID).addClass("double").toggleClass("visible");
+					break;
+				default:
+					$($mpopID).toggleClass("visible");
+			}
+			return false;
+		});
+		$(".modal_wrap").on("click","button.close_modal", function(){
+			$(this).closest('.modal_wrap').toggleClass("visible");
+			return false;
+		});
+		$(".modal_wrap").on("click", function(e){
+			var status = $(this).data("bgclose");
+			if(!$(".modal_content").has(e.target).length && status ) {
+				if($(this).data("bgclose")) $(this).toggleClass("visible");
+			}
+		});
+	});
+//-->
+</script>
+<script>
+$(document).ready(function(){
+	$('.sticky_wrap .btn:first-child').on('click', function(){
+		$('html,body').animate({scrollTop : 0}, 300);
+	})
+	$('.ui_scrollSpy').on('click', function(){
+		var target = $(this).attr('href');
+		$('html,body').animate({scrollTop : $(target).offset().top}, 300);
+		return false;
+	})
+	setTimeout(function(){
+		drawProgress('#fund_invest');
+		drawProgress('#fund_invest2');
+		drawProgress('#payment_step');
+		drawProgress('#fund_invest4');
+		drawProgress('#fund_invest5');
+		drawProgress('#payment_step2');
+	},800)
+});
+
+//만족도 멀티라인 활성화 체크
+multiLineActive();
+
+//상환내역 리스트
+listRepeat();
+
+//정렬탭
+tabOrder();
+
+//svg
+svgGraph();
+</script>
+</body>
+</html>

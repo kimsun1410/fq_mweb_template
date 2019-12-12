@@ -1,0 +1,222 @@
+@charset 'UTF-8';
+.mgm {}
+.mgm.event2019 {position:relative; height:415px; background:#ffdb15; overflow:hidden;}
+.mgm.event2019 .title_wrap {text-align:center;}
+
+.mgm.event2019 .thumb_tit {position:relative; margin-top:30px; width:135px; font-size:12px; line-height:18px; height:18px; color:#fff; font-family:"AppleSDGothicNeo-regular"; background:#ffcd15; border-radius:12px; transform:translateX(-50%); left:50%;}
+.mgm.event2019 .title {margin-top:12px; font-size:30px; line-height:34px; color:#222; opacity: 0; transform: scale(0.1); font-family:"AppleSDGothicNeo-Light";}
+.mgm.event2019 .title strong {font-weight:bold;}
+.mgm.event2019.start .title {animation:jackInTheBox .85s forwards ease-in-out; -webkit-animation:jackInTheBox .85s forwards ease-in-out; animation-delay:.2s;}
+.mgm.event2019 .title strong {font-weight:bold}
+.mgm.event2019 .add_info {margin-top:8px; font-size:16px; line-height:20px;}
+
+.mgm.event2019 .bg_pocket {position:absolute; left:50%; bottom:39px; width:170px; height:172px; margin-left:-135px; background:url(../images/event/mgm/2019/img_pocket.png) 0 0 no-repeat; background-size:cover; z-index:5;}
+.mgm.event2019.start .bg_pocket {-webkit-animation:shake .65s forwards ease-in-out; animation:shake .65s forwards ease-in-out;}
+.mgm.event2019 .bg_pocket_bottom {position:absolute; display:block; width:182px; height:18px; bottom:36px; left:50%; margin-left:-135px; background:url(../images/event/mgm/2019/bg_pocket_bottom.png) 0 0 no-repeat; background-size:cover;}
+
+.mgm.event2019 .bg_pig {position:absolute; left:50%; bottom:28px; width:156px; height:81px; margin-left:-15px; background:url(../images/event/mgm/2019/img_pig.png) 0 0 no-repeat; background-size:cover; z-index:20;}
+.mgm.event2019.start .bg_pig {animation:tada .85s forwards ease-in-out; -webkit-animation:tada .85s forwards ease-in-out; animation-delay:.2s;}
+.mgm.event2019 .bg_pig_bottom {position:absolute; display:block; width:166px; height:18px; bottom:26px; left:50%; margin-left:-17px; background:url(../images/event/mgm/2019/bg_pig_bottom.png) 0 0 no-repeat; background-size:cover;}
+.mgm.event2019 .bg_pig_tail {position:absolute; display:block; width:13px; height:41px; bottom:88px; left:50%; margin-left:55px; background:url(../images/event/mgm/2019/img_pig_tail.png) 0 0 no-repeat; background-size:cover; z-index:15;}
+.mgm.event2019.end .bg_pig_tail {animation:movingTail 2s infinite; -webkit-animation:movingTail 2s infinite;}
+
+.mgm.event2019 .pocket_wrap .move {display:inline-block; position:absolute; left:50%; opacity:0;}
+.mgm.event2019.start .pocket_wrap .move {opacity:1; -webkit-animation:movingTop .85s forwards ease-in-out; animation:movingTop .85s forwards ease-in-out;}
+.mgm.event2019 .pocket_wrap .move.coin1,
+.mgm.event2019 .pocket_wrap .move.coin3 {width:33px; height:33px; background:url(../images/event/mgm/2019/img_move_coin1.png) 0 0 no-repeat; background-size:cover;}
+.mgm.event2019 .pocket_wrap .move.coin2,
+.mgm.event2019 .pocket_wrap .move.coin4,
+.mgm.event2019 .pocket_wrap .move.coin5 {width:34px; height:34px; background:url(../images/event/mgm/2019/img_move_coin2.png) 0 0 no-repeat; background-size:cover;}
+
+.mgm.event2019 .pocket_wrap .move.coin1 {bottom:50px; margin-left:-93px;}
+.mgm.event2019 .pocket_wrap .move.coin5 {bottom:64px; margin-left:-66px;}
+.mgm.event2019 .pocket_wrap .move.coin2 {bottom:50px; margin-left:-45px;}
+.mgm.event2019 .pocket_wrap .move.coin3 {bottom:90px; margin-left:-85px;}
+.mgm.event2019 .pocket_wrap .move.coin4 {bottom:94px; margin-left:-39px;}
+.mgm.event2019.start .pocket_wrap .move.coin1 {animation-delay:.68s;}
+.mgm.event2019.start .pocket_wrap .move.coin2 {animation-delay:.75s;}
+.mgm.event2019.start .pocket_wrap .move.coin3 {animation-delay:.83s;}
+.mgm.event2019.start .pocket_wrap .move.coin4 {animation-delay:.99s;}
+.mgm.event2019.start .pocket_wrap .move.coin5 {animation-delay:.94s;}
+
+
+.mgm.event2019 .light_wrap .light {position:absolute; left:50%; z-index:10; width:14px; height:15px; background:url(../images/event/mgm/2019/img_light.png) 0 0 no-repeat; background-size:cover; opacity:0;}
+.mgm.event2018.end  .light_wrap .light {-webkit-transform:scale(0.1);transform:scale(0.1); -webkit-animation:lighting 2s infinite; animation:lighting 2s infinite; opacity:1;}
+.mgm.event2019.end  .light_wrap .light.el1 {bottom:84px; margin-left:111px; -webkit-animation:lighting 2s infinite; animation:lighting 2s infinite;}
+.mgm.event2019.end  .light_wrap .light.el2 {bottom:46px; margin-left:-49px; -webkit-animation:lighting 3.2s infinite; animation:lighting 3.2s infinite;}
+.mgm.event2019.end  .light_wrap .light.el3 {bottom:48px; margin-left:-132px; -webkit-animation:lighting 1.8s infinite; animation:lighting 1.8s infinite;}
+.mgm.event2019.end  .light_wrap .light.el4 {bottom:82px; margin-left:-168px; -webkit-animation:lighting 2.2s infinite; animation:lighting 2.2s infinite;}
+.mgm.event2019.end  .light_wrap .light.el5 {bottom:133px; margin-left:37px; -webkit-animation:lighting 3s infinite; animation:lighting 3s infinite;}
+.mgm.event2019.end  .light_wrap .light.el6 {bottom:157px; margin-left:101px; -webkit-animation:lighting 1.8s infinite; animation:lighting 1.8s infinite;}
+.mgm.event2019.end  .light_wrap .light.el7 {bottom:189px; margin-left:75px; -webkit-animation:lighting 3.5s infinite; animation:lighting 3.7s infinite;}
+
+.mgm.event2019 .money_group .move {position:absolute; left:50%; z-index:6; display:none;}
+.mgm.event2019.action .money_group .move {position:absolute; left:50%; z-index:6; display:block;}
+.mgm.event2019.action .money_group .coin0 {width:104px; height:121px; bottom: 42px; z-index: 4; margin-left: 29px; background:url(../images/event/mgm/2019/img_coin5.png) 0 0 no-repeat; background-size:cover; -webkit-animation:bounceInRight 2s forwards ease-in-out; animation:bounceInRight 2s forwards ease-in-out;}
+.mgm.event2019.action .money_group .coin1 {width:61px; height:48px; bottom:42px; margin-left:97px; background:url(../images/event/mgm/2019/img_coin1.png) 0 0 no-repeat; background-size:cover; -webkit-animation:bounceInDown 1.3s forwards ease-in-out; animation:bounceInDown 1.3s forwards ease-in-out;}
+.mgm.event2019.action .money_group .coin2 {width:84px; height:49px; bottom:29px; margin-left:-76px; background:url(../images/event/mgm/2019/img_coin2.png) 0 0 no-repeat; background-size:cover; -webkit-animation:bounceInDown 1.5s forwards ease-in-out; animation:bounceInDown 1.5s forwards ease-in-out;}
+.mgm.event2019.action .money_group .coin3 {width:46px; height:42px; bottom:34px; margin-left:-114px; background:url(../images/event/mgm/2019/img_coin3.png) 0 0 no-repeat; background-size:cover; -webkit-animation:fadeInDownBig .8s forwards ease-in-out; animation:fadeInDownBig .8s forwards ease-in-out;}
+.mgm.event2019.action .money_group .coin4 {width:70px; height:36px; bottom:30px; margin-left:-149px; background:url(../images/event/mgm/2019/img_coin4.png) 0 0 no-repeat; background-size:cover; -webkit-animation:bounceInDown 1s forwards ease-in-out; animation:bounceInDown 1s forwards ease-in-out;}
+.mgm.event2019.action .money_group .coin5 {width:34px; height:34px; bottom:50px; margin-left:-93px; background:url(../images/event/mgm/2019/img_move_coin2.png) 0 0 no-repeat; background-size:cover; z-index:7; -webkit-animation:bounceInDown 1.2s forwards ease-in-out; animation:bounceInDown 1.2s forwards ease-in-out;}
+.mgm.event2019.action .money_group .coin6 {width:33px; height:33px; bottom:45px; margin-left:-165px; background:url(../images/event/mgm/2019/img_move_coin1.png) 0 0 no-repeat; background-size:cover; z-index:7; -webkit-animation:bounceInDown 1s forwards ease-in-out; animation:bounceInDown 1s forwards ease-in-out;}
+
+
+.boxing_layout {padding:0 20px;}
+.boxing_layout.mgm {padding:13px 20px 0;}
+.boxing_layout.mgm textarea {resize:none;}
+.boxing_layout.mgm .input_wrap .input_tit strong {font-weight:normal;}
+.boxing_layout.mgm .input_wrap .input_tit strong.bold {font-weight:bold;}
+.boxing_layout.mgm .send_msg .msg_form .wrap_count .txt_count {position: absolute; right: 0; top: -22px;}
+.boxing_layout.mgm .send_msg .msg_form .quick_msg {margin-left: -6px; padding-top: 3px;}
+.boxing_layout.mgm .send_msg .msg_form .quick_msg button {margin-top: 8px; margin-left: 6px;}
+
+.boxing_layout.mgm .list_type.bar,
+.boxing_layout.mgm .list_type.bar li {color:$brownish_grey; font-size:16px; font-family: "AppleSDGothicNeo-Light";}
+
+.boxing_layout.mgm .btn_wrap {margin:30px 0 40px; text-align:center;}
+.boxing_layout.mgm .gray_box {margin-top:10px; padding:10px 20px 26px; background:$white_four; border-radius:8px;}
+.boxing_layout.mgm .gray_box .img_box {height:96px; background:url(../images/event/mgm/2019/img_benefit.png) 50% 50% no-repeat; background-size:contain; opacity: 0;}
+.boxing_layout.mgm .gray_box .img_box.action {animation:rollIn .65s forwards ease-in-out; -webkit-animation:rollIn .65s forwards ease-in-out;}
+// wobble, zoomIn
+.boxing_layout.mgm .gray_box p {font-size:16px;}
+.boxing_layout.mgm .gray_box .tit {margin-top:15px; color:$clear_blue; font-weight:bold;}
+.boxing_layout.mgm .gray_box .txt {margin-top:7px; color:$brownish_grey; line-height:22px; word-break: keep-all;}
+.boxing_layout.mgm .flex_wrap .item {display:block; float:none;}
+.boxing_layout.mgm hr {display: block; margin:30px 0 -2px; border: none; border-top: 1px dashed #eee; width: 100%;}
+
+
+/* 2019.05.17 Thigh5적금 이벤트 상세 */
+.hight5{padding:10px 0 0;}
+.hight5 .event_box{padding:0 20px;}
+.hight5 .event_box .dot_line{display:block;content:"";width:100%;height:1px;margin:38px 0 0 0;text-indent:-9999px;font-size:0;background: url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size: 18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.hight5 .event_tit{margin-top:42px;}
+.hight5 .event_tit .title{@include font(20px);}
+.hight5 .event_tit .title > strong{display:block;margin-top:7px;}
+.hight5 .event_tit .title .bold em{color:$reddish_orange;}
+.hight5 .event_tit .title .bold.color_g em{color:#00b786;word-break:keep-all;}
+.hight5 .event_tit .title .bold em mark{background:none;color:$reddish_orange;letter-spacing:0;font-family:'AppleSDGothicNeo-Bold';}
+.hight5 .event_tit .title .bold.color_g em mark{color:#00b786;}
+.hight5 .event_tit p{margin-top:2px;@include font(16px);line-height:22px;color:$brownish_grey;}
+.hight5 .event_tit .images{padding: 0px 14.5%;margin-top:23px;text-align:center;}
+.hight5 .event_tit .images img{display:block;vertical-align:top;}
+.hight5 .event_info {padding:0;}
+.hight5 .event_info dt:first-child{margin-top:25px;} 
+.hight5 .event_info dt{margin-top:20px;line-height:22px;}
+.hight5 .event_info .letter_0{letter-spacing:0;}
+.hight5 .event_info .indent.letter_0 .clear{letter-spacing:-1px;}
+.hight5 .event_info .indent.end{color:#c8c8c8;}
+.hight5 .event_info .indent{margin-top:5px;font-family:'AppleSDGothicNeo-Light';line-height:22px;text-indent:-10px;word-break: keep-all;}
+.hight5 .event_info .indent .ft_r{font-family:'AppleSDGothicNeo-Regular';}
+.hight5 .event_info .indent .ft_m{font-family:'AppleSDGothicNeo-Medium';}
+.hight5 .event_info .indent .num em{font-family: 'LatoL';}
+.hight5 .event_info .indent br{display:none;}
+.hight5 .info_type{margin-top:20px;}
+.hight5 .info_type li:first-child{margin-top:0;}
+.hight5 .info_type li{font-size:16px;line-height:22px;padding-left:16px;text-indent:-16px;margin-top:5px;color:$brownish_grey;word-break:keep-all;}
+.hight5 .info_type li:before{content: '※';vertical-align: inherit;font-family: "Dotum", "Gulim";line-height:22px; padding-right: 3px;}
+.hight5 .sec_account_info {margin-top:38px;background:$white_four;padding:38px 20px;}
+.hight5 .sec_account_info .event_info dt{margin-top:0;}
+
+/* 2019.10.24 DGB + KDB Thigh5적금 이벤트 상세 */
+.dgbkdbhight5{padding:10px 0 0;}
+.dgbkdbhight5 .event_box{padding:0 20px;}
+.dgbkdbhight5 .event_box .dot_line{display:block;content:"";width:100%;height:1px;margin:38px 0 0 0;text-indent:-9999px;font-size:0;background: url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size: 18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.dgbkdbhight5 .event_tit{margin-top:44px;}
+.dgbkdbhight5 .event_tit .title{@include font(20px);}
+.dgbkdbhight5 .event_tit .title > strong{display:block;margin-top:0;}
+.dgbkdbhight5 .event_tit .title .bold .color_blue{color:#278df5;font-weight:bold;}
+.dgbkdbhight5 .event_tit .title .bold.color_g em{color:#00b786;word-break:keep-all;}
+.dgbkdbhight5 .event_tit .title .bold em mark{background:none;color:#278df5;letter-spacing:0;}
+.dgbkdbhight5 .event_tit .title .bold.color_g em mark{color:#00b786;}
+.dgbkdbhight5 .event_tit p{margin-top:2px;@include font(16px);line-height:22px;color:$brownish_grey;}
+.dgbkdbhight5 .event_tit .images{padding: 0px 9.375%;margin-top:26px;text-align:center;}
+.dgbkdbhight5 .event_tit .images img{display:block;vertical-align:top;}
+.dgbkdbhight5 .event_info {padding:0;}
+.dgbkdbhight5 .event_info dt:first-child{margin-top:27px;} 
+.dgbkdbhight5 .event_info dt{margin-top:20px;line-height:22px;}
+.dgbkdbhight5 .event_info .letter_0{letter-spacing:0;}
+.dgbkdbhight5 .event_info .indent.letter_0 .clear{letter-spacing:-1px;}
+.dgbkdbhight5 .event_info .indent.end{color:#c8c8c8;}
+.dgbkdbhight5 .event_info .indent:first-child{margin-top:8px;}
+.dgbkdbhight5 .event_info .indent{margin-top:8px;font-family:'AppleSDGothicNeo-Light';line-height:22px;text-indent:-10px;word-break: keep-all;}
+.dgbkdbhight5 .event_info .indent .light{font-family: 'LatoL';}
+.dgbkdbhight5 .event_info .indent .light a{position:relative;top:-2px;color:#666;}
+.dgbkdbhight5 .event_info .indent .ft_r{font-family:'AppleSDGothicNeo-Regular';}
+.dgbkdbhight5 .event_info .indent .ft_m{font-family:'AppleSDGothicNeo-Medium';}
+.dgbkdbhight5 .event_info .indent .num em{font-family: 'LatoL';letter-spacing:0;}
+.dgbkdbhight5 .info_type{margin-top:23px;}
+.dgbkdbhight5 .info_type li:first-child{margin-top:0;}
+.dgbkdbhight5 .info_type li{font-size:16px;line-height:22px;padding-left:16px;text-indent:-16px;margin-top:5px;color:$brownish_grey;word-break:keep-all;}
+.dgbkdbhight5 .info_type li:before{content: '※';vertical-align: inherit;font-family: "Dotum", "Gulim";line-height:22px; padding-right: 3px;}
+.dgbkdbhight5 .sec_account_info {margin-top:38px;background:$white_four;padding:38px 20px;}
+.dgbkdbhight5 .sec_account_info .event_info dt{margin-top:0;}
+
+/* 2019.10.24 DGB + KDB Thigh5적금 이벤트 상세 */
+.kdbhight5{padding:10px 0 0;}
+.kdbhight5 .event_box{padding:0 20px;}
+.kdbhight5 .event_box .dot_line{display:block;content:"";width:100%;height:1px;margin:38px 0 0 0;text-indent:-9999px;font-size:0;background: url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size: 18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.kdbhight5 .event_tit{margin-top:44px;}
+.kdbhight5 .event_tit .title{@include font(20px);}
+.kdbhight5 .event_tit .title > strong{display:block;margin-top:0;}
+.kdbhight5 .event_tit .title .bold .color_r{color:#ec1940;font-weight:bold;}
+.kdbhight5 .event_tit .title .bold.color_g em{color:#00b786;word-break:keep-all;}
+.kdbhight5 .event_tit .title .bold em mark{background:none;color:#ec1940;letter-spacing:0;}
+.kdbhight5 .event_tit .title .bold.color_g em mark{color:#00b786;}
+.kdbhight5 .event_tit p{margin-top:2px;@include font(16px);line-height:22px;color:$brownish_grey;}
+.kdbhight5 .event_tit .images{padding: 0px 18.91%;margin-top:26px;text-align:center;}
+.kdbhight5 .event_tit .images img{display:block;vertical-align:top;}
+.kdbhight5 .event_info {padding:0;}
+.kdbhight5 .event_info dt:first-child{margin-top:27px;} 
+.kdbhight5 .event_info dt{margin-top:20px;line-height:22px;}
+.kdbhight5 .event_info .letter_0{letter-spacing:0;}
+.kdbhight5 .event_info .indent.letter_0 .clear{letter-spacing:-1px;}
+.kdbhight5 .event_info .indent.end{color:#c8c8c8;}
+.kdbhight5 .event_info .indent:first-child{margin-top:8px;}
+.kdbhight5 .event_info .indent{margin-top:8px;font-family:'AppleSDGothicNeo-Light';line-height:22px;text-indent:-10px;word-break: keep-all;}
+.kdbhight5 .event_info .indent .light{font-family: 'LatoL';letter-spacing:0;}
+.kdbhight5 .event_info .indent .light a{position:relative;top:-2px;color:#666;}
+.kdbhight5 .event_info .indent .ft_r{font-family:'AppleSDGothicNeo-Regular';}
+.kdbhight5 .event_info .indent .ft_m{font-family:'AppleSDGothicNeo-Medium';}
+.kdbhight5 .event_info .indent .num em{font-family: 'LatoL';}
+.kdbhight5 .info_type{margin-top:23px;}
+.kdbhight5 .info_type li:first-child{margin-top:0;}
+.kdbhight5 .info_type li{font-size:16px;line-height:22px;padding-left:16px;text-indent:-16px;margin-top:5px;color:$brownish_grey;word-break:keep-all;}
+.kdbhight5 .info_type li:before{content: '※';vertical-align: inherit;font-family: "Dotum", "Gulim";line-height:22px; padding-right: 3px;}
+.kdbhight5 .sec_account_info {margin-top:38px;background:$white_four;padding:38px 20px;}
+.kdbhight5 .sec_account_info .event_info dt{margin-top:0;}
+
+@keyframes movingTop {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-500px);}
+}
+
+@keyframes lighting {
+    0%{opacity:0;}
+    50%{opacity:1; transform:scale(1)}
+    100%{opacity:0;}
+}
+
+@keyframes movingTail {
+    0%   {transform:rotate(-15deg);}
+    50% {transform:rotate(20deg);}
+    100% {transform:rotate(-15deg);}
+}
+
+@media screen and (max-width:768px){
+	.hight5 .event_info .indent br{display:block;}
+    .hight5 .info_type li br{display:block;}
+    .hight5 .info_type li br.spacer{display:none;}
+    .dgbkdbhight5 .event_info .indent br{display:block;}
+    .dgbkdbhight5 .event_info .indent .spacer{display:block;}
+    .kdbhight5 .event_info .indent br{display:block;}
+    .kdbhight5 .event_info .indent .spacer{display:block;}
+}
+@media screen and (max-width:320px){
+	.hight5 .event_info .indent br{display:none;}
+	.hight5 .event_info .indent br.spacer{display:block;}
+    .hight5 .info_type li br{display:block;}
+    .hight5 .info_type li br.spacer{display:block;}
+    .dgbkdbhight5 .event_info .indent br{display:none;}
+    .kdbhight5 .event_info .indent br{display:none;}
+
+}

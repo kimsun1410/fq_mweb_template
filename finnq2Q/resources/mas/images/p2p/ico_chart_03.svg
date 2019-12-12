@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="65px" viewBox="0 0 74 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>4FCACA31-29B0-444C-BED1-F213F3BF30A6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="2" y="3" width="64" height="49"></rect>
+        <path d="M22.9438784,15.7938787 L22.9438784,1.47764677 C30.704593,1.77278545 36.9649716,8.03316403 37.2601103,15.7938787 L22.9438784,15.7938787 Z" id="path-2"></path>
+        <path d="M0,7.00296986 C0,7.5536144 0.452212088,8 1.00071311,8 L66.9992869,8 C67.5519655,8 68,7.54696369 68,7.00296986 L68,0.997030139 C68,0.446385598 67.5477879,0 66.9992869,0 L1.00071311,0 C0.448034522,0 0,0.453036308 0,0.997030139 L0,7.00296986 Z" id="path-3"></path>
+    </defs>
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="P/IMG/P2P/chart06">
+            <g id="Group-2" transform="translate(3.000000, 0.000000)">
+                <rect id="Rectangle-21" fill="#222222" transform="translate(34.500000, 53.000000) rotate(90.000000) translate(-34.500000, -53.000000) " x="31" y="52" width="7" height="2"></rect>
+                <g id="Rectangle-2">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#222222" stroke-width="2" x="3" y="4" width="62" height="47"></rect>
+                </g>
+                <g id="Page-1" transform="translate(21.000000, 12.000000)">
+                    <path d="M20.6515391,31.3657397 C13.3836774,31.3657397 7.47058824,25.4526506 7.47058824,18.1847889 C7.47058824,11.1089106 13.0753578,5.31731538 20.0784543,5.01587277 L20.0784543,18.7578737 L33.8204552,18.7578737 C33.5190126,25.7609702 27.7274174,31.3657397 20.6515391,31.3657397" id="Fill-1" stroke="#222222" stroke-width="2" fill="#EEEEEE"></path>
+                    <g id="Fill-5">
+                        <use fill="#FFDB15" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <path stroke="#222222" stroke-width="2" d="M23.9438784,14.7938787 L36.1825255,14.7938787 C35.4571035,8.38505237 30.3527047,3.28065359 23.9438784,2.55523161 L23.9438784,14.7938787 Z"></path>
+                    </g>
+                </g>
+                <g id="Path">
+                    <use fill="#EEEEEE" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <path stroke="#222222" stroke-width="2" d="M1,7.00296986 C1,6.99842099 1.00158941,7 1.00071311,7 L66.9992869,7 C66.9971821,7 67,6.99717949 67,7.00296986 L67,0.997030139 C67,1.00157901 66.9984106,1 66.9992869,1 L1.00071311,1 C1.00281794,1 1,1.00282051 1,0.997030139 L1,7.00296986 Z"></path>
+                </g>
+                <polyline id="Page-1" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="14 25 20.815 25 25.926 35 35 35"></polyline>
+                <rect id="Rectangle" fill="#222222" x="0" y="50" width="68" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill="#731AED" transform="translate(15.250000, 20.125000) rotate(90.000000) translate(-15.250000, -20.125000) " x="13.125" y="19.125" width="4.25" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill="#731AED" transform="translate(18.250000, 20.125000) rotate(90.000000) translate(-18.250000, -20.125000) " x="16.125" y="19.125" width="4.25" height="2" rx="1"></rect>
+            </g>
+            <circle id="Oval-2" stroke="#222222" stroke-width="2" fill="#FFFFFF" cx="37.5" cy="60.5" r="3.5"></circle>
+        </g>
+    </g>
+</svg>

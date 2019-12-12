@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>sortable</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+	<style type="text/css">
+		#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+		#sortable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; border:1px solid skyblue}
+		#draggable { width: 150px; height: 150px; padding: 0.5em; border:1px solid pink}
+	</style>  
+</head>
+<body>
+	<!-- contents.js 안에 jQuery UI - v1.12.1, jQuery UI Touch Punch 0.2.3 추가 되어있음 -->
+
+	<ul id="sortable">
+		<li class="ui-state-default">Item 1</li>
+		<li class="ui-state-default">Item 2</li>
+		<li class="ui-state-default">Item 3</li>
+		<li class="ui-state-default">Item 4</li>
+		<li class="ui-state-default">Item 5</li>
+		<li class="ui-state-default">Item 6</li>
+		<li class="ui-state-default">Item 7</li>
+	</ul>
+
+	<div id="draggable">
+	  <p>Drag me around</p>
+	</div>
+
+	<script src="../../libs/jquery-2.2.4.min.js"></script>
+	<script src="../../libs/ui.js"></script>
+	<script src="../../libs/contents.js"></script>
+	<script>
+	$(function(){
+		$("#sortable").sortable();
+		$("#draggable").draggable();
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+
+.market .sec_head{background:$white;}
+.account_info {}
+.account_info .money_total {color:$purply_blue;}
+
+
+.loan-list-wrap {padding-bottom:45px;}
+.loan-list {padding:0 20px;}
+.loan-list > li {position:relative; padding:26px 20px; margin-top:15px; background-color:#fff; box-shadow: 0px 2px 12px 2px #eee; border-radius:8px;}
+.loan-list.untact > li {margin-top:20px;}
+.loan-list > li:first-of-type {margin-top:0;}
+.loan-list > li .bank-logo {width:90px; height:24px; text-indent:-999em; overflow:hidden; background-repeat:no-repeat; background-position:50% 50%; background-size:100% auto;}
+.loan-list > li .bank-logo.hanabank {background-image:url(../images/finnqmarket/img_market_hanabank.png);}
+.loan-list > li .bank-logo.kdbbank {background-image:url(../images/finnqmarket/img_market_kdbbank.png);}
+.loan-list > li .bank-logo.peoplefund {background-image:url(../images/finnqmarket/img_market_peoplefund.png);}
+.loan-list > li .bank-logo.kjbank {background-image:url(../images/finnqmarket/img_market_kjbank.png);}
+.loan-list > li .bank-logo.welcomebank {background-image:url(../images/finnqmarket/img_market_welcomebank.png);}
+.loan-list > li .bank-logo.hankuk {background-image:url(../images/finnqmarket/img_market_hankuk.png);}
+.loan-list > li .bank-logo.citibank {background-image:url(../images/finnqmarket/img_market_citibank.png);}
+.loan-list > li .loan-detail-info {margin-top:13px; overflow:hidden;}
+.loan-list > li .loan-detail-info .loan {font-size:16px;}
+.loan-list > li .loan-detail-info .min {float:left; color:#731aed;}
+.loan-list > li .loan-detail-info .max {float:right; color:#999;}
+.loan-list > li .loan-title {font-size:18px; line-height:22px; color:#222; font-weight:bold;}
+.loan-list > li .loan-title span {display:block; font-weight:normal; font-family:"AppleSDGothicNeo-Light";}
+.loan-list > li .loan-title span .num {font-family:"LatoL" !important; }
+.loan-list > li .btn-wrap {margin:16px 0 4px; overflow:hidden;}
+.loan-list > li .btn-wrap .btn {display:inline-block; float:right; border-radius:4px; height:34px; box-sizing:border-box; line-height:34px; color:#fff; font-size:14px; text-align:center; background-color:#731aed; width:calc(100% - 100px)}
+.loan-list > li .btn-wrap .btn.white {color:#222; border:1px solid #c8c8c8; background-color:#fff; line-height:32px;}
+.loan-list > li .btn-wrap .btn:first-of-type {float:left; width:90px; background-color:#eee; color:#666;}
+
+.loan-list > li.recomend {padding:23px 20px 30px;background:url(../images/finnqmarket/bg_market_won.png) no-repeat right bottom; background-size:114px 80px;}
+.loan-list > li.recomend .loan-title {font-weight:normal;}
+.loan-list > li.recomend .loan-title {font-size:16px; line-height:28px; color:#222;}
+.loan-list > li.recomend .loan-title strong {font-size:28px; font-weight:bold;}
+.loan-list > li.recomend .btn-apply {display:inline-block; margin-top:13px; padding:8px 25px 10px; font-size:14px; font-weight:bold; color:#fff; text-align:center; background-color:#731aed; border-radius:4px;}
+.loan-list > li.recomend .loan-detail-info .max {float:left; margin-left:20px; color:#731aed;}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>09신용관리_05연체및연대보증_02연대보증_FIAA05Z09</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_dna.css" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 : FIAA05Z09 -->
+	<div id="contents" class="finance_dna">
+
+		<section class="sec_space10">
+			<!-- sec_head -->
+			<div class="sec_head bg_purply">
+				<div class="info_box02">
+					<dl>
+						<dt>연체</dt>
+						<dd>10</dd>
+					</dl>
+					<dl class="border">
+						<dt>연대보증</dt>
+						<dd>7</dd>
+					</dl>
+				</div>
+
+				<!-- txt_ico_guide -->
+				<div class="txt_ico_guide mar_t28">
+					<p class="indent in_sec"><i class="ico ico_woring_info02"></i>신용평가사(KCB)에서 제공하는 데이터이며,<br>산정기준에 따라 핀크의 분석 데이터와 차이가 있을 수 있습니다.</p>
+				</div>
+			</div>
+
+			
+
+			<!-- sec_tab -->
+			<div class="sec_tab">
+				<div class="tab_wrap set_type2"> <!-- 2개 -->
+					<span class="tab"><a href="#none">연체</a></span>
+					<span class="tab on"><a href="#none">연대보증</a></span>
+				</div>
+			</div>
+
+			<!-- sec_history -->
+			<div class="sec_history">
+				<div class="list_wrap">
+					<dl>
+						<dt>
+							<!-- 말줄임표 필요한 요소에 class : redution 추가 -->
+							<strong class="redution">KEB하나은행 보증</strong>
+							<div><em class="cash bold">120,000</em><span >원</span></div>
+						</dt>
+						<dd>
+							<div><strong class="date">2018.10.17</strong></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<!-- 말줄임표 필요한 요소에 class : redution 추가 -->
+							<strong class="redution">신한은행 보증</strong>
+							<div><em class="cash bold">120,000</em><span >원</span></div>
+						</dt>
+						<dd>
+							<div><strong class="date">2018.10.17</strong></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<!-- 말줄임표 필요한 요소에 class : redution 추가 -->
+							<strong class="redution">KEB하나은행 보증</strong>
+							<div><em class="cash bold">120,000</em><span >원</span></div>
+						</dt>
+						<dd>
+							<div><strong class="date">2018.10.17</strong></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<!-- 말줄임표 필요한 요소에 class : redution 추가 -->
+							<strong class="redution">우리은행 보증</strong>
+							<div><em class="cash bold">120,000</em><span >원</span></div>
+						</dt>
+						<dd>
+							<div><strong class="date">2018.10.17</strong></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<!-- 말줄임표 필요한 요소에 class : redution 추가 -->
+							<strong class="redution">우리은행 보증</strong>
+							<div><em class="cash bold">120,000</em><span >원</span></div>
+						</dt>
+						<dd>
+							<div><strong class="date">2018.10.17</strong></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<!-- 말줄임표 필요한 요소에 class : redution 추가 -->
+							<strong class="redution">우리은행 보증</strong>
+							<div><em class="cash bold">120,000</em><span >원</span></div>
+						</dt>
+						<dd>
+							<div><strong class="date">2018.10.17</strong></div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<!-- 말줄임표 필요한 요소에 class : redution 추가 -->
+							<strong class="redution">우리은행 보증</strong>
+							<div><em class="cash bold">120,000</em><span >원</span></div>
+						</dt>
+						<dd>
+							<div><strong class="date">2018.10.17</strong></div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- more_loading -->
+			<div class="more_loading"></div>
+		</section>
+		<!-- 하단 붙임 -->
+
+
+
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//탭 Fixed 2019-01-24 ock
+	function tabFixed() {
+		var topH = $(".sec_head").outerHeight();
+		var ViewH = $("section").outerHeight();
+		$(window).scroll(function(){
+		  if(ViewH >= 800) {
+			  var sticky = $('.sec_tab'),
+				  scroll = $(window).scrollTop();
+
+			if (scroll >= topH) {
+				sticky.addClass('fixed');
+				$('.sec_history').css('margin-top',56);
+			} else {
+				sticky.removeClass('fixed');
+				$('.sec_history').css('margin-top',-1);
+			}
+		  }
+		});
+	} tabFixed();
+	
+});
+</script>
+</body>
+</html>

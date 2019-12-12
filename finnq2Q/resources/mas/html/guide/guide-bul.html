@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Guide Index</title><!-- 페이지별로 다르게 써주세요 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+
+</head>
+<body>
+<div class="Wrap">
+	
+
+	
+	<div class="Contents">
+		<section>
+			<div class="sec_desc bul_guide">
+				<!-- star_type : 한줄 일때 12px 들여쓰기 있는것  -->
+				<p class="star_type indent">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</p>
+			</div>
+
+			<div class="sec_desc bul_guide">
+				<!-- star_type : 한줄 일때 12px 들여쓰기 없는것  -->
+				<p class="star_type">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</p>
+			</div>
+
+			<div class="sec_desc bul_guide">
+				<!-- dash_type : 한줄 일때 12px 들여쓰기 있는것  -->
+				<p class="dash_type">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</p>
+			</div>
+
+			<div class="sec_desc bul_guide">
+				<!-- dash_type : 한줄 일때 12px 들여쓰기 없는것  -->
+				<p class="dash_type">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</p>
+			</div>
+
+			<div class="sec_desc bul_guide">
+				<!-- dash_type : 여러 일때 14px 들여쓰기 있는것  -->
+				<ul>
+					<li class="dash_type indent">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</li>
+					<li class="dash_type indent">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</li>
+				</ul>
+			</div>
+
+
+			<div class="sec_desc bul_guide">
+				<!-- dash_type : 여러 일때 14px 들여쓰기 없는것  -->
+				<ul>
+					<li class="dash_type">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</li>
+					<li class="dash_type">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</li>
+				</ul>
+			</div>
+
+			<div class="sec_desc bul_guide">
+				<!-- dash_type : 여러 일때 dl 타입 14px 들여쓰기 없는것  -->
+				<dl>
+					<dt>제목</dt>
+					<dd class="dash_type">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</dd>
+					<dd class="dash_type">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</dd>
+				</ul>
+			</div>
+
+				<div class="sec_desc bul_guide">
+				<!-- dash_type : 여러 일때 dl 타입 14px 들여쓰기 있는것  -->
+				<dl>
+					<dt>제목</dt>
+					<dd class="dash_type indent">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</dd>
+					<dd class="dash_type indent">박보검님의 Finnq 주계좌번호가 클립보드에 복사되었습니다. 주거래은행에서 Finnq주계좌로 이체하세요!</dd>
+				</ul>
+			</div>
+
+			
+
+
+		</section>
+
+
+<pre>
+
+/* 전체 상단마진, 백그라운드 등은 sec_desc 에서 다시 정의해주면 됨 */
+/* 폰트 컬러 / 사이즈는 sec_desc > 타고 들어가서 다시 정의해주면 됨 */
+/* before 공통 */
+.bul_guide p:before,
+.bul_guide li:before,
+.bul_guide dd:before{display:inline-block;clear:both;padding-right:5px;text-indent:0}
+/* 블릿 모양 */
+.bul_guide .dash_type:before{content:'-'; }
+.bul_guide .star_type:before{content:'*'; }
+.bul_guide .dot_type:before{content:'●'; }
+/* 사이즈 정의 : 한줄일때 p 사용 12 / 여러줄일때 li, dd 사용14 */
+.bul_guide p, .bul_guide p:before{@include font(12px);}
+.bul_guide li, .bul_guide li:before,
+.bul_guide dd, .bul_guide dd:before{@include font(14px);}
+/* 들여쓰기 정의 */
+.bul_guide .indent{text-indent:-9px;padding-left:9px}
+/* 여러줄일때 상단 마진 */
+.bul_guide ul li{margin-top:10px}
+.bul_guide ul li:first-child{margin-top:0}
+.bul_guide dl dt{}
+.bul_guide dl dd{margin-top:10px}
+/* .bul_guide dl dd:first-child{margin-top:0} */
+
+
+</pre>
+
+		
+		
+
+
+
+		
+
+
+
+
+
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+
+/* var inp_focus = function(_target) {
+	$(_target).find('input[data-name=inpFocus], textarea[data-name=inpFocus]').each(function(){
+		var placeText = $(this).attr("placeholder");
+			$(this).focus(function(){
+				$(this).addClass('inp_focus').attr('placeholder','');
+			}).blur(function(){
+				$(this).removeClass('inp_focus').attr('placeholder',placeText);
+		});
+	});
+};
+
+inp_focus($('.flex_wrap')); */
+		
+
+$(document).ready(function(){
+	//토글매뉴
+	$('.list_expend .subject').on('click',function(){
+		var detail= $(this).next();
+		var hh=detail.find(".con").height()+87;
+		if ($(this).hasClass('on'))
+		{
+			$(this).removeClass('on');
+			detail.removeClass('on');
+			detail.animate({height:0,overflow:"hidden"},300);
+		} else {
+			$(this).addClass('on');
+			detail.addClass('on');
+			detail.animate({height:hh,overflow:"visible"},300);
+		}
+	});
+	
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>02T핀크적금_13적금상세내역_01개설_web_MASM02S03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- MASM02S03 -->
+    <div id="contents"><!-- //add_sticky 하단 버튼 있는 경우 -->
+        <section class="fqsave_detail dgb_wrap">
+
+            <div class="sec_head">
+                <div class="account_info">
+                    <!-- <p class="update">
+                        업데이트 오늘<em class="num">13:20</em>
+                        <a href="#none"><i class="ico ico_reload"><span class="blind">Refresh</span></i></a>
+                    </p> -->
+                    <div class="bank_data">
+                        <strong>DGB대구</strong><em class="num">0000369575912</em>
+                    </div>
+                    <div class="money_total">
+                        <em class="cash bold">600,000</em><span>원</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sec_insinfo"><!-- installment info, 적금상세정보 -->
+                <div class="ins_info add_dotline">
+                    <ul>
+                        <li>
+                            <div class="tit">예상 납입금액</div>
+                            <div class="money_total">
+                                <em class="num">500,000</em>원
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">예상 이자 (세전)</div>
+                            <div class="money_total">
+                                <strong><em class="num">11,000</em>원</strong>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">예상 캐시백</div>
+                            <div class="money_total">
+                                <strong><em class="num">11,000</em>원</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="payment_step step24"> <!-- 24개월일 경우 step24로 클래스 변경 -->
+
+                    <div class="bar progress_wrap">
+                        <div class="_progress" data-value="24" id="payment_step"><!-- data-value 는 최대값 -->
+                            <i class="_bar style_01" data-value="6" data-rate="24"><!-- data-value는 현재값, data-rate 는 최대값 -->
+                                <em class="arrow"></em>
+                            </i>
+                            <div class="step_tooltip type_2">
+                                <p class="count"><em class="num"></em>회 납입</p>
+                                <p class="total"><em class="num">6</em>회</p>
+                            </div>
+
+                            <div class="line step24">
+                                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- //payment_step -->
+            </div><!-- //sec_insinfo -->
+            <div class="sec_history new">
+                <dl>
+                    <dt>
+                        <strong>입금</strong>
+                        <div><em class="cash">150,000</em><span>원</span></div>
+                    </dt>
+                    <dd>
+                        <div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+                        <div><em class="cash">600,000</em><span>원</span></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <strong>입금</strong>
+                        <div><em class="cash">150,000</em><span>원</span></div>
+                    </dt>
+                    <dd>
+                        <div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+                        <div><em class="cash">600,000</em><span>원</span></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <strong>입금</strong>
+                        <div><em class="cash">150,000</em><span>원</span></div>
+                    </dt>
+                    <dd>
+                        <div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+                        <div><em class="cash">600,000</em><span>원</span></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <strong>예금 신규</strong>
+                        <div><em class="cash">150,000</em><span>원</span></div>
+                    </dt>
+                    <dd>
+                        <div><strong class="date">2018.01.10</strong><strong class="date mar_l5">02:50</strong></div>
+                        <div><em class="cash">600,000</em><span>원</span></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <strong>T핀크적금 시작<em class="tooltip">만나서 반가워요 :)</em></strong>
+                    </dt>
+                    <dd>
+                        <div><strong class="date">2017.10.10</strong><strong class="date mar_l5">02:50</strong></div>
+                        <div></div>
+                    </dd>
+                </dl>
+            </div><!-- //sec_history -->
+
+
+        </section>
+        <!-- 하단 붙임 -->
+
+
+    </div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('#payment_step').hide();
+    setTimeout(function(){
+        $('#payment_step').show();
+        drawProgress('#payment_step'); //2018-03-14 그래프 추가
+    }, 200)
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>적금 설정 | 비상금 대출</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kdb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="add_sticky">
+		<div class="sec_ows_head finnq">
+			<button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button>
+			<h2 class="ows_title">KDB X T high<em class="num">5</em> 적금</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section>
+
+			<div class="sec_step">
+				<!--
+					1) 활성화 단계에 li에 클래스 "on"
+						ex) <li class="on">
+					2) 진행 완료된 step은 클래스 "complete" 추가
+						ex) <li class="on complete">
+				 -->
+				<ol>
+					<li class="on complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>2</strong></i>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2 class="accent_txt normal">적금설정</h2>
+			</div>
+
+			<div class="kdb_loan_option">
+				<article>
+					<div class="detail_box">
+						<div class="total split">
+							<span class="txt">예상금리</span>
+							<span class="desc">연 <em class="num bold">5.0%</em></span>
+						</div>
+						<ul class="split_list">
+							<li>
+								<span class="txt">기본금리</span>
+								<span class="desc">연 <em class="num bold">2.0%</em></span>
+							</li>
+							<li>
+								<span class="txt">우대금리 I</span>
+								<span class="desc">연 <em class="num bold">2.0%</em></span>
+								<p class="add_txt">마케팅 이용 동의 &amp; SKT 통신사 유지</p>
+							</li>
+							<li>
+								<span class="txt">우대금리 II</span>
+								<span class="desc">연 <em class="num bold">1.0%</em></span>
+								<p class="add_txt">T플랜 에센스(<em class="num">69,000</em>원) 이용</p>
+							</li>
+						</ul>
+					</div>
+				</article>
+
+				<!-- 사용자의 확정된 예상금리 정보_연 2.0% 적용화면 -->
+				<article>
+					<div class="detail_box">
+						<div class="total split">
+							<span class="txt">예상금리</span>
+							<span class="desc">연 <em class="num bold">2.0%</em></span>
+						</div>
+						<ul class="split_list add_benefit"><!-- 클래스 : add_benefit 추가 -->
+							<li>
+								<span class="txt">기본금리</span>
+								<span class="desc">연 <em class="num">2.0%</em></span>
+							</li>
+							<li>
+								<span class="txt">마케팅 이용 동의 시</span>
+								<span class="desc">연 <em class="num">2.0%</em> 추가</span>
+							</li>
+							<li>
+								<span class="txt">통신비 자동이체 신청 시</span>
+								<span class="desc">연 <em class="num">1.0%</em> 추가</span>
+							</li>
+						</ul>
+					</div>
+				</article>
+				<!-- //사용자의 확정된 예상금리 정보_연 2.0% 적용화면 -->
+
+				<article>
+					<div class="split">
+						<p class="subject">적립 방법</p>
+						<p class="subject_info">자유 적립식</p>
+					</div>
+					<p class="star_type">월 최대 <em class="num">20</em>만원까지 횟수 제한없이 추가 납입 가능<br> (최소납입금액 : <em class="num">1</em>만원/회)</p>
+				</article>
+
+
+				<!-- 19.09.18 수정 : 그루핑 수정으로 인한 마크업 변경 / 최초 납입금 추가 -->
+				<article>
+					<p class="subject">가입기간</p>
+					<!-- 19.09.24 수정 -->
+					<ul class="tab_purple up_two">
+						<li class="on"><a href="#none"><em class="num">1</em>년</a></li>
+						<li class=""><a href="#none"><em class="num">2</em>년</a></li>
+					</ul>
+					<!-- //19.09.24 수정 -->
+
+					<!-- 19.09.18 수정 : 최초 납입금 추가 -->
+					<div class="mgt30">
+						<p class="subject">최초 납입금</p>
+						<div class="item input_area on">
+							<span class="cont bold">
+								<!-- label for값과 id 매칭 / 10,000원 디폴트 값 -->
+								<input type="number" data-name="inpFocus" class="comma_wonhan" id="insert_won1" value="10000">
+								<label for="insert_won1" class="placeholder">최소 1만원 단위</label>
+								<i class="guide_txt">원</i>
+							</span>
+							<p class="remark type2 hide">최초 납입금을 입력해주세요</p>
+							<p class="guide_thumb_text">최대 <em class="num">20</em>만원</p>
+						</div>
+					</div>
+					<!-- //19.09.18 수정 : 최초 납입금 추가 -->
+
+					<div class="mgt10"><!-- 19.09.18 그루핑 추가 -->
+
+						<p class="subject">적금 자동이체</p>
+
+						<!-- 19.09.18 수정 : DEFAULT 값 수정 -->
+						<ul class="tab_purple up_two transfer">
+							<li class="on"><a href="#none">신청안함</a></li>
+							<li><a href="#none">신청함</a></li>
+						</ul>
+
+						<!-- //19.09.18 수정 -->
+						<div class="input_wrap mgt10 transfer detail"><!-- 19.09.18 수정 : STYLE 삭제-->
+							<div>
+								<div class="item soft_select">
+									<!-- 디폴트 값: 매월 N일(유저가 진입한 날짜) -->
+									<select data-name="inpFocus" class="color_change">
+										<option value="">선택해 주세요</option>
+										<option value="" selected="selected">매월 1일</option>
+										<option value="">매월 2일</option>
+									</select>
+									<p class="remark type2 hide">자동이체 날짜를 선택해 주세요.</p><!-- 에러일때 hide를 빼주세요. -->
+								</div>
+								<div class="item input_area on"><!-- 클래스 on -->
+									<span class="cont bold">
+										<!-- label for값과 id 매칭 / 10,000원 디폴트 값 -->
+										<input type="number" data-name="inpFocus" class="comma_wonhan" id="insert_won1" value="10000">
+										<label for="insert_won1" class="placeholder">최소 1만원 단위</label>
+										<i class="guide_txt">원</i>
+									</span>
+									<p class="remark type2 hide">최소 1만원 이상 1만원 단위로 입력해주세요</p>
+								</div>
+
+								<!-- 에러가 날 경우 -->
+								<!-- 클래스 : inp_error 추가, remark에 hide 삭제  -->
+								<!--
+								<div class="item soft_select inp_error">
+									<select data-name="inpFocus">
+										<option value="">선택해 주세요</option>
+										<option value="">매월 1일</option>
+										<option value="">매월 2일</option>
+									</select>
+									<p class="remark type2">자동이체 날짜를 선택해 주세요.</p>
+								</div>
+								<div class="item input_area inp_error">
+									<span class="cont bold">
+										<input type="number" data-name="inpFocus" class="comma_wonhan" id="insert_won1">
+										<label for="insert_won1" class="placeholder">최소 1만원 단위</label>
+										<i class="guide_txt">원</i>
+									</span>
+									<p class="remark type2 hide">최소 1만원 이상 1만원 단위로 입력해주세요</p>
+								</div>
+								-->
+								<!-- //에러가 날 경우 -->
+
+								<p class="guide_thumb_text">최대 <em class="num">20</em>만원</p>
+							</div>
+
+							<div class="gray_box">
+								<ul class="split_list">
+									<li>
+										<span class="txt bold">총 합계(세전)</span>
+										<span class="desc txt_purple"><em class="num bold">126,000</em>원</span>
+									</li>
+									<li>
+										<span class="txt">예상 원금</span>
+										<span class="desc"><em class="num bold">120,000</em>원</span>
+									</li>
+									<li>
+										<span class="txt">예상 이자(세전)</span>
+										<span class="desc"><em class="num bold">6,000</em>원</span>
+									</li>
+								</ul>
+
+								<p class="star_type mgt30"><em class="num">2019</em>년 <em class="num">9</em>월 <em class="num">1</em>일부터 매월 <em class="num">1</em>일 <em class="num">10,000</em>원 자동이체 진행예정</p>
+
+								<!-- 19.09.18 수정 : 문구 삭제-->
+								<!-- <p class="star_type">이번 달은 적금 상세내역에서 납입 가능</p> -->
+								<!-- //19.09.18 수정 : 문구 삭제-->
+							</div>
+							<!-- //gray_box -->
+							<!-- //mgt30 -->
+						</div>
+						<!-- //transfer_detail -->
+
+						<!-- 19.09.18 수정 : Defaul 노출 -->
+						<div class="mgt30">
+							<p class="subject">출금계좌</p>
+							<div class="item soft_select disabled">
+								<!-- 출금계좌 선택 불가능, 유저가 핀크에서 만든 요구불계좌 자동셋팅 / 출금계좌 박스는 비활성화 -->
+								<select data-name="inpFocus" disabled="disabled">
+									<option value="" selected="selected">KDB산업 123-456-123456</option>
+								</select>
+								<p class="remark type2 hide">출금계좌를 선택해 주세요.</p><!-- 에러일때 hide를 빼주세요. -->
+							</div>
+							<div class="item">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호" class=""><!-- 19.09.18 수정 : placeholder 문구 수정 -->
+								<p class="remark type2 hide">비밀번호를 다시 입력해주세요</p>
+							</div>
+
+							<!-- 클래스 : inp_error 추가, remark에 hide 삭제  -->
+							<!-- 에러가 날 경우 -->
+							<!--
+							<div class="item soft_select disabled">
+								<select data-name="inpFocus" disabled="disabled">
+									<option value="">선택해 주세요</option>
+									<option value="">KDB산업 123-456-123456</option>
+									<option value="">KDB산업 123-456-123456</option>
+								</select>
+								<p class="remark type2">출금계좌를 선택해 주세요.</p>
+							</div>
+							<div class="item inp_error">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호" class="">
+								<p class="remark type2">비밀번호를 다시 입력해주세요.</p>
+							</div>
+							-->
+							<!-- //에러가 날 경우 -->
+						</div>
+						<!-- //19.09.18 수정 : Defaul 노출 -->
+
+						<!-- 19.10.23 수정 : 적금계좌 비밀번호 필드 위치 이동으로 인한 마크업 변경 -->
+						<div class="mgt30">
+							<div class="subject">
+								적금계좌 비밀번호 설정
+								<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap p20" style="display: none;">
+									<p>
+										3자리 이상 연속된 숫자 입력 불가(역순 포함)<br>
+										주민등록번호와 4자리 이상 일치하는 숫자 입력 불가(역순 포함)<br>
+										모든 전화번호와 4자리 이상 일치하는 숫자 입력 불가(역순 포함)
+									</p>
+								</div>
+							</div>
+
+							<!-- 19.10.23 수정 : 하단 체크박스 상단으로 이동 -->
+							<div class="agree_wrap mgt15 mgb10"><!-- 19.10.23 수정 : 클래스 추가 수정 -->
+								<input type="checkbox" id="chkval" name="check_action" class="purple"><label for="chkval" name="check_action"><span>출금계좌와 동일하게 설정</span></label>
+							</div>
+							<!-- 19.10.23 수정 //하단 체크박스 상단으로 이동 -->
+
+							<div class="item">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+							</div>
+							<div class="item">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+								<p class="remark hide">비밀번호를 다시 입력해주세요.</p>
+							</div>
+
+							<!-- 에러가 날 경우 -->
+							<!-- 클래스 : inp_error 추가, remark에 hide 삭제  -->
+							<!--
+							<div class="item inp_error">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 (숫자 4자리)" data-placeholder="비밀번호 (숫자 4자리)" class="">
+							</div>
+							<div class="item inp_error">
+								<input type="password" data-name="inpFocus" placeholder="비밀번호 확인" data-placeholder="비밀번호 확인" class="">
+								<p class="remark type2">비밀번호를 다시 입력해주세요.</p>
+							</div>
+							-->
+							<!-- //에러가 날 경우 -->
+
+						</div>
+						<!-- //19.10.23 수정 : 적금계좌 비밀번호 필드 위치 이동으로 인한 마크업 변경 -->
+
+
+					</div>
+					<!-- //mgt10 -->
+
+				</article>
+				<!-- //19.09.18 수정 : 그루핑 수정으로 인한 마크업 변경 / 최초 납입금 추가 -->
+
+				<article>
+					<ul class="split_list list_desc">
+						<li>
+							<p class="subject">만기 시 해지 방법</p>
+							<p class="txt_purple">자동해지</p>
+						</li>
+						<li>
+							<p class="subject">입금계좌</p>
+							<p class="txt_purple">KDB산업 <em class="num">123-456-123456</em></p>
+						</li>
+					</ul>
+				</article>
+
+				<!--
+					1) 과세부분
+					2) 사용자가 만 65세 이상인 경우에만 해당 영역 노출
+					3) 비노출시 클래스 hide 추가
+					ex) <article class="kdb_account hide">
+				-->
+				<article class="kdb_account input_wrap">
+					<div class="subject">
+						과세 구분
+						<button class="btn_ico ico_circle_help" data-name="open_fp_layer"><span class="blind">도움말</span></button>
+						<div class="layer_wrap p20" style="display: none;">
+							<p>핀크계좌 <strong>잔액이 부족</strong>할 경우, 송금/핀크카드 결제에 한해 부족한 금액의 1만원 단위로 <strong>자동충전하여 거래를 진행</strong>하며, 카드 및 단말기 분실 시에도 자동충전될 수 있습니다.</p>
+						</div>
+					</div>
+
+					<div class="item input_wrap mgt0">
+						<!--
+							탭 비활성화(클릭X) 시 li에 class="disabled" 추가
+							<li class="disabled"><a href="#none">비과세</a></li>
+						-->
+						<ul class="tab_purple up_two option_sel">
+							<li class="on"><a href="#none">일반</a></li>
+							<li class=""><a href="#none">비과세</a></li>
+						</ul>
+						<div class="add_info option_sel detail">
+							<ul class="split_list">
+								<li>
+									<span class="txt">전체 한도</span>
+									<span class="desc"><em class="num bold">6,000,000</em>원</span>
+								</li>
+								<li>
+									<span class="txt">잔여 한도</span>
+									<span class="desc"><em class="num bold">3,000,000</em>원</span>
+								</li>
+								<li class="input_area item">
+									<span class="txt">신청 금액</span>
+									<span class="cont desc">
+										<input type="number" data-name="inpFocus" class="comma_wonhan">
+										<i class="placeholder">0원</i>
+										<i class="guide_txt">원</i>
+									</span>
+									<p class="remark hide">신청 금액을 다시 입력해주세요</p>
+								</li>
+								<!-- 에러가 날 경우 -->
+								<!-- 클래스 : inp_error 추가, remark에 hide 삭제  -->
+								<!-- <li class="input_area item inp_error">
+									<span class="txt">신청 금액</span>
+									<span class="cont desc">
+										<input type="number" data-name="inpFocus" class="comma_wonhan">
+										<label class="placeholder">0원</label>
+										<i class="guide_txt">원</i>
+									</span>
+									<p class="remark">신청 금액을 다시 입력해주세요</p>
+								</li> -->
+							</ul>
+						</div>
+
+						<p class="star_type indent mgt10">만 <em class="num">65</em>세 이상 비과세종합저축 가입 가능</p>
+					</div>
+				</article>
+
+				<article>
+					<p class="subject purple">통신비 자동이체를 신청하면 요금제를 변경해도<br class="ios320 close">
+					연 <em class="num bold">1.0%</em> 우대금리가 제공됩니다.</p>
+
+					<div class="line_cont_division">
+
+						<p class="subject">통신비 자동이체</p>
+						<ul class="tab_purple up_two phone">
+							<li class=""><a href="#none">신청안함</a></li>
+							<li class="on"><a href="#none">신청함</a></li>
+						</ul>
+
+						<div class="phone detail" style="display:block;">
+							<div class="gray_box mgt10">
+								<ul class="split_list">
+									<li>
+										<span class="txt">휴대폰 번호</span>
+										<span class="desc">SKT <em class="num">010-1234-5678</em></span>
+									</li>
+									<li>
+										<span class="txt">출금계좌</span>
+										<span class="desc">KDB산업 <em class="num">123-456-123456</em></span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="agree_wrap mgt20">
+								<input type="checkbox" id="chkval1" name="check_action" class="purple"><label for="chkval1" name="check_action"><span>제3자 정보 제공 동의(핀크)</span></label>
+								<button type="button" class="ico ico_arrow_more2" style="right:0;"><span class="blind">더보기</span></button><!-- 19.09.18 수정 : style 추가 -->
+							</div>
+						</div><!-- //phone detail -->
+
+					</div><!-- //line_cont_division -->
+				</article>
+
+			</div>
+			<!-- //kdb_loan_option -->
+
+			<div class="kdb_loan gray_desc_wrap">
+				<!-- 안내문구 숨김 시 클래스 hide 추가 -->
+				<div class="desc_list">
+					<p class="star_type">정기 청구작업으로 인해 매월 <em class="num">5</em>일 <em class="num">21</em>시~ <em class="num">6</em>일 <em class="num">4</em>시까지 자동이체 신청이 불가합니다.</p>
+					<p class="star_type">은행계좌로 자동이체를 신청 시 자동이체 신청 결과가 금융기관으로부터 영업일 기준 <em class="num">3</em>일 후에 SKT에 반영되오니, 정상적으로 신청되었는지 추후에 반드시 확인하시기 바랍니다.</p>
+					<p class="star_type">매월 <em class="num">5</em>일 이후 자동이체를 신청 시 익월에 반영되므로, 당월에는 자동이체 신청이 적용되지 않을 수 있음을 참고하시기 바랍니다.</p>
+					<p class="star_type">자동이체 해지 시점 및 고객님의 납부방법에 따라 일부 차이가 있을 수 있으니 추가 문의는 SKT고객센터 국번없이 <a href="tel:1599-0011" class="num tel_num">1599-0011</a>(유료) 또는 휴대폰에서 <a href="tel:114" class="num tel_num">114</a>번을 이용해주시기 바랍니다. </p>
+				</div>
+				<div class="kdb_copyright">Provided by KDB <span>산업은행</span></div>
+			</div>
+		</section>
+
+
+		<!-- 과세 구분 툴팁 팝업 -->
+		<div class="modal_wrap fullpop">
+			<div class="modal_content loan-guide-desc">
+
+				<div class="scroll_wrap" style="">
+					<div>
+						<p class="title big"><span class="txt_purple">비과세종합저축</span>이란?</p>
+						<article class="cont-desc">
+							<p class="title">비과세종합저축 가입한도</p>
+							<p class="dash_type">2015년 1월 1일부터 생계형저축은 비과세종합저축으로 통합되었으며, 전 금융기관 합하여 1인당 한도 5천만원까지 비과세됩니다.</p>
+							<p class="dash_type">기존 세금우대종합저축과 생계형저축을 유지하고 있는 경우 5천만원에서 세금우대종합저축과 생계형저축 가입한도를 차감한 금액만큼 가입 가능합니다.</p>
+							<p class="star_type">총 저축금액은 비과세종합저축 설정액까지만 가능합니다.</p>
+						</article>
+
+						<article class="cont-desc">
+							<p class="title">비과세종합저축 가입</p>
+							<p class="dash_type">비과세종합저축 최종가입 여부는 본 계좌개설 신청 후 계좌개설 최종 완료 시점의 비과세종합저축 가입 가능액에 따라 결정되며, 가입 가능액 부족 시 비과세종합저축 가입이 불가능할 수 있습니다.</p>
+							<p class="dash_type">장애인, 독립유공자 및 그 유족 또는 가족, 상이자, 기초생활보장수급자 등의 비과세종합저축 대상자는 계좌개설 신청 전에 영업점에 관련 증빙자료를 제출해야 비과세종합저축으로 가입할 수 있습니다.</p>
+						</article>
+					</div>
+				</div>
+				<button type="button" class="btn_close">닫기</button>
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //과세 구분 툴팁 팝업 -->
+
+		<!-- 입력값이 모두 입력되면 disabled 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+
+	</div><!-- //contents -->
+</div>
+<script type="text/javascript">
+$(function(){
+
+	// 탭 이벤트
+	$('.tab_purple > li > a').on('click', function(event){
+		event.preventDefault();
+
+		var status = $(this).parent().hasClass('disabled'),
+			idx = $(this).parent().index();
+
+		if (status) { return; }
+
+		$(this).parent().addClass('on')
+			.siblings().removeClass('on');
+
+
+		// 적금 자동이체 / 통신비 자동이체 / 과세, 비과세 탭 이벤트 상세
+		var eventTaget = $(this).parents('.tab_purple').attr('class').split(' ')[2];
+		if ( (eventTaget != undefined) || (eventTaget != null) || (eventTaget != '') )
+		{
+
+			if (eventTaget == 'transfer')
+			{
+				if (idx == 1 ) {
+					$('.transfer.detail').show();
+				} else {
+					$('.transfer.detail').hide();
+				}
+			}
+
+			if (idx == 1 ) {
+				$('.'+ eventTaget +'.detail').slideDown();
+			} else {
+				$('.'+ eventTaget +'.detail').slideUp();
+			}
+		}
+	});
+
+	// 신청금액 입력
+	$('.input_area input.comma_wonhan').on('focusin', function(){
+		inputAreaFunc( $(this) );
+		$('.input_area input.comma_wonhan').on('keyup change', function(){
+			inputAreaFunc( (this) );
+		});
+	})
+	.on('focusout', function(){
+		$(this).parents('.input_area').removeClass('active');
+	});
+
+	function inputAreaFunc(_target){
+		var inpVal = $(_target).val().length;
+		if (inpVal > 0) {
+			$(_target).parents('.input_area').addClass('on active');
+		}
+		else {
+			$(_target).parents('.input_area').removeClass('on');
+		}
+	}
+
+	// 툴팁 이벤트
+	$('body').on('click','button[data-name=open_fp_layer]', function(e) {
+
+		$body = $("body");
+		//Contents Size Cal;
+		var winH, docH;
+		winH = $(window).height();
+		docH = $('.modal_wrap > .modal_content').height();
+
+		$('.modal_wrap.fullpop').addClass('visible');
+		if (winH <= docH) {
+			$('.modal_wrap > .modal_content').css({height: docH});
+		} else {
+			$('.modal_wrap > .modal_content').css({height: winH});
+		}
+	});
+
+	$('body').on('click','.modal_wrap .btn_close', function(e) {
+		$('.modal_wrap.fullpop').removeClass("visible");
+		return false;
+	});
+});
+</script>
+</body>
+</html>

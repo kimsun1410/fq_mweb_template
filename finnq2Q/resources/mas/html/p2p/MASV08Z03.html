@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market p2p_wrap add_sticky">
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASV08Z03" data-mtype="fullpop">개인정보 수집이용동의</button></span>
+
+		<!-- MASV08Z03 -->
+		<div id="MASV08Z03" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_MASV08Z03">
+						<div class="agree_details">
+							개인정보 수집이용동의
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //MASV08Z03 -->
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script type="text/javascript">
+<!--
+	$(document).ready(function(){
+		$body = $("body");
+		//Contents Size Cal;
+		var docH, docW;
+		docW = $(window).width();
+		docH = $(window).height();
+
+		//모달팝업
+		/* modal popup */
+
+		$("button.open_modal,a.open_modal").on("click", function(){
+			var $mpop = $(this);
+
+			var $mpopType = $mpop.data("mtype");
+			var $mpopID = "#"+$mpop.data("triger");
+			var $mpopClose = $mpop.data("bgclose");
+			var conH = $($mpopID).find(".modal_content").outerHeight();
+
+			//popup contents height < window height
+			if(conH >= docH || ($mpopType=="fullpop")) {
+				$($mpopID +"> .modal_content").css({
+					height: docH
+				});
+			}else {
+				$($mpopID).addClass("normal");
+			}
+			if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+			switch($mpopType) {
+				case "fullpop":
+					$($mpopID).toggleClass("visible");
+					break;
+				case "doublepop":
+					$($mpopID).addClass("double").toggleClass("visible");
+					break;
+				default:
+					$($mpopID).toggleClass("visible");
+			}
+			return false;
+		});
+		$(".modal_wrap").on("click","button.close_modal", function(){
+			$(this).closest('.modal_wrap').toggleClass("visible");
+			return false;
+		});
+		$(".modal_wrap").on("click", function(e){
+			var status = $(this).data("bgclose");
+			if(!$(".modal_content").has(e.target).length && status ) {
+				if($(this).data("bgclose")) $(this).toggleClass("visible");
+			}
+		});
+	});
+//-->
+</script>
+</body>
+</html>

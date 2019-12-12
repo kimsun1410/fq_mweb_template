@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08해외송금_06송금정보입력2_01_web_</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="orsremt add_sticky no_fixed">
+		<section class="orsremt_from orsremt_info2">
+			<div class="sec_title">
+				<h3 class="accent_txt"><strong><span>송금 정보</span></strong>를 입력해 주세요.</h3>
+			</div>
+			<div class="orsremt_input">
+				<div class="sec_input">
+					<div class="box_detail round_box">
+						<dl class="define">
+							<dt class="tit">보내는 국가</dt>
+							<dd class="cont">
+								<span class="stit">
+									<img src="../../images/orsremt/img-ph.png" alt="PH" class="flag_img size-min"><span class="flag_txt">필리핀 <span class="num">PHILLIPHINE</span></span>
+								</span>
+							</dd>
+						</dl>
+						<dl class="define">
+							<dt class="tit">보내는 방법</dt>
+							<dd class="cont">
+								<span class="stit">
+									<span class="num flag_txt">필리핀 KEB하나은행 영업점으로 보내기</span>
+								</span>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="sec_input">
+					<div class="input_wrap"><!-- 20180418 마크업구조변경 -->
+						<dl>
+							<dt class="input_tit">
+								<strong>받는 사람 정보</strong>
+							</dt>
+							<dd class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+								<div class="row row1">
+									<div class="col_tit"><span>영문명</span></div>
+									<div class="col_input"><input type="text" data-name="inpFocus" placeholder="이름"></div><!-- 20180329 placeholder 문구수정 -->
+									<div class="col_input2"><input type="text" data-name="inpFocus" placeholder="성"></div><!-- 20180329 placeholder 문구수정 -->
+								</div>
+								<p class="remark hide">영문명을 입력해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+							</dd>
+						</dl>
+					</div>
+					<div class="input_wrap"><!-- 20180418 마크업구조변경 -->
+						<div class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+							<div class="row row2">
+								<div class="col_tit"><span>휴대폰번호</span></div>
+								<div class="col_txt"><span class="num">+64</span></div><!-- 20180307 bold클래스제거 -->
+								<div class="col_input"><input type="text" data-name="inpFocus" placeholder="-제외하고 입력" class="num"></div>
+							</div>
+							<p class="remark hide">연락처를 입력해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+						</div>
+					</div>
+					<div class="input_wrap"><!-- 2018-06-14 다음항목없음 input_line 삭제 -->
+						<dl>
+							<dt class="input_tit">
+								<strong>주소</strong>
+							</dt>
+							<dd class="item">
+								<textarea cols="30" rows="2" data-name="inpFocus" maxlength="800" placeholder="Adress" class="inp_count"></textarea>
+								<p class="remark address">해외주소를 입력해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+							</dd>
+						</dl>
+						<div class="bul_guide">
+							<p class="star_type indent">정확히 일치하지 않아도 송금 가능</p><!-- 20180418 문구수정 -->
+						</div>
+					</div>
+				</div>
+				<div class="sec_input">
+					<div class="input_wrap">
+						<dl>
+							<dt class="input_tit">
+								<strong>보내는 금액 및 출금계좌</strong>
+							</dt>
+							<dd class="item">
+								<div class="row row3">
+									<div class="col_tit"><span>출금계좌</span></div>
+									<div class="col_input item soft_select2 sel_ellipsis"><!-- 20180327 한줄처리 sel_ellipsis 추가 -->
+										<select data-name="inpFocus" class="color_change">
+											<option value="">KEB하나 13750011540507</option>
+										</select>
+									</div>
+									<div class="bul_guide txt_r">
+										<p>잔액 <span class="num">0,000,000</span>원</p><!-- 20180307 num추가 -->
+									</div>
+								</div>
+							</dd>
+							<dd class="item">
+								<div class="row row3">
+									<div class="col_tit item soft_select2">
+										<select data-name="inpFocus" class="color_change w91"><!-- 20180327 w91 변경 -->
+											<option value="">USD</option><!-- 20180321 USD 옵션추가 -->
+											<option value="">CAD</option>
+											<option value="">PHP</option>
+											<option value="">AUD</option>
+											<option value="">VND</option>
+											<option value="">THB</option>
+										</select>
+									</div>
+									<!-- 20180309 인풋타입 변경 -->
+									<div class="col_input money_type">
+										<div class="flex_wrap set_type1">
+											<span class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+												<!-- 2018-03-14 국가별 단위표기 예시
+
+													캐나다
+													<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="USD" class="comma_wonhan comma_all ico_won">
+													<em class="" style="color: rgb(34, 34, 34);" data-unit="USD"></em>
+
+													필리핀
+													<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="USD" class="comma_wonhan comma_all ico_won">
+													<em class="" style="color: rgb(34, 34, 34);" data-unit="USD"></em>
+
+													호주
+													<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="AUD" class="comma_wonhan comma_all ico_won">
+													<em class="" style="color: rgb(34, 34, 34);" data-unit="AUD"></em>
+
+													베트남
+													<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="VND" class="comma_wonhan comma_all ico_won">
+													<em class="" style="color: rgb(34, 34, 34);" data-unit="VND"></em>
+
+													태국
+													<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="THB" class="comma_wonhan comma_all ico_won">
+													<em class="" style="color: rgb(34, 34, 34);" data-unit="THB"></em>
+
+													일본
+													<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="JPY" class="comma_wonhan comma_all ico_won">
+													<em class="" style="color: rgb(34, 34, 34);" data-unit="JPY"></em>
+
+													인도네시아
+													<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="IDR" class="comma_wonhan comma_all ico_won">
+													<em class="" style="color: rgb(34, 34, 34);" data-unit="IDR"></em>
+												-->
+												<!-- 20180314 input data-unit 추가, 클래스변경 -->
+												<!-- 20180416 소수점일때 단위삭제 data-unit="" 빈값처리 -->
+												<input type="text" data-name="inpFocus" placeholder="" value="" data-unit="" data-type="decimal" class="comma_wonhan ico_won"><!-- 20180403 data-type="decimal" 소수점일때 -->
+												<!-- <em class="" style="color: rgb(34, 34, 34);" data-unit="USD"></em> 20180327 단위삭제 -->
+												<p class="remark">금액을 입력해 주세요.</p><!-- 20180418 에러문구추가 --><!-- 에러일때 hide를 빼주세요. -->
+											</span>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="input_wrap">
+						<div class="item">
+							<div class="row row3">
+								<div class="col_tit"><span class="num bold">KRW</span></div><!-- 20180320 bold 제거 --><!-- 20180327 bold 복원 -->
+								<!-- 20180309 인풋타입 변경 -->
+								<div class="col_input money_type">
+									<div class="flex_wrap set_type1">
+										<!-- 20180320 ico_won클래스 삭제 -->
+										<span class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+											<!-- 20180416 원삭제 notwon 추가 -->
+											<input type="text" data-name="inpFocus" placeholder="" value="" class="comma_wonhan notwon ico_won">
+											<!-- <em class="" style="color: rgb(34, 34, 34);"></em> 20180329 단위삭제 -->
+										</span>
+									</div>
+								</div>
+							</div>
+							<!-- 20180321 마크업위치변경(저해상도 두줄방지) -->
+							<div class="bul_guide txt_r">
+								<p class="type_red">현재 환율 : <span class="num">0,000</span> / 잔여 한도: 연간 USD <span class="num">00,000</span></p><!-- 20180307 num추가 --><!-- 20180323 현재 환율 추가 --><!-- 20180418 현재 환율 수정 -->
+								<p>송금 제한 : 건당 USD <span class="num">3,000</span> 이하 / 연간 USD <span class="num">20,000</span> 이하</p><!-- 20180307 num추가 -->
+							</div>
+						</div>
+					</div>
+					<div class="input_wrap">
+						<div class="cal_wrap">
+							<div class="cal">
+								<div class="tit">송금 수수료(면제)</div><!-- 2018-06-04 수수료면제(일시적용) -->
+								<div class="money"><strong><em class="num bold strike">0,000</em>원</strong></div><!-- 2018-06-04 수수료면제(일시적용) -->
+							</div>
+							<div class="cal">
+								<div class="tit">수취 수수료(면제)</div><!-- 2018-06-04 수수료면제(일시적용) -->
+								<div class="money"><strong><em class="num bold strike">0,000</em>원</strong></div><!-- 2018-06-04 수수료면제(일시적용) -->
+							</div>
+							<div class="cal total">
+								<div class="tit">예상 인출 금액</div>
+								<div class="money">
+									<strong><em class="num bold">600,000</em>원</strong>
+									<!-- <span class="txt star_type"> 현재 환율 : 0,000원</span> --><!-- 20180323 현재 환율 삭제 -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sec_notice bul_guide">
+						<p class="star_type indent">현재 환율 : 현재 기준 적용 환율이며, 실제 적용되는 환율은 계좌 출금시 확정되므로 변동이 발생할 수 있습니다.</p>
+					</div>
+					<div class="sec_notice bul_guide">
+						<p class="star_type indent">송금 수수료 : 해외로 송금시 발생하는 수수료입니다.</p>
+					</div>
+					<div class="sec_notice bul_guide">
+						<p class="star_type indent">수취 수수료 : 해외 현지 지급처에서 수취시 발생하는 수수료로 보내는 사람이 부담합니다. 캐나다, 필리핀, 인도네시아 현지 은행 송금시, 수취은행에 따라 받으실 분이 추가로 수수료를 낼 수도 있습니다.</p>
+						<!-- 문구수정 2019-01-11 ock --><!-- 문구수정 2018-12-12 ock --><!-- 20180308 텍스트수정 -->
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">확인</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+	function setSpyScroll(target){
+		var targetPos = $(target).offset().top;
+		$('html, body').stop().animate({scrollTop:targetPos}, 500);
+	}
+	function setAddSticky(){
+		if ($('.orsremt_from.agree_check').outerHeight() > $('#contents').outerHeight()){
+			$('.add_sticky').addClass('no_fixed');
+		}
+	}
+	$(document).on('focus', '.input_wrap input[type=text]', function(){
+		//보내는국가 다음컨텐츠를 보여준 후
+		var target = $(this).parents('.input_wrap');
+		setSpyScroll(target);
+		setAddSticky();
+	})
+</script>
+
+</body>
+</html>

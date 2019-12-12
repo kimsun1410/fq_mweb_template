@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02T핀크적금_12T적금그룹_01기본값_web - MASM02Z32</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+		<section class="fqsave fqsave_skt">
+
+			<div class="sec_step">
+				<ol class="step01">
+					<li class="complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li  class="complete">
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>3</strong>
+					</li>
+				</ol>
+			</div>
+			<div class="sec_title">
+				<h2>우대금리 II</h2><!-- 텍스트 수정 2018-02-28 -->
+				<p class="guide_txt">대표 회선만 우대금리 적용</p>
+			</div>
+			<div class="sec_group">
+				<ul class="summary">
+					<li class="category">T적금그룹 현황(N회선 결합)</li>
+				</ul>
+				<!-- 외국인 아닌경우 -->
+				<div class="represent">
+					<ul class="tbl">
+						<li class="name leader"><em>김핑크</em><span>(대표)</span></li><!-- 높이 설정 필요 span 추가 2018-10-08 ock --><!-- 대표인 경우 class : leader, span 추가 2018-10-08 ock -->
+						<li class="number"><em class="num">010-1234-5678</em></li>
+						<li class="status">결합전</li>
+					</ul>
+				</div>
+				<!-- 자동이체 리스트 -->
+				<div class="group_status">
+					<div class="head">
+						<strong>가족회선 결합현황</strong>
+						<!-- button type="button" name="button">상태편집</button -->
+					</div>
+
+					<div class="member_list add_dotline">
+						<ul class="member">
+							<li>
+								<ul class="tbl">
+									<li class="name himself"><em>김퐁퐁</em><span>(본인)</span></li><!-- 높이 설정 필요 em 추가 2018-10-08 ock --><!-- 본인인 경우 class : himself, span 추가 2018-10-08 ock -->
+									<li class="number"><em class="num">010-12**-**78</em></li>
+									<li class="status">
+										<div class="btn_wrap end"><!-- 완료일때는 'end' Class 추가 -->
+											<strong>결합완료</strong>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="tbl">
+									<li class="name"><em>김퐁퐁</em></li><!-- 높이 설정 필요 em 추가 2018-10-08 ock -->
+									<li class="number"><em class="num">010-12**-**78</em></li>
+									<li class="status">
+										<div class="btn_wrap end"><!-- 완료일때는 'end' Class 추가 -->
+											<strong>결합완료</strong>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="flex_wrap set_type1">
+						<span class="item"><button type="button" name="button" class="btn btn_type_h">회선 결합 해지</button></span>
+					</div>
+					<ul class="notice mar_b34"><!-- class 추가 : mar_b34 -->
+						<li class="listup">대표회선에게 회원님의 ‘회선 결합 해지’ 안내 문자 메시지가<br/>발송 됩니다.</li>
+						<li class="listup">회선 결합 해지 후 본인은 대표 회선(기본 1회선)으로<br/> 변경됩니다.</li>
+					</ul>
+				</div><!-- //sec_group_status -->
+			</div><!-- //sec_group -->
+
+
+		</section>
+		<!-- 하단 붙임 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" >확인</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

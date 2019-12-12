@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<title>투자_진행중탭</title>
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<!-- # chart # -->
+	<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+	<!-- rMateChartH5 라이센스 -->
+	<script src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+	<!-- rMateChartH5 라이브러리(수정불가) -->
+	<script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+	<script type="text/javascript">
+	<!--
+		// -----------------------차트 설정 시작-----------------------
+
+		// 01
+		var chartVars1 = "rMateOnLoadCallFunction=chartReadyHandler1";
+		rMateChartH5.create("chart1", "chartHolder1", chartVars1, "100%", "100%");
+		function chartReadyHandler1(id) {
+			document.getElementById(id).setLayout(layoutStr1);
+			document.getElementById(id).setData(chartData1);
+		}
+		var layoutStr1 =
+			'<rMateChart backgroundColor="#f8f8f8"  borderStyle="none">'
+			 +'<Pie2DChart id="chart1" innerRadius="0.91" showDataTips="false" selectionMode="single">'
+				  +'<series>'
+					   +'<Pie2DSeries nameField="Name" field="Value" startAngle="270" renderDirection="clockwise" color="#ffffff">'
+							+'<fills>'
+								+'<SolidColor color="#731aed"/>'
+								+'<SolidColor color="#f74b20"/>'
+								+'<SolidColor color="#e0e0e0"/>'
+							+'</fills>'
+							+'<showDataEffect>'
+								+'<SeriesZoom duration="1000"/>'
+							+'</showDataEffect>'
+					  +'</Pie2DSeries>'
+				 +'</series>'
+			  +'</Pie2DChart>'
+		  +'</rMateChart>';
+
+		// 차트 데이터
+		var chartData1 = [{"Name":"상환", "Value":1210000},{"Name":"연체", "Value":110000},{"Name":"예정", "Value":1980000}];
+
+		// 02
+		var chartVars2 = "rMateOnLoadCallFunction=chartReadyHandler2";
+		//rMateChartH5.create("chart2", "chartHolder2", chartVars2, "100%", "100%"); 탭이 있는 경우 jquery로 실행
+		function chartReadyHandler2(id) {
+			document.getElementById(id).setLayout(layoutStr2);
+			document.getElementById(id).setData(chartData2);
+		}
+		var layoutStr2 =
+			'<rMateChart backgroundColor="#f8f8f8"  borderStyle="none">'
+			 +'<Pie2DChart id="chart2" innerRadius="0.91" showDataTips="false" selectionMode="single">'
+				  +'<series>'
+					   +'<Pie2DSeries nameField="Name" field="Value" startAngle="270" renderDirection="clockwise" color="#ffffff">'
+							+'<fills>'
+								+'<SolidColor color="#731aed"/>'
+								+'<SolidColor color="#f74b20"/>'
+								+'<SolidColor color="#e0e0e0"/>'
+							+'</fills>'
+							+'<showDataEffect>'
+								+'<SeriesZoom duration="1000"/>'
+							+'</showDataEffect>'
+					  +'</Pie2DSeries>'
+				 +'</series>'
+			  +'</Pie2DChart>'
+		  +'</rMateChart>';
+
+		// 차트 데이터
+		var chartData2 = [{"Name":"상환", "Value":6300000},{"Name":"부도", "Value":700000},{"Name":"예정", "Value":0}];
+	-->
+	</script>
+</head>
+<body>
+<div class="wrap" id="MASV07Z12">
+	<div id="contents" class="market p2p_wrap">
+		<!-- 페이지명 -->
+		<section class="sec_MASV07Z12">
+			<div class="sec_header in_sec">
+				<div class="total">
+					<p class="tit">총 누적 투자원금</p>
+					<p class="money"><span class="num numComma bold">10000000</span>원</p>
+				</div>
+				<div class="cal_wrap5">
+					<dl class="cal">
+						<dt class="tit">원금 대비 수익</dt>
+						<dd class="money bold invest"><span class="num numComma">230000</span>원</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="line_divid"></div>
+
+			<!-- sec_info2 -->
+			<div class="sec_info2 in_sec">
+				<div class="sec_title txt_c">
+					<div style="position:relative">
+						<h3 class="bold">
+							업체별 투자현황
+							<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">자세히 보기</span></button>
+							<div class="layer_wrap" style="top:33px; left:15px; right:15px;">
+								<p class="txt_c">수익률은 업체별 계산 방식에 따라 기준이 다를 수 있습니다.</p>
+							</div>
+						</h3>
+					</div>
+				</div>
+				<div class="sec_view_graph2">
+					<div class="legend_wrap">
+						<div class="item">
+							<span class="label_legend money">투자원금 (만원)</span>
+						</div>
+						<div class="item">
+							<span class="label_legend percent">수익률 (%)</span>
+						</div>
+					</div>
+					<div class="graph_wrap">
+						<!-- graph_group 반복 -->
+						<div class="graph_group">
+							<div class="item title">
+								<span class="label_title">미드레이트</span>
+							</div>
+							<div class="item money">
+								<span class="bar" data-max="1000" data-value="1000">투자원금</span>
+								<span class="label_value"><span class="num bold numComma">1000</span></span>
+							</div>
+							<div class="item percent">
+								<span class="bar" data-max="20" data-value="12.5">수익률</span>
+								<span class="label_value"><span class="num bold">12.5</span></span>
+							</div>
+						</div>
+						<div class="graph_group">
+							<div class="item title">
+								<span class="label_title">헬로펀딩</span>
+							</div>
+							<div class="item money">
+								<span class="bar" data-max="1000" data-value="500">투자원금</span>
+								<span class="label_value"><span class="num bold numComma">500</span></span>
+							</div>
+							<div class="item percent">
+								<span class="bar" data-max="20" data-value="9.5">수익률</span>
+								<span class="label_value"><span class="num bold">9.5</span></span>
+							</div>
+						</div>
+						<div class="graph_group">
+							<div class="item title">
+								<span class="label_title">소딧</span>
+							</div>
+							<div class="item money">
+								<span class="bar" data-max="1000" data-value="100">투자원금</span>
+								<span class="label_value"><span class="num bold numComma">100</span></span>
+							</div>
+							<div class="item percent">
+								<span class="bar" data-max="20" data-value="10.1">수익률</span>
+								<span class="label_value"><span class="num bold">10.1</span></span>
+							</div>
+						</div>
+						<div class="graph_group">
+							<div class="item title">
+								<span class="label_title">8퍼센트</span><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+							</div>
+							<div class="item money">
+								<span class="bar" data-max="1000" data-value="50">투자원금</span>
+								<span class="label_value"><span class="num bold numComma">50</span></span>
+							</div>
+							<div class="item percent">
+								<span class="bar" data-max="20" data-value="20.0">수익률</span>
+								<span class="label_value"><span class="num bold">20.0</span></span>
+							</div>
+						</div>
+						<div class="graph_group">
+							<div class="item title">
+								<span class="label_title">투게더펀딩</span>
+							</div>
+							<div class="item money">
+								<span class="bar" data-max="1000" data-value="10">투자원금</span>
+								<span class="label_value"><span class="num bold numComma">10</span></span>
+							</div>
+							<div class="item percent">
+								<span class="bar" data-max="20" data-value="10.5">수익률</span>
+								<span class="label_value"><span class="num bold">10.5</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 2018-05-24 추가 설명문구 -->
+				<div class="sec_explan bul_guide">
+					<p class="star_type indent point_txt1">(8퍼센트, 미드레이트) 일시 접속 오류로 정보가 반영되지 않았습니다.</p><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+				</div>
+			</div>
+			<!-- //sec_info2 -->
+
+			<div class="line_divid"></div>
+
+			<div class="tab_wrap set_type2">
+				<span class="tab on"><a href="#none">진행중(1)</a></span>
+				<span class="tab"><a href="#none">완료(4)</a></span>
+			</div>
+			<div class="tab_content_wrap">
+				<div id="tab-0" class="tab_content on">
+					<!-- sec_info1 -->
+					<div class="sec_info1 sec_repay_summary in_sec">
+						<div class="cal_wrap5">
+							<dl class="cal">
+								<dt class="tit bul">총 투자원금</dt>
+								<dd class="money bold"><span class="num numComma">4000000</span>원</dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit bul">총 세후 이자</dt>
+								<dd class="money bold"><span class="num numComma">400000</span>원</dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit bul">총 예상 세후 이자</dt>
+								<dd class="money invest"><span class="num numComma bold">300000</span>원</dd><!-- 2018-05-15 추가 numComma누락 -->
+							</dl>
+						</div>
+						<div class="repay_graph_wrap revert v_line3">
+							<!-- 상환중 + 연체 -->
+							<div class="repay_define">
+								<div class="legend">
+									<dl class="legend_repay">
+										<dt>상환</dt>
+										<dd><span class="num numComma">1210000</span>원</dd>
+									</dl>
+									<dl class="legend_ing">
+										<dt>예정</dt>
+										<dd><span class="num numComma">1980000</span>원</dd>
+									</dl>
+									<dl class="legend_giveup">
+										<dt>연체</dt>
+										<dd><span class="num numComma">700000</span>원</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="figuer_graph">
+								<div class="rmate_graph xl">
+									<div id="chartHolder1" class="rmate_item"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //sec_info1 -->
+				</div>
+				<div id="tab-1" class="tab_content">
+					<!-- sec_info1 -->
+					<div class="sec_info1 sec_repay_summary in_sec">
+						<div class="cal_wrap5">
+							<dl class="cal">
+								<dt class="tit bul">총 투자원금</dt>
+								<dd class="money bold"><span class="num numComma">4000000</span>원</dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit bul">총 세후 이자</dt>
+								<dd class="money bold"><span class="num numComma">400000</span>원</dd>
+							</dl>
+							<dl class="cal">
+								<dt class="tit bul">총 부도원금</dt>
+								<dd class="money overdue">- <span class="num numComma bold">700000</span>원</dd><!-- 2018-05-15 추가 numComma누락 -->
+							</dl>
+						</div>
+						<div class="repay_graph_wrap revert v_line2">
+							<!-- 상환중 + 연체 -->
+							<div class="repay_define">
+								<div class="legend">
+									<dl class="legend_repay">
+										<dt>상환</dt>
+										<dd><span class="num numComma">6300000</span>원</dd>
+									</dl>
+									<dl class="legend_giveup">
+										<dt>부도</dt>
+										<dd><span class="num numComma">700000</span>원</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="figuer_graph">
+								<div class="rmate_graph xl">
+									<div id="chartHolder2" class="rmate_item"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //sec_info1 -->
+				</div>
+			</div>
+		</section>
+		<!-- //페이지명 -->
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script>
+	//퍼블 테스트용 (개발에서 데이터처리후 호출해주세요)
+	$(document).ready(function(){
+		$('.tab_wrap .tab a').on('click', function(){
+			setTimeout(function(){
+				//차트실행
+				var idx = $('.tab_wrap .tab.on').index() + 1;
+				if (idx == 1){
+					if(!document.getElementById("chart1"))
+					rMateChartH5.create("chart1", "chartHolder1", chartVars1, "100%", "100%")
+				}
+				if (idx == 2){
+					if(!document.getElementById("chart2"))
+					rMateChartH5.create("chart2", "chartHolder2", chartVars2, "100%", "100%")
+				}
+			},100);
+		});
+	})
+
+	//막대그래프
+	barsGraph2();
+</script>
+</body>
+</html>

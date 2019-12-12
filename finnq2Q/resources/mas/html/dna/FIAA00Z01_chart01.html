@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01메인_06금융DNA_02_FIAA01Z01_chart0</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_dna.css?time=20180117" />
+
+	<!-- # chart # -->
+		<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+		<!-- rMateChartH5 라이센스 -->
+		<!-- <script src="rMateChartH5/LicenseKey/rMateChartH5License.js" ></script> -->
+		<!-- 실제적인 rMateChartH5 라이브러리 > 수정불가-! -->
+		<script language="javascript" type="text/javascript" src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+		<script src="../../libs/rMateChartH5/JS/rMateGaugeChartH5.js"></script> <!-- 게이지 그래프 -->
+	<script>
+		// -----------------------차트 설정 시작-----------------------
+ 
+		// rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+		var chartVars11 = "&rMateOnLoadCallFunction=rMateChartOnLoad11";
+		 
+		// rMateChart 를 생성합니다.
+		// 파라메터 (순서대로) 
+		//  1. 차트의 id ( 임의로 지정하십시오. ) 
+		//  2. 차트가 위치할 div 의 id (즉, 차트의 부모 div 의 id 입니다.)
+		//  3. 차트 생성 시 필요한 환경 변수들의 묶음인 chartVars
+		//  4. 차트의 가로 사이즈 (생략 가능, 생략 시 100%)
+		//  5. 차트의 세로 사이즈 (생략 가능, 생략 시 100%)
+		rMateChartH5.create("chart11", "chartHolder11", chartVars11, "100%", "100%"); 
+		 
+		// 차트의 속성인 rMateOnLoadCallFunction 으로 설정된 함수.
+		// rMate 차트 준비가 완료된 경우 이 함수가 호출됩니다.
+		// 이 함수를 통해 차트에 레이아웃과 데이터를 삽입합니다.
+		// 파라메터 : id - rMateChartH5.create() 사용 시 사용자가 지정한 id 입니다.
+		function rMateChartOnLoad11(){
+			chart11.setLayout(layoutStr11);
+			chart11.setData(chartData11);
+		}
+		 
+		// 게이지 영역 범위
+		var trackValues = [0,10,20,30,40,50,60,70,80,90,100];
+
+		// 게이지 영역 라벨
+		var trackColors = ["#731aed","#731aed","#731aed","#731aed","#731aed","#731aed","#731aed","#731aed","#eee","#eee"];
+		 
+		// 게이지 영역 라벨
+		var chartData11 = ["1","2","3","4","5","6","7","8","9","10"];
+
+		
+ 
+		// 스트링 형식으로 레이아웃 정의
+		 layoutStr11 ='<rMateChart styleName="_chart11">'
+					 +'<NumberFormatter id="numFmt" precision="0"/>'
+					   +'<HalfCircularGauge valueChangeFunction="valueChangeFunc" frameType="flat" trackLabelStyleName="trackText" minimumAngle="180" maximumAngle="360" minimum="0" maximum="100" interval="10" minorInterval="10" formatter="{numFmt}" tickGap="100" padding="-40" showValueLabel="false" tickLabelStyleName="tickText" valueLabelStyleName="valueText" dataTipJsFunction="dataTipFunction" editMode="false" liveDragging="true" showDataTip="false" needleThickness="6" pointThickness="0" needleLengthRatio="0.25" needlePointStyle="steeple" needleBackLengthRatio="0" showTickLabels="false" tickLabelPosition="inside" showTrackColor="true" trackColors="[' + trackColors.toString() + ']" trackAlphas="[1]" trackValues="[' + trackValues.toString() + ']" trackInnerRadius="0.35" trackOuterRadius="0.40" bounceAnimating="true" majorTickType="false" tickRadius="1" minorTickRadius="false" needleCoverRadius="2.9" trackLabels="[' + chartData11.toString() + ']" needleTrackColorEnable="false">'
+
+						  +'<frameStroke>'
+							  +'<Stroke color="#fff" weight="0" alpha="0"/>'
+						 +'</frameStroke>'
+						 +'<tickStroke>'
+							   +'<Stroke color="#fff" weight="0"/>'
+						   +'</tickStroke>'
+							+'<needleCoverStroke>'
+								+'<Stroke color="#000" weight="0" alpha="0" />'
+						   +'</needleCoverStroke>'
+					   +'</HalfCircularGauge>'
+					   +'<Style>'
+							+'.tickText{fontSize:15;}'
+							+'.trackText{fontSize:0;}'
+						+'</Style>'
+				   +'</rMateChart>';
+				  
+		// 게이지 데이터
+		var chartData11 = [80];
+		 
+		 
+		// 게이지 값 보관.
+		var gaugeValue;
+		 
+		// 게이지 value change 이벤트 핸들러 함수.
+		function valueChangeFunc(value)
+		{
+			gaugeValue = value;
+		}
+		 
+		// 확인
+		function commitValue()
+		{
+			var str = "",
+			   index = 0;
+		 
+		  while(true){
+				if(gaugeValue >= trackValues[index] && gaugeValue <= trackValues[index + 1]){
+				 str = trackLabels[index];
+				   break;
+			  }
+			   index++;
+			}
+		 
+		   str += " ( " + gaugeValue + " )";
+		   alert(str);
+		}
+		 
+		// 데이터팁(툴팁) 펑션.
+		function dataTipFunction(str)
+		{
+		   return "<font color='#FF2200'>값 : " + Math.round(str) + "</font>";
+		}
+ 
+
+// -----------------------차트 설정 끝 -----------------------
+
+
+	</script>
+</head>
+<body>
+<div class="wrap" id=""><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="finance_dna dna_main">
+		<!-- sec_chart11 -->
+		<div class="sec_chart11">
+			<div class="chart_wrap">
+				<div class="chart_info">
+					<dl class="lavel_cont">
+						<dt>신용관리</dt>
+						<dd>신용 <strong class="num bold">2</strong>등급</dd>
+					</dl>
+					<ul class="sub_cont">
+						<li class="percent">상위 <span class="num">11%</span></li>
+						<li class="round_lavel">변동없음</li>
+						<li class="round_lavel blue">변동있음</li>
+					</ul>
+				</div>
+				<div class="chart_data">
+					<strong class="num blod">935</strong> / <em class="num blod">1000</em>
+				</div>
+				<div class="chart_area _chart11">
+					<div class="chart HalfCircularGauge" id="chartHolder11"></div>
+				</div>
+			</div>
+			<!-- <div class="chart_comment add_dotline3">지난달 대비 체크카드 사용금액이 <span class="num">750,000</span>원 증가하여<br class="ios320 close">신용점수가 <span class="num">7</span>점 상승하였어요.</div> -->
+		</div>
+		<!-- //sec_chart11 -->
+
+		<!-- sec_chart11 -->
+		<div class="sec_chart11">
+			<div class="chart_wrap no_info">
+				<div class="chart_info">
+					<dl class="lavel_cont">
+						<dt>신용관리</dt>
+						<dd>김핀크님의 신용정보가 부족해<br>신용평점 및 등급을 산출할 수 없습니다.</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- //sec_chart11 -->
+		
+		
+	</div>
+	<!-- #contents -->
+</div>
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	
+
+});
+
+
+</script>
+</body>
+</html>

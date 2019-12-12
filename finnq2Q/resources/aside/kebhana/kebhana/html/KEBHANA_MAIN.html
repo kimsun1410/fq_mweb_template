@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>01더보기_08비대면계좌개설_04본인인증</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+<script type="text/javascript">
+$(function(){
+	listexpend();
+	function listexpend() {
+		$('body').on('click','.list_expend .subject',function(e){
+			var $this = $(this);
+			var action = function($this){
+				var detail= $this.next();
+				var hh= detail.find(".con").outerHeight();
+
+				if ($this.hasClass('on')) {
+					$this.removeClass('on');
+					detail.removeClass('on');
+					detail.animate({height:0,overflow:"hidden"},300);
+				} else {
+					$(".list_expend .subject").not(this).removeClass('on');
+					$(".list_expend .detail_set").not(detail).removeClass('on');
+
+
+					$this.addClass('on');
+					detail.addClass('on');
+					detail.animate({height:hh,overflow:"visible"},300);
+
+					setTimeout(function() {
+						var position = $('.list_expend .subject.on').offset();
+						if (!$('.list_expend').hasClass('not_move')) {
+							$('html, body').animate({scrollTop: position.top}, 300);
+						}
+					}, 0);
+				}
+			}
+
+			action($this);
+
+		});
+	}
+});
+</script>
+</head>
+<body>
+<!-- 18.08.13 수정 -->
+<div class="wrap bg_list">
+	<!-- 18.08.13 하단 플로팅 버튼이 삭제되면서 <div id="contents">에 class="add_sticky" 삭제 -->
+	<div id="contents" class="add_sticky">
+		<section class="market_wrap bankbook_main">
+
+			<div class="sec_bankbook_visual type">
+				<p class="txt">쉽고 빠르게 만드는<br><em class="en">KEB</em>하나은행<br>입출금통장</p>
+
+				<div class="dues line_btm">계좌 개설하고 핀크 혜택 누리기</div>
+			</div><!-- //sec_bankbook_visual -->
+
+			<div class="sec_bankbook_benefit">
+
+				<p class="tit"><strong class="num bold">e-</strong>플러스 통장 만들고 <br>핀크 혜택 한가득 받기</p>
+				<p class="img">핀크계좌 자동충전, 핀크 적금/대출 이용</p>
+
+			</div><!-- //sec_bankbook_benefit -->
+
+
+			<div class="sec_bankbook_process">
+				<p class="tit">공인인증서 없이 <strong class="num">3</strong>단계 개설</p>
+				<ul>
+					<li>
+						<span class="ico ico_bankbook_process1"></span>
+						<div class="box">
+							<p class="tit"><em class="num">1.</em> 약관동의 및 확인</p>
+						</div>
+					</li>
+					<li>
+						<span class="ico ico_bankbook_process2"></span>
+						<div class="box">
+							<p class="tit"><em class="num">2.</em> 가입정보 입력</p>
+							<p>훼손되지 않은 신분증<br>(주민등록증, 운전면허증)</p>
+						</div>
+					</li>
+					<li>
+						<span class="ico ico_bankbook_process3"></span>
+						<div class="box">
+							<p class="tit"><em class="num">3.</em> 확인 및 완료</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //sec_bankbook_process -->
+
+			<div class="sec_emergency_cate">
+				<ul class="list_expend main">
+
+					<!-- 이용한도 안내 -->
+					<li>
+						<div class="subject">
+							<a href="#open">이용한도 안내<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate2">
+								<p class="title">입출금통장 이용한도 안내</p>
+								<p class="txt">금융감독원 대포통장 근절 종합대책에 따라<br>아래와 같이 이용이 제한됩니다.</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">창구 : 출금/이체 합산 <em class="num">100</em>만원/일</li>
+										<li class="dash_type indent">ATM : 출금/이체 각 <em class="num">100</em>만원/일</li>
+										<li class="dash_type indent">전자금융 이체 : <em class="num">100</em>만원/일</li>
+									</ul>
+								</div>
+								<p class="txt">이용한도 해제방법</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">영업점 방문 후 증빙서류 제출(방문 전 사전문의)</li>
+										<li class="dash_type indent">대출실행(비대면 입출금통장 연계)</li>
+									</ul>
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //이용한도 안내 -->
+
+					<!-- 비대면실명확인 거래제한 -->
+					<li>
+						<div class="subject">
+							<a href="#open">비대면실명확인 거래제한<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate3">
+
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">만 18세 미만 미성년자, 외국인, 비거주자</li>
+										<li class="dash_type indent">대포통장 명의자, 전화금융사기 등록자</li>
+										<li class="dash_type indent">해외납세자</li>
+										<li class="dash_type indent">단기다수계좌 개설자 (입출금통장만 제한)</li>
+									</ul>
+								</div>
+
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //비대면실명확인 거래제한 -->
+
+					<!-- 유의사항 -->
+					<li>
+						<div class="subject">
+							<a href="#open">유의사항<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate3">
+								<div class="bul_guide">
+									<ul class="list_gray cont320">
+										<li class="dash_type indent">특정금융거래정보의 보고 및 이용 등에 관한<br class="else w320"> 법률 준수 및 전기통신금융사기 피해예방을<br class="w320"> 위해<br class="else"> 금융거래목적을 필히 확인합니다.</li>
+										<li class="dash_type indent">제공 정보에 대한 검증이 불가능한 경우 거래가<br class="else w320"> 지연되거나 거절될 수 있으며, 제공된 정보는<br class="else w320"> 금융실명법 등 관련 법률에 의해 보호됩니다.</li>
+										<li class="dash_type indent">신규 완료되지 않은 경우 개인정보는 안전하게<br class="else w320"> 삭제되며, 완료된 건의 증빙자료는 관련<br class="w320"> 법령에 따라<br class="else"> 계좌 해지 후 5년간 보존합니다.</li>
+										<li class="dash_type indent">관련문의 : KEB하나은행 콜센터 <a href="tel:1599-2111" class="tel_num num">1599-2111</a><br>(은행영업일 <em class="num">09:00 ~ 18:00</em>)</li>
+									</ul>
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //유의사항 -->
+
+				</ul><!-- //list_expend -->
+			</div>
+
+
+
+		</section><!-- //bankbook_main -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_apply">개설하기</button>
+		</div>
+	</div><!-- #contents -->
+</div>
+</body>
+</html>

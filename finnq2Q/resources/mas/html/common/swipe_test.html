@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>팝업 공통</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+<style type="text/css">
+	.modal__popup--swipe {display:none; position:fixed; bottom:0; top: 300px; left:0; width:100%; background:blue; z-index:200; box-sizing:border-box; padding:40px 30px 0; transition: all 0.2s ease-in-out; -webkit-transform:translate3d(0, 30%, 0);transform:translate3d(0, 30%, 0);}
+	.modal__popup--swipe.is-flexible {top:100px; transition: all 0.2s ease-in-out;}
+	.modal__popup--swipe.is-visible {display:block;  -webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);opacity:1; transition: all 0.2s ease-in-out;}
+
+	.scroll {background:#fff; padding:0px 10px 45px; box-sizing:border-box; overflow-y: auto; height:100%;}
+
+	.btn.toast {background:#aaa; text-align:center;}
+	[data-popup-open] {background:red; color:#fff;}
+
+	#toast__popup {position: fixed; width: calc(100% - 40px); box-sizing: border-box; bottom: 30px; left: 50%; padding: 10px 15px; transform: translate(-50%, 10px); border-radius: 8px; overflow: hidden; font-size: .8rem; opacity: 0; visibility: hidden; transition: opacity .5s, visibility .5s, transform .5s; background: rgba(0, 0, 0, .75); color: #fff; z-index: 1000;
+	}
+
+	#toast__popup.reveal {opacity: 1; visibility: visible; transform: translate(-50%, 0)}
+
+.chart {float: left; width: 45px; height: 45px; text-align: center; box-sizing:border-box;}
+.chart span.title{position: relative; display: block; width: 100%; text-align: center; top: 20px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="add_sticky white">
+
+		<span class="counter" style="display: inline-block;">123,456</span>
+
+		<button type="button" class="btn toast">토스트 팝업 호출</button>
+		<button type="button" data-popup-open="popup1">하단 팝업 호출</button>
+		<section>
+			<article data-step="step0">
+				<div class="modal__popup--swipe" id="modal-swipe" data-popup-target="popup1">
+					하단메뉴
+					<button type="button" class="btn close">팝업 닫기</button>
+					<div class="scroll">
+						<ul>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역1<br></li>
+							<li>스크롤 영역끝<br></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article data-step="step1">
+
+			</article>
+		</section>
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+
+		<!-- 토스트 팝업 TEXT 노출 영역 -->
+		<div id="toast__popup"></div>
+
+		<!-- 원형 그래프 -->
+		<div class="chart chart1" data-percent="100"><span class="title">chart1</span></div>
+		<div class="chart chart2" data-percent="100"><span class="title">chart2</span></div>
+		<div class="chart chart3 complete" data-percent="100"><span class="title">chart3</span></div>
+
+	</div>
+	<!-- #contents -->
+	<div class="modal-toast">팝업 암막</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<!-- <script src="../../libs/hammer.min.js"></script> -->
+<script type="text/javascript">
+$(function () {
+	function swipeModalPopupEvent(){
+		// var element = document.getElementById("parent");
+		var element = document.getElementById("modal-swipe");
+		var mc = new Hammer(element);
+		mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+		// 스와이프 Up
+		mc.on("swipeup", function () {
+			$('.modal__popup--swipe').addClass('is-flexible')
+		});
+
+		// 스와이프 Down
+		mc.on("swipedown", function () {
+			$('.modal__popup--swipe').removeClass('is-flexible')
+		});
+
+	}
+
+	// 토스트 팝업 호출
+	$('.btn.toast').on('click', function(){
+		toastPopup('토스트 팝업 : 원하는 String을 넣으면 됩니다.')
+	});
+	swipeModalPopupEvent();
+
+	// 팝업 호출
+	$('[data-popup-open]').on('click', function(){
+		// var _target = $(this).attr('data-popup-event');
+		modalPopupFunc('popup1', 'open')
+	});
+
+	// 팝업 닫기
+	$(document).on('click', '.btn.close',  function(){
+		// var _target = $(this).attr('data-popup-close');
+		modalPopupFunc('popup1', 'close')
+	});
+
+	// POPUP UI EVENT COMMON
+	function modalPopupFunc(_target, _event)
+	{
+		var _target = _target,
+			_event  = _event;
+
+  		switch (_event) {
+			case 'open' :
+				var _mask = '<div class="modal-toast is-visible" />'
+				$('[data-popup-target="' + _target + '"]').addClass('is-visible').focus();
+				$('#contents').append( _mask );
+			break;
+
+			case 'close' :
+				$('[data-popup-target="' + _target + '"]').removeClass('is-visible').focus();
+				$('.modal-toast.is-visible').remove();
+			break;
+
+			case 'listClick' :
+			break;
+  		}
+	}
+
+/*	// 숫자 증가 에니메이션
+	function numberCounter(target_frame, target_number) {
+		this.count = 0; this.diff = 0;
+		this.target_count = parseInt(target_number);
+		this.target_frame = document.getElementById(target_frame);
+		this.timer = null;
+		this.counter();
+	};
+	numberCounter.prototype.counter = function() {
+		var self = this;
+		this.diff = this.target_count - this.count;
+
+		if(this.diff > 0) {
+			self.count += Math.ceil(this.diff / 5);
+		}
+
+		this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+		if(this.count < this.target_count) {
+			this.timer = setTimeout(function() { self.counter(); }, 20); // 숫자가 증가되는 속도
+		} else {
+			clearTimeout(this.timer);
+		}
+	};
+
+	new numberCounter("counter1", 99999);*/
+
+	// 숫자 증가 에니메이션
+	$('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+
+	// 차트 에니메이션
+	$('.chart').easyPieChart({
+		barColor: '#8848ff',
+		trackColor: '#eee',
+		scaleColor:false,
+		lineCap:'circle',
+		lineWidth: 1,
+		size: 45,
+		animate: 1000,
+    });
+});
+
+</script>
+
+</body>
+</html>

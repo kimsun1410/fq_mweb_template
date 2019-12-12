@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xml:lang="ko" lang="ko">
+
+<head>
+    <title>은행권 공동 오픈플랫폼</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1" />
+    <meta content="은행권공동오픈플랫폼" name="description" />
+    <meta content="은행권공동오픈플랫폼" name="keywords" />
+    <meta content="은행권공동오픈플랫폼" name="subject" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://twww.open-platform.or.kr/css/common/style_mobile.css" /> -->
+    <script type="text/javascript" src="https://twww.open-platform.or.kr/js/extends/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://twww.open-platform.or.kr/js/extends/common.js"></script>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+
+    <!-- open api 관련 추가 -->
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <script src="../../libs/ui.js"></script>
+    <script type="text/javascript">
+    $(function(){
+
+        // 페이지 최초 로딩시 필요없는 부분 삭제 및 추가
+        function pageInit() {
+            $('.phone_num').addClass('num'); // 숫자 폰트 변경
+            $('#arsCallMsg').hide(); // 전화 완료 안내 문구 숨김
+            $('#footer').hide(); // Copyright 숨김
+            $('.form_ars > img').remove(); // 기존 전화 이미지 삭제
+            $('.btn_area').addClass('fixed'); // 하단 버튼 고정버튼으로 변경
+        }
+        pageInit();
+
+        // 인증 요청 시
+        function arsConfirmFlow(){
+            var headTitle;
+            headTitle =
+            '<div class="sec_title">' +
+                '<h2>ARS 인증 요청 중</h2>' +
+                '<p class="guide_txt">ARS 인증을 진행합니다.</p>' +
+            '</div>';
+
+            $('#wrap').prepend( headTitle ); // Finnq Design 가이드 문구 추가.
+            $('.form_ars .txt_1').html('전화를 받고<br>생년월일 6자리를 입력해주세요.') // 문구 변경.
+            $('#join').addClass('hidden'); // 이메일 입력 숨김.
+            $('.btn_area').hide(); // 하단 버튼 숨김.
+        }
+
+        arsConfirmFlow();
+    });
+    </script>
+    <!-- //open api 관련 추가 -->
+
+</head>
+
+<body id="openplatform">
+    <!-- 색상코드 미존재시 기본설정 시작 -->
+    <!-- 색상코드 미존재시 기본설정 종료 -->
+    <!-- 언어설정에 따른 값 생성 시작 -->
+    <!-- 언어설정에 따른 값 생성 종료 -->
+    <form name="frm" method="post" id="frm">
+        <!-- S: wrap -->
+        <div id="wrap" style="background: #FAFAFA;">
+            <div class="container">
+                <div class="form_ars">
+                    <img src="https://twww.open-platform.or.kr/images/icon_phone.png" alt="">
+                    <p class="phone_num mt20" style="color: #050505;">010-2761-1124</p>
+                    <p class="txt_1 mt20" style="color: #050505;">전화를 받으시고 주민등록상의<br /><strong>생년월일 6자리</strong>를 입력해주세요.</p>
+                    <p id="arsCallMsg" class="txt_2 mt10" style="color: #050505;"></p>
+                    <p id="resultMsg" class="txtPointRed txtCenter" style="color: #050505;"></p>
+                </div>
+                <div id="join" class="inner_wrap v2 clear" style="color: #050505;">
+                    금융실명법에 따라 금융(거래)정보 제공내역 통지(분기당 1회)를 위한 이메일이 필요합니다.<br>
+                    <input type="text" class="form-control bfop_input mt10" id="email" name="email" value="test@naver.com" title="이메일" maxlength="300" placeholder="example@kftc.or.kr" style="color: #050505;" autocomplete="off" />
+                </div>
+                <div class="btn_area">
+                    <a class="btn_m bfop_btn_s1 mt30" id="next" style="width: 200px; background: #006DB8;" onclick="javascript:complete()">ARS 동의 완료</a>
+                </div>
+                <!--//container-->
+            </div>
+            <!--//wrap-->
+        </div>
+        <div id="footer" class="center">
+            <p>은행권 공동 오픈플랫폼</p>
+            <address>copyright © KFTC</address>
+        </div>
+        <input type="hidden" id="retInpAcnt" name="retInpAcnt" />
+        <input type="hidden" id="mode" name="mode" value="easyMobileWeb" />
+    </form>
+    <!-- //E: wrap -->
+    <script type="text/javascript">
+    var reg_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+    // 이메일입력 div 숨기기
+    $('#join').hide();
+
+    // 이메일주소 세팅
+    if ('jstensix@naver.com' == '' && 'jstensix' != '' && 'naver.com' != '') {
+        $('#email').val('jstensix' + '@' + 'naver.com');
+    }
+
+    //메시지처리
+    $(function() {
+        if ("0000" != "0000" && "정상수행" != "") {
+            alert("정상수행");
+        }
+    });
+
+    // 페이지 로딩처리
+    $(function() {
+        if ("0000" == "") {
+            callArsRec();
+        } else if ("0000".length == 4) {
+            $('#arsCallMsg').text('정상수행');
+            $('#recall').show();
+            $('#rewrite').show();
+            if ("0000" == "8000") {
+                $('#arsCallMsg').html("기등록된 사용자 아이디입니다.<br/>다른 아이디를 사용하여 주세요.");
+            }
+            if ("0000" == "0000") {
+                $('#arsCallMsg').html("ARS 동의되었습니다.<br/>완료 버튼을 눌러주세요." + "<br/>--테스트 환경에서는 ARS요청을 우회(생략)합니다.--");
+            }
+            if ("0000" == "0000" || "0000" == "8000") {
+                $('#recall').hide();
+                $('#rewrite').hide();
+                $('#next').show();
+                $('#join').show();
+            }
+        }
+    });
+
+    // ARS 녹취 호출
+    function callArsRec() {
+        $('#arsCallMsg').html("ARS 인증전화 요청 중입니다...<br/>잠시만 기다려주세요.");
+        $('#recall').hide();
+        $('#rewrite').hide();
+        $('#next').hide();
+
+        var f = document.frm;
+        f.setAttribute("action", "/apt/cert/getRecordARS");
+        f.setAttribute("target", "");
+        f.submit();
+    }
+
+    var scope = "login transfer inquiry";
+
+    var nextClick = false;
+    // 계좌등록 처리 호출
+    function complete() {
+        if (nextClick) { // 다중클릭방지
+            return false;
+        }
+        var f = document.frm;
+        var email_trimmed = $("#email").val().trim();
+
+        // 얼랏 메시지 설정
+        var alert_msg1;
+        var alert_msg2;
+        if ("kor" == 'kor' || "kor" == null || "kor" == 'null' || "kor" == '') {
+            alert_msg1 = "이메일을 입력해주세요.";
+            alert_msg2 = "이메일 형식으로 입력해주세요. (ex:abc@example.com)";
+        } else {
+            alert_msg1 = "Please enter your email.";
+            alert_msg2 = "Please enter your email. (e.g. : abc@example.com)";
+        }
+
+        // 필수입력 체크
+        if (email_trimmed == '') {
+            alert(alert_msg1);
+            $("#email").focus();
+            return -1;
+        }
+        // 아이디 형식 체크
+        if (!reg_email.test(email_trimmed)) {
+            alert(alert_msg2);
+            $("#email").focus();
+            return -1;
+        }
+        nextClick = true;
+        $("#email").val(email_trimmed); // 양쪽 공백 제거한 값을 최종으로 넘김
+        $('#next').css('background', '#818487'); // 비활성화색
+        f.setAttribute("action", "/apt/mobileweb/newJoinChkAndRegiAcnt");
+        f.setAttribute("target", "");
+        f.submit();
+    }
+
+    // 계좌정보 입력페이지 이동
+    function back() {
+        var f = document.frm;
+        $("#retInpAcnt").val("retInpAcnt");
+        f.setAttribute("action", "/apt/mobileweb/regiUser");
+        f.setAttribute("target", "");
+        f.submit();
+    }
+
+    //화면 호출시 파라미터 존재시 세팅
+    var list = JSON.parse('');
+    $.each(list, function(index, value) {
+        $('#' + index).val(value);
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+	<!-- 
+		style.css는 섹션별, 서버별로 쉽게 분리 가능합니다. 필요 경유 요청주세요.
+		실서비스 반영때에는 minify해서 반영해주세요.(ex. style.min.css)
+		퍼블리싱쪽에서도 minify로 빌드할 수도 있습니다. 디버깅을 위해서 minify하지 않은 파일로 전달드립니다.
+		sass의 sourcemap파일도 함께 전달드리는데, debug용도에만 사용해주세요.
+		초반에 원활한 테스트를 위해서 Time Stamp를 넣어주실 수 있으면 좋을것 같습니다.
+	-->
+</head>
+<body>
+
+
+<div class="wrap "><!-- 화면ID mapping -->
+<!--
+	# Description :
+		wrap : 페이지 전제척인 배경, 전체 페이지 감싸는 용도(기본 색상 White)
+		bg_list : 높이가 짧은 경우 회색배경이 필요한 경우 추가 되는 색상(현재 7페이지 정도 적용되어야합니다.)
+		Ex. <div class="wrap bg_list">
+-->
+	<div id="contents" class="  ">
+	<!--
+		# Description : 
+			페이지 유일 ID, #contents 높이 계산시 ID로 outHeight계산가능
+			Class Desc.
+			market : 마켓
+			fingo : AI핑고
+			myfinnq : 마이핀크
+			menu : 메뉴관련
+			add_sticky : 하단에 fixed버튼이 있는 경우 
+			                  반드시 add_sticky클래스가 추가되어야 
+							  합니다. 하단 버튼 여백만큼 공간 확보
+	-->
+		<section class="  ">
+		<!-- 
+			//페이지 컨텐츠 고유 클래스, 상세 화면 클래스
+			//market_wrap,transfer_fq, fqsave, deposit_inquiry등등
+		-->
+			<div class="sec_head">
+			</div><!-- //sec_head -->
+
+			<div class="sec_tab">
+			</div><!-- //sec_tab -->
+
+			<div class="sec_setting">
+			</div><!-- //sec_setting -->
+
+			<div class="sec_title">
+			</div><!-- //sec_title -->
+
+			<div class="sec_intro">
+			<div><!-- //sec_intro -->
+
+			<div class="sec_list">
+			<div><!-- //sec_list -->
+
+			<div class="sec_list">
+			<div><!-- //sec_list -->
+
+		</section>
+
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.min.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+
+</body>
+</html>

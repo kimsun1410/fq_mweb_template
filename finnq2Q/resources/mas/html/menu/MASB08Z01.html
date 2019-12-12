@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>은행계좌 연결</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASB08Z01 -->
+	<div id="contents" class="open-banking add_sticky">
+		<section>
+
+			<div class="sec_title line">
+				<h2 class="txt_l"><strong>은행계좌를 연결</strong>하세요.<br>
+				무료송금, 결제가 더 편리해집니다.</h2>
+			</div>
+
+			<!-- 은행 아이콘은 개발에서 사용하는 코드와 동일
+				방법(클래스) : bank_ + 코드명
+
+				002 : KDB산업은행
+				003 : IBK기업은행
+				004 : 국민은행
+				007 : 수협중앙회
+				011 : 농협은행
+				020 : 우리은행
+				023 : SC제일은행
+				027 : 한국시티은행
+				031 : 대구은행
+				032 : BNK부산은행
+				034 : 광주은행
+				035 : 제주은행
+				037 : 전북은행
+				039 : 경남은행
+				064 : 산림조합중앙회
+				050 : 상호저축은행
+				045 : 새마을금고
+				048 : 신협중앙회
+				071 : 우체국
+				081 : KEB하나은행
+				089 : 케이뱅크
+				088 : 신한은행
+				090 : 카카오은행
+
+				054 : HSBC
+				055 : 도이치뱅크
+				057 : JP모간
+				060 : BOA은행
+				061 : BNP파리바
+				062 : 중국공상
+
+				209 : 유안타증권
+				218 : 현대증권 ==> KB증권으로 변경
+				222 : 한양증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				223 : 리딩투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				224 : BNK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				225 : IBK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				226 : KB투자증권
+				227 : KTB투자증권
+				238 : 미래에셋대우
+				240 : 삼성증권
+				243 : 한국투자증권
+				247 : NH투자증권
+				261 : 교보증권
+				262 : 하이투자증권
+				263 : HMC ==> 현대차증권 변경
+				264 : 키움증권
+				265 : 이베스트투자증권
+				266 : SK증권
+				267 : 대신증권
+				268 : 솔로몬 투자(삭제) ==> 메리츠종합금융증권 으로 변경
+				269 : 한화투자증권
+				270 : 하나금융투자
+				278 : 신한금융투자
+				279 : DB금융증권
+				280 : 유진투자증권
+				287 : 메리츠종합금융증권
+				290 : 부국증권
+				291 : 신영증권
+				292 : 케이프투자증권
+				294 : 펀드온라인코리아 ==> 한국포스증권 변경
+
+				EX ) bank_004 : 국민은행
+				예외) finnq는 클래스 finnq
+			-->
+
+			<div class="list__account-wrap scroll pb20">
+				<p class="list-title">연결 계좌 관리</p>
+				<ul class="list__account bank-list">
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_002">KDB산업은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">KDB산업은행<em class="ico">주계좌</em></span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼
+							data-modal-open="호출할 모달 팝업 명"
+							data-modal-content="호출 될 모달 팝업"
+
+							data-modal-open, data-modal-content은 이름을 서로 매칭
+						-->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_003">IBK기업은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">IBK기업은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">국민은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_007">수협중앙회</div>
+
+							<div class="account__info">
+								<span class="account__info--name">수협중앙회</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_011">농협은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">농협은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_020">우리은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">우리은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_023">SC제일은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">SC제일은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_027">한국시티은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">한국시티은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_031">대구은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">대구은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_032">BNK부산은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">BNK부산은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_034">광주은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">광주은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_035">제주은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">제주은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_037">전북은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">전북은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+						<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_039">경남은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">경남은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					</li>
+						<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_045">새마을금고</div>
+
+							<div class="account__info">
+								<span class="account__info--name">새마을금고</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_048">신협중앙회</div>
+
+							<div class="account__info">
+								<span class="account__info--name">신협중앙회</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_050">상호저축은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">상호저축은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_064">산림조합중앙회</div>
+
+							<div class="account__info">
+								<span class="account__info--name">산림조합중앙회</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_071">우체국</div>
+
+							<div class="account__info">
+								<span class="account__info--name">우체국</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_081">KEB하나은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">KEB하나은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_088">신한은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">신한은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_089">케이뱅크</div>
+
+							<div class="account__info">
+								<span class="account__info--name">케이뱅크</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">01000001234-137</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_090">카카오은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">카카오은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_054">HSBC</div>
+
+							<div class="account__info">
+								<span class="account__info--name">HSBC</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_055">도이치뱅크</div>
+
+							<div class="account__info">
+								<span class="account__info--name">도이치뱅크</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_057">JP모간</div>
+
+							<div class="account__info">
+								<span class="account__info--name">JP모간</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_060">BOA은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">BOA은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_061">BNP파리바</div>
+
+							<div class="account__info">
+								<span class="account__info--name">BNP파리바은행</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li>
+						<div class="block--wrap">
+							<div class="ico__account bank_062">중국공상은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">중국공상</span>
+							</div>
+							<div class="account__info--detail">
+								<em class="num">52010202020222</em>
+							</div>
+						</div>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼 -->
+						<button type="button" class="list__btn--option" data-modal-open="account-option-select">계좌 설정 변경</button>
+					</li>
+					<li class="account__join kdb">
+						<a href="#">
+							<div class="ico__account">KDB산업은행 계좌 개설</div>
+
+							<div class="account__info">
+								<span class="account__info--name txt_blue"><em class="num">1.0%</em> 금리</span>
+							</div>
+							<div class="account__info--detail">
+								KDB입출금통장 개설하기
+							</div>
+						</a>
+					</li>
+					<li class="account__more">
+						<!-- 계좌 최대 노출 5개 :  5개가 노출된 상태에서 계좌추가 버튼 클릭 시 토스트 팝업 노출 -->
+						<a href="#" class="btn__account--more" data-modal-open="popup-select-finance">
+							<div class="ico__account more">추가 계좌 연결</div>
+							계좌 연결
+						</a>
+					</li>
+				</ul>
+			</div>
+
+
+			<!-- 주 계좌 연결 설정 팝업 -->
+			<div class="modal-toast select" data-modal-content="account-option-select" role="alert">
+				<div class="modal-toast-container">
+					<button type="button" class="modal-toast-close">창닫기</button>
+					<div class="conts_box">
+						<!-- <strong class="title">타이틀 영역</strong> -->
+						<ul class="list_set">
+							<li><a href="#none">주계좌로 설정</a></li>
+							<li><a href="#none">계좌 연결 끊기</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //주 계좌 연결 설정 팝업 -->
+
+			<!-- 은행 선택 팝업 -->
+			<article data-step="step1">
+				<div class="modal__popup--common swipe" id="modal-swipe-popup" data-modal-content="popup-select-finance">
+					<div class="modal__content--wrap">
+						<button type="button" class="modal__btn--close">팝업 닫기</button>
+
+						<!-- 케이스 두가지 입니다. 타이틀 은행 선택, 은행/증권사 선택 -->
+						<p class="modal__title" id="modal-event-area">은행 선택</p>
+						<!-- <p class="modal__title" id="modal-event-area">은행/증권사 선택</p> -->
+
+						<div class="scroll finance">
+							<ul class="list__finance btn_sellist set_type4">
+								<li class="bank_002"><button type="button" data-modal-open="user-account-insert">KDB산업은행</button></li>
+								<li class="bank_003"><button type="button" data-modal-open="user-account-insert">IBK기업은행</button></li>
+								<li class="bank_004"><button type="button" data-modal-open="user-account-insert">국민은행</button></li>
+								<li class="bank_011"><button type="button" data-modal-open="user-account-insert">농협은행</button></li>
+								<li class="bank_020"><button type="button" data-modal-open="user-account-insert">우리은행</button></li>
+								<li class="bank_023"><button type="button" data-modal-open="user-account-insert">SC제일은행</button></li>
+								<li class="bank_027"><button type="button" data-modal-open="user-account-insert">한국시티은행</button></li>
+								<li class="bank_031"><button type="button" data-modal-open="user-account-insert">대구은행</button></li>
+								<li class="bank_032"><button type="button" data-modal-open="user-account-insert">BNK부산은행</button></li>
+								<li class="bank_034"><button type="button" data-modal-open="user-account-insert">광주은행</button></li>
+								<li class="bank_035"><button type="button" data-modal-open="user-account-insert">제주은행</button></li>
+								<li class="bank_037"><button type="button" data-modal-open="user-account-insert">전북은행</button></li>
+								<li class="bank_039"><button type="button" data-modal-open="user-account-insert">경남은행</button></li>
+								<li class="bank_064"><button type="button" data-modal-open="user-account-insert">산림조합중앙회</button></li>
+								<li class="bank_050"><button type="button" data-modal-open="user-account-insert">상호저축은행</button></li>
+								<li class="bank_045"><button type="button" data-modal-open="user-account-insert">새마을금고중앙회</button></li>
+								<li class="bank_007"><button type="button" data-modal-open="user-account-insert">수협중앙회</button></li>
+								<li class="bank_048"><button type="button" data-modal-open="user-account-insert">신협중앙회</button></li>
+								<li class="bank_071"><button type="button" data-modal-open="user-account-insert">우체국</button></li>
+								<li class="bank_081"><button type="button" data-modal-open="user-account-insert">KEB하나은행</button></li>
+								<li class="bank_089"><button type="button" data-modal-open="user-account-insert">케이뱅크</button></li>
+								<li class="bank_088"><button type="button" data-modal-open="user-account-insert">신한은행</button></li>
+								<li class="bank_090"><button type="button" data-modal-open="user-account-insert">카카오은행</button></li>
+								<li class="bank_054"><button type="button" data-modal-open="user-account-insert">HSBC은행</button></li>
+								<li class="bank_055"><button type="button" data-modal-open="user-account-insert">도이치뱅크</button></li>
+								<li class="bank_057"><button type="button" data-modal-open="user-account-insert">JP모간</button></li>
+								<li class="bank_060"><button type="button" data-modal-open="user-account-insert">BOA은행</button></li>
+								<li class="bank_061"><button type="button" data-modal-open="user-account-insert">BNP파리바</button></li>
+								<li class="bank_062"><button type="button" data-modal-open="user-account-insert">중국공상은행</button></li>
+							</ul>
+
+							<ul class="list__finance btn_sellist set_type4">
+								<li class="bank_209"><button type="button" data-modal-open="user-account-insert">유안타증권</button></li>
+								<li class="bank_226"><button type="button" data-modal-open="user-account-insert">KB투자증권</button></li>
+								<li class="bank_227"><button type="button" data-modal-open="user-account-insert">KTB투자증권</button></li>
+								<li class="bank_238"><button type="button" data-modal-open="user-account-insert">미래에셋대우</button></li>
+								<li class="bank_240"><button type="button" data-modal-open="user-account-insert">삼성증권</button></li>
+								<li class="bank_243"><button type="button" data-modal-open="user-account-insert">한국투자증권</button></li>
+								<li class="bank_247"><button type="button" data-modal-open="user-account-insert">NH투자증권</button></li>
+								<li class="bank_261"><button type="button" data-modal-open="user-account-insert">교보증권</button></li>
+								<li class="bank_262"><button type="button" data-modal-open="user-account-insert">하이투자증권</button></li>
+								<li class="bank_263"><button type="button" data-modal-open="user-account-insert">현대차증권</button></li>
+								<li class="bank_264"><button type="button" data-modal-open="user-account-insert">키움증권</button></li>
+								<li class="bank_265"><button type="button" data-modal-open="user-account-insert">이베스트투자증권</button></li>
+								<li class="bank_266"><button type="button" data-modal-open="user-account-insert">SK증권</button></li>
+								<li class="bank_267"><button type="button" data-modal-open="user-account-insert">대신증권</button></li>
+								<li class="bank_269"><button type="button" data-modal-open="user-account-insert">한화투자증권</button></li>
+								<li class="bank_270"><button type="button" data-modal-open="user-account-insert">하나금융투자</button></li>
+								<li class="bank_278"><button type="button" data-modal-open="user-account-insert">신한금융투자</button></li>
+								<li class="bank_279"><button type="button" data-modal-open="user-account-insert">DB금융증권</button></li>
+								<li class="bank_280"><button type="button" data-modal-open="user-account-insert">유진투자증권</button></li>
+								<li class="bank_287"><button type="button" data-modal-open="user-account-insert">메리츠종합금융증권</button></li>
+								<li class="bank_290"><button type="button" data-modal-open="user-account-insert">부국증권</button></li>
+								<li class="bank_291"><button type="button" data-modal-open="user-account-insert">신영증권</button></li>
+								<li class="bank_292"><button type="button" data-modal-open="user-account-insert">케이프투자증권</button></li>
+								<li class="bank_294"><button type="button" data-modal-open="user-account-insert">한국포스증권</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+			<!-- //은행 선택 팝업 -->
+
+			<!-- 계좌입력  : 모달 POPUP -->
+			<div class="modal__popup--common is-flexible" data-modal-content="user-account-insert">
+				<div class="modal__content--wrap">
+					<button type="button" class="modal__btn--close">팝업 닫기</button>
+
+					<div class="scroll">
+						<ul class="list__account no-title">
+							<li>
+								<!--
+									- 은행명 / 계좌명만 있을때는 클래스 'single' 추가
+									- 계좌번호와 같이 있을시는 클래스 'single' 삭제
+								-->
+								<div class="block--wrap single">
+									<div class="ico__account">국민</div>
+
+									<div class="account__info">
+										<span class="account__info--name">생활비통장</span>
+									</div>
+									<!-- <div class="account__info--detail">
+										<em class="num">01000001234-137</em>
+									</div> -->
+								</div>
+							</li>
+						</ul>
+
+						<div class="transfer__number">
+							<input type="tel" data-name="inpFocus" placeholder="계좌번호 입력">
+							<span class="focus-border"></span>
+							<!-- <p class="transfer__guite--txt">최소 <em class="num">1</em>만원 / 최대 <em class="num">100</em>만원</p> -->
+							<button type="button" class="modal__btn--clear">초기화</button>
+						</div>
+					</div>
+					<!-- //scroll -->
+
+					<div class="sticky_wrap set_type1">
+						<button type="button" name="apply" class="btn btn_apply" disabled="disabled">연결하기</button>
+					</div>
+				</div>
+			</div>
+			<!-- //모달 POPUP -->
+
+
+		</section>
+
+		<!-- 토스트 팝업 TEXT 노출 영역 -->
+		<div id="toast__popup"></div>
+		<!-- //토스트 팝업 TEXT 노출 영역 -->
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function () {
+
+	// 토스트 팝업 호출 예제
+	// $('.btn.toast').on('click', function(){
+		toastPopup('토스트 팝업 토스트 팝업 예제 토스트 팝업 예제토스트 팝업 토스트 팝업');
+	// });
+
+	// 하단 메뉴 노출갯수에 따라 컨텐츠 자동 스크롤 (MAX5)
+	function menuScrollHeightCalc (){
+		var topMenuHeight = $(".sec_title");
+		var scrollContentHeight = parseInt(topMenuHeight.outerHeight(true), 10);
+
+		var windowH = $(window).height();
+		var compareListHeight = parseInt($(".list__account-wrap.scroll").outerHeight(), 10) + scrollContentHeight;
+
+		// wiidow 높이와 스크롤할 List 높이 비교
+		if (windowH < compareListHeight)
+		{
+			$(".list__account-wrap").css('top', scrollContentHeight +'px');
+
+			$('.list__account-wrap').scroll(function(event){
+				var _scrollTop = $(this).scrollTop();
+				if (_scrollTop > 0) {
+					$('.open-banking .sec_title.line').addClass('on');
+				}
+				else {
+					$('.open-banking .sec_title.line').removeClass('on');
+				}
+			});
+		}
+		else
+		{
+			$(".list__account-wrap").removeClass('scroll');
+		}
+	}
+	menuScrollHeightCalc ();
+
+
+	// 모달팝업 계좌 번호 입력 체크
+	$('.modal__popup--common [data-name="inpFocus"]').on("keyup focusOut", function(e) {
+		let insertNumText = $(this).val();
+		let insertNumber = insertNumText.replace( /원/gi, '');
+		let insertValue  = parseInt(insertNumber.replace(/,/gi, ''));
+
+		// 키패드 EVENT
+		let key = event.charCode || event.keyCode || 0;
+
+		// 안드로이드 키패드 숨김 함수처리 / IOS는 자동 처리
+		if (key == 13) {
+			hidekeypad();
+		}
+
+		// 계좌 필드 초기화 버튼 노출/비노출
+		if (insertNumText.length > 0) {
+			$('.modal__btn--clear').addClass('is-visible');
+			$('.modal__popup--common .sticky_wrap .btn_apply').removeAttr('disabled');
+		} else {
+			$('.modal__btn--clear').removeClass('is-visible');
+			$('.modal__popup--common .sticky_wrap .btn_apply').attr('disabled', 'disabled');
+		}
+	});
+
+
+	// 계좌 입력 인풋 필드 초기화 추가
+	$(document).on('click', '.modal__btn--clear', function(){
+		$(this).parent().find('[data-name="inpFocus"]').val('').attr({'placeholder' : "계좌번호 입력"}).focus();
+		$('.modal__popup--common .sticky_wrap .btn_apply').attr('disabled', 'disabled');
+	});
+
+
+	// 팝업 닫기
+	$(document).on('click', '.modal__btn--close',  function(){
+		$('.modal_popup--mask.is-visible').remove();
+		$('.modal__popup--common').removeClass('is-visible');
+	});
+
+
+	// 모달 팝업 호출, 레이어 부모 페이지 스크롤 막기 ( 계좌 연결 / 은행 선택 )
+    $(document).on('click', '[data-modal-open]', function(){
+    	modalPopupOpen( $(this) );
+	})
+	.on('click', '.modal-toast .modal-toast-close', function(e) { // 닫기 버튼 클릭
+		$(this).parents('.modal-toast').removeClass('is-visible');
+		// 팝업 닫기, 레이어 부모 페이지 스크롤 해제 ( 이벤트 : this 전달 )
+		modalPopupClose( $(this) );
+	}).on('click', '.modal-toast a', function(e) { // 옵션(상세) 선택
+		// 팝업 닫기, 레이어 부모 페이지 스크롤 해제 ( 이벤트 : this 전달 )
+		modalPopupClose( $(this) );
+	});
+
+
+	// MODAL POPUP SWIPE 모션 감지
+	function swipeModalPopupEvent(){
+		let targetElement = document.getElementById("modal-event-area");
+		let	eventArea 	  = new Hammer(targetElement);
+		let	windowHeight  = $(window).height();
+
+		eventArea.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+		// 스와이프 Up
+		eventArea.on("swipeup", function () {
+			$('.modal__popup--common.swipe').addClass('is-flexible');
+		});
+
+		// 스와이프 Down
+		eventArea.on("swipedown", function () {
+			$('.modal__popup--common.swipe').removeClass('is-flexible');
+		});
+
+		// 해더 영역 클릭시 확장
+		$(document).on('click', '#modal-event-area',  function(){
+			var status = $(this).parents('.modal__popup--common.swipe').hasClass('is-flexible');
+
+			if (status) { $('.modal__popup--common.swipe').removeClass('is-flexible'); }
+			else { $('.modal__popup--common.swipe').addClass('is-flexible'); }
+		});
+	}
+	swipeModalPopupEvent();
+
+
+	// 은행, 증권 선택 신규 GUI 공통
+	$('.modal__popup--common .list__finance').on('click', 'button', function() {
+
+		// 선택 영역 활성화
+		$('.modal__popup--common .btn_sellist').find('button').removeClass('on');
+		$(this).addClass("on");
+
+		// 은행 리스트에서 특정 은행을 클릭 - 레이어 팝업 호출
+		// 선택 은행명 로고
+		var clickListBank 	  = $(this).parent('li').attr('class');
+		// 선택한 은행명
+		var clickListBankName = $(this).text();
+		// 오픈할 Modal Event
+		var openModalPopup	  = $(this).attr('data-modal-open');
+
+		// 모달 팝업 호출
+		 modalPopupOpen( $(this) );
+
+		// 초기화 후 선택한 은행 아이콘 노출
+		$('[data-modal-content="' + openModalPopup + '"] .ico__account').removeClass().addClass('ico__account '+clickListBank+'');
+
+		// 선택한 계좌명
+		$('[data-modal-content="' + openModalPopup + '"] .account__info--name').text( clickListBankName );
+
+		clickListBank = undefined;
+
+	});
+
+
+	// 안드로이드 키패드 대응 스크립트 TEST,
+	// UI 확인용. 개발에서는 이미 사용하는 안드로이드 키패드 대응 스크립트 사용.
+	var winH 		= $(window).height(),
+	btnFixWrap		= $('.sticky_wrap');
+
+	function androidKeypadFunc()
+	{
+		if ( !$('body').hasClass('ios') )
+		{
+			$(window).resize(function(){
+				if ( $(window).height() + 100 >= winH ) {
+					// 키패드 비활성화
+					btnFixWrap.show();
+				} else {
+					// 키패드 활성화
+					btnFixWrap.hide();
+				}
+			});
+		}
+	}
+	androidKeypadFunc();
+
+});
+</script>
+</body>
+</html>

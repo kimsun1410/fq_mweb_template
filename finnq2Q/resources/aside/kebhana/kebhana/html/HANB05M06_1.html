@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>비대면계좌개설 | 입금인증</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+	<div id="contents" class="common add_sticky">
+		<div class="sec_ows_head finnq">
+			<button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button>
+			<h2 class="ows_title">KEB하나 비대면계좌 개설</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section class="common_wrap transfer_agree">
+
+			<div class="sec_title">
+				<h2>1원 입금 인증</h2>
+				<p class="guide_txt"><em>선택하신 계좌(KEB하나 <i class="num">570702********</i>)</em>로<br>
+				<strong>1원</strong>을 보냈습니다.</p>
+			</div>
+
+			<div class="deposit_name round_box">
+				<p class="txt">입금자 <strong>하나 뒤 숫자 <i class="num bold">3</i>자리</strong></strong>를 입력해 주세요.</p>
+
+				<div class="new_regist">
+					<span>하나</span>
+					<div class="wrap_password three_area">
+						<p class="bg_password">
+							<i class="on"><input type="tel" data-name="resident_num" placeholder="" maxlength="1" value="3"></i>
+							<i><input type="tel" data-name="resident_num" placeholder="" maxlength="1"></i>
+							<i><input type="tel" data-name="resident_num" placeholder="" maxlength="1"></i>
+						</p>
+					</div>
+
+				</div>
+
+				<span class="limit star_type"> 인증번호 유효시간 : 10분</span>
+				<p class="img_ex">예제</p>
+			</div>
+		</section>
+
+		<!--
+			클래스 visible로 제어
+			인증번호 오입력
+		-->
+		<div class="modal_wrap visible normal">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">잘못된 인증번호입니다. <br>
+					인증번호를 확인해 주세요.</h3>
+				</div>
+
+				<div class="flex_wrap set_type1">
+					<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+		<!-- //인증번호 오입력 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	var residentNum = function () {
+		// 주민번호 앞자리
+		$('input:password[data-name="resident_num"]').on('keydown change', function(e){
+		var imgSum = $('.resident_dot span').length;
+			if ( e.keyCode == 8) {
+				$('.resident_dot span:last').remove();
+			} else {
+				if( imgSum == 3 ) { return false ; }
+				$('.resident_dot').append("<span></span>");
+			}
+		});
+	};	residentNum();
+
+	//커서 안보이는 class 테스트용
+	$('input:password[data-name="resident_num"]').focus(function(){
+		$(this).addClass('inp_blind');
+	});
+
+
+
+});
+</script>
+</body>
+</html>

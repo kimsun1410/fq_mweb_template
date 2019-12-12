@@ -1,0 +1,582 @@
+@charset 'UTF-8';
+
+/* ----------------------------------------------------
+*	아트투자
+* ---------------------------------------------------- */
+
+/* 메인 */
+.art_wrap .main_view {display:block; position:relative; box-sizing:border-box;}
+.art_wrap .main_view.off {display:none;}
+.art_wrap .tab_scroll_fix.on {position:fixed; padding-top:0; top:0px; left:0; right:0; z-index:50; background:$white;}
+.art_wrap .tab_scroll_fix .main_view_thumb {display:none;}
+.art_wrap .tab_scroll_fix.on .main_view_thumb {display:block;}
+.art_wrap .main_view_thumb {position:relative; box-sizing:border-box; height:40px;
+    background: #575757; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #101011 , #575757); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #101011, #575757); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #101011, #575757); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #101011 , #575757); /* Standard syntax */
+}
+.art_wrap .font16 {font-size:16px !important;}
+.art_wrap .main_view a,
+.art_wrap .main_view_thumb a {display:block; color:$white;}
+.art_wrap .main_view_thumb a {position:relative; opacity:0; box-sizing:border-box; padding-left:46px; font-size:14px; line-height:41px; letter-spacing:3px; font-family:"AppleSDGothicNeo-Light"; -webkit-animation:fadeIn .85s forwards ease-in-out; animation:fadeIn .85s forwards ease-in-out;}
+.art_wrap .main_view_thumb a:before {display:inline-block; position:absolute; top:14px; left:20px; width:16px; height:12px; content:""; background:url(../images/finnqmarket/ico_main_scroll.png) no-repeat 0 0; background-size:cover;}
+.art_wrap .main_view a img {width:100%; height:auto;}
+.art_wrap .main_view p {position:absolute; z-index:10; left:30px;}
+.art_wrap .main_view .title {opacity:0; top:30px; font-size:30px; line-height:47px; letter-spacing:10px; font-family:"AppleSDGothicNeo-Light";  -webkit-animation:fadeIn .85s forwards ease-in-out; animation:fadeIn .85s forwards ease-in-out; animation-iteration-count:1; -webkit-animation-iteration-count:1; animation-fill-mode:both; -webkit-animation-fill-mode:both;}
+.art_wrap .main_view .txt {display:inline-block; bottom:45px; padding-bottom:3px; font-weight:bold; font-size:16px; letter-spacing:0; border-bottom:1px solid $white; -webkit-animation:fadeInUp .85s forwards ease-in-out; animation:fadeInUp .85s forwards ease-in-out; animation-delay:.63s; animation-iteration-count:1; animation-iteration-count:1; -webkit-animation-iteration-count:1; animation-fill-mode:both; -webkit-animation-fill-mode:both;}
+
+.art_wrap .mask {position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0, 0.5); z-index:10; text-indent:-999em; overflow:hidden;}
+.art_wrap .purple {color:$purply_blue !important;}
+.art_wrap .sec_title.left {text-align:left;}
+
+/* 그래프(8) */
+.art_wrap .svg_graph svg circle {stroke:$white_three;}
+.art_wrap .svg_graph svg.ing circle {stroke:$purply_blue;}
+.art_wrap .svg_graph svg.ing+.label {color:$purply_blue;}
+.art_wrap .svg_graph svg.complete circle {stroke:$black;}
+.art_wrap .svg_graph svg.complete+.label {color:$black;}
+
+.art_wrap .p2p_wrap.big {display:flex; justify-content: center; -webkit-display:flex; -webkit-justify-content: center; /* padding-top:30px; margin-top:26px; background:url(../images/common/bg-dotline-type1.png) 0 0 repeat-x; background-size:18px auto; */}
+.art_wrap .p2p_wrap.big .figuer_graph {margin-left:10px;}
+.art_wrap .p2p_wrap.big .figuer_graph:first-of-type {margin-left:0;}
+.art_wrap .p2p_wrap.big .figuer_graph .tit {margin-top:22px; text-align:center; font-size:12px; color:$brownish_grey;}
+.art_wrap .p2p_wrap.big .figuer_graph.end .tit {color:$pinkish_grey}
+.art_wrap .p2p_wrap.big .figuer_graph .label {top:46px; font-size:16px; line-height:17px; color:$black; margin-left:2px; font-weight:normal;}
+.art_wrap .p2p_wrap.big .figuer_graph.first .label {font-size:18px; font-weight:bold;}
+.art_wrap .p2p_wrap.big .figuer_graph.ing .label {color:$purply_blue;}
+.art_wrap .p2p_wrap.big .figuer_graph.due .label {color:$black;}
+.art_wrap .p2p_wrap.big .figuer_graph.end .label {font-size:16px; color:$pinkish_grey;}
+.art_wrap .p2p_wrap.big .figuer_graph .label .tot {display:block; font-size:11px; color:$warm_grey;}
+
+.art_wrap .p2p_wrap.big .svg_graph {width:92px; height:92px;}
+.art_wrap .p2p_wrap.big .svg_graph svg {width:92px; height:92px; margin:-46px 0 0 -46px;}
+.art_wrap .p2p_wrap.big .svg_graph svg circle {cx: 46; cy: 46; r: 45; stroke-dasharray:283;}
+.art_wrap .p2p_wrap.big .svg_graph.thin svg circle {stroke-width:1px;}
+
+.img_art_wrap {text-align:center;}
+.img_art_wrap .img_view {display:inline-block; width:280px; height:280px; border-radius:50%; overflow:hidden;}
+.img_art_wrap .img_view img {width:100%; height:auto;}
+
+/* 탭 */
+.art_wrap .sub_head {position:relative; padding:0 20px; background:$white; border-bottom:1px solid $white_two;}
+.art_wrap .sub_head .ex_sort {position:absolute; top:0; right:20px;}
+.art_wrap .sub_head .ex_sort a{font-size: 12px; line-height: 42px; color:$warm_grey;}
+.art_wrap .sub_head .ex_sort a.on {color:$black;}
+.art_wrap .sub_head .ex_sort a:before {content: ""; display: inline-block; width:12px; height:12px; margin-right:2px; vertical-align:-1px; background-image:url(../images/common/ico_art_sort_off.png); background-repeat:no-repeat; background-position:50% 50%; background-size:100% auto; background-color:$white;}
+.art_wrap .sub_head .ex_sort a.on:before {background-image:url(../images/common/ico_art_sort_on.png);}
+
+/* 메인 리스트 */
+.art_wrap .art_view_list {}
+.art_wrap .art_view_list > article {padding:30px 20px; border-bottom:1px solid $white_four;}
+.art_wrap .art_view_list > article:last-of-type {border-bottom:0;}
+.art_wrap .art_view_list > article > a {display:block;}
+/* .art_wrap .art_view_list > article:first-of-type {border-top:0;} */
+.art_wrap .art_view_list .info_cont_wrap {position:relative; margin-top:30px; height:77px; padding-left:70px;}
+.art_wrap .art_view_list .info_cont_wrap .figuer_graph {position:absolute; top:0; left:0;}
+.art_wrap .art_view_list .info_cont_wrap .limit_day {font-size:11px; margin-top:7px; text-align:center; color:$pinkish_grey;}
+
+.art_wrap .art_view_list .art_info {}
+.art_wrap .art_view_list .art_info .author {position:relative; padding-top:7px; font-size:18px; line-height:22px; color:$black; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap:break-word; font-weight:bold;}
+.art_wrap .art_view_list .art_info.on .author {padding-right:60px;}
+/*
+.art_wrap .ico_info_label,
+.art_wrap .art_view_list .art_info.on .author:after {display:inline-block; width:43px; height:19px; background-image:url(../images/finnqmarket/ico_art_info_label.png); background-position:0 0; background-repeat:no-repeat; background-size:100% auto; text-indent:-999em; overflow:hidden;}
+.art_wrap .ico_info_label.ing {background-position:0 -21px;}
+.art_wrap .ico_info_label.end {background-position:0 -42px;}
+.art_wrap .ico_info_label.due {background-position:0 -63px;}
+*/
+.art_wrap .art_view_list .art_info.on .author:after {display:inline-block; width:43px; height:19px; background-image:url(../images/finnqmarket/ico_art_info_label.png); background-position:0 0; background-repeat:no-repeat; background-size:100% auto; text-indent:-999em; overflow:hidden;}
+
+.art_wrap .ico_info_label {display:inline-block; width:43px; height:18px; text-indent:0; box-sizing:border-box; background:#222; color:#fff; border-radius:2px; line-height:16px; font-size:11px; border:1px solid #222;}
+.art_wrap .ico_info_label.ing {border:1px solid #731aed; background:#731aed;}
+.art_wrap .ico_info_label.end {border:1px solid #ccc; background:#ccc;}
+.art_wrap .ico_info_label.due {border:1px solid #222; background:#fff; color:#222;}
+
+.art_wrap .art_view_list .art_info.on .author:after {content:""; position:absolute; top:9px; right:0;}
+.art_wrap .art_view_list .art_info .art_name {width:calc(100% - 40px); margin-top:3px; font-size:14px; color:$warm_grey; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+/* 상세보기 */
+.art_wrap .main_view_detail {background:$white_three;}
+.art_wrap .main_view_detail > article {position:relative; margin-top:4px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; background:$white;}
+.art_wrap .main_view_detail > article.other_cont.btm_line {border-bottom-color:$white;}
+.art_wrap .main_view_detail > article.other_cont.top_line {border-top-color:$white; margin-top:6px;}
+.art_wrap .main_view_detail > article.other_cont.top_line:before {position:absolute; content:""; background-color:$white_four; z-index:5; width:100%; height:6px; left:0; top:-7px;}
+.art_wrap .main_view_detail > article:last-of-type {border-bottom:0;}
+.art_wrap .main_view_detail > article:first-of-type {margin-top:0;}
+.art_wrap .main_view_detail.no_line > article:first-of-type {border-top:0;}
+.art_wrap .main_view_detail .art_info_guide {text-align:center;}
+.art_wrap .main_view_detail .art_info_guide .ico_info_label {margin-left:2px;}
+.art_wrap .main_view_detail .art_info_guide .ico_info_label:first-of-type {margin-left:0;}
+.art_wrap .main_view_detail .author {font-size:24px; color:$black;}
+.art_wrap .ico_info_label + .author {margin-top:15px;}
+.art_wrap .main_view_detail .art_name {margin-top:3px; font-size:16px; color:$warm_grey;}
+.art_wrap .main_view_detail .date_wrap {margin-top:22px; font-size:14px; color:$black;}
+.art_wrap .main_view_detail .com_box_wrap {margin:43px 0px;}
+.art_wrap .main_view_detail .com_box_wrap.sec_member_input {margin:0; padding:43px 20px; border-bottom:1px solid $white_two;}
+
+.art_wrap .main_view_detail .title {font-size:18px; color:$black; margin-bottom:18px;}
+.art_wrap .main_view_detail .title.bold {font-size:16px; margin-bottom:6px;}
+.art_wrap .main_view_detail .title.sub {font-size:14px;}
+
+.art_wrap .list_split {}
+.art_wrap .list_split > li {position:relative; margin-top:14px;}
+.art_wrap .list_split.add_thumb > li {margin-top:26px;}
+.art_wrap .list_split > li .ico_circle_help {margin:-3px 0 0 6px;}
+.art_wrap .list_split > li .layer_wrap {top:31px; left:26px; right:26px;}
+.art_wrap .list_split.add_info > li {margin-top:26px;}
+.art_wrap .list_split > li:first-of-type {border-top:0;}
+.art_wrap .list_split > li .tit {display:inline-block; float:left; color:$brownish_grey; font-family:"AppleSDGothicNeo-Light";}
+.art_wrap .list_split.font16 > li span,
+.art_wrap .list_split > li .font16 {font-size:16px;}
+.art_wrap .list_split > li .cont {display:inline-block; float:right; color:$brownish_grey; text-align:right;}
+.art_wrap .list_split > li .cont.mgt {margin-top:-2px;}
+.art_wrap .list_split > li .remark {position: absolute; top:20px; right: 0; font-size: 11px; color:$warm_grey;}
+.art_wrap .list_split > li .cont.black,
+.art_wrap .list_split > li .cont.black > a{color:$black;}
+.art_wrap .list_split > li .cont > a {display:inline-block; padding-right:16px;}
+.art_wrap .list_split > li .cont > a:after {display:inline-block; position: absolute; right:0; top:50%; margin-top:-6px; width:7px; height:12px; content:""; background-position: 0 -111px; background-image: url(../images/common/ir-arrow-set.png); background-repeat:no-repeat; background-size: 40px auto;}
+.art_wrap .list_split > li:after {content:""; display:block; clear:both;}
+.art_wrap .list_split.line_dot {}
+.art_wrap .list_split.line_dot > li {margin-top:0; /* height:31px; */ padding:8px 0 9px; background:url(../images/common/bg-dotline-type1.png) 0 100% repeat-x; background-size:18px auto;}
+.art_wrap .list_split.line_dot > li .cont {letter-spacing:0;}
+.art_wrap .list_split.line_dot li span {font-size:12px; color:$brownish_grey; /* line-height:31px; */ line-height:18px;}
+
+.art_wrap .main_view_detail .box_avi {position: relative; width:100%; height:0; padding-bottom: 56.25%;}
+.art_wrap .main_view_detail .box_avi iframe {position: absolute; top:0; left:0; width:100%; height:100%;}
+.art_wrap .main_view_detail .detail_link {margin-top:12px; text-align:right;}
+.art_wrap .main_view_detail .detail_link a {position:relative; display:inline-block; padding-right:16px; font-size:12px; color:$warm_grey;}
+.art_wrap .main_view_detail .detail_link a:after {display:inline-block; position: absolute; right:0; top:50%; margin-top:-7px; width:7px; height:12px; content:""; background-position: 0 -138px; background-image: url(../images/common/ir-arrow-set.png); background-repeat:no-repeat; background-size: 40px auto;}
+
+.art_wrap .more_detail_link {display:block; position:relative; height:58px; padding:0 20px; line-height:58px; font-size:18px; color:$black;}
+.art_wrap .more_detail_link:after {display:inline-block; position: absolute; right:20px; top:50%; margin-top:-6px; width:7px; height:12px; content:""; background-position: 0 -111px; background-image: url(../images/common/ir-arrow-set.png); background-repeat:no-repeat; background-size: 40px auto;}
+
+/* 슬라이드 */
+.art_wrap .swiper-container {position:relative;}
+.art_wrap .swiper-container img {width:100%; height:auto;}
+.art_wrap .swiper-container .swiper_guide_wrap {position:absolute; bottom:0px; left:0; right:0; height:120px; text-align:center; background:url(../images/finnqmarket/bg_guide_swipe.png) 0 100% no-repeat; background-size:cover; z-index:30;
+}
+.art_wrap .swiper-container .swiper_guide {display:inline-block; margin-top:10px; width:100px; height:100px; text-indent:-999em; overflow:hidden; background:url(../images/finnqmarket/ico_guide_swipe.png) 50% 50% no-repeat; background-size:100% auto;}
+.art_wrap .swiper-container.defalut .swiper-pagination {position:relative; margin-top:16px; bottom:0 !important;}
+.art_wrap .swiper-container.defalut .swiper-pagination-bullet {background:$white_two; opacity:1;}
+.art_wrap .swiper-container.defalut .swiper-pagination-bullet-active {background:$black;}
+.art_wrap .swiper-container.count .swiper-pagination {top: 15px; right: 15px; bottom: initial; left: initial; width: 44px; height: 20px; text-align: center; background: rgba(0, 0, 0, 0.3); color: #fff; font-family: 'LatoM'!important; font-size: 11px; line-height: 20px; border-radius: 15px;}
+
+/* 차트 */
+.art_wrap .credit_chart_wrap {}
+.art_wrap .credit_chart_wrap .chart_head {position:relative; margin-bottom:18px;}
+.art_wrap .credit_chart_wrap .chart_tit {font-size:14px; color:$black;}
+.art_wrap .credit_chart_wrap .legend_credit {position:absolute; top:0; right:0; padding-left:9px; font-size:12px; color:$brownish_grey;}
+.art_wrap .credit_chart_wrap .legend_credit:before {display:inline-block; width:4px; height:4px; position:absolute; top:50%; left:0; margin-top:-2px; content:""; background:$black; border-radius:50%;}
+.art_wrap .credit_chart_wrap .chart_area {/* min-height:180px; */ min-height:inherit;}
+.art_wrap .credit_chart_wrap .chart_area img {width:100%; height:auto;}
+
+.art_wrap .btn_share_wrap {padding:40px 0 35px; text-align:center;}
+.art_wrap .btn_share_wrap .btn_share {display:inline-block; position:relative; padding-top:45px; width:80px; height:80px; border:1px solid $white_two; border-radius:50%; box-sizing:border-box; background-color:$white;}
+.art_wrap .btn_share_wrap .btn_share:before {display:inline-block; content:""; width:24px; height:18px; position:absolute; left:50%; top:20px; margin-left:-12px; background:url(../images/finnqmarket/btn_art_share.png) no-repeat 0 0; background-size:cover;}
+.art_wrap .btn_share_wrap .btn_share span {font-size: 12px; color: $black; position: absolute; bottom: 15px; width: 100%; left: 50%; margin-left: -39px; text-align: center;}
+
+.art_wrap .sec_member_input .address_input input[type="text"] + input {margin-top:10px;}
+
+
+.art_wrap .return_account_wrap {}
+.art_wrap .inp_title_wrap .btn_pop_link {position:absolute; top:2px; right:0; text-decoration:underline; font-size:14px; color:$black;}
+.art_wrap .return_account_wrap .add_connect {text-align:center; margin-top:28px; font-size:14px; color:$brownish_grey;}
+.art_wrap .return_account_wrap .add_connect .btn_text05 {margin-top:8px;}
+.art_wrap .return_account_wrap .item.soft_select .account {height: 46px; border: 1px solid $white_two; border-radius: 4px; box-sizing: border-box; font-size: 16px; padding:0 40px 0 50px; color:$black;}
+.art_wrap .return_account_wrap .item.soft_select .account button {line-height:46px;}
+.art_wrap .return_account_wrap .item.soft_select.disabled .account{background-color:$white_three;}
+.art_wrap .return_account_wrap .item.soft_select.disabled .account button {color:$warm_grey;}
+.art_wrap .return_account_wrap .item.soft_select:before {display:inline-block; position:absolute; top:16px; left:20px; width:22px; height:15px; background:url(../images/common/ico_bankbook.png) no-repeat 0 0; background-size:100% auto; content:"";}
+
+
+.art_wrap hr.dot_division {margin:30px 0; display:block; height:1px; background:url(../images/common/bg-dotline-type1.png) 0 0 repeat-x; background-size:18px auto; border:none;}
+.art_wrap hr.dot_division + * {margin-top:0;}
+
+/* 핀크계좌 원형 애니메이트 그래프 */
+.art_wrap .sec_time_cycle {position:relative; margin:30px 0 45px;}
+.art_wrap .sec_time_cycle .cycle_wrap {position:relative; width:196px; height:196px; margin:2px; text-align: center; box-sizing: border-box; line-height:inherit;
+    margin-left: -98px; overflow:hidden; border:3px solid $white;}
+.art_wrap .sec_time_cycle .cycle_wrap .img_wrap {position:absolute; top:0; left:0; right:0; bottom:0;}
+.art_wrap .sec_time_cycle .cycle_wrap .img_wrap img {width:100%;}
+.art_wrap .sec_time_cycle .cycle_wrap .img_wrap .mask {border-radius:50%;}
+.art_wrap .sec_time_cycle .cycle_wrap .art_info {position:absolute; color:$white; z-index:20; top:59px; width:100%; text-align:center;}
+.art_wrap .sec_time_cycle .cycle_wrap .art_info .art_total {font-size:40px; font-weight: bold}
+.art_wrap .sec_time_cycle .cycle_wrap .art_info .num_wrap {font-size:12px; margin-top:5px;}
+
+.art_wrap .sec_time_cycle .clock {position:absolute; top:-3px; left:50%; z-index:5; margin-left:-101px; box-sizing:border-box;}
+
+.art_wrap .input_wrap {position:relative;}
+.art_wrap .inp_title_wrap .remark.blue {position:absolute; top:2px; right:0; font-size:11px; color:$clear_blue;}
+.art_wrap .inp_title_wrap + .reword_box_wrap {margin-top:-5px;}
+.art_wrap .reword_box_wrap {overflow:hidden; border-top:1px solid $white_three; border-left:1px solid $white_three;}
+.art_wrap .reword_box_wrap > li {float:left; width:33.33%; height:46px; line-height:46px; box-sizing:border-box; font-size:12px; color:$pinkish_grey; background-color:$white_four; border-right:1px solid $white_three; border-bottom:1px solid $white_three; text-align:center;}
+    body.ios .art_wrap .reword_box_wrap > li{font-size:13px}
+.art_wrap .reword_box_wrap > li.on {background:$white; color:$brownish_grey;}
+.art_wrap .reword_box_wrap > li:first-of-type,
+.art_wrap .reword_box_wrap > li:nth-of-type(3n+1) {width:33.34%}
+
+
+
+/* 작품투자하기 > 핀크계좌 잔액 케이스 */
+.art_wrap .decide_info_wrap {margin-top:28px;}
+.art_wrap .decide_info_wrap .money_info {margin-top:28px;}
+.art_wrap .decide_info_wrap .money_info > div {padding:0 20px; border:1px solid $white_three; border-top:0; background:$white_four; box-sizing:border-box; overflow:hidden;}
+.art_wrap .decide_info_wrap .money_info > div span {font-size:16px; line-height:52px; color:$black;}
+.art_wrap .decide_info_wrap .money_info > div .tit {float:left;}
+.art_wrap .decide_info_wrap .money_info > div .cont {position:relative; float:right; font-size:20px;}
+.art_wrap .decide_info_wrap .money_info > div:first-of-type {border:1px solid $warm_grey; background:$white;}
+.art_wrap .decide_info_wrap .money_info > div:first-of-type span {font-weight:bold;}
+
+.art_wrap .decide_info_wrap .add_connect {margin-top:43px; text-align:center; color:$brownish_grey; line-height:20px;}
+.art_wrap .decide_info_wrap .add_connect p {font-size:16px;}
+.art_wrap .decide_info_wrap.on .add_connect span {color:$purply_blue;}
+.art_wrap .decide_info_wrap.off .add_connect span {color:$reddish_orange;}
+.art_wrap .decide_info_wrap.off .money_info > div .cont {padding-left:20px;}
+.art_wrap .decide_info_wrap.off .money_info > div .cont:before {display:inline-block; position:absolute; top:50%; left:0; content:""; width:14px; height:14px; margin-top:-7px; background: url(../images/common/ir-icon-set.png) no-repeat 0 -61px; background-size:40px auto;}
+.art_wrap .decide_info_wrap .money_info > div:first-of-type .cont.cont:before {display:none;}
+.art_wrap .decide_info_wrap .add_connect .more_add {margin-top:17px; text-align:center;}
+.art_wrap .decide_info_wrap .add_connect .more_add .btn_link {display:inline-block; width:155px; height:40px; line-height:40px; border:1px solid $pinkish_grey; border-radius:4px; font-weight:bold; color:$black; text-align:center;}
+
+/* 아트투자 시작하기(07) */
+.art_wrap .invest_info_wrap {position:relative; padding:0 40px;}
+.art_wrap .invest_info_wrap .sec_title {padding:0; text-align:left;}
+.art_wrap .invest_info_wrap .sec_title + .invest_sub_info {margin-top:24px;}
+.art_wrap .invest_info_wrap .invest_sub_info {}
+.art_wrap .invest_info_wrap .invest_sub_info dt {font-size:14px; font-weight:bold; color:$black;}
+.art_wrap .invest_info_wrap .invest_sub_info dd {margin-top:3px; @include font(14px); color:$brownish_grey;}
+.art_wrap .invest_list_wrap {padding:0 40px;}
+.art_wrap .invest_list_wrap li {margin-top:56px;}
+.art_wrap .invest_list_wrap dl {}
+.art_wrap .invest_list_wrap dt {position:relative; padding-top:220px; @include font(24px); font-weight:bold; color:$black;}
+.art_wrap .invest_list_wrap dt:before {position:absolute; content:""; top:0; right:-40px; width:280px; height:280px; background-image:url(../images/finnqmarket/img_art_sp_invest.jpg); background-repeat:no-repeat; background-size:100% auto;}
+.art_wrap .invest_list_wrap li:nth-of-type(1) dt:before {background-position:0 0;}
+.art_wrap .invest_list_wrap li:nth-of-type(2) dt:before {background-position:0 -280px;}
+.art_wrap .invest_list_wrap li:nth-of-type(3) dt:before {background-position:0 -574px;}
+.art_wrap .invest_list_wrap li:nth-of-type(4) dt:before {background-position:0 -861px;}
+
+/*
+.art_wrap .invest_list_wrap li:nth-of-type(1) {-webkit-animation:fadeIn .85s; animation:fadeIn .85s forwards ease-in-out;}
+.art_wrap .invest_list_wrap li:nth-of-type(2),
+.art_wrap .invest_list_wrap li:nth-of-type(3),
+.art_wrap .invest_list_wrap li:nth-of-type(4) {opacity:0;}
+.art_wrap .invest_list_wrap li.on {-webkit-animation:fadeIn .85s; animation:fadeIn .85s forwards ease-in-out;}
+*/
+.art_wrap .invest_list_wrap li {opacity:0; -webkit-animation:fadeIn .85s; animation:fadeIn .85s forwards ease-in-out;}
+.art_wrap .invest_list_wrap li:nth-of-type(2) {animation-delay: 1.5s;}
+.art_wrap .invest_list_wrap li:nth-of-type(3) {animation-delay: 3s;}
+.art_wrap .invest_list_wrap li:nth-of-type(4) {animation-delay: 4.5s;}
+
+.art_wrap .invest_list_wrap dt .num,
+.art_wrap .invest_list_wrap dt span {position:relative; z-index:10;}
+.art_wrap .invest_list_wrap dt .num {display:inline-block; width:25px; height:25px; font-size:14px; line-height:25px; color:$white; background-color:$black; border-radius:50%; text-align:center;}
+.art_wrap .invest_list_wrap dt span {display:block; margin-top:10px;}
+.art_wrap .invest_list_wrap dd .txt {margin-top:26px; font-family:"AppleSDGothicNeo-Light"; @include font(16px); color:$brownish_grey;}
+.art_wrap .invest_list_wrap dd .sub_txt {font-size:12px; margin-top:6px; color:$clear_blue; font-family:"AppleSDGothicNeo-Light";}
+.art_wrap .invest_list_wrap .add_info {margin:56px 0 43px; text-align:center; font-size:12px; color:$pinkish_grey;}
+
+.art_wrap .invest_list_wrap .btn_text01 {margin-top:6px; text-align:left;}
+.art_wrap .invest_list_wrap .btn_text01 a {font-weight:bold; font-size:14px; border-bottom:0;}
+
+/* 쿠폰사용(11) */
+.art_wrap .coupon_info {position:relative; padding:7px 20px 6px; background-color:$white_three;}
+.art_wrap .coupon_info .info {font-size:14px; color:$brownish_grey;}
+.art_wrap .coupon_info .num {margin-left:9px; color:$black;}
+.art_wrap .coupon_info .btn {position:absolute; top:5px; right:20px; background-color:$white; width:58px; height:21px; line-height:21px; border-radius:14px; font-size:12px; text-align:center; color:$brownish_grey;}
+.art_wrap .coupon_info.on .btn {width:30px; height:30px; text-indent:-999em; overflow:hidden; top:1px; background:url(../images/finnqmarket/ico_sp_diposit.png) no-repeat 107% 0px;
+    background-size: 62px auto;}
+
+.art_wrap .coupon_info .col_box {margin-top:28px;}
+.art_wrap .coupon_info .col_box span:first-child {width: calc(100% - 85px);}
+.art_wrap .coupon_info .col_box span:first-child input {background-color:$white;}
+.art_wrap .coupon_info .col_box span:last-child {width:80px;}
+.art_wrap .coupon_info .add_coupon {display:none; padding-bottom:24px;}
+.art_wrap .coupon_info.on .add_coupon {display:block;}
+.art_wrap .coupon_list {padding:20px 20px 45px 20px; background-color:$white;}
+.art_wrap .coupon_list > article {margin-top:10px; cursor:pointer; overflow:hidden;}
+.art_wrap .coupon_list > article:first-of-type {margin-top:0;}
+.art_wrap .coupon_list > article .group {padding:30px 20px 12px; border:1px solid $white_three;}
+.art_wrap .coupon_list > article.on .group {border-color:$brownish_grey;}
+.art_wrap .coupon_list > article .group > div {position:relative;}
+.art_wrap .coupon_list > article .group > div:first-of-type {position:relative; padding-left:66px; padding-bottom:25px; margin-bottom:11px; background:url(../images/common/bg-dotline-type1.png) 0 bottom repeat-x; background-size:18px auto;}
+.art_wrap .coupon_list > article .mark {position:absolute; top:0; left:0; width:46px; height:46px; box-sizing:border-box; text-align:center; color:$white; font-size:12px; line-height:13px; padding-top:10px; text-indent:-999em; overflow:hidden; background:transparent url(../images/finnqmarket/ico_art_coupon.png) no-repeat 0 0;  background-size:cover;}
+// .art_wrap .coupon_list > article .mark.blue {background:transparent url(../images/finnqmarket/ico_art_coupon.png) no-repeat 0 0;  background-size:cover;}
+.art_wrap .coupon_list > article .thumb {font-size: 14px; color:$black; font-family:"AppleSDGothicNeo-Light";}
+.art_wrap .coupon_list > article .discount {font-size:24px; font-weight:bold; color:$black;}
+.art_wrap .coupon_list > article .add_info {position:absolute; margin-top:2px; font-size:11px; color:$clear_blue;}
+.art_wrap .coupon_list > article .limit {position:absolute; top:0; right:0; font-size:11px; color:$reddish_orange;}
+.art_wrap .coupon_list > article .group > div:first-of-type:before,
+.art_wrap .coupon_list > article .group > div:first-of-type:after {display:inline-block; content:""; position:absolute; bottom:-6px; width:10px; height:10px; border:1px solid $white_three; border-radius:50%; z-index:10; background-color:$white;}
+.art_wrap .coupon_list > article .group > div:first-of-type:before {left:-26px;}
+.art_wrap .coupon_list > article .group > div:first-of-type:after {right:-26px;}
+.art_wrap .coupon_list > article.on .group > div:first-of-type:before,
+.art_wrap .coupon_list > article.on .group > div:first-of-type:after {border-color:$brownish_grey;}
+.art_wrap .coupon_list > article .date {font-size:12px; color:$warm_grey;}
+
+
+/* 작품투자완료(12) */
+.art_wrap .art_invest_result {margin-bottom: 45px; overflow:hidden;}
+.art_wrap .art_invest_result .img_review {position:relative; height:173px; overflow:hidden; border-radius:8px 8px 0 0;}
+.art_wrap .art_invest_result .img_review:before {display:inline-block; position:absolute; top:28px; left:50%; width:68px; height:30px; margin-left:-34px; content:""; background:url(../images/finnqmarket/ico_invest_mark.png) no-repeat 50% 50%; background-size:contain; z-index:15;}
+.art_wrap .art_invest_result .img_review .img_wrap {}
+.art_wrap .art_invest_result .img_review .img_wrap img {position:absolute; top:0; left:0; width:100%;}
+.art_wrap .art_invest_result .img_review .art_info {position:absolute; text-align:center; top:73px; left:0; right:0; color:$white; z-index:15;}
+.art_wrap .art_invest_result .img_review .art_info .tit {font-size:20px;}
+.art_wrap .art_invest_result .img_review .art_info .thumb {margin-top:7px; font-size:16px; letter-spacing:0;}
+.art_wrap .art_invest_result .invest_info {padding:42px 20px 27px 20px; background:$white_three; border-radius:0 0 8px 8px;}
+.art_wrap .art_invest_result .invest_info .invest_total {position:relative;}
+.art_wrap .art_invest_result .invest_info .invest_total .tot_info {position:absolute; top:-9px; right:0;}
+.art_wrap .art_invest_result .invest_info .tit {font-size:16px; color:$black;}
+.art_wrap .art_invest_result .invest_info .tot_info {text-align:right;}
+.art_wrap .art_invest_result .invest_info .tot_info .tot_count {font-size:24px; font-weight:bold;}
+.art_wrap .art_invest_result .invest_info .tot_info .tot_count .num {font-size:26px;}
+.art_wrap .art_invest_result .invest_info .tot_info .tot_money {font-size:14px; color:$warm_grey;}
+.art_wrap .art_invest_result .invest_info .wrap_count {position:relative; margin-top:50px;}
+.art_wrap .art_invest_result .invest_info .wrap_count .btn_clear {position:absolute; top:8px; right:8px; display:inline-block; width:30px; height:30px; text-indent:-999em; overflow:hidden; background:url(../images/finnqmarket/btn_text_clear.png) no-repeat 50% 50%; background-size:cover;}
+.art_wrap .art_invest_result .invest_info .wrap_count .txt_count em {color:$black;}
+.art_wrap .art_invest_result .invest_info .wrap_count .inp_count {padding: 15px 45px 15px 20px;}
+
+
+/* 소유작품(13) */
+.art_wrap .art_invest_money {padding:45px 20px 57px; background:$black;}
+.art_wrap .art_invest_money:after {display:block; clear:both; content:"";}
+.art_wrap .art_invest_money > div {position:relative; float:left; height:57px; box-sizing:border-box;}
+.art_wrap .art_invest_money > div:before {display:inline-block; content:""; position:absolute; bottom:-5px; left:0; width:20px; height:20px; background-image:url(../images/finnqmarket/ico_invest_info.png); background-repeat:no-repeat; background-size:100% auto; z-index:5;}
+.art_wrap .art_invest_money > div:after {z-index:5;}
+.art_wrap .art_invest_money .tit {font-family:"AppleSDGothicNeo-Light"; color:$white;}
+.art_wrap .art_invest_money .info {position:absolute; left:0; right:0; bottom:-9px; width:100%; text-align: right; font-size:20px; color:$white; text-align: right; z-index: 10; font-weight:bold; box-sizing:border-box;}
+.art_wrap .art_invest_money .info span {display:inline-block; margin-top:-7px; vertical-align:middle;}
+.art_wrap .art_invest_money .info .num {font-size:24px;}
+.art_wrap .art_invest_money .coupon .info {padding-right:20px;}
+.art_wrap .art_invest_money .coupon {width:100px;}
+.art_wrap .art_invest_money .coupon:before {background-position:0 0;}
+.art_wrap .art_invest_money .coupon:after {display:inline-block; content:""; position:absolute; top:3px; right:0; width:1px; height:57px;  background:url(../images/finnqmarket/bg_art_dot_division.png) no-repeat 0 0; background-size:cover;}
+.art_wrap .art_invest_money .money {width:calc(100% - 100px);  padding-left:20px;}
+.art_wrap .art_invest_money .money:before {left:20px; background-position:0 100%;}
+.art_wrap .art_invest_money .money:after {display:inline-block; content:"출금"; position:absolute; top:-2px; right:0; font-size:12px; color:$warm_grey; height:21px; line-height:21px; border-radius:14px; background: rgba(255,255,255,0.1); width:40px; text-align:center;}
+
+.art_wrap .my_gallery_info {padding-bottom:6px; background-color:$white_four;}
+.art_wrap .my_gallery_info .list_split {padding:30px 20px; background-color:$white;}
+.art_wrap .my_gallery_info .list_split > li:first-of-type {margin-top:0;}
+
+.art_wrap .my_gallery_list {padding-bottom:15px;}
+.art_wrap .my_gallery_list li {padding:30px 20px; border-bottom:1px solid $white_four; overflow:hidden;}
+.art_wrap .my_gallery_list li:last-of-type {border-bottom:0;}
+.art_wrap .my_gallery_list .list li > div {float:left;}
+.art_wrap .my_gallery_list li .img_wrap {width:100px; height:100px; border-radius:50%; margin-right:20px;  overflow:hidden;}
+.art_wrap .my_gallery_list li .img_wrap img {width:100%;}
+.art_wrap .my_gallery_list li .art_info {position:relative; width:calc(100% - 120px);}
+.art_wrap .my_gallery_list li .art_info.on:after {display:inline-block; width:43px; height:19px; content:""; position:absolute; bottom:4px; right:0; background:url(../images/finnqmarket/ico_art_info_label.png) 0 0 no-repeat; background-size:100% auto; text-indent:-999em; overflow:hidden;}
+.art_wrap .my_gallery_list li .art_info .author,
+.art_wrap .my_gallery_list li .art_info .art_name {white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.art_wrap .my_gallery_list li .art_info .author {font-size:16px; color:$black; margin-top:11px;}
+.art_wrap .my_gallery_list li .art_info .art_name {font-size:14px; color: $warm_grey; margin-top:6px;}
+.art_wrap .my_gallery_list li .art_info .my_count {position:relative; font-size:12px; color:$black; margin-top:16px;}
+.art_wrap .my_gallery_list li .art_info .my_count .num {font-size:24px;}
+
+.art_wrap .fixed_cont {background-color:$white_three;}
+.art_wrap .wrap_result .no_result {padding:35% 0;}
+.art_wrap .wrap_result .no_result .btn_wrap {margin-top:17px; text-align:center;}
+.art_wrap .wrap_result .no_result .btn_wrap button {height:40px; width:155px; text-align:center; line-height:40px; border:1px solid $pinkish_grey; border-radius:4px; font-size:14px; color:$black; font-weight:bold;}
+.art_wrap .gray_box {border-top:1px solid $white_two; padding:27px 20px 37px; background:$white_three;}
+.art_wrap .gray_box .tit {font-size:14px; margin-bottom:6px; color:$brownish_grey;}
+.art_wrap .gray_box .list_type.star > li {font-size:12px;}
+.art_wrap .gray_box .list_type.star > li:before {top:2px;}
+.art_wrap .wrap_result .no_result .sell_info {@include font(16px)}
+
+/* 예치금 출금 성공 / 실패 (16,17,20) */
+.art_wrap .tbl_type2 th {padding:13px 0 11px 0; text-align:center;}
+.art_wrap .tbl_type2 td {font-size:15px; line-height:18px;}
+.art_wrap .tbl_type2.error td {color:$pinkish_grey;}
+.art_wrap .tbl_type2 + .list_type.star {margin-top:27px;}
+.art_wrap .tbl_type2 + .list_type.star > li {font-size:12px;}
+.art_wrap .tbl_type2 + .list_type.star > li:before {top:2px;}
+
+/* 투자후기(21) */
+#contents.art_wrap > .review_wrap {margin-top:10px; padding:20px 20px 0 20px; background:$white_three;}
+.art_wrap .review_wrap > article {padding:28px 20px 20px 20px; margin-top:10px; background:$white; border:1px solid $white_two; border-radius:6px;}
+.art_wrap .review_wrap > article:first-of-type  {margin-top:0;}
+.art_wrap .review_wrap > article .user_name {position:relative; font-size:14px; color:$black; padding-left:22px; margin-bottom:8px;}
+.art_wrap .review_wrap > article .user_name:before {display:inline-block; position:absolute; top:50%; left:0; margin-top:-11px; width:20px; height:20px; content:""; background:url(../images/finnqmarket/ico_review_more.png) no-repeat 0 0; background-size:100% auto;}
+.art_wrap .review_wrap > article .cont {word-break: break-all; transition: 0.5s all ease; -webkit-transition:0.5s all ease;}
+.art_wrap .review_wrap > article .cont.ellipsis[data-state=compact] {max-height:51px; -o-text-overflow: ellipsis; text-overflow: ellipsis; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+.art_wrap .review_wrap > article .cont .txt_inner {font-size:14px; line-height:18px; color:$warm_grey;}
+.art_wrap .review_wrap > article .cont.ellipsis + .btn_wrap {display:block;}
+.art_wrap .review_wrap > article .btn_wrap {display:none; margin-top:15px; text-align:right;}
+.art_wrap .review_wrap > article .btn_wrap .btn_more {position:relative; display:inline-block; font-size:12px; color:$brownish_grey; padding-right:16px;}
+.art_wrap .review_wrap > article .btn_wrap .btn_more:after {display:inline-block; position:absolute; top:50%; right:0; margin-top:-8px; width:16px; height:16px; content:""; background:url(../images/finnqmarket/ico_review_arrow.png) no-repeat 0 0; background-size:100% auto; transition: 0.5s all ease; -webkit-transition: 0.5s all ease;}
+
+.art_wrap .review_wrap .ellipsis {white-space:normal;}
+.art_wrap .review_wrap > article .btn_wrap .btn_more.on:after {transform:rotate(180deg);  -webkit-transform:rotate(180deg);}
+
+
+/* 약관 */
+.art_wrap .agree_check {border-top: 1px solid $white_two; background:$white_three;}
+.art_wrap .agree_check .sec_agree {margin-top:4px;}
+
+.art_wrap  .main_view_detail article > .agree_check,
+.art_wrap  .main_view_detail article > .agree_check .sec_agree .agree_wrap:first-of-type  {border-top:0;}
+.art_wrap  .main_view_detail article > .agree_check .sec_agree {margin-top:0;}
+
+
+/* 리워드 자세히 보기(26) */
+.art_wrap .reword_list_wrap {}
+.art_wrap .reword_list_wrap ul {margin:40px 0 57px;}
+.art_wrap .reword_list_wrap li {position:relative; padding:228px 20px 0; margin-top:56px;}
+.art_wrap .reword_list_wrap li:first-of-type {margin-top:0;}
+.art_wrap .reword_list_wrap li:before {position:absolute; top:0; width:340px; height:200px; content:""; background-image:url(../images/finnqmarket/img_art_sp_reword.jpg); background-repeat:no-repeat; background-size:100% auto;}
+.art_wrap .reword_list_wrap li:nth-of-type(odd) {text-align:left;}
+.art_wrap .reword_list_wrap li:nth-of-type(even) {text-align:right;}
+.art_wrap .reword_list_wrap li:nth-of-type(odd):before {left:0;}
+.art_wrap .reword_list_wrap li:nth-of-type(even):before {right:0;}
+.art_wrap .reword_list_wrap li:nth-of-type(1):before {background-position:0 0;}
+.art_wrap .reword_list_wrap li:nth-of-type(2):before {background-position:0 -207px;}
+.art_wrap .reword_list_wrap li:nth-of-type(3):before {background-position:0 -414px;}
+.art_wrap .reword_list_wrap li:nth-of-type(4):before {background-position:0 -621px;}
+.art_wrap .reword_list_wrap li:nth-of-type(5):before {background-position:0 -828px;}
+
+/*
+.art_wrap .reword_list_wrap li:nth-of-type(3):before,
+.art_wrap .reword_list_wrap li:nth-of-type(4):before,
+.art_wrap .reword_list_wrap li:nth-of-type(5):before,
+.art_wrap .reword_list_wrap li:nth-of-type(3) .txt_wrap,
+.art_wrap .reword_list_wrap li:nth-of-type(4) .txt_wrap,
+.art_wrap .reword_list_wrap li:nth-of-type(5) .txt_wrap {opacity:0;}
+
+.art_wrap .reword_list_wrap li:nth-of-type(1):before {-webkit-animation:fadeInL .85s; animation:fadeInL .85s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li:nth-of-type(2):before {-webkit-animation:fadeInR .85s; animation:fadeInR .85s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li.on:nth-of-type(3):before {-webkit-animation:fadeInL .85s; animation:fadeInL .85s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li.on:nth-of-type(4):before {-webkit-animation:fadeInR .85s; animation:fadeInR .85s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li.on:nth-of-type(5):before {-webkit-animation:fadeInL .85s; animation:fadeInL .85s forwards ease-in-out;}
+
+.art_wrap .reword_list_wrap li:nth-of-type(1) .txt_wrap {-webkit-animation:fadeInL 1.5s; animation:fadeInL 1.5s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li:nth-of-type(2) .txt_wrap {-webkit-animation:fadeInR 1.5s; animation:fadeInR 1.5s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li.on:nth-of-type(3) .txt_wrap {-webkit-animation:fadeInL 1.5s; animation:fadeInL 1.5s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li.on:nth-of-type(4) .txt_wrap {-webkit-animation:fadeInR 1.5s; animation:fadeInR 1.5s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li.on:nth-of-type(5) .txt_wrap {-webkit-animation:fadeInL 1.5s; animation:fadeInL 1.5s forwards ease-in-out;}
+*/
+.art_wrap .reword_list_wrap ul {overflow:hidden;}
+.art_wrap .reword_list_wrap li:before,
+.art_wrap .reword_list_wrap li .txt_wrap {opacity:0;}
+.art_wrap .reword_list_wrap li:nth-of-type(odd):before {-webkit-animation:fadeInL .85s; animation:fadeInL .85s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li:nth-of-type(even):before {-webkit-animation:fadeInR .85s; animation:fadeInR .85s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li:nth-of-type(odd) .txt_wrap {-webkit-animation:fadeInL 1.1s; animation:fadeInL 1.1s forwards ease-in-out;}
+.art_wrap .reword_list_wrap li:nth-of-type(even) .txt_wrap {-webkit-animation:fadeInR 1.1s; animation:fadeInR 1.1s forwards ease-in-out;}
+
+.art_wrap .reword_list_wrap li:nth-of-type(2):before {animation-delay: 1.2s;}
+.art_wrap .reword_list_wrap li:nth-of-type(3):before {animation-delay: 2.4s;}
+.art_wrap .reword_list_wrap li:nth-of-type(4):before {animation-delay: 3.6s;}
+.art_wrap .reword_list_wrap li:nth-of-type(5):before {animation-delay: 4.8s;}
+
+.art_wrap .reword_list_wrap li:nth-of-type(2) .txt_wrap {animation-delay: 1.2s;}
+.art_wrap .reword_list_wrap li:nth-of-type(3) .txt_wrap {animation-delay: 2.4s;}
+.art_wrap .reword_list_wrap li:nth-of-type(4) .txt_wrap {animation-delay: 3.6s;}
+.art_wrap .reword_list_wrap li:nth-of-type(5) .txt_wrap {animation-delay: 4.8s;}
+
+@keyframes fadeInL {
+    from {opacity: 0; transform: translate3d(-100%, 0, 0); }
+    50% {opacity: 0;}
+    to {opacity: 1; transform: none; }
+}
+
+.fadeInL {animation-name: fadeInLeft;}
+
+
+@keyframes fadeInR {
+    from {opacity: 0; transform: translate3d(100%, 0, 0);}
+    50% {opacity: 0;}
+    to {opacity: 1; transform: none;}
+}
+
+.fadeInR {
+    animation-name: fadeInRight;
+}
+
+.art_wrap .reword_list_wrap li .txt {font-weight:bold; font-size:18px; color:$black;}
+.art_wrap .reword_list_wrap li .sub_txt {margin-top:8px; font-family:"AppleSDGothicNeo-Light"; @include font(16px); color:$warm_grey; word-break:keep-all;}
+
+.art_wrap .reword_info_wrap {padding:38px 20px; background-color:$black;}
+.art_wrap .reword_info_wrap .title {font-size:16px; color:$white; padding-bottom:16px; border-bottom:2px solid $white; border-bottom-color: rgba(255,255,255,0.1);}
+.art_wrap .reword_info_wrap .reword_info_list {border-bottom:1px solid $white; border-bottom-color: rgba(255,255,255,0.1);}
+.art_wrap .reword_info_wrap .reword_info_list li {position:relative; padding:18px 0; overflow:hidden; border-top:1px dashed #999; border-top-color: rgba(221,221,221,0.1);}
+.art_wrap .reword_info_wrap .reword_info_list li:first-of-type {border-top:0;}
+.art_wrap .reword_info_wrap .reword_info_list .tit {float:left; width:115px; @include font(16px); color:$white; font-weight:bold;}
+.art_wrap .reword_info_wrap .reword_info_list .cont {float:left; width:calc(100% - 115px);}
+.art_wrap .reword_info_wrap .reword_info_list .cont .txt {font-size:14px; color:#8a6fea; font-weight:bold;}
+.art_wrap .reword_info_wrap .reword_info_list .cont .sub_txt {margin-top:5px; font-family:"AppleSDGothicNeo-Light"; @include font(16px); color:$warm_grey; word-break:keep-all;}
+.art_wrap .reword_info_wrap .list_type.star {margin:28px 0 5px; font-size:12px; color:$brownish_grey;}
+.art_wrap .reword_info_wrap .list_type.star:before {top:2px;}
+
+
+/* 구매안내(27) */
+.art_wrap .art_get_wrap .list_expend > li .subject a {font-size:16px; color:$black;}
+.art_wrap .art_get_wrap .list_expend > li .detail_set .con {padding:28px 20px; color:$brownish_grey; @include font(16px); word-break: keep-all; font-family:"AppleSDGothicNeo-Light";}
+.art_wrap .art_get_wrap .sec_agree span {font-size:18px; font-weight:bold; color:$black;}
+.art_wrap .art_get_wrap .art_get_title {text-align:center; border-bottom: 1px solid $white_two;}
+.art_wrap .art_get_wrap .art_get_title:after {display:inline-block; content:""; margin:25px 0 45px; width:120px; height:82px; background:url(../images/finnqmarket/img_art_get_guide.png) no-repeat 0 0; background-size:cover;}
+
+/* 매각절차 안내(28) */
+.art_wrap .sell_step {padding:0 20px; margin:40px 0 45px;}
+.art_wrap .sell_step li {position:relative; display:flex; margin-top:30px; height:100px; align-items:center;}
+.art_wrap .sell_step li:first-of-type {margin-top:0;}
+.art_wrap .sell_step li:after {display:block; position:absolute; right:50px; bottom:-29px; width:1px; height:32px; border-right:1px dashed $white_two; content:""; z-index:1;}
+.art_wrap .sell_step li:last-of-type:after {display:none;}
+.art_wrap .sell_step li dl:after {display:block; position:absolute; right:0; top:0; width:100px; height:100px;  content:""; overflow:hidden; z-index:5; background-image:url(../images/finnqmarket/ico_sp_selling.png); background-repeat:no-repeat; background-size:100% auto;}
+.art_wrap .sell_step li:nth-of-type(1) dl:after {background-position:0 0;}
+.art_wrap .sell_step li:nth-of-type(2) dl:after {background-position:0 -100px;}
+.art_wrap .sell_step li:nth-of-type(3) dl:after {background-position:0 -200px;}
+.art_wrap .sell_step li:nth-of-type(4) dl:after {background-position:0 -300px;}
+.art_wrap .sell_step li:nth-of-type(5) dl:after {background-position:0 -400px;}
+
+.art_wrap .sell_step li dl dt,
+.art_wrap .sell_step li dl dd {padding-left:30px;}
+.art_wrap .sell_step li dl dt {position:relative; font-size:18px; font-weight:bold; color:$black;}
+.art_wrap .sell_step li dl dt .num {position:absolute; top:0; left:0;}
+.art_wrap .sell_step li dl dd {margin-top:11px; font-family:"AppleSDGothicNeo-Light"; font-size:14px; line-height:18px; color:$brownish_grey; word-break:keep-all; padding-right:120px;}
+.art_wrap .sell_step li dl dd .txt_blue {margin-top:3px; font-size:12px; line-height:16px; color:$clear_blue; word-break:keep-all; font-family:"AppleSDGothicNeo-Light";}
+.art_wrap .fixed_cont .txt_c {padding-bottom:40px; font-size:12px; color:$pinkish_grey;}
+
+/* (18) 구매후기 */
+.art_wrap .other_cont.border_change {border-top:1px solid #eee;}
+.art_wrap .buying_write_wrap {background-color:#eee; padding:40px 20px 45px;}
+.art_wrap .buying_write_wrap .txt {font-size:14px; color:#222; margin-bottom:10px;}
+.art_wrap .buying_write_wrap .buying_write_info {padding:27px 20px 25px; font-size:16px; line-height:20px; color:#666; text-align:center; background-color:#fff; border-radius:6px; font-family:"AppleSDGothicNeo-Light";}
+
+/* 투자 (09)*/
+.art_wrap .input_field_wrap {position:relative;}
+.art_wrap .input_field_wrap .guide_field {text-align:right;}
+.art_wrap .input_field_wrap .placeholder,
+.art_wrap .input_field_wrap .guide_txt {display:none; position: absolute; top:1px; right:20px; color:#222; font-size:16px;}
+    body.ios .art_wrap .input_field_wrap .guide_txt {top:0;}
+.art_wrap .input_field_wrap .placeholder {display:block; color:#c8c8c8;}
+.art_wrap .input_field_wrap.on .placeholder {display:none;}
+.art_wrap .input_field_wrap.on .guide_txt {display:block; color:#222;}
+.art_wrap .input_field_wrap.on.active .guide_txt {color:#731aed;}
+.art_wrap .input_field_wrap.on .guide_field {padding-right:32px;}
+
+.art_wrap .buy_input_field {position:relative; text-align:right;}
+.art_wrap .buy_input_field .title {position: absolute; top: 13px; left: 0;}
+.art_wrap .buy_input_field .input_wrap {display:inline-block; width:200px;}
+
+
+/* 아트투자신청 (03)*/
+.agree_terms.art_invest {margin-top:4px; border-top: 1px solid #e0e0e0;}
+.agree_terms.art_invest dl dt.agree_wrap input[type=checkbox]+label span {font-weight:normal; color:#666;}
+.agree_terms.art_invest dl dd > div input[type=checkbox]+label span {word-break:keep-all;}
+
+@media screen and (max-width:320px){
+    .art_wrap .tbl_type2 th {padding:13px 0 11px 0;}
+    .art_wrap .main_view .txt {bottom:25px;}
+    .art_wrap .reword_box_wrap > li {font-size:11px;}
+
+    .art_wrap .reword_list_wrap li:nth-of-type(odd):before {left:-40px;}
+    .art_wrap .reword_list_wrap li:nth-of-type(even):before {right:-40px;}
+    .art_wrap .invest_list_wrap dd .txt {word-break: keep-all}
+    .art_wrap .invest_list_wrap dt:before {right:-50px;}
+    .art_wrap .invest_list_wrap dd .txt br,
+    .art_wrap .reword_list_wrap li .sub_txt br {display:none;}
+    .art_wrap .invest_list_wrap .add_info {margin: 56px -40px 43px;}
+
+    .art_wrap .reword_info_wrap .reword_info_list li br {display:none;}
+}

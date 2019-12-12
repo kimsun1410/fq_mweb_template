@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>내역 없음 공통 가이드</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_dna.css" />
+</head>
+<body>
+<div class="wrap"><!-- 내역 없는 경우 class : bg_list 삭제 -->
+	<div id="contents" class="finance_dna">
+		
+		<section class="sec_space10">
+			<div class="sec_head bg_purply">
+				<div class="account_info">
+					<div class="money_total">
+						<em class="cash bold">2,001,000</em><span>원</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- sec_history --><!-- extend_history 인 경우도 동일 -->
+			<!-- 내역 없는 경우 wrap_result 추가 -->
+			<div class="sec_history wrap_result">
+				<div class="list_summary">
+					<p class="col_tit">목록 타이틀</p>
+				</div>
+				<div class="no_result sec_topline"><!-- 라인 안 보일시에 : sec_topline 추가 -->
+					<span class="ico ico_chat_no2"></span>
+					<p>조회 내역이 없습니다.</p>
+				</div>
+			</div>
+			<!-- //sec_history -->
+		</section>
+		
+		<!-- 하단 붙임 -->
+
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+	function extend() {
+		$('body').on("click",".extend_head a", function(){
+			var exHead =$(this).parent();
+			var exbody =$(this).parent().next();
+
+			if (exbody.is(":hidden")){
+				exHead.addClass('on');
+				exbody.addClass('open').stop().slideDown(300);
+
+				exbody.find(".row_graph.flexible").each(function(){
+					var bar = $(this).find(".active");
+					var barTotal = bar.attr('data-total');
+					var barValue = bar.attr('data-value');
+					var barWidth = (barValue/barTotal ) * 100;
+					var padRight = 0;
+					bar.css({width:'0%'});
+
+					setTimeout(function(){
+						bar.css({width:barWidth+'%',paddingRight:padRight});
+					},300)
+				})
+
+			} else{
+				exHead.removeClass('on');
+				exbody.removeClass('open').stop().slideUp(300);
+
+				exbody.find(".row_graph.flexible").each(function(){
+					var bar = $(this).find(".active");
+					bar.css({width:0});
+				})
+
+			} 
+		});
+	} extend();
+});
+</script>
+</body>
+</html>

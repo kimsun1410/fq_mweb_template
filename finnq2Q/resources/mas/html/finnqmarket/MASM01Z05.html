@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04습관저금_04저금상세내역_이용중_01전체_web - MASM01Z05</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list">
+
+
+	<div id="contents" class="market">
+		<section class="market_wrap deposit_inquiry">
+
+			<div class="sec_inquiry_money">
+				<div class="sub_tit">
+					<p class="update">
+						자동저금  오늘 <em class="num">01:00</em>
+					</p><!-- 2018-01-23 업데이트 추가 phj -->
+					<!-- 18.09.20 날짜 컨트롤 삭제  -->
+					<!--
+					<div class="date_control">
+						<button type="button" name="button" class="btn ico_prev end">previous month</button>
+						<strong class="date">2017.02</strong>
+						<button type="button" name="button" class="btn ico_next">next month</button>
+					</div>
+					--><!-- //date_control -->
+
+					<!-- 18.09.20 클래스 save 추가 -->
+					<div class="account_info save">
+						<div class="money_total">
+							<em class="cash bold">18,640</em><span>원</span>
+						</div>
+					</div><!-- //account_info -->
+
+					<!-- 2개 -->
+					<!-- <div class="flex_wrap set_type2">
+						<span class="item"><button type="button" name="button" class="btn btn_type_a">핀크이체</button></span>
+						<span class="item"><button type="button" name="button" class="btn btn_type_a">캐시백 신청</button></span>
+					</div> -->
+					<div class="flex_wrap set_type1">
+						<span class="item"><button type="button" name="button" class="btn btn_type_a">핀크계좌 이체</button></span>
+					</div>
+					<!-- //flex_wrap -->
+
+
+				</div><!-- //sub_tit -->
+			</div><!-- //sec_inquiry_money -->
+
+
+			<div class="sec_category">
+
+				<div class="scrollx_wrap">
+					<div class="tab-container">
+						<div class="swiper-wrapper">
+							<!-- 각 탭에 tabindex="0" 추가 2018-05-31 ock -->
+						  <div class="swiper-slide on" data-tab="all" tabindex="0"><!-- "on" Class 추가시 활성화// data-tab은 개발에서 필요한 경우 사용, 삭제무방 -->
+							<!--
+								.ico_cvs : 편의점
+								.ico_fastfood : 패스트푸드
+								.ico_coffee : 커피
+								.ico_chicken : 치킨
+								.ico_bread : 빵
+								.ico_shopping : 쇼핑
+							-->
+							<span>전체 (<em class="num">3</em>)</span><!-- 2018-03-30 전체 글자랑 숫자 사이 띄어쓰기 추가 phj -->
+						  </div>
+						  <div class="swiper-slide" data-tab="coffee" tabindex="0">
+							<span>커피</span>
+						  </div>
+						  <div class="swiper-slide" data-tab="shopping" tabindex="0">
+							<span>쇼핑</span>
+						  </div>
+						  <div class="swiper-slide" data-tab="cvs" tabindex="0">
+							<span>편의점</span>
+						  </div>
+						  <div class="swiper-slide off" data-tab="bread" tabindex="0">
+							<span class="add">빵</span>
+						  </div>
+						  <div class="swiper-slide off" data-tab="chicken" tabindex="0">
+							<span class="add">치킨</span>
+						  </div>
+						  <div class="swiper-slide off" data-tab="fastfood" tabindex="0">
+							<span>패스트푸드</span>
+						  </div>
+						</div>
+						<div class="grd_next"></div>
+					</div><!-- //tab-container -->
+				</div><!-- //scrollx_wrap -->
+				<div class="deposit_detail_wrap" data-tab="all">
+					<div id="tab-0" class="tab-content on">
+						<dl>
+							<dt>저금시작</dt>
+							<dd><span class="date bold">2017.11.06</span></dd>
+						</dl>
+						<!-- <dl>
+							<dt>저금현황</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl> -->
+						<dl class="cumulative">
+							<dt>
+								<em>누적</em>
+								<button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap"><p>시작일로부터 현재까지 저금된 금액의 합과<br>횟수를 의미합니다.</p></div><!-- br 태그 추가 2018-03-20 ock --><!-- 문구 반영 2018-02-27 -->
+							</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>예상 캐시백</dt><!-- 예상 텍스트 추가 2018-02-27 -->
+							<dd><span>연</span> <em class="num">2.0%</em></dd>
+						</dl>
+					</div>
+					<div id="tab-1" class="tab-content">
+						<dl>
+							<dt>저금시작</dt>
+							<dd><span class="date">2017.11.06</span></dd>
+						</dl>
+						<!-- <dl>
+							<dt>저금현황</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl> -->
+						<dl class="cumulative">
+							<dt>
+								<em>누적</em>
+								<button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap"><p>시작일로부터 현재까지 저금된 금액의 합과 횟수를 의미합니다.</p></div>
+							</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>저금조건</dt>
+							<dd><span class="num">50%</span><button type="button" class="ico ico_pen"><span class="blind">수정</span></button></dd>
+						</dl>
+					</div>
+					<div id="tab-2" class="tab-content">
+						<dl>
+							<dt>저금시작</dt>
+							<dd><span class="date">2017.11.06</span></dd>
+						</dl>
+						<!-- <dl>
+							<dt>저금현황</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl> -->
+						<dl class="cumulative">
+							<dt>
+								<em>누적</em>
+								<button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap"><p>시작일로부터 현재까지 저금된 금액의 합과 횟수를 의미합니다.</p></div>
+							</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>저금조건</dt>
+							<dd><span class="num">50%</span><button type="button" class="ico ico_pen"><span class="blind">수정</span></button></dd>
+						</dl>
+					</div>
+					<div id="tab-3" class="tab-content">
+						<dl>
+							<dt>저금시작</dt>
+							<dd><span class="date">2017.11.06</span></dd>
+						</dl>
+						<!-- <dl>
+							<dt>저금현황</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl> -->
+						<dl class="cumulative">
+							<dt>
+								<em>누적</em>
+								<button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap"><p>시작일로부터 현재까지 저금된 금액의 합과 횟수를 의미합니다.</p></div>
+							</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>저금조건</dt>
+							<dd><span class="num">50%</span><button type="button" class="ico ico_pen"><span class="blind">수정</span></button></dd>
+						</dl>
+					</div>
+					<div id="tab-4" class="tab-content">
+						<dl>
+							<dt>저금시작</dt>
+							<dd><span class="date">2017.11.06</span></dd>
+						</dl>
+						<!-- <dl>
+							<dt>저금현황</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl> -->
+						<dl class="cumulative">
+							<dt>
+								<em>누적</em>
+								<button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap"><p>시작일로부터 현재까지 저금된 금액의 합과 횟수를 의미합니다.</p></div>
+							</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>저금조건</dt>
+							<dd><span class="num">50%</span><button type="button" class="ico ico_pen"><span class="blind">수정</span></button></dd>
+						</dl>
+					</div>
+					<div id="tab-5" class="tab-content">
+						<dl>
+							<dt>저금시작</dt>
+							<dd><span class="date">2017.11.06</span></dd>
+						</dl>
+						<!-- <dl>
+							<dt>저금현황</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl> -->
+						<dl class="cumulative">
+							<dt>
+								<em>누적</em>
+								<button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap"><p>시작일로부터 현재까지 저금된 금액의 합과 횟수를 의미합니다.</p></div>
+							</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>저금조건</dt>
+							<dd><span class="num">50%</span><button type="button" class="ico ico_pen"><span class="blind">수정</span></button></dd>
+						</dl>
+					</div>
+					<div id="tab-6" class="tab-content">
+						<dl>
+							<dt>저금시작</dt>
+							<dd><span class="date">2017.11.06</span></dd>
+						</dl>
+						<!-- <dl>
+							<dt>저금현황</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl> -->
+						<dl class="cumulative">
+							<dt>
+								<em>누적</em>
+								<button class="btn_ico ico_circle_help2" data-name="open_help"><span class="blind">도움말</span></button>
+								<div class="layer_wrap"><p>시작일로부터 현재까지 저금된 금액의 합과 횟수를 의미합니다.</p></div>
+							</dt>
+							<dd>
+								<em class="cash bold">18,650</em><span>원</span><span class="dash">/</span><em class="num">15</em><span>회</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>저금조건</dt>
+							<dd><span class="num">50%</span><button type="button" class="ico ico_pen"><span class="blind">수정</span></button></dd>
+						</dl>
+					</div>
+				</div><!-- //deposit_detail_wrap -->
+
+			</div><!-- //sec_category -->
+
+			<!-- 18.09.20  날짜 검색 추가 -->
+			<form onsubmit="return false">
+				<fieldset>
+				<legend>저금내역 상세 조회</legend>
+
+				<div class="diposit_sort_wrap">
+					<div class="sort_info">
+						<span class="tit">저금 내역</span>
+						<button type="button" class="btn_detail">열기</button>
+					</div>
+					<div class="sort_detail">
+						<div class="btn_wrap">
+							<button type="button">이번달</button>
+							<button type="button"><em class="num">1</em>개월</button>
+							<button type="button"><em class="num">3</em>개월</button>
+							<button type="button"><em class="num">6</em>개월</button>
+						</div>
+						<div class="date_wrap">
+							<div>
+								<div class="i_txt">
+									<span class="date first"></span>
+									<input type="date" name="" class="date_input first" max="" value="" />
+								</div>
+								<div class="i_txt">
+									<span class="date end"></span>
+									<input type="date" name="" class="date_input" max="" />
+								</div>
+							</div>
+							<button type="button" class="btn_search">조회</button>
+						</div>
+					</div>
+				</div>
+
+				</fieldset>
+			</form>
+			<!--// 18.09.20 -->
+
+
+			<div class="sec_history po_relative"><!-- GUI 오류로 공통 class 추가 : po_relative -->
+				<dl>
+					<dt>
+						<strong>편의점</strong>
+						<div><em class="cash bold">640</em><span >원</span></div><!-- 2018-03-22 bold 클래스 추가 phj -->
+					</dt>
+					<dd>
+						<div><strong class="date">11.20</strong><em>하나 원뿔 카드하나원뿔회원카드</em></div>
+
+						<!-- 2018-04-16 구조 변경 phj -->
+						<div class="save_info">
+							<strong class="place">CU중구 명동2가 타임스퀘어점 CU중구 명동2가 타임스퀘어점</strong>
+							<strong class="save_org"><em class="cash">8,600</em><span>원</span></strong>
+						</div>
+						<!-- //2018-04-16 구조 변경 phj -->
+
+					</dd>
+				</dl>
+				<dl>
+					<dt>
+						<strong>쇼핑<em class="tooltip">10회 달성!</em></strong>
+						<div><em class="cash bold">1,200</em><span>원</span></div><!-- 2018-03-22 bold 클래스 추가 phj -->
+					</dt>
+					<dd>
+						<div><strong class="date">11.20</strong><em>2X알파카드</em></div>
+
+						<!-- 2018-04-16 구조 변경 phj -->
+						<div class="save_info">
+							<strong class="place">쿠팡</strong>
+							<strong class="save_org"><em class="cash">15,200</em><span>원</span></strong>
+						</div>
+						<!-- //2018-04-16 구조 변경 phj -->
+					</dd>
+				</dl>
+				<!-- 저금실패 -->
+				<dl class="saving_fail">
+					<dt>
+						<strong>저금실패_커피</strong>
+						<div>핀크계좌 잔액부족</div>
+					</dt>
+					<dd>
+						<div><strong class="date">11.20</strong><em>투뿔카드</em></div>
+
+						<!-- 2018-04-16 구조 변경 phj -->
+						<div class="save_info">
+							<strong class="place">스타벅스코리아</strong>
+							<strong class="save_org"><em class="cash">8,600</em><span>원</span></strong>
+						</div>
+						<!-- //2018-04-16 구조 변경 phj -->
+
+					</dd>
+				</dl>
+				<!-- 이체 -->
+				<dl class="transfer">
+					<dt>
+						<strong>이체_핀크계좌</strong>
+						<div><em class="cash bold">1,200</em><span>원</span></div><!-- 2018-03-22 bold 클래스 추가 phj -->
+					</dt>
+					<dd>
+						<div><strong class="date">11.18&nbsp&nbsp;21:11</strong></div> <!-- 2018-03-30 이체시 시간 추가 phj --> <!-- 2018-03-30 <em>2X알파카드</em> 카드는 들어가는지 모르겠지만 문서에 없어서 삭제함 phj -->
+					</dd>
+				</dl>
+				<!-- 시작 내용 -->
+				<dl>
+					<dt>
+						<strong class="notice">쇼핑 결제시 금액의 15% 습관저금 시작<em class="tooltip">반가워요 :)</em></strong>
+					</dt>
+					<dd>
+						<div><strong class="date">11.06</strong></div><!-- 2018-03-30 연도 표시 삭제 phj -->
+					</dd>
+				</dl>
+				<!-- 알림 내용 -->
+				<dl>
+					<dt>
+						<strong class="notice">편의점 결제시 금액의 20%로 변경</strong>
+					</dt>
+					<dd>
+						<div><strong class="date">11.06</strong></div><!-- 2018-03-30 연도 표시 삭제 phj -->
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	var tabCategory = new Swiper('.tab-container', {
+	  slidesPerView: 'auto',
+	  spaceBetween: 0,
+	  freeMode: true
+	});
+
+	$('.tab-container').on('click','.swiper-slide',function(){
+		var tnum = $(this).index();
+		var category = ["all","coffee","shopping","cvs","bread","chicken","fastfood"];
+		var $deposit_tab = $('.deposit_detail_wrap');
+		if(!$(this).hasClass('off')) $(this).siblings('.swiper-slide').removeClass('on').end().addClass('on');
+		else $(this).removeClass('off').siblings('.swiper-slide').removeClass('on').end().addClass('on');
+		$deposit_tab.find('.tab-content.on').removeClass("on").fadeOut();
+		$deposit_tab.find('.tab-content').eq(tnum).addClass("on").fadeIn();
+		$deposit_tab.attr("data-tab",category[tnum]);
+	});
+
+	//2018-04-16 내역 말줄임 스크립트
+	function cardLimit(){
+		var limit = 8;
+
+		$(".deposit_inquiry .sec_history dl dd div .date + em").each(function(){
+			var chars = $(this).text();
+			if (chars.length > limit) {
+				var visiblePart = $("<em> "+ chars.substr(0, limit) +"</em>");
+				$(this).empty().append(visiblePart);
+			}
+		});
+		$(".deposit_inquiry .sec_history dl dd .save_info").each(function(){
+			var save_info = $(this).width();
+			var save_org = $(this).find(".save_org").width();
+			$(this).find(".place").width(save_info - save_org - 7);
+
+		});
+	}cardLimit();
+
+	// 2018.09.20 날짜 검색 추가
+	function dateSearchInit() {
+		var _date 			= new Date(),
+			_year 			= _date.getFullYear(),
+			_month 			= (_date.getMonth() + 1),
+			_day 		 	= _date.getDate();
+
+			// MONTH가 0보다 작으면
+			if (_month < 10) {
+				_month = '0' + _month;
+			}
+
+		var _firstDate		= _year + '.' + _month + '.' + '01', // 초기 화면에 보여지는 그달의 첫째 날
+			_endDate		= _year + '.' + _month + '.' + _day, // 초기 화면에 보여지는 날짜(Today)
+			_minDate 		= _year + '-' + _month + '-' + '01'; // Datepicker START DATE
+			_maxDate 		= _year + '-' + _month + '-' + _day; // Datepicker END DATE
+
+		var _maxDateInput 	= $('.date_wrap .i_txt .date_input'),
+			_firstDayTxt	= $('.date_wrap .i_txt .date.first'),
+			_endDayTxt		= $('.date_wrap .i_txt .date.end');
+
+		_firstDayTxt.text( _firstDate );
+		_endDayTxt.text( _endDate );
+		_maxDateInput.attr( 'max', _maxDate );
+
+		$('.date_wrap .i_txt .date_input.first').attr( 'value', _minDate );
+	}
+
+	dateSearchInit();
+
+	// Datepicker 값이 변할 때
+	$('.date_input').change(function() {
+		var temp = $(this).prev().text();
+
+		var changeY = $(this).val().split('-')[0],
+			changeM = $(this).val().split('-')[1],
+			changeD = $(this).val().split('-')[2],
+			changeVal = changeY  + '.' + changeM + '.' + changeD;
+
+		if (changeY == undefined || changeM == undefined || changeD == undefined) {
+			changeVal = temp;
+		}
+		$(this).prev('.date').text( changeVal );
+	});
+
+	// 달력 옵션 상세 클릭
+	$('.diposit_sort_wrap .btn_detail').on('click', function(){
+		$('.diposit_sort_wrap').toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>

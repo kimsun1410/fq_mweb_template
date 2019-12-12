@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Albam Event</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<style type="text/css">
+@charset 'UTF-8';
+
+/* reset */
+html, body {height: 100%;min-height:100%;font-size: 100%;line-height: 1.3;text-decoration: none;color: #222;vertical-align: middle;-webkit-font-smoothing: antialiased;background: #fff;}
+body {-webkit-text-size-adjust:none} /*뷰표트 변환시 폰트크기 자동확대 방지*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0;font-size:14px;letter-spacing:-1px;font-weight: normal;font-style: normal;-webkit-font-smoothing: antialiased;}
+address,article,aside,canvas,details,figure,figcaption,footer,header,hgroup,menu,nav,section {display: block;margin: 0;padding: 0;}
+figcaption {display: block;width: 0;height: 0;position: absolute;top: -9999px;font-size: 0;text-indent: -9999px;}
+hr,caption,legend {display: none;text-indent: -999px;}
+h1,h2,h3,h4,h5,h6 {letter-spacing:-1px;word-break:break-all;white-space:normal;}
+fieldset,img {border: none;vertical-align: middle;}
+ol,ul,li,dl,dt,dd {list-style: none;word-break:break-all;white-space:normal;}
+table,th,td {border: 0px;border-spacing: 0px;border-collapse: collapse;word-break:break-all;white-space:normal;}
+table {width: 100%;}
+fieldset,iframe{width: 100%;border: 0px;}
+em,i,address,strong {font-style: normal;font-weight: normal;word-break:break-all;white-space:normal;}
+button,a,select,input,label {border: none;background: none; letter-spacing:-1px;vertical-align: middle;word-break:break-all;white-space:normal;}
+button::-moz-focus-inner {padding: 0px;}
+button,a{-webkit-tap-highlight-color:rgba(0,0,0,0.18);} /* a, 버튼에만 적용으로 수정 2018-03-24 ock */
+.no_highlight{-webkit-tap-highlight-color:rgba(0,0,0,0);} /* highlight 없는 class 추가 2018-04-18 ock */
+
+
+.wrap {position: relative; min-width: 320px; width: 100%; height: 100%; min-height: 100%; margin: 0; padding: 0; background: #fff;}
+#contents {position: relative; height: 100%; min-height: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;}
+#contents > section {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; background: #fff;}
+.tab_content_wrap .tab_content {display: none;}
+.tab_content_wrap .tab_content.on {display: block;}
+.sticky_wrap .btn_app_link {display:block; width:100%; text-align:center; background:#731aed;}
+
+.tab_wrap:after {display:block; clear:both; content:"";}
+.tab_wrap {background:#fff;}
+.tab_wrap a {width:50%; float:right;}
+.tab_wrap a:first-child {float:left;}
+.tab_wrap a img,
+.btn_app_link img,
+.tab_content img,
+.sec_head img {width:100%;}
+
+.sec_tab.fixed {position:fixed; top:0; left:0; width:100%; z-index:50; opacity:1;}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents">
+
+		<div class="sec_head">
+			<img src="img/img_albam_top_banner.jpg" alt="" />
+		</div>
+
+		<div class="sec_tab">
+			<div class="tab_wrap">
+				<a href="#none"><img src="img/tab_menu01_on.png" alt="이벤트" /></a></span>
+				<a href="#none"><img src="img/tab_menu02_off.png" alt="핀크소개" /></a></span>
+			</div>
+		</div>
+
+		<section>
+			<div class="tab_content_wrap">
+				<div class="tab_content on">
+					<img src="img/img_albam_info1.jpg" alt="" />
+				</div>
+				<div class="tab_content">
+					<img src="img/img_albam_info2.jpg" alt="" />
+				</div>
+			</div>
+
+			<div class="sticky_wrap">
+				<a href="#none" class="btn_app_link"><img src="img/img_btn_fixed.jpg" alt="핀크앱 바로가기" /></a>
+			</div>
+		</section>
+	</div><!-- #contents -->
+</div>
+<script src="../../js/jquery-2.2.4.min.js"></script>
+<script>
+$(document).ready(function(){
+
+	var topH = $('.sec_head').outerHeight();
+
+	$(window).scroll(function(){
+		var stickyH = $('.sec_tab').outerHeight(),
+			scroll = $(window).scrollTop();
+
+		if (scroll >= topH) {
+			$('.sec_tab').addClass('fixed');
+			$('section').css('margin-top', stickyH);
+		}
+		else {
+			$('.sec_tab').removeClass('fixed');
+			$('section').css('margin-top', 0);
+		}
+	});
+
+	$('.tab_wrap a').on('click', function(){
+		var idx = $(this).index();
+
+		switch (idx)
+		{
+			case 0 :
+				$('.tab_wrap a:eq(0) img').attr('src','img/tab_menu01_on.png');
+				$('.tab_wrap a:eq(1) img').attr('src','img/tab_menu02_off.png');
+			break;
+			case 1 :
+				$('.tab_wrap a:eq(0) img').attr('src','img/tab_menu01_off.png');
+				$('.tab_wrap a:eq(1) img').attr('src','img/tab_menu02_on.png');
+			break;
+		}
+		// $('.tab_wrap a img').attr('src',$('.tab_wrap a img').attr('src').replace('_on.png', '_off.png'));
+		// $('img',this).attr('src',$('img',this).attr('src').replace('_off.png', '_on.png'));
+
+		$('.tab_content_wrap > .tab_content')
+			.removeClass('on').eq(idx).addClass('on');
+	});
+
+	function locationSplit(){
+		var locationTemp = window.location.href,
+			location = locationTemp.split('.')[0],
+			str = location.substring(location.lastIndexOf('/')+1),
+			target = $('.sticky_wrap .btn_app_link');
+
+		switch (str)
+		{
+			case 'dwww' :
+				// 개발
+				target.attr('href', '');
+			break;
+			case 'swww' :
+				// 테스트
+				target.attr('href', '');
+			break;
+			case 'www' :
+				// 운영
+				target.attr('href', '');
+			break;
+		}
+	}
+	locationSplit();
+
+	var check_android_version = function() {
+		var currentOS, isChrome;
+		var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+		platform = navigator.platform;
+
+		if (mobile) {
+			// 유저에이전트를 불러와서 OS를 구분합니다.
+			var userAgent = navigator.userAgent.toLowerCase();
+
+			if (userAgent.search("android") > -1){
+				currentOS = "android";
+			}
+			else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)) {
+				currentOS = "ios";
+			}
+			else {
+				currentOS = "else";
+			}
+		} else {
+			// 모바일이 아닐 때
+			currentOS = "no_device";
+		}
+		$(':root').addClass(currentOS);
+		return currentOS;
+	};
+
+	check_android_version();
+});
+</script>
+
+</body>
+</html>

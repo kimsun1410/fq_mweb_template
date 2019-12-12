@@ -1,0 +1,1097 @@
+@charset 'UTF-8';
+/*
+* 2018-01-04 Park Heejung
+* finnq market detail page (입출금통장, T핀크적금, 투뿔카드, 습관저금, 핀크카드)
+*/
+
+/*.list_basic  li {position:relative; font-size:16px; color:$brownish_grey; line-height:20px; margin-top:10px;}
+.list_basic li:first-child {margin-top:0;}
+.list_basic li i {position:absolute; left:0; top:0px;}
+.list_basic.dash li {padding-left:10px;}
+.list_basic.important li {padding-left:18px;}
+.list_basic.important li i {font-weight:bold;}
+.list_basic.important .very {color:$black;}*/
+
+.font-light {font-family:"AppleSDGothicNeo-Light" !important;}
+.market_wrap .dash_type.indent .bul_guide {margin-left:3px;}
+
+/* 02T핀크적금_01상세 */
+.sec_account_visual {margin:0 20px; padding:42px 0; background:url("../images/finnqmarket/img-account-visual.png") no-repeat 100% 46px; background-size:246px auto; /* height:206px; */}
+.sec_account_visual .txt {@include font(34px);}
+.sec_account_visual.high5 .txt {@include font(30px);}
+.sec_account_visual.high5 .txt .txt_red {color:#ec1940;}
+.sec_account_visual.loan-dgb {background:url(../images/finnqmarket/img-loan-visual.png) no-repeat 100% 93px; background-size:203px auto;}
+.sec_account_visual.loan-dgb .txt {height:245px;}
+
+.sec_account_visual .present {@include font(12px); color:$warm_grey; margin:5px 0 0 2px;}
+.sec_account_visual .dues {margin-top:134px; border-bottom:1px solid $white_two; @include font(16px);padding-bottom:5px; margin-bottom:10px;}
+.sec_account_visual .dis_cell {@include font(14px); width:55%}
+.sec_account_visual .dis_cell:first-child {width:45%}
+.sec_account_visual .dis_cell span {display:block; color:$brownish_grey; margin-top:4px; letter-spacing:-1px;}
+.sec_account_visual .num {letter-spacing:-1px;}
+
+.sec_account_saving {background:$white_four; padding:43px 20px 45px; text-align:center; border-top:1px solid $white_two;}
+.sec_account_saving .tit {@include font(26px);letter-spacing:-2px;}
+.sec_account_saving .tit strong {color:$green_blue;}
+.sec_account_saving .present {@include font(12px); color:$warm_grey; margin-top:12px;}
+.sec_account_saving .txt {color:$brownish_grey; @include font(16px);margin-top:11px;}
+.sec_account_saving .txt strong {color:$green_blue;}
+.sec_account_saving .img1 {background:url("../images/finnqmarket/img-account-info.png?v=1") no-repeat; background-size:270px auto; width:270px; height:140px; text-indent:-9999px; margin:27px auto 0px;}
+.sec_account_saving .img1.ver2 {background-image:url(../images/finnqmarket/img-account-info-v2.png);}
+.sec_account_saving .ico_black_plus {margin:28px 0 20px;}
+.sec_account_saving .img2 {background:url("../images/finnqmarket/img-account-info2.png?v=1") no-repeat; background-size:230px auto; width:230px; height:120px; text-indent:-9999px; margin:27px auto 0;}
+.sec_account_saving .sub {margin-top:16px; color:$brownish_grey;@include font(12px);}
+.sec_account_saving .sub .ico_circle_info{vertical-align:-2px}
+.ios .sec_account_saving .sub .ico_circle_info{vertical-align:-3px}
+
+/* .sec_account_saving .sub .ico {vertical-align:-3px;}
+.ios .sec_account_saving .sub .ico {vertical-align:text-top} */
+
+.sec_account_check {padding:45px 20px 41px; text-align:center; border-bottom:1px solid $white_two}
+.sec_account_check .tit {@include font(26px);}
+.sec_account_check .img {background:url("../images/finnqmarket/img-account-bank.png") no-repeat;
+    background-size:215px auto; width:215px; height:41px; text-indent:-9999px; margin:24px auto 28px;}
+.sec_account_check.dgb .img {background:url(../images/finnqmarket/img_hight5_detail3.png) no-repeat;
+    background-size:215px auto;}
+.sec_account_check ol {display:inline-block;}
+.sec_account_check ol li {margin-top:25px; @include font(16px);color:$brownish_grey;}
+.sec_account_check ol li:first-child {margin-top:0;}
+
+.sec_account_cate .cate1 {text-align:center;}
+.sec_account_cate .cate1 h1 {@include font(16px); margin-bottom:10px; margin-top:24px;}
+.sec_account_cate .cate1 h1:first-child {margin-top:0;}
+.sec_account_cate .cate1 .total {@include font(20px);font-weight:bold; padding-top:28px; margin-top:30px; border-top:1px dashed $white_three;}
+.sec_account_cate .cate1 .cal {position:relative; display:table; width:100%; background:$white; border:1px solid $warm_grey; margin-top:10px;}
+.sec_account_cate .cate1 .cal em {padding-left:7px; /*vertical-align:text-bottom;*/}
+.sec_account_cate .cate1 .cal .tit,
+.sec_account_cate .cate1 .cal .money {display:table-cell; padding:13px 8px 12px 20px; @include font(16px);line-height:22px; text-align:left; /* word-break:break-all; */ white-space: nowrap; width:50%;}
+.sec_account_cate .cate1 .cal .money {padding:13px 10px 12px 0px;} /* 줄바꿈 이슈로 수정 2018-03-15 ock */
+.sec_account_cate .cate1 .cal .tit em {font-size:19px;}
+.sec_account_cate .cate1 .cal .money strong {color:$purply_blue; font-weight:bold; font-size:19px; white-space: nowrap;word-break: keep-all;}
+.sec_account_cate .cate1 .cal .money em{white-space: nowrap;word-break: keep-all;}
+.sec_account_cate .sub {margin-top:14px; color:$brownish_grey; @include font(12px);vertical-align:bottom;}
+.sec_account_cate .sub .ico {vertical-align:middle;}
+.sec_account_cate .sub .ico_circle_info{vertical-align:-2px}
+.ios .sec_account_cate .sub .ico_circle_info{vertical-align:-3px}
+.sec_account_cate h1 {@include font(18px);margin-top:42px;}
+.sec_account_cate h1:first-child {margin-top:0; }
+.sec_account_cate .txt {position:relative; @include font(16px);margin:25px 0 10px;}
+.sec_account_cate .txt:first-child {margin-top:0;}
+.sec_account_cate .tbl_info {position:absolute; right:0; bottom:0; @include font(12px); color:$warm_grey; bottom:0;}
+.sec_account_cate .cate3 .bul_info {margin-top:25px;}
+.sec_account_cate .cate3 .tbl_type1 tbody th .num.bold {font-family:"LatoM" !important;}
+
+.sec_account_info {border-top:1px solid $white_two; padding:26px 20px 43px;}
+.sec_account_info li {color:$brownish_grey;}
+/* .sec_account_info .num {letter-spacing:-1px;} */
+.sec_account_info .bul_guide .info_type:before {line-height:18px; padding-right:3px;}
+.sec_account_info .bul_guide .info_type.indent {padding-left:16px; text-indent: -17px;}/* 2018-04-09 추가 phj */
+
+/* 03투뿔카드_01상세 */
+.sec_twoplus_visual {margin:0 20px; padding:42px 0; background:url("../images/finnqmarket/img-twoplus-visual.png") no-repeat 100% 24px; background-size:211px auto; /* height:206px; */}
+.sec_twoplus_visual .txt {@include font(34px);}
+.sec_twoplus_visual .dues {margin-top:135px; border-bottom:1px solid $white_two; @include font(16px);padding-bottom:5px; margin-bottom:10px;}
+.sec_twoplus_visual .dis_table { display:table;width:100%;}
+.sec_twoplus_visual .dis_cell {@include font(14px);}
+.sec_twoplus_visual .dis_cell span {display:block; color:$brownish_grey; margin-top:4px; letter-spacing:0;}
+.sec_twoplus_visual .dis_cell span em {vertical-align:baseline;}
+
+.sec_twoplus_saving {background:$white_four; padding:43px 20px 41px; text-align:center; border-top:1px solid $white_two;}
+.sec_twoplus_saving .tit {@include font(26px);letter-spacing:-2px;}
+.sec_twoplus_saving .tit strong {color:$pumpkin;}
+.sec_twoplus_saving .txt {color:$brownish_grey; @include font(16px); margin-top:5px;}
+.sec_twoplus_saving .img1 {background:url("../images/finnqmarket/img-twoplus-saving.png?v=1") no-repeat center center; background-size:contain; max-width:250px; height:130px; text-indent:-9999px; margin:25px auto 0;}
+.sec_twoplus_saving .ico_black_plus {margin:30px 0 28px;}
+.sec_twoplus_saving .img2 {background:url("../images/finnqmarket/img-twoplus-graph.png?v=1") no-repeat center center; background-size:contain; max-width:320px;  height:204px; text-indent:-9999px; margin:25px auto 0;}
+
+.sec_twoplus_benefit {padding:45px 20px 41px; text-align:center; border-bottom:1px solid $white_two;}
+.sec_twoplus_benefit .tit {@include font(26px);}
+.sec_twoplus_benefit ul {display:inline-block; margin-top:30px;}
+.sec_twoplus_benefit ul li {position:relative; padding-left:75px; margin-top:30px; min-height:60px; @include font(14px);color:$brownish_grey; text-align:left;}
+.sec_twoplus_benefit ul li:first-child {margin-top:0;}
+.sec_twoplus_benefit ul li .ico {position:absolute; left:0; top:50%; margin-top:-30px;}
+.sec_twoplus_benefit ul li .tit {color:$black; @include font(20px);margin-bottom:8px;}
+
+.ico_twoplus_benefit1,
+.ico_twoplus_benefit2,
+.ico_twoplus_benefit3 {background:url("../images/finnqmarket/img-twoplus-benefit.png") no-repeat; background-size:60px auto; width:60px; height:60px;}
+.ico_twoplus_benefit2 {background-position:0 -64px;}
+.ico_twoplus_benefit3 {background-position:0 -127px;}
+
+.sec_twoplus_cate {background:$white_four;}
+
+.sec_twoplus_info {border-top:1px solid $white_two; padding:26px 20px 43px;}
+.sec_twoplus_info li {color:$brownish_grey;}
+.sec_twoplus_info .bul_guide .info_type:before {line-height:18px; padding-right:3px;}
+.sec_twoplus_info .bul_guide .info_type.indent {padding-left:16px; text-indent: -17px;}/* 2018-04-09 추가 phj */
+
+.sec_twoplus_cate h1 {@include font(16px); margin-top:42px;}
+.sec_twoplus_cate h1:first-child {margin-top:0;}
+.sec_twoplus_cate .cate1 {text-align:center;}
+.sec_twoplus_cate .cate1 h1 {@include font(26px);font-weight:bold; color:$purply_blue;}
+.sec_twoplus_cate .cate1 .txt {margin-top:5px;}
+
+.sec_twoplus_cate .cate1 .cal {position:relative; display:table; width:100%; background:$white_four; border:1px solid $white_two; margin-bottom:-1px;}
+.sec_twoplus_cate .cate1 .cal .tit,
+.sec_twoplus_cate .cate1 .cal .money {display:table-cell; width:50%; padding:13px 20px 12px; @include font(16px);text-align:left;}
+.sec_twoplus_cate .cate1 .cal .money {color:$purply_blue; font-weight:bold; text-align:right;}
+.sec_twoplus_cate .cate1 .total {background:$white; border:1px solid $warm_grey; z-index:2; margin-top:26px;}
+.sec_twoplus_cate .cate1 .total .tit,
+.sec_twoplus_cate .cate1 .total .money {@include font(20px);font-weight:bold; padding:15px 20px 12px;}
+
+.sec_twoplus_cate .cate2 h1 {@include font(18px);margin-top:42px;}
+.sec_twoplus_cate .cate2 h1:first-child {margin-top:0;}
+.sec_twoplus_cate .txt {@include font(16px);margin:25px 0 10px;}
+.sec_twoplus_cate .txt.first_txt{margin-top:0;margin-bottom:26px}
+.sec_twoplus_cate .txt.first_txt + .txt{margin-top:0}
+.sec_twoplus_cate .list_expend li:nth-of-type(4) .detail_set .bul_guide:last-child {margin-top:24px;}
+
+/* 04습관저금_01상세 */
+.sec_habit_visual {margin:0 20px; padding:42px 0; background:url("../images/finnqmarket/img-habit-visual.png") no-repeat 100% 43px; background-size:257px auto; /* height:206px; */}
+.sec_habit_visual .txt {@include font(34px);}
+.sec_habit_visual .dues {margin-top:174px; border-bottom:1px solid $white_two; @include font(16px);padding-bottom:5px; margin-bottom:10px;}
+.sec_habit_visual .dis_cell {@include font(14px);}
+.sec_habit_visual .dis_cell span {display:block; color:$brownish_grey; margin-top:4px; letter-spacing:-1px;}
+
+.sec_habit_saving {background:$white_four; padding:41px 20px 41px; text-align:center; border-top:1px solid $white_two;}
+.sec_habit_saving .tit {@include font(26px);letter-spacing:-2px;}
+.sec_habit_saving .txt {color:$brownish_grey; @include font(16px);margin-top:5px;}
+.sec_habit_saving .img1 {background:url("../images/finnqmarket/img-habit-saving.png?v=1") no-repeat center center; background-size:contain; max-width:320px; height:164px; text-indent:-9999px; margin:27px auto 0;}
+
+.sec_habit_set {padding:45px 20px 41px; text-align:center; border-bottom:1px solid $white_two;}
+.sec_habit_set .tit {@include font(26px);}
+.sec_habit_set .img1 {background:url("../images/finnqmarket/img-habit-set1.png?v=1") no-repeat center center; background-size:contain; max-width:320px; height:100px; text-indent:-9999px; margin:22px auto 0;}
+.sec_habit_set .img2 {background:url("../images/finnqmarket/img-habit-set2.png?v=1") no-repeat center  center; background-size:contain; max-width:211px; height:67px; text-indent:-9999px; margin:27px auto 2px;}
+.sec_habit_set ol {display:block; margin-top:22px;}
+.sec_habit_set ol li {margin-top:26px; @include font(16px);}
+.sec_habit_set ol li:first-child {margin-top:0;}
+
+.sec_habit_cate .list_expend {padding-bottom:0;}
+.sec_habit_cate .cate1 {text-align:center;}
+.sec_habit_cate .cate1 h1 {@include font(16px);height:22px; margin-bottom:10px; margin-top:42px;}
+.sec_habit_cate .cate1 h1:first-child {margin-top:0;}
+.sec_habit_cate .cate1 .total_tit {@include font(20px);font-weight:bold; margin-bottom:10px; margin-top:40px;}
+.sec_habit_cate .cate1 .cal {position:relative; display:table; width:100%; background:$white_four; border:1px solid $white_three; margin-bottom:-1px;}
+.sec_habit_cate .cate1 .cal .tit,
+.sec_habit_cate .cate1 .cal .money {display:table-cell; padding:13px 20px 12px; @include font(16px);text-align:left;}
+.sec_habit_cate .cate1 .cal .money {color:$purply_blue; font-weight:bold; text-align:right;}
+.sec_habit_cate .cate1 .cal.total {background:$white; border:1px solid $warm_grey;}
+.sec_habit_cate .cate1 .cal.total .tit,
+.sec_habit_cate .cate1 .cal.total .money {@include font(20px);font-weight:bold;}
+
+.sec_habit_cate .sub {margin-top:14px; color:$brownish_grey; @include font(12px);vertical-align:bottom;}
+.sec_habit_cate h1 {@include font(18px);margin-top:42px;}
+.sec_habit_cate h1:first-child {margin-top:0; }
+.sec_habit_cate .txt {position:relative; @include font(16px);margin:25px 0 10px;}
+.sec_habit_cate .txt:first-child {margin-top:0;}
+.sec_habit_cate .tbl_info {position:absolute; right:0; bottom:0; @include font(12px);color:$warm_grey; bottom:0;}
+.sec_habit_cate .cate3 .bul_info {margin-top:25px;}
+
+/* 05입출금통장_01상세 */
+/* 08.14 이미지 버전*/
+.sec_bankbook_visual {margin:0 20px; padding:42px 0 27px; background:url("../images/finnqmarket/img-bankbook-visual.png?v=1") no-repeat 100% 90px; background-size:245px auto; /* height:206px; */}
+.sec_bankbook_visual .txt {@include font(34px);}
+.sec_bankbook_visual .dues {margin-top:165px; @include font(16px);padding-bottom:5px; margin-bottom:10px;}
+
+/* 18.08.13 비대면 계좌개설 MASM03Z01 */
+.sec_bankbook_visual.type {padding:42px 0 43px;}
+.sec_bankbook_visual .dues.line_btm {margin-top:225px;}
+.dues.line_btm {border-bottom: 1px solid $white_two;}
+/* //18.08.13 비대면 계좌개설 MASM03Z01 */
+
+.sec_bankbook_eplus {background:$white_four; padding:41px 20px 41px; border-top:1px solid $white_two;}
+.sec_bankbook_eplus .tit {@include font(26px);letter-spacing:-2px; text-align:center;}
+.sec_bankbook_eplus .img1 {background:url("../images/finnqmarket/img-bankbook-eplus.png") no-repeat center center; background-size:contain; max-width:320px; height:90px; text-indent:-9999px; margin:27px auto 0;}
+.sec_bankbook_eplus .sub {text-align:right; margin-top:6px;color:$brownish_grey;@include font(12px);}
+.sec_bankbook_eplus dl {margin-top:24px;}
+.sec_bankbook_eplus dl dt { font-weight:bold;}
+.sec_bankbook_eplus dl dd {color:$brownish_grey; margin:5px 0 10px;}
+.sec_bankbook_eplus dl strong {color:$green_blue;}
+
+.sec_bankbook_benefit {background:$white_four; border-top:1px solid $white_two; padding:41px 20px 45px; text-align:center; /*border-bottom:1px solid $white_three;*/}
+.sec_bankbook_benefit .tit {@include font(26px);}
+.sec_bankbook_benefit .img {background:url("../images/finnqmarket/img-bankbook-benefit.png") no-repeat center center; background-size:contain; max-width:280px; height:131px; text-indent:-9999px; margin:24px auto 0;}
+
+/* 18.08.13 비대면 계좌개설 MASM03Z01 */
+.sec_bankbook_benefit.new_type {padding:43px 20px 41px; border-bottom:1px solid $white_two;}
+.sec_bankbook_benefit.new_type .img_cont {margin:24px auto 0; height:149px; text-indent:-9999px; background:url("../images/finnqmarket/img-bankbook-benefit.png?v=1") no-repeat center center; background-size:contain;}
+.sec_bankbook_benefit.new_type .img_cont img {width:100%;}
+
+.market_account_list {padding-top:4px; background:$white_three;}
+.market_account_list > div {margin-top:4px; border-top:1px solid $white_two; border-bottom:1px solid $white_two; padding:28px 20px 30px; background:$white;}
+.market_account_list > div:first-child {margin-top:0;}
+/* 비대면 수정 */
+.market_account_list .bank_name {@include font(16px); color:$clear_blue; font-family:"AppleSDGothicNeo-Light"; position:relative;}
+.market_account_list .bank_name .add_link {position:absolute; top:-1px; right:0;}
+.market_account_list .bank_name .add_link a {font-size:14px; position:relative;}
+.market_account_list .bank_name .add_link a .ico_arrow_more {position:absolute; right:0px; top:50%; margin-top:-6px; width:7px; height:11px; background-position:0 -177px;}
+.market_account_list .bank_name span {letter-spacing:0; font-family:inherit;}
+.market_account_list .detail_info {margin-top:6px; @include font(20px); color:$black; font-family:"AppleSDGothicNeo-Light";}
+.market_account_list .detail_info .num {font-family:"AppleSDGothicNeo-Light";}
+.market_account_list .detail_info strong {font-weight:bold;}
+.market_account_list .btn_wrap {padding-top:14px; margin-top:12px; border-top:1px dashed $white_three;}
+.market_account_list .btn_wrap .btn {display:block; padding:8px 0 7px; text-align:center; border-radius:4px; border:1px solid $pinkish_grey;}
+.market_account_list .btn_wrap .btn.off {background-color:$white_three; color:$brownish_grey;}
+/* //18.08.13 비대면 계좌개설 MASM03Z01 */
+
+.sec_bankbook_process {position:relative; padding:41px 20px 45px; text-align:center; /*border-bottom:1px solid $white_two;*/}
+.sec_bankbook_process .tit {@include font(26px);}
+.sec_bankbook_process ul {background:$white; display:inline-block; margin-top:30px;}
+.sec_bankbook_process ul li {position:relative; margin-top:30px; padding-left:75px; min-height:60px; @include font(14px);color:$brownish_grey; text-align:left;/* width:100% 가로스크롤 생김 */}
+.sec_bankbook_process ul li:first-child {margin-top:0;}
+.sec_bankbook_process ul li .box {display:table-cell; height:60px; vertical-align:middle;}
+.sec_bankbook_process ul li .ico {position:absolute; left:0; top:50%; margin-top:-30px;}
+.sec_bankbook_process ul li .tit {color:$black; @include font(20px);margin-bottom:4px;}
+.sec_bankbook_process ul li .tit + p{font-family: 'AppleSDGothicNeo-Light', 'LatoL';}
+/*.sec_bankbook_process:after {content:""; position:absolute; bottom:0; display:block; height:4px; background:$white_three; border-top:1px solid $white_two; margin:0 -20px; width:100%;}*/
+
+.ico_bankbook_process1,
+.ico_bankbook_process2,
+.ico_bankbook_process3 {background:url("../images/finnqmarket/img-bankbook-process.png") no-repeat; background-size:60px auto; width:60px; height:60px;}
+.ico_bankbook_process2 {background-position:0 -64px;}
+.ico_bankbook_process3 {background-position:0 -127px;}
+
+.sec_bankbook_cate .sub {margin-top:14px; color:$brownish_grey; @include font(12px);vertical-align:bottom;}
+.sec_bankbook_cate .add {display:block; text-indent:0; margin-top:8px; @include font(14px);}
+.sec_bankbook_cate h1 {@include font(18px);margin-top:42px;}
+.sec_bankbook_cate h1:first-child {margin-top:0; }
+.sec_bankbook_cate .txt {position:relative; @include font(16px);margin:25px 0 10px;}
+.sec_bankbook_cate .txt:first-child {margin-top:0;}
+.sec_bankbook_cate .tbl_info {position:absolute; right:0; bottom:0; @include font(12px);color:$warm_grey; bottom:0;}
+.sec_bankbook_cate .dash_type .dot_type {text-indent:-15px;}
+.sec_bankbook_cate .cate3 .bul_info {margin-top:25px;}
+
+.sec_bankbook_info {border-top:1px solid $white_two; padding:26px 20px 24px;}
+.sec_bankbook_info li {color:$brownish_grey; }
+.sec_bankbook_info .num {letter-spacing:-1px;}
+.sec_bankbook_info .bul_guide .info_type:before {line-height:18px; padding-right:3px; }
+.sec_bankbook_info .bul_guide .info_type.indent {padding-left:16px; text-indent: -17px;}/* 2018-04-09 추가 phj */
+
+
+/* 2018-02-14 핀크카드 */
+#contents > section.finnqcard_main {padding-top:0;}
+.sec_finnqcard_visual {margin:0 20px; padding:38px 0 40px; background:url("../images/finnqmarket/img-finnqcard-visual.png") no-repeat 100% 40px; background-size:256px auto; /* height:206px; */}
+.sec_finnqcard_visual .txt {@include font(34px);}
+.sec_finnqcard_visual .dues {margin-top:162px; @include font(16px);}
+.sec_finnqcard_visual .dis_table { display:table;width:100%;}
+.sec_finnqcard_visual .dis_cell {@include font(14px);}
+.sec_finnqcard_visual .dis_cell span {display:block; color:$brownish_grey; margin-top:4px; letter-spacing:0;}
+.sec_finnqcard_visual .dis_cell span em {vertical-align:baseline;}
+
+.sec_finnqcard_saving {background:$white_four; padding:43px 20px 41px; text-align:center; border-top:1px solid $white_two;}
+.sec_finnqcard_saving .tit {@include font(26px);letter-spacing:-2px;}
+.sec_finnqcard_saving .tit strong {color:$pumpkin;}
+.sec_finnqcard_saving .txt {color:$brownish_grey; @include font(16px); margin-top:5px;}
+.sec_finnqcard_saving .img1 {background:url("../images/finnqmarket/img-finnqcard-saving1.png") no-repeat center center; background-size:contain; max-width:240px; height:125px; text-indent:-9999px; margin:27px auto 0;}
+.sec_finnqcard_saving .ico_black_plus {margin:30px 0 28px;}
+.sec_finnqcard_saving .img2 {background:url("../images/finnqmarket/img-finnqcard-saving2.png") no-repeat center center; background-size:contain; max-width:320px; height:152px; text-indent:-9999px; margin:18px auto 0;}
+.sec_finnqcard_saving .img3 {background:url("../images/finnqmarket/img-finnqcard-graph.png") no-repeat center center; background-size:contain; max-width:320px; height:216px; text-indent:-9999px; margin:18px auto 0;}
+
+.sec_finnqcard_saving.cashbag {background:$white; border-bottom:1px solid $white_two; border-top:none;}
+.sec_finnqcard_saving.cashbag .bul_guide {margin-top:25px;}
+.sec_finnqcard_saving.cashbag .bul_guide li {color:$warm_grey; @include font(11px); text-align:left; margin-top:3px;}
+.sec_finnqcard_saving.cashbag .bul_guide li:first-child {margin-top:0;}
+
+.sec_finnqcard_cate {background:$white_four;}
+
+.sec_finnqcard_info {border-top:1px solid $white_two; padding:26px 20px 43px;}
+.sec_finnqcard_info li {color:$brownish_grey;}
+.sec_finnqcard_info .bul_guide .info_type:before {line-height:18px; padding-right:3px;}
+.sec_finnqcard_info .bul_guide .info_type.indent {padding-left:16px; text-indent: -17px;}/* 2018-04-09 추가 phj */
+
+.sec_finnqcard_cate h1 {@include font(16px); margin-top:42px;}
+.sec_finnqcard_cate h1:first-child {margin-top:0;}
+.sec_finnqcard_cate .cate1 {text-align:center;}
+.sec_finnqcard_cate .cate1 h1 {@include font(26px);font-weight:bold; color:$purply_blue;}
+.sec_finnqcard_cate .cate1 .txt {margin-top:5px;}
+
+.sec_finnqcard_cate .cate1 .cal {position:relative; display:table; width:100%; background:$white_four; border:1px solid $white_two; margin-bottom:-1px;}
+.sec_finnqcard_cate .cate1 .cal .tit,
+.sec_finnqcard_cate .cate1 .cal .money {display:table-cell; width:50%; padding:13px 20px 12px; @include font(16px);text-align:left;}
+.sec_finnqcard_cate .cate1 .cal .money {color:$purply_blue; font-weight:bold; text-align:right;}
+.sec_finnqcard_cate .cate1 .total {background:$white; border:1px solid $warm_grey; z-index:2; margin-top:26px;}
+.sec_finnqcard_cate .cate1 .total .tit,
+.sec_finnqcard_cate .cate1 .total .money {@include font(20px);font-weight:bold; padding:15px 20px 12px;}
+
+.sec_finnqcard_cate .cate2 .txt:first-child {margin-top:0;}
+h1 {@include font(18px);margin-top:42px;}
+.sec_finnqcard_cate .cate2 h1:first-child {margin-top:0;}
+.sec_finnqcard_cate .txt {@include font(16px);margin:25px 0 10px;}
+.sec_finnqcard_cate .bul_info {margin-top:25px;}
+
+
+/* 비상금 대출 상세 */
+#contents > section.emergency_main {padding-top:0;}
+.sec_emergency_visual {margin:0 20px; padding:42px 0; background:url("../images/finnqmarket/img-emergency-visual.png") no-repeat 100% 66px; background-size:210px auto; /* height:206px; */}
+.sec_emergency_visual .txt {@include font(34px);}
+.sec_emergency_visual .dues {margin-top:122px; /*border-bottom:1px solid $white_two; margin-bottom:10px;*/ @include font(16px);}
+.sec_emergency_visual .dis_cell {@include font(14px);}
+.sec_emergency_visual .dis_cell span {display:block; color:$brownish_grey; margin-top:4px; letter-spacing:-1px;}
+.sec_emergency_visual .num {letter-spacing:-1px;}
+
+.sec_emergency_saving {background:$white_four; padding:43px 20px 42px; text-align:center; border-top:1px solid $white_two;}
+.sec_emergency_saving .tit {@include font(26px);letter-spacing:-2px; margin-top:43px;}
+.sec_emergency_saving .tit:first-child {margin-top:0;}
+.sec_emergency_saving .tit strong {color:$green_blue;}
+.sec_emergency_saving .txt {color:$brownish_grey; @include font(16px);margin-top:11px;}
+.sec_emergency_saving .txt strong {color:$green_blue;}
+.sec_emergency_saving .img1 {background:url("../images/finnqmarket/img-emergency-info.png") no-repeat; background-size:250px auto; width:250px; height:130px; text-indent:-9999px; margin:27px auto 0;}
+
+/* 18.08.30 */
+.sec_emergency_saving .add_info {display:block; margin-top:8px;}
+.sec_emergency_saving .txt_gray {color:$warm_grey;}
+.sec_emergency_saving .add_info .w320_block {display:none;}
+
+.sec_emergency_saving ol {margin-top:3px; display:inline-block;}
+.sec_emergency_saving ol li {position:relative; margin-top:25px; text-align:left; @include font(16px); padding-left:18px;}
+.sec_emergency_saving ol li i {position:absolute; left:0; top:0;}
+.sec_emergency_saving ol li .txt {color:$warm_grey;display:block; margin-top:10px;}
+.sec_emergency_saving ol li strong {color:$green_blue;}
+
+.sec_emergency_process {padding:41px 20px 45px; text-align:center; border-bottom:1px solid $white_two;}
+.sec_emergency_process .tit {@include font(26px);}
+.sec_emergency_process .tit strong {color:$green_blue;}
+.sec_emergency_process ul {display:inline-block; margin-top:30px;}
+.sec_emergency_process ul li {position:relative; margin-top:30px; padding-left:78px; min-height:60px; @include font(14px);color:$brownish_grey; text-align:left; /*width:100%*/}
+.sec_emergency_process ul li:first-child {margin-top:0;}
+.sec_emergency_process ul li .box {display:table-cell; height:60px; vertical-align:middle;}
+.sec_emergency_process ul li .ico {position:absolute; left:0; top:50%; margin-top:-30px;}
+.sec_emergency_process ul li .tit {color:$black; @include font(20px);margin-bottom:4px; padding-left:20px;}
+.sec_emergency_process ul li .tit em {margin-left:-20px;}
+
+.ico_emergency_process1,
+.ico_emergency_process2,
+.ico_emergency_process3,
+.ico_emergency_process4 {background:url("../images/finnqmarket/img-emergency-process.png") no-repeat; background-size:60px auto; width:60px; height:60px;}
+.ico_emergency_process2 {background-position:0 -64px;}
+.ico_emergency_process3 {background-position:0 -127px;}
+.ico_emergency_process4 {background-position:0 -191px;}
+
+.sec_emergency_check {padding:45px 20px 41px; text-align:center; border-bottom:1px solid $white_two;}
+.sec_emergency_check .tit {@include font(26px);}
+.sec_emergency_check .img {background:url("../images/finnqmarket/img-account-bank.png") no-repeat; background-size:215px auto; width:215px; height:41px; text-indent:-9999px; margin:24px auto 28px;}
+.sec_emergency_check ol {display:inline-block;}
+.sec_emergency_check ol li {margin-top:25px; @include font(16px);color:$brownish_grey;}
+.sec_emergency_check ol li:first-child {margin-top:0;}
+
+.sec_emergency_cate .sub {margin-top:14px; color:$brownish_grey; @include font(12px);vertical-align:bottom;}
+.sec_emergency_cate .sub .ico {vertical-align:middle;}
+.sec_emergency_cate h1 {@include font(18px);margin-top:42px;}
+.sec_emergency_cate h1:first-child {margin-top:0; }
+.sec_emergency_cate .txt {position:relative; @include font(16px);margin:25px 0 10px;}
+.sec_emergency_cate .txt:first-child {margin-top:0;}
+.sec_emergency_cate .tbl_info {position:absolute; right:0; bottom:0; @include font(12px); color:$warm_grey; bottom:0;}
+.sec_emergency_cate .bul_guide + .bul_guide {margin-top:25px;}
+.sec_emergency_cate .bul_guide li .sub_txt {text-indent:0; display:block; margin-top:10px;}
+
+.sec_emergency_maininfo {border-top:1px solid $white_two; padding:26px 20px 43px;}
+.sec_emergency_maininfo li {color:$brownish_grey;}
+.sec_emergency_maininfo .num {letter-spacing:-1px;}
+.sec_emergency_maininfo .bul_guide .info_type:before {vertical-align:top; line-height:18px; padding-right:3px;}
+.sec_emergency_maininfo .bul_guide .info_type.indent {padding-left:16px; text-indent: -17px;}/* 2018-04-09 추가 phj */
+
+/* 08해외송금_01상세 */
+#contents > section.foregin_main {padding-top:0;} /* 2018-03-16 추가 phj */
+.sec_foregin_visual {margin:0 20px; padding:42px 0 43px 0; background:url("../images/orsremt/img-foregin-visual.png") no-repeat 100% 48px; background-size:218px auto; /* height:206px; */}
+.sec_foregin_visual .txt {@include font(34px);}
+
+.sec_foregin_visual .dues {margin-top:136px; border-bottom:1px solid $white_two; @include font(16px);padding-bottom:8px; margin-bottom:13px;}
+.sec_foregin_visual .dues_detail .type1 {@include font(14px); font-size:13.5px; color:$brownish_grey; text-indent:-54px; padding-left:54px; word-break:keep-all;}
+.ios .sec_foregin_visual .dues_detail .type1 {text-indent:-55px; padding-left:55px;}
+.sec_foregin_visual .dues_detail .type2 {@include font(14px); font-size:13.5px; color:$warm_grey; margin-top:6px; font-family:"DeviceF", "AppleSDGothicNeo-Light"; text-indent:-42px; padding-left:42px;}
+.ios .sec_foregin_visual .dues_detail .type2 {text-indent:-46px; padding-left:46px;}
+.sec_foregin_visual .dues_detail ul li {@include font(14px); color:$brownish_grey; word-break:keep-all;}
+.sec_foregin_visual .dues_detail ul li strong,
+.sec_foregin_visual .dues_detail .type2 strong {font-family:"DeviceF", "AppleSDGothicNeo-Medium"; font-weight:bold; color:$clear_blue;}
+
+.foregin_main .sec_foregin_cate .cate2 .tbl_type1 tbody tr:first-child td:nth-of-type(2) {border-bottom-color:$pinkish_grey;}
+
+.sec_foregin_saving {background:$white_four; padding:40px 20px 49px; text-align:center; border-top:1px solid $white_two;}
+.sec_foregin_saving .tit {@include font(26px);letter-spacing:-2px;}
+.sec_foregin_saving .tit em {color:$purply_blue;}
+.sec_foregin_saving .txt {color:$brownish_grey; @include font(16px);margin-top:10px;}
+.sec_foregin_saving .txt.small {@include font(12px); margin-top:6px;}
+.sec_foregin_saving .txt em {color:$purply_blue;}
+.sec_foregin_saving .img1 {background:url("../images/orsremt/img-foregin-info.png") no-repeat; background-size:130px auto; width:130px; height:130px; text-indent:-9999px; margin:29px auto 42px;}
+.sec_foregin_saving .img2 {background:url("../images/orsremt/img-foregin-info2.png") no-repeat; background-size:173px auto; width:173px; height:152px; text-indent:-9999px; margin:28px auto 40px;}
+.sec_foregin_saving .img3 {background:url("../images/orsremt/img-foregin-info3.png") no-repeat; background-size:250px auto; width:250px; height:130px; text-indent:-9999px; margin:27px auto 0;}
+.sec_foregin_saving .sub {margin-top:14px; color:$brownish_grey;@include font(12px);}
+.sec_foregin_saving .sub .ico {vertical-align:middle;}
+
+.sec_foregin_check {padding:41px 20px 41px; text-align:center; border-bottom:1px solid $white_two}
+.sec_foregin_check .tit {@include font(26px);}
+.sec_foregin_check .img {background:url("../images/finnqmarket/img-account-bank.png") no-repeat; background-size:215px auto; width:215px; height:41px; text-indent:-9999px; margin:24px auto 28px;}
+.sec_foregin_check ol {display:inline-block;}
+.sec_foregin_check .list_info {margin-top:25px;}
+.sec_foregin_check ol li {margin-top:25px; @include font(16px);color:$brownish_grey;}
+.sec_foregin_check ol li:first-child {margin-top:0;}
+
+.sec_foregin_cate .list_expend {padding-bottom:0;}
+.sec_foregin_cate .cate1 {text-align:center; padding-top:42px !important;}
+.sec_foregin_cate .cate1 h1 {@include font(16px); margin-bottom:14px; margin-top:28px;}
+.sec_foregin_cate .cate1 h1:first-child {margin-top:0;}
+.sec_foregin_cate .sub {margin-top:29px; color:$brownish_grey; @include font(12px);vertical-align:bottom;}
+.sec_foregin_cate .sub .ico {vertical-align:middle;}
+.sec_foregin_cate h1 {@include font(18px);margin-top:42px;}
+.sec_foregin_cate h1:first-child {margin-top:0;}
+.sec_foregin_cate .txt {position:relative; @include font(16px);margin:25px 0 11px;}
+.sec_foregin_cate .txt:first-child {margin-top:0;}
+.sec_foregin_cate .tbl_info {position:absolute; right:0; bottom:0; @include font(12px); color:$warm_grey; bottom:0;}
+.sec_foregin_cate .sub .txt_gray {display:block; margin-top:5px; color:$warm_grey; @include font(11px);}
+.sec_foregin_cate .sub .txt_gray + .txt_gray {margin-top:4px;}
+.sec_foregin_cate .cate1 .input_wrap {margin-top:15px; text-align:left;}
+.sec_foregin_cate .cate1 .tit_total {@include font(20px);font-weight:bold; padding-top:28px; margin-top:30px; border-top:1px dashed $white_three;}
+.sec_foregin_cate .cate1 .cal {position:relative; display:table; width:100%; background:$white_four; border:1px solid $white_three; margin-bottom:-1px;}
+.sec_foregin_cate .cate1 .cal .tit,
+.sec_foregin_cate .cate1 .cal .money {display:table-cell; padding:12px 20px 13px; @include font(16px);text-align:left;}
+.sec_foregin_cate .cate1 .cal .money {color:$purply_blue; text-align:right;}
+.sec_foregin_cate .cate1 .cal .money strong {font-weight:bold; }
+.sec_foregin_cate .cate1 .cal.total {background:$white; border:1px solid $warm_grey; margin-top:13px; margin-bottom:0;}
+.sec_foregin_cate .cate1 .cal.total .tit,
+.sec_foregin_cate .cate1 .cal.total .money {@include font(20px);}
+.sec_foregin_cate .cate1 .cal.total .money strong {font-weight:bold;}
+.sec_foregin_cate .cate1 .cal.total + .cal {border-top:0;}
+.sec_foregin_cate .cate1 .cal.type2 {background:$white; border:1px solid $warm_grey; margin-top:10px; margin-bottom:0;}
+.sec_foregin_cate .cate1 .cal.type2 .tit {@include font(16px);}
+.sec_foregin_cate .cate1 .cal.type2 .money {@include font(20px);}
+.sec_foregin_cate .cate1 .cal.type2 .tit,
+.sec_foregin_cate .cate1 .cal.type2 .money {padding:11px 20px 15px 20px;}
+.sec_foregin_cate .cate1 .cal.total + .cal {border-top:0;}
+.sec_foregin_cate .cate1 .cal + .cal.type2 {margin-top:16px;}
+.sec_foregin_cate .cate3 .bul_info {margin-top:25px;}
+.sec_foregin_cate .cate3 .info_guide .info_type {@include font(16px); color:$brownish_grey; font-weight:lighter; font-family:'AppleSDGothicNeo-Light', 'LatoL'; padding-left:18px;}
+.sec_foregin_cate .star_type {padding-left:8px;}
+.sec_foregin_cate .star_type:before {content:"*"; position:relative; top:2px; margin-left:-8px; margin-right:4px;}
+.sec_foregin_cate .list_expend .bul_guide .dash_type + .info_type {margin-top:22px;}
+.sec_foregin_cate .list_expend .bul_guide .info_type.indent {padding-left:17px; text-indent:-20px;}
+/*.sec_foregin_cate .list_expend {padding-bottom:0;}
+.sec_foregin_cate + .sec_sns_list {border-top:0;}*/
+/* 숫자 letter-spacing */
+.foregin_main .tbl_type1 tbody .num{letter-spacing: 0;}
+
+/* 보험 맞춤 추천 상세 */
+#contents > section.recommend_main {padding-top:0;margin-bottom:45px;}
+.sec_recommend_visual {margin:0 20px; padding:42px 0; background:url("../images/finnqmarket/img-recommend-visual.png") no-repeat 100% 37px; background-size:250px auto;}
+.sec_recommend_visual .txt {@include font(34px);}
+.sec_recommend_visual .dues {margin-top:98px; border-bottom:1px solid $white_two; @include font(16px);padding-bottom:5px; margin-bottom:10px;}
+.sec_recommend_visual .dis_cell {@include font(14px);word-break: keep-all;}
+.sec_recommend_visual .dis_cell span {display:block; color:$brownish_grey; margin-top:4px; letter-spacing:-1px;}
+.sec_recommend_visual .num {letter-spacing:-1px;}
+
+.sec_recommend_insurance {background:$white_four; padding:43px 20px 42px; text-align:center; border-top:1px solid $white_two; border-bottom:1px solid $white_two;}
+.sec_recommend_insurance dl + dl{margin-top:50px;}
+.sec_recommend_insurance dl dt {@include font(26px);letter-spacing:-2px;}
+.sec_recommend_insurance dl dt strong {color:$green_blue;}
+.sec_recommend_insurance dl dd.txt {color:$brownish_grey; @include font(16px);margin-top:10px;}
+.sec_recommend_insurance dl dd.txt strong {color:$green_blue;}
+.sec_recommend_insurance dl dd.img1 {background:url("../images/finnqmarket/img-recommend-info1.png") no-repeat center; background-size:100% auto; width:256px; height:210px; text-indent:-9999px; margin:27px auto 0;}
+.sec_recommend_insurance dl dd.img2 {background:url("../images/finnqmarket/img-recommend-info2.png") no-repeat center; background-size:contain; max-width: 100%; height:106px; text-indent:-9999px; margin:24px auto 0;}
+.sec_recommend_insurance dl dd.img3 {background:url("../images/finnqmarket/img-recommend-info3.png") no-repeat center; background-size:229px auto; width:229px; height:124px; text-indent:-9999px; margin:27px auto 0;}
+
+/* 보험 설계 신청 내역 */
+.sec_sendConfirm .box_detail.insurance {position:relative; padding:29px 20px 28px;}
+.sec_sendConfirm .box_detail.insurance .cercle.date {position:absolute; width:100%; left:0; top:-10px; text-align:center; z-index:10;}
+.sec_sendConfirm .box_detail.insurance .cercle.date span {display:inline-block; height:24px; padding:0 15px; line-height:23px; letter-spacing:0; font-size:14px; border-radius:13px; color:#fff; background:$white_two;}
+.sec_sendConfirm .box_detail.insurance .insurance_info {}
+.sec_sendConfirm .box_detail.insurance .insurance_info .date {font-size:16px; color:$warm_grey;}
+.sec_sendConfirm .box_detail.insurance .insurance_info .date em {letter-spacing:0;}
+.sec_sendConfirm .box_detail.insurance .insurance_info p strong {display:block; margin-top:6px; font-weight:bold; font-size:18px; color:$black;}
+.sec_sendConfirm .box_detail.insurance .detail_view {display:block;}
+.sec_sendConfirm .box_detail.insurance .detail_view .detail {display:inline-block; position:relative; padding-right:13px; font-size:20px; color:$purply_blue;}
+.sec_sendConfirm .box_detail.insurance .detail_view .detail:after {display:block; position:absolute; width:6px; height:30px; top:-2px; right:0; content:""; background:url("../images/finnqmarket/ico_arrow_purple.png") no-repeat center; background-size:cover;}
+.sec_sendConfirm .box_detail.insurance .detail_view .detail,
+.sec_sendConfirm .box_detail.insurance .detail_view .detail .num {font-weight:bold; font-family: "DeviceF", "AppleSDGothicNeo-bold";}
+.sec_sendConfirm .box_detail.insurance .thumb_info {margin-top:9px; @include font(14px); color:$warm_grey; word-break: keep-all; word-wrap: break-word;}
+.sec_sendConfirm .box_detail.insurance .cal_wrap2 .cal .tit {font-family: "DeviceF", "AppleSDGothicNeo-Medium";}
+
+.sec_sendConfirm .box_detail.insurance.round_box {margin-top:36px;}
+.sec_sendConfirm .box_detail.insurance.round_box ~ .box_detail.insurance.round_box {margin-top:32px;}
+
+/* 보험맞춤추천 설계신청내역상세 */
+.insurance_view .sec_title.detail h3 {font-size:20px;}
+.insurance_view .sec_title.detail h3 strong {font-color:$purply_blue;}
+.insurance_view .sec_history.insurance > div {padding:40px 20px 45px; background: #fff; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top:4px;}
+.insurance_view .sec_history.insurance > div:first-of-type {border-top:0; margin-top:0;}
+
+.insurance_view .sec_history.insurance > div > dl {padding:0; border-top:0; border-bottom:0;}
+.insurance_view .sec_history.insurance div > dl > dt strong,
+.insurance_view .sec_history.insurance div > dl > dt strong + div {font-size:20px}
+.insurance_view .sec_history.insurance div > dl > dt strong + div {}
+.insurance_view .sec_history.insurance div > dl > dt .cash {font-family:'LatoB' !important;}
+.insurance_view .sec_history.insurance div > dl > dt .money {font-weight:bold; color:$black;}
+.insurance_view .sec_history.insurance div > dl > dt .money.point {font-weight:bold; color:$purply_blue;}
+
+.insurance_view .sec_history.insurance div > dl .thumb_info {font-size:14px; margin-top:7px; line-height:18px; color:$warm_grey; word-break:keep-all;}
+.insurance_view .sec_history.insurance dl dd div {float:none;}
+
+.insurance .line_dash {border-top: 1px dashed #e0e0e0; margin-top: 16px; padding-top: 16px;}
+.insurance_view .sec_history.insurance .detail_list {}
+.insurance_view .sec_history.insurance .detail_list li {margin-top: 10px}
+.insurance_view .sec_history.insurance .detail_list li:first-of-type {margin-top:0}
+.insurance_view .sec_history.insurance .detail_list li:after {display:block; clear:both; content:"";}
+.insurance_view .sec_history.insurance .detail_list li > strong {float:left; float: left; color: #666; font-size: 16px; line-height: 20px; font-family: "DeviceF", "AppleSDGothicNeo-Medium";}
+.insurance_view .sec_history.insurance .detail_list li > span {float:right; color: #222; font-size: 16px; line-height: 20px; text-align: right;}
+.insurance_view .sec_history.insurance .gray_box {margin-top:15px; padding:28px 20px; border-radius:4px; background:$white_four; font-size:16px;}
+.insurance_view .sec_history.insurance .gray_box .list {margin-top:11px;}
+.insurance_view .sec_history.insurance .gray_box .list li {position:relative; margin-top:6px; font-size:16px; color:$brownish_grey; padding-left:10px; box-sizing: border-box;}
+.insurance_view .sec_history.insurance .gray_box .list li:first-of-type {margin-top:0}
+.insurance_view .sec_history.insurance .gray_box .list li:before {display: block; content: "-"; width: 6px; height: 1px; position: absolute; top:1px; left: 0;}
+
+.insurance_view .sec_history.insurance .gray_box .tit {font-size:16px; font-weight: bold; color:$brownish_grey;}
+.insurance_view .list_insurance {}
+.insurance_view .sec_history.insurance > div.list_insurance > dl {border-top: 1px dashed #e0e0e0; margin-top: 30px; padding-top: 24px;}
+.insurance_view .sec_history.insurance > div.list_insurance > dl:first-of-type {padding-top:0; border-top:0; margin-top:0;}
+
+/* 핀크카드 신청 */
+.card_slide_wrap.finnq_card {position:relative; margin-top:24px; overflow:hidden;}
+.swiper-continer.finnq_card {width: 100%; height: 100%;}
+.swiper-continer.finnq_card .swiper-wrapper {}
+.swiper-continer.finnq_card .swiper-wrapper:after {display:block; clear:both; content:"";}
+.swiper-continer.finnq_card .swiper-slide {/* width:140px; */ width:39%; text-align:center; }
+.swiper-continer.finnq_card .swiper-slide > a {display:block; position:relative; z-index:5;}
+.swiper-continer.finnq_card .swiper-slide input[type="radio"] + label {width:30px;}
+.swiper-continer.finnq_card .swiper-slide .item {position:relative; margin:8px 0 15px; border-radius:8px; overflow:hidden;}
+.swiper-continer.finnq_card .swiper-slide .item .mask {display:none; position:absolute; top:0; bottom:0; left:0; right:0; background:$black; z-index:5; opacity:.6;}
+.swiper-continer.finnq_card .swiper-slide.off .item .mask {display:block;}
+.swiper-continer.finnq_card .swiper-slide .item img {width:100%; height:auto;}
+.swiper-continer.finnq_card .swiper-slide .tit {display:inline-block; height:26px; line-height:26px; padding:0 10px; background:$white_two; color:$brownish_grey; border-radius:15px; font-weight: bold}
+.swiper-continer.finnq_card .swiper-slide.off .tit {padding:0 16px; background:$black; color:$white; letter-spacing:0; margin-top:20px;}
+/* .swiper-continer.finnq_card .swiper-pagination {display:none; height:0;} 주석처리가 // 되어있어서 수정함, */
+.swiper-container-3d.finnq_card .swiper-slide-shadow-left,
+.swiper-container-3d.finnq_card .swiper-slide-shadow-right {
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+
+.list_type.finnq_card {margin:42px 20px 45px;}
+.list_type.finnq_card li {@include font(14px); word-break: keep-all;}
+
+/* 비대면 계좌개설 플러스 통장 이용안내 */
+.list_expend.hana {padding-top:0; margin-top:-18px;}
+.list_expend.hana > li:first-of-type {border-top:0;}
+.list_expend.hana > li .subject a {font-size:16px; line-height:20px;}
+.list_expend.hana > li .list_gray li {word-break: keep-all;}
+
+/* 마켓-핀크카드 2018-11-13 */
+.finnqcard_main.open_ver .sec_finnqcard_visual{padding-bottom:43px}
+.finnqcard_main.open_ver .sec_finnqcard_visual .dues {margin-top:162px; @include font(16px);border-bottom:1px solid $white_two; padding-bottom:5px; margin-bottom:10px;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo {overflow:hidden;background:$white_four; padding:42px 0 41px; text-align:center; border-top:1px solid $white_two;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .tit {@include font(26px);letter-spacing:-2px;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .tit.mt_gap{margin-top:56px}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .tit strong {color:$purply_blue;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .txt {color:$brownish_grey; @include font(16px); margin-top:11px;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .img4 {background:url("../images/finnqmarket/img-finnqcard-collabo1.png") no-repeat center center; background-size:contain; max-width:240px; height:135px; text-indent:-9999px; margin:28px auto 0;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .img5 {background:url("../images/finnqmarket/img-finnqcard-collabo2.png") no-repeat center center; background-size:contain; max-width:320px; height:142px; text-indent:-9999px; margin:28px auto 56px;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .bul_guide {margin-top:28px;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .bul_guide li {color:$warm_grey; @include font(11px); text-align:left; margin-top:3px;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .bul_guide li:first-child {margin-top:0;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .in_sec{padding-left:20px;padding-right:20px}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .card_slide_wrap.finnq_card{margin-top:28px}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .card_slide_wrap.finnq_card + .bul_guide{margin-top:23px}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .swiper-continer.finnq_card .swiper-slide{width:50%;margin-left:2px}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .swiper-continer.finnq_card .swiper-slide .stit{margin-top:15px;display:inline-block; padding:0 10px; height:26px; line-height:26px; font-size:14px;background:$white_two; color:$brownish_grey; border-radius:15px; font-weight: bold}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .swiper-continer.finnq_card .swiper-slide.off .stit {background:$black; color:$white; font-weight:bold;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .swiper-continer.finnq_card .swiper-slide.off .item {position:relative; overflow:hidden;}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .swiper-continer.finnq_card .swiper-slide .item{margin:0}
+.finnqcard_main.open_ver .sec_finnqcard_collabo .swiper-continer.finnq_card .swiper-slide-next .stit,
+.finnqcard_main.open_ver .sec_finnqcard_collabo .swiper-continer.finnq_card .swiper-slide-prev .stit{margin-top:20px;-webkit-transform: scale(1.32);transform: scale(1.32);}
+.finnqcard_main.open_ver .sec_finnqcard_saving.cashbag{padding:42px 20px 41px}
+.finnqcard_main.open_ver .sec_finnqcard_saving.cashbag .tit strong {color:$purply_blue;}
+.finnqcard_main.open_ver .sec_finnqcard_saving.cashbag .txt{margin-top:11px}
+.finnqcard_main.open_ver .sec_finnqcard_saving.cashbag .img6 {background:url("../images/finnqmarket/img-finnqcard-graph2.png") no-repeat center center; background-size:contain; max-width:320px; height:214px; text-indent:-9999px; margin:35px auto 0;}
+.finnqcard_main.open_ver .bul_guide.bul_indent{margin-top:10px;margin-left:22px}
+.finnqcard_main.open_ver .bul_guide.bul_info .list_gray.bold > li,
+.finnqcard_main.open_ver .bul_guide.bul_info .list_gray.bold > li > p{font-family: 'LatoM'; font-weight:normal;}
+.finnqcard_main.open_ver .bul_guide li.indent > p{margin-top:10px;@include font(16px);color:$brownish_grey; font-family:'AppleSDGothicNeo-Light', 'LatoL'; font-weight:lighter;text-indent: 0;}
+.finnqcard_main.open_ver .sec_finnqcard_cate .cate1 .total .tit,
+.finnqcard_main.open_ver .sec_finnqcard_cate .cate1 .total .money{width:auto}
+
+.modal_wrap .sec_info.card {display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center; padding:30px 0;}
+.modal_wrap .sec_info.card .img {display:inline-block; width:70px; height:110px; background:url("../images/finnqmarket/img_finnq_card2.png") no-repeat center center; background-size:cover;}
+.modal_wrap .sec_info.card .txt {display:inline-block; text-align:left; margin-left:17px; font-size: 16px; line-height: 20px;}
+.modal_wrap .sec_info.card strong {font-weight:bold;}
+
+/* 카드 등록 안내 가이드 */
+.wrap.card_reg .finnqcard_reg_info {position:fixed; width:100%; bottom:60px; padding:20px 20px 10px 20px; box-sizing:border-box; background:$purply_blue; z-index:50;}
+.wrap.card_reg .finnqcard_reg_info .guide_box {position:relative; padding:12px 0 0 120px; border-radius:8px; font-size:14px; line-height:18px; box-sizing:border-box; height:60px; background:$white; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+.wrap.card_reg .finnqcard_reg_info .guide_box:before {display:inline-block; width:71px; height:40px; position:absolute; top:50%; left:30px; margin-top:-20px; content:""; background-repeat:no-repeat; background-image:url(../images/finnqmarket/img_thumb_card_list.png); background-position:0 0; background-size:100% auto;}
+.wrap.card_reg .finnqcard_reg_info .guide_box.card1:before {background-position:0 -50px;}
+.wrap.card_reg .finnqcard_reg_info .guide_box.card2:before {background-position:0 -100px;}
+.wrap.card_reg .finnqcard_reg_info .guide_box.card3:before {background-position:0 -150px;}
+.wrap.card_reg .finnqcard_reg_info .guide_box.card4:before {background-position:0 -200px;}
+
+.wrap.card_reg .finnqcard_reg_info .guide_box:after {display: inline-block; z-index:30; position: absolute; bottom: -8px; left: 50%; margin-left: -4px; box-sizing: border-box; content:""; width:8px; height:8px; border-top:8px solid $white; border-right:4px solid transparent; border-left:4px solid transparent;}
+
+.wrap.card_reg #contents.add_sticky:after {height:150px;}
+
+/* sub 블랙 추가 2019-01-11 ock */
+.sec_foregin_cate .star_black{margin-left:3px;color:$black;@include font(14px);vertical-align:-2px}
+.sec_foregin_cate .sub .txt_black {display:inline-block;color:$black;@include font(11px);word-break: keep-all;}
+.sec_foregin_cate .star_type.txt_black:before{color:$black;font-size:14px}
+
+.iban_wrap {}
+.iban_wrap .iban {position:relative; padding-left:36px;}
+.input_wrap.iban_wrap .iban .input_tit  {position:absolute; left:0; top:15px;}
+
+
+/* 대출 상품 중계 */
+#contents > section.loan_list_main {padding-top:10px;}
+.loan_list_main .visual {position:relative; padding-top:28px; height:230px; background:#53d5d0; box-sizing:border-box;}
+.loan_list_main .visual:after {display:block; position:absolute; content:""; width:266px; height:94px; left:50%; top:107px; margin-left:-133px; z-index:5; background:url(../images/finnqmarket/bg_loan_bank.png) no-repeat center center; background-size:contain;}
+.loan_list_main .title {font-size:26px; line-height:28px; text-align:center; font-family:"AppleSDGothicNeo-Light"; color:$black;}
+.loan_list_main .title strong {font-weight:bold;}
+.loan_list_main .sec_history ul > li {margin-top:4px; border-top: 1px solid $white_two; border-bottom: 1px solid $white_two;}
+.loan_list_main .sec_history ul > li  a {display:block; height:100%;}
+.loan_list_main .sec_history ul > li:first-of-type {margin-top:0;}
+.loan_list_main .sec_history dl {position:relative; padding:28px 20px; border:0;}
+.loan_list_main .sec_history dt {position:absolute; top:28px; left:20px; width:100px; border:1px solid $white_two; border-radius:4px; box-sizing:border-box; overflow: hidden;}
+.loan_list_main .sec_history dt .img_wrap {padding:5px;}
+.loan_list_main .sec_history dl.end:before {position:absolute; top:25px; left:55px; z-index:10; display:inline-block; width:57px; height:19px; content:""; background:url(../images/finnqmarket/ico_label_end.png) no-repeat center center; background-size:100% auto;}
+.loan_list_main .sec_history dt .img_wrap img {width:100%; height:auto;}
+.loan_list_main .sec_history dt p {height:18px; font-size:10px; text-align:center; background:$white_four; line-height:18px; color:$warm_grey;}
+.loan_list_main .sec_history dd {margin-top:0; padding-left:120px}
+.loan_list_main .sec_history dd .thumb_tit {font-size:12px; color:$warm_grey;}
+.loan_list_main .sec_history dd .detail_info {margin-top:7px; font-size:20px; line-height:24px; font-family:"AppleSDGothicNeo-Light"; color:$black;}
+.loan_list_main .sec_history dd .detail_info strong {font-weight:bold;}
+
+#contents > section.loan_detail {padding-top:10px; padding:0 20px;}
+.loan_detail .blue {color:$clear_blue;}
+.loan_detail .purple {color:$purply_blue;}
+.loan_detail .visual {position:relative;}
+.loan_detail .visual .title {position:absolute; top:24px; left:0px; font-size:34px; line-height:40px; color:$black; z-index:10;}
+.loan_detail .visual img {width:100%; height:auto;}
+.loan_detail .thumb_info {margin-top:8px;}
+.loan_detail .thumb_info .list_type.bar.single,
+.loan_detail .thumb_info .list_type.bar>li {color:$brownish_grey;}
+.loan_detail .thumb_info dt {font-size:16px; color:$black; padding-bottom:8px; border-bottom:1px solid $white_two;}
+.loan_detail .thumb_info dd {margin-top:13px; @include font(14px); color:$brownish_grey;}
+.loan_detail .loan_detail_info {margin:42px 0 40px;}
+.loan_detail .loan_detail_info .list_type.bar.single,
+.loan_detail .loan_detail_info .list_type.bar>li,
+.loan_detail .loan_detail_info .list_type.bar>li a {display:inline-block; margin-top:-4px; font-size:16px; line-height:22px; color:$brownish_grey; }
+.loan_detail .loan_detail_info .num {font-family: 'LatoL' !important;}
+.loan_detail .loan_detail_info .num.bold {font-family: 'LatoB' !important;}
+.loan_detail .input_wrap .input_tit {font-weight:normal;}
+.loan_detail .input_wrap .list_type.bar.single,
+.loan_detail .input_wrap .list_type.bar > li {font-family:"AppleSDGothicNeo-Light";}
+.loan_detail .input_wrap .list_type.bar > li {margin-top:5px;}
+.loan_detail .input_wrap .list_type.bar > li:first-of-type {margin-top:0;}
+.loan_detail .input_wrap ~ .input_wrap {margin-top:23px;}
+.loan_detail .product_info {position:relative; margin-top:26px; font-size:16px; padding-left:20px; color:$brownish_grey; margin-left:-4px;}
+.loan_detail .product_info .num {font-family: 'LatoM' !important;}
+.loan_detail .product_info .ico {position:absolute; top:0; left:0;}
+.loan_detail .loan_detail_info .input_wrap:first-of-type {margin-top:0;}
+.loan_detail .loan_detail_info dd {font-family:"AppleSDGothicNeo-Light";}
+.loan_detail .add_info {margin-top:7px; color:$brownish_grey;}
+.loan_detail .gray_info_box {margin:43px -20px 0; padding:40px 37px 43px; border-top:1px solid $white_two; background:$white_four; color:$black;}
+.loan_detail .gray_info_box .title {font-size:26px; color:$black; text-align:center;}
+.loan_detail .gray_info_box .title + ul {margin-top:23px;}
+.loan_detail .gray_info_box .list.num {}
+.loan_detail .gray_info_box .list.num li {position:relative; padding-left:14px; @include font(16px); margin-top:14px; color:$black; font-family:"AppleSDGothicNeo-Regular"; word-break: keep-all;}
+.loan_detail .gray_info_box .list.num li em {position:absolute; top:0; left:0;}
+.loan_detail .gray_info_box .thumb {position:relative; margin-top:24px; font-size:12px; line-height:16px; padding-left:17px; word-break: keep-all; color:$brownish_grey;}
+.loan_detail .gray_info_box .thumb:before {display:inline-block; width:13px; height:14px; position:absolute; top:1px; left:0; content:""; background:url("../images/common/ir-icon-set.png") no-repeat 0 -129px; background-size:40px auto;}
+.loan_detail .gray_info_box .thumb + .thumb {margin-top:8px;}
+
+
+/* 펫 보험 */
+.pet_insurance .blue_txt {color:$clear_blue;}
+.pet_insurance .img_cont {margin-top:26px;}
+.pet_insurance .img_cont img {width:100%;}
+.pet_insurance .pet_visual {margin:0 20px; padding:38px 0 40px; background:url("../images/finnqmarket/img_pet_visual.png?v=1") no-repeat 100% 15px; background-size:320px auto;}
+.pet_visual .txt {font-size: 34px; line-height: 40px;}
+
+.pet_insurance .pet_visual .dues {margin-top:140px; font-size: 16px; line-height: 20px; border-bottom: 1px solid #e0e0e0; padding-bottom: 5px; margin-bottom: 10px;}
+.pet_insurance .pet_visual .dis_table ul li {font-size:14px; margin-top:5px; color:$black;}
+.pet_insurance .pet_visual .dis_table ul li:first-of-type {margin-top:0;}
+.pet_insurance .pet_visual .dis_table ul li:before {border-color:$black;}
+.pet_insurance .gray_box_info {margin-bottom:43px; padding:43px 40px 45px; text-align:center; border-top:1px solid $white_two; border-bottom:1px solid $white_two; background-color:$white_four;}
+
+.pet_insurance .gray_box_info .txt {@include font(20px);}
+.pet_insurance .gray_box_info .thumb_txt {font-size:11px; margin-top:26px; text-align:left; text-align:center; color:$warm_grey;}
+.pet_insurance .gray_box_info .thumb_txt em {display:inline-block; vertical-align:middle; margin-right:2px;}
+
+.pet_insurance .info_list {padding:0 40px 45px; border-bottom:1px solid $white_two;}
+.pet_insurance .info_list .title,
+.pet_insurance .info_list .sub_title {text-align:center;}
+.pet_insurance .info_list .title {@include font(26px);}
+.pet_insurance .info_list .sub_title {@include font(20px); word-break:keep-all;}
+.pet_insurance .info_list .sub_title .sub_info {display:block; margin-top:6px; @include font(16px); color:$brownish_grey;}
+.pet_insurance .info_list .sub_title.ico_cont {position:relative;}
+.pet_insurance .info_list .sub_title.ico_cont:after {display:inline-block; margin-top:28px; width:130px; height:120px; content:""; background:url("../images/finnqmarket/ico_pet_cont.png") no-repeat 50% 50%; background-size:cover;}
+.pet_insurance .info_list > article {margin-top:42px;}
+.pet_insurance .info_list > article:first-of-type {margin-top:34px;}
+.pet_insurance .info_list .thumb_txt {margin-top:28px; text-align:center; font-size:11px; color:$warm_grey;}
+.pet_insurance .info_list .thumb_txt + .thumb_txt {margin-top:3px;}
+
+.pet_insurance .gray_cont {margin-top:28px; padding:28px 20px; border-radius:8px; background-color:$white_four;}
+.pet_insurance .gray_cont .txt {font-size:18px; color:$black; text-align:center;}
+.pet_insurance .gray_cont li {position:relative; padding-left:66px; margin-top:26px;}
+.pet_insurance .gray_cont li:before {position:absolute; top:0; left:0; width:56px; height:56px; content:""; background-image:url("../images/finnqmarket/ico_pet_sp_set.png"); background-repeat:no-repeat; background-size:100% auto;}
+.pet_insurance .gray_cont li:nth-of-type(1):before {background-position:0 0;}
+.pet_insurance .gray_cont li:nth-of-type(2):before {background-position:0 -59px;}
+.pet_insurance .gray_cont li:nth-of-type(3):before {background-position:0 -119px;}
+
+.pet_insurance .gray_cont li .cont {font-size:14px; line-height:20px; color:$brownish_grey;}
+.pet_insurance .gray_cont li .cont strong {display:block; color:$black; font-size:16px; font-weight:bold;}
+.pet_insurance .gray_cont li .sub_cont {margin-top:5px; color:$warm_grey; font-size:11px;}
+.pet_insurance .gray_cont li .sub_cont i,
+.pet_insurance .info_list .thumb_txt i {display:inline-block; vertical-align:middle; margin:2px 2px 0 0;}
+.pet_insurance .bul_guide .dash_type:before {vertical-align:top;}
+.pet_insurance .sec_history .txt {font-size:16px; color:$black; margin-bottom:9px;}
+.pet_insurance .sec_history .list_gray li {font-family:'AppleSDGothicNeo-Light';}
+.pet_insurance .sec_account_cate .list_gray .red_txt,
+.pet_insurance .sec_history .list_gray .red_txt {color:$reddish_orange;}
+.pet_insurance .sec_history .list_gray .num {font-family: 'LatoL';}
+
+/* 19.04.22 추가 */
+.pet_insurance .btn_wrap {margin-top:30px; text-align:center;}
+.pet_insurance .btn_wrap .btn {display:inline-block; width:162px; height:34px; font-size:14px; color:$brownish_grey; line-height:34px; border:1px solid $pinkish_grey; background-color:$white_three; border-radius:4px;}
+.pet_insurance .pet_banner + .sec_finnqcard_info {border-top:0;}
+.pet_insurance .pet_banner {border-top:1px solid $white_two;}
+.pet_insurance .pet_banner a {display:block;}
+.pet_insurance .pet_banner img {width:100%;}
+.pet_insurance .pet_banner hr {margin:0;}
+
+/* 대구은행 하이파이브 적금 */
+.dgb_wrap .sec_agree {margin-top:40px;}
+.dgb_wrap .sec_agree ul {padding-top:6px; background:$white_three;}
+.dgb_wrap .sec_agree ul li span {word-break: keep-all;}
+.dgb_wrap .sec_agree .agree_wrap .btn_ico {margin:6px 0 0 -25px;}
+.dgb_wrap .sec_agree .agree_wrap .layer_wrap {top:52px;}
+.dgb_wrap .sec_agree .agree_wrap .layer_wrap p {word-break: keep-all;}
+.dgb_wrap .sec_agree .agree_wrap {margin-top:6px; border:0;}
+.dgb_wrap .sec_agree .agree_wrap:first-child {margin-top:0;}
+
+.dgb_detail_wrap {}
+.dgb_detail_wrap .dgb_fund_info {position:relative; margin-top:26px; padding:0 50px; text-align:center;}
+.dgb_detail_wrap .dgb_fund_info:before {display:inline-block; width:130px; height:75px; content:""; background:url(../images/finnqmarket/ico_dgb_benefit.png) 50% 50% no-repeat; background-size:100% auto;}
+.dgb_detail_wrap .dgb_fund_info li {position:relative; height:78px; padding:18px 0; text-align:left; box-sizing: border-box; background:url(../images/common/bg-dotline-type3.png) 0 0 repeat-x; background-size:18px auto;}
+.dgb_detail_wrap .dgb_fund_gmainfo li:first-of-type {background:0;}
+
+.dgb_detail_wrap .dgb_fund_info li dt {font-weight:bold; font-size:16px; color:$black;}
+.dgb_detail_wrap .dgb_fund_info li dd {font-size:14px; color:$warm_grey; margin-top:3px;}
+.dgb_detail_wrap .dgb_fund_info li .benefit {font-size:18px; position:absolute; top:50%; right:0; margin-top:-9px; color:$clear_blue; font-weight:bold;}
+
+.dgb_detail_wrap .add_info_box {padding-bottom:45px;}
+.dgb_detail_wrap .add_info_box >div {margin:10px 30px 0px; padding:28px 0 26px; border-radius:8px; background:$white_four; text-align:center; font-size:14px; line-height:18px; color:$warm_grey; word-break:keep-all;}
+.dgb_detail_wrap .add_info_box span {color:$clear_blue;}
+
+/* high5 적금 소개 상세 :19.05.07 */
+.high5_detail .sec_account_visual {background: url(../images/finnqmarket/bg_visual_high5.png?v=1) no-repeat 100% 46px;
+    background-size: 248px auto;}
+.high5_detail .sec_account_visual .dues {margin-top:172px;}
+.high5_detail .sec_account_visual .dis_cell.w50p {width:50%;}
+.high5_detail .sec_account_saving .tit strong {font-weight:bold; color:#ec1940;}
+.high5_detail .sec_account_saving .present {font-size:16px; color:$brownish_grey;}
+.high5_detail .sec_account_saving .list_benefit_wrap {}
+.high5_detail .sec_account_saving .list_benefit {position:relative; height:90px; width: 295px;
+    margin: 0 auto;}
+.high5_detail .sec_account_saving .list_benefit dl:before {display:inline-block; position:absolute; top:50%; left:0px; margin-top:-45px; width:90px; height:90px; content:""; background-image:url(../images/finnqmarket/img_hight5_detail1.png); background-repeat:no-repeat; background-size:100% auto;}
+.high5_detail .sec_account_saving .list_benefit:first-of-type {margin-top:27px;}
+.high5_detail .sec_account_saving .list_benefit dl {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; box-sizing: border-box; text-align: left; padding-left:110px; box-sizing:border-box;}
+.high5_detail .sec_account_saving .list_benefit:nth-of-type(1) dl:before {background-position:0 0;}
+.high5_detail .sec_account_saving .list_benefit:nth-of-type(2) dl:before {background-position:0 -100px;}
+.high5_detail .sec_account_saving .list_benefit:nth-of-type(3) dl:before {background-position:0 -200px;}
+.high5_detail .sec_account_saving .list_benefit dt {font-size:18px; font-weight:bold; color:#ec1940;}
+.high5_detail .sec_account_saving .list_benefit dt strong {font-weight:bold; color:$clear_blue;}
+.high5_detail .sec_account_saving .list_benefit dd {margin-top:5px; font-size:16px; color:$black; line-height:18px;}
+
+.high5_detail .sec_account_saving .list_benefit + .list_benefit {margin-top:20px;}
+
+.high5_detail .high5_add_benefit {text-align:center; padding-bottom:40px;}
+.high5_detail .high5_add_benefit .box_lable_wrap {margin-top:45px; text-align:center;}
+.high5_detail .high5_add_benefit .box_lable_wrap span {display:inline-block; height:29px; line-height:29px; font-size:16px; padding:0 20px; text-align:center; background:$white_four; font-weight:bold; color:$clear_blue; border-radius:21px;}
+.high5_detail .high5_add_benefit .tit {margin-top:20px; font-size:26px; line-height:30px; color:$black; text-align:center;}
+.high5_detail .high5_add_benefit .tit strong,
+.high5_detail .high5_add_benefit .cont strong {color:$clear_blue;}
+.high5_detail .high5_add_benefit .tit strong {font-weight:bold;}
+.high5_detail .high5_add_benefit .cont {margin-top:6px; @include font(16px); color:$brownish_grey; text-align:center;}
+.high5_detail .high5_add_benefit .star {display:inline-block; margin-top:8px; font-size:14px; padding-left:7px; color:$warm_grey;}
+.high5_detail .high5_add_benefit .img {margin:27px auto 45px; width:248px; height:135px; text-indent:-999em; background-image:url(../images/finnqmarket/img_hight5_detail2.png?v=1); background-repeat:no-repeat; background-size:100% auto; overflow:hidden;}
+
+.high5_detail .high5_add_benefit.event1 .img {background-position:0 0;}
+.high5_detail .high5_add_benefit.event2 .img {background-position:0 100%;}
+
+.high5_detail .high5_add_benefit.event2 {border-top:1px solid $white_three;}
+
+.high5_detail .high5_add_benefit .thumb_detail_list {padding:0 30px;}
+.high5_detail .high5_add_benefit .thumb_detail_list li {margin-top:2px; overflow:hidden;}
+.high5_detail .high5_add_benefit .thumb_detail_list li span {display:inline-block; font-size:14px; line-height:23px; color:$brownish_grey; float:left; margin-top:0; text-align:left;}
+.high5_detail .high5_add_benefit .thumb_detail_list li .tit {font-weight:bold;}
+.high5_detail .high5_add_benefit .thumb_detail_list li .cont {word-break:keep-all;}
+.high5_detail .high5_add_benefit .thumb_detail_list li .cont.end {color:$pinkish_grey;}
+
+
+.high5_detail .high5_add_benefit.event1 .thumb_detail_list li .tit {width:55px;}
+.high5_detail .high5_add_benefit.event1 .thumb_detail_list li .cont {width:calc(100% - 55px);}
+.high5_detail .high5_add_benefit.event2 .thumb_detail_list li .tit {width:33px;}
+.high5_detail .high5_add_benefit.event2 .thumb_detail_list li .cont {width:calc(100% - 33px);}
+
+.high5_detail .sec_account_check {border-top:1px solid $white_three;}
+.high5_detail .sec_account_check .img {width:234px; height:42px; background: url(../images/finnqmarket/img_hight5_detail3.png?v=1) no-repeat; background-size:100% auto;}
+.high5_detail .detail_set .bul_guide .add_list {margin-top:23px;}
+.high5_detail .detail_set .bul_guide .add_list li {font-size:16px; color:$brownish_grey;}
+.high5_detail .detail_set .bul_guide .add_list li.light {font-family:'AppleSDGothicNeo-Light';}
+.high5_detail .sec_account_cate .sub_txt {margin:8px 0; font-size:16px; color:$brownish_grey;}
+.high5_detail .sec_account_cate .list_gray + .sub_txt {margin-top:21px;}
+.high5_detail .sec_account_cate .bul_guide + .sub_txt {margin-top:0;}
+.high5_detail .bul_guide .list_num_cercle {margin:5px 0 0 8px;}
+.high5_detail .bul_guide .list_num_cercle li {margin-top:5px;}
+.high5_detail .bul_guide .bul_guide + .txt {margin: 23px 0 10px;}
+.high5_detail .sec_account_cate .cate1 .cal {box-sizing:border-box;}
+.high5_detail .sec_account_cate .cate1 .cal .money strong,
+.high5_detail .sec_account_cate .cate1 .cal .money em,
+.high5_detail .sec_account_cate .cate1 .cal .tit em {font-size:20px;}
+.high5_detail .sec_account_cate .cate1 .cal .money {text-align:right; padding:13px 19px 12px 0px;}
+
+
+/* KDB 하이 파이브 */
+.high5_detail.kdb .sec_account_visual {background:url(../images/finnqmarket/bg_kdb_high5.png) no-repeat 100% 65px; background-size: 237px auto;}
+.high5_detail.kdb  .sec_account_visual .dues {margin-top:155px;}
+.high5_detail.kdb .txt_red {color:#ec1940;}
+.high5_detail.kdb .sub_thumb_tit {margin-top:20px; font-size:12px; line-height:16px; color:#999;}
+.high5_detail.kdb .sec_account_saving .list_benefit dl:before {background-image: url(../images/finnqmarket/img_kdb_high5_detail1.png);}
+.high5_detail.kdb .sec_account_saving .list_benefit.add dl:before {background-image: url(../images/finnqmarket/img_kdb_high5_detail2.png);}
+.high5_detail.kdb .sec_account_saving .list_benefit:nth-of-type(2) dl:before {background-position: 0 -110px;}
+.high5_detail.kdb .sec_account_saving .list_benefit:nth-of-type(3) dl:before {background-position: 0 -220px;}
+.high5_detail.kdb .sec_account_saving .list_benefit dd {line-height:20px; word-break:keep-all;}
+.high5_detail.kdb .sec_account_saving .list_benefit .thumb {display:inline-block; font-size:12px; color:#999; vertical-align: middle; margin-top:-5px; font-weight:normal;}
+.high5_detail.kdb .list_benefit_wrap {margin-left:20px;}
+.high5_detail.kdb .sec_account_saving .list_benefit_wrap + .sub_tit {margin-top:43px; font-size:18px; line-height:22px; color:#222;}
+.high5_detail.kdb .sec_account_saving .list_benefit {width:auto; margin:27px 0 0 0}
+.high5_detail.kdb .sec_account_saving .list_benefit+.list_benefit {margin-top:20px;}
+.high5_detail.kdb .sec_account_saving .sub_title {margin-top:56px; font-weight:bold; font-size:26px; line-height:30px; color:#222;}
+.high5_detail.kdb .sec_account_saving .sub_title strong {color:#278df5;}
+.high5_detail.kdb .sec_account_check .img {width: 228px; height: 41px; background: url(../images/finnqmarket/img_kdb_high5_detail3.png) no-repeat; background-size: 100% auto;}
+
+.high5_detail.kdb .sec_account_saving article {position:relative;}
+.high5_detail.kdb .sec_account_saving article + article {margin-top:45px; padding-top:65px;}
+.high5_detail.kdb .sec_account_saving article + article:before {position:absolute; top:0; left:50%; content:""; width:30px; height:30px; margin-left:-15px; background:url(../images/finnqmarket/ico_add_plus.png) no-repeat 50% 50%; background-size:100% auto;}
+
+.high5_detail.kdb .sec_account_cate .sub {margin-top:8px; word-break: keep-all;}
+.high5_detail.kdb .cal_list_wrap {margin-top:10px; padding:27px 20px 30px; background-color:#f8f8f8; border:1px solid #eee; border-bottom:0;}
+.high5_detail.kdb .cal_list_wrap li {margin-top:8px; overflow:hidden; font-size:16px;}
+.high5_detail.kdb .cal_list_wrap li:first-of-type {margin-top:0;}
+.high5_detail.kdb .cal_list_wrap li .tit {float:left; color:#999;}
+.high5_detail.kdb .cal_list_wrap li .cont {float:right; color:#999; font-weight:bold;}
+.high5_detail.kdb .sec_account_cate .cate1 .cal {margin-top:0;}
+.high5_detail.kdb .img_graph_info {margin:25px 0px 0;}
+.high5_detail.kdb .img_graph_info > div {text-align:center;}
+.high5_detail.kdb .img_graph_info > div img {width:100%; height:auto;}
+.high5_detail.kdb .img_graph_info > div + div {margin-top:40px;}
+.high5_detail.kdb .img_graph_info .add_thumb_info {position:relative; margin-top:26px; font-size:12px; line-height:16px; color:#999; text-align:center;}
+.high5_detail.kdb .img_graph_info .add_thumb_info span {display:block; margin-top:5px;}
+.high5_detail.kdb .img_graph_info .add_thumb_info:before {display:inline-block; content:"*"; margin-right:4px; vertical-align:middle;}
+.high5_detail.kdb .sec_account_visual .num,
+.high5_detail.kdb .tbl_type1 tbody .num {letter-spacing:0;}
+.high5_detail.kdb .list_gray li .sub_tit {font-family:"AppleSDGothicNeo-Medium";}
+.high5_detail.kdb .list_gray.type2 li:before {padding-right:0;}
+
+/* 공유하기 버튼 */
+.share__wrap {text-align:center;}
+.share__wrap--btn{display: inline-block; position: relative; padding-top: 45px; width: 80px; height: 80px; border: 1px solid #e0e0e0; border-radius: 50%; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #fff;
+}
+.share__wrap--btn:before {display: inline-block; content: ""; width: 24px; height: 18px; position: absolute; left: 50%; top: 20px; margin-left: -12px; background: url(../images/finnqmarket/btn_share_common.png) no-repeat 0 0; background-size: cover;}
+.share__wrap--txt  {position: absolute; bottom: 15px; width: 100%; left: 50%; margin-left: -39px; font-size: 12px; color: #222; text-align: center; font-weight:bold;}
+
+
+/* 보험 진단 하기 */
+.wrap.insurance {background:#aa96f2;}
+.wrap.insurance:after {}
+.wrap.insurance .insurance__data {position:relative;}
+.wrap.insurance .insurance__data.init {margin-top:12px; text-align:center;}
+.wrap.insurance .insurance__data.init:before {display:inline-block; content:""; width:300px; height:204px; background: url(../images/finnqmarket/bg_insurance_init.png) no-repeat 0 0; background-size:100% 204px;}
+.wrap.insurance .insurance__data--info {position:relative; text-align:left;}
+.wrap.insurance .insurance__data--group {padding:0 30px;}
+
+.wrap.insurance .insurance__data.init .insurance--title {margin-top:15px; font-size:24px; color:#222; font-weight:bold;}
+.wrap.insurance .insurance__data.init .insurance--sub-title {margin-top:3px; font-size:16px; color:#999;}
+
+.wrap.insurance .insurance__btn-wrap {margin-top:20px; text-align:left;}
+.wrap.insurance .insurance--btn {display:inline-block; position:relative; padding-right:14px; font-size:16px; font-weight:bold;}
+.wrap.insurance .insurance--btn:after {display: inline-block; position: absolute; right:0; top:50%; margin-top:-6px; content:' '; width:6px; height:12px; background: url(../images/common/ir-arrow-set.png) no-repeat; background-size:40px auto; background-position: 0 -85px;}
+
+.wrap.insurance .insurance__data--more {overflow:hidden;padding:50px 30px 60px; text-align:left; background:#aa96f2;}
+.wrap.insurance .insurance--img-cover {display:block; position:relative;left:0;width:100%; content:"";padding-top:14.4%; background:url(../images/finnqmarket/bg_insurance_triangle.png) no-repeat;background-size:100%;vertical-align: top; margin-top:22px;}
+.wrap.insurance .insurance--img-cover img {width:100%; height:auto;}
+.wrap.insurance .insurance__data--more .title {font-weight:bold; font-size:24px; color:#fff;}
+.wrap.insurance .insurance__data--more .sub-title {margin-top:3px; font-size:16px; color:#fff; opacity:.5;}
+
+.wrap.insurance .insurance__btn-wrap {margin-top:20px;}
+.wrap.insurance .insurance__btn-wrap .insurance__btn.search {display:inline-block; position:relative; padding-right:14px; font-size:16px; font-weight:bold; color:#fff;}
+.wrap.insurance .insurance__btn-wrap .insurance__btn.search:after {display: inline-block; position: absolute; right:0; top:50%; margin-top:-6px; content:' '; width:6px; height:12px; background: url(../images/common/ir-arrow-set.png) no-repeat; background-size:40px auto; background-position: 0 -126px;}
+
+.wrap.insurance .insurance__data.active {position:relative; margin-top:40px;}
+.wrap.insurance .insurance__data.active .insurance__data--info:after {position:absolute; top:0; right:0; width:110px; height:110px; content:""; z-index:10; background-repeat:no-repeat; background-position:50% 50%; background-size:100% auto;}
+.wrap.insurance .insurance__data.active.type1 .insurance__data--info:after {background-image:url(../images/finnqmarket/bg_insurance_rank1.png);}
+.wrap.insurance .insurance__data.active.type2 .insurance__data--info:after {background-image:url(../images/finnqmarket/bg_insurance_rank2.png);}
+.wrap.insurance .insurance__data.active.type3 .insurance__data--info:after {background-image:url(../images/finnqmarket/bg_insurance_rank3.png);}
+.wrap.insurance .insurance__data.active.type4 .insurance__data--info:after {background-image:url(../images/finnqmarket/bg_insurance_rank4.png);}
+.wrap.insurance .insurance__data .user-info {font-size:30px; line-height:38px; color:#222; font-family:"AppleSDGothicNeo-Light";}
+.wrap.insurance .insurance__data .user-info .number {display:inline-block; background:#278df5; padding:0 5px; height:38px; line-height:37px; text-align:center; font-weight:bold; color:#fff;}
+    body.ios .wrap.insurance .insurance__data.type4 .number {line-height:42px;}
+.wrap.insurance .insurance__data.type1 .user-info .number {background:#278df5;}
+.wrap.insurance .insurance__data.type2 .user-info .number {background:#ffd500;}
+.wrap.insurance .insurance__data.type3 .user-info .number {background:#f74b20;}
+.wrap.insurance .insurance__data.type4 .user-info .number {background:#999;}
+
+.wrap.insurance .detail-info-wrap {margin-top:30px;}
+.wrap.insurance .detail-info-wrap .detail-info {font-size:24px; color:#666;}
+.wrap.insurance .detail-info-wrap .detail-info,
+.wrap.insurance .detail-info-wrap .detail-info em,
+.wrap.insurance .detail-info-wrap .detail-info span {font-family:"AppleSDGothicNeo-Light";}
+
+.wrap.insurance .detail-info-wrap .detail-info .num {font-family:"LatoL" !important;}
+
+.wrap.insurance .hash-tag__wrap {margin-top:15px;}
+.wrap.insurance .hash-tag__wrap .hash-tag {font-size:18px; color:#aa96f2; margin-left:2px;}
+.wrap.insurance .hash-tag__wrap .hash-tag:first-of-type {margin-left:0;}
+
+.wrap.insurance .insurance__data.active .insurance__btn.search,
+.wrap.insurance .insurance__data .insurance__btn.search.active {color:#ffd500;}
+.wrap.insurance .insurance__data .insurance__btn.search.white {color:#fff;}
+.wrap.insurance .insurance__data.active .insurance__btn.search:after,
+.wrap.insurance .insurance__data .insurance__btn.search.active:after {background-position: 0 -153px;}
+.wrap.insurance .insurance__data .insurance__btn.search.white:after {background-position: 0 -126px;}
+
+.wrap.insurance .point {color:#aa96f2;}
+
+/* DGB 비상금대출 :19.07.16 */
+.dgbloan .sec_title .title a {display: inline-block;position: relative;font-weight: bold;padding-right: 23px;}
+.dgbloan .sec_title .title a:after {display: block; content: ""; position: absolute; top: 50%; right: 0; margin-top: -8px; width: 17px; height: 16px; background: url(../images/common/ico_modify.png) no-repeat 0 0; background-size: 100% auto;}
+.thumb_lable_wrap {position:relative;}
+.thumb_lable_wrap span {display:inline-block; margin-left:3px; font-size:11px; line-height:18px; height:18px; text-align:center; padding:0 6px; border-radius:2px; background:$pinkish_grey; color:$white;}
+.thumb_lable_wrap span.on {background:$purply_blue_two;}
+.thumb_lable_wrap span:first-of-type {margin-left:0;}
+.dgbloan .adm_list {margin:41px 0 26px; padding:0 20px;}
+.dgbloan .adm_list ul > li {position:relative; margin-top:25px;}
+.dgbloan .adm_list ul > li:after {display:block; clear:both; content:"";}
+.dgbloan .adm_list ul > li:first-of-type {margin-top:0;}
+.dgbloan .adm_list ul > li .tit {float:left; font-size:16px; color:$black;}
+.dgbloan .adm_list ul > li .info {float:right;}
+.dgbloan .adm_list ul > li.auto_switch .info {position:absolute; top:-5px; right:0px;}
+.dgbloan .adm_list ul > li .btn_link {display: inline-block; position: relative; padding-right: 15px; font-size: 12px; color: #278df5;}
+.dgbloan .adm_list ul > li .btn_link .ico_arrow_more {position: absolute; right: 0px; top: 50%; margin-top: -6px; width: 7px; height: 11px; background: url(../images/common/ir-arrow-set.png) no-repeat 0 -85px; background-size: 40px auto;}
+.dgbloan .btn_interest{margin:30px 0 41px;}
+.dgbloan.emergency_inquiry  .loan_info_add{padding:20px;margin-top:0;}
+.dgbloan .sec_insinfo{border-bottom:0 none;}
+.dgbloan .secede_inquiry{border-top:0 none;}
+.dgbloan .secede_inquiry ul li:first-child{margin-top:0;}
+.dgbloan .secede_inquiry ul li{margin-top:6px;border-top:0 none;border-bottom:0;}
+.dgbloan .dft{font-family: "DeviceF", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif;}
+.dgbloan .sec_inquiry_graph:after{opacity:0.8;}
+.dgbloan .progress_wrap ._progress ._bar{left:0;}
+.dgbloan .sec_inquiry_graph .progress_wrap .arrow{right:1px;}
+.dgbloan.bul_guide{text-align:center;}
+.dgbalert{text-align:center;}
+.pophr{display:none;}
+
+
+/* DGB 비상금대출 / 이자납입내역 : 19.07.18 */
+.dbgloan .list-info-split {padding:0 20px 38px;}
+.dbgloan .list-info-split li {margin-top:12px; overflow:hidden;}
+.dbgloan .list-info-split li:first-of-type {margin-top:0;}
+.dbgloan .list-info-split li span{font-size:16px;}
+.dbgloan .list-info-split li .txt {font-family:"AppleSDGothicNeo-Light"; float:left; color:#666;}
+.dbgloan .list-info-split li .desc {float:right; color:#222;}
+.dbgloan .list-info-split li .desc.txt_blue {float:right; color:#278df5;}
+.dbgloan .spend_detail .list_wrap {padding-top:6px;}
+.dbgloan .spend_detail .list_wrap li {border-top:0; border-bottom:0; margin-bottom:6px;}
+.dbgloan .spend_detail ul.list_wrap dl {padding:22px 20px 27px;cursor: default;}
+
+.dbgloan .spend_detail .no_result {padding-top:100px; text-align:center;}
+.dbgloan .spend_detail .no_result p {margin-top:18px; color:#999; font-size:14px;}
+
+/* 시간 카운트 */
+.common_certify .number-count {margin-top: 27px; text-align: center; font-size: 16px; color: #666;}
+.common_certify .number-count .num {display: inline-block; font-size: 20px; color: #731aed; vertical-align: top; margin: -3px 0 0 3px;}
+
+/* DGB 비상금대출 브릿지 페이지 상세 */
+.loan-dgb .loan-thumb-info {margin-top:30px;}
+.loan-dgb .loan-thumb-info dl {overflow:hidden;}
+.loan-dgb .loan-thumb-info dl  + dl {margin-top:8px;}
+.loan-dgb .loan-thumb-info dt, .loan-dgb .loan-thumb-info dd {float:left; font-size:16px; color:#222;}
+.loan-dgb .loan-thumb-info dt {margin-right:10px;}
+.loan-dgb .loan-thumb-info dd {font-weight:bold;}
+
+.loan-dgb .loan-detail-wrap {border-top:1px solid #e0e0e0; padding:42px 30px; background:#f8f8f8; text-align:center;}
+.loan-dgb .loan-detail-wrap.white {background-color:#fff;}
+.loan-dgb .loan-detail-wrap + .loan-detail-wrap {border-top:0;}
+.loan-dgb .loan-detail-wrap .loan-detail + .loan-detail {margin-top:40px;}
+.loan-dgb .loan-detail .title {font-size:26px; line-height:30px; color:#222;}
+.loan-dgb .loan-detail .sub-title {font-size:22px; line-height:24px; color:#222; font-weight:bold;}
+.loan-dgb .loan-detail .title + .sub-title {margin-top:23px;}
+.loan-dgb .loan-detail .sub-info {margin-top:8px; font-size:16px; line-height:20px; color:#666;}
+.loan-dgb .loan-detail .sub-info.small {margin-top:8px; font-size:14px; line-height:18px;}
+.loan-dgb .loan-detail.view1 {position:relative; padding-bottom:160px;}
+.loan-dgb .loan-detail.view1:after {display:inline-block; position:absolute; bottom:0; left:50%; width:260px; height:135px; margin-left:-130px; content:""; background:url(../images/finnqmarket/img_loan-info.png) no-repeat 50% 50%; background-size:100% auto;}
+
+
+.loan-dgb .loan-detail-wrap.white {}
+.loan-dgb .loan-detail-wrap.white .loan-detail {position:relative; padding-top:45px; margin-top:0;}
+.loan-dgb .loan-detail-wrap.white .loan-detail:first-of-type {padding-top:0; padding-bottom:45px; background:url(../images/common/bg-dotline-type1.png) 0 100% repeat-x; background-size:18px auto;}
+.loan-dgb .loan-detail-wrap.white .loan-detail:first-of-type:after {display:inline-block; position:absolute; bottom:-11px; left:50%; margin-left:-25px; content:"OR"; background-color:#eee; width:50px; height:22px; border-radius:12px; color:#666; font-size:20px; text-align:center; line-height:22px; font-size:16px; letter-spacing:1px; z-index:5;}
+
+.loan-dgb .loan-detail-wrap .sub-info.image {position:relative; padding-top:100px; margin-top:27px;}
+.loan-dgb .loan-detail-wrap .sub-info.image:before {display:inline-block; position:absolute; top:0; left:50%; width:120px; height:70px; margin-left:-60px; content:""; background-repeat:no-repeat; background-position:50% 50%; background-size:100% auto;}
+.loan-dgb .loan-detail-wrap .sub-info.view1:before {background-image:url(../images/finnqmarket/ico_loan-detail1.png)}
+.loan-dgb .loan-detail-wrap .sub-info.view2:before {background-image:url(../images/finnqmarket/ico_loan-detail2.png)}
+.loan-dgb .loan-detail-wrap .sub-info.view3:before {background-image:url(../images/finnqmarket/ico_loan-detail3.png)}
+.loan-dgb .loan-detail-wrap .sub-info .star_type {font-size:16px;}
+.loan-dgb .loan-detail-wrap .sub-info .star_type:before {margin-right:3px;}
+
+.loan-dgb .sec_account_check ol li {word-break:keep-all;}
+
+
+/* 320 Media Quary */
+@media screen and (max-width:320px){
+    .finnqcard_main.open_ver .sec_finnqcard_cate .cate1 .total .tit{padding-right:10px}
+    .finnqcard_main.open_ver .sec_finnqcard_cate .cate1 .total .money{padding-left:10px}
+
+    .sec_emergency_saving .add_info .w320_none {display:none;}
+    .sec_emergency_saving .add_info .w320_block {display:block;}
+
+    .sec_account_cate .cate1 .cal .tit {padding:8px 10px 15px 13px;}
+    .sec_account_cate .cate1 .cal .money {padding:13px 10px 15px 0px;}
+    .sec_account_cate .cate1 .cal .tit,
+    .sec_account_cate .cate1 .cal .money {@include font(14px);}
+    .sec_account_cate .cate1 .cal .money strong {@include font(17px);}
+    .sec_account_cate .cate1 .cal .tit em,
+    .sec_account_cate .cate1 .cal .money em {@include font(17px);}
+
+    .sec_finnqcard_saving .img3 {width:280px; height:179px;}
+
+    .loan_detail .gray_info_box .thumb {word-break: keep-all;}
+    .loan_detail .gray_info_box .thumb br {display:none;}
+
+    /* 대출 중개 리스트  */
+    .loan_list_main .sec_history dd .detail_info {font-size:17px;}
+
+    /* 펫 보험 */
+    .pet_insurance .gray_box_info {padding:43px 26px 45px;}
+    .pet_insurance .info_list {padding: 0 20px 45px;}
+    .pet_insurance .gray_cont {padding:28px 14px;}
+    .pet_insurance .pet_visual .dues {margin-top:175px;}
+    .pet_insurance .pet_visual {background-position:100% 40px; background-size:320px auto;}
+
+    /* hight5 상세 소개 */
+    .high5_detail .sec_account_cate .cate1 .cal .money strong,
+    .high5_detail .sec_account_cate .cate1 .cal .money em,
+    .high5_detail .sec_account_cate .cate1 .cal .tit em {font-size:14px;}
+
+    /* 보험진단 */
+    .wrap.insurance .insurance__data--group {padding:0 20px;}
+    .wrap.insurance .insurance__data--more {padding:50px 20px 60px;}
+    .wrap.insurance .insurance__data.init:before {width:270px; height:184px; background-size:100% 184px;}
+
+    /* DGB비상금대출 */
+    .pophr{display:block;}
+
+    /* KDB 하이파이브 적금 상세 */
+    .high5_detail .sec_account_saving .list_benefit dt {font-size: 16px}
+    .high5_detail.kdb .sec_account_saving .list_benefit dd {font-size: 14px}
+}

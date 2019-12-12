@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@font-face { font-family: 'SpoqaT'; src: local("※"), url("fonts/Spoqa_Han_Sans_Thin.woff") format("woff"), url("fonts/Spoqa_Han_Sans_Thin.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+@font-face { font-family: 'SpoqaL'; src: local("※"), url("fonts/Spoqa_Han_Sans_Light.woff") format("woff"), url("fonts/Spoqa_Han_Sans_Light.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+@font-face { font-family: 'SpoqaR'; src: local("※"), url("fonts/Spoqa_Han_Sans_Regular.woff") format("woff"), url("fonts/Spoqa_Han_Sans_Regular.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+@font-face { font-family: 'SpoqaB'; src: local("※"), url("fonts/Spoqa_Han_Sans_Bold.woff") format("woff"), url("fonts/Spoqa_Han_Sans_Bold.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+
+/* reset */
+html, body {height: 100%; min-height: 100%; font-family: "SpoqaR", "AppleSDGothicNeo-Medium","NanumGothic", "MargunGothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; font-size: 100%; line-height: 1.3; text-decoration: none; color: #222; vertical-align: middle; -webkit-font-smoothing: antialiased; background: #fff;}
+body {-webkit-text-size-adjust: none;}
+
+/*뷰표트 변환시 폰트크기 자동확대 방지*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {font-family: "SpoqaR", "AppleSDGothicNeo-Medium","NanumGothic", "MargunGothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; margin: 0; padding: 0; font-size: 14px; letter-spacing: -1px; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased;}
+address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section {display: block; margin: 0; padding: 0;}
+figcaption {display: block; width: 0; height: 0; position: absolute; top: -9999px; font-size: 0; text-indent: -9999px;}
+hr, caption, legend {display: none; text-indent: -999px;}
+h1, h2, h3, h4, h5, h6 {font-family: "SpoqaR", "AppleSDGothicNeo-Medium","NanumGothic", "MargunGothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; letter-spacing: -1px; word-break: break-all; white-space: normal;}
+fieldset, img {border: none; vertical-align: middle;}
+ol, ul, li, dl, dt, dd {font-family: "SpoqaR", "AppleSDGothicNeo-Medium","NanumGothic", "MargunGothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; list-style: none; word-break: break-all; white-space: normal;}
+table, th, td {border: 0px; border-spacing: 0px; border-collapse: collapse; word-break: break-all; white-space: normal; font-family: "SpoqaR", "AppleSDGothicNeo-Medium","NanumGothic", "MargunGothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif;}
+table {width: 100%;}
+fieldset, iframe {width: 100%; border: 0px;}
+em, i, address, strong {font-style: normal; font-weight: normal; word-break: break-all; white-space: normal;}
+button, a, select, input, label {border: none; background: none; font-family: "SpoqaR", "AppleSDGothicNeo-Medium","NanumGothic", "MargunGothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; letter-spacing: -1px; vertical-align: middle; word-break: break-all; white-space: normal;}
+button::-moz-focus-inner {padding: 0px;}
+a { -webkit-tap-highlight-color:transparent;}
+/* 웹접근성 */
+.blind {position: absolute; top: -9999px; left: -9999px; visibility: hidden; width: 0; height: 0; overflow: hidden;}
+.ellipsis {white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; overflow: hidden;}
+.clearfix:after {content: '.'; display: block; clear: both; height: 0; line-height: 0; visibility: hidden;}
+.hide {display: none;}
+input:focus, select:focus, button:focus, textarea:focus {outline: none;}
+a, a:hover, a:focus, a:active, a:visited, a:link {font-family: "SpoqaR", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; text-decoration: none; color: #222; word-break: break-all; white-space: normal;}
+input[type='text'], input[type='password'], input[type='submit'], input[type='search'], input[type='date'], input[type='tel'], input[type='email'], input[type='number'] {width: 100%; height: 46px; border: 1px solid #e0e0e0; -webkit-appearance: none; border-radius: 4px; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 1px 20px 0; font-size: 16px; caret-color: #731aed;}
+textarea {caret-color: #731aed;}
+/* etc */
+.point_red{color:#ea002c}
+.point_green{color:#009591}
+.fs_bold{font-weight:bold}
+.fs_normal{font-weight:normal}
+/* layout */
+html,body{background:#fff;}
+.collabo_wrap { position:relative; min-width:320px; width:100%; height:100%;min-height:100%;margin:0;padding:0;background:#fff;}
+.collabo_wrap.bg_list { background:#eee}
+#contents { position:relative;height:100%;min-height:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.collabo_wrap.bg_list #contents:after{ content:' '; position:relative;bottom:0;height:45px;background:#eee;z-index:-1;width:100%;display:block;}
+.collabo_wrap.bg_list #contents.add_sticky:after{height:105px; background:#eee;}
+#contents.add_sticky:after {content:' '; position:relative;bottom:0;height:60px; background:#fff;z-index:-1;width:100%;display:block;}
+/* header */
+.header{position:relative;overflow:hidden;height:44px;background:#fff;box-sizing:border-box}
+.header .btn{display:inline-block;width:34px;height:34px}
+.header .btn_back{position:absolute;top:5px;left:10px;background:url('../image/ico_btn_back.png') 10px 0  no-repeat;background-size:contain}
+.header .btn_close{position:absolute;top:5px;right:10px;background:url('../image/ico_btn_close.png') -10px 0 no-repeat;background-size:contain}
+.header .finnq_logo{position:absolute;width:58px;height:30px;left:50%;margin-left:-29px;top:12px;background:url('../image/img_finnq_logo.png') 0 0  no-repeat;background-size:contain}
+.header .finnq_title{display:table;margin:0 auto}
+.header .finnq_title > span{display:table-cell;height:44px;vertical-align:middle;font-size:18px;}
+.header.fixed{position:fixed;top:0;left:0;right:0;z-index:999}
+.header.fixed + .sec_tphone_intro{padding-top:54px;}
+/* sticky_wrap */
+.sticky_wrap { position:fixed;bottom:0;width:100%;height:auto;z-index:50;transform: translateZ(0);-moz-transform: translatez(0);-ms-transform: translatez(0);-o-transform: translatez(0);-webkit-transform: translateZ(0);-webkit-font-smoothing: antialiased;}
+.sticky_wrap	button {border-radius:0;font-size:18px;font-family: 'SpoqaB';}
+/* 최하단 fixed 버튼 1개 스타일(100%) */
+.sticky_wrap.set_type1 button {width:100%;height:100%;min-height:60px;background:#731aed;color:#fff;}
+/* 최하단 fixed 버튼 2개 스타일(50%) */
+.sticky_wrap.set_type2 button {float:left;width:50%;height:100%;min-height:60px;background:#731aed;color:#fff;}
+.sticky_wrap.set_type2 button:last-child { float:right;}
+.sticky_wrap.set_type2 button.btn_cancel { background-color:#999;}
+.sticky_wrap.set_type2 button.btn_function { background-color:#5008b2;}
+.sticky_wrap.set_type2 button:disabled,
+.sticky_wrap.set_type1 button:disabled { background:#c8c8c8;color:#e0e0e0;}
+
+.sec_tphone_intro{padding-top:35px;width:100%;height:336px;background: #fef0f3 url('../image/bg_intro_visual.png') bottom center  no-repeat;background-size:290px 274px;box-sizing:border-box}
+.sec_tphone_intro .sub_tit{/* display:inline-block; */width:180px;height:21px;line-height:21px;margin:0 auto;border-radius:12px;padding:0 15px;font-size:14px;color:#fff;text-align:center;box-sizing:border-box;
+background: #ea002c; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ea002c 0%, #731aed 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #ea002c 0%,#731aed 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #ea002c 0%,#731aed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea002c', endColorstr='#731aed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+.sec_tphone_intro .sub_tit > span{vertical-align: 0}
+.sec_tphone_intro .intro_tit{margin-top:18px;text-align:center;font-size:30px;line-height:34px;letter-spacing: -2px}
+.sec_tphone_intro .intro_tit > span{font-family: 'SpoqaT';}
+.sec_tphone_intro .intro_tit > strong{font-family: 'SpoqaB';}
+
+.owl-stage-outer {overflow:hidden;}
+.sec_tphone_slide {position:relative;padding:43px 0;background-color: #fff; -webkit-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
+.sec_tphone_slide .ui-slider { overflow: hidden; height:100%;}
+
+/* touch-slide */
+.sec_tphone_slide .ui-slider { overflow: hidden; height:100%;}
+.sec_tphone_slide .ui-slider .touch-slide { float: left; width: 100%; text-align: center; }
+.sec_tphone_slide .ui-slider .touch-slide .slide-cont {position:relative;display: inline-block;overflow: visible; height:363px;padding: 0;-webkit-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in;}
+.sec_tphone_slide .ui-slider .touch-slide .txt-area {color: #222;letter-spacing:-2px}
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc1 { font-family: 'SpoqaT';font-size: 26px; line-height: 32px; }
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc2 { font-family: 'SpoqaB';font-size: 26px; line-height: 32px; color: #ea002c; }
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc3 { display:block;font-family: 'SpoqaB'; font-size: 26px; line-height: 32px; }
+.sec_tphone_slide .ui-slider .touch-slide .img-area{margin-top:10px;}
+.sec_tphone_slide .ui-slider .touch-slide .img-area > p {position:relative; margin-top:13px; text-align:center;font-size:20px;letter-spacing:-2px }
+.sec_tphone_slide .ui-slider .touch-slide .img-area span{display:inline-block;width:242px;height:250px;text-indent:-9999em}
+.sec_tphone_slide .ui-slider .touch-slide .img-area.img_slide1 span{background: url('../image/img_tphone_slide01.png') 0 0  no-repeat;background-size:contain;}
+.sec_tphone_slide .ui-slider .touch-slide .img-area.img_slide2 span{background: url('../image/img_tphone_slide02.png') 0 0  no-repeat;background-size:contain;}
+.sec_tphone_slide .ui-slider .touch-slide .img-area.img_slide3 span{background: url('../image/img_tphone_slide03.png') 0 0  no-repeat;background-size:contain;}
+
+.slider-container {position:relative; overflow:hidden; }
+.slider-container ul { position:absolute; top:0; left:0; overflow:hidden; }
+
+
+/* 효과 */
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc1,
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc2,
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc3,
+.sec_tphone_slide .ui-slider .touch-slide .img-area .step-img,
+.sec_tphone_slide .ui-slider .touch-slide .img-area .step-txt{ position:relative; opacity:0; }
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc1.fadeIn,
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc2.fadeIn,
+.sec_tphone_slide .ui-slider .touch-slide .txt-area .desc3.fadeIn,
+.sec_tphone_slide .ui-slider .touch-slide .img-area .step-img.fadeIn,
+.sec_tphone_slide .ui-slider .touch-slide .img-area .step-txt.fadeIn{ opacity:1; }
+
+/* nextSlide */
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .txt-area .desc1 { right:-40%; }
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .txt-area .desc2 { right:-80%; }
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .txt-area .desc3 { right:-90%; }
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .img-area .step-img { right:-90%; }
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .img-area .step-txt { right:-150%; }
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .txt-area .desc1.fadeIn,
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .txt-area .desc2.fadeIn { right:0; left:auto;transition:right 0.3s ease-out, opacity 0.3s ease-out;}
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .txt-area .desc3.fadeIn { right:0; left:auto; transition:right 0.5s ease-out, opacity 0.5s ease-out;}
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .img-area .step-img.fadeIn { right:0; left:auto; transition:right 0.4s ease-out, opacity 0.4s ease-out;}
+.sec_tphone_slide .ui-slider .touch-slide.nextSlide .img-area .step-txt.fadeIn { right:0; left:auto; transition:right 0.6s ease-out, opacity 0.6s ease-out;}
+/* prevSlide */
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .txt-area .desc1 { left:-40%; }
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .txt-area .desc2 { left:-80%; }
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .txt-area .desc3 { left:-90%; }
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .img-area .step-img { left:-90%; }
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .img-area .step-txt { left:-150%; }
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .txt-area .desc1.fadeIn,
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .txt-area .desc2.fadeIn { left:0;right:auto; transition:left 0.3s ease-out, opacity 0.3s ease-out;}
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .txt-area .desc3.fadeIn { left:0;right:auto; transition:left 0.5s ease-out, opacity 0.5s ease-out;}
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .img-area .step-img.fadeIn { left:0;right:auto; transition:left 0.4s ease-out, opacity 0.4s ease-out;}
+.sec_tphone_slide .ui-slider .touch-slide.prevSlide .img-area .step-txt.fadeIn { left:0;right:auto; transition:left 0.6s ease-out, opacity 0.6s ease-out;}
+
+/* ts-controls */
+.sec_tphone_slide .ui-slider .ts-controls {position:static;margin-top:25px;text-align: center; }
+.sec_tphone_slide .ui-slider .ts-controls .ts-paging {position:relative;margin-top:25px;text-align: center; }
+.sec_tphone_slide .ui-slider .ts-controls .ts-paging:after{content:"";display:inline-block;position:absolute;top:-64px;left:50%;margin-left:-225px;height:1px;background:url('../image/bg_slide_line.png') bottom center  no-repeat;background-size:contain;width:450px;}
+.sec_tphone_slide .ui-slider .ts-controls .ts-paging-btn { display: inline-block; width: 10px; height: 10px; border-radius: 5px; background-color: #c8c8c8; text-indent: -9999px; cursor:pointer; opacity: 1;}
+.sec_tphone_slide .ui-slider .ts-controls .ts-paging-btn + .ts-paging-btn { margin: 0 0 0 10px; }
+.sec_tphone_slide .ui-slider .ts-controls .ts-paging-active { width: 24px; background-color: #222; margin:0; transition:all 0.3s ease-out}
+
+.tphone_info .img_x{display:inline-block;width:21px;height:30px;background:url('../image/img_x.png') 5px 10px  no-repeat;background-size:15px 15px;text-indent:-999em}
+.tphone_info .fs_num{font-size:12px;color:#999;vertical-align:0;font-family: 'SpoqaR';letter-spacing:0}
+.tphone_info .fs_slash{font-size:11px;color:#999;vertical-align:0.5px;font-family: 'SpoqaR';letter-spacing:0}
+.tphone_info .info_txt{margin-top:28px;text-align:center;color:#999;font-size:12px;line-height:16px}
+.sec_finnq_info{padding:45px 20px 44px;background:#f8f8f8;text-align:center}
+.sec_finnq_info .finnq_logo{margin:0 auto;width:87px;height:28px;background:url('../image/img_finnq_logo_black.png') 0 0  no-repeat;background-size:contain}
+.sec_finnq_info > p{margin-top:25px;font-size:16px;line-height:20px;font-family: 'SpoqaL';}
+.sec_finnq_info > p > strong{font-family: 'SpoqaR';}
+.sec_finnq_info > p + p{margin-top:11px}
+.sec_finnq_info > .info_txt{margin-top:40px; font-family: 'SpoqaR'}
+
+/* 디자인 변경으로 인한 수정 19.05.28 */
+.sec_tphone_visual {margin-top:10px;}
+.sec_tphone_visual img {width:100%; height:auto;}
+.tphone_info_list {margin-top:40px;}
+.tphone_info_list .title {text-align:center; font-family:'SpoqaT'; font-size:26px;}
+.tphone_info_list .title .point {font-family:'SpoqaB'; color:#ea002c;}
+.tphone_info_list .title strong {font-family:'SpoqaB'; color:#222;}
+.tphone_info_list .info_detail {text-align:center;}
+.tphone_info_list .info_detail:first-of-type {margin-top:10px}
+.tphone_info_list .info_detail + .info_detail {margin-top:20px;}
+.tphone_info_list .info_detail .img_view {display:inline-block; width:300px;}
+.tphone_info_list .info_detail .img_view img {width:100%; height:auto;}
+.tphone_info_list .info_detail .txt {margin-top:12px; font-family: 'SpoqaR'; font-size:20px;}
+.tphone_info .info_txt {margin:38px auto 43px;}
+
+.sec_finnq_info .info_txt {margin-bottom:0;}

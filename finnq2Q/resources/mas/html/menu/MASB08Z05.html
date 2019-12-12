@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>05계좌등록_02계좌등록_01연결계좌가있는경우</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" /><!-- 메뉴에 있는 계좌 관련 페이지는 myfinnq 불러옴 2018-03-28 ock -->
+</head>
+<body>
+<div class="wrap" id="MASB08Z05">
+	<div id="contents" class="myfinnq add_sticky">
+		
+		<section class="registration_account">
+			<!-- sec_step -->
+			<div class="sec_step">
+				<ol class="step02">
+					<li class="on complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>3</strong>
+					</li>
+				</ol>
+			</div>
+				
+			<div class="sec_title">
+				<h2>계좌등록</h2>
+				<p class="guide_txt">등록할 계좌를 선택하세요.</p>
+			</div>
+
+			<!-- sec_form -->
+			<div class="sec_form round_box">
+				<dl class="target_list">
+					<dt>계좌</dt>
+					<dd>
+						<div class="form_wrap"><input type="radio" id="aa1" name="ryellow" checked="checked"><label for="aa1"><span>최근 2개월 평균 소비</span></label></div>
+					</dd>
+					<dd>
+						<div class="form_wrap"><input type="radio" id="aa2" name="ryellow"><label for="aa2"><span>최근 2개월 평균 소비</span></label></div>
+					</dd>
+					<dd class="direct_input">
+						<div class="form_wrap"><input type="radio" id="aa3" name="ryellow"><label for="aa3"><span></span></label></div>
+						<div class="user"><input type="text" data-name="inpFocus" placeholder="직접입력" disabled="disabled"></div>
+					</dd>
+				</dl>
+
+				<dl class="target_cont">
+					<dt>비밀번호</dt>
+					<dd class="pw_input accountPwd"><!-- 개발 사용 class -->
+						<div class="form_wrap">
+							<p>
+								<img src="../../images/common/password-dot-on.png">
+								<img src="../../images/common/password-dot-on.png">
+								<img src="../../images/common/password-dot-on.png">
+								<img src="../../images/common/password-dot-on.png">
+							</p>
+							<!-- <input type="text" data-name="inpFocus" placeholder=""> -->
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+
+			
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">다음</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+	//탈퇴이유 직접 입력
+	$(".target_list .form_wrap input[type=radio]").on('click',function(){
+		var reason = $(this).parent().next('.user').find('input[type=text]');
+		if($(".target_list .direct_input .form_wrap input[type=radio]").is(":checked")){
+			reason.prop("disabled",false).focus();
+		} else {
+			reason.prop("disabled",true).blur();
+		}
+	});
+});
+</script>
+</body>
+</html>

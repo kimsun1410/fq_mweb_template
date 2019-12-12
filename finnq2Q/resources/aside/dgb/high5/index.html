@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<title>DGB 하이파티브 적금(T우대금리) HTML</title>
+<style>
+html, body, div, table, tr, th, td {margin:0; padding:0; border-collapse:collapse; box-sizing:border-box;}
+.wrap {padding:40px;}
+.wrap table {width:100%; table-layout:fixed}
+.wrap table th {padding:5px 10px; color:#fff; font-size:14px; line-height:20px; background:#888; border:1px solid #666; border-left:0}
+.wrap table th:first-child {border-left:1px solid #666;}
+.wrap table td {padding:5px 10px; font-size:12px; border:1px solid #666; border-top:0; border-left:0;}
+.wrap table td:first-child {text-align: center; border-left:1px solid #666;}
+.wrap table tbody tr:first-child td {}
+.wrap a {display:block; text-decoration:underline; color:#222; font-weight:bold}
+.wrap a + a {margin-top:10px;}
+.wrap table tr:hover td ,
+.wrap table tr:hover td a {color:#000; background:#eee;}
+.modify_date {text-align: right; font-size:12px}
+
+.red,
+.red a {font-weight:bold; color:red;}
+.green,
+.green a {font-weight:bold; color:green;}
+.blue,
+.blue a {font-weight:bold; color:blue;}
+.black {font-weight:bold; text-decoration:underline;}
+.c {text-align:center;}
+</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>DGB 하이파티브 적금 HTML LIST</h1>
+		<table id="asd">
+			<colgroup>
+				<col style="width:50px;">
+				<col style="width:230px;">
+				<col style="width:320px;">
+				<col style="width:170px;">
+				<col style="width:80px;">
+				<col style="width:auto">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>NUM</th>
+					<th>Depth1</th>
+					<th>상세</th>
+					<th>화면ID</th>
+					<th>완료</th>
+					<th>설명</th>
+				</tr>
+			</thead>
+			<tbody class="tbody">
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 공통 화면]</td>
+					<td>적금_본인인증</td>
+					<td><a target="_blank" href="dgb/html/DGBS01S01.html">DGBS01S01</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<!-- <tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 공통 화면]</td>
+					<td>공통_01_약관상세 - 본인인증_약관상세</td>
+					<td><a target="_blank" href="dgb/html/DGBS01S02.html">DGBS01S02</a></td>
+					<td class="c">-</td>
+					<td>약관 내용 수급 필요</td>
+				</tr> -->
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 공통 화면]</td>
+					<td>예외_01_입출금계좌 - 입출금계좌개설안내</td>
+					<td><a target="_blank" href="dgb/html/DGBS01S03.html">DGBS01S03</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>적금_약관동의</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T01.html">DGBS01T01</a></td>
+					<td class="c">V</td>
+					<td>19.06.11 수정</td>
+				</tr>
+				<!-- <tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>공통_01_약관상세 - 적금_약관상세</td>
+					<td><a target="_blank" href="dgb/html/DGBS01S02.html">DGBS01S02</a></td>
+					<td class="c">-</td>
+					<td>약관 내용 수급 필요</td>
+				</tr> -->
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>예외_01_마케팅동의 - 적금_우대금리안내</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T03.html">DGBS01T03</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>적금_설정</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T04.html">DGBS01T04</a></td>
+					<td class="c">V</td>
+					<td>19.06.11 수정</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>적금_설정 - 1회차입금안내</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T05.html">DGBS01T05</a></td>
+					<td class="c">V</td>
+					<td>19.05.27 수정 : 화면 전체 마크업 변경</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>적금_설정 - 1회차입금안내 - 잔고 부족 안내</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T06.html">DGBS01T06</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>예외_01_마케팅동의 - 적금_우대금리안내</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T07.html">DGBS01T07</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>적금_개설완료</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T08.html">DGBS01T08</a></td>
+					<td class="c">V</td>
+					<td>19.06.11 수정</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>적금 개설 중단</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T09.html">DGBS01T09</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>T high5 적금</td>
+					<td>가입 - 개설완료</td>
+					<td><a target="_blank" href="dgb/html/DGBS01T10.html">DGBS01T10</a></td>
+					<td class="c">V</td>
+					<td>19.06.11 수정</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>입출금_약관동의</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A01.html">DGBA01A01</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<!-- <tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>입출금_약관동의 - 입출금_약관상세</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A02.html">DGBA01A02</a></td>
+					<td class="c">-</td>
+					<td>약관 내용 수급 필요</td>
+				</tr> -->
+				<tr>
+					<th scope="row"></th>
+					<td><del>가입 전 - [DGB 입출금 화면]</del></td>
+					<td><del>입출금_개인정보입력</del></td>
+					<td><del><a target="_blank" href="dgb/html/DGBA01A03.html">DGBA01A03</a></del></td>
+					<td class="c">V</td>
+					<td>화면 분리 : DGBA01A03_1, DGBA01A03_2</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>입출금_개인정보입력</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A03_1.html">DGBA01A03_1</a></td>
+					<td class="c">V</td>
+					<td>
+						19.04.22 : 화면 플로우 변경<br>
+						19.05.17 : 화면 필드 위치 변경 및 페이지 분할 통합 수정
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - T high5 적금</td>
+					<td>입출금_개인정보입력</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A03_2.html">DGBA01A03_2</a></td>
+					<td class="c">V</td>
+					<td>19.04.22 : 화면 플로우 변경</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>입출금_신분증촬영</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A04.html">DGBA01A04</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>입출금_신분증촬영 - 신분증확인실패</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A05.html">DGBA01A05</a></td>
+					<td class="c">V</td>
+					<td>19.05.08 추가 팝업</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td><del>가입 전 - [DGB 입출금 화면]</del></td>
+					<td><del>입출금_신분증촬영 - 신분증촬영 가이드</del></td>
+					<td><del><a target="_blank" href="dgb/html/DGBA01A05.html">DGBA01A05</a></del></td>
+					<td class="c">V</td>
+					<td>Finnq Native 솔루션으로 변경</td>
+				</tr>
+				<tr class="red">
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>예금_03신분증촬영_05신분증특정에러</td>
+					<td>
+						<a target="_blank" href="dgb/html/DGBA01A06.html">DGBA01A06</a>
+						<!-- <del><a target="_blank" href="dgb/html/DGBA01A06-1.html">DGBA01A06-1</a></del></td -->
+					<td class="c">V</td>
+					<td>19.06.13 신규</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>입출금_적요인증</td>
+					<td>
+						<a target="_blank" href="dgb/html/DGBA01A07.html">DGBA01A07</a>
+					</td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>직접입력 - 직접입력_은행선택</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A08.html">DGBA01A08</a></td>
+					<td class="c">V</td>
+					<td>DGBA01A08 / DGBA01A09 화면 한 화면에 구현<br>은행 선택 후 GBA01A09 화면 노출</td>
+				</tr>
+				<!-- <tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>직접입력 - 직접입력_계좌번호입력</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A09.html">DGBA01A09</a></td>
+					<td class="c">-</td>
+					<td></td>
+				</tr> -->
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>01_기타은행	- 입출금_적요인증입력</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A10.html">DGBA01A10</a></td>
+					<td class="c">V</td>
+					<td>19.06.11 수정</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>입출금_계좌설정</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A11.html">DGBA01A11</a></td>
+					<td class="c">V</td>
+					<td>19.05.20 수정 : 신청금액 입력항목 추가, 탭 비활성 추가</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>입출금_개설완료</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A12.html">DGBA01A12</a></td>
+					<td class="c">V</td>
+					<td>문구 변경 : 이자율 -&gt; 금리 </td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>요구불 개설중단안내</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A13.html">DGBA01A13</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>적요인증 오류</td>
+					<td>
+						<a target="_blank" href="dgb/html/DGBA01A14.html">DGBA01A14</a>
+						<a target="_blank" href="dgb/html/DGBA01A14-1.html">DGBA01A14-1</a>
+					</td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>가입 전 - [DGB 입출금 화면]</td>
+					<td>적요인증 > 직접입력(은행선택 / 계좌번호 입력) > 계좌번호확인</td>
+					<td>
+						<a target="_blank" href="dgb/html/DGBA01A15.html">DGBA01A15</a>
+						<a target="_blank" href="dgb/html/DGBA01A15-1.html">DGBA01A15-1</a>
+					</td>
+					<td class="c">V</td>
+					<td>DGBA01A15.html 팝업 스타일 변경</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>하이파이브적금</td>
+					<td>예금 - 주소검색 - Default</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A16_01.html">DGBA01A16_01</a></td>
+					<td class="c">V</td>
+					<td>19.05.17 신규</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>하이파이브적금</td>
+					<td>예금 - 주소검색 - 검색결과 없을 때</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A16_02.html">DGBA01A16_02</a></td>
+					<td class="c">V</td>
+					<td>19.05.17 신규</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>하이파이브적금</td>
+					<td>예금 - 주소검색 - 검색결과 있을 때</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A16_03.html">DGBA01A16_03</a></td>
+					<td class="c">V</td>
+					<td>19.05.17 신규</td>
+				</tr>
+				<tr class="red">
+					<th scope="row"></th>
+					<td>하이파이브적금</td>
+					<td>예금 - 신분증촬영 - 신분증요청고객센터</td>
+					<td><a target="_blank" href="dgb/html/DGBA01A17.html">DGBA01A17</a></td>
+					<td class="c">V</td>
+					<td>19.06.13 신규</td>
+				</tr>
+
+				<tr>
+					<th scope="row"></th>
+					<td>T high5 적금</td>
+					<td>가입_관리</td>
+					<td><a target="_blank" href="dgb/html/DGBI01T00.html">DGBI01T00</a></td>
+					<td class="c">V</td>
+					<td>19.05.20 : 전화번호 2개 케이스 추가</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>T high5 적금</td>
+					<td>적금_해지_본인인증</td>
+					<td><a target="_blank" href="dgb/html/DGBI01T01.html">DGBI01T01</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>T high5 적금</td>
+					<td>적금_해지_정보확인</td>
+					<td><a target="_blank" href="dgb/html/DGBI01T02.html">DGBI01T02</a></td>
+					<td class="c">V</td>
+					<td>19.04.23 수정 : 날짜로 수정부분 주석 표기</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>T high5 적금</td>
+					<td>적금_해지_해지신청</td>
+					<td><a target="_blank" href="dgb/html/DGBI01T03.html">DGBI01T03</a></td>
+					<td class="c">V</td>
+					<td>19.05.27 수정</td>
+				</tr>
+				<tr>
+					<th scope="row"></th>
+					<td>T high5 적금</td>
+					<td>가입_적금설정</td>
+					<td><a target="_blank" href="dgb/html/DGBI01T04.html">DGBI01T04</a></td>
+					<td class="c">V</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script>
+		var $tr = document.querySelectorAll('tbody tr');
+
+		$tr.forEach(function(i, v){
+			var $first = i.querySelectorAll('th')[0];
+			$first.innerHTML = v + 1;
+		});
+	</script>
+</body>
+</html>

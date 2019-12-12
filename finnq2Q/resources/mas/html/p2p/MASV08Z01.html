@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="market p2p_wrap add_sticky no_fixed"><!-- 하단 버튼 fixed 해제 class : no_fixed 추가 2018-07-18 ock -->
+		<section class="sec_MASV08Z01"><!-- 2018.04.27 전체 컨텐츠 변경 -->
+			<div class="sec_step step_perple">
+				<!-- 2018-06-12 단계표시 변경 -->
+				<ol class="step02">
+					<li class="on complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>2</strong>
+					</li>
+				</ol>
+			</div>
+			<div class="sec_title txt_c">
+				<h2 class="xl">개인정보 입력</h2><!-- 2018-05-15 추가 제목크게 xl 클래스 -->
+			</div>
+			<div class="sec_txt txt_c">
+				P2P 투자 서비스를 이용하기 위해<br>개인정보와 상환계좌를 입력해주세요.
+			</div><!-- P2P + 단어 띄어쓰기 변경 2018-07-13 -->
+			<div class="input_wrap in_sec">
+				<h3>개인정보</h3>
+				<div class="flex_wrap set_type1">
+					<span class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+						<input type="text" data-name="inpFocus" placeholder="김핀크" disabled="disabled">
+					</span>
+				</div>
+			</div>
+			<div class="input_wrap in_sec type_3">
+				<div class="flex_wrap">
+					<span class="item"><input type="text" placeholder="890123" readonly="readonly" class="readonly"></span><!-- 2018-06-12 readonly 비활성추가 -->
+					<span class="item">-</span>
+					<div class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+						<div class="pw_input accountPwd">
+							<p class="on">
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</p>
+							<p>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</p>
+							<div class="box_password" data-name="inpFocus"></div>
+						</div>
+					</div>
+					<p class="inp_remark hide">주민번호 형식이 맞지 않습니다.</p><!-- Dev Request : 에러일때 'hide' 클래스 삭제 해주세요. -->
+					<!-- 2018-06-26 가이드문구추가 오류일때숨김 -->
+					<div class="inp_remark bul_guide txt_r">
+						<p class="star_type indent">주민번호는 제휴사에서 수집/이용하며, 핀크는 저장하지 않습니다​.</p>
+					</div>
+				</div>
+			</div>
+			<div class="input_wrap in_sec">
+				<div class="flex_wrap set_type1">
+					<div class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+						<input type="email" data-name="inpFocus" placeholder="이메일주소">
+					</div>
+					<p class="inp_remark hide">이메일주소 형식이 맞지 않습니다.</p><!-- Dev Request : 에러일때 'hide' 클래스 삭제 해주세요. -->
+				</div>
+			</div>
+			<div class="input_wrap input_address in_sec">
+				<div class="flex_wrap set_type1">
+					<div class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+						<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소검색" maxlength="800" class="inp_count"></textarea>
+					</div>
+					<div class="item"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+						<input type="text" data-name="inpFocus" placeholder="상세주소" value="">
+					</div>
+				</div>
+			</div>
+			<div class="input_wrap in_sec last">
+				<h3>상환계좌<button type="button" class="link_type_a fr open_modal" data-triger="MASV08Z18" data-mtype="fullpop">직접입력</button></h3>
+				<div class="input_wrap mar_t0">
+					<div class="flex_wrap set_type1">
+						<span class="item ico_bankbook">
+							<a href="#none"class="btn_select btn_type_a open_modal" data-triger="MASA05Z04">KEB하나</a>
+						</span>
+					</div>
+				</div>
+				<p class="sec_txt txt_c point_txt5 hide"><!-- Dev Request : 등록계좌있을때 'hide' 클래스로 숨김니다. -->
+					KEB하나은행 계좌등록을 하시면<br>최대 200만원까지 투자할 수 있습니다. <!-- 2018-06-21 계좌등록링크삭제 -->
+				</p>
+			</div>
+
+			<!-- 2018-05-28 마크업변경 -->
+			<div class="sec_all_check">
+				<div class="agree_terms term1">
+					<dl class="toggle_list">
+						<dt class="agree_wrap on">
+							<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101" name="check_action"><span>P2P 투자 서비스 이용 동의(필수)</span></label><!-- 2018-05-29 투자서비스로 문구변경 -->
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</dt>
+						<dd style="display:block">
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102" name="check_action"><span>서비스 이용약관 동의</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103" name="check_action"><span>개인정보 수집/이용 동의</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+						</dd>
+					</dl>
+				</div><!-- //agree_terms term1 -->
+			</div>
+		</section>
+
+		<!-- MASV08Z18 -->
+		<div id="MASV08Z18" class="modal_wrap fullpop"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content pop_hana_bank add_sticky">
+				<div class="scroll_wrap" style="">
+					<div class="sec_title txt_c">
+						<h3 class="accent_txt">상환계좌를 <strong>직접 입력</strong>하세요</h3>
+					</div>
+					<div class="input_wrap item">
+						<a class="btn_select btn_type_a open_modal">은행 선택</a>
+					</div>
+					<div class="input_wrap item">
+						<input type="tel" data-name="inpFocus" placeholder="계좌번호 ‘-‘ 없이 입력">
+					</div>
+					<div class="sec_finance hide">
+						<article>
+							<!-- 은행 -->
+							<ul class="btn_sellist set_type4">
+								<li><button class="on">KEB하나</button></li>
+								<li><button class="">국민</button></li>
+								<li><button class="">신한</button></li>
+								<li><button class="">우리</button></li>
+								<li><button class="">농협</button></li>
+								<li><button class="">기업</button></li>
+								<li><button class="">경남</button></li>
+								<li><button class="">광주</button></li>
+								<li><button class="">대구</button></li>
+								<li><button class="">도이치뱅크</button></li>
+								<li><button class="">부산</button></li>
+								<li><button class="">산업</button></li>
+								<li><button class="">상호저축은행</button></li>
+								<li><button class="">새마을금고</button></li>
+								<li><button class="">수협중앙회</button></li>
+								<li><button class="">신용협동조합</button></li>
+								<li><button class="">전북</button></li>
+								<li><button class="">케이뱅크</button></li>
+								<li><button class="">제주</button></li>
+								<li><button class="">씨티</button></li>
+								<li><button class="">우체국</button></li>
+								<li><button class="">BOA</button></li>
+								<li><button class="">HSBC</button></li>
+								<li><button class="">JP모간</button></li>
+								<li><button class="">SC제일</button></li>
+								<li><button class="">산림조합</button></li>
+								<li><button class="">중국공상</button></li>
+								<li><button class="">BNP파리바</button></li>
+							</ul>
+						</article>
+					</div>
+
+					<div class="sticky_wrap set_type1">
+						<button type="button" name="apply" class="btn btn_type_apply open_modal" data-triger="MASV08Z16">확인</button>
+					</div>
+				</div><!-- //scroll_wrap -->
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //MASV08Z18 -->
+
+		<!-- MASA05Z04 -->
+		<div id="MASA05Z04" class="modal_wrap pop_acc_select">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">상환할 계좌를 선택하세요</h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_select">
+						<ul class="flex_wrap set_type1">
+							<li class="item main_acc"><a data-name="acc-button" class="btn_type_d ico_dot"><strong>KEB하나</strong><em class="cash">987-654-321098</em> <span>(주계좌)</span></a></li><!-- 주계좌 class : main_acc -->
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>국민</strong><em class="cash">987*********098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987*********098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987*********098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987*********098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987*********098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987*********098</em></button></li>
+							<li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>KEB하나</strong><em class="cash">987*********098</em></button></li>
+						</ul>
+					</div>
+
+					<!-- <div class="sec_text_btn">
+						<div class="btn_text01">
+							<a href="#none" class="ico_arrow">직접입력</a>
+						</div>
+					</div> 삭제  -->
+
+					<div class="flex_wrap set_type2">
+						<span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
+						<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+					</div>
+				</div><!-- //scroll_wrap -->
+			</div>
+		</div>
+		<!-- //MASA05Z04 -->
+
+		<!-- 상환계좌조회결과 확인_[MASV08Z16] -->
+		<div id="MASV08Z16" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">계좌번호가 올바르지 않습니다.</h3>
+				</div>
+				<div class="flex_wrap set_type1">
+					<span class="item on"><button type="button" name="button" class="btn_type_f close_modal">확인</button></span>
+				</div>
+			</div>
+		</div>
+		<!-- //MASV08Z16 -->
+
+		<!-- 약관팝업 -->
+		<div id="agreeTerms" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_agree_terms">
+						<div class="agree_details">
+							<!-- 개발에서 약관불러오는 영역 -->
+
+							<!-- //개발에서 약관불오는 영역 -->
+							<!-- 퍼블리싱 테스트영역 -->
+							투자이용약관
+							<!-- //퍼블리싱 테스트영역 -->
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //약관팝업 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled>동의하기</button><!-- 2018-06-12 다음을 동의하기로 변경 -->
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	//토글리스트 2018-05-28
+	$(document).on("click", ".toggle_list > dt > button", function(){
+		$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+
+	//퍼블리싱용 : 내부호출 함수 (이벤트로 호출하는 경우)
+	commModal.event();
+
+	/*
+		퍼블리싱용 : 외부호출 합수 (function으로 호출하는 경우)
+		호출방법   = commModal.action($mpopID, $mpopType, $mpopClose);
+		$mpopID    = ('ModalID')
+		$mpopType  = (fullpop | nomal)
+		$mpopClose = (true | false) Dim Close
+	*/
+	//commModal.open('MASV01Z09', '', '');
+	//commModal.close('MASV01Z09', '', '');
+	//주민번호 뒷자리
+	$(".accountPwd").on("click", function(){
+		var $this = $(this);
+		$this.parent('.item').addClass('inp_focus');
+		$(document).on('click focusin', function(e){
+			if ($('.accountPwd').has(e.target).length == 0){
+				$this.parent('.item').removeClass('inp_focus');
+			}
+		})
+	});
+
+	//클릭할때
+	$(".btn_select").not('.disabled').on("click", function(){
+		$(this).parent('.item').addClass('on');
+		$(this).parent('.item').removeClass('selected');
+		$('.sec_finance').removeClass('hide');
+	});
+
+	//취소할때
+	$('#MASA05Z04 .item').not('.on').find('.close_modal').on("click", function(){
+		$(".btn_select").parent('.item').removeClass('on');
+		$(".btn_select").parent('.item').addClass('selected');
+		$('.sec_finance').addClass('hide');
+	});
+
+	//확인할때
+	$('#MASA05Z04 .item.on .close_modal').on("click", function(){
+		$(document).on('click touchStart', function(e){
+			if ($('.modal_wrap').has(e.target).length == 0 || $('.btn_select').parent().has(e.target).length == 0){
+				$(".btn_select").parent('.item').removeClass('on');
+				$(".btn_select").parent('.item').addClass('selected');
+			}
+		})
+	});
+
+	$('.open_modal[data-triger=MASV08Z18]').on('click', function(){
+		if (!$('.sec_finance').hasClass('hide')){
+			$('.sec_finance').addClass('hide');
+			$(".btn_select").parent().removeClass('on');
+			$(".btn_select").css({'color':'#222'});
+		}
+	})
+
+	//선택버튼
+	$(".btn_sellist").on("click", "button", function(){
+		var thisTxt = $(this).text();
+		var selectBtn = $(this).parents('.sec_finance').siblings('.input_wrap');
+		console.log(thisTxt);
+		//if( $(this).parent().hasClass('disabled') ) { return false; } //비활성 막기
+		//if( $(this).text() == "") { return false; } //빈 a태그 막기
+		$(this).parent('li').siblings().find('button').removeClass('on');
+		$(this).parents('article').siblings().find('li > button').removeClass('on'); //은행,증권사 중 단일선택
+		$(this).toggleClass('on');
+		$(this).parents('.sec_finance').addClass('hide');
+		if( $('.sec_finance').hasClass('hide') ) {
+			selectBtn.removeClass('on').find('a').text(thisTxt).css({'color':'#222'});
+		} else {
+			selectBtn.addClass('on').find('a').css({'color':'#731aed'});
+		}
+	});
+
+});
+//-->
+</script>
+</body>
+</html>

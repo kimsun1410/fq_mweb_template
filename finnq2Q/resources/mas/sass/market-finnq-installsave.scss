@@ -1,0 +1,669 @@
+@charset 'UTF-8';
+
+.fqsave { } /* 핀크적금 */
+.fqsave .sec_stepinfo { }
+
+/* .fqsave .sec_title h2 { @include font(24px);color:$black;} common 으로 옮기고 삭제 예정*/
+.fqsave .sec_title .step_info { margin:25px auto 0;max-width:100%;height:82px;background:url(../images/finnqmarket/img-finnq-install.png) no-repeat center 0;background-size:contain;} /* 가운데 정렬 background position 추가 */
+.sec_stepinfo .inssave_step { padding:0 40px;}
+.sec_stepinfo .inssave_step li { margin-top:28px;}
+.sec_stepinfo .inssave_step li > h3 { @include font(20px);}
+.sec_stepinfo .inssave_step li p { @include font(16px);color:$brownish_grey;margin-top:4px;}
+.sec_stepinfo .inssave_step li div.flex_wrap.set_type1 { max-width:53.93%;margin-top:12px;}
+.sec_stepinfo .inssave_step li div.flex_wrap.set_type1 button { @include font(16px);}
+
+/* .fqsave .sec_step { margin-top:0;}
+.fqsave .sec_step + .sec_title { padding-top:30px;padding-bottom:0;}
+.fqsave .sec_title > h3 { margin-top:6px;@include font(14px);color:$warm_grey;} common 으로 옮기고 삭제 예정*/
+
+/* 핀크적금 하단공지 */ /* 하단 공지 공통으로 쓸수있게 class 변경 하고 common 으로 이동 요청 */
+.sec_market_notice { @include font(14px);color:$warm_grey;padding:30px 20px;}
+.sec_market_notice.indent { text-indent:-8px;padding-left:28px;} /* 첫텍스트 줄맞춤 */
+
+.box_fqsave { margin-top:28px;}
+.box_fqsave input { background-color:$white;}
+.box_fqsave div.flex_wrap:nth-of-type(2) { margin-top:15px;}
+.box_fqsave input.inp_focus{color:$purply_blue}
+.box_fqsave .btn_type_h {font-weight:normal;}/* 2018-03-22 추가 phj */
+
+/* 적금 상단 1,2,3 초록색 버튼 */
+.fqsave .sec_step ol li.on strong{background-position:0 -54px;}
+.fqsave .sec_step ol li.complete strong{background-position:-27px -54px;}
+.fqsave .sec_step ol li.complete .step_dot{background-position:-54px -54px}
+/* .fqsave .sec_step ol li.on strong { background-color:$green_blue;border:1px solid $green_blue;}
+.fqsave .sec_step ol li.complete strong {background:$green_blue url(../images/common/ico_complete_check_type2.png) no-repeat 0 0;background-size: 25px auto;text-indent:-999em} 확인후 삭제 해주세요. */
+
+.pop_transfer_list .sec_select{margin-top:16px;padding-bottom:10px;}
+.pop_transfer_list .sec_select .flex_wrap{margin:0}
+
+/* .pop_transfer_list .account_choice { margin:0 0;}
+.pop_transfer_list .sec_select { padding-bottom:10px;} 계좌리스트 */
+.fqsave .inp_focus { background-color:$pale_lavender;color:$purply_blue;}
+/* .fqsave .help_msg { @include font(14px);margin-top:25px;color:$black;}
+.fqsave .point_msg { @include font(14px);margin-top:2px;color:$green_blue;}
+.fqsave .point_msg_type2 { @include font(14px);margin-top:2px;color:$reddish_orange;} common 으로 이동*/
+/* .fqsave .sec_agree { border-top:1px solid $white_two;background-color:$white_three;padding-top:4px;margin-top:35px;} 사용자 동의 - common 에서 같이 사용 */
+.fqsave .sec_profits { text-align:center;padding:0 20px;margin-top:30px;}
+.fqsave .prime_rate { max-width:100%;width:100%;height:190px;background:url(../images/finnqmarket/img-finnq_primerate.png?v=1) no-repeat center;background-size:auto 190px;} /* 핀크적금 비대면 적금 개설 완료 */
+
+.fqsave .sec_withdrawal { border-top:1px solid $white_two;background-color:$white_three;padding-top:0;margin-top:35px;} /* 사용자 동의 */
+.sec_withdrawal > .summary { padding:7px 20px 7px;background:$white_three;}
+.sec_withdrawal ul.choice { border-top:1px solid $white_two;border-bottom:1px solid $white_two;padding:14px 20px;background:$white;} /* 공인인증, 아이디선택 */
+.sec_withdrawal ul.choice:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.sec_withdrawal ul.choice li { float:left;width:50%;}
+.sec_withdrawal ul.choice li label span {@include font(16px);color:$brownish_grey;}
+.sec_withdrawal ul.choice li label span em.num{@include font(16px);color:$green_blue}
+.sec_withdrawal .wdrawal_list { background-color:$white;margin-top:0;}
+.sec_withdrawal .set_target { padding:25px 20px 25px;}
+.sec_withdrawal .set_target li:first-of-type { margin-top:0;}
+.sec_withdrawal .set_target li.custom .user { position:relative;top:4px;}
+.sec_withdrawal .flex_wrap { margin:0 20px;}
+
+.sec_withdrawal .summary li.category .num{@include font(14px);vertical-align:0}
+/* 핀크적금
+.sec_usernotice { @include font(14px);color:$warm_grey;padding:25px 20px 40px;}
+.sec_usernotice li { position:relative;display:block;margin-top:12px;padding-left:8px;}
+.sec_usernotice li:before { content:"*";position:absolute;left:0;top:3px;}
+.sec_usernotice li:first-of-type { margin-top:0;} */
+.fqsave .point_color { color:$green_blue;}
+.fqsave.agree_check .sec_title { padding-bottom:43px;}
+
+/* .fqsave_app .sec_title p { font-weight:bold;} class 사용하면됨. */
+.fqsave .sec_notice{margin-bottom:45px}
+
+.sec_recipient { /*background:url(../images/common/img_celebration.png) no-repeat;background-size: 293px auto;background-position:50% 20px;*/} /* 우대금리 신청 */ /* 2018-02-02 디자인 변경으로 인해 백그라운드 삭제 phj */
+.sec_recipient .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include font(16px);
+width:160px;height:160px;margin:43px auto 0;border-radius:50%;background-color:$green_blue;text-align:center;}
+.sec_recipient .circle strong { display:inline-block;color:$sun_yellow;font-weight:bold;@include font(20px);}
+.sec_recipient .circle p { display:inline-block;color:$white;margin-top:6px;@include font(16px);font-weight:bold;}
+.sec_apply { margin:15px 20px 0;}
+.sec_apply .btn_type_e { @include font(16px);}
+.sec_apply .btn_type_c { border-style:solid ;@include font(16px);color:$brownish_grey}
+
+/* .fqsave .sec_ars { margin-top:55px;}
+.fqsave .sec_ars dl { padding-top:100px;}
+.fqsave .sec_ars dl dt { @include font(24px);}
+.fqsave .sec_ars dl dd { @include font(14px);}
+제플린 가이드 기준으로 common 공통 사용
+따로 스타일 줄 필요 없음 */
+
+
+/* T적금그룹 */
+.sec_group { border-top:1px solid $white_two;background-color:$white_three;padding-top:0;margin-top:35px;padding-bottom:0px;} /* 사용자 동의 */
+.sec_group > .summary { padding:7px 20px 7px;background:$white_three;}
+.represent { padding:18px 20px 16px;background-color:$white;border-top:1px solid $white_two;border-bottom:1px solid $white_two;}
+.sec_group .represent .tbl li.name,
+.sec_group .represent .tbl li.number,
+.sec_group .represent .tbl li.status {width:auto;}
+.sec_group .tbl {width:100%; display:table;}
+.sec_group .tbl:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.sec_group .tbl li { display:table-cell;@include font(16px)}
+.sec_group .tbl li.name { width:28.8%;}
+.sec_group .tbl li.number { width:auto;}
+.sec_group .tbl li.status { width:17.65%;text-align:right;color:$purply_blue;}
+
+.group_status { border-top:1px solid $white_two;margin-top:4px;background:$white;padding:28px 20px 30px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.group_status .head { position:relative;display:block;padding-bottom:8px;width:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.group_status .head strong { @include font(16px);font-weight:bold;}
+.group_status .head button { position:absolute;right:0;top:0px;@include font(14px);color:$black;border-bottom:1px solid $black;}
+.group_status .head button:disabled { color:$white_two;border-bottom:1px solid $white_two;}
+.group_status .member_list { position:relative;}
+.group_status .member_list p.none { padding:30px 0 30px;text-align:center;@include font(14px);color:$warm_grey;}
+.group_status .member_list .member { padding:15px 0 15px;}
+.group_status .member_list .member .btn_wrap { position:relative;top:0px;}
+.group_status .member_list .member li { margin-top:6px;vertical-align:middle;height:40px;}
+.group_status .member_list .member li:first-of-type { margin-top:0;}
+.group_status .member_list .member li.status {position:relative; width:30%;}
+.group_status .member_list .member li.status .btn_wrap { text-align:center;color:$black;}
+.group_status .member_list .member li.status .btn_wrap.end { text-align:right;}
+.group_status .member_list .member li.status .btn_wrap strong { font-weight:bold;display:inline-block;}
+/* .group_status .member_list .member li.status .btn_wrap span { @include font(11px);color:$warm_grey;display:inline-block;text-indent:-2px;} */
+.group_status .member_list .member li.status .btn_wrap + span{position:absolute;bottom:-2px;right:0;width:100%;@include font(11px);color:$warm_grey;text-align:center;font-family:"AppleSDGothicNeo-Regular"; letter-spacing:0;} /*2018-03-22 letter-spacing 추가 phj */
+.group_status .member_list .member li.status .btn_wrap .btn_type_a:disabled{border-color:$white_two;}
+.group_status .member_list .member li.number .num{vertical-align:1px}
+
+/* FQA-135 2018-10-08 ock */
+.sec_group .represent.foreigner_type{}
+.sec_group .represent.foreigner_type .tbl li.name em{display:inline-block;max-height:40px;overflow:hidden;vertical-align:middle}
+.sec_group .represent.foreigner_type .tbl li.name span{display:block;padding-top:3px}
+.sec_group .represent .tbl li.name{width:auto}
+.sec_group .represent .tbl li.number{width:41%;padding:0 8px;vertical-align:middle}
+.sec_group .represent .tbl li.status{width:20%;vertical-align:middle}
+
+.group_status .member_list .member > li{height:auto}
+.group_status .member_list .member .foreigner_type{}
+.group_status .member_list .member .foreigner_type .tbl li.name em{display:inline-block;max-height:40px;overflow:hidden;vertical-align:middle}
+.group_status .member_list .member .foreigner_type .tbl li.name.himself span{display:block;padding-top:3px}
+.group_status .member_list .member .tbl li.name{width:34%;}
+.group_status .member_list .member .tbl li.number{width:38%;padding:0 7px}
+
+.sec_notice .notice { padding:30px 0 0;}
+.group_status .notice { padding:30px 0 13px;}
+.sec_notice .notice li,
+.group_status .notice li { margin-top:10px;color:$warm_grey;padding-left:9px;}
+.sec_notice .notice li.listup:before,
+.group_status .notice li.listup:before{content:'*'; display:inline-block;clear:both;color:$warm_grey;vertical-align: -3px;@include font(14px);text-indent: -9px;}
+.sec_notice .notice li:first-of-type,
+.group_status .notice li:first-of-type { margin-top:0;}
+.group_status .note { margin-top:4px;border-top:1px solid red;}
+/* .group_status .btn_type_h { @include font(16px);} */
+.fqsave .sec_note { border-top:1px solid $white_two;background-color:$white_three;padding-top:4px;margin-top:0px;}
+/* ios 분기처리 임시 2018-01-23 */
+.ios .sec_notice .notice li,
+.ios .group_status .notice li {padding-left:4px;}
+.ios .sec_notice .notice li:before,
+.ios .group_status .notice li:before, {text-indent: -4px;}
+
+/* sec_agree 비슷, 확장형태 노멀 */
+.sec_expend {border-top:1px solid $white_two;background-color:$white_three;padding-top:4px; /*padding-bottom:45px;*/} /* 2018-01-30 MASM02Z21, MASM02Z22 하단 padding 삭제 phj */
+.sec_expend .listup {position:relative;margin-top:4px;padding:18px 20px;background:$white;border-top:1px solid $white_two;border-bottom:1px solid $white_two;}
+.sec_expend .listup:first-child {margin-top:0}
+.sec_expend .listup .ico_arrow_down_type_a {position:absolute;top:50%;margin-top:-6px;right:20px; width: 7px;
+ height: 11px; background-position: 0 -85px;} /* margin-top: 수정 2018-03-06 */
+.sec_expend .listup button:before{content:' ';position: absolute;left: -8px;top: -5px;width: 100%;height: 100%;padding: 5px 8px;}
+.sec_expend .listup strong { font-weight:bold;}
+.sec_expend .listup em {@include font(16px);}
+.sec_expend .listup a {display:block;} /* 2018-04-03 추가 phj */
+
+.sec_gbox { background-color:$white_three;margin:0 20px;padding:30px 20px;min-height:50px;border-radius:8px;margin-top:25px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;} /* 회색박스 공통 */
+.sec_gbox h3 { @include font(16px);color:$black;text-align:center;}
+
+.fqsave_skt .sec_gbox { }
+/* .fqsave_skt .sec_gbox select,
+.fqsave_skt .sec_gbox input { background-color:#fff;} 공통 적용위한 주석 2018-01-31 */
+.fqsave_skt .sec_gbox > div { margin-top:15px; background:#fff; border-radius:8px}
+.fqsave_skt .sec_gbox > div.name { margin-top:18px;}
+/*.fqsave_skt .sec_gbox > div.birth::before{content:"2018-09-22";position:absolute;left:19px;line-height:46px;display:inline-block;color:$pinkish_grey;}*/
+.fqsave_skt .sec_gbox > div.mnum {display:flex; background:none;}
+.fqsave_skt .sec_gbox > div.mnum:after {content:""; clear:both; height:0; display:block;}
+.fqsave_skt .sec_gbox > div.mnum .form_wrap:first-child {width:35%; margin-right:2px;}
+.fqsave_skt .sec_gbox > div.mnum .form_wrap:last-child {width: 65%; margin-left: 2px; background:$white;}
+.fqsave_skt .sec_gbox > div.birth.date_focus::before{display:none}
+.fqsave_skt .sec_gbox > div.birth { position:relative;height:46px;}
+.fqsave_skt .sec_gbox > div.birth input.date { position:absolute;left:0px;top:0;width:100%;height:100%;opacity:1;z-index:1;-webkit-appearance:none;border:1px solid $white_two;color:$pinkish_grey;}
+.fqsave_skt .sec_gbox > div.birth input.date.inp_focus{background-color:$pale_lavender;border-color:$purply_blue;}
+/* .fqsave_skt .sec_gbox + .sec_notice { margin-bottom:45px;} */
+.fqsave_skt .sec_notice.bul_guide { margin:0;padding:0 20px;background:$white_three;}
+.fqsave_skt .sec_notice.bul_guide > ul { padding:30px 0 0px;} /*2018-04-04 padding:30px 0 40px; 수정 phj*/
+/* .fqsave_skt .sec_withdrawal { background:$white;} */ /* 2018-01-30 디자인 이슈로 삭제 phj */
+.fqsave_skt .show .wdrawal_list { padding:30px 20px; background:$white; border-top:1px solid $white_two;border-bottom:1px solid $white_two;} /* 보여지는 이슈로 수정 */ /* 2018-01-30 보더, 배경 추가 phj */
+.fqsave_skt .show .wdrawal_list .set_target{margin-bottom:0;}
+.fqsave_skt .show .sec_agree {margin-top:4px;} /* 2018-01-30 추가 phj */
+.fqsave_skt .wdrawal_list .custom { margin-top:12px;}
+.fqsave_skt .wdrawal_list .custom .form_wrap { float:left;}
+.fqsave_skt .wdrawal_list .set_target { margin-bottom:30px;} /* 보여지는 이슈로 수정 */
+.fqsave_skt .wdrawal_list .set_target .form_wrap + .form_wrap{margin-top:12px}
+.fqsave_skt .wdrawal_list .set_target .form_wrap label > span { color:$black; @include font(16px);}
+.fqsave_skt .wdrawal_list .set_target li.custom .user { float:left;width:244px;top:-4px;}
+.fqsave_skt .wdrawal_list .custom .user input { height:30px;border:0;border-bottom:1px solid $pinkish_grey;border-radius:0;padding:0; @include font(16px); background:$white;}
+.fqsave_skt .wdrawal_list .custom:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.fqsave_skt .show {background:$white_three; padding-top:4px;}
+.fqsave_skt .sec_expend .listup {color:$brownish_grey;}
+.fqsave_skt .sec_expend .listup a {color:inherit; padding:18px 20px; margin:-18px -20px;}
+
+/* 가족적금 유의사항 */
+.fqsave_family .sec_title h3 {font-size:20px; line-height:24px; padding:28px 0 0;}
+.fqsave_family .sec_fqsave_note {padding:26px 0 22px;}
+.fqsave_family .sec_fqsave_note .m_txt {@include font(16px);}
+.fqsave_family .sec_fqsave_note h4 {margin-top:27px; font-weight:bold; @include font(16px);}
+.fqsave_family .sec_fqsave_note h4:first-child {margin-top:0;}
+.fqsave_family .sec_fqsave_note h4 + h5 {margin-top:10px;}
+.fqsave_family .sec_fqsave_note h5 {margin-top:26px; @include font(16px);}
+.fqsave_family .sec_fqsave_note h4 + .bul_guide {margin-top:2px;}
+.fqsave_family .sec_fqsave_note .bul_guide li {margin-top:10px; color:$brownish_grey;}
+.fqsave_family .sec_fqsave_note .bul_guide li.dot_type {color:$warm_grey;}
+
+/* payment_step : 적금 가입내역  현재 상황 표시바 */
+/* 보라색 라인이 8.33%적용이 안되어 배경으로 처리하려다가, span객체로 처리 배경으로 처리시 일부해상도에서 13번째 라인이 발생 */
+/* 12개월이 아닌 경우 추가가 필요... */
+.payment_step { position:relative;width:100%;padding:0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.payment_step:after { content:" ";position:absolute;left:-20px;right:-20px;bottom:0;height:10px;background:url(../images/common/bg_upshadow.png) repeat-x;z-index:10;background-size:10px 10px;}
+.payment_step .progress_bar { position:relative;width:100%;}
+.payment_step .progress_bar .step { font-size:0;}
+.payment_step .progress_bar .step span { display:inline-block;vertical-align:top;height:60px;background:url(../images/common/bg_process_bar.png) 0 0 no-repeat #eaddfd;background-size:100% 60px;margin:0;padding:0;}
+.payment_step .progress_bar .step span:first-of-type { background-position:-2px 0;}
+.payment_step .progress_bar.style_step12 { margin-top:55px;}
+.payment_step .progress_bar.style_step12 span { width:(100%/12);}
+.payment_step .progress_bar .bar { position:absolute;top:0px;background:$purply_blue;height:60px;z-index:9;}
+.payment_step .progress_bar.style_step12[data-status="0"] { margin-top:15px;}
+.payment_step .progress_bar.style_step12[data-status="0"] .step_tooltip { display:none;}
+.payment_step .progress_bar.style_step12 .bar { opacity:1;} /* opacity 조정이 필요한 경우 */
+.payment_step .progress_bar.style_step12[data-status="1"] .bar { width:(100%/12)*1+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="2"] .bar { width:(100%/12)*2+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="3"] .bar { width:(100%/12)*3+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="4"] .bar { width:(100%/12)*4+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="5"] .bar { width:(100%/12)*5+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="6"] .bar { width:(100%/12)*6+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="7"] .bar { width:(100%/12)*7+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="8"] .bar { width:(100%/12)*8+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="9"] .bar { width:(100%/12)*9+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="10"] .bar { width:(100%/12)*10+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="11"] .bar { width:(100%/12)*11+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="12"] .bar { width:100%;}
+.payment_step .progress_bar .step_tooltip { position:absolute;top:-44px;width:84px;height:92px;padding-top:20px;margin-left:-42px;background:url(../images/common/bg_boxtooltip.png) 0 0 no-repeat;background-size:84px 92px;text-align:center;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;z-index:11;}
+.payment_step .progress_bar .step_tooltip:after { content:" ";position:absolute;left:50%;top:74px;width:21px;height:18px;background:url(../images/common/bg_boxtooltip_arrow.png) 0 0 no-repeat;background-size:21px 18px;margin-left:-10.5px;}
+.payment_step .progress_bar.style_step12[data-status="1"] .step_tooltip { left:(100%/12)*1+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="2"] .step_tooltip { left:(100%/12)*2+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="3"] .step_tooltip { left:(100%/12)*3+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="4"] .step_tooltip { left:(100%/12)*4+0.2%;}
+.payment_step .progress_bar.style_step12[data-status="5"] .step_tooltip { left:(100%/12)*5+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="6"] .step_tooltip { left:(100%/12)*6+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="7"] .step_tooltip { left:(100%/12)*7+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="8"] .step_tooltip { left:(100%/12)*8+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="9"] .step_tooltip { left:(100%/12)*9+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="10"] .step_tooltip { left:(100%/12)*10+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="11"] .step_tooltip { left:(100%/12)*11+0.5%;}
+.payment_step .progress_bar.style_step12[data-status="12"] .step_tooltip { left:(100%/12)*12+0.5%;margin-left:-68px;}
+.payment_step .progress_bar.style_step12[data-status="12"] .step_tooltip:after { margin-left:12px;}
+
+/* 6회 */
+.payment_step .progress_bar.style_step06 { margin-top:55px;}
+.payment_step .progress_bar.style_step06 span { width:(100%/6);}
+.payment_step .progress_bar .bar { position:absolute;top:0px;background:$purply_blue;height:60px;z-index:9;}
+.payment_step .progress_bar.style_step06[data-status="0"] { margin-top:15px;}
+.payment_step .progress_bar.style_step06[data-status="0"] .step_tooltip { display:none;}
+.payment_step .progress_bar.style_step06 .bar { opacity:1;} /* opacity 조정이 필요한 경우 */
+.payment_step .progress_bar.style_step06[data-status="1"] .bar { width:(100%/6)*1+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="2"] .bar { width:(100%/6)*2+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="3"] .bar { width:(100%/6)*3+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="4"] .bar { width:(100%/6)*4+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="5"] .bar { width:(100%/6)*5+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="6"] .bar { width:100%;}
+.payment_step .progress_bar.style_step06[data-status="1"] .step_tooltip { left:(100%/6)*1+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="2"] .step_tooltip { left:(100%/6)*2+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="3"] .step_tooltip { left:(100%/6)*3+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="4"] .step_tooltip { left:(100%/6)*4+0.2%;}
+.payment_step .progress_bar.style_step06[data-status="5"] .step_tooltip { left:(100%/6)*5+0.5%;}
+.payment_step .progress_bar.style_step06[data-status="6"] .step_tooltip { left:(100%/6)*6+0.5%; margin-left:-68px;}
+.payment_step .progress_bar.style_step06[data-status="6"] .step_tooltip:after { margin-left:12px;}
+
+/* 24회 */
+.payment_step .progress_bar.style_step24 { margin-top:55px;}
+.payment_step .progress_bar.style_step24 span { width:(100%/24);}
+.payment_step .progress_bar .bar { position:absolute;top:0px;background:$purply_blue;height:60px;z-index:9;}
+.payment_step .progress_bar.style_step24[data-status="0"] { margin-top:15px;}
+.payment_step .progress_bar.style_step24[data-status="0"] .step_tooltip { display:none;}
+.payment_step .progress_bar.style_step24 .bar { opacity:1;} /* opacity 조정이 필요한 경우 */
+.payment_step .progress_bar.style_step24[data-status="1"] .bar { width:(100%/24)*1+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="2"] .bar { width:(100%/24)*2+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="3"] .bar { width:(100%/24)*3+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="4"] .bar { width:(100%/24)*4+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="5"] .bar { width:(100%/24)*5+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="6"] .bar { width:(100%/24)*6+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="7"] .bar { width:(100%/24)*7+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="8"] .bar { width:(100%/24)*8+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="9"] .bar { width:(100%/24)*9+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="10"] .bar { width:(100%/24)*10+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="11"] .bar { width:(100%/24)*11+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="12"] .bar { width:(100%/24)*12+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="13"] .bar { width:(100%/24)*13+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="14"] .bar { width:(100%/24)*14+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="15"] .bar { width:(100%/24)*15+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="16"] .bar { width:(100%/24)*16+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="17"] .bar { width:(100%/24)*17+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="18"] .bar { width:(100%/24)*18+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="19"] .bar { width:(100%/24)*19+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="20"] .bar { width:(100%/24)*20+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="21"] .bar { width:(100%/24)*21+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="22"] .bar { width:(100%/24)*22+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="23"] .bar { width:(100%/24)*23+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="24"] .bar { width:100%;}
+.payment_step .progress_bar .step_tooltip { position:absolute;top:-44px;width:84px;height:92px;padding-top:20px;margin-left:-42px;background:url(../images/common/bg_boxtooltip.png) 0 0 no-repeat;background-size:84px 92px;text-align:center;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;z-index:11;}
+.payment_step .progress_bar .step_tooltip:after { content:" ";position:absolute;left:50%;top:74px;width:21px;height:18px;background:url(../images/common/bg_boxtooltip_arrow.png) 0 0 no-repeat;background-size:21px 18px;margin-left:-10.5px;}
+.payment_step .progress_bar.style_step24[data-status="1"] .step_tooltip { left:(100%/24)*1+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="2"] .step_tooltip { left:(100%/24)*2+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="3"] .step_tooltip { left:(100%/24)*3+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="4"] .step_tooltip { left:(100%/24)*4+0.2%;}
+.payment_step .progress_bar.style_step24[data-status="5"] .step_tooltip { left:(100%/24)*5+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="6"] .step_tooltip { left:(100%/24)*6+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="7"] .step_tooltip { left:(100%/24)*7+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="8"] .step_tooltip { left:(100%/24)*8+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="9"] .step_tooltip { left:(100%/24)*9+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="10"] .step_tooltip { left:(100%/24)*10+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="11"] .step_tooltip { left:(100%/24)*11+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="12"] .step_tooltip { left:(100%/24)*12+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="13"] .step_tooltip { left:(100%/24)*13+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="14"] .step_tooltip { left:(100%/24)*14+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="15"] .step_tooltip { left:(100%/24)*15+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="16"] .step_tooltip { left:(100%/24)*16+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="17"] .step_tooltip { left:(100%/24)*17+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="18"] .step_tooltip { left:(100%/24)*18+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="19"] .step_tooltip { left:(100%/24)*19+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="20"] .step_tooltip { left:(100%/24)*20+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="21"] .step_tooltip { left:(100%/24)*21+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="22"] .step_tooltip { left:(100%/24)*22+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="23"] .step_tooltip { left:(100%/24)*22+0.5%;}
+.payment_step .progress_bar.style_step24[data-status="23"] .step_tooltip:after { margin-left:0px;}
+.payment_step .progress_bar.style_step24[data-status="24"] .step_tooltip { left:(100%/24)*24+0.5%;margin-left:-68px;}
+.payment_step .progress_bar.style_step24[data-status="24"] .step_tooltip:after { margin-left:12px;}
+
+.payment_step .progress_bar .step_tooltip p { color:$sun_yellow;display:inline-block;border-bottom:1px solid #4e4e4e;padding-bottom:3px;margin-bottom:3px;}
+.payment_step .progress_bar .step_tooltip p.total { color:$white;display:block;border-bottom:0;}
+
+/* 그래프 */
+.payment_step {padding-top:45px;}
+.payment_step .progress_wrap { position:relative; height:60px;/* padding-right:3px; background:$pale_lavender_two; */}
+.payment_step .progress_wrap ._progress {height:60px; background:$pale_lavender_two; margin-top:0; border-radius:0; border:none; }
+.payment_step .progress_wrap ._progress ._bar {background:$purply_blue; width:0; height:60px; border-radius:0; border:none; top:0; left:0; transition: width 0.7s linear;}
+.payment_step .progress_wrap .step { font-size:0;}
+.payment_step .progress_wrap .step span { display:inline-block;vertical-align:top;height:60px;background:url("../images/common/bg_process_bar.png") 0 0 no-repeat #eaddfd;background-size:100% 60px;margin:0;padding:0;}
+.payment_step .progress_wrap .step span:first-of-type { background-position:-2px 0;}
+.payment_step .progress_wrap.type_2 span {background-image:none;}
+.payment_step .progress_wrap .step_tooltip { position:absolute; left:-20px; bottom:4px; width:88px; height:92px; background:url("../images/common/bg_boxtooltip.png") 0 0 no-repeat; background-size:88px 92px; margin-left:0px; padding:20px 16px 0; text-align:center; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; z-index:11;
+transition: all 0.7s linear;}/* 2018-04-09 margin-left:-44px; 시작위치 맞추기 */
+.payment_step .progress_wrap .step_tooltip.last {left:unset !important;}
+.payment_step .progress_wrap .arrow {position:absolute; right:0; bottom:5px; width:21px; height:18px; background:url("../images/common/bg_boxtooltip_arrow.png") 0 0 no-repeat; background-size:21px 18px; margin-right:-10.5px;}
+.payment_step .progress_wrap .step_tooltip p { color:$sun_yellow;display:block;border-bottom:1px solid rgba(255, 255, 255, 0.2);padding-bottom:3px;margin-bottom:3px;}
+.payment_step .progress_wrap .step_tooltip p.total { color:$white;display:block;border-bottom:0;}
+.payment_step .line {display:none;}
+.payment_step .line i {display:inline-block; height:60px; border-left:1px solid $light_violet; box-sizing: border-box; opacity:.4;} /* 투명도 .6 > .4 2018-04-03 ock */
+.payment_step .line i:first-child {border-left:none;}
+.payment_step.step06 .line.step06,
+.payment_step.step12 .line.step12,
+.payment_step.step24 .line.step24 {display:block;}
+.payment_step.step06 .line.step06 i {width:calc(100% / 6);}
+.payment_step.step12 .line.step12 i {width:calc(100% / 12);}
+.payment_step.step24 .line.step24 i {width:calc(100% / 24);}
+
+/* 대구은행 그래프 상세 */
+.fqsave_detail.dgb_wrap {}
+.fqsave_detail.dgb_wrap .sec_insinfo strong {color:$clear_blue;}
+
+/* T핀크 적금 적금 상세내역 */
+.fqsave_detail .sec_head { padding-top:0;padding-bottom:0;}
+.fqsave_detail .update {text-align:center; @include font(11px); color:$pinkish_grey; margin-bottom:3px; margin-top:-7px;}
+/*.fqsave_detail .update a {display:inline-block; vertical-align:middle; height:31px;}
+.fqsave_detail .update a i {margin: 7px 9px 8px;}*/ /* 2018-04-05 common공틍으로 정리 phj */
+.fqsave_detail .account_info { position:relative; margin-top:0px;}
+.fqsave_detail .account_info .bank_data { color:$warm_grey;}
+.fqsave_detail .account_info .btn_account_mng { position:absolute;top:-2px;right:20px;border-bottom:1px solid $black;line-height:20px;}
+/* .fqsave_detail .sec_history { padding-bottom:44px;} */
+.fqsave_detail .sec_history dl:first-child {border-top:none;}
+.fqsave_detail .sec_history dl dt .cash {font-weight:bold}/* 2018-02-09 추가 phj */
+
+/* sec_insinfo - 적금정보 */
+.sec_insinfo { padding:0 20px;margin-top:22px; border-bottom:1px solid $white_two;} /* 2018-01-23 border bottom 원복 by phj */
+.ins_info { position:relative;width:100%;padding-top:30px;}
+.ins_info:before { content:'';position:absolute;left:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type1.png) 0 0 repeat-x;background-size:18px auto;opacity:1;}
+.ins_info:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.ins_info li { color:$black;@include font(16px);margin-top:15px; list-style:none !important;}
+.ins_info li:first-of-type { margin-top:0;}
+.ins_info li:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.ins_info li .tit { float:left;color:$brownish_grey; font-family:"AppleSDGothicNeo-Light", "LatoL";} /* 2018-01-23 font-family 수정 phj */
+.ins_info li .info,
+.ins_info li .money_total { float:right;}
+.ins_info div span,
+.ins_info div em,
+.ins_info div { @include font(16px);}
+
+
+/* T핀크적금 상세 */
+.ins_info.tfiinq { padding-bottom:43px;}
+.ins_info.tfiinq li.rate .info em.date,
+.ins_info.tfiinq li.rate .info { color:$clear_blue;}
+.twoplus .ins_info:before { display:none;}
+.sec_insinfo.twoplus { margin-top:0;border-bottom:none}
+.twoplus { position:relative;}
+.twoplus .ins_info { padding-top:0;padding-bottom:45px;}
+.twoplus .btn_account_mng { position:absolute;right:20px;top:-53px;border-bottom:1px solid $black;line-height:24px;}
+.twoplus .ins_info li.use .info,
+.twoplus .ins_info li.use .info .cash { color:$clear_blue;}
+
+.tfinnq .mylistup ul.summary_list > li.info { text-align:right;@include font(16px);color:$black;} /* market */
+.tfinnq .mylistup ul.summary_list > li.info em.masking { display:block;@include font(11px);color:$warm_grey;padding-top:6px;} /* 결함 수정 */
+.tfinnq .mylistup ul.summary_list > li.info span.ico_tel { position:relative;top:1px;margin-right:8px;}
+.tfinnq .account_summary > ul > li.title strong { font-weight:normal;}
+.tfinnq .mylistup ul.summary_list > li.info .ico_arrow_more {width:7px; height:11px; background-position:0 -85px; margin:-3px 0 0 5px;}
+.tfinnq ul.summary_list { min-height:94px;margin-bottom:4px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+/* .tfinnq .mylistup .summary:first-of-type {border-top:1px solid $white_two;} MASM02Z19 */ /* 2018-01-30 다시 삭제 phj */
+.tfinnq ul.summary_list:last-of-type { border-bottom:1px solid $white_two;} /* MASM02Z19 */
+.tfinnq ul.summary_list a.tel { color:$purply_blue;}
+
+.twoplus .mylistup ul.summary_list > li.info { text-align:right;@include font(16px);color:$black;} /* market */
+.twoplus .mylistup ul.summary_list > li.info em.masking { display:block;@include font(11px);color:$pinkish_grey;padding-top:6px;}
+.twoplus .mylistup ul.summary_list > li.info span.ico_tel { position:relative;top:1px;margin-right:8px;}
+.twoplus .account_summary > ul > li.title strong { font-weight:normal;}
+.twoplus ul.summary_list {margin-bottom:4px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.twoplus ul.summary_list a.tel { color:$purply_blue;}
+.twoplus .mylistup .summary_list:last-of-type { border-bottom:1px solid $white_two;}
+
+/* 투플카드 */
+.twoplus_card { }
+/* .twoplus_card .sec_history.spend_detail { padding-bottom:45px;} */
+.twoplus_card .sec_history.spend_detail .list_wrap li:last-of-type { border-bottom:1px solid $white_two;}
+.twoplus_card .update {text-align:center; margin-top:-7px; @include font(11px); color:$pinkish_grey;}
+/*.twoplus_card .update .num {margin-left:4px;}
+.twoplus_card .update a {display:inline-block; vertical-align:middle;}
+.twoplus_card .update a i {margin:9px 9px 8px;}*; /* 2018-01-23 update 추가 phj */ /* 2018-04-05 common공틍으로 정리 phj */
+.twoplus_card .sec_history dl dt .cash {font-weight:bold;}/*2018-02-09 추가*/
+.twoplus_card .wrap_result .no_result {padding-top:100px; padding-bottom:97px;}
+.twoplus_card .tab-container > div[data-tab]{}
+.twoplus_card .tab-container > div[data-tab] span{margin-top:15.5px;padding:12.5px 0;-webkit-tap-highlight-color:rgba(0,0,0,0.18);outline:none}
+.summary li.category_choice { float:right;}
+.summary li.category_choice button { color:$warm_grey;}
+.summary li.category_choice span { position:relative;top:-1px;margin-left:8px;}
+
+/* 소비내역 카테고리 */
+.sec_cspend { background:$purply_blue;}
+.sec_cspend .tab-container {margin:0 20px !important;}
+.tab-container { height:auto;padding:0;margin:0 20px;border-bottom:1px solid #8848ff;}
+.market .tab-container { margin:0;margin-left:20px;}
+.market .tab-container .swiper-slide { position:relative;}
+.market .tab-container .swiper-slide:first-of-type:after { content:" ";position:absolute;top:100%;left:100%;width:350px;height:10px;background:#8848ff;z-index:-1;}
+.tab-container:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.tab-container > div[data-tab] { float:left;position:relative;top:0px;width:(100%/5);text-align:center;color:$white;padding:30px 0 13px; @include font(16px);}
+.tab-container > div[data-tab]:nth-of-type(2) span { margin-right:10px;} /*  셀간격을 좀 더 자연스럽게 맞추기 위해서  */
+.tab-container > div[data-tab]:nth-of-type(4) span { margin-left:10px;} /*  셀간격을 좀 더 자연스럽게 맞추기 위해서  */
+.tab-container > div[data-tab].on span { color:$sun_yellow;border-bottom:1px solid $sun_yellow;padding-bottom:12.5px;}
+.tab-container > div[data-tab]:first-of-type { text-align:left;}
+.tab-container > div[data-tab]:last-of-type { text-align:right;}
+.cspend_detail { position:relative;background:$purply_blue;/*overflow:hidden;*/} /* 2018-04-12 툴팁때문에 overflow 삭제 phj */
+.cspend_detail > div { min-height:160px;}
+.cspend_detail .graph_wrap { padding:30px 20px 0;}
+.cspend_detail .graph_wrap:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.cspend_detail .graph_wrap > li { float:left;text-align:center;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.cspend_detail .graph_wrap > li > strong { position:relative; /*width:74px;*/ display:block; margin-top:8px; color:$lavender; text-align:center; font-weight:bold;}
+.cspend_detail .graph_wrap > li > strong .ico_circle_help2 {position:relative; margin:-4px 0 0 3px;} /* 2018-04-12 툴팁 관련 추가 phj */
+.cspend_detail .graph_wrap > li > strong .layer_wrap {width:255px; top:29px; left:0px;} /* 2018-04-12 툴팁 관련 추가 phj */
+.cspend_detail .graph_wrap.step4 > li { width:25%;text-align:center;}
+.cspend_detail .graph_wrap.step13 > li.save { width:27%; text-align:left;} /* 2018-04-12 넓이조절 phj */
+.cspend_detail .graph_wrap.step13 > li.lack { width:73%;} /* 2018-04-12 넓이조절 phj */
+.cspend_detail .listup dd .num,
+.cspend_detail .listup dd .cash { font-weight:bold;}
+
+.donut_graph { position:relative;display:inline-block;width:74px;height:74px;}
+.donut_graph .label {position:absolute;left:0;top:0;width:100%;height:74px;display: flex;align-items: center;justify-content: center;}
+.donut_graph .label div > strong { display:inline-block;border-bottom:1px solid $lavender;@include font(14px); color:$sun_yellow; padding-bottom:3px; font-weight:bold;min-width:50px} /* min-width 추가 2018-04-25 ock */
+.donut_graph .label div > strong em {font-family:"LatoB" !important;}
+.donut_graph .label div > span.max { padding-top:3px;color:$lavender;}
+.donut_graph .label span.max { display:block;text-align:center;width:100%; font-weight:bold; @include font(12px);}
+.donut_graph .label span.max em {font-family:"LatoB" !important;}
+.donut_graph.savepoint .pie { width:100%;height:100%;border-radius:50%;background:$sun_yellow; margin:0 -2px -2px 0;}
+.donut_graph.savepoint .label { color:$purply_blue;text-align:center;}
+.donut_graph.savepoint .label span {font-weight:bold;}
+.donut_graph.savepoint .label span em {font-family:"LatoB" !important;}
+.donut_graph.savepoint .label span.complete { display:block;@include font(12px); font-weight:normal; font-family:"AppleSDGothicNeo-Light";}
+/* li .donut_graph .pie  { width:100%;height:100%;background:url(../images/test/temp-dounut3.png) no-repeat;background-size:239px 74px;} */
+/* 2018-04-12 넓이 변경 phj */
+.cspend_detail .graph_wrap.step4 > li {width:74px; margin-left:calc((100% - 296px) / 3 );}
+.cspend_detail .graph_wrap.step4 > li:first-child {margin-left:0;}
+
+/*
+.cspend_detail .graph_wrap > li.save {text-align:left;}
+.cspend_detail .graph_wrap > li.movie {padding-right:4px;}
+.cspend_detail .graph_wrap > li.coffee {padding-left:4px;}
+.cspend_detail .graph_wrap > li.food {text-align:right;}
+li.movie .donut_graph .pie { background-position:0 0;}
+li.coffee .donut_graph .pie { background-position:-81px 0;}
+li.food .donut_graph .pie { background-position:-165px 0;}
+*/
+
+.graph_wrap li.lack { }
+.graph_wrap li.lack > .notice { height:74px;border:1px dashed $lavender;border-spacing:12px;border-radius:74px;display: flex;align-items: center;justify-content: center;}
+.graph_wrap li.lack > .notice .label { color: $lavender;@include font(14px); font-family:"AppleSDGothicNeo-Light";}
+
+.cspend_detail .listup { padding:15px 20px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.cspend_detail .listup dl { margin-top:15px;display:table;width:100%;color:$white;}
+.cspend_detail .listup dl:first-of-type { color:$sun_yellow;}
+.cspend_detail .listup dl dd,
+.cspend_detail .listup dl dt { display:table-cell;vertical-align:middle; @include font(16px); }
+.cspend_detail .listup dl dd { text-align:right; font-weight:bold; }
+.cspend_detail .listup dl dd span.dash { display:inline-block;padding:0 4px; font-family:"LatoB"; @include font(12px);}
+.cspend_detail:after { content:' ';position:absolute;left:28%;bottom:0; /*top:35px;*/ width:120px; height:121px; /*height:158px;*/opacity:0.09;display:none;} /* 2018-04-12 툴팁으로 인한 위치 조절 phj */
+.cspend_detail[data-tab="time"]:after { display:block;background:url(../images/finnqmarket/ir-icon-card.png) 0 0px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%);}
+.cspend_detail[data-tab="category"]:after { display:block;background:url(../images/finnqmarket/ir-icon-card.png) 0 -140px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%);}
+.cspend_detail[data-tab="price"]:after { display:block;background:url(../images/finnqmarket/ir-icon-card.png) 0 -280px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%);}
+.cspend_detail[data-tab="area"]:after { display:block;background:url(../images/finnqmarket/ir-icon-card.png) 0 -420px no-repeat;background-size:100% auto;-webkit-filter: grayscale(100%);}
+/* 2018-04-11 항목별, 금액별, 지역별은 따로 설정 phj */
+.cspend_detail .listup.spend_type1 dl,
+.cspend_detail .listup.spend_type2 dl {position:relative; padding-right:165px; display:block; width:auto;}
+.cspend_detail .listup.spend_type1 dl dt,
+.cspend_detail .listup.spend_type2 dl dt {position:relative; padding-left:18px; display:block;}
+.cspend_detail .listup.spend_type1 dl dt em,
+.cspend_detail .listup.spend_type2 dl dt em {display:inline-block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; width:99%;}
+.cspend_detail .listup.spend_type1 dl dt .num,
+.cspend_detail .listup.spend_type2 dl dt .num{position:absolute; left:0; top:0;}
+.cspend_detail .listup.spend_type1 dl dd,
+.cspend_detail .listup.spend_type2 dl dd {position:absolute; right:0; top:0; width:165px; display:block;}
+.cspend_detail .listup.spend_type2 dl {padding-right:105px;}
+.cspend_detail .listup.spend_type2 dl dd {width:105px;}
+
+
+/* 사용내역 외부에 안내멘트 */
+.sec_history .ex_notice { @include font(14px);color:$warm_grey;padding:14px 20px 20px;}
+.sec_history .ex_notice a { color:$warm_grey;}
+
+.transfer_fq .sec_title .money_total { color:$purply_blue;margin-top:12px;}
+.transfer_fq .sec_input { padding:0 20px;}
+.transfer_fq .sec_charge { padding:0 20px;margin-top:28px;}
+
+
+/* 투뿔카드 2018-02-01 해쉬테그 삭제 */
+.twoplus_card .spend_detail .list_wrap .expend {display:none;}
+.twoplus_card .spend_detail .list_wrap dl {padding-bottom:28px;cursor: default;} /* 클릭시 효과 삭제 요청 2018-05-09 */
+.twoplus_card .spend_detail .list_wrap .partial { margin-top:-22px; border-top:none;}
+.twoplus_card .spend_detail .list_wrap .partial dl {position:relative; padding-top:14px;}
+.twoplus_card .spend_detail .list_wrap .partial dl:before {content:""; position:absolute; left:0; right:0; top:0; display:block; height:1px; background: url('../images/common/bg-dotline-type1.png') 0 0 repeat-x; background-size:18px auto; margin:0 20px;}
+.twoplus_card .spend_detail .list_wrap .partial dt strong {@include font(14px); color:$warm_grey; text-decoration:line-through;}
+.twoplus_card .spend_detail .list_wrap .partial dt strong + div {@include font(14px); color:$reddish_orange; height:22px;}
+.twoplus_card .spend_detail .list_wrap .partial dd .point {color:$pinkish_grey;}
+/* No.2341 투뿔카드 사용내역 화면 수정 2018-05-24 ock */
+.twoplus_card .spend_detail .list_wrap  dl dt > strong{overflow:hidden;display:inline-block;width:calc(100% - 120px);height:25px}
+
+/* 핀크카드 */
+.finnqcard_history .tab-container > div[data-tab] {width:25%;padding-top:28px}
+
+/* 입출금통장 */
+.bankbook_finish .sec_recipient .circle {margin-top:56px;}
+
+.bankbook_term .txt_hana_go {margin-top:25px; text-align:center; padding:0 20px; @include font(14px);}
+.bankbook_term .sec_agree {margin-top:40px;padding-top:4px;background:#eee;border-top: 1px solid #e0e0e0;}
+.bankbook_term .sec_agree .agree_wrap{margin-top:0;}
+.bankbook_term .sec_agree .agree_wrap input[type="checkbox"] + label span {color:$brownish_grey; font-weight:normal;}
+
+/* 마켓-핀크카드 2018-11-13 */
+.finnqcard_manage ul.summary_list.add_help {position:relative}
+.finnqcard_manage ul.summary_list.add_help .btn_ico{position:absolute;top:20px;margin-left:6px;}
+.finnqcard_manage ul.summary_list.add_help .layer_wrap{top:52px; left:39px; right:39px;}
+.finnqcard_manage ul.summary_list.add_help .layer_wrap p > strong{color:$sun_yellow;font-size: 12px;line-height: 14px;}
+
+
+/* T핀크 적금 변경 19.07.24 */
+.tfund-detail-info {text-align:center;}
+.tfund-detail-info .cercle {display:inline-block; margin:38px 0 45px; width:160px; height:160px; background-color:#00b389; border-radius:50%;}
+.tfund-detail-info .cercle .title {margin-top:43px; font-size:20px; font-weight:bold; color:#ffdb15;}
+.tfund-detail-info .cercle .txt {margin-top:6px; font-size:16px; line-height:20px; font-weight:bold; color:#fff;}
+
+.tfund-detail-info .box-detail {position:relative; padding:43px 30px; background-color:#f8f8f8;}
+.tfund-detail-info .box-detail:before {position:absolute; top:-17px; left:50%; margin-left:-17px; content:""; width:34px; height:34px; background:url(../images/common/ico_add_plus.png) no-repeat 0 0; background-size:100%;}
+.tfund-detail-info .box-detail .title {position:relative; padding-bottom:170px;  font-size:20px; line-height:24px; font-family:"AppleSDGothicNeo-Light";}
+.tfund-detail-info .box-detail .title .green {color:#00b389;}
+.tfund-detail-info .box-detail .title:after {position:absolute; bottom:30px; left:50%; margin-left:-55px; content:""; width:110px; height:110px; background:url(../images/finnqmarket/img_computer.png) no-repeat 0 0; background-size:100%;}
+.tfund-detail-info .box-detail .star_type {position:relative; text-align:left; padding-left:9px; font-size:14px; line-height:18px; color:#999; word-break:keep-all;}
+.tfund-detail-info .box-detail .star_type:before {position:absolute; top:2px; left:0;}
+.tfund-rate {text-align:center; padding:30px 0; background-color:#f8f8f8; border-radius:8px;}
+.tfund-rate .txt.rate {font-size:18px; color:#278df5; font-weight:bold;}
+.tfund-rate .txt {font-size:16px; color:#222;}
+.tfund-rate .txt + .txt {margin-top:3px;}
+
+.modal_wrap .txt_red {color:#f74b20;}
+.modal_content.tfund {}
+.modal_content.tfund .txt {font-size:16px;}
+.modal_content.tfund .txt + .accent_txt {margin-top:13px;}
+.modal_content.tfund .star_type {position:relative; padding-left:8px; color:#999; font-size:12px; margin:22px 20px 0; word-break:keep-all;}
+.modal_content.tfund .star_type:before {position:absolute; top:1px; left:0;}
+
+
+/* 비상금 대출 내 계좌 현황 */
+.my-loan-account {padding:38px 20px 2px;}
+.my-loan-account li {margin-top:6px;}
+.my-loan-account li:first-of-type {margin-top:0;}
+.my-loan-account li:after {display:block; clear:both; content:"";}
+.my-loan-account li .title {float:left; font-size:16px; color:#222;}
+.my-loan-account li .cont {float:right; text-align:right; margin-top:-4px;}
+.my-loan-account li .cont,
+.my-loan-account li .cont * {font-size:20px; font-size:20px; font-weight:bold; color:#222;}
+.my-loan-account li .cont .btn-out {margin-top:5px; padding:0 20px; text-align:center; line-height:30px; font-size:12px; color:#fff; background-color:#731aed; border-radius:4px; font-weight:normal;}
+
+/* KDB 하이파이브 적금 상세 */
+.benefit_cal.easing .active {position: relative; transition: 1.2s; border-radius: 3px;}
+.kdb_fund_graph {position:relative; margin-top:54px; padding:0 40px 23px;}
+.kdb_fund_graph .benefit_cal.easing {height:3px;}
+.kdb_fund_graph .benefit_cal.easing .active,
+.kdb_fund_graph .benefit_cal .bar {border-radius:2px; height:3px; top:0;}
+.kdb_fund_graph .benefit_cal.easing .active {min-width:5px !important}
+.kdb_fund_graph .count {font-size:14px; color:#731aed; margin-bottom:8px; font-weight:bold; text-align:right;}
+.kdb_fund_graph .graph_guide {position:absolute; bottom:0; font-size:11px; color:#999;}
+.kdb_fund_graph .graph_guide.left {left:40px;}
+.kdb_fund_graph .graph_guide.right {right:40px;}
+
+.kdb_fund_wrap .sec_history {padding-top:6px; margin-top:45px;}
+.kdb_fund_wrap .btn_wrap {margin-top:27px; text-align:center;}
+.kdb_fund_wrap .btn_wrap .btn {width:200px; height:40px; text-align:center; line-height:40px; border-radius:4px; background-color:#8848ff; color:#fff; font-size:14px; font-weight:bold;}
+.kdb_fund_wrap .btn_wrap .btn:disabled {background-color:#c8c8c8; color:#e0e0e0;}
+.fqsave_detail.kdb_fund_wrap .sec_history dl:first-child {margin-top:0;}
+
+.account_info .money_total {margin-top:5px;}
+.account_info .money_total .benefit {margin-top:13px; color:#666; font-size:14px;}
+
+/* KDB 요구불 리스트 페이지 상세 / 안내 상세 */
+.font-light {}
+.finnq-account-detail {padding:26px 20px; margin-bottom:30px; border-bottom:1px solid #f8f8f8;}
+.finnq-account-detail .subject-title {font-size:28px; line-height:32px; color:#222; font-family:"AppleSDGothicNeo-Light"}
+.finnq-account-detail .subject-title strong {font-weight:bold;}
+.finnq-account-detail .detail-info-wrap {position:relative; padding-top:37px;}
+.finnq-account-detail .detail-info-wrap:after {display:block; position:absolute; top:0; right:-20px; width:155px; height:146px; content:""; background:url(../images/finnqmarket/bg_untact_account.png) no-repeat 100% 0; background-size:155px 146px;}
+.finnq-account-detail .detail-info-list li:first-of-type {margin-top:0;}
+.finnq-account-detail .detail-info-list li {position:relative; padding-left:30px; margin-top:14px; font-size:16px; line-height:20px; color:#222;}
+.finnq-account-detail .detail-info-list li:before {display:block; position:absolute; left:0; top:50%; margin-top:-11px; content:""; width:22px; height:22px; background:url(../images/finnqmarket/ico_untact_checkbox.png) no-repeat 50% 50%; background-size:100% auto;}
+.finnq-account-detail .detail-info-wrap .star_type {position:relative; padding-left:8px; margin-top:55px; font-size:14px; color:#666; line-height:18px; font-family:"AppleSDGothicNeo-Light";}
+.finnq-account-detail .detail-info-wrap .star_type:before {position:absolute; top:2px; left:0;}
+
+
+
+@media screen and (max-width: 320px) {
+	.fqsave_skt .wdrawal_list .set_target li.custom .user { width:238px;}
+	.sec_group .represent .tbl li.number{width:48%;}
+	.sec_group .represent .tbl li.status{width:23%;}
+	.group_status .member_list .member .tbl li.name{width:25%;}
+	.group_status .member_list .member .tbl li.number{width:44%;}
+	.cspend_detail > div { min-height:150px;}
+	.cspend_detail .graph_wrap.step13 > li.save {width:68px; margin-right:6px;}/*2018-04-24 추가 phj*/
+	.cspend_detail .graph_wrap.step4 > li {width:68px; margin-left:2px;}
+	.cspend_detail .graph_wrap.step4 > li:first-child {margin-left:0;}
+	.cspend_detail .graph_wrap.step4 > li:first-child .label,
+	.cspend_detail .graph_wrap.step4 > li:first-child .donut_graph{width:68px; height:68px;}
+	.donut_graph { width:68px;height:68px;}
+	.donut_graph .label { height:68px;}
+	.donut_graph .label div {margin-top:5px;}
+	.donut_graph .pie canvas {width:70px !important;height:70px !important;}
+	.sec_cspend .tab-container > div[data-tab] {@include font(14px);}
+	.cspend_detail .graph_wrap > li > strong .ico_circle_help2 {margin-left:1px;}
+
+    .finnq-account-detail .detail-info-list li {font-size:14px; line-height:18px;}
+}

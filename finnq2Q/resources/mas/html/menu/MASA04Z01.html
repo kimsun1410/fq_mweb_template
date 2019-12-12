@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>00_03설정_MASA04Z01</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="MASA04Z01"><!-- class : bg_list 추가 2018-02-27 -->
+	<div id="contents" class="menu user_setup">
+		<section class="sec_common_terms setup">
+			<h2 class="tit_type1">로그인 설정</h2>
+			<ul class="term_list">
+				<li>
+					자동로그인
+					<span class="switch">
+						<input type="checkbox" id="setup1" class="switch_basic">
+						<label class="switch_basic_btn" for="setup1"></label>
+					</span>
+				</li>
+				<li>
+					지문인증
+					<span class="switch">
+						<input type="checkbox" id="setup2" class="switch_basic">
+						<label class="switch_basic_btn" for="setup2"></label>
+					</span>
+				</li>
+				<li>
+					<a href="#none">비밀번호 재설정<span class="ico ico_arrow_more2">더보기</span></a>
+				</li>
+			</ul>
+			<h2 class="tit_type1">알림 설정</h2>
+			<ul class="term_list">
+				<li class="sub">
+					회원상태 알림(SMS)
+					<span class="remark">회원가입, 로그인 및 인증, 이용정지 관련</span>
+					<span class="switch">
+						<input type="checkbox" id="setup1" class="switch_basic">
+						<label class="switch_basic_btn" for="setup1"></label>
+					</span>
+				</li>
+				<li class="sub">
+					서비스 이용 알림(PUSH)
+					<span class="remark">핀크계좌, 습관저금, 카드, 고객센터 관련</span><!-- 2018-03-15 문구 변경 phj (기존:핀크계좌 이체, 송금, 습관저금 및 카드 사용, 고객센터 관련) -->
+					<span class="switch">
+						<input type="checkbox" id="setup2" class="switch_basic">
+						<label class="switch_basic_btn" for="setup2"></label>
+					</span>
+				</li>
+				<li class="sub">
+					마케팅 알림(PUSH)
+					<span class="remark">혜택 및 이벤트 관련</span>
+					<span class="switch">
+						<input type="checkbox" id="setup2" class="switch_basic">
+						<label class="switch_basic_btn" for="setup2"></label>
+					</span>
+				</li>
+				<li class="sub">
+					AI핀고 알림(PUSH)
+					<span class="remark">지출분석 관련</span>
+					<span class="switch">
+						<input type="checkbox" id="setup2" class="switch_basic">
+						<label class="switch_basic_btn" for="setup2"></label>
+					</span>
+				</li>
+				<li>
+					<a href="#none">신용카드 결제 계좌 잔액 알림<span class="ico ico_arrow_more2">더보기</span></a>
+				</li>
+				<li>
+					<a href="#none">체크카드 잔액 알림<span class="ico ico_arrow_more2">더보기</span></a>
+				</li>
+				<li>
+					<a href="#none">지정 계좌 잔액 알림<span class="ico ico_arrow_more2">더보기</span></a>
+				</li>
+			</ul>
+			<!-- <ul class="btn_secede">
+				<li><a href="#none">핀크 탈퇴하기<span class="ico ico_arrow_more2">더보기</span></a></li>
+			</ul> 삭제 2018-02-27 -->
+		</section>
+
+		
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

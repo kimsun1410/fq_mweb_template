@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<title>상환일정</title>
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+</head>
+<body>
+<!-- <div class="wrap bg_list" id="MASV07Z04"> 2018-05-15 백업 상환일정이 있을때 bg_list 사용 -->
+<div class="wrap" id="MASV07Z04"><!-- 2018-05-15 삭제 상환일정이 없을때 bg_list클래스 제거 -->
+	<div id="contents" class="market p2p_wrap">
+		<!-- 페이지명 -->
+		<section class="sec_MASV07Z04">
+			<div class="sec_calendar">
+				<input type="text" id="p2p_calendar" />
+			</div>
+			<div class="list_repeat">
+				<div class="list_stateBar on in_sec"><!-- 활성화 on 클래스 추가 -->
+					<span class="fl month">
+						<span class="num">3</span>월
+					</span>
+					<span class="fr money">
+						<span class="num numComma">3000000</span>원<!-- 2018-05-15 추가 numComma 클래스 -->
+					</span>
+				</div>
+				<div class="wrap_result fixed_height">
+					<div class="no_result">
+						<i class="ico ico_chat_no2"></i>
+						<p>상환일정이 없습니다.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //페이지명 -->
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script src="../../libs/glDatePicker.js"></script><!-- 외부 라이브러리 집합 -->
+<script>
+$(document).ready(function(){
+	var calendar = $('#p2p_calendar').glDatePicker(
+	{
+		showAlways: true,
+		cssName: 'flatwhite',
+		allowMonthSelect: false,
+		allowYearSelect: false,
+		prevArrow: '이전달',
+		nextArrow: '다음달',
+		currentArrow: '이번달',
+		specialDates: [
+		  {
+			date: new Date(2018, 6, 8),
+			style:'sel_0'
+		  },
+		  {
+			date:  new Date(2018, 6, 20),
+			style:'sel_1'
+		  },
+		  {
+			date:  new Date(2018, 6, 21),
+			style:'sel_1 sel_2  sel_3'
+		  },
+		  {
+			date:  new Date(2018, 6, 22),
+			style:'sel_3'
+		  },
+		  {
+			date:  new Date(2018, 12, 22),
+			style:'sel_3'
+		  },
+		],
+	});
+	$('#p2p_calendar').after($('.gldp-flatwhite'));
+});
+</script>
+</body>
+</html>

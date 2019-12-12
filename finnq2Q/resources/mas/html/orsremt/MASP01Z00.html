@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>해외송금_01상품상세 MASP01Z00</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap bg_list"> <!-- 2018-03-16 wrap에 bg_list 클래스 추가 -->
+	<div id="contents" class="market add_sticky">
+		<!-- foregin_main -->
+		<section class="market_wrap foregin_main">
+			<!-- sec_foregin_visual -->
+			<div class="sec_foregin_visual">
+				<p class="txt">
+					처음이라 그래<br>
+					생각보다 쉬운<br>
+					해외송금
+				</p>
+				<!-- 2019.01.30 송금정보 컨텐츠변경 -->
+				<div class="dues">이용국가 및 송금정보</div>
+				<div class="dues_detail">
+					<ul class="list_type bar">
+						<li>캐나다, 필리핀, 태국, 베트남, 일본, 인도네시아, 유럽 6개국</li>
+						<!-- <li><strong class="font_n"><span class="num">2019</span>년 <span class="num">3</span>월까지 모든 수수료 면제!</strong><br>(진행 중 이벤트 참조)</li> --><!-- 2019.03.25 수정 -->
+					</ul>
+					<p class="type1"></p><!-- 2019.01.04 -->
+					<p class="type2"></p>
+				</div>
+				<!-- //2019.01.30 송금정보 컨텐츠변경 -->
+			</div><!-- //sec_foregin_visual -->
+
+			<!-- sec_foregin_saving -->
+			<div class="sec_foregin_saving">
+				<!-- 2018-05-18 수정 현재영역 컨텐츠 순서변경 -->
+				<p class="tit">원하는 시간에 송금하고<br><em><span class="num">10</span>분</em> 뒤에 해외 수령</p>
+				<p class="txt">보내는 방법에 따라 <span class="num">10</span>분 ~ <span class="num">1</span>영업일 내외</p>
+				<p class="txt small">(일본, 태국, 유럽은 <span class="num">2</span>영업일 내외)</p><!--  2019.01-30 문구 수정 -->
+				<p class="img2"></p>
+
+				<p class="tit"><em>해외 휴대폰 번호</em>만으로도<br>송금가능</p><!-- 2018-05-18 문구수정 만으로도 송금가능 -->
+				<p class="txt">해외 은행 계좌번호를 몰라도<br>해외 휴대폰 번호로 송금하기</p>
+				<p class="txt small">(필리핀 등 일부 국가 해당)</p><!-- 2019-01-30 문구교체 -->
+				<p class="img1"></p>
+
+				<p class="tit">안전하고 저렴한 수수료</p>
+				<p class="txt"><em>KEB하나은행 시스템으로 송금</em>하지만<br>영업점보다 저렴한 수수료</p>
+				<p class="img3"></p>
+			</div><!-- //sec_foregin_saving -->
+
+			<!-- 18.09.13 -->
+			<!-- sec_foregin_check -->
+			<div class="sec_foregin_check">
+				<p class="tit"> <strong class="num bold">CHECK!</strong></p>
+				<!-- <p class="img">KEB 하나은행, Finnq</p> -->
+				<!-- 20180323 문구추가 -->
+				<ol class="list_info">
+					<li>1. 핀크에 은행 입출금 계좌 등록이 필요합니다.<br>(더보기 &gt; 핀크에 은행 계좌 등록)</li>
+					<li>2. 은행 입출금 계좌가 없는 경우, <br>더보기 &gt; KEB하나은행 비대면 계좌 개설에서<br> 신청할 수 있습니다. </li>
+				</ol>
+			</div><!-- //sec_foregin_check -->
+			<!-- //18.09.13 -->
+
+			<!-- sec_account_cate -->
+			<div class="sec_foregin_cate">
+				<ul class="list_expend">
+					<!-- 송금 미리보기 -->
+					<li>
+						<div class="subject">
+							<a href="#open">송금 미리보기<i></i></a><!-- 20180323 문구변경 -->
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate1">
+								<h1><em class="num bold">1.</em> 송금 국가 선택</h1>
+								<!-- 20180308 국가선택 -->
+								<div class="item soft_select select soft_lang">
+									<!-- 2018-06-14 일본, 인도네시아 추가
+										일본	 img-jp.png
+										인도네시아 img-id.png
+									-->
+
+									<!-- 2019.01.04 Defalt: 캐나다, 캐나다 행 추가-->
+									<!-- Default : 캐나다 -->
+									<p class="ico_lang"><img src="../../images/orsremt/img-ca-gray.png" alt="CA" class="flag_img size-min"></p>
+									<select data-name="inpFocus">
+										<option value="">국가를 선택해 주세요.</option>
+										<option value="">캐나다</option>
+										<option value="">일본</option>
+										<!-- <option value="">호주</option> -->
+										<option value="">필리핀</option>
+										<option value="">태국</option>
+										<option value="">베트남</option>
+										<option value="">인도네시아</option>
+									</select>
+									<!-- //2019.01.04 -->
+								</div>
+
+								<h1><em class="num bold">2.</em> 통화선택 및 금액 입력</h1>
+								<ul class="btn_sellist set_type2">
+									<li><button class="on">현지통화</button></li>
+									<li><button class="">USD</button></li>
+								</ul>
+								<div class="input_wrap col_box pin_num_have item">
+									<span class="item inp_error"><!-- Dev Request : 체크 후 에러인 경우 'inp_error' 클래스 추가 해주세요. -->
+										<input type="text" data-name="inpFocus" placeholder="금액 직접 입력" value="" class="comma_wonhan notwon">
+										<p class="remark">USD 환산 기준 <em class="num">3,000</em>을 초과합니다.</p><!-- 에러일때 hide를 빼주세요. --><!-- 2018-05-18 문구추가 환산기준, Num 추가 -->
+									</span>
+									<span>
+										<button type="button" name="button" class="btn btn_type_f">확인</button><!-- disabled="disabled" -->
+										<!-- <p class="remark show">dddd</p> -->
+									</span>
+								</div>
+								<p class="sub txt_c">
+									송금 제한 안내<br>1회 USD 기준 <span class="num">3,000</span> 이하 / 연간 USD 기준 <span class="num">30,000</span> 이하<br>
+									<span class="txt_gray">타 통화(PHP, VND 등)로 송금시 USD로 환산되어 한도 계산 되며,<br>연간 기준은 매년 <span class="num">1</span>월 <span class="num">1</span>일 ~ <span class="num">12</span>월 <span class="num">31</span>일 입니다.</span>
+								</p>
+
+								<p class="tit_total">예상 금액과 절약 금액</p><!-- 20180323 문구변경 -->
+								<div class="cal total">
+									<div class="tit">총 금액</div><!-- 20180323 문구변경 -->
+									<div class="money"><strong><em class="num bold">263,200</em>원</strong></div>
+								</div>
+								<!-- 20180323 송금 금액 추가 -->
+								<div class="cal">
+									<div class="tit">송금 금액</div>
+									<div class="money"><strong><em class="num bold">250,000</em>원</strong></div>
+								</div>
+								<div class="cal">
+									<div class="tit">송금 수수료</div><!-- 2019.03.25 / 면제 문구 삭제-->
+									<div class="money"><strong><em class="num bold">12,000</em>원</strong></div><!-- 2019.03.25 / <em class="num bold strike"> strike 클래스 삭제-->
+								</div>
+								<div class="cal">
+									<div class="tit">수취 수수료</div><!-- 2019.03.25 / 면제 문구 삭제-->
+									<div class="money"><strong><em class="num bold">1,200</em>원</strong></div><!-- 2019.03.25 / <em class="num bold strike"> strike 클래스 삭제-->
+								</div>
+								<div class="cal type2">
+									<div class="tit">은행 대비 절약 금액</div>
+									<div class="money"><strong><em class="num bold">5,000</em>원</strong></div>
+								</div>
+								<p class="sub txt_l">
+									<span class="txt_gray star_type">송금 수수료 : 해외로 송금시 발생하는 수수료 입니다.</span><!-- 20180308 띄어쓰기 수정 -->
+									<span class="txt_gray star_type">수취 수수료 : 해외 현지 지급처에서 수취시 발생하는 수수료로 보내는 사람이 부담합니다. 캐나다, 필리핀, 인도네시아 현지 은행 송금시, 수취은행에 따라 받으실 분이 추가로 수수료를 낼 수도 있습니다.</span><!-- 문구수정 2019-01-11 ock -->
+									<span class="txt_gray star_type">은행 대비 절약 금액 : 은행연합회에 공시된 KEB하나은행 자료 기준</span><!-- 20180308 항목 추가 -->
+									<span class="txt_gray star_type">환율의 경우 시세변동에 의해 최종 송금 금액이 달라질 수 있습니다.</span><!-- 20180323 항목 추가 -->
+								</p>
+							</div>
+						</div><!-- //detail_set -->
+					</li><!-- //송금 미리보기 -->
+
+					<!-- 해외 송금안내 -->
+					<li>
+						<div class="subject">
+							<a href="#open">해외 송금안내<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate2">
+								<p class="txt">이용 국가</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">캐나다, 필리핀, 태국, 베트남, 일본, 인도네시아, 유럽(프랑스, 독일, 네덜란드, 스페인, 오스트리아, 이탈리아)</li><!-- // 2019.01.30  문구수정 -->
+										<li class="info_type indent">해외 국가 추가 예정</li>
+									</ul>
+								</div>
+								<p class="txt">이용 시간</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent"><em class="num">24</em>시간 / <em class="num">365</em>일</li>
+										<li class="info_type indent">단, 은행 점검시간인 <span class="num">23</span>시 <span class="num">50</span>분부터 <span class="num">00</span>시 <span class="num">30</span>분까지는 송금이 제한됩니다.</li>
+									</ul>
+								</div>
+								<p class="txt">소요 기간</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">보내는 방법에 따라 <span class="num">10</span>분 ~ <span class="num">1</span>영업일 내외 (일본, 태국, 유럽은 <span class="num">2</span>영업일 내외)</li><!-- 2019.01.30 문구수정 -->
+										<li class="info_type indent">보내는 방법에 따라 송금 소요시간이 다르며, 해외 현지 사정에 따라 변동될 수 있습니다.</li><!-- 20180418 문구수정 --><!-- 2018-05-18 문구수정(소요시간, 변동될) -->
+									</ul>
+								</div>
+								<p class="txt">가능 대상</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<!-- 19.01.04 텍스트 수정 -->
+										<li class="dash_type indent">입출금계좌를 핀크에 등록한 만<span class="num">18</span>세 이상의 대한민국 국적 고객<br>더보기 &gt; 핀크에 은행 계좌 등록</li>
+										<!-- //19.01.04 텍스트 수정 -->
+										<li class="info_type indent">입출금 계좌가 없으시다면 핀크에서 개설할 수 있습니다.</li>
+									</ul>
+								</div>
+								<!-- 안내 문구 추가 2018-07-30 -->
+								<p class="txt">송금 한도</p>
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">송금 건별 USD <span class="num">3,000</span> 이하, 연간 USD <span class="num">30,000</span> 이하</li>
+										<li class="info_type indent">연간의 기준은 매년 <span class="num">1</span>월 <span class="num">1</span>일 ~ <span class="num">12</span>월 <span class="num">31</span>일이며, 타 통화는 USD로 환산하여 계산됩니다.</li>
+									</ul>
+								</div>
+
+								<p class="txt">필요 정보</p>
+								<!-- 20180308 문구 수정 -->
+								<div class="bul_guide">
+									<ul class="list_gray">
+										<li class="dash_type indent">받으시는 분의 휴대폰 번호, 영문명, 영문 주소</li>
+										<!-- 19.01.30 -->
+										<li class="info_type indent">은행 계좌로 송금하는 경우 '은행 코드와 계좌 번호' 가 추가로 필요합니다.</li>
+										<li class="info_type indent">유럽국가는 IBAN(International Banking Account Number)이 필요합니다.</li>
+										<li class="info_type indent">영문 주소는 정확히 일치 하지 않아도 송금 가능합니다.</li>
+										<!-- //19.01.30 -->
+									</ul>
+								</div>
+								<p class="txt">수수료</p>
+								<!-- 19.01.30 수수료 수정 -->
+								<table class="tbl_type1 tbl_border mar_t10 no_collapse" summary="국가, 송금수수료, 수취수수료"><!-- txt_c 삭제, no_collapse 추가 2019-01-11 ock -->
+									<caption>수수료</caption>
+									<colgroup>
+										<col style="width:28%">
+										<col style="width:*">
+										<col style="width:*">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">국가</th>
+											<th scope="col">송금수수료</th>
+											<th scope="col">수취수수료</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 2019.01.04 캐나다 행 추가-->
+										<tr>
+											<td><em>캐나다</em><i class="star_black">*</i></td><!-- i 추가 2019-01-11 ock -->
+											<td rowspan="6" class="all_row"><!-- all_row 추가 2019-01-11 ock -->
+												<span class="num">5,000</span>원
+											</td>
+											<td>CAD 송금시 CAD <span class="num">10</span><br>USD 송금시 USD <span class="num">10</span></td>
+										</tr>
+										<tr>
+											<td><em>필리핀</em><i class="star_black">*</i></td><!-- i 추가 2019-01-11 ock -->
+											<td>USD <span class="num">5</span></td>
+										</tr>
+										<!-- //2019.01.04 -->
+										<tr>
+											<td><em>태국, 일본</em></td>
+											<td>USD <span class="num">3</span></td>
+										</tr>
+										<tr>
+											<td><em>베트남</em></td>
+											<td>USD <span class="num">2</span></td>
+										</tr>
+										<!--
+										<tr>
+											<td><em>호주</em></td>
+											<td>AUD <span class="num">16</span></td>
+										</tr>
+										-->
+										<tr>
+											<td><em>유럽</em></td>
+											<td>USD <span class="num">1.5</span></td>
+										</tr>
+										<tr>
+											<td><em>인도네시아</em><i class="star_black">*</i></td><!-- i 추가 2019-01-11 ock -->
+											<td>IDR <span class="num">49,000</span></td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- //19.01.30 수수료 수정 -->
+
+								<!-- 문구추가 2019-01-11 ock -->
+								<p class="sub mar_t13">
+									<span class="txt_black star_type">캐나다, 필리핀, 인도네시아 현지 은행 송금시, 수취은행에 따라 받으실 분이 추가로 수수료를 낼 수도 있습니다.</span>
+								</p>
+								<!-- 20180309 원래위치로 복원(디자인기준) -->
+								<div class="bul_guide mar_t25"><!-- class 변경 2019-01-11 ock -->
+									<ul class="list_gray">
+										<!-- 20180315 줄바꿈제거(저해상도고려) -->
+										<!-- <li class="info_type indent">수수료는 송금수수료와 수취수수료를 합산하여 청구합니다. 송금수수료는 USD로 환산된 금액 기준으로 계산합니다. 수취수수료는 해외 현지 지급처에 지급하는 수수료로 보내시는 분이 부담합니다.</li> --><!-- 20180313 수수료로, (콤마)제거 -->
+
+										<!-- 2019.01.04 -->
+										<li class="info_type indent">수수료는 송금수수료와 수취수수료를 합산하여 보내시는 분이 부담합니다. 수취수수료는 송금 시 고시 환율을 기준으로 원화로 계산됩니다.</li>
+									</ul>
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //해외 송금안내 -->
+
+					<!-- 유의사항 -->
+					<li>
+						<div class="subject">
+							<a href="#open">유의사항<i></i></a>
+						</div><!-- //subject -->
+
+						<div class="detail_set">
+							<div class="con cate3">
+								<div class="bul_guide">
+									<!-- 2019.01.30 순서 및 문구 추가 -->
+									<ul class="list_gray">
+										<li class="dash_type indent">해외 송금은 신청 완료 후 변경 및 취소할 수 없습니다.</li>
+										<li class="dash_type indent">송금 금액 및 수수료를 출금할 수 있는 본인명의 은행 입출금 계좌가 핀크에 연결되어 있어야 합니다.</li>
+										<li class="dash_type indent">수취인 영문명, 휴대전화번호, 수취은행 코드, 수취은행 계좌번호 등을 정확히 입력하여야 합니다.</li>
+										<li class="dash_type indent">수취인 영문주소는 필수입력사항이긴 하나 해외송금 오류 발생 시 확인을 위한 추가 정보로서 정확히 일치하지 않아도 송금 가능합니다.</li>
+										<li class="dash_type indent">송금이 반환(퇴결)되는 경우 서비스 신청 당시 출금된 수수료는 반환되지 않습니다.</li>
+										<li class="dash_type indent">송금이 반환(퇴결)되는 과정에서 해외금융기관에서 비용이 발생한 경우에는 해당 비용이 차감된 금액이 반환됩니다.</li>
+										<li class="dash_type indent">반환(퇴결)시에는 송금 자금이 다시 입금되는 시점의 환율이 적용되어 환율 차이로 인한 손해(환차손)가 발생할 수 있습니다.</li>
+										<li class="dash_type indent">일본, 베트남, 태국 송금시 법인 앞 송금은 제한됩니다.</li>
+										<li class="dash_type indent">연간 송금 합계 금액이 미화 <em class="num">10,000</em>불을 초과할 경우에는 국세청장 및 금융감독원장 통보 대상입니다.</li><!-- 2018-03-21 10,000 숫자에 클래스 num 추가 phj -->
+										<li class="dash_type indent">소액이라도 해외 부동산 취득, 해외 직접 투자, 해외 주식 취득, F/X마진거래를 포함한 파생상품 거래 목적 자금은 송금하실 수 없습니다.<br>(한국은행 등 대외기관의 신고 또는 허가를 받으시고 일반 은행을 통해서 송금하실 수 있습니다.)</li>
+										<li class="dash_type indent">자금세탁방지 관련 법령에 의거, 특정 경우에는 송금이 불가할 수 있습니다.</li>
+										<li class="dash_type indent">부정확한 정보 입력으로 인하여 발생하는 송금 지연, 수취 거절, 송금 반환, 오류 송금 등으로 생기는 손해는 고객 부담입니다.  </li>
+										<li class="dash_type indent">핀크 시스템 오류 등 핀크의 귀책으로 발생된 반환(퇴결)은 수수료를 반환해 드립니다.</li>
+										<!-- 20180309 구조변경 -->
+										<li class="info_type indent">[불법&middot;탈법&middot;차명거래 금지 설명 확인] 금융실명거래 및 비밀보장에 관한 법률 제3조 제3항에 따라, 불법재산의 은닉, 자금세탁행위, 공중 협박자금 조달 행위 및 강제집행의 면탈, 그 밖의 탈법행위를 목적으로 타인의 실명으로 금융거래를 하여서는 안됩니다. 이를 위반시 5년 이하의 징역 또는 5천만원 이하의 벌금에 처할 수 있습니다.</li>
+									</ul>
+									<!-- //2019.01.30 순서 변경 -->
+								</div>
+							</div><!-- //con -->
+						</div><!-- //detail_set -->
+					</li><!-- //유의사항 -->
+
+				</ul><!-- //list_expend -->
+			</div><!-- //sec_account_cate -->
+
+			<!-- sec_sns_share
+			20180316 SNS공유하기 기능삭제
+			20180315 SNS공유하기 컨텐츠변경
+			<div class="sec_sns_share">
+				<div class="cont_wrap">
+					<p class="txt">핀크의 좋은 혜택을 친구에게<br>SNS로 공유해 보세요 :)</p>
+				</div>
+				<button type="button" class="btn btn_type_j"><i class="ico ico_share"></i> 공유하기</button>
+			</div>
+			//sec_sns_share -->
+		</section><!-- //account_main -->
+
+		<!-- 하단 붙임 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_apply">송금하기</button>
+		</div><!-- //하단 붙임 -->
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+
+<script>
+$(document).ready(function(){
+	//퍼플 탭버튼
+	$(".btn_sellist").on("click", "button", function() {
+		var btn = $(this);
+		btn.addClass("on").parent().siblings().find("button").removeClass("on");
+	});
+});
+</script>
+
+</body>
+</html>

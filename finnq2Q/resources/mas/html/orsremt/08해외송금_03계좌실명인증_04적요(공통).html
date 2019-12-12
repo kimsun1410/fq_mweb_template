@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap" id="MASB04Z01">
+	<div id="contents" class="market add_sticky">
+		<section class="transfer_agree">
+			<div class="sec_title">
+				<h2>계좌 인증</h2>
+				<p class="guide_txt">
+					<em>선택하신 계좌(<span class="num">KEB</span>하나 <span class="num">570702</span>********)</em>로<br><strong><span class="num">1</span>원</strong>을 보냈습니다.
+				</p>
+			</div>
+
+			<div class="deposit_name round_box">
+				<p class="txt">입금자 <strong><i class="num bold">Finnq</i> 뒤 숫자 <i class="num bold">3</i>자리</strong>를 입력해 주세요.</p>
+				<div class="regist">
+					<span class="num bold">Finnq</span>
+					<span class="inp_resident img_password">
+						<input type="password" data-name="resident_num" placeholder="" maxlength="3">
+						<div class="resident_dot"></div>
+					</span>
+				</div>
+
+				<div class="clearfix">
+					<span class="fl limit star_type"> 인증번호 유효시간 : 10분</span>
+					<span class="fr limit star_type purple-blue"> 은행 일일 점검 시간 확인 불가</span>
+				</div>
+				<p class="img_ex">예제</p>
+			</div>
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+
+<script>
+$(document).ready(function(){
+	var residentNum = function () {
+		// 주민번호 앞자리
+		$('input:password[data-name="resident_num"]').on('keydown change', function(e){
+		var imgSum = $('.resident_dot span').length;
+			if ( e.keyCode == 8) {
+				$('.resident_dot span:last').remove();
+			} else {
+				if( imgSum == 3 ) { return false ; }
+				$('.resident_dot').append("<span></span>");
+			}
+		});
+	};	residentNum();
+});
+</script>
+
+</body>
+</html>

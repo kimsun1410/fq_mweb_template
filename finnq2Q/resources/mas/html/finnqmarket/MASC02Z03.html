@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>10핀크카드_03관리_web_MASC02Z03</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- //Modify : bg_list추가 -->
+	<div id="contents" class="market"><!-- //add_sticky 하단 버튼 있는 경우 -->
+		<section class="fqsave fqsave_detail finnqcard_manage">
+
+			<div class="sec_title">
+				<h2 class="subject">핀크카드</h2>
+				<!-- <p class="guide_txt">하나카드 제휴상품</p> --><!-- 18.11.12 삭제 -->
+			</div>
+			<div class="sec_insinfo"><!-- installment info, 적금상세정보 -->
+				<div class="ins_info tfiinq add_dotline">
+					<ul>
+						<li class="card">
+							<div class="tit">카드 번호</div><!-- 18.11.12 문구 변경 -->
+							<div class="info">
+								<em class="num masking">1234-<span>****</span>-<span>****</span>-7890</em>
+							</div>
+						</li>
+						<li class="make">
+							<div class="tit">최초 발급일</div>
+							<div class="info">
+								<em class="date">2018.11.03</em>
+							</div>
+						</li>
+						<!-- 사용 한도 추가 2018-11-29 ock -->
+						<li class="make">
+							<div class="tit">사용 한도</div>
+							<div class="info">
+								<em class="num">1회 50만원 / 월 500만원</em>
+							</div>
+						</li>
+						<li class="point">
+							<div class="tit">총 누적 적립금</div>
+							<div class="info">
+								<em class="cash">11,623</em>원
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!-- //sec_insinfo -->
+
+			<div class="sec_history twoplus">
+				<div class="account_summary mylistup">
+					<ul class="summary">
+						<li class="category">카드 설정</li><!-- 18.11.12 문구 변경 -->
+					</ul>
+					<!-- 18.09.17 -->
+					<ul class="summary_list">
+						<li class="title">
+							<strong>일시 정지</strong>
+						</li>
+						<li class="switch info">
+							<input type="checkbox" id="chkVal" class="switch_basic">
+							<label class="switch_basic_btn" for="chkVal"></label>
+						</li>
+					</ul>
+
+					<!-- 19.01.22 문구 변경 및 툴팁 문구 변경-->
+					<ul class="summary_list add_help">
+						<li class="title">
+							<strong>잔액 부족 시 자동충전</strong>
+							<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">자세히 보기</span></button>
+							<div class="layer_wrap">
+								<p>핀크계좌 <strong>잔액이 부족</strong>할 경우, 송금/핀크카드 결제에 한해<br class="ios320 close">
+                                부족한 금액의 1만원 단위로 <strong>자동충전하여 거래를 진행</strong>하며,<br class="ios320 close">
+                                카드 및 단말기 분실 시에도 자동충전될 수 있습니다.</p>
+							</div>
+						</li>
+						<li class="switch info">
+							<input type="checkbox" id="chkVal2" class="switch_basic">
+							<label class="switch_basic_btn" for="chkVal2"></label>
+						</li>
+					</ul>
+					<!-- //19.01.22 -->
+				</div>
+			</div>
+
+			<!-- 18.11.12 마크업 변경 변경 -->
+			<div class="sec_history twoplus">
+				<div class="account_summary mylistup">
+					<ul class="summary">
+						<li class="category">분실 및 해지 문의</li>
+					</ul>
+
+					<ul class="summary_list">
+						<li class="title">
+							<strong>하나카드 고객센터</strong>
+						</li>
+						<li class="info">
+							<a href="tel:1800-1111" class="tel"><span class="ico ico_tel"><span class="blind">클릭하여 전화걸기</span></span><em class="num">1800-1111</em></a>
+						</li>
+					</ul>
+					<!-- //18.09.17 -->
+				</div>
+			</div><!-- //sec_history -->
+
+
+		</section>
+		<!-- 하단 붙임 -->
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+
+});
+</script>
+</body>
+</html>

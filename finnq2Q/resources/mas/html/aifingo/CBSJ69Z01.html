@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>03예산설정_01_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="CBSJ69Z01"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo"><!-- add_sticky 삭제 -->
+
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" name="button" class="btn_select btn_type_a open_modal" data-triger="CBSJ69Z01" data-mtype="fullpop">03예산설정_03_web_CBSJ69Z01 full popup</button>
+			</span>
+		</div>
+
+		<div id="CBSJ69Z01" class="modal_wrap fullpop spend_target visible"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content add_sticky"><!-- 개별 팝업 Class pop_direct_input -->
+
+				
+				<div class="scroll_wrap" style="">
+					<section class=""><!-- 소비목표 -->
+
+						<div class="sec_title">
+							<h3 class="f_bold"><!-- 2018-01-23 bold 처리 phj -->
+								<!-- <em class="cash bold">2017</em>년 <em class="cash bold">11</em>월  -->소비목표액을<br/><strong class="f_bold"><em class="cash bold">10,000</em>원</strong>으로 설정합니다.
+							</h3><!-- 2018-02-12 날짜 삭제 phj -->
+						</div><!-- //sec_title -->
+
+						<div class="sec_setting">
+							<!-- 반복문 -->
+							<ul class="set_target">
+								<li class="custom">
+									<div class="form_wrap"><input type="radio" id="aa1" name="ryellow"/><label for="aa1"><span>직접입력</span></label></div>
+									<div class="user"><input type="tel" placeholder="" class="comma_wonhan notwon" disabled="disabled"><i>원</i></div>
+								</li>
+								<li >
+									<div class="form_wrap"><input type="radio" id="aa2" name="ryellow" checked="checked" /><label for="aa2"><span>최근 2개월 평균 소비</span></label></div>
+									<div class="avg"><em class="cash">2,200,000</em>원</div>
+								</li>
+								<li >
+									<div class="form_wrap"><input type="radio" id="aa3" name="ryellow" /><label for="aa3"><span>지난달 총 수입</span></label></div>
+									<div class="avg"><em class="cash">2,200,000</em>원</div>
+								</li>
+								<li >
+									<div class="form_wrap"><input type="radio" id="aa4" name="ryellow" /><label for="aa4"><span>지난달 급여</span></label>
+										<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+										<div class="layer_wrap"><p>급여는 말이죠 블라블라블라 설명과함께 링크가 들어갑니다.</p></div>
+										<!-- 
+											그래서 블라블라 문구는 언제 줄껀데, 팀킬할 수 도 없고.
+											문구 내 하이퍼링크 선택 시 자산내역_상세(자유입출금) > 입금내역_리스트 (계좌) 화면으로 이동
+										-->
+									</div>
+									<div class="avg"><em class="cash">2,200,000</em>원</div>
+								</li>
+								<li >
+									<div class="form_wrap"><input type="radio" id="aa5" name="ryellow" disabled="disabled" /><label for="aa5"><span>홈택스 수입분석</span></label>
+										<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+										<div class="layer_wrap">
+											<p>홈텍스 수입분석 관련 도움말입니다.</p>
+										</div>
+									</div>
+									<!-- <div class="avg"><em class="cash">2,200,000</em>원</div> -->
+								</li>
+							</ul><!-- //set_target -->
+
+						</div><!-- //sec_setting -->
+
+					</section>
+				</div>
+
+				<!-- sticky_wrap place -->
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_type_apply">완료</button>
+				</div>
+
+
+			</div>
+		</div>
+
+
+		
+		
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//탈퇴이유 직접 입력
+	$(".set_target .form_wrap input[type=radio]").on('click',function(){
+		var reason = $(this).parents('.set_target').find('.custom input[type=tel]');
+		if($(".set_target .custom input[type=radio]").is(":checked")){
+			reason.prop("disabled",false).focus();
+		} else {
+			reason.prop("disabled",true).blur();
+		}
+	});
+	
+});
+</script>
+</body>
+</html>

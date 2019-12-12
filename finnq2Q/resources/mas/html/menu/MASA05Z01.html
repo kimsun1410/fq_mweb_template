@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>03전체메뉴_02보안/설정_02탈퇴하기_01탈퇴하기</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="MASA05Z01">
+	<div id="contents" class="common add_sticky">
+
+		<section class="member_out agree_check">
+			
+			<div class="sec_title">
+				<h3 class="accent_txt">정말 Finnq를<br /><strong>탈퇴하실건가요?</strong></h3>
+				<p class="guide_txt">탈퇴일 포함 3일 동안 재가입이 불가하며,<br>
+				재가입 시에도 이용 내역은 복구되지 않습니다.</p>
+			</div>
+
+			<div class="round_box">
+				<ul class="bul_guide">
+					<li class="dash_type indent">탈퇴 고객의 개인정보는 관련 법령에 따라 일정 기간 
+안전하게 보관되며, 그 이후 자동 파기됩니다.</li>
+					<li class="dash_type indent">탈퇴 최종 확인은 비밀번호 인증으로 진행됩니다.</li>
+				</ul>
+			</div>
+
+			<div class="sec_agree">
+				<ul>
+					<li class="agree_wrap">
+						<input type="checkbox" id="purpleTwo1" name="test-img" class="purple"><label for="purpleTwo1" name="test-img"><span>유의사항을 모두 확인했습니다.</span></label>
+					</li>
+				</ul>
+
+				<!-- <div class="agree_wrap">
+					<input type="checkbox" id="purpleTwo1" name="test-img" class="purple"><label for="purpleTwo1" name="test-img"><span>유의사항을 모두 확인했습니다.</span></label>
+					<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+				</div> div 태그 변경해도 됨 -->
+
+			</div><!-- //sec_agree -->
+
+			<!-- <div class="sec_notice bul_guide">
+				<ul>
+					<li class="dash_type indent">탈퇴 고객의 개인정보는 관련 법령에 따라 일정 기간 안전하게 보관되며, 그 이후 자동 파기됩니다.</li>
+					<li class="dash_type indent">탈퇴일 포함 3일 동안 재가입이 불가하며, 재가입 시에도 이용 내역은 복구되지 않습니다.</li>
+					<li class="dash_type indent">탈퇴 프로세스는 비밀번호 인증 방식으로 진행됩니다.</li>
+				</ul>
+			</div> -->
+
+			<div class="sec_secede_form">
+				<h2><strong>탈퇴 이유</strong>를 알려주세요.<br>
+				더욱 노력하는 <em class="num">Finnq</em>가 되겠습니다.</h2>
+
+				<ul class="reason_list">
+					<li>
+						<input type="radio" id="secede_r1" name="secede_r" checked="checked"><label for="secede_r1"><span>신뢰도가 낮음</span></label>
+					</li>
+					<li>
+						<input type="radio" id="secede_r2" name="secede_r"><label for="secede_r2"><span>이벤트때문에 가입 후 탈퇴</span></label>
+					</li>
+					<li>
+						<input type="radio" id="secede_r3" name="secede_r"><label for="secede_r3"><span>쓸만한 서비스가 없음</span></label>
+					</li>
+					<li>
+						<input type="radio" id="secede_r4" name="secede_r"><label for="secede_r4"><span>다른 유사 서비스 이용</span></label>
+					</li>
+					<li class="custom">
+						<input type="radio" id="secede_r5" name="secede_r"><label for="secede_r5"><span></span></label>
+						<input type="text" data-name="inpFocus" placeholder="직접 입력" class="" disabled="disabled">
+					</li>
+				</ul>
+			</div><!-- //sec_secede_form -->
+
+		</section>
+		<!-- 하단 붙임 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">탈퇴하기</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+
+
+
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	//유의사항 확인 체크 시 하단 탈퇴이유 박스 보임
+	$('.member_out .sec_agree .agree_wrap input').on('click',function(){
+		if($(this).is(":checked")){$(".sec_secede_form").fadeIn();}
+		else {$(".sec_secede_form").fadeOut();}
+	});
+
+	//탈퇴이유 직접 입력
+	$(".sec_secede_form input[type=radio]").on('click',function(){
+		var reason = $(this).parents('.sec_secede_form').find('.custom input[type=text]');
+		if($(".sec_secede_form .custom input[type=radio]").is(":checked")){
+			reason.prop("disabled",false).focus();
+		} else {
+			reason.prop("disabled",true).blur();
+		}
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>03전체메뉴_02보안설정_02탈퇴하기_04계좌환금안내</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="MASA05Z05"> <!-- 2018-03-09 bg_list 클래스 삭제 -->
+	<div id="contents" class="common add_sticky">
+		<section class="account_delete">
+			
+			<div class="sec_title">
+				<h3 class="accent_txt">탈퇴 시, 핀크계좌는 삭제됩니다.<br />계좌의 <strong>잔액을 모두 이체</strong>해 주세요.</h3>
+			</div>
+
+
+			<div class="sec_input">
+				<dl class="input_wrap">
+					<dt class="input_tit">
+						<strong>총 잔액</strong>
+					</dt>
+					<dd class="flex_wrap set_type1"> <!-- 1개 -->
+						<span class="item"><input type="text" data-name="inpFocus" placeholder="" class="comma" value="2,000,000" disabled="disabled"></span>
+						<p class="kor_txt">원</p>
+						<p class="inp_remark">핀크계좌 : 1,000,000원 / 습관저금계좌 : 1,000,000원</p>
+					</dd>
+				</dl>
+
+				<dl class="input_wrap">
+					<dt class="input_tit">
+						<strong>이체 계좌</strong>
+					</dt>
+					<dd class="flex_wrap set_type1"> <!-- 1개 -->
+						<span class="item"><input type="text" data-name="inpFocus" placeholder="" value="KEB하나 987-65-43210123" class="" disabled="disabled"></span>
+						<div class="btn_right"> <button class="btn btn_type_g">계좌 변경</button><button class="btn btn_type_g">직접입력</button></div>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- <div class="sec_impossible_list">
+				<ul>
+					<li>
+						<a href="#none">이체하기</a>
+					</li>
+				</ul>
+			</div> --><!-- 2018-03-09 삭제 phj -->
+
+			<div class="sec_desc">
+				<p class="error_star_type">‘이체하기’ 선택 시, 습관저금액은 핀크 계좌로 옮겨지고, 모든 레시피가 삭제됩니다.</p>
+			</div>
+
+
+			
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">이체하기</button><!-- 2018-03-09 버튼명 변경 phj -->
+		</div>
+
+		
+		
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".toggle_list > dt > a").on("click", function(){
+		$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+});
+</script>
+</body>
+</html>

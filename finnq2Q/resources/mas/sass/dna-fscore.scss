@@ -1,0 +1,124 @@
+@charset 'UTF-8';
+/* F 스코어 */
+#contents > section.fscore_wrap{background:#eee}
+/* fscore_head */
+.fscore_head{padding:0 0 45px;background:#fff;border-bottom:1px solid $white_two;margin-bottom:4px;}
+
+.fscore_head .fsc_tit{margin-top:36px;padding:0 20px;font-size:24px;line-height:28px;text-align:center;font-family:"AppleSDGothicNeo-Light", "LatoL";white-space: pre-line;}
+.fscore_head .fsc_score{position:relative;margin-top:10px;text-align:center}
+.fscore_head .fsc_score > .num{padding-right:3px;font-size:40px;line-height:40px;color:$purply_blue}
+.fscore_head .fsc_score > .num + span{font-size:20px;color:$purply_blue;vertical-align:2px;font-weight:bold}
+.fscore_head .fsc_score > .ico_circle_help{margin-left:6px;margin-top:-10px;}
+.fscore_head .fsc_score > .layer_wrap{top:49px;}
+.fscore_head .fsc_detail{}
+
+/* 상단 구분선 정보 영역 */
+.fsc_detail{position:relative;margin:10px 20px 0}
+.fsc_detail > ul::after{content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.fsc_detail > ul > li{position:relative;float:left;display:inline-block;padding-top:25px;text-align:center;}
+.fsc_detail > ul > li.border::before{content:'';display:inline-block;position:absolute;top:30px;left:0;width:1px;height:calc(100% - 30px);background:$white_three}
+.fsc_detail > ul > li.border::after{content:'';display:inline-block;position:absolute;bottom:0px;left:0;width:1px;height:5px;background:$white}
+.fsc_detail > ul > li{width:33.33%;}
+.fsc_detail > ul > li > strong{font-size:20px}
+.fsc_detail > ul > li > p{font-size:14px;color:$warm_grey}
+
+/* F 스코어 컨텐츠 */
+.fscore_head{position:static;top:auto;left:0;right:0;z-index:40}
+.fscore_head.hide{position:absolute;}
+.fscore_tab{position:fixed;top:-56px;left:0;right:0;z-index:60;}
+.fscore_tab.fixed{top:0;}
+/* .fscore_cont .score_info.active{padding-top:95px;} */
+
+.fscore_cont{position:relative;z-index:40}
+.fscore_cont .score_info{position:relative;padding:45px 20px;background:$white_four;border-top:1px solid $white_two;border-bottom:1px solid $white_two;-webkit-transition:padding-top 0.5s; -moz-transition:padding-top 0.5s; -o-transition:padding-top 0.5s; transition:padding-top 0.5s;}
+.fscore_cont .score_info + .score_info{margin-top:4px}
+.fscore_cont .score_info .score_label{/* padding:0 10px;min-width:63px; */width:63px;margin:0 auto;height:20px;border-radius:15px;background:$white_two;color:$white;font-size:11px;line-height:20px;text-align:center;box-sizing:border-box;}
+.fscore_cont .score_info .title {padding-top:18px;font-size:24px; text-align:center; color:$purply_blue;}
+.fscore_cont .score_info .title strong{padding-left:15px;font-size:24px;}
+/* .fscore_cont .score_info .title span{font-weight:bold} */
+.fscore_cont .score_info .trait_ment {margin-top:16px;font-size:18px; text-align:center; color:$black;white-space: pre-line;}
+.fscore_cont .score_info .advice_ment {margin-top:6px;font-size:14px; text-align:center; color:$warm_grey}
+
+.fscore_cont .score_info .money_box{margin-top:28px;border:1px solid $warm_grey;background:$white;padding:15px 20px}
+.fscore_cont .score_info .money_box dl{overflow:hidden;height:22px;}
+.fscore_cont .score_info .money_box dl dt{float:left;height:22px;font-size:16px;line-height:22px}
+.fscore_cont .score_info .money_box dl dd{float:right;height:22px;font-size:16px;line-height:22px;font-weight:bold}
+/* 나의 소득 대비 저축 수준 */
+.fscore_cont .score_info .my_saving_level{padding-bottom:0}
+.fscore_cont .score_info .my_saving_level .sub_title{margin-bottom:75px}
+/* 나의 금융자산 레벨 */
+.fscore_cont .score_info .my_asset_level.add_dotline3:before{top:auto;bottom:0}
+
+
+/* 사용자 정보 (삭제됨) */
+.fscore_cont .score_info .score_user_info{position:absolute;top:9px;right:20px;font-size:11px;color:$pinkish_grey}
+
+.fscore_cont .graph_wrap {margin-top:18px;}
+.fscore_cont .graph_wrap + .star_type {margin-top:22px;}
+.fscore_cont .graph_wrap:after {display:block; clear:both; content:"";}
+.fscore_cont .graph_wrap li {float:left; margin-left:calc(( 100% - 250px ) / 4);width:50px;}
+.fscore_cont .graph_wrap li:first-of-type {margin-left:0;}
+.fscore_cont .graph_wrap li span {display: block; position:relative; width: 50px; height: 50px; border-radius: 50%; background: $white; color: $white_two; text-indent: 0; text-align: center; line-height: 50px; font-size: 28px; font-family:"LatoB" !important; }
+.fscore_cont .graph_wrap li.on span {background: $purply_blue; color: $white;}
+.fscore_cont .graph_wrap li.on span:after {content: ""; display: block; margin-left: 20px; margin-top: -1px; width: 0px; height: 0px; border-top: 8px solid $purply_blue; border-bottom: none; border-right: 5px solid transparent; border-left: 5px solid transparent;}
+.fscore_cont .graph_wrap li p {margin-top:10px; text-align:center; font-size:11px; color:$warm_grey;}
+.fscore_cont .graph_wrap li.on p {color:$bluish_purple;}
+
+.finance_graph {padding:0px 40px 0px 27px;}
+.finance_graph .graph_wrap {position:relative;background:$white_three;border-radius:1.5px;}
+.finance_graph .graph_wrap:before,
+.finance_graph .graph_wrap:after {display:none}
+.finance_graph .graph_wrap .graph_group:after {content:''; clear:both; display:block;}
+.finance_graph .graph_wrap .graph_group {position:relative; height:3px;}
+.finance_graph .graph_wrap .item{position:absolute; top:0; width:100%; height:100%;}
+.finance_graph .graph_wrap .item.percent{right:0}
+.finance_graph .graph_wrap .item.percent .bar {background-color:$bluish_purple;border-radius:1.5px;}
+.finance_graph .graph_wrap .item .label_value {position: absolute; top: 50%; margin-top: -15px; display: inline-block; line-height: 30px;height: 30px; text-align: center; font-size: 11px; font-family: 'LatoM' !important;letter-spacing: 0;}
+.finance_graph .graph_wrap .item .label_value._left{left: -25px; width: 17px;}
+.finance_graph .graph_wrap .item .label_value._right{right: -40px; width: 32px;}
+.finance_graph .graph_wrap .item .bar {position:relative;display:block; text-indent:-999em; width:0; height:100%;border-radius:2.5px; -webkit-transition:width 0.8s; -moz-transition:width 0.8s; -o-transition:width 0.8s; transition:width 0.8s;z-index:10}
+.finance_graph .graph_wrap .item .bar strong{position:absolute;bottom:14px;right:0;display:block;margin-right:-25px;width:50px;height:50px;border-radius:50%;background:$purply_blue;color:$white;text-indent:0;text-align:center;line-height:50px;font-size:18px;opacity:0}
+.finance_graph .graph_wrap .item .bar strong:after{content:"";display:block;margin-left:20px;margin-top:-1px;width:0px;height:0px;border-top:8px solid $purply_blue;border-bottom:none;border-right:5px solid transparent;border-left:5px solid  transparent;}
+/* data-guide 초과 한경우 */
+.finance_graph .graph_wrap .item .bar.orange{background-color:#f74b20}
+.finance_graph .graph_wrap .item .bar.orange strong{background-color:#f74b20}
+.finance_graph .graph_wrap .item .bar.orange strong:after{border-top:8px solid #f74b20;}
+.finance_graph .graph_wrap .item .bar.yellow{background-color:#ffdb15}
+.finance_graph .graph_wrap .item .bar.yellow strong{background-color:#ffdb15}
+.finance_graph .graph_wrap .item .bar.yellow strong:after{border-top:8px solid #ffdb15;}
+/* .finance_graph .graph_wrap .item .bar.red{background-color:#ff0000}
+.finance_graph .graph_wrap .item .bar.red strong{background-color:#ff0000}
+.finance_graph .graph_wrap .item .bar.red strong:after{border-top:8px solid #ff0000;} */
+.finance_graph .graph_wrap .item.percent .guide_bar.purply{background-color:#731aed;z-index:10;border-radius:1.5px 0 0 1.5px}
+.finance_graph .graph_wrap .item.percent .guide_bar.purply:before{content:"";display:block;position:absolute;width:1px;height:3px;background:#eee;z-index:15;right:0;top:0}
+.finance_graph .graph_wrap .item.percent .guide_bar{text-indent:0;text-align:right; margin-top:-3px;background-color:#aa96f2;z-index:5; -webkit-transition:all 0s; -moz-transition:all 0s; -o-transition:all 0s; transition:all 0s;}
+.finance_graph .graph_wrap .item.percent .guide_bar:after{content:"";display:block;position:absolute;top:9px;right:0;width:1px;height:45px;background:url(../images/dna/bg_guide_bar.png) repeat-y 0 0; background-size:1px auto;}
+.finance_graph .graph_wrap .item.percent .guide_bar em{position:absolute;bottom:-30px;right:-57px;display:inline-block;color:#aa96f2;width:50px;text-align:left;/* width:calc(100% - 10px); */word-break:keep-all;}
+.finance_graph .graph_wrap .item.percent .guide_bar strong{/* width:calc(100% - 10px); */height:auto;color:#aa96f2;background-color:transparent;bottom:-50px;right:-57px;margin-right:0;text-align:left;line-height:22px;word-break:keep-all;}
+.finance_graph .graph_wrap .item.percent .guide_bar strong:after{display:none}
+
+.finance_graph .graph_wrap .item.percent .guide_bar.left em{right:10px;text-align:right}
+.finance_graph .graph_wrap .item.percent .guide_bar.left strong{right:10px;text-align:right}
+
+.fscore_cont .score_info > dl{position:relative;padding:28px 0;}
+.fscore_cont .score_info > dl dt{text-align:center;font-size:16px;white-space: pre-line;}
+.fscore_cont .score_info > dl dd .list_type{margin-top:28px}
+.fscore_cont .score_info > dl + dl{padding-bottom:0}
+.fscore_cont .score_info > dl + dl > dd{padding-top:60px}
+
+.score_info.incom .finance_graph{padding:0px 27px 0px 40px;}
+.score_info.incom .finance_graph .graph_wrap .item .label_value._left{left: -40px; width: 32px;}
+.score_info.incom .finance_graph .graph_wrap .item .label_value._right{right: -25px; width: 17px;}
+
+.score_info.spend .finance_graph,
+.score_info.save .finance_graph{padding:0px 40px 47px 27px;}
+
+.fscore_cont .score_info.bg_white{background:$white}
+.fscore_cont .score_info.bg_white .graph_wrap li span{background:$white_four;color:$white_two}
+.fscore_cont .score_info.bg_white .graph_wrap li.on span{background:$purply_blue;color:$white}
+
+.guide_round_box{margin-top:28px;border:1px solid $white_three;border-radius:8px;background:$white_four;padding:28px 20px 30px}
+.guide_round_box .guide_text{font-size:16px;line-height:20px;text-align:center}
+.guide_round_box .guide_text > strong{color:$clear_blue}
+.guide_round_box .view_more{margin-top:16px;text-align:center}
+.guide_round_box.bg_white{background:$white;}

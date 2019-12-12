@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>해외송금_환율변동</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASP04Z10">환율변동</button>
+			</span>
+		</div>
+
+		<div id="MASP04Z10" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt"><strong>환율이 변동</strong>되었습니다.<br>변동된 환율을 적용하시겠습니까?</h3>
+					<div class="round_box box_detail_alert txt_l">
+						<!-- 20180320 bold 제거 -->
+						<div class="txt_wrap">
+							변동 전 환율 : <em class="num">0,000</em><br><!-- 20180418 원 삭제 -->
+							변동 후 환율 : <em class="num">0,000</em>
+						</div>
+						<div class="txt_wrap warm_grey line_dash">
+							송금 금액 : PHP <em class="num">0,000</em><br>
+							원화 : KRW <em class="num">0,000</em><br>
+							<!-- 수수료 : KRW <em class="num">0,000</em><br> 2018-06-04 수수료면제(일시적용) -->
+							수수료 : 면제<br><!-- 2018-06-04 수수료면제(일시적용) -->
+							인출 금액 : KRW <em class="num">0,000</em>
+						</div>
+					</div>
+				</div>
+
+				<!-- 20180313 취소추가,set_type2 수정 -->
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn_type_f close_modal">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="btn_type_f close_modal">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

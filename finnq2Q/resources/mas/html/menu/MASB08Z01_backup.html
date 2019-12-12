@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08계좌설정_02등록계좌관리_리스트</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" /><!-- 메뉴에 있는 계좌 관련 페이지는 myfinnq 불러옴 2018-03-28 ock -->
+</head>
+<body>
+<div class="wrap bg_list" id="MASB08Z01">
+	<div id="contents" class="myfinnq">
+		<section class="setting_account">
+			<div class="sec_title">
+				<h2>계좌 관리</h2>
+				<!-- 문구변경 18.11.22 -->
+				<p class="guide_txt">계좌를 등록, 삭제하거나<br>주계좌를 변경할 수 있습니다.</p>
+			</div>
+			<ul class="list_expend charge">
+				<li>
+					<div class="subject">
+						<a href="#open">
+							<strong>KEB하나 <em class="marsking">158<span>*******</span>4007</em></strong>
+							<i></i>
+						</a>
+					</div><!-- //subject -->
+					<div class="detail_set">
+						<div class="con">
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">주계좌로 설정</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">등록계좌 삭제</button></span>
+							</div>
+						</div><!-- //con -->
+					</div><!-- //detail_set -->
+				</li>
+				<li class="re_err">
+					<div class="subject">
+						<a href="#open">
+							<strong>KEB하나 <em class="marsking">158<span>*******</span>4007</em></strong>
+							<div class="label_wrap">
+								<span class="on">주계좌</span>
+								<span>대출약정</span>
+								<span>자동채우기</span>
+							</div>
+							<div class="label_wrap error">
+								<button type="button" class="btn_re_confirm">재인증</button>
+								<p class="info">본인인증 유효기간(1년)이 만료되어 해당 계좌 사용이 불가능합니다. 재인증하거나 계좌를 삭제해 주세요.</p>
+							</div>
+							<i></i>
+						</a>
+					</div><!-- //subject -->
+					<div class="detail_set">
+						<div class="con">
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e" disabled="disabled">주계좌로 설정</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">등록계좌 삭제</button></span>
+							</div>
+						</div><!-- //con -->
+					</div><!-- //detail_set -->
+				</li>
+				<li>
+					<div class="subject">
+						<a href="#open">
+							<strong>KEB하나 <em class="marsking">158<span>*******</span>4007</em></strong>
+							<i></i>
+						</a>
+					</div><!-- //subject -->
+					<div class="detail_set">
+						<div class="con">
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">주계좌로 설정</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">등록계좌 삭제</button></span>
+							</div>
+						</div><!-- //con -->
+					</div><!-- //detail_set -->
+				</li>
+				<li>
+					<div class="subject">
+						<a href="#open">
+							<strong>KEB하나 <em class="marsking">158<span>*******</span>4007</em></strong>
+							<div class="label_wrap">
+								<span>대출약정</span>
+							</div>
+							<i></i>
+						</a>
+					</div><!-- //subject -->
+					<div class="detail_set">
+						<div class="con">
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">주계좌로 설정</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">등록계좌 삭제</button></span>
+							</div>
+						</div><!-- //con -->
+					</div><!-- //detail_set -->
+				</li>
+			</ul><!-- //list_expend -->
+
+			<div class="sec_bank_add"><!-- 계좌 등록 -->
+				<button type="button" class="ico ico_circle_plusbig"><span class="blind">계좌 등록</span></button>
+				<span class="desc">계좌 등록</span>
+			</div>
+			<div class="bank_inquiry">
+				<!-- KEB하나은행 e-플러스 통장 <span class="btn_text01 ico"><a href="#none" class="ico_arrow">개설 상태 및 결과 조회</a></span> -->
+				<!-- 화살표 깨지는 경우 class : ico 추가 2018-03-14 ock -->
+
+
+				<!-- 비대면 계좌개설 문구 링크 영역 삭제 19.11.08 -->
+				<!-- 등록 가능한 계좌가 없다면 <span class="btn_text01 ico"><a href="#none" class="ico_arrow">비대면 계좌 개설</a></span> -->
+
+				<!-- 비대면 계좌개설 링크 영역 추가 19.11.08 -->
+				<div class="img__banner--wrap kdb-account">
+					<a href="#"><img src="../../images/common/img_banner_kdb.png" alt="연1.0금리 KDB입출금통장 개설하기" /></a>
+				</div>
+				<!-- //비대면 계좌개설 링크 영역 추가 19.11.08 -->
+
+			</div>
+
+		</section>
+
+
+
+
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+</body>
+</html>

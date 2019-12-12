@@ -1,0 +1,111 @@
+@charset 'UTF-8';
+
+.sec_password{margin-top:10px;}
+.password_box{position:relative;width:178px;height:75px;margin:0 auto;text-align:center;-webkit-tap-highlight-color: transparent;}
+.password_box::after{content: '';display:inline-block;margin:30px auto 0;width:178px;height:18px;background:url('../images/common/bg_password.png') no-repeat center center;background-size:cover}
+.password_box input[type='password']{overflow:hidden;width:178px;height:18px;position:absolute;top:50%;left:50%;margin:-8px 0 0 -89px;border:none;text-align:left;color:transparent;background:transparent;font-size:16px} /* 인풋 사용 안함 */
+.password_box .img_password{overflow:hidden;width:192px;height:18px;position:absolute;top:50%;left:50%;margin:-8px 0 0 -90px;}
+.password_box .img_password img{display:inline-block;float:left;margin-right:14px;width:18px;height:18px;vertical-align:top;}
+.password_remark{position:relative;width:100%;text-align:center;color:$reddish_orange;font-size:11px; margin-top:-18px;}
+.password_reset {margin-top:53px;}
+.confirm_finish .sec_password {margin-top:50px;}
+/* 해외 송금 */
+.orsremt .password_box{width:114px;}
+.orsremt .password_box .img_password {width:128px;margin:-8px 0 0 -57px;}
+.orsremt .password_box:after {width:114px;}
+.orsremt .password_box input[type='password']{margin:-8px 0 0 -57px;} /* 인풋 사용 안함 */
+
+/* 2018-03-24 새로운 형식의 패스워드 */
+/* .sec_new_password {margin-top:40px; padding:0 20px; }
+.wrap_password {position:relative;  text-align:center; overflow:hidden;}
+.wrap_password i {width:50px; height:50px; margin-left:2px;}
+.wrap_password .type_password {position:absolute; width:100%; text-align:center; }
+.wrap_password .type_password i {display:inline-block; background:url('../images/common/ico-pw.png') no-repeat center center; background-size:10px auto; }
+.wrap_password .bg_password i {display:inline-block; box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.4), 1px 1px 1px 0px rgba(256,256,256,1); background:$purply_blue; border-radius:4px; box-sizing: border-box;}
+.sec_new_password .password_remark {margin-top:8px;} */
+
+.sec_new_password {position:relative; margin-top:40px; padding:0 20px; }
+.wrap_password{position:relative;margin:0 auto}
+.wrap_password .bg_password{overflow:hidden}
+.wrap_password .bg_password i{position:relative;float:left;}
+/* .wrap_password .bg_password i{display:inline-block; box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.4), 1px 1px 1px 0px rgba(256,256,256,1); border-radius:4px; box-sizing: border-box;} */
+.wrap_password .bg_password i{display:inline-block; box-shadow: inset 1px 1px 1px 0px rgba(0,0,0,0.4), 1px 1px 1px 0px rgba(255,255,255,1); border-radius:4px; box-sizing: border-box;}
+.wrap_password .bg_password i img{position:absolute;top:50%;left:50%;margin:-5px 0 0 -5px;width:10px;height:10px;}
+.sec_new_password .password_remark {position:absolute; margin-top:13px; left:0; right:0;}
+
+/* 계좌인증 3자리 입력 */
+.wrap_password.three_area{width:154px;}
+.wrap_password.three_area .bg_password{width:164px;}
+.wrap_password.three_area i{margin-right:8px;width:46px;height:46px;}
+/* 계좌등록 비밀번호 4자리 입력 */
+.wrap_password.four_area{width:208px;}
+.wrap_password.four_area .bg_password{width:216px;}
+.wrap_password.four_area i{position:relative;float:left;margin-right:8px;width:46px;height:46px;}
+/* 공통 로그인 6자리 입력 */
+/*.wrap_password.six_area{width:320px;}*/
+/*.wrap_password.six_area .bg_password{width:324px;}*/
+.wrap_password.six_area {width:100%; max-width:374px;}
+.wrap_password.six_area i{position:relative;float:left;margin-left:calc((100% - 300px)/5);width:50px;height:50px;}
+.wrap_password.six_area i:first-child {margin-left:0}
+@media screen and (max-width:320px){
+	.wrap_password.six_area i{width:43px; height:43px;margin-left:calc((100% - 258px) / 5);}
+	/*.wrap_password.six_area{width:280px;}
+	.wrap_password.six_area .bg_password{width:284px;}*/
+}
+
+/* 컬러 값 */
+.wrap_password i{background:$white}
+.wrap_password .bg_gray i{background:$white_three}
+.wrap_password .bg_password i.on{background:$purply_blue;}
+.wrap_password .bg_error i,
+.wrap_password .bg_error i.on{background:$reddish_orange}
+/* 풀팝업 */
+.modal_wrap.fullpop .modal_content.pop_password{background:$white_three;height:100%}
+.modal_wrap.fullpop .modal_content.pop_password .sec_new_password{margin-top:0;padding:90px 0 0 0;}
+.modal_wrap.fullpop .modal_content .forget_password {margin-top:43px}
+.modal_wrap.fullpop .modal_content.pop_password .sec_new_password .password_remark {position:absolute;}
+/* 페이지 비밀번호인증 2018-04-06 JCK */
+.type_page.password_confirm {background:$white_three;height:100%}
+.type_page.password_confirm .sec_new_password{margin-top:0;padding:70px 20px 0 20px;}
+.type_page.password_confirm .forget_password {margin-top:43px}
+.type_page.password_confirm .sec_new_password .password_remark {position:absolute;}
+
+/* 로그인 or 지문로그인 */
+.sec_for_login{position:fixed;bottom:30px;left:20px;right:20px}
+.forget_password{text-align:center;}
+.forget_password > span{color:$warm_grey;margin-right:2px}
+.forget_password .btn_text01 {vertical-align:1px;}
+.join_us{margin-top:20px;padding:20px;text-align:center;background:$white_four;border:1px solid $white_three;border-radius:8px}
+.join_us .box_btn{margin:10px auto 0;width:105px;}
+
+#contents > section.finnq_login_new {padding-top:0;}
+.finnq_login_new .login_head {padding-top:8px; background:$purply_blue; text-align:center;} /* 20 > 8 2018-04-04 ock */
+.finnq_login_new .login_head .finnq {background:url('../images/common/ci-finnq-style01_b.png') no-repeat center center; background-size:58px auto; width:58px; height:30px;display:inline-block; text-indent:-9999px; overflow:hidden; margin-bottom:4px;}
+.finnq_login_new .login_head .txt {color:$white; @include font(14px); margin-bottom:6px;}
+.finnq_login_new .login_head .img {position:relative; background:url('../images/common/img-password.png') no-repeat; background-size:67px; width:67px; height:89px; display:inline-block; margin-bottom:-34px}
+.finnq_login_new .sec_new_password {position:relative;margin-top:0;padding:55px 20px 0; }
+.finnq_login_new .password_remark {position:absolute;top:28px;left:0;right:0;margin:0;}
+.finnq_login_new .sec_login_option {margin-top:11px; overflow:hidden; padding:0 20px;}
+.finnq_login_new .sec_login_option .login_check {float:left; padding-top:2px}
+.finnq_login_new .sec_login_option .login_check input[type="checkbox"] + label span,
+.finnq_login_new .sec_login_option .login_check li > a {color:$black;}
+.finnq_login_new .sec_login_option .login_check input[type="checkbox"] + label > span {padding-left: 36px;}
+.finnq_login_new .sec_login_option .login_support {float:right;}
+.finnq_login_new .sec_login_option .login_support a {border:1px solid $pinkish_grey; background:$white_four; text-align:center; color:$black; border-radius:4px; height:34px; display:inline-block; line-height:34px; font-weight:bold; padding:0 21px;}
+.finnq_login_new .sec_login_option .login_support a i {vertical-align:middle; margin-right:6px;}
+/* //2018-03-24 새로운 형식의 패스워드 */
+
+#contents > section.password_confirm {background:$white_three;}
+.password_confirm .sec_new_password {margin-top:62px;}
+.password_confirm .sec_new_password .password_remark {position:absolute;}
+.password_confirm .forget_password {margin-top:43px;}
+
+
+
+
+
+
+
+
+
+

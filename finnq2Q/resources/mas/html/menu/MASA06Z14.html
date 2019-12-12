@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01이벤트_02이벤트상세_05팝업_01초대메시지_MASA06Z14</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="menu myfinnq">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="friend_invite">01이벤트_02이벤트상세_05팝업_01초대메시지</button>
+			</span>
+		</div>
+
+		<div id="friend_invite" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt"><strong>총 3명의 친구</strong>에게<br>
+					초대 메시지를 보내시겠습니까?</h3>
+				</div>
+
+
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn_type_f">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="btn_type_f">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

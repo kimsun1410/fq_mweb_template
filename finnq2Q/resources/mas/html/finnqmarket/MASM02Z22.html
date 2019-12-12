@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02T핀크적금_12T적금그룹_04가족회선추가_web_MASM02Z22</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+	
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+		<section class="fqsave fqsave_skt">
+
+			<div class="sec_step">
+				<ol class="step01">
+					<li class="complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="complete">
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>3</strong>
+					</li>
+				</ol>
+			</div>
+			<div class="sec_title">
+				<h2>우대금리 II</h2><!-- 텍스트 수정 2018-02-28 -->
+				<p class="guide_txt">SKT 이동통신 3회선 결합 시</p>
+				<p class="point_txt2 accent_txt">연 <em class="num bold">0.8% ~ 1.3%</em> 추가 혜택 제공</p><!-- 숫자 폰트 태그 적용함 2018-02-20 -->
+			</div>
+			<div class="sec_gbox">
+				<h3>결합할 가족 정보를 입력해 주세요.</h3>
+				<div class="name item"><input type="text" data-name="inpFocus" placeholder="이름"></div>
+				
+				<!-- 2018-04-04 구조 변경 phj -->
+				<div class="mnum item">
+					<div class="form_wrap item"><input type="text" data-name="inpFocus" placeholder="" value="SKT" disabled="disabled"></div>
+					<div class="form_wrap item"><input type="tel" data-name="inpFocus" placeholder="휴대폰번호"></div>
+				</div><!-- //2018-04-04 구조 변경 -->
+
+<!-- 				<div class="birth item"><input type="number" data-name="inpFocus" placeholder="1999.01.01"></div> -->
+
+
+				<div class="birth item slow_up"><!-- 개발요청 소비내역 aifingo/CBSJ69Z02.html -->
+					<!-- <strong ><em class="date">1999.01.01</em></strong> class="on" 입력시 -->
+
+
+					<input type="tel" class="date" placeholder="1999.01.01" data-name="inpFocus" class=""/><!-- input change이벤트 걸어서 변경되면 UX기획이 요구한 포맷으로 변경작업이 필요합니다. --><!-- class : slow_up 추가 2018-04-04 ock -->
+
+					<!-- <span></span>빈태그 추가 -->
+				</div>
+				<div class="family item soft_select">
+					<select name="" id="family_choice" class="" data-name="inpFocus" >
+						<option selected>가족관계 선택</option>
+						<option value="배우자">배우자</option>
+						<option value="자녀">자녀</option>
+						<option value="부모">부모</option>
+						<option value="형제자매">형제자매</option>
+						<option value="손자녀">손자녀</option>
+						<option value="증조부모">증조부모</option>
+					</select>
+				</div>
+			</div>
+			<div class="sec_notice">
+				<ul class="notice">
+					<li class="listup">T적금그룹 중복 결합 불가</li>
+					<li class="listup">T적금그룹은 대표, 가족 회선 포함 3명까지 결합 가능</li>
+					<li class="listup">가족 회선 결합은 SKT 가입자만 등록 가능</li>
+				</ul>
+			</div>
+
+			<div class="bottom_gap"></div> <!-- 빈태그 bottom_gap 추가 2018-04-04 ock -->
+
+		</section>
+		<!-- 하단 붙임 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" >확인</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//2018-02-09 date 포커스 추가 ock
+	/*$('.fqsave_skt .sec_gbox > div.birth input.date').each(function(){		
+		var focusArea = $(this).parent(".birth");
+		$(this).focus(function(){
+			focusArea.addClass('date_focus');
+			$(this).css('color','#731aed');
+		}).blur(function(){
+			//focusArea.removeClass('date_focus');
+			$(this).css('color','#222');
+		});
+	});*/
+
+	function slowUp() {
+
+		gapH = $(window).height()*0.4;
+		console.log(gapH);
+
+		$('.bottom_gap').css({'display':'none'});
+		$('body').on('click', '.slow_up', function(){
+			var pos = $('.slow_up').offset().top;
+			$('.bottom_gap').css({'display':'inline-block','height':gapH}); //test용
+			$('html, body').stop().animate({ scrollTop: pos-62}, 700 ); //60 수치는 테스트 하면서 조절
+		});
+	}slowUp();
+
+	$("body").on('touchstart', function(e) { // //$("body").click(function(e) {
+		// console.log(e.target);
+		var _tg1 = $('.slow_up');
+		if (!_tg1.is(e.target) && _tg1.has(e.target).length === 0) {
+			$('.bottom_gap').css({'display':'none','height':'0'}); //test용 초기화
+			//$('html, body').stop().animate({ scrollTop: $('.slow_up').offset().top}, 700 ); //test용 초기화 또는 scrollTop : 0
+		}
+	});
+
+});
+</script>
+</body>
+</html>

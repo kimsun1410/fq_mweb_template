@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트구매_작품구매완료_01_AIBA11Z13</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap bg_list no_after"><!-- AIBA11Z13 -->
+	<!-- contents -->
+	<div id="contents" class="art_wrap add_sticky">
+
+		<!-- section -->
+		<section class="pt10">
+
+			<div class="coupon_info">
+				<div class="info">
+					보유쿠폰 <em class="num bold">2</em>개
+					<button type="button" class="btn">쿠폰등록</button>
+				</div>
+				<div class="add_coupon">
+					<div class="input_wrap col_box item">
+					<!--
+						error 일 때 inp_error 추가
+						<div class="input_wrap col_box item inp_error">
+					-->
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="쿠폰번호를 입력해 주세요" class="" data-placeholder="쿠폰번호를 입력해 주세요">
+							<p class="remark hide">유효하지 않은 쿠폰번호입니다.</p><!-- 에러일때 hide 를 빼주세요. -->
+						</span>
+						<span>
+							<button type="button" name="button" class="btn_type_f">등록</button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="coupon_list">
+				<article>
+					<div class="group">
+						<div>
+							<span class="mark"></span>
+							<p class="thumb">오픈 기념 작품 구매 시</p>
+							<p class="discount"><em class="num bold">50,000</em>원 할인</p>
+						</div>
+						<div>
+							<p class="date">2019.01.01 ~ 2018.04.30</p>
+						</div>
+					</div>
+				</article>
+				<article>
+					<div class="group">
+						<div>
+							<span class="mark"></span>
+							<p class="thumb">작품 구매 사전등록 시</p>
+							<p class="discount"><em class="num bold">50,000</em>원 할인</p>
+							<p class="add_info"><em class="num">5</em>만원 이상 구매시 사용가능</p><!-- 추가 정보 있을 때 -->
+						</div>
+						<div>
+							<p class="date">2019.01.01 ~ 2018.04.30</p>
+							<span class="limit"><em class="num">3</em>일 남음</span>
+						</div>
+					</div>
+				</article>
+				<article>
+					<div class="group">
+						<div>
+							<span class="mark"></span>
+							<p class="thumb">오픈 기념 작품 구매 시</p>
+							<p class="discount"><em class="num bold">50,000</em>원 할인</p>
+						</div>
+						<div>
+							<p class="date">2019.01.01 ~ 2018.04.30</p>
+							<span class="limit"><em class="num">3</em>일 남음</span>
+						</div>
+					</div>
+				</article>
+			</div>
+
+			<div class="fixed_cont">
+				<div class="gray_box">
+					<p class="tit">쿠폰 이용안내</p>
+					<ul class="list_type star">
+						<li>아트상품 구매시, 쿠폰입력 단계에서 등록된 쿠폰을 선택하시면 자동으로 할인금액이 적용됩니다.</li>
+						<li>쿠폰 이용시의 최소 구매금액 기준은 쿠폰별로 상이하므로 확인하여 주시기 바랍니다.</li>
+						<li>쿠폰 사용은 타 이벤트와 중복 할인이 불가합니다.</li>
+					</ul>
+				</div>
+			</div><!-- //tab_content_wrap -->
+
+		</section>
+		<!-- //section -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">사용하기</button>
+		</div>
+
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.art_wrap .coupon_info .btn').on('click', function(){
+		var status = $('.art_wrap .coupon_info').hasClass('on');
+		if (!status) {
+			$('.art_wrap .coupon_info').addClass('on');
+		}else{
+			$('.art_wrap .coupon_info').removeClass('on');
+		}
+	});
+
+	$('.art_wrap .coupon_list article').on('click', function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.sticky_wrap button').removeAttr('disabled');
+	});
+});
+</script>
+</body>
+</html>

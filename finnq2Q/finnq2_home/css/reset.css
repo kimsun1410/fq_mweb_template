@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* reset */
+*, *:before, *:after { -webkit-box-sizing: border-box; box-sizing: border-box; }
+html, body { height: 100%; min-height: 100%; font-family: "SpoqaL", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; font-size: 100%; line-height: 1.4; text-decoration: none; color: #222; vertical-align: middle; -webkit-font-smoothing: antialiased; background: #fff; }
+body { -webkit-text-size-adjust: none; letter-spacing: -0.05em; }
+/*뷰표트 변환시 폰트크기 자동확대 방지*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button { font-family: "SpoqaL", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; margin: 0; padding: 0; /*font-size:14px;*/ letter-spacing: -1px; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; }
+address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section { display: block; margin: 0; padding: 0; }
+figcaption { display: block; width: 0; height: 0; position: absolute; top: -9999px; font-size: 0; text-indent: -9999px; }
+hr, caption, legend { display: none; text-indent: -999px; }
+h1, h2, h3, h4, h5, h6 { font-family: "SpoqaL", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; letter-spacing: inherit; word-break: break-all; white-space: normal; }
+fieldset, img { border: none; vertical-align: middle; }
+ol, ul, li, dl, dt, dd { font-family: "SpoqaL", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; list-style: none; word-break: break-all; white-space: normal; }
+table, th, td { border: 0px; border-spacing: 0px; border-collapse: collapse; word-break: break-all; white-space: normal; font-family: "SpoqaL", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; }
+table { width: 100%; }
+fieldset, iframe { width: 100%; border: 0px; }
+em, i, address, strong { font-style: normal; font-weight: normal; word-break: break-all; white-space: normal; }
+button, a, select, input, label { border: none; background: none; font-family: "SpoqaL", "AppleSDGothicNeo-Medium", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; letter-spacing: inherit; vertical-align: middle; word-break: break-all; white-space: normal; }
+button::-moz-focus-inner { padding: 0px; }
+strong { font-family: 'SpoqaB'; }
+button, a { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.18); }
+
+/* a, 버튼에만 적용으로 수정 2018-03-24 ock */
+.no_highlight { -webkit-tap-highlight-color: transparent; }
+
+/* highlight 없는 class 추가 2018-04-18 ock */
+input.copy_test { position: absolute; top: -9999px; color: #fff; height: 1px; border: none; }
+
+
+
+
+

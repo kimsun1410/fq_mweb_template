@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ko" class="md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Finnq_Well Living_Masil</title>
+    <link rel="stylesheet" href="../css/omo.css">
+  <link rel="stylesheet" href="../css/finnqUi.css">
+</head>
+
+<body>
+
+<div id="app">
+
+
+	<div class='top_nav column_mode'>
+		<div class='card_count'><div class="card_count_number">1/1</div></div>
+	</div>
+
+	<div class="page">
+
+<!-- contents -->
+<div class='column_frame_wrap'>
+
+	<div class='column_card_wrap' id="touchSlider1">
+		<ul class='column_card_cont'>
+			<li>
+				<div>
+					<img src='http://cfile23.uf.tistory.com/image/23763D4A56C734FB19BF32' alt='커버이미지' />
+					<div class='column_cover'>
+						<p>
+							<strong>누구나 쉽게 이해하는<Br/>영화로 보는 요리 이야기</strong>
+							<span>17.04.23 <em>조회 24</em></span>
+						</p>
+					</div>
+					<div class='column_warn'>좌우로 넘겨서 보세요</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src='http://cfile23.uf.tistory.com/image/23763D4A56C734FB19BF32' alt='' />
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src='http://cfile23.uf.tistory.com/image/23763D4A56C734FB19BF32' alt='' />
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src='http://cfile23.uf.tistory.com/image/23763D4A56C734FB19BF32' alt='' />
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src='http://cfile23.uf.tistory.com/image/23763D4A56C734FB19BF32' alt='' />
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src='http://cfile23.uf.tistory.com/image/23763D4A56C734FB19BF32' alt='' />
+				</div>
+			</li>
+			<li>
+				<div class='moim_view_top_wrap column_card_last'>
+
+					<div class='moim_view_top_profile'>
+						<div class='profile_box'>
+							<div class='profile_img'><img src='http://img2.sbs.co.kr/img/sbs_cms/WE/2016/01/07/WE86025775_w300.jpg' alt='김소봉' /></div>
+							<div class='profile_name'>반보기</div>
+							<ul class='profile_info'>
+								<li>김소봉</li>
+								<li><span>17.04.23</span></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class='moim_view_top_info'>
+						<div>맛있는 건 정말 참을 수 없지 않나요? 누구나 할 수 있는 일본식 가정요리! 초보도 절대 실패하지 않는 가정식을 완성해보세요! 할 수 있도록 도와드려요.</div>
+					</div>
+
+					<div class='moim_view_top_leader'>
+						<button>모임 바로가기</button>
+					</div>
+				</div>
+
+			</li>
+		</ul>
+	</div>
+	<div class='column_arr arr_left'></div>
+	<div class='column_arr arr_right'></div>
+</div>
+<!-- contents -->
+</div><!-- page:end -->
+
+	<div class='app_foot_btn_wrap'>
+		<div class='share_btn_wrap'>
+			<p>매일 새로운 마실로 오세요.</p>
+			<button class='finnq_btn finnq_type2'>앱 다운받기</button>
+		</div>
+	</div>
+
+</div><!-- app:end -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.event.drag-1.5.1.min.js"></script>
+<script src="../js/jquery.touchSlider.js"></script>
+<script src="../js/underscore.js"></script><script src="../js/underscore.js"></script>
+<script src="../js/finnqUi.js"></script>
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.event.drag-1.5.1.min.js"></script>
+<script src="../js/jquery.touchSlider.js"></script>
+<script src="../js/underscore.js"></script>
+<script src="../js/pinchzoom.js"></script>
+<script src="../js/finnqUi.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 하단 버튼
+	var pageNumber = 1;
+	if($('#touchSlider1 .column_card_cont li').length > 1){
+		$("#touchSlider1").touchSlider({
+			initComplete : function (e) {
+				var _this = this;
+				var $this = $(this);
+				var paging = $this.next(".paging");
+				var len = Math.ceil(this._len / this._view);
+				$('.card_count').find('.card_count_number').text(1+'/'+len);
+				pageNumber = len;
+			},
+			counter : function (e) {
+				$('.card_count').find('.card_count_number').text(e.current+'/'+pageNumber);
+				//e.current 현재 페이지 정보
+			},
+			speed: 300,
+			roll : false,
+			btn_prev : $(".column_frame_wrap").find(".arr_left"),
+			btn_next : $(".column_frame_wrap").find(".arr_right")
+		});
+	}
+});
+</script>
+</body></html>

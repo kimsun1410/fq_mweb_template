@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>07분석알림설정_01카드결제알림설정_03설정_web_CBSM69Z02</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="CBSM69Z02 "><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo add_sticky">
+
+		<section class="alram_set">
+			<!-- 신용카드 선택 -->
+			<div class="sec_alram_item">
+				<dl>
+					<dt>1. 신용카드 선택</dt>
+					<dd>
+						<ul>
+							<li>
+								<input type="radio" id="purpleOne1" name="test-img"><!-- type="radio" -->
+								<label for="purpleOne1" name="test-img">
+									<div class="info">
+										<strong>삼성카드</strong>
+									</div>
+								</label>
+							</li>
+							<li>
+								<input type="radio" id="purpleOne2" name="test-img"><!-- type="radio" -->
+								<label for="purpleOne2" name="test-img">
+									<div class="info">
+										<strong>KB 국민카드</strong>
+									</div>
+								</label>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+			<!-- 연결계좌 선택 -->
+			<div class="sec_alram_item" style="display:none;">
+				<dl>
+					<dt>2. 연결계좌 선택</dt>
+					<dd>
+						<ul>
+							<li>
+								<input type="radio" id="purpleOne21" name="test-img2">
+								<label for="purpleOne21" name="test-img">
+									<div class="info">
+										<strong>신한은행</strong>
+										<span>자유입출금 <em class="num">110-057-040753</em></span>
+									</div>
+								</label>
+							</li>
+							<li>
+								<input type="radio" id="purpleOne22" name="test-img2">
+								<label for="purpleOne22" name="test-img">
+									<div class="info">
+										<strong>신한은행</strong>
+										<span>자유입출금 <em class="num">110-057-040753</em></span>
+									</div>
+								</label>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+			<!-- 연결동의 -->
+			<div class="sec_alram_item" style="display:none;">
+				<dl>
+					<dt>3. 연결동의</dt>
+					<dd>
+						<div class="user_agree">
+							<input type="checkbox" id="purpleTwo1" name="test-img" class="purple">
+							<label for="purpleTwo1" name="test-img">
+								<span>알림 내역 확인을 위해 자동으로 정보를<br>업데이트합니다. </span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- sticky_wrap place -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">완료</button>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		$(this).toggleClass("on");
+	});
+	$('div.sec_alram_item').eq(0).find('input:radio').change(function(){
+		$('.sec_alram_item').eq(1).fadeIn();
+    });
+	$('div.sec_alram_item').eq(1).find('input:radio').change(function(){
+		$('.sec_alram_item').eq(2).fadeIn();
+    });
+
+
+
+
+});
+</script>
+</body>
+</html>

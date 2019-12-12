@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+</head>
+<body>
+<div class="wrap bg_list pad_b60" id="MASV08Z04">
+	<div id="contents" class="market p2p_wrap add_sticky">
+		<section class="sec_MASV08Z04"><!-- 2018.04.26 컨텐츠 전체변경 -->
+			<div class="sec_step step_perple">
+				<!-- 2018-06-12 단계표시 변경 -->
+				<ol class="step02">
+					<li class="on">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong>
+					</li>
+				</ol>
+			</div>
+			<div class="sec_title txt_c">
+				<h2 class="xl">제휴사 가입/이용동의</h2><!-- 2018-05-30 xl추가, bold삭제-->
+			</div>
+			<div class="sec_txt txt_c">
+				P2P 투자 서비스로 소액투자를 하기 위한<br>개인정보와 상환계좌를 입력해 주세요.
+			</div>
+			<div class="sec_title in_sec">
+				<h3 class="stit">제휴사 선택</h3>
+			</div>
+			<div class="in_sec">
+				<!-- 2018-05-15 수정 멀티탭인경우 버튼으로 변경 -->
+				<ul class="tab_purple up_three unBold" data-selected="multiple">
+					
+					<li class="on"><button type="button">테라펀딩</button></li>
+					<li><button type="button">헬로펀딩</button></li>
+					<li><button type="button">미드레이트</button></li>
+					<li><button type="button">소딧</button></li>
+					<li><button type="button">8퍼센트</button></li><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+					<li><button type="button">펀디드</button></li>
+					<li><button type="button">투게더펀딩</button></li>
+					<li><button type="button">줌펀딩</button></li>
+					<li><button type="button">올리펀딩</button></li>
+				</ul>
+			</div>
+
+			<!-- 2018-05-24 약관동의 마크업구조변경 -->
+			<div class="sec_all_check">
+				<div class="agree_terms term1">
+					<dl class="toggle_list">
+						<dt class="agree_wrap on"><!-- 모두 열기 class : on 2018-03-15 ock -->
+							<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101" name="check_action"><span>서비스 이용 및 개인정보 <span class="display_ib">제공동의 (필수)</span></span></label><!-- 2018-05-28 약관동의 문구변경 --><!-- 2018-05-30 제휴사 문구삭제 -->
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</dt>
+						<dd style="display:block"><!-- 모두 열기 style 추가 : 2018-03-15 ock -->
+							<div class="agree_wrap"><!-- 2018-05-28 약관동의 항목추가 -->
+								<input type="checkbox" id="chk0108" name="check_action" class="purple"><label for="chk0108" name="check_action"><span>개인정보 제 3자 제공 동의</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102" name="check_action"><span>헬로펀딩 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103" name="check_action"><span>헬로펀딩 개인정보 수집/이용 동의</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104" name="check_action"><span>8퍼센트 이용약관</span></label><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0105" name="check_action" class="purple"><label for="chk0105" name="check_action"><span>8퍼센트 개인정보 수집/이용 동의</span></label><!-- 2018-05-28 에잇퍼센트를 8퍼센트로 변경 -->
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0105" name="check_action" class="purple"><label for="chk0105" name="check_action"><span>8퍼센트 개인정보 제공 동의</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0105" name="check_action" class="purple"><label for="chk0105" name="check_action"><span>8퍼센트 고유식별정보 수집/이용 동의</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0106" name="check_action" class="purple"><label for="chk0106" name="check_action"><span>투게더펀딩 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0107" name="check_action" class="purple"><label for="chk0107" name="check_action"><span>투게더펀딩 개인정보취급방침</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0107" name="check_action" class="purple"><label for="chk0107" name="check_action"><span>투게더펀딩 원리급수취권 투자금 관리서비스 신청서</span></label>
+								<button type="button" class="ico ico_arrow_more open_modal" data-triger="agreeTerms" data-mtype="fullpop"><span class="blind">더보기</span></button>
+							</div>
+						</dd>
+					</dl>
+				</div><!-- //agree_terms term1 -->
+
+				<div class="agree_terms term2">
+					<dl class="toggle_list">
+						<dt class="agree_wrap on"><!-- 모두 열기 class : on 2018-03-15 ock -->
+							<input type="checkbox" id="chk0201" name="check_action" class="purple"><label for="chk0201" name="check_action"><span>서비스 이용동의 (선택)</span></label><!-- 2018-05-28 약관동의 문구변경 -->
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button><!-- 2018-05-24 약관호출 코드추가 -->
+						</dt>
+						<dd style="display:block"><!-- 모두 열기 style 추가 : 2018-03-15 ock -->
+						<!-- 제휴사 선택하지 않은경우 div 없음(개발) -->
+						<div class="agree_wrap"></div><!-- test -->
+						<!-- div class="agree_wrap 개수 체크하여 보더 숨김처리 2018-07-17 ock -->
+						</dd>
+					</dl>
+				</div><!-- //agree_terms term2 -->
+			</div><!-- //sec_all_check -->
+		</section>
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button><!-- 2018-06-12 동의하기를 다음으로 변경 -->
+		</div>
+
+		<!-- 약관팝업 -->
+		<div id="agreeTerms" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_agree_terms">
+						<div class="agree_details">
+							<!-- 개발에서 약관불러오는 영역 -->
+
+							<!-- //개발에서 약관불오는 영역 -->
+							<!-- 퍼블리싱 테스트영역 -->
+							투자이용약관
+							<!-- //퍼블리싱 테스트영역 -->
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //약관팝업 -->
+
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script>
+$(document).ready(function(){
+	//토글리스트
+	$(".toggle_list > dt > button").on("click", function(){
+		//테스트 추가, 개발은 1,2로 나눠져있음 html과 별도로 수정됨
+		if ($(this).parent('dt').hasClass('on'))	{
+			$(this).parent('dt').removeClass('on').next('dd').stop().slideUp();
+		} else{
+			$(this).parent('dt').addClass('on').next('dd').stop().slideDown();
+		}
+
+		//$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+
+	//퍼블리싱 테스트 팝업입니다. 개발공통팝업으로 사용해주세요.
+	$body = $("body");
+	//Contents Size Cal;
+	var docH, docW;
+	docW = $(window).width();
+	docH = $(window).height();
+
+	//모달팝업
+	/* modal popup */
+
+	$("button.open_modal,a.open_modal").on("click", function(){
+		var $mpop = $(this);
+
+		var $mpopType = $mpop.data("mtype");
+		var $mpopID = "#"+$mpop.data("triger");
+		var $mpopClose = $mpop.data("bgclose");
+		var conH = $($mpopID).find(".modal_content").outerHeight();
+
+		//popup contents height < window height
+		if(conH >= docH || ($mpopType=="fullpop")) {
+			$($mpopID +"> .modal_content").css({
+				height: docH
+			});
+		}else {
+			$($mpopID).addClass("normal");
+		}
+		if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+		switch($mpopType) {
+			case "fullpop":
+				$($mpopID).toggleClass("visible");
+				break;
+			case "doublepop":
+				$($mpopID).addClass("double").toggleClass("visible");
+				break;
+			default:
+				$($mpopID).toggleClass("visible");
+		}
+		return false;
+	});
+	$(".modal_wrap").on("click","button.close_modal", function(){
+		$(this).closest('.modal_wrap').toggleClass("visible");
+		return false;
+	});
+	$(".modal_wrap").on("click", function(e){
+		var status = $(this).data("bgclose");
+		if(!$(".modal_content").has(e.target).length && status ) {
+			if($(this).data("bgclose")) $(this).toggleClass("visible");
+		}
+	});
+
+	//제휴사 선택 하나도 안한경우 js 
+	//내용 수정 2018-07-26
+	//내용 재수정 2018-07-27 html과 별도로 개발에서 수정됨
+	function termsStyle() {
+		$(".tab_purple").on('click', 'li', function(){
+			$(this).parents('.tab_purple').each(function(){
+				var target = $(this).find('li.on').length;
+				console.log(target);
+				if(target > 0) {
+					console.log('target > 0');
+					$(".agree_terms.term2 dd").show();
+				} else {
+
+				console.log('target < 0');
+				$(".agree_terms.term2 dd").hide();
+
+					
+				}
+			});
+		});
+	} termsStyle();
+
+});
+</script>
+</body>
+</html>

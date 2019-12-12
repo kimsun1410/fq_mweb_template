@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>대출심사 | 비상금 대출</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap bg_list"><!-- 19.07.29 : "bg_list" 클래스 추가 -->
+	<div id="contents" class="add_sticky">
+
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">대출상환</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section class="tfinnq_wrap">
+
+			<div class="sec_title">
+				<h3 class="accent_txt">대출금을 상환하겠습니까?</h3>
+			</div>
+
+			<div class="list_expend_wrap dgb">
+				<ul class="list_expend dgb loan">
+					<li>
+						<div class="benefit_cont">
+							<div class="gray_box loan">
+								<ul class="split add_info">
+									<li>
+										<span class="tit txt_gray_light">대출잔액</span>
+										<span class="cont bold txt_gray_light"><em class="num bold">30,000,000</em>원</span>
+									</li>
+									<li class="input_area mgt40">
+										<span class="tit txt_gray_light">상환금액</span>
+										<span class="cont bold">
+											<input type="number" data-name="inpFocus" class="comma_wonhan">
+											<i class="placeholder">0원</i>
+											<i class="guide_txt">원</i>
+											<button type="button" class="btn btn-small gray">전체상환</button>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="group-wrap">
+							<ul class="split gray_box add_info">
+								<li>
+									<span class="tit">대출이자</span>
+									<span class="cont bold"><em class="num bold">5000</em>원</span>
+								</li>
+								<li class="tooltip_wrap">
+									<span class="tit">
+										환급이자
+										<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+										<div class="layer_wrap" style="top:32px; left:0; right:0;">
+											<p>미리 이자를 납부하신 금액이 있을 경우, 대출금을 상환 하실 때 납부하신 이자금액에 대하여 돌려드리는 것입니다.
+											</p>
+										</div>
+									</span>
+									<span class="cont bold"><em class="num bold">5000</em>원</span>
+								</li>
+							</ul>
+							<p class="tot_info">
+								<span class="tit">총 상환금액</span>
+								<span class="cont">
+									<i class="money"><em class="num bold">100,650</em>원</em></i>
+								</span>
+							</p>
+
+							<!-- 19.07.29 수정 -->
+							<div class="account_opt_wrap input_wrap mgt30 pdb15">
+								<p class="title">출금계좌</p>
+								<div class="input-box-type">
+									DGB대구 입출금 373810202712103
+								</div>
+							</div><!-- //account_opt_wrap -->
+							<!-- //19.07.29 수정 -->
+
+						</div>
+						<!-- //group-wrap -->
+					</li>
+					<!-- 19.07.29 추가 -->
+					<li>
+						<!-- 일반 보안 키패드
+							- 클릭 시 보안 키패드 노출
+							- 버튼 클릭시 마다 클래스 on 추가
+							- 에러 시 "bg_password"에 "bg_error"추가 / 케이스에 맞는 문구 노출 : hide 삭제
+							- 에러 케이스는 아래 주석 참조.
+						-->
+						<div class="sec_new_password">
+							<p class="title mgb10">계좌 비밀번호</p>
+							<div class="wrap_password four_area">
+								<p class="bg_password bg_gray">
+									<i class="on"><img src="../images/common/ico-pw.png"></i>
+									<i class="on"><img src="../images/common/ico-pw.png"></i>
+									<i class="on"><img src="../images/common/ico-pw.png"></i>
+									<i></i>
+								</p>
+							</div>
+							<p class="password_remark hide">입력한 비밀번호와 일치하지 않습니다. 다시 입력해 주세요.</p>
+						</div>
+
+						<!-- 보안 키패드 에러시 -->
+						<!--
+						<div class="sec_new_password">
+							<p class="title mgb10">계좌 비밀번호</p>
+							<div class="wrap_password four_area">
+								<p class="bg_password bg_gray bg_error">
+									<i class="on"><img src="../images/common/ico-pw.png"></i>
+									<i class="on"><img src="../images/common/ico-pw.png"></i>
+									<i class="on"><img src="../images/common/ico-pw.png"></i>
+									<i class="on"><img src="../images/common/ico-pw.png"></i>
+								</p>
+							</div>
+							<p class="password_remark type2">입력한 비밀번호와 일치하지 않습니다. 다시 입력해 주세요.</p>
+							<p class="password_remark type2 hide">세 자리 이상의 연속된 숫자는 사용할 수 없습니다.</p>
+						</div>
+						-->
+					</li>
+					<!-- //19.07.29 추가 -->
+				</ul>
+
+			</div> <!-- //list_expend_wrap -->
+		</section>
+
+		<!-- 입력값이 모두 입력되면 disabled 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">상환하기</button>
+		</div>
+
+	</div><!-- //contents -->
+</div>
+<script type="text/javascript">
+$(function(){
+
+	// 계좌 선택
+	$('.sec_select').on('click','[data-name=acc-button]', function(event){
+		event.preventDefault();
+		$(this).addClass("ico_dot").parent('li').addClass('active')
+			.siblings().removeClass('active')
+			.find('[data-name=acc-button]').removeClass("ico_dot");
+	});
+
+	$('.account_opt_wrap .btn_select_pop').on('click', function(event) {
+		event.preventDefault();
+		$('.modal_wrap').addClass('visible normal');
+		function scrollMake() {
+			scrH = $(window).height()*0.5;
+			$('.pop_acc_select .sec_select').css({'height':scrH});
+		}
+		scrollMake();
+	});
+
+	$(this).on('click', '.modal_wrap .close_modal.btn_type_f', function(event) {
+		event.preventDefault();
+		var layerSelect     = $('.modal_content .scroll_wrap .sec_select li .ico_dot'),
+			layerSelStr     = layerSelect.find('strong').text(),
+			layerSelAcc     = layerSelect.find('em.cash').text(),
+			selectAccount   = layerSelStr + '<em class="num">' + layerSelAcc + '</em>';
+
+		$('.account_opt_wrap .btn_select_pop').addClass('on').html(selectAccount);
+		$('.modal_wrap').removeClass('visible normal');
+	});
+
+	// 툴팁 이벤트
+	$('body').on('touchend',".wrap, .wrap *, .modal_wrap", function(e) {
+		$("button[data-name=open_help]").removeClass("on");
+		$(".layer_wrap").hide().removeClass("on");
+	});
+
+
+	// 신청금액 입력
+	$('.input_area input.comma_wonhan').on('focusin', function(){
+		inputAreaFunc( $('.input_area input.comma_wonhan') );
+		$('.input_area input.comma_wonhan').on('keyup change', function(){
+			inputAreaFunc( $('.input_area input.comma_wonhan') );
+		});
+	})
+	.on('focusout', function(){
+		$(this).parents('.input_area').removeClass('active');
+	});
+
+	function inputAreaFunc(_target)
+	{
+		var inpVal = $(_target).val().length;
+		if (inpVal > 0) { $(_target).parents('.input_area').addClass('on active'); }
+		else { $(_target).parents('.input_area').removeClass('on'); }
+	}
+
+});
+</script>
+</body>
+</html>

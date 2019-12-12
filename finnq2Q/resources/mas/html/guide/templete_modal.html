@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+	<!-- 
+		style.css는 섹션별, 서버별로 쉽게 분리 가능합니다. 필요 경유 요청주세요.
+		실서비스 반영때에는 minify해서 반영해주세요.(ex. style.min.css)
+		퍼블리싱쪽에서도 minify로 빌드할 수도 있습니다. 디버깅을 위해서 minify하지 않은 파일로 전달드립니다.
+		sass의 sourcemap파일도 함께 전달드리는데, debug용도에만 사용해주세요.
+		초반에 원활한 테스트를 위해서 Time Stamp를 넣어주실 수 있으면 좋을것 같습니다.
+	-->
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item"><button type="button" class="btn btn_type_a open_modal" data-triger="MASB12Z15" data-mtype="" data-bgclose="true">연결방법 변경_SMS정보 확인[CBSO69Z14]</button></span>
+				<!-- 
+					UI확인용 팝업 Infomation
+					data-triger : 모달팝업 아이디
+					data-mtype : 모달팝업 오픈타입
+						- fullpop : 풀팝업, window.height가 popSize, reSize()
+						- doublepop : 풀팝업에 또 팝업이 뜸, modal이 없음.
+						- 이외는 값없음
+					data-bgclose : 모달 Background 클릭시 팝업 닫기(true/false)
+
+					>> 사이즈 작은 모달팝업은 triger만 설정
+					>> 전체창 또는 배경클릭시 닫힘의 경우에는 각각의 값 설정
+				//-->
+
+		</div>
+
+		<div id="MASB12Z15" class="modal_wrap pop_transfer_error">
+			<!-- 
+				ID값는 UI에서는 사용하지 않습니다. 개발에서 필요한 값으로 변경해주세요. 
+				모달팝업은 페이지 어디에 위치해도 상관은 없습니다.
+			-->
+			<!-- 
+				Description
+				modal_wrap : 모달 고정클래스
+				pop_transfer_error : 페이지별 클래스
+			-->
+			<div class="modal_content">
+
+				<div class="sec_head">
+					<h2 class="modal_title">직접입력</h2>
+					<button class="close_modal show_text"><span>취소</span></button>
+				</div>
+				<div class="scroll_wrap">
+					<div class="flex_wrap set_type1">
+						<span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+					</div>
+				</div><!-- //scroll_wrap -->
+			</div><!-- //modal_content -->
+		</div><!-- //modal_wrap -->
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.min.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

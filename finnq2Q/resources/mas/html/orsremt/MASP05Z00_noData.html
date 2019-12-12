@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="market">
+		<section class="sec_remitInfo">
+			<div class="sec_remit_info1">
+				<p class="txt_reload">업데이트  오늘  <span class="num">13:20</span> <i class="ico ico_reload loading"></i></p><!-- 20180312 loading 클래스추가 -->
+				<div class="cal_wrap3">
+					<dl class="cal">
+						<dt class="tit">연간 송금 한도</dt>
+						<dd class="money"><span class="num">USD 20,000</span></dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">연간 잔여 한도</dt>
+						<dd class="money"><span class="num">USD 000</span></dd>
+					</dl>
+				</div>
+				<p class="graph_bar" data-percent="50%"><span class="percent"></span></p>
+				<p class="inp_remark">송금 한도 연간 기준: 1월 1일 ~ 12월 31일</p>
+				<!-- 20180309 버튼클래스 추가-->
+				<div class="btn_wrap">
+					<span class="item on"><button type="button" name="button" class="btn btn_type_c btn_xl bg-gray" disabled="disabled">계좌 실명인증 중</button></span>
+				</div>
+			</div>
+			<div class="line_bold"></div>
+			<div class="sec_remit_info2">
+				<div class="tab_wrap set_type3"> <!-- 3개 -->
+					<span class="tab on"><a href="#none">전체</a></span>
+					<span class="tab"><a href="#none">송금 중(<span class="num">1</span>)</a></span>
+					<span class="tab"><a href="#none">반환(<span class="num">1</span>)</a></span>
+				</div>
+				<div class="tab_content_wrap">
+					<div id="tab-0" class="tab_content on">
+						<!-- 거래내역이 없는경우 -->
+						<div class="wrap_result">
+							<div class="no_result">
+									<i class="ico ico_chat_no2"></i>
+									<p>거래내역이 없습니다.</p>
+								</div>
+						</div>
+					</div>
+					<div id="tab-2" class="tab_content">
+						<div class="info_list">
+							<div class="cal_wrap4">
+								<dl class="cal">
+									<dt class="tit">
+										<span class="num">FINNQ KIM</span> <span class="txt_state"><span class="num">01.31 11:22</span>, 송금 중</span>
+									</dt>
+									<dd class="money"><span class="num">PHP 5,000.00</span></dd>
+								</dl>
+							</div>
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">상세보기</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">추가 송금하기</button></span><!-- 20180308 버튼명 변경 -->
+							</div>
+						</div>
+					</div>
+					<div id="tab-3" class="tab_content">
+						<div class="info_list">
+							<div class="cal_wrap4">
+								<dl class="cal">
+									<dt class="tit">
+										<span class="num">JUNG WOOK YE</span> <span class="txt_state txt_warning"><span class="num">01.31 11:22</span>, 반환 중 (장기 미수취)</span>
+									</dt>
+									<dd class="money"><span class="num">PHP 5,000.00</span></dd>
+								</dl>
+							</div>
+							<div class="flex_wrap set_type2">
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">상세보기</button></span>
+								<span class="item"><button type="button" name="button" class="btn btn_type_e">다시 송금하기</button></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="MASP05Z02" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail">
+						<div class="sec_title">
+							<h2>해외송금 상세내역</h2>
+							<button type="button" class="btn_close_modal close_modal ico ico_closed"><span class="blind">닫기</span></button>
+						</div>
+						<div class="box_detail2 round_box_cut">
+							<div class="define header">
+								<div class="define_row">
+									<p class="th"><span class="num">EUNG JUN MIN</span></p>
+									<p class="td"><span class="num">PHP 5,000.00</span></p>
+								</div>
+								<p class="txt_info"><span class="num">01.31  11:22</span>, 송금완료</p>
+							</div>
+							<div class="define line_double">
+								<div class="define_row">
+									<p class="th">거래번호</p><!-- 20180327 num삭제 --><!-- 2018-05-18 거래번호로 변경 -->
+									<p class="td">A1B2C3D4E5F6G78</p><!-- 20180327 num삭제 -->
+								</div>
+								<div class="define_row">
+									<p class="th">출금시 적용환율</p>
+									<p class="td"><span class="num">22.20</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">출금 금액</p>
+									<p class="td">
+										<span class="num">000,000,000</span>원
+										<small>송금수수료 <span class="num">00,000</span>원<br>수취수수료 <span class="num">00,000</span>원 포함</small><!-- 20180308 num클래스 적용 -->
+									</p>
+								</div>
+								<div class="define_row">
+									<p class="th">출금 계좌</p>
+									<p class="td">
+										KEB하나<br><span class="num">12312341231234</span>
+									</p>
+								</div>
+							</div>
+							<div class="define w_min line_dash"><!-- 20180327 w_min 추가 -->
+								<h4 class="title">받는 사람 정보</h4>
+								<div class="define_row">
+									<p class="th">연락처</p>
+									<p class="td"><span class="num">+00 000-0000-0000</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">주소</p>
+									<p class="td"><span class="num">100, Eulji-ro, Jung-gu, Seoul, Republic of Korea</span></p>
+								</div>
+								<div class="define_row">
+									<p class="th">방법</p>
+									<p class="td">KEB 하나은행 계좌로 입금</p>
+								</div>
+								<div class="define_row">
+									<p class="th">은행</p>
+									<p class="td">KEB하나은행</p>
+								</div>
+								<div class="define_row">
+									<p class="th">계좌번호</p>
+									<p class="td"><span class="num">00000000000000</span></p><!-- 20180309 num클래스추가 -->
+								</div>
+							</div>
+							<div class="define line_dash">
+								<div class="define_row">
+									<p class="th">거래 완료일</p>
+									<p class="td"><span class="num">2018.01.31</span></p>
+								</div>
+							</div>
+							<div class="btn_wrap">
+								<!-- 20180308 버튼문구 변경 -->
+								<span class="item on"><button type="button" name="button" class="btn btn_type_c btn_xl">추가 송금하기</button></span><!-- 20180309 버튼클래스 추가-->
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script type="text/javascript">
+<!--
+	$(document).ready(function(){
+
+		$body = $("body");
+		//Contents Size Cal;
+		var docH, docW;
+		docW = $(window).width();
+		docH = $(window).height();
+
+		//모달팝업
+		/* modal popup */
+
+		$("button.open_modal,a.open_modal").on("click", function(){
+			var $mpop = $(this);
+
+			var $mpopType = $mpop.data("mtype");
+			var $mpopID = "#"+$mpop.data("triger");
+			var $mpopClose = $mpop.data("bgclose");
+			var conH = $($mpopID).find(".modal_content").outerHeight();
+
+			//popup contents height < window height
+			if(conH >= docH || ($mpopType=="fullpop")) {
+				$($mpopID +"> .modal_content").css({
+					height: docH
+				});
+			}else {
+				$($mpopID).addClass("normal");
+			}
+			if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+			switch($mpopType) {
+				case "fullpop":
+					$($mpopID).toggleClass("visible");
+					$('html, body').css({'overflow':'hidden'})
+					break;
+				case "doublepop":
+					$($mpopID).addClass("double").toggleClass("visible");
+					break;
+				default:
+					$($mpopID).toggleClass("visible");
+			}
+			return false;
+		});
+		$(".modal_wrap").on("click","button.close_modal", function(){
+			$(this).closest('.modal_wrap').toggleClass("visible");
+			//$('html, body').css({'overflow':'auto'})
+			return false;
+		});
+		$(".modal_wrap").on("click", function(e){
+			var status = $(this).data("bgclose");
+			if(!$(".modal_content").has(e.target).length && status ) {
+				if($(this).data("bgclose")) $(this).toggleClass("visible");
+			}
+		});
+
+	});
+
+	$(document).ready(function(){
+		$('.graph_bar').each(function(){
+			var percent = $(this).attr('data-percent');
+			$(this).find('.percent').css('width', percent);
+		})
+
+		//마우스 무한스크롤
+		$(document).scroll(function() {
+			var maxHeight = $(document).height();
+			var currentScroll = $(window).scrollTop() + $(window).height();
+
+			if (maxHeight <= currentScroll + 100) {
+				//Test Append (개발시 삭제)
+				var appendHTML = '';
+					appendHTML = appendHTML + '<div class="info_list">';
+					appendHTML = appendHTML + '	<div class="cal_wrap4">';
+					appendHTML = appendHTML + '		<dl class="cal">';
+					appendHTML = appendHTML + '			<dt class="tit">';
+					appendHTML = appendHTML + '				<span class="num">YOUNG TAK GWON</span> <span class="txt_state txt_warning"><span class="num">01.31 11:22</span>, 반환 중 (장기 미수취)</span>';
+					appendHTML = appendHTML + '			</dt>';
+					appendHTML = appendHTML + '			<dd class="money"><span class="num">PHP 5,000.00</span></dd>';
+					appendHTML = appendHTML + '		</dl>';
+					appendHTML = appendHTML + '	</div>';
+					appendHTML = appendHTML + '	<div class="flex_wrap set_type2">';
+					appendHTML = appendHTML + '		<span class="item"><button type="button" name="button" class="btn btn_type_e">상세보기</button></span>';
+					appendHTML = appendHTML + '		<span class="item"><button type="button" name="button" class="btn btn_type_e" disabled="disabled">추가 송금하기</button></span><!-- 20180308 버튼명 변경 -->';
+					appendHTML = appendHTML + '	</div>';
+					appendHTML = appendHTML + '</div>';
+
+				//$('.tab_content.on').append(appendHTML);
+				//ajax Apeend
+				$.ajax({
+					// Append next contents
+				})
+			}
+		})
+	})
+//-->
+</script>
+</body>
+</html>

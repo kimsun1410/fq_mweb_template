@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>11st | Finnq</title>
+<link rel="stylesheet" type="text/css" href="css/finnq_reset.css">
+<link rel="stylesheet" type="text/css" href="css/finnq_common.css">
+<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+(function($) {
+    $(function() {
+
+        // 탭 메뉴 이동
+        $('.tab_menu li > a').on('click', function(event){
+            event.preventDefault();
+            var target = $(this).attr('href'),
+                scrolling = $(target).offset().top;
+            $("body,html").animate({scrollTop: scrolling}, 700);
+        });
+
+        $('.layer_wrap .btn_close').on('click', function(event){
+            event.preventDefault();
+            $('.layer_wrap').removeClass('on');
+        });
+
+        $('.btn_layer').on('click', function(event){
+            event.preventDefault();
+            var target = $(this).attr('href');
+
+            $('.layer_wrap').removeClass('on');
+            $(target).addClass('on');
+        });
+
+        $('.layer_wrap .input_box input').on('keyup', function(event){
+            var length =  $(this).val().length;
+            if (length > 11) {
+                $(this).val( $(this).val().substring(0, 11) );
+            }
+        });
+
+
+        // 버튼 클릭시 ajax 실행
+        var isRun = false;
+        $('.layer_wrap .btn_join').on('click', function (event) {
+            event.preventDefault();
+
+            var checkboxStatus = $('input:checkbox[id="chkVal"]').is(':checked') ? true : false;
+            var eventMobile    = $('.input_box input[name="phone"]').val();
+            var _parms;
+
+            if(/^01[016789]{1}[0-9]{3,4}[0-9]{4}$/.test(eventMobile) == false) {
+                // $('#layer-alert-phone, #mask').show();
+                alert("휴대번호를 잘못 입력하셨습니다. 다시 한 번 확인해주세요");
+                return false;
+            }
+
+            if(checkboxStatus == false) {
+                alert("개인정보 이용에 동의하셔야 이벤트 참여가 가능합니다.");
+                return false;
+            }
+
+            if(isRun == true) {
+                alert('요청 중입니다.\n잠시 후 다시 시도해주세요.')
+                return false;
+            }
+
+            isRun = true;
+
+            // url:"https://api.finnqevent1.co.kr/creditcards/11st",
+            $.ajax({
+                url:"https://4ybg7h228a.execute-api.ap-northeast-2.amazonaws.com/prod/creditcards/11st",
+                type:"post",
+                dataType : "json",
+                data:JSON.stringify({
+                    mdn : eventMobile,
+                    agreement : checkboxStatus
+                }),
+                contentType:'application/json; charset=utf-8',
+                success:function(data, textStatus, jqXHR) {
+                    var data = jqXHR.responseJSON;
+
+                    if(data.status == 2000){
+                        alert("이벤트 응모가 완료되었습니다.")
+                    }
+                    if(data.status == 4000 || data.status == 4001)
+                    {
+                        alert(data.message);
+                    }
+                },
+                error:function(args){
+                    // alert(e.responseText);
+                    if(!args.responseJSON)
+                    {
+                        alert("요청 도중 오류가 발생 하였습니다.\n잠시 후 다시 시도해주세요.");
+                    }
+                    // else { var data = args.responseJSON; }
+                },
+                beforeSend:function(){
+                    // 이벤트 진행 중
+                },
+                complete : function() {
+                    isRun = false;
+                }
+            }); // Ajax
+        });
+    });
+})(jQuery);
+</script>
+</head>
+<body>
+<div id="wrap">
+
+    <article class="intro">
+
+        <div class="wid_fix">
+            <p class="title"><img src="img/bg_title_01.jpg" alt="인싸 유병재 한정판 COMMING SOON 핀크카드 사전예약 이벤트"></p>
+
+            <ul class="tab_menu clear">
+                <li><a href="#cont1"><img src="img/img_tab_menu1.png" alt="사전 예약 혜택1 : 90% 할인쿠폰"></a></li>
+                <li><a href="#cont2"><img src="img/img_tab_menu2.png" alt="사전 예약 혜택2 : 2% 추가 캐시백"></a></li>
+                <li><a href="#cont3"><img src="img/img_tab_menu3.png" alt="사전 예약 혜택3 : 유병재 이모티콘 증정"></a></li>
+                <li><a href="#cont4"><img src="img/img_tab_menu4.png" alt="소개 및 발급 방법 : 핀크카드란?"></a></li>
+            </ul>
+
+            <!-- YOUTUBE URL -->
+            <div class="video_wrap">
+                <div class="video_frame">
+                    <div class="embed-container">
+                        <iframe src="https://www.youtube.com/embed/361yFlYQDt8" frameborder='0' allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- //YOUTUBE URL -->
+        </div>
+
+    </article>
+
+
+
+    <article class="article_wrap">
+
+        <div id="cont1" class="wid_fix">
+            <img src="img/img_cont_02.jpg" alt="11번가 고객만을 위한 병.카 혜택 90% 할인 쿠폰 응모">
+            <a href="#layer01" class="btn_layer coupon">
+                <img src="img/btn_event_coupon.jpg" alt="90% 장바구니 쿠폰 - 1만원 이상 구매 시 최대 9천원 할인, 쿠폰 응모 하기 ">
+            </a>
+            <a href="#layer02" class="btn_layer alert">
+                <img src="img/btn_common_layer.png" alt="꼭 확인 하세요">
+            </a>
+
+            <div class="layer_wrap" id="layer01">
+                <div class="layer_cont">
+                    <p><img src="img/tit_layer_1_1.png" alt="휴대전화 번호 입력하고이벤트 응모를 완료하세요!"></p>
+
+                    <div class="input_box">
+                        <input type="number" name="phone" placeholder="휴대번호 ‘-’를 제외한 숫자만 입력하세요" maxlength="11">
+                    </div>
+                    <p><img src="img/tit_layer_1_2.png" alt="핀크 가입 정보와 다른 휴대전화 번호 입력 시 당첨 확인 및 경품을 받으실 수 없습니다. 정확한 정보를 입력해주세요!"></p>
+                    <div class="btn_wrap">
+                        <a href="#" class="btn_join"><img src="img/btn_event.png" alt="응모하기"></a>
+                    </div>
+
+                    <div class="form_wrap">
+                        <p class="l">
+                            <input type="checkbox" name="" id="chkVal" />
+                            <label for="chkVal"><span></span><img src="img/tit_layer_1_3.png" alt="[필수]개인정보 수집 및 취급 위탁에 동의합니다."></label>
+                        </p>
+                        <div class="terms_wrap">
+                            <div class="scroll">
+                                <p><strong>개인정보 수집/이용&middot;동의 및 취급 위탁 안내</strong></p>
+                                <p>핀크는 핀크카드의 유병재 카드 한정판 사전 예약 이벤트 진행을 위해 아래와 같이 개인 정보를 수집 및 위탁하오니, 동의해주시기 바랍니다.</p>
+                                <p><strong>수집항목</strong> : 휴대전화번호</p>
+                                <p><strong>이용 목적</strong> : 이벤트 응모 및 경품 제공</p>
+                                <p>
+                                    <strong>이용/보관기관</strong><br>
+                                    고객은 응모를 거부할 수 있으며, 동의 거부시에는 본 이벤트 참여가 불가합니다.<br>
+                                    수집한 개인정보는 이벤트 종료 후 파기되며 이벤트에 참여하는 경우, 개인정보 수집,
+                                    이용에 동의한 것으로 간주됩니다.<br>
+                                    (단, 경품 당첨 고객의 경우 법령에 의거, 일정기간 개인정보가 보관됩니다)
+                                </p>
+                                <p>
+                                    <strong>취급위탁안내</strong><br>
+                                    업체명 : ㈜코마스인터랙티브<br>
+                                    위탁내용 : 이벤트 운영 대행
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn_close">닫음</a>
+                </div>
+            </div>
+
+            <div class="layer_wrap" id="layer02">
+                <div class="layer_cont l">
+                    <dl>
+                        <dt>예약 기간</dt>
+                        <dd class="num">2018.11.26 ~ 12.02</dd>
+                    </dl>
+                    <dl>
+                        <dt>발급 신청</dt>
+                        <dd class="num">2018.12.03 ~ 12.13</dd>
+                    </dl>
+                    <dl>
+                        <dt>대상자 </dt>
+                        <dd><span class="num">11</span>번가를 통해 유병재 카드 한정판을 사전 예약 응모하고, 기간 중 발급받은 고객 선착순 1천명</dd>
+                    </dl>
+                    <dl>
+                        <dt>쿠폰발송 일자</dt>
+                        <dd><span class="num">2018.12.07</span>(금), <span class="num">12.14</span>(금)</dd>
+                    </dl>
+                    <div class="info_list">
+                        <p>유의사항</p>
+                        <ul>
+                            <li>본 페이지에 입력한 휴대폰 번호와 핀크 가입 시 휴대폰 번호가 다를 시, 쿠폰은 지급되지 않습니다.  </li>
+                            <li>쿠폰은 1인 1회에 한해 제공되며, LMS를 통해 발송됩니다.</li>
+                            <li>타 사이트를 통해 사전 예약 프로모션에 참여한 고객은 중복 참여를 제한하며,<br> 먼저 참여한 이벤트 기준으로 혜택이 제공됩니다.</li>
+                            <li>발급 신청 기간은 핀크 앱을 통해 핀크카드 유병재 카드 한정판을 신청 완료한 기간입니다.</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn_close">닫음</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg_wrap">
+            <div id="cont2" class="wid_fix full">
+                <div class="hidden">발급 즉시 3개월간 추가 혜택 최대 3% 추가 캐시백</div>
+                <a href="#layer03" class="btn_layer alert">
+                    <img src="img/btn_common_layer.png" alt="꼭 확인 하세요">
+                </a>
+
+                <div class="layer_wrap" id="layer03">
+                    <div class="layer_cont l">
+                        <dl>
+                            <dt>기간</dt>
+                            <dd class="num">2018.12.03 ~ 12.31</dd>
+                        </dl>
+                        <dl>
+                            <dt>대상</dt>
+                            <dd>핀크카드 일반판 또는 유병재 카드 한정판을 기간 중 발급받고 이용한 고객 전원</dd>
+                        </dl>
+                        <dl>
+                            <dt>조건</dt>
+                            <dd>매월(2018.12월~2019.02월) 이용 실적에 따라 익월 차등 캐시백<br>
+                                <em>(단, 추가 캐시백은 월 최대 1만원까지 제공)</em>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>캐시백 일자</dt>
+                            <dd>
+                                <p>
+                                <span class="num">2019.1</span>월, 2월, 3월 중순경 핀크 기본계좌로 캐시백<br>
+                                (‘<span class="num">2018.12</span>월, ’<span class="num">2019.1</span>월, 2월의 각 월의 이용 실적 기준)
+                                </p>
+                                <p>예시) <span class="num">2018.12</span>월 <span class="num">50</span>만원 이용 시 : <span class="num">2019.1</span>월 추가 2% 캐시백</p>
+
+                                <p style="margin-top:20px;">※ 준법심의 18-2774(2018.11.20~2018.12.31)</p>
+                            </dd>
+                        </dl>
+
+                        <div class="info_list">
+                            <p>유의사항</p>
+                            <ul>
+                                <li>기간은 핀크 앱을 통해 핀크카드 또는 유병재 카드 한정판을 신청 완료한 기간입니다.</li>
+                                <li>각 월의 1일~말일까지 이용금액 <span class="num">10</span>만원 이상 서비스 제공합니다.</li>
+                                <li>핀크카드 결제 취소 시 해당 취소 거래 금액은 핀크계좌로 재 적립 됩니다.</li>
+                                <li>핀크계좌 잔액 부족으로 승인 거절 시, 핀크App에서 핀크계좌 충전 후 결제하시면 됩니다.</li>
+                                <li>핀크카드 결제 내역은 핀크App에서 조회 가능하며, 핀크머니 사용내역, 잔액조회, 취소/환불 내역, 충전 내역은 핀크 App을 통해서 가능합니다.</li>
+                                <li>핀크App 탈회 또는 이용 정지 시 발급된 핀크카드 사용은 불가합니다.</li>
+                                <li>핀크와 관련된 자세한 사항은 핀크 App을 통해 확인하실 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn_close">닫음</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cont3" class="wid_fix">
+            <img src="img/img_cont_03.jpg" alt="병.카 발급만 받으면 인싸각!유병재 이모티콘 증정">
+            <a href="#layer04" class="btn_layer alert">
+                <img src="img/btn_common_layer.png" alt="꼭 확인 하세요">
+            </a>
+
+            <div class="layer_wrap" id="layer04">
+                <div class="layer_cont l">
+                    <dl>
+                        <dt>기간</dt>
+                        <dd class="num">2018.12.03 ~ 2019.05.31</dd>
+                    </dl>
+                    <dl>
+                        <dt>대상</dt>
+                        <dd>핀크카드 일반판 또는 유병재 카드 한정판을 기간 중 발급받은 고객 전원</dd>
+                    </dl>
+                    <dl>
+                        <dt>조건</dt>
+                        <dd>기간 중 카드 발급 신청 완료 후, 정상 수령</dd>
+                    </dl>
+                    <dl>
+                        <dt>제공일자</dt>
+                        <dd>
+                            발급 일의 다음 달 중순 경, 카카오톡 알림톡으로 전송
+                        </dd>
+                    </dl>
+                    <div class="info_list">
+                        <p>유의사항</p>
+                        <ul>
+                            <li>기간은 핀크 앱을 통해 핀크카드 또는 유병재 카드 한정판을 신청 완료한 기간입니다.</li>
+                            <li>핀크App 탈회 또는 이용 정지 시 발급된 핀크카드 사용은 불가합니다.</li>
+                            <li>핀크와 관련된 자세한 사항은 핀크 App을 통해 확인하실 수 있습니다.</li>
+                            <li>유병재카드 이모티콘은 핀크카드 최초 발급시 1회에 한하여 지급 됩니다.</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn_close">닫음</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article id="cont4">
+        <div class="wid_fix">
+            <img src="img/img_cont_04_1.jpg" alt="쓴 만큼만 덜어 쓰는 소비습관의 시작! 핀크카드란?">
+        </div>
+        <div class="bg_wrap">
+            <div class="wid_fix full">
+                <div class="hidden">
+                    <p>핀크카드, 발급 받아 볼까요?</p>
+                    <ul>
+                        <li>스토어 / 구글플레이 핀크 다운로드</li>
+                        <li>핀크마켓 핀크카드 신청</li>
+                        <li>카드 수령 후 핀크앱에 등록</li>
+                    </ul>
+                </div>
+
+                <a href="https://www.finnq.com/" target="_blank" class="btn_layer_more">
+                    <img src="img/btn_more.jpg" alt="핀크, 더 알아보기">
+                </a>
+            </div>
+        </div>
+    </article>
+
+</div><!-- //wrap -->
+</body>
+</html>

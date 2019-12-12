@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>07기프티몰_07검색결과_MASG03Z18</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap bg_list" id="MASG03Z18">
+	<!-- contents -->
+	<div id="contents" class="market">
+		<!-- section -->
+		<section class="gifticon_prd">
+			
+			<div class="sec_gifticon_search">
+				<div class="all_prd">총<em class="num bold">35</em>개</div>
+				
+				<ul class="sorting_tab">
+					<li class="on"><a href="#none">인기순</a></li>
+					<li><a href="#none">낮은 가격순</a></li>
+					<li><a href="#none">높은 가격순</a></li>
+				</ul>
+			</div>
+
+			<!-- 검색 결과 -->
+			<div class="sec_sub_wrap">
+				
+				<!-- 1개 타입 -->
+				<div class="sub_cont typeA">
+					<ul>
+						<li class="prd_list_wrap">
+							<a href="#none" class="prd_wrap">
+								<div class="prd_img">
+									<img src="../../images/test/img_prd_thumb.jpg" alt="">
+								</div>
+								<div class="prd_info_wrap">
+									<div class="name_info">
+										<span class="brand_name">스타벅스111</span>
+										<strong class="name ellipsis_double">아메리카노 초콜릿 쿠키세트 (Regular)</strong><!-- 두줄 이상 말줄임 class : ellipsis_double 추가 2018-03-22 ock -->
+									</div>
+									<div class="cash_info">
+										<strike class="discount"><em class="cash">5,200</em><span>원</span></strike>
+										<strong class="price"><em class="cash bold">194,100</em><span>원</span></strong>
+										<strong class="percent"><em class="num bold">99%</em></strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="prd_list_wrap">
+							<a href="#none" class="prd_wrap">
+								<div class="prd_img">
+									<img src="../../images/test/img_prd_thumb.jpg" alt="">
+								</div>
+								<div class="prd_info_wrap">
+									<div class="name_info">
+										<span class="brand_name">스타벅스111</span>
+										<strong class="name ellipsis_double">아메리카노 초콜릿 쿠키세트 (Regular)</strong><!-- 두줄 이상 말줄임 class : ellipsis_double 추가 2018-03-22 ock -->
+									</div>
+									<div class="cash_info">
+										<strike class="discount"><em class="cash">5,200</em><span>원</span></strike>
+										<strong class="price"><em class="cash bold">194,100</em><span>원</span></strong>
+										<strong class="percent"><em class="num bold">99%</em></strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="prd_list_wrap">
+							<a href="#none" class="prd_wrap">
+								<div class="prd_img">
+									<img src="../../images/test/img_prd_thumb.jpg" alt="">
+								</div>
+								<div class="prd_info_wrap">
+									<div class="name_info">
+										<span class="brand_name">스타벅스111</span>
+										<strong class="name ellipsis_double">아메리카노 초콜릿 쿠키세트 (Regular) 두줄이상 말줄임 테스트 이야이야오</strong><!-- 두줄 이상 말줄임 class : ellipsis_double 추가 2018-03-22 ock -->
+									</div>
+									<div class="cash_info">
+										<strike class="discount"><em class="cash">5,200</em><span>원</span></strike>
+										<strong class="price"><em class="cash bold">194,100</em><span>원</span></strong>
+										<strong class="percent"><em class="num bold">99%</em></strong>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+		</section>
+		<!-- //section -->
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	//추천상품
+	var productSlide01 = new Swiper(".product_slide01", {
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+	});
+	//금액대별 상품
+	//var productSlide02 = new Swiper(".product_slide02", {
+		//loop: true,
+		//pagination: {
+			//el: ".swiper-pagination",
+		//},
+	//});
+
+	//2018-02-13 tabSorting
+	function tabSorting() {
+		$('.sorting_tab li').on('click',function(){
+			$(this).addClass('on');
+			$(this).siblings('li').removeClass('on');
+		});
+	}tabSorting();
+});
+
+	
+</script>
+</body>
+</html>

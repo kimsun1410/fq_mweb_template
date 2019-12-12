@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>01더보기_08비대면계좌개설_02약관동의</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<style type="text/css">
+.agree_terms dl dt input[type=checkbox]+label span {color:#666;}
+</style>
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	// 하단 다음 버튼 이벤트 활성화
+	var allFlow = $('.agree_terms dt input[name="check_action"]').length;
+	var onlyFlow = 0;
+
+	function termsBtnAgreeEvt()
+	{
+		// 핀크 제3자 정보 제공 동의
+		$('.agree_terms.term1 dt').on('click','input[type="checkbox"]',function() {
+			if ($(this).prop("checked")){
+				onlyFlow = onlyFlow + 1;
+			} else {
+				onlyFlow = onlyFlow - 1;
+			}
+			btnStickyEvt();
+		});
+
+		// KEB하나은행 필수 이용 약관
+		$('.agree_terms.term2 dt').on('click','input[type="checkbox"]',function() {
+			if ($(this).prop("checked")){
+				onlyFlow = onlyFlow + 1;
+			} else {
+				onlyFlow = onlyFlow - 1;
+			}
+			btnStickyEvt();
+		});
+	}
+	termsBtnAgreeEvt();
+
+
+	/*
+	// 약관 관련 스크립트 주석처리
+
+	// 약관 체크 비교 함수
+	function btnStickyEvt() {
+		if( allFlow == onlyFlow ) {
+			$('.sticky_wrap .btn_type_apply.kebhana').removeAttr('disabled');
+		} else {
+			$('.sticky_wrap .btn_type_apply.kebhana').attr('disabled', 'disabled');
+		}
+	}
+
+	// 개인정보 제3자 제공동의 호출
+	$(this).on('click', '.btn_terms1', function(event) {
+		event.preventDefault();
+		// 팝업 호출 버튼
+		$('.modal_wrap.terms1').addClass('visible');
+	});
+
+	// // 개인정보 제3자 제공동의 닫기
+	$('.btn_terms1_ok').on('click', function(event) {
+		event.preventDefault();
+		terms1_ok();
+		btnStickyEvt();
+	});
+
+	// 하나은행 약관 호출
+	$(this).on('click', '.btn_terms2', function(event) {
+		event.preventDefault();
+		// 팝업 호출 버튼
+		$('.modal_wrap.terms2').addClass('visible');
+	});
+
+	// 하나은행 약관 닫기
+	$('.btn_terms2_ok').on('click', function(event) {
+		event.preventDefault();
+		terms2_ok();
+		btnStickyEvt();
+	});
+
+	function terms1_ok(){
+		$('.modal_wrap.terms1').removeClass("visible");
+		var chkT = $('.terms1_ok_chk').prop("checked");
+		if (!chkT) {
+			onlyFlow = onlyFlow + 1;
+			$('.terms1_ok_chk').prop("checked", true);
+		}
+	}
+
+	function terms2_ok(){
+		$('.modal_wrap.terms2').removeClass("visible");
+		var chkT = $('.terms2_ok_chk').prop("checked");
+		if (!chkT) {
+			onlyFlow = onlyFlow + 1;
+			$('.terms2_ok_chk').prop("checked", true);
+		}
+	}
+	*/
+});
+
+
+</script>
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="add_sticky">
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">KEB하나 비대면계좌 개설</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section class="">
+			<div class="sec_title">
+				<h2>약관동의</h2>
+				<p class="guide_txt">KEB하나은행 신규 계좌 개설을 위해<br>아래 내용의 동의가 필요합니다.</p>
+			</div>
+
+			<div class="sec_all_check">
+
+				<div class="agree_terms term1">
+					<dl class="toggle_list">
+						<dt class="agree_wrap">
+							<input type="checkbox" id="chk0101" name="check_action" class="purple terms1_ok_chk"><label for="chk0101" name="check_action"><span>핀크 제3자 정보 제공 동의 (필수)</span></label>
+							<!-- /resources/v2/pubs/html/provision/000156_20180424.html -->
+							<a href="#" class="ico ico_arrow_more link btn_terms1"><span class="blind">더보기</span></a>
+						</dt>
+					</dl>
+				</div><!-- //agree_terms term1 -->
+
+				<div class="agree_terms term2">
+					<dl class="toggle_list">
+						<dt class="agree_wrap">
+							<input type="checkbox" id="chk0201" name="check_action" class="purple terms2_ok_chk"><label for="chk0201" name="check_action"><span>KEB하나은행 필수 이용 약관</label>
+							<!-- eplus_terms.pdf -->
+							<a href="#" class="ico ico_arrow_more link btn_terms2"><span class="blind">더보기</span></a>
+						</dt>
+						<dd class="sub_info_desc">
+							<ul>
+								<li>필수 개인(신용)정보수집 이용동의 (비여신 금융거래)</li>
+								<li>통장 대여요청 받은 사실 없음</li>
+								<li>통장개설 등 금융거래 요청받은 사실 없음</li>
+								<li>통장 양도금지 확인</li>
+								<li>불법&middot;탈법 차명거래 금지 설명 확인서</li>
+								<li>통장 실 소유자</li>
+								<li>해외거주 및 대한민국 이외 국가에 대한 납세의무 없음</li>
+								<li>고객정보 취급방침</li>
+								<li>예금자보호 설명 및 확인</li>
+								<li>예금거래 기본약관</li>
+								<li>입출금이 자유로운 예금 약관</li>
+								<li>e-플러스 통장 특약</li>
+								<li>e-플러스 통장 상품 설명서</li>
+								<li>개인(신용)정보 수집 이용 및 제공 동의서 (상품<br> 서비스 안내 등)</li>
+								<li>개인정보 수집 이용 및 제공 관련 고객 권리<br class="w320"> 안내문</li>
+								<li>필수 개인(신용)정보 수집 이용 및 제 3자 제공 <br> 동의서 (핀크용)</li>
+								<li>휴대폰인증 이용약관 동의</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<!-- //agree_terms term2 -->
+			</div><!-- //sec_all_check -->
+
+		</section>
+
+
+		<!-- 약관 제3자 동의약관 팝업 -->
+		<div class="modal_wrap fullpop terms1">
+			<div class="modal_content ">
+
+				<div class="sec_ows_head finnq">
+					<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+					<h2 class="ows_title">상세보기</h2>
+					<button class="btn_cancel close btn_terms1_ok">취소</button>
+				</div>
+
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_fincategory">
+						<article>
+
+							<div class="terms_wrap_pdf">
+								<div class="agree_details kebhana">
+									<h3>개인정보 제3자 제공동의</h3>
+									<p><span class="str_txt">개인정보의 제공 : SK텔레콤(주) → (주)핀크</span></p>
+
+									<div class="tbl_w01 mt10">
+										<table>
+											<caption>개인정보 제3자 제공동의 상세</caption>
+											<colgroup>
+												<col style="width:33%">
+												<col style="width:67%">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th>제공받는 곳</th>
+													<td>주식회사 핀크</td>
+												</tr>
+												<tr>
+													<th>제공 목적</th>
+													<td>통신데이터를 활용하여 고객에게 정량적 분석 서비스, 맞춤 서비스 제공</td>
+												</tr>
+												<tr>
+													<th>제공 항목</th>
+													<td>가입기간, 고객서비스등급, 로밍이용건수, 미납건수, 미납일수, 소액결제금액, 소액결제건수, 청구금액, 통화빈도, 데이터사용량, 납부방법, 가입회선수, 회선상태, 단말기 할부원금, 단말기 할부회차, 주소</td>
+												</tr>
+												<tr>
+													<th>보유 및 이용기간</th>
+													<td>회원 탈퇴 시까지(관련 법령에 따라 보존할 필요가 있는 경우에는 해당 보존기간)</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<p class="star_type kebhana_info"> 위의 개인정보 제공에 대한 동의를 거부할 권리가 있습니다. 다만 동의를 거부하시는 경우 회원가입 및 서비스 이용이 제한됩니다.</p>
+								</div><!-- //agree_details -->
+							</div>
+
+						</article>
+						<div class="sticky_wrap set_type1">
+							<button type="button" name="" class="btn btn_type_apply btn_terms1_ok">확인</button>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //약관 제3자 동의 팝업 -->
+
+
+		<!-- 하나은행 동의약관 팝업 -->
+		<div class="modal_wrap fullpop terms2">
+			<div class="modal_content ">
+
+				<div class="sec_ows_head finnq">
+					<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+					<h2 class="ows_title">상세보기</h2>
+					<button class="btn_cancel close btn_terms2_ok">취소</button>
+				</div>
+
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_fincategory">
+						<article>
+
+							<div class="terms_wrap_pdf agree_details kebhana_pdf">
+
+								<iframe src="./eplus_terms.pdf" style="width:100%; height:100%;"></iframe>
+							</div>
+
+						</article>
+						<div class="sticky_wrap set_type1">
+							<button type="button" name="" class="btn btn_type_apply btn_terms2_ok">확인</button>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //약관 제3자 동의 팝업 -->
+
+		<!-- 입력값이 모두 입력되면 disabled 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply kebhana" disabled="disabled">다음</button>
+		</div>
+	</div><!-- //contents -->
+</div>
+</body>
+</html>

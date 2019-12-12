@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>04자산모니터링_03자유입출금상세_web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 CBSL69Z02 -->
+    <div id="contents" class="fingo">
+
+        <section class="assets_list">
+
+            <div class="sec_head">
+                <p class="update white">
+                    업데이트 오늘 <em class="num">13:20</em>
+                    <!-- <a href="#none"><i class="ico ico_reload loading"><span class="blind">Refresh</span></i></a> -->
+                    <!-- 회전시 ico에 loading 클래스 추가 -->
+                </p>
+                <p class="account_num mgt10">KEB하나 <span class="num">01012345678-888</span></p>
+                <div class="account_info mt0">
+                    <div class="money_total">
+                        <em class="cash bold">12,343,000</em><span>원</span>
+                    </div>
+                </div>
+            </div><!-- //sec_head -->
+
+            <!-- 18.09.20  날짜 검색 추가 -->
+            <form onsubmit="return false">
+                <fieldset>
+                <legend>저금내역 상세 조회</legend>
+
+                <div class="sort_cal_wrap tab mgt40">
+
+                    <div class="sort_info no_line">
+
+                        <div class="tab_wrap">
+                            <span class="tab on"><a href="#none">전체</a></span>
+                            <span class="tab"><a href="#none">입금</a></span>
+                            <span class="tab"><a href="#none">출금</a></span>
+                        </div>
+
+                        <button type="button" class="btn_detail">열기</button>
+                    </div>
+                    <div class="sort_detail no_line">
+                        <div class="btn_wrap">
+                            <button type="button">이번달</button>
+                            <button type="button"><em class="num">1</em>개월</button>
+                            <button type="button"><em class="num">3</em>개월</button>
+                            <button type="button"><em class="num">6</em>개월</button>
+                        </div>
+                        <div class="date_wrap">
+                            <div>
+                                <div class="i_txt">
+                                    <span class="date first"></span>
+                                    <input type="date" name="" class="date_input first" max="" value="" />
+                                </div>
+                                <div class="i_txt">
+                                    <span class="date end"></span>
+                                    <input type="date" name="" class="date_input" max="" />
+                                </div>
+                            </div>
+                            <button type="button" class="btn_search">조회</button>
+                        </div>
+                    </div>
+                </div>
+
+                </fieldset>
+            </form>
+            <!--// 18.09.20 -->
+
+
+
+            <div class="sec_history spend_detail">
+                <!-- 반복문 -->
+                <ul class="list_wrap new">
+                    <li>
+                        <dl>
+                            <dt>
+                                <strong>미래에셋대우</strong>
+                                <div class="spand"><em class="cash bold">1,000,500</em><span>원</span></div>
+                            </dt>
+                            <dd>
+                                <div><strong class="date">2017.12.12 12:38</strong></div>
+                                <div class="total"><span class="num">1,123,456,789</span> 원</div>
+                            </dd>
+                        </dl>
+                        <div class="expend">
+                            <div class="htag">
+                                <blockquote><a href="#"># 해시태그</a></blockquote><!-- 링크 기능이 없으면 a태그 삭제해주세요. -->
+                                <blockquote><a href="#"># 소분류</a></blockquote>
+                                <blockquote><a href="#"># 고정소비</a></blockquote>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <strong>입금자명</strong>
+                                <div class="spand point_txt1">-<em class="cash bold">1,000,500</em><span>원</span></div>
+                            </dt>
+                            <dd>
+                                <div><strong class="date">2017.12.12 12:38</strong></div>
+                                <div class="total"><span class="num">1,123,456,789</span> 원</div>
+                            </dd>
+                        </dl>
+                        <div class="expend">
+                            <div class="htag">
+                                <blockquote><a href="#"># 해시태그</a></blockquote><!-- 링크 기능이 없으면 a태그 삭제해주세요. -->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>
+                                <strong>입금자명</strong>
+                                <div class="spand"><em class="cash bold">1,000,500</em><span>원</span></div>
+                            </dt>
+                            <dd>
+                                <div><strong class="date">2017.12.12 12:38</strong></div>
+                                <div class="total"><span class="num">1,123,456,789</span> 원</div>
+                            </dd>
+                        </dl>
+                        <div class="expend">
+                            <div class="htag">
+                                <blockquote><a href="#"># 해시태그</a></blockquote><!-- 링크 기능이 없으면 a태그 삭제해주세요. -->
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+                <!-- //반복문 -->
+
+            </div><!-- //spend_detail -->
+        </section>
+        <!-- 하단 붙임 -->
+
+
+        <!-- sticky_wrap place -->
+        <!-- <div class="sticky_wrap set_type1">
+            <button type="button" name="apply" class="btn btn_type_apply">완료</button>
+        </div> --> <!-- 2018-01-23 버튼 삭제 phj -->
+
+    </div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.expend').on('click','button.ico',function(){
+        $(this).toggleClass('on').next().toggleClass('on');
+    });
+    $('.expend button.ico').click();
+
+    var topH = $(".sec_head").outerHeight();
+    var ViewH = $("section").outerHeight();
+    $(window).scroll(function(){
+      if(ViewH >= 800) {
+          var sticky = $('.sec_tab'),
+              scroll = $(window).scrollTop();
+          if (scroll >= topH) sticky.addClass('fixed');
+          else sticky.removeClass('fixed');
+      }
+    });
+
+    // 날짜 검색
+    function dateSearchInit() {
+        var _date           = new Date(),
+            _year           = _date.getFullYear(),
+            _month          = (_date.getMonth() + 1),
+            _day            = _date.getDate();
+
+            // MONTH가 0보다 작으면
+            if (_month < 10) {
+                _month = '0' + _month;
+            }
+
+        var _firstDate      = _year + '.' + _month + '.' + '01', // 초기 화면에 보여지는 그달의 첫째 날
+            _endDate        = _year + '.' + _month + '.' + _day, // 초기 화면에 보여지는 날짜(Today)
+            _minDate        = _year + '-' + _month + '-' + '01'; // Datepicker START DATE
+            _maxDate        = _year + '-' + _month + '-' + _day; // Datepicker END DATE
+
+        var _maxDateInput   = $('.date_wrap .i_txt .date_input'),
+            _firstDayTxt    = $('.date_wrap .i_txt .date.first'),
+            _endDayTxt      = $('.date_wrap .i_txt .date.end');
+
+        _firstDayTxt.text( _firstDate );
+        _endDayTxt.text( _endDate );
+        _maxDateInput.attr( 'max', _maxDate );
+
+        $('.date_wrap .i_txt .date_input.first').attr( 'value', _minDate );
+    }
+
+    dateSearchInit();
+
+    // Datepicker 값이 변할 때
+    $('.date_input').change(function() {
+        var temp = $(this).prev().text();
+
+        var changeY = $(this).val().split('-')[0],
+            changeM = $(this).val().split('-')[1],
+            changeD = $(this).val().split('-')[2],
+            changeVal = changeY  + '.' + changeM + '.' + changeD;
+
+        if (changeY == undefined || changeM == undefined || changeD == undefined) {
+            changeVal = temp;
+        }
+        $(this).prev('.date').text( changeVal );
+    });
+
+    // 달력 옵션 상세 클릭
+    $('.sort_cal_wrap .btn_detail').on('click', function(){
+        $('.sort_cal_wrap').toggleClass('on');
+    });
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>투자후기등록 실패 안내</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180406" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market p2p_wrap">
+		<div class="flex_wrap set_type1" style="padding:20px;">
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASV07Z10">투자후기등록 실패 안내</button>
+			</span>
+		</div>
+
+		<div id="MASV07Z10" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">일시적인 장애로 <strong>투자후기 등록 실패</strong>하였습니다. 잠시 후 다시 시도해주세요.</h3><!-- 2018.04.25 텍스트변경 --><!-- 2018-05-30 투자후기 등록 실패 컬러강조 -->
+				</div>
+				<div class="flex_wrap set_type1">
+					<span class="item on"><button type="button" name="button" class="btn_type_f close_modal">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

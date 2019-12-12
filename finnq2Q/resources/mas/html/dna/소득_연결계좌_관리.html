@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>소득정보_연결계좌_관리</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_dna.css" />
+	<style type="text/css">
+		#sortable { list-style-type: none; padding: 0 20px; width: 100%; box-sizing:border-box}
+		#sortable li { margin: 3px; padding: 0.4em; font-size: 1.4em; border:1px solid skyblue; background:#fff}
+	</style>  
+
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 : FIAA04Z03 -->
+	<div id="contents" class="finance_dna">
+
+		<section class="sec_space28">
+			<div class="sec_title">
+				<h3 class="accent_txt">김핀크님은<br><strong>은행 <span class="num">3</span>개, 계좌 <span class="num">7</span>개</strong>를 연결했어요.</h3>
+			</div>
+
+			<div class="sec_round_box">
+				<dl class="col_type">
+					<dt class="info_tit">계좌 총 잔액</dt>
+					<dd class="info_cont">
+						<em class="cash bold">3,000,000</em><span>원</span>
+					</dd>
+				</dl>
+			</div>
+			
+			<div class="movement_history include_swinch">
+				<ul class="list_wrap" id="sortable">
+					<li class="ui-state-default">
+						<div>
+							<p>Item 1</p>
+							<div class="switch">
+								<input type="checkbox" id="cb1" class="switch_basic"> <!-- disabled="disabled" -->
+								<label class="switch_basic_btn" for="cb1"></label>
+							</div>
+						</div>
+					</li>
+					<li class="ui-state-default">
+						<div>
+							<p>Item 2</p>
+							<div class="switch">
+								<input type="checkbox" id="cb2" class="switch_basic"> <!-- disabled="disabled" -->
+								<label class="switch_basic_btn" for="cb2"></label>
+							</div>
+						</div>
+					</li>
+					<li class="ui-state-default">
+						<div>
+							<p>Item 3</p>
+							<div class="switch">
+								<input type="checkbox" id="cb3" class="switch_basic" checked="checked"> <!-- disabled="disabled" -->
+								<label class="switch_basic_btn" for="cb3"></label>
+							</div>
+						</div>
+					</li>
+					<li class="ui-state-default">
+						<div class="position:relative">
+							<p>Item 4</p>
+							<div class="switch">
+								<input type="checkbox" id="cb4" class="switch_basic" checked="checked"> <!-- disabled="disabled" -->
+								<label class="switch_basic_btn" for="cb4"></label>
+							</div>
+						</div>
+					</li>
+					<li class="ui-state-default">
+						<div class="position:relative">
+							<p>Item 5</p>
+							<div class="switch">
+								<input type="checkbox" id="cb5" class="switch_basic"> <!-- disabled="disabled" -->
+								<label class="switch_basic_btn" for="cb5"></label>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div><!-- //movement_history -->
+
+			<div class="more_loading"></div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+	$(function(){
+		$("#sortable").sortable();
+	});
+	</script>
+</body>
+</html>

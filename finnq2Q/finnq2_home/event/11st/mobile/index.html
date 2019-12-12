@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>11st | Finnq</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="css/finnq_reset.css">
+<link rel="stylesheet" type="text/css" href="css/finnq_common.css">
+<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
+(function($) {
+    $(function(){
+
+        // DeviceModel
+        function deviceModel(){
+            var currentOS;
+            var mobile = (/iphone|ipad|ipod|android/i.test( navigator.userAgent.toLowerCase() ));
+            if (mobile)
+            {
+                var userAgent = navigator.userAgent.toLowerCase();
+                if (userAgent.search("android") > -1) {
+                    currentOS = "android";
+                } else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)) {
+                    currentOS = "ios";
+                } else { currentOS = "else"; }
+            }
+            else  {  currentOS = "nomobile"; }
+
+            $('body').addClass(currentOS);
+        }
+        deviceModel();
+
+
+        if ( $('body').hasClass('ios') ) {
+            $('.btn_app').find('img').attr({'src':'img/img_menu4_3_ios.jpg'});
+        }
+
+        // 탭 메뉴 이동
+        $('.tab_menu li > a').on('click', function(event){
+            event.preventDefault();
+            var target = $(this).attr('href'),
+                scrolling = $(target).offset().top;
+            $("body,html").animate({scrollTop: scrolling}, 350);
+        });
+
+        $('.layer_wrap .btn_close').on('click', function(event){
+            event.preventDefault();
+            $('.layer_wrap').removeClass('on');
+        });
+
+        $('.btn_layer').on('click', function(event){
+            event.preventDefault();
+
+            var layerW = $('.layer_wrap').outerWidth() / 2;
+
+            $('.layer_wrap').addClass('on').css({'margin-left':-layerW+'px'});
+
+        });
+
+        $('.layer_wrap .input_box input').on('keyup', function(event){
+            var length =  $(this).val().length;
+            if (length > 11) {
+                $(this).val( $(this).val().substring(0, 11) );
+            }
+        });
+
+        $('.btn_detail').on('click', function(event){
+            event.preventDefault();
+
+            var status = $(this).hasClass('on');
+            var target = $(this).attr('class').split(' ')[1];
+            var _offset = $(this).offset().top - 25;
+
+            if ( !status ) {
+                $("body,html").animate({scrollTop: _offset}, 700);
+
+                $(this).addClass('on').find('img').attr('src', $(this).find('img').attr('src').replace('off.jpg','on.jpg'));
+                $('.detail.'+target+'').addClass('on').find('img').attr({'src':'img/img_'+target+'_on.jpg'});
+            } else {
+                $(this).removeClass('on').find('img').attr('src', $(this).find('img').attr('src').replace('on.jpg','off.jpg'));
+                $('.detail.'+target+'').addClass('on').find('img').attr({'src':'img/img_'+target+'_off.jpg'});
+            }
+        });
+
+
+        // 버튼 클릭시 ajax 실행
+        var isRun = false;
+        $('.layer_wrap .btn_join').on('click', function (event) {
+            event.preventDefault();
+
+            var checkboxStatus = $('input:checkbox[id="chkVal"]').is(':checked') ? true : false;
+            var eventMobile    = $('.input_box input[name="phone"]').val();
+            var _parms;
+
+            if(/^01[016789]{1}[0-9]{3,4}[0-9]{4}$/.test(eventMobile) == false) {
+                alert("휴대번호를 잘못 입력하셨습니다. 다시 한 번 확인해주세요");
+                return false;
+            }
+
+            if(checkboxStatus == false) {
+                alert("개인정보 이용에 동의하셔야 이벤트 참여가 가능합니다.");
+                return false;
+            }
+
+            if(isRun == true) {
+                alert('요청 중입니다.\n잠시 후 다시 시도해주세요.')
+                return false;
+            }
+
+            isRun = true;
+            // url:"https://api.finnqevent1.co.kr/creditcards/11st",
+            $.ajax({
+                url:"https://4ybg7h228a.execute-api.ap-northeast-2.amazonaws.com/prod/creditcards/11st",
+                type:"post",
+                dataType : "json",
+                data:JSON.stringify({
+                    mdn : eventMobile,
+                    agreement : checkboxStatus
+                }),
+                contentType:'application/json; charset=utf-8',
+                success:function(data, textStatus, jqXHR) {
+                    var data = jqXHR.responseJSON;
+
+                    if(data.status == 2000){
+                        alert("이벤트 응모가 완료되었습니다.")
+                    }
+                    if(data.status == 4000 || data.status == 4001)
+                    {
+                        alert(data.message);
+                    }
+                },
+                error:function(args){
+                    // alert(e.responseText);
+                    if(!args.responseJSON)
+                    {
+                        alert("요청 도중 오류가 발생 하였습니다.\n잠시 후 다시 시도해주세요.");
+                    }
+                    // else { var data = args.responseJSON; }
+                },
+                beforeSend:function(){
+                    // 이벤트 진행 중
+                },
+                complete : function() {
+                    isRun = false;
+                }
+            }); // Ajax
+        });
+
+    });
+})(jQuery);
+</script>
+</head>
+<body>
+<div id="wrap">
+    <section class="intro">
+        <article class="cont">
+            <img src="img/bg_cont1_1.jpg" alt="">
+            <ul class="tab_menu object">
+                <li><a href="#menu1"><img src="img/img_tab_menu1.png" alt="90% 할인쿠폰"></a></li>
+                <li><a href="#menu2"><img src="img/img_tab_menu2.png" alt="최대3% 캐시백"></a></li>
+                <li><a href="#menu3"><img src="img/img_tab_menu3.png" alt="유병재 이모티콘 증정"></a></li>
+                <li><a href="#menu4"><img src="img/img_tab_menu4.png" alt="핀크카드란?"></a></li>
+            </ul>
+        </article>
+        <article class="cont">
+            <img src="img/bg_cont1_2.jpg" alt="">
+            <!-- YOUTUBE URL -->
+            <div class="video_wrap object">
+                <div class="video_frame">
+                    <div class="embed-container">
+                        <iframe src="https://www.youtube.com/embed/361yFlYQDt8" frameborder='0' allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- //YOUTUBE URL -->
+
+        </article>
+    </section>
+
+    <section id="menu1">
+        <div><img src="img/img_menu1_1.jpg" alt="사전예약 혜택 11번가 고객만을 위한 병.카 혜택 90% 할인 쿠폰 응모"></div>
+        <div><a href="#" class="btn_layer"><img src="img/img_menu1_2.jpg" alt="90% 장바구니 쿠폰 1만원 이상 구매 시 최대 9천원 할인 "></a></div>
+        <div><a href="#" class="btn_detail menu1_4"><img src="img/img_menu1_3_off.jpg" alt="꼭 확인하세요"></a></div>
+        <div class="detail menu1_4"><img src="img/img_menu1_4_off.jpg" alt=""></div>
+
+        <div class="layer_wrap">
+            <div class="layer_cont">
+                <p><img src="img/tit_layer_01.gif" alt="휴대전화 번호 입력하고이벤트 응모를 완료하세요!"></p>
+
+                <div class="input_box">
+                    <input type="number" name="phone" placeholder="‘-’를 제외한 숫자만 입력하세요" maxlength="11">
+                </div>
+                <p><img src="img/tit_layer_02.gif" alt="핀크 가입 정보와 다른 휴대전화 번호 입력 시 당첨 확인 및 경품을 받으실 수 없습니다."></p>
+                <div class="btn_wrap">
+                    <a href="#" class="btn_join"><img src="img/tit_layer_03.gif" alt="응모하기"></a>
+                </div>
+
+                <div class="form_wrap">
+                    <p class="l">
+                        <input type="checkbox" name="" id="chkVal" />
+                        <label for="chkVal" class="clear">
+                            <span></span>
+                            <img src="img/tit_layer_04.gif" alt="[필수]개인정보 수집 및 취급 위탁에 동의합니다.">
+                        </label>
+                    </p>
+                    <div class="terms_wrap">
+                        <div class="scroll">
+                            <p><strong>개인정보 수집/이용&middot;동의 및 취급 위탁 안내</strong></p>
+                            <p>핀크는 핀크카드의 유병재 카드 한정판 사전 예약 이벤트 진행을 위해 아래와 같이 개인 정보를 수집 및 위탁하오니, 동의해주시기 바랍니다.</p>
+                            <p><strong>수집항목</strong> : 휴대전화번호</p>
+                            <p><strong>이용 목적</strong> : 이벤트 응모 및 경품 제공</p>
+                            <p>
+                                <strong>이용/보관기관</strong><br>
+                                고객은 응모를 거부할 수 있으며, 동의 거부시에는 본 이벤트 참여가 불가합니다.<br>
+                                수집한 개인정보는 이벤트 종료 후 파기되며 이벤트에 참여하는 경우, 개인정보 수집,
+                                이용에 동의한 것으로 간주됩니다.<br>
+                                (단, 경품 당첨 고객의 경우 법령에 의거, 일정기간 개인정보가 보관됩니다)
+                            </p>
+                            <p>
+                                <strong>취급위탁안내</strong><br>
+                                업체명 : ㈜코마스인터랙티브<br>
+                                위탁내용 : 이벤트 운영 대행
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //form_wrap -->
+                <a href="#" class="btn_close">닫음</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu2">
+        <div><img src="img/img_menu2_1.jpg" alt="핀크카드 이용 혜택 발급 즉시 3개월간 추가 혜택 최대 3% 캐시백"></div>
+        <div><a href="#" class="btn_detail menu2_3"><img src="img/img_menu2_2_off.jpg" alt="꼭 확인하세요."></a></div>
+        <div class="detail menu2_3"><img src="img/img_menu2_3_off.jpg" alt=""></div>
+    </section>
+
+    <section id="menu3">
+        <div><img src="img/img_menu3_1.jpg" alt="핀크카드 발급 혜택 병.카 발급만 받으면 인싸각! 유병재 이모티콘 증정"></div>
+        <div><a href="#" class="btn_detail menu3_3"><img src="img/img_menu3_2_off.jpg" alt="꼭 확인하세요."></a></div>
+        <div class="detail menu3_3"><img src="img/img_menu3_3_off.jpg" alt=""></div>
+    </section>
+
+    <section id="menu4">
+        <div><img src="img/img_menu4_1.jpg" alt="소개 및 발급 방법 쓸 만큼만 덜어 쓰는 소비습관의 시작! 핀크카드란?"></div>
+        <div><img src="img/img_menu4_2.jpg" alt="핀크카드, 발급 받아 볼까요?"></div>
+        <div><a href="https://finnq.onelink.me/YERF?pid=11st&c=creditcards" target="_blank" class="btn_app"><img src="img/img_menu4_3_and.jpg" alt="핀크, 다운받기"></a></div>
+    </section>
+</div>
+
+</body>
+</html>

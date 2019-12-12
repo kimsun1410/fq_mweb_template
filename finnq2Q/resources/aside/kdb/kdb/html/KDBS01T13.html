@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>해지신청 | T high5적금</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kdb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">적금 해지</h2>
+			<!-- <button class="btn_cancel" onclick="">취소</button> -->
+		</div>
+
+		<section class="kdb_result">
+
+			<div class="sec_title">
+				<h2>KDB <em class="font-light">X</em> T high<em class="num">5</em> 적금<br> 해지 신청</h2>
+			</div>
+
+			<div class="sec_fund_result kdb pdb30">
+				<p class="tit">가입 정보</p>
+				<table class="tbl_type2">
+					<caption>적금계좌, 예금주명, 적용금리, 가입기간, 총 납입회차, 해지 시 입금계좌 항목으로 구성된 내용 </caption>
+					<colgroup>
+						<col style="width:38%">
+						<col style="width:auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">적금계좌</th>
+							<td>KDB산업<br> <em class="num">111-222-333333</em></td>
+						</tr>
+						<tr>
+							<th scope="row">예금주명</th>
+							<td>김핀크</td>
+						</tr>
+						<tr>
+							<th scope="row">적용금리</th><!-- 19.10.02 수정 -->
+							<td>연 <em class="num">5.0%</em></td>
+						</tr>
+						<tr>
+							<th scope="row">가입기간</th>
+							<td><em class="num">2019.09.18~2020.09.18</em></td>
+						</tr>
+						<tr>
+							<th scope="row">총 납입회차</th>
+							<td><em class="num">3</em>회</td>
+						</tr>
+						<tr>
+							<th scope="row">해지 시 입금계좌</th>
+							<td>KDB산업<br> <em class="num">111-222-333333</em></td>
+						</tr>
+					</tbody>
+				</table><!-- //tbl_type2 -->
+			</div>
+
+			<div class="kdb_fund_info pdt0 mgb0 mgt0">
+				<div class="tot_info">
+					<ul>
+						<li class="dash_line">
+							<span class="tit"><strong>받는 금액 (세후)</strong></span>
+							<span class="cont"><strong><em class="num bold">26,900</em>원</strong></span>
+						</li>
+						<li>
+							<span class="tit">원금</span>
+							<span class="cont"><em class="num bold">600,000</em>원</span>
+						</li>
+						<li>
+							<span class="tit">
+								이자 (세후)
+								<button class="btn_ico ico_circle_help" data-name="open_fp_layer" style="margin:-3px 0 0 2px;"0><span class="blind">도움말</span></button>
+							</span>
+							<span class="cont"><em class="num bold">26,900</em>원</span>
+						</li>
+					</ul>
+				</div>
+				<div class="detail_info">
+					<ul>
+						<li>
+							<span class="tit">소득세</span>
+							<span class="cont"><em class="num">- 2,200</em>원</span>
+						</li>
+						<li>
+							<span class="tit">지방소득세</span>
+							<span class="cont"><em class="num">- 900</em>원</span>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="list_type star">
+					<li> 해지금액은 KDB산업 <em class="num">123-456-123456</em> 입출금통장으로 입금되며, 만기일 전 해지 시  중도해지 이자율이 적용됩니다.</li>
+					<li>해지 신청계좌에 지급 제한 등의 사유가 있는 경우 해지가 제한될 수 있습니다.</li>
+				</ul>
+			</div>
+
+			<!-- 19.10.02 추가 -->
+			<div class="input_wrap add_password">
+				<dl>
+					<dt class="input_tit"><strong>계좌 비밀번호</strong></dt>
+					<dd class="item">
+						<input type="text" data-name="inpFocus" placeholder="비밀번호">
+						<p class="remark hide">계좌 비밀번호를 입력해 주세요.</p>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- 에러 시 -->
+			<!-- 클래스 : item에 inp_error 추가, remark에 hide 삭제 -->
+			<!-- <div class="input_wrap add_password">
+				<dl>
+					<dt class="input_tit"><strong>계좌 비밀번호</strong></dt>
+					<dd class="item inp_error">
+						<input type="text" data-name="inpFocus" placeholder="비밀번호">
+						<p class="remark">계좌 비밀번호를 입력해 주세요.</p>
+					</dd>
+				</dl>
+			</div> -->
+			<!-- //에러 시 -->
+			<!-- //19.10.02 추가 -->
+
+			<div class="kdb_copyright">Provided by KDB 산업은행</div><!-- 19.10.02 클래스 변겨  -->
+
+
+		</section>
+		<!-- 하단 붙임 -->
+
+
+		<!-- 19.10.02 내용 수정 -->
+		<!-- 과세 구분 툴팁 팝업 -->
+		<div class="modal_wrap fullpop">
+			<div class="modal_content loan-guide-desc">
+
+				<div class="scroll_wrap" style="">
+					<div>
+						<p class="title big type2">중도해지이율</p>
+
+						<div>
+							<p class="table_top_guide">(<em class="num">19.10.30</em> 현재, 단리, 세전)</p>
+							<table class="tbl_type1">
+								<caption>납입기간 경과 비율, 중도해지 금리 항목으로 구성된 내용 </caption>
+								<colgroup>
+									<col style="width:auto">
+									<col style="width:45%">
+								</colgroup>
+								<thead>
+									<th scope="col">납입기간 경과 비율</th>
+									<th scope="col">중도해지 이율</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>납입일로부터 <em class="num">1</em>개월 미만 경과</td>
+										<td><strong>연 <em class="num">0.1%</em></strong></td>
+									</tr>
+									<tr>
+										<td><em class="num">1</em>개월~<em class="num">20%</em> 미만 경과</td>
+										<td><strong>기본이율 X <em class="num">10%</em></strong></td>
+									</tr>
+									<tr>
+										<td><em class="num">20%</em>~<em class="num">40%</em> 미만 경과</td>
+										<td><strong>기본이율 X <em class="num">20%</em></strong></td>
+									</tr>
+									<tr>
+										<td><em class="num">40%</em>~<em class="num">60%</em> 미만 경과</td>
+										<td><strong>기본이율 X <em class="num">40%</em></strong></td>
+									</tr>
+									<tr>
+										<td><em class="num">60%</em>~<em class="num">80%</em> 미만 경과</td>
+										<td><strong>기본이율 X <em class="num">60%</em></strong></td>
+									</tr>
+									<tr>
+										<td><em class="num">80%</em>~<em class="num">100%</em> 미만 경과</td>
+										<td><strong>기본이율 X <em class="num">80%</em></strong></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<p class="star_type table_bottom_guide">기본이율은 신규 가입일 당시 고시된 해당상품의 계약기간별 기본금리</p>
+						<p class="star_type table_bottom_guide">매 납입금마다 납입일로부터 지급일 전일까지의 기간에 대하여 납입 기간 경과 비율에 따른 중도해지이율을 적용하여 단리로 이자를 계산</p>
+					</div>
+				</div>
+				<button type="button" class="btn_close">닫기</button>
+			</div><!-- //modal_content -->
+		</div>
+		<!-- //과세 구분 툴팁 팝업 -->
+		<!-- //19.10.02 내용 수정 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">해지하기</button>
+		</div>
+	</div><!-- #contents -->
+</div>
+<script type="text/javascript">
+$(function(){
+
+	// 툴팁 이벤트
+	$('body').on('click','button[data-name=open_fp_layer]', function(e) {
+
+		$body = $("body");
+		//Contents Size Cal;
+		var winH, docH;
+		winH = $(window).height();
+		docH = $('.modal_wrap > .modal_content').height();
+
+		$('.modal_wrap.fullpop').addClass('visible');
+		if (winH <= docH) {
+			$('.modal_wrap > .modal_content').css({height: docH});
+		} else {
+			$('.modal_wrap > .modal_content').css({height: winH});
+		}
+	});
+
+	$('body').on('click','.modal_wrap .btn_close', function(e) {
+		$('.modal_wrap.fullpop').removeClass("visible");
+		return false;
+	});
+});
+</script>
+</body>
+</html>

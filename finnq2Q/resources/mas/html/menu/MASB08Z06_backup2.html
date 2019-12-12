@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>05계좌등록_02계좌등록_01연결계좌가있는경우</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" /><!-- 메뉴에 있는 계좌 관련 페이지는 myfinnq 불러옴 2018-03-28 ock -->
+</head>
+<body>
+<!-- 수정 START 18.08.10 -->
+<div class="wrap bg_list" id="MASB08Z06">
+	<div id="contents" class="myfinnq add_sticky">
+
+		<section class="registration_account">
+			<!-- sec_step -->
+			<div class="sec_step">
+				<ol class="step01">
+					<li class="on">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>계좌등록</h2>
+				<p class="guide_txt">등록할 계좌를 입력하세요.</p>
+			</div>
+
+			<!-- sec_form -->
+			<div class="sec_form round_box charge">
+				<!-- 18.09.14 인풋창 활성 스크립트를 위한 클래스 item 추가 -->
+				<dl class="target_cont input_wrap item">
+					<dt>
+						계좌
+						<div class="btn_right txt"><button class="btn btn_text03">비대면 개설 계좌 조회</button></div>
+					</dt>
+					<dd>
+						<div class="soft_select item ">
+							<!-- 18.09.14 은행은 무조건 선택시에 진입하게되므로 클래스 color_change 추가 -->
+							<select data-name="inpFocus" class="color_change">
+								<option value="">은행선택</option>
+								<option value="">KEB하나은행</option>
+								<option value="">우리은행</option>
+							</select>
+							<!-- //18.09.14 -->
+							<p class="remark hide">은행을 선택해 주세요.</p>
+						</div>
+						<div class="charge_account">
+							<input type="tel" data-name="inpFocus" placeholder="계좌번호 ‘-‘ 없이 입력" class="i_txt">
+							<p class="remark hide">계좌번호를 입력하세요</p>
+						</div>
+
+						<div class="charge_account inp_error">
+							<input type="tel" data-name="inpFocus" placeholder="계좌번호 ‘-‘ 없이 입력" class="i_txt">
+							<p class="remark">계좌번호를 입력하세요</p>
+						</div>
+					</dd>
+				</dl>
+
+				<!-- //수정 START 18.08.10 -->
+
+				<!-- 2개 -->
+				<!-- <div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn btn_type_h">계좌조회</button></span>
+					<span class="item"><button type="button" name="button" class="btn btn_type_h">비대면 개설 계좌</button></span>
+				</div> -->
+
+				<div class="bul_guide charge">
+					<p class="star_type indent">입출금에 제한이 있는 펀드/적금/정기예금, 휴대폰번호 평생계좌번호, 가상계좌 등 등록 불가</p>
+				</div>
+
+				<dl class="target_cont ">
+					<dt>비밀번호</dt>
+					<!-- 2018-03-24 비밀번호 형식 변경 ock -->
+					<dd class="slow_up">
+						<div class="wrap_password four_area">
+							<p class="bg_password">
+								<i class="on"><img src="../../images/common/ico-pw.png"></i>
+								<i class="on"><img src="../../images/common/ico-pw.png"></i>
+								<i></i>
+								<i></i>
+							</p>
+						</div>
+					</dd>
+				</dl>
+			</div>
+			<div class='bg_bottom charge'></div>
+			<!-- 기존 ui agree_wrap charge2 로 변경 -->
+			<div class="agree_wrap charge2">
+				<input type="checkbox" id="chkVal01" name="check_action" class="purple"><label for="chkVal01"><span>출금이체를 위한 개인정보제<em class="num">3</em>자 제공동의</span></label>
+				<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+			</div>
+
+			<div class="bottom_gap"></div>
+		</section>
+		<!-- //수정 START 18.08.10 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">다음</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	function slowUp() {
+
+		gapH = $(window).height()*0.4;
+		// console.log(gapH);
+
+		$('.bottom_gap').css({'display':'none'});
+		$('body').on('click', '.slow_up', function(){
+			var pos = $('.slow_up').offset().top;
+			// console.log(pos);
+			$('.bottom_gap').css({'display':'inline-block','height':gapH}); //test용
+			$('html, body').stop().animate({ scrollTop: pos-62}, 700 ); //60 수치는 테스트 하면서 조절
+
+			console.log($('html, body').scrollTop());
+		});
+	}slowUp();
+
+	$("body").on('touchstart', function(e) { // //$("body").click(function(e) {
+		// console.log(e.target);
+		var _tg1 = $('.slow_up');
+		if (!_tg1.is(e.target) && _tg1.has(e.target).length === 0) {
+			$('.bottom_gap').css({'display':'none','height':'0'}); //test용 초기화
+			// $('html, body').stop().animate({ scrollTop: $('.slow_up').offset().top}, 700 ); //test용 초기화 또는 scrollTop : 0
+		}
+	});
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>05또래정보선택_01_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_dna.css" />
+</head>
+<body>
+<div class="wrap"><!-- 페이지 검색을 위한 아이디 : FIAA04Z09 -->
+	<div id="contents" class="finance_dna">
+
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item"><button type="button" class="btn btn_type_a open_modal" data-triger="FIAA04Z09" data-mtype="fullpop" data-bgclose="">05또래정보선택_01_web_FIAA04Z09  full popup</button></span>
+		</div>
+
+		<!-- 
+			UI확인용 팝업 Infomation
+			data-triger : 모달팝업 아이디
+			data-mtype : 모달팝업 오픈타입
+				- fullpop : 풀팝업, window.height가 popSize, reSize()
+				- doublepop : 풀팝업에 또 팝업이 뜸, modal이 없음.
+				- 이외는 값없음
+			data-bgclose : 모달 Background 클릭시 팝업 닫기(true/false)
+
+			>> 사이즈 작은 모달팝업은 triger만 설정
+			>> 전체창 또는 배경클릭시 닫힘의 경우에는 각각의 값 설정
+		//-->
+
+		<!-- popup -->
+		<div id="FIAA04Z09" class="modal_wrap fullpop after_bg_color01 touch_auto"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+				<div class="modal_content add_sticky form_type_dna02"><!-- 하단 고정 버튼 변경으로 class 추가 -->
+
+					
+					<div class="scroll_wrap" style=""><!-- height magicNumber -->
+						
+						<!-- <div class="sec_title pop_title">
+							<h3 class="f_bold">
+								비교하고 싶은 또래정보를<br>선택해보세요
+							</h3>
+						</div> -->
+
+						<div class="detail_set theage_inp sec_space30"><!-- 또래정보입력 -->
+
+							<div class="bb"><!-- select : bb -->
+								<strong>성별</strong>
+								<div class="square_tab">
+									<ul class="tab_purple up_two unBold">
+										<li><button type="button">남자</button></li>
+										<li class="on"><button type="button">여자</button></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="bb"><!-- select : bb -->
+								<strong>연령</strong>
+								<div class="square_tab">
+									<ul class="tab_purple up_three unBold">
+										<li><button type="button"><span class="num">10</span>대</button></li>
+										<li><button type="button"><span class="num">20</span>대</button></li>
+										<li class="on"><button type="button"><span class="num">30</span>대</button></li>
+										<li><button type="button"><span class="num">40</span>대</button></li>
+										<li><button type="button"><span class="num">50</span>대</button></li>
+										<li><button type="button"><span class="num">60</span>대 +</button></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="bb"><!-- select : bb -->
+								<strong>직업</strong>
+								<div class="square_tab">
+									<ul class="tab_purple up_three unBold">
+										<li class="on"><button type="button">직장인</button></li>
+										<li><button type="button">자영업</button></li>
+										<li><button type="button">프리랜서</button></li>
+										<li><button type="button">기타</button></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="cc"><!-- 그 외 타입 : cc -->
+								<strong>지역</strong>
+								<div class="square_tab">
+									<ul class="tab_purple up_three unBold">
+										<li><button type="button">집</button></li>
+										<li class="on"><button type="button">회사</button></li>
+										<li class="direct_control"><button type="button">직접선택</button></li>
+									</ul>
+								</div>
+
+								<div class="direct_wrap hide">
+									<div class="item mar_t10 choice-zone1"><!-- inpFocus 스타일 적용 class:item 추가 -->
+										<a class="btn_select btn_type_a open_modal" data-triger="modal-choice-zone1" data-mtype="doublepop" data-bgclose="true"><span>시</span></a>
+									</div>
+
+									<div class="item mar_t10 choice-zone2"><!-- inpFocus 스타일 적용 class:item 추가 -->
+										<a class="btn_select btn_type_a open_modal" data-triger="modal-choice-zone2" data-mtype="doublepop" data-bgclose="true"><span>구</span></a>
+									</div>
+								</div>
+							</div>
+						</div><!-- //detail_set -->
+					</div>
+
+
+					<div class="sticky_wrap set_type1">
+						<button type="button" name="apply" class="btn btn_type_apply">완료</button><!-- 비활성화 : disabled -->
+					</div>
+
+				</div><!-- //modal_content -->
+			</div>
+		</div>
+
+
+		<div id="modal-choice-zone1" class="modal_wrap doublepop modal-choice-zone1"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content pop_choice_zone">
+				<div class="sec_head sec_space28">
+					<h3>시를 선택하세요</h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_table">
+							<div class="detail_set">
+								<div class="date">
+										<ul class="btn_sellist up_four">
+											<li><button class="">전체</button></li>
+											<li><button class="">서울시</button></li>
+											<li><button class="">경기도</button></li>
+											<li><button class="">인천시</button></li>
+											<li><button class="">부산시</button></li>
+											<li><button class="">대전시</button></li>
+											<li><button class="">대구시</button></li>
+											<li><button class="">울산시</button></li>
+											<li><button class="">세종시</button></li>
+											<li><button class="">광주시</button></li>
+											<li><button class="">강원도</button></li>
+											<li><button class="">충청북도</button></li>
+											<li><button class="">충청남도</button></li>
+											<li><button class="">경상북도</button></li>
+											<li><button class="">경상남도</button></li>
+											<li><button class="">전라북도</button></li>
+											<li><button class="">전라남도</button></li>
+											<li><button class="">제주도</button></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="modal-choice-zone2" class="modal_wrap doublepop modal-choice-zone2"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content pop_choice_zone">
+				<div class="sec_head sec_space28">
+					<h3>구를 선택하세요</h3>
+				</div>
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_table">
+							<div class="detail_set">
+								<div class="date">
+										<ul class="btn_sellist up_four">
+											<li><button class="">강남구</button></li>
+											<li><button class="">강동구</button></li>
+											<li><button class="">강북구</button></li>
+											<li><button class="">강서구</button></li>
+											<li><button class="">관악구</button></li>
+											<li><button class="">광진구</button></li>
+											<li><button class="">구로구</button></li>
+											<li><button class="">금천구</button></li>
+											<li><button class="">노원구</button></li>
+											<li><button class="">도봉구</button></li>
+											<li><button class="">동대문구</button></li>
+											<li><button class="">동작구</button></li>
+											<li><button class="">마포구</button></li>
+											<li><button class="">서대문구</button></li>
+											<li><button class="">서초구</button></li>
+											<li><button class="">성동구</button></li>
+											<li><button class="">성북구</button></li>
+											<li><button class="">송파구</button></li>
+											<li><button class="">양천구</button></li>
+											<li><button class="">영등포구</button></li>
+											<li><button class="">용산구</button></li>
+											<li><button class="">은평구</button></li>
+											<li><button class="">종로구</button></li>
+											<li><button class="">중구</button></li>
+											<li><button class="">중랑구</button></li>
+										</ul>
+									</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	$body = $("body");
+	//Contents Size Cal;
+	var docH, docW;
+	docW = $(window).width();
+	docH = $(window).height();
+	//모달팝업
+		/* modal popup */
+		$("button.open_modal,a.open_modal").on("click", function(){
+			var $mpop = $(this);
+
+			var $mpopType = $mpop.data("mtype");
+			var $mpopID = "#"+$mpop.data("triger");
+			var $mpopClose = $mpop.data("bgclose");
+			var conH = $($mpopID).find(".modal_content").outerHeight();
+
+
+			//popup contents height < window height
+			if(conH >= docH || ($mpopType=="fullpop")) {
+				$($mpopID +"> .modal_content").css({
+					height: docH
+				});
+			}else {
+				$($mpopID).addClass("normal");
+			}
+			if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+			switch($mpopType) {
+				case "fullpop":
+					$($mpopID).toggleClass("visible");
+					break;
+				case "doublepop":
+					$($mpopID).addClass("double").toggleClass("visible");
+					break;
+				default:
+					$($mpopID).toggleClass("visible");
+			}
+			return false;
+		});
+		$(".modal_wrap").on("click","button.close_modal", function(){
+			$(this).closest('.modal_wrap').toggleClass("visible");
+			return false;
+		});
+		$(".modal_wrap").on("click", function(e){
+			var status = $(this).data("bgclose");
+			if(!$(".modal_content").has(e.target).length && status ) { 
+				if($(this).data("bgclose")) $(this).toggleClass("visible");
+			} 
+		}); 
+	//선택버튼 ui 확인용이니 필요한 부분만 활용 하세요.
+
+	//시선택
+	$("#modal-choice-zone1 .btn_sellist").on("click", "button", function(){
+		var thisTxt = $(this).text();
+		var selectBtn = $(".choice-zone1 .btn_select");
+		console.log(thisTxt);
+		$(this).parent('li').siblings().find('button').removeClass('on');
+		$(this).toggleClass('on');		
+		if( $(this).parents('.modal_wrap').hasClass('visible') ) {
+			selectBtn.css({'color':'#222'});
+			selectBtn.parent('.item').removeClass('on').find('span').text(thisTxt); //text 넣기
+			$(this).parents('.modal_wrap').removeClass('visible'); //팝업 닫기
+		} else {
+			selectBtn.parent('.item').addClass('on')
+		}
+	});
+
+	//구선택
+	$("#modal-choice-zone2 .btn_sellist").on("click", "button", function(){
+		var thisTxt = $(this).text();
+		var selectBtn = $(".choice-zone2 .btn_select");
+		console.log(thisTxt);
+		$(this).parent('li').siblings().find('button').removeClass('on');
+		$(this).toggleClass('on');		
+		if( $(this).parents('.modal_wrap').hasClass('visible') ) {
+			selectBtn.css({'color':'#222'});
+			selectBtn.parent('.item').removeClass('on').find('span').text(thisTxt); //text 넣기
+			$(this).parents('.modal_wrap').removeClass('visible'); //팝업 닫기
+		} else {
+			selectBtn.parent('.item').addClass('on')
+		}
+	});
+	
+	//직접선택시
+	$(".square_tab").on("click", "button", function(){
+		if ($(this).parents('li').hasClass('direct_control')){
+			$(this).parents('.square_tab').next('.direct_wrap').removeClass('hide');
+		} else {
+			$(this).parents('.square_tab').next('.direct_wrap').addClass('hide');
+		}
+	});
+
+});
+</script>
+</body>
+</html>

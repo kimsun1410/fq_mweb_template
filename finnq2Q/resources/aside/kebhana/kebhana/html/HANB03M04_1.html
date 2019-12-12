@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>비대면계좌개설 | 개인정보입력 | 주소검색</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    $(this).on('focus','.box_search input[data-name=inpFocus]',function(){
+        $(this).parents('.box_search').addClass('search_focus');
+    }).on('blur','.box_search input[data-name=inpFocus]',function(){
+        $(this).parents('.box_search').removeClass('search_focus');
+    });
+
+
+    $(this).on("keyup",".box_search input[data-name=inpFocus]", function(e) {
+        var textSum = $(this).val();
+         if(textSum.length < 1) { //1보다 작은 경우
+            $(this).next('.search_del').removeClass('on');
+         } else {
+            $(this).next('.search_del').addClass('on');
+         }
+    });
+
+
+    $('.box_search').each(function(){
+        var placeText = $(this).find('input').attr('placeholder');
+        $(this).on('click','.search_del',function(){
+            $(this).removeClass('on');
+            $(this).prev('input').attr('placeholder', placeText).attr('autofocus','autofocus').val('');
+        });
+    });
+
+    // 초기 검색 영역 고정
+    var headerH = $('.header_group').outerHeight();
+    $('.addr_result_wrap').css({'padding-top' : headerH});
+
+});
+</script>
+</head>
+<body>
+<div class="wrap bg_list"> <!-- 검색 결과가 있을 경우 bg_list 추가 -->
+    <div id="contents">
+
+        <div class="header_group">
+            <div class="sec_ows_head finnq">
+                <!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+                <h2 class="ows_title">주소 선택</h2>
+                <button class="btn_cancel close" onclick="">취소</button>
+            </div>
+            <div class="group_wrap sch_keb">
+                <div class="padding_add">
+                    <div class="item box_search kebhana">
+                        <input type="text" data-name="inpFocus" placeholder="Search" class="">
+                        <a href="#none" class="search_del">del</a>
+                    </div>
+                </div>
+                <div class="sec_top_bar kebhana"><strong>검색 결과</strong></div>
+            </div>
+        </div>
+        <!-- //header_group -->
+
+        <section class="addr_result_wrap">
+
+            <div class="sch_result_wrap addr">
+                <!-- 영업점을 검색 / 검색결과가 있을경우 -->
+                <ul class="sch_list">
+                    <li>
+                        <div class="address_box first">
+                            <span class="label_txt">도로명</span>
+                            <p class="add_detail">
+                                <span class="add_txt">경기 성남시 분당구 분당구분당구 야탑로 <em class="num">132-26</em> (야탑동, 아이파크)</span>
+                                <span class="num bold">13505</span>
+                            </p>
+                        </div>
+                        <div class="address_box">
+                            <span class="label_txt">지번</span>
+                            <p class="add_detail">
+                                <span class="add_txt">경기 성남시 분당구 야탑동 <em class="num">132-2</em></span>
+                                <span class="num bold">133-555</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="address_box first">
+                            <span class="label_txt">도로명</span>
+                            <p class="add_detail">
+                                <span class="add_txt">서울특별시 마포구 독막로 <em class="num">281</em> (염리동)</span>
+                                <span class="num bold">04151</span>
+                            </p>
+                        </div>
+                        <div class="address_box">
+                            <span class="label_txt">지번</span>
+                            <p class="add_detail">
+                                <span class="add_txt">서울특별시 마포구 염리동 <em class="num">161-3</em> 마포 한국빌딩</span>
+                                <span class="num bold">133-555</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                       <div class="address_box first">
+                            <span class="label_txt">도로명</span>
+                            <p class="add_detail">
+                                <span class="add_txt">경기 성남시 분당구 분당구분당구 야탑로 <em class="num">132-26</em> (야탑동, 아이파크)</span>
+                                <span class="num bold">13505</span>
+                            </p>
+                        </div>
+                        <div class="address_box">
+                            <span class="label_txt">지번</span>
+                            <p class="add_detail">
+                                <span class="add_txt">경기 성남시 분당구 야탑동 <em class="num">132-2</em></span>
+                                <span class="num bold">133-555</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- //영업점을 검색 / 검색결과가 있을경우 -->
+            </div>
+
+        </section>
+
+    </div><!-- //contents -->
+</div>
+
+</body>
+</html>

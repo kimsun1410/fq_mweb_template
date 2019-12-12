@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>06비상금대출_03비상금조회_01조회_01_web_MASN01Z21</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_hana_logo">
+		<section class="emergency_inquiry">
+
+			<div class="sec_title">
+				<p class="guide_txt">하나핀크 비상금대출 (마이너스 통장)</p>
+				<h3 class="accent_txt"><strong><em class="num bold">KEB</em>하나 <em class="cash bold">562-851235-64710</em></strong></h3>
+			</div>
+
+			<div class="sec_insinfo"><!-- installment info, 적금상세정보 -->
+				<div class="ins_info add_dotline">
+					<ul>
+						<li>
+							<div class="tit">기한</div>
+							<div class="money_total">
+								<em class="date">2018.11.30</em> 까지 <!-- 2018-02-27 문구 수정 phj -->
+							</div>
+						</li>
+						<li>
+							<div class="tit">사용중인 대출금</div>
+							<div class="money_total">
+								<em class="num">200,000</em>원
+							</div>
+						</li>
+						<li>
+							<div class="tit">잔여한도</div>
+							<div class="money_total">
+								<em class="num">300,000</em>원
+							</div>
+						</li>
+
+						<!-- 2018-02-27 추가 phj -->
+						<li>
+							<div class="tit">연체여부</div>
+							<div class="money_total">
+								정상
+							</div>
+						</li>
+						<!-- //2018-02-27 추가 phj -->
+
+					</ul>
+				</div>
+
+				<div class="sec_inquiry_graph">
+					<div class="bar progress_wrap">
+						<div class="_progress" data-value="500000" id="fund_inquiry"><!-- data-value 는 최대값 -->
+							<i class="_bar style_01" data-value="500000" data-rate="500000"><!-- data-value는 현재값, data-rate 는 최대값 -->
+								<em class="arrow"></em>
+							</i>
+							<div class="step_tooltip type_2">
+								<p class="count"><em class="num"></em>원</p>
+								<p class="total"><em class="num">500,000</em>원</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- //sec_insinfo -->
+
+			<div class="btn_interest">
+				<button type="button" name="button" class="btn btn_type_e">대출이자 조회</button>
+				<p>사용한 대출 이자는 <strong><em class="num bold">15,500</em>원</strong>입니다.</p>
+			</div>
+		
+			<div class="hana_logo mar_b34"><em class="num">Provided by KEB</em>하나은행</div><!-- iosX 에서만 마진 버툼 34 class 추가 2018-02-27 -->
+
+		</section>
+		<!-- 하단 붙임 -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	drawProgress('#fund_inquiry');
+
+	//2018-02-14 이자조회 추가
+	$(".btn_interest button").on("click", function(){
+		$(this).next('p').fadeIn();
+	});
+});
+</script>
+</body>
+</html>

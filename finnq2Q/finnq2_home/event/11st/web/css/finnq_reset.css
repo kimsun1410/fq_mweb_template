@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/****************************************/
+/*  PART: RESET STYLE
+/*  Version: 1.0
+/*  Author: 허도경
+/****************************************/
+
+/* reset */
+*, *:before, *:after {-webkit-box-sizing: border-box; box-sizing: border-box;}
+html, body {height: 100%; min-height: 100%; font-family: "AppleSDGothicNeo-Medium", "Malgun Gothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; font-size: 100%; line-height: 1.4; text-decoration: none; color: #222; vertical-align: middle; background: #fff; letter-spacing:-1px;}
+
+/*뷰표트 변환시 폰트크기 자동확대 방지*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {font-family: "AppleSDGothicNeo-Medium", "Malgun Gothic", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", sans-serif; margin: 0; padding: 0; /*font-size:14px;*/ letter-spacing: -1px; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased;}
+address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section {display: block; margin: 0; padding: 0;}
+figcaption {display: block; width: 0; height: 0; position: absolute; top: -9999px; font-size: 0; text-indent: -9999px;}
+hr, caption, legend {display: none; text-indent: -999px;}
+h1, h2, h3, h4, h5, h6 {letter-spacing: inherit; word-break: break-all; white-space: normal;}
+fieldset, img {border: none; vertical-align: middle;}
+ol, ul, li, dl, dt, dd {list-style: none; word-break: break-all; white-space: normal;}
+table, th, td {border: 0px; border-spacing: 0px; border-collapse: collapse; word-break: break-all; white-space: normal;}
+table {width:100%; border:0; border-spacing:0px; border-collapse:collapse;}
+fieldset, iframe {width: 100%; border: 0px;}
+em, i, address, strong {font-style: normal; font-weight: normal; word-break: break-all; white-space: normal;}
+button, a, select, input, label {border: none; background: none; letter-spacing: inherit; vertical-align: middle; word-break: break-all; white-space: normal;}
+button::-moz-focus-inner {padding: 0px;}
+
+a {text-decoration:none;color:#454545; vertical-align:middle;}
+a:hover, a:active, a:focus{text-decoration:none;}
+label {cursor:pointer;}
+
+/* Skip Menu */
+.skipMenu {overflow:hidden; position:relative; width:100%; z-index:2;}
+.skipMenu a {display:block; font-size:0; height: 1px; line-height:0; margin:0 -1px -1px 0; overflow:hidden;text-align:center; width:1px;}
+.skipMenu a:focus,
+.skipMenu a:hover,
+.skipMenu a:active {background:#B40000; color:#fff; font-size:12px; font-weight:bold; margin:0; height:20px; line-height:1; margin:0; padding:8px 0 0 15px; width:auto;}
+
+/****************************/
+/* Common Style             */
+/****************************/
+.hidden {display:block; position:absolute; top:0; left:0; width:0; height:0; font-size: 0; line-height: 0 overflow:hidden;}
+
+/* clear class */
+.clear {}
+.clear:after {display:block; clear:both; content:'';}
+
+.split {}
+.split:after {display:block; clear:both; content:"";}
+.split > * {float:left;}
+.split > *:first-of-type {float:right;}
+
+/* ALIGN */
+.c {text-align:center !important;}
+.l {text-align:left !important;}
+.r {text-align:right !important;}
+
+.fl {float:left !important;}
+.fr {float:right !important;}
+
+
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04습관저금_03편집_web - MASM01Z13</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+
+		<section class="market_wrap make_deposit">
+			<div class="sec_slide">
+				<div class="sub_tit">
+					<span>STEP1</span>
+					<h2 class="bold">자주 소비하는 카테고리 선택</h2>
+				</div>
+				<div class="choice_catogory modify">
+					<!-- 
+						.ico_cvs : 편의점
+						.ico_fastfood : 패스트푸드
+						.ico_coffee : 커피
+						.ico_chicken : 치킨
+						.ico_bread : 빵
+						.ico_shopping : 쇼핑
+					-->
+					<div class="category_ico ico_coffee"><em class="tooltip">커피</em></div>
+
+				</div><!-- //choice_catogory -->
+			</div>
+			<div class="sec_choice">
+				<div class="sub_tit">
+					<span>STEP2</span>
+					<h2>결제 금액의 저금액 선택</h2>
+				</div>
+
+				<ul class="btn_percent">
+					<li><button>5%</button></li>
+					<li ><button class="on">10%</button></li>
+					<li><button>15%</button></li>
+					<li><button>20%</button></li>
+					<li><button>30%</button></li>
+					<li><button>50%</button></li>
+				</ul>
+			<div><!-- //sec_intro -->
+
+		</section>
+		<!-- 하단 붙임 -->
+		<div class="sticky_wrap set_type2">
+			<button type="button" name="apply" class="btn btn_cancel">저금종료</button>
+			<button type="button" name="apply" class="btn btn_apply">확인</button>
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+		//저금액 선택버튼
+		$('.sec_choice .btn_percent').on('click', 'button', function() {
+			$(this).parents('.btn_percent').find('button').removeClass();
+			$(this).addClass('on');
+		});
+
+		//UI확인용
+		var item = [
+			{item:"ico_cvs",name:"편의점"},
+			{item:"ico_fastfood",name:"패스트푸드"},
+			{item:"ico_coffee",name:"커피"},
+			{item:"ico_chicken",name:"치킨"},
+			{item:"ico_bread",name:"빵"},
+			{item:"ico_shopping",name:"쇼핑"}
+		];
+		var i=0;
+		$('.choice_catogory').on('click', '.category_ico', function() {
+			if(i==6) i=0;
+			$(this).removeClass().addClass('category_ico '+item[i].item).find('em').text(item[i].name);
+			i = i + 1;
+		});
+
+
+
+});
+</script>
+</body>
+</html>

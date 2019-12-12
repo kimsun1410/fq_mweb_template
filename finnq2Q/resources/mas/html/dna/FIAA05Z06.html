@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>09신용관리_07신용평점올리기</title><!-- 임시 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <link rel="stylesheet" href="../../css/ui_dna.css" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- 페이지 검색을 위한 아이디 : FIAA05Z06 -->
+    <div id="contents" class="finance_dna">
+
+        <section class="credit_guide sec_space0">
+            <!-- sec_ico_guide -->
+            <div class="txt_ico_guide top_right">
+                <p class="indent in_sec"><i class="ico ico_woring_info01"></i>출처: 신용평가사(KCB)</p>
+            </div>
+
+            <div class="sec_notice_faqlist simulation">
+                <ul class="list_expend not_move">
+					<!-- 신용등급 시뮬레이션 : 진입시 열린 상태 -->
+                    <li>
+                        <div class="subject on">
+                            <a href="#open">신용등급 시뮬레이션<i></i></a>
+                        </div><!-- //subject -->
+
+                        <div class="detail_set on">
+                            <div class="con add_dotline">
+                                <div class="range_slider_wrap">
+                                    <dl class="range_info">
+                                        <dt><strong class="num bold">2</strong>등급</dt>
+                                        <dd>(<em class="num">891~941</em>)</dd>
+                                    </dl>
+
+                                    <div>
+                                        <div class="range_slider">
+                                            <!--
+                                                실제 값이 핸들링 되는 input
+                                                D : value 값에 실제 사용자 등급값을 넣음.
+                                                    value 값은 JS 에서 처리.
+                                            -->
+                                            <input class="range_slider_range" type="range" name="range_slider" min="1" max="10">
+
+                                            <div class="bg_range">
+                                                <span></span>
+                                            </div>
+                                            <div class="active_range_bar"></div>
+                                        </div> <!-- //range_slider -->
+
+                                        <div class="guide_line_wrap">
+                                            <span class="num guide first">10</span>
+                                            <ul class="guide_line">
+                                                <li><span class="num">9</span></li>
+                                                <li><span class="num">8</span></li>
+                                                <li><span class="num">7</span></li>
+                                                <li><span class="num">6</span></li>
+                                                <li><span class="num">5</span></li>
+                                                <li><span class="num">4</span></li>
+                                                <li><span class="num">3</span></li>
+                                                <li><span class="num">2</span></li>
+                                            </ul>
+                                            <span class="num guide end">1</span>
+                                        </div> <!-- //guide_line_wrap -->
+
+                                        <div class="range_data_wrap">
+                                            <div class="box simulation">
+												<dl class="card_info">
+													<dt>카드승인</dt>
+													<dd>불가능</dd>
+												</dl>
+												<dl class="loan_info">
+													<dt><em class="num">1</em>억 대출 시,</dt>
+													<dd>평균금리</dd>
+												</dl>
+												<ul class="loan_rate_info">
+													<li class="agency01"><strong>은행</strong><em class="num">9.86%<span>(연 986만원)</span></em></li>
+													<li class="agency02"><strong>카드&캐피탈</strong><em class="num">19.20%<span>(연 1,920만원)</em></li>
+													<li class="agency03"><strong>저축은행</strong><em class="num">20.15%<span>(연 2,015만원)</span></em></li>
+												</ul>
+                                            </div>
+
+											<div class="bul_guide">
+												<p class="txt_guide mar_t10">이렇게 하면 신용평점을 더 올릴 수 있어요!</p>
+												<ul class="depth01 gray_txt"><!-- class : gray_txt 추가 2019-01-28 ock -->
+													<li class="dash_type">비금융정보 최근 6개월 이상 납부한 기록을 신용평가 회사에 제출하기</li>
+													<li class="dash_type">신용카드 1~2장으로 한도의 평균 50% 미만 사용하기</li>
+													<li class="dash_type">신용카드 할부보다 일시불 위주로 사용하기</li>
+													<li class="dash_type">체크카드 월 30만원 이상 6개월~12개월 이상 사용하기</li>
+													<li class="dash_type">대출거래 은행에 금리인하권을 신청하여 대출이자율 낮추기</li>
+												</ul>
+											</div>
+                                        </div> <!-- //range_data_wrap -->
+
+                                    </div>
+
+                                </div><!-- //$(function(){ -->
+                            </div>
+                        </div><!-- //detail_set -->
+                    </li>
+					<!-- 사회초년생의 신용평점 올리기 -->
+                    <li>
+                        <div class="subject">
+                            <a href="#open">사회초년생의 신용평점 올리기<i></i></a>
+                        </div><!-- //subject -->
+
+                        <div class="detail_set">
+                            <div class="con add_dotline">
+
+								<p class="txt_guide">금융거래 활동이 상대적으로 적을 수밖에 없는 사회초년생들은 신용평점이 높지 않은 경우가 많습니다. 지금부터 일상 속에서 신용관리를 습관화한다면, 추후 매우 유리한 금융 생활을 이어 나갈 수 있습니다.</p>
+                                <div class="bul_guide">
+                                    <ul class="depth01">
+                                        <li class="indent">1. 절대 연체하지 않기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">대출은 물론 카드 대금, 국세, 지방세, 건강보험, 통신비, 관리비, 과태료 등은 소액이라도 절대 연체를 하지 마세요.</li>
+                                                <li class="dash_type">10만원 이상, 5영업일 이상 연체 시 연체정보가 수집되고, 90일 이상 장기연체가 되면 최장 5년까지 신용평가에 활용됩니다.</li>
+                                            </ul>
+                                        </li>
+										<li class="indent">2. 비금융정보 등록하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">통신비, 국민연금, 건강보험료, 도시가스요금, 수도요금 등 공공요금을 6개월 이상 성실히 낸 실적을 신용평가사에 제출하고 가점을 받으세요.</li>
+                                                <li class="dash_type">연체 없이 낸 기간이 최대 24개월까지 길수록 평균 5점~17점의 가점을 받을 수 있으나, 이미 대출 등의 신용정보가 풍부한 경우에는 가점 폭이 축소될 수 있습니다.</li>
+                                            </ul>
+										</li>
+										<li class="indent">3. 신용/체크카드 꾸준히 이용하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">신용카드는 1~2장의 카드를 현금서비스, 할부보다 일시불 위주로, 총한도 대비 50% 미만으로 이용하세요.</li>
+                                                <li class="dash_type">체크카드는 월 30만원 이상, 6개월~12개월 동안 꾸준히 이용하세요.</li>
+                                                <li class="dash_type">연체 없이 꾸준히 사용한다면 평균 4점~40점의 가점을 받을 수 있습니다.</li>
+                                                <li class="dash_type">단, 연체 경험자이거나 다중 채무자, 현금서비스 사용자 등은 가점부여 대상에서 제외되거나 가점 폭이 제한될 수 있습니다.</li>
+                                            </ul>
+										</li>
+										<li class="indent">4. 학자금 대출 성실하게 상환하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">학자금 대출을 연체 없이 1년 이상 성실하게 상환하세요.</li>
+                                                <li class="dash_type">신용등급 1~5등급 이상이거나 다중 채무자가 아니라면, 평균 5~45점의 가점을 받을 수 있습니다. </li>
+                                            </ul>
+										</li>
+										<li class="indent">5. 주거래 은행 만들기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">월급, 통신비, 각종 공과금, 예적금, 카드 등을 주거래 은행 한 곳에 집중하여 이용하세요.</li>
+                                                <li class="dash_type">연체 없는 건전한 거래실적이 많을수록 금융기관 내부등급이 높아져 대출한도와 금리에 유리할 수 있습니다.</li>
+                                            </ul>
+										</li>
+										<li class="indent">6. 신용조회를 습관화하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">신용관리는 최대한 빨리 시작하고 주 1회 신용조회를 습관화하세요.</li>
+                                                <li class="dash_type">신용평점이 낮다면 그 원인을 파악하여 대처하고, 높다면 현재의 금융거래 방식을 유지해 나가면서 신용평점을 관리할 수 있습니다.</li>
+                                            </ul>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- //detail_set -->
+                    </li>
+					<!-- 다중채무자의 신용관리 -->
+                    <li>
+                        <div class="subject">
+                            <a href="#open">다중채무자의 신용관리<i></i></a>
+                        </div><!-- //subject -->
+
+                        <div class="detail_set">
+                            <div class="con add_dotline">
+                                 <p class="txt_guide">다중채무자도 신용관리에 따라 얼마든지 신용평점을 올릴 수 있습니다. 전반적인 개인금융 현황을 점검하고, 해당 금융기관과 충분히 상담하여 최대한 채무를 줄일 수 있다면 앞으로 매우 유리한 금융 생활을 이어나갈 수 있습니다.</p>
+                                <div class="bul_guide">
+                                    <ul class="depth01">
+                                        <li class="indent">1. 대출 현황 점검하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">현재 경기가 좋지 않다면, 월 소득에서 부채상환비율은 20~30% 이하로 유지하는 것이 좋습니다.</li>
+                                                <li class="dash_type">또한, 월 소득대비 지출예산 계획을 세우고 경조금, 휴가비용 등의 비정기적인 지출자금을 매월 별도 관리하면 추가 대출을 막을 수 있습니다.</li>
+                                            </ul>
+                                        </li>
+										<li class="indent">2. 연체는 빠르게 상환하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">연체가 여러 건이 있다면, 이자가 높은 연체부터 정리하되 가장 오래되거나 소액연체 건을 우선순위로 두어 상환하는 것이 유리할 수 있습니다.</li>
+                                                <li class="dash_type">무엇보다 90일 이상 장기연체가 되기 전에 상환하면, 신용평가에 미치는 기간을 5년에서 3년으로 줄일 수 있습니다.</li>
+                                            </ul>
+										</li>
+										<li class="indent">3. 금리인하요구권 활용하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">채무자가 은행을 상대로 자신의 직위, 연 소득, 신용등급 상승, 담보 제공 등 신용평점과 등급이 올라가면, 금리인하요구권을 활용하여 대출금리를 인하 받을 수 있습니다.</li>
+                                                <li class="dash_type">단, 금융회사별로 자율 시행하고 있어 구체적인 조건은 직접 확인해야 합니다.</li>
+                                            </ul>
+										</li>
+										<li class="indent">4. 원금상환유예제도 활용하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">본인 또는 배우자가 실직이나 폐업, 질병, 자연재해 등으로 일시적 자금난을 겪고 있는 경우, 원금상환유예제도를 활용하여 최장 3년까지 상환을 유예할 수 있습니다.</li>
+                                                <li class="dash_type">대출유형 및 금액, 채무자의 현황에 따라 지원 내용이 다르므로 해당 금융기관에 반드시 확인해야 하며, 유예기간에도 이자는 상환해야 합니다.</li>
+                                            </ul>
+										</li>
+										<li class="indent">5. 채무변제선택권 활용하기
+											<ul class="depth02 gray_txt">
+                                                <li class="dash_type">대출 연체 시, 채무자는 본인에게 유리하다면 채무변제 순서를 선택하여 대출 및 연체금액을 갚을 수 있습니다.</li>
+                                                <li class="dash_type">기존에는 비용-&gt;이자-&gt;원금 순으로 갚아야 했지만, 비용-&gt;원금-&gt;이자 순으로 변경하면 원금을 먼저 갚아 이자를 줄일 수 있는 것입니다.</li>
+                                                <li class="dash_type">반드시 해당 금융기관과 충분히 상담하여 본인에게 유리한 선택을 하시기 바랍니다. </li>
+                                            </ul>
+										</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- //detail_set -->
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+    <!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+    var rangeSlider = function(){
+        var slider      = $('.range_slider'),
+            range       = slider.children('.range_slider_range');
+
+        var titGrade    = $('.range_slider_wrap .range_info dt .num.bold'),
+            gradeRange  = $('.range_slider_wrap .range_info dd .num'),
+            cardInfo   = $('.range_slider_wrap .card_info > dd');
+            loanInfo1   = $('.range_slider_wrap .loan_rate_info li.agency01 .num');
+            loanInfo2   = $('.range_slider_wrap .loan_rate_info li.agency02 .num');
+            loanInfo3   = $('.range_slider_wrap .loan_rate_info li.agency03 .num');
+
+        // 등급 범위 및 문구 변경 필요.
+        // 범위 및 문구 이자율 등 임시 적용.
+        var arrVal = [
+            { //10등급
+                'grade':'0 ~ 334',
+                'card':'불가능',
+				'loan1':'9.86%<span>(연 986만원)</span>',
+				'loan2':'19.20%<span>(연 1,920만원)</span>',
+				'loan3':'20.15%<span>(연 2,015만원)</span>'
+            },
+            { //9등급
+                'grade':'335 ~ 453',
+                'card':'불가능',
+				'loan1':'9.86%<span>(연 986만원)</span>',
+				'loan2':'19.20%<span>(연 1,920만원)</span>',
+				'loan3':'20.15%<span>(연 2,015만원)</span>'
+            },
+            {  //8등급
+                'grade':'454 ~ 529',
+                'card':'불가능',
+				'loan1':'8.77%<span>(연 877만원)</span>',
+				'loan2':'19.20%<span>(연 1,920만원)</span>',
+				'loan3':'20.15%<span>(연 2,015만원)</span>'
+            },
+            {  //7등급
+                'grade':'530 ~ 629',
+                'card':'어려움',
+				'loan1':'8.77%<span>(연 877만원)</span>',
+				'loan2':'19.20%<span>(연 1,920만원)</span>',
+				'loan3':'20.15%<span>(연 2,015만원)</span>'
+            },
+            {  //6등급
+                'grade':'630 ~ 697',
+                'card':'어려움',
+				'loan1':'6.24%<span>(연 624만원)</span>',
+				'loan2':'18.68%<span>(연 1,868만원)</span>',
+				'loan3':'19.41%<span>(연 1,941만원)</span>'
+            },
+            {  //5등급
+                'grade':'698 ~ 767',
+                'card':'가능',
+				'loan1':'6.24%<span>(연 624만원)</span>',
+				'loan2':'17.23%<span>(연 1,723만원)</span>',
+				'loan3':'18.52%<span>(연 1,852만원)</span>'
+            },
+            {  //4등급
+                'grade':'768 ~ 831',
+                'card':'가능',
+				'loan1':'4.65%<span>(연 465만원)</span>',
+				'loan2':'16.38%<span>(연 1,638만원)</span>',
+				'loan3':'17.60%<span>(연 1,760만원)</span>'
+            },
+            {  //3등급
+                'grade':'832 ~ 890',
+                'card':'가능',
+				'loan1':'4.65%<span>(연 465만원)</span>',
+				'loan2':'14.10%<span>(연 1,410만원)</span>',
+				'loan3':'15.87%<span>(연 1,587만원)</span>'
+            },
+            {  //2등급
+                'grade':'891 ~ 941',
+                'card':'가능',
+				'loan1':'3.77%<span>(연 377만원)</span>',
+				'loan2':'14.10%<span>(연 1,410만원)</span>',
+				'loan3':'15.87%<span>(연 1,587만원)</span>'
+            },
+            {  //1등급
+                'grade':'942 ~ 1000',
+                'card':'가능',
+				'loan1':'3.77%<span>(연 377만원)</span>',
+				'loan2':'14.10%<span>(연 1,410만원)</span>',
+				'loan3':'15.87%<span>(연 1,587만원)</span>'
+            }
+        ]
+
+        var userGradeNum = 3, // 초기값. 사용자의 등급값을 입력.
+            gradeNum = 11 - userGradeNum;
+
+        // 활성화 된 값을 담기 위한 index;
+        var idx = gradeNum;
+        eventActiveVal(idx - 1);
+
+        // 사용자 등급값을 셋팅
+        range.attr({'value' : gradeNum});
+
+        // 슬라이더 이벤트 시 값 체크
+        slider.each(function(){
+            range.on('input', function(){
+                idx = this.value - 1;
+                eventActiveVal(idx);
+            });
+        });
+
+        // 등급 활성화
+        function eventActiveVal(_idx)
+        {
+
+            // 사용자 등급값
+            titGrade.text(11 - (_idx + 1));
+
+            // 등급 범위
+            gradeRange.text( arrVal[_idx].grade );
+
+            // 등급에 따른 정보 변경_카드
+            cardInfo.html( arrVal[_idx].card )
+			// 등급에 따른 정보 변경_대출
+            loanInfo1.html( arrVal[_idx].loan1 )
+            loanInfo2.html( arrVal[_idx].loan2 )
+            loanInfo3.html( arrVal[_idx].loan3 )
+
+            // 활성화 영역 초기화
+            $('.range_slider_wrap .guide_line li').removeClass('on');
+            $('.range_slider_wrap .guide_line_wrap .guide').removeClass('on');
+
+            // 1등급 또는 10등급 일 때
+            if (_idx == 0 || _idx == 9)
+            {
+                if (_idx == 0) {
+                    $('.range_slider_wrap .guide_line_wrap .guide.first').addClass('on');
+                }
+                else {
+                    $('.range_slider_wrap .guide_line_wrap .guide.end').addClass('on');
+                }
+            }
+            else { // 그 외
+                $('.range_slider_wrap .guide_line li').eq(_idx-1).addClass('on');
+            }
+
+            // 법위 계산.
+            var colorVar = (_idx * 11);
+
+            $('.range_slider_wrap .range_slider_range').attr({'value' : 10 - _idx });
+            $('.range_slider_wrap .range_slider .bg_range span').removeClass().addClass('val'+ _idx +'');
+            $('.range_slider_wrap .active_range_bar').css({'width':colorVar + '%'});
+        }
+
+    };
+
+    rangeSlider();
+});
+</script>
+
+</body>
+</html>

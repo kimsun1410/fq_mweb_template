@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>06비상금대출_02비상금신청_01기본정보입력_web_MASN01Z04</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky add_hana_logo">
+		<section class="emergency_form">
+
+			<div class="sec_step step_green">
+				<ol>
+					<li class="on">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>신청</h2>
+				<p class="guide_txt">대출 신청을 위해 기본정보를 입력해 주세요.</p>
+			</div>
+
+			<div class="sec_fund_form round_box">
+				<ul>
+					<li class="input_wrap">
+						<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="홍길동" disabled="disabled"></div>
+					</li>
+					<li class="input_wrap type_2">
+						<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="901221" disabled="disabled"></div>
+						<!--
+							- 18.09.18
+							- item 에 클래스 inp_focus 추가 : Default.
+							- 값이 모두 입력되면 inp_focus 삭제
+						-->
+						<div class="item inp_focus">
+							<div class="pw_input accountPwd"><!-- 개발 사용 class -->
+								<p class="on">
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<p>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<div class="box_password" data-name="inpFocus" ></div>
+							</div>
+						</div>
+					</li>
+
+					<!-- error case -->
+					<li class="input_wrap type_2 hide">
+						<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="901221" disabled="disabled"></div>
+						<div class="item inp_error"><!-- 에러시 inp_error 추가 -->
+							<div class="pw_input accountPwd"><!-- 개발 사용 class -->
+								<p class="on">
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<p>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+									<i></i>
+								</p>
+								<input type="text" data-name="inpFocus" placeholder="">
+							</div>
+						</div>
+						<!-- Case1 -->
+						<p class="remark hide">주민등록번호를 입력해주세요.</p>
+
+						<!-- Case2 -->
+						<!-- <p class="remark show">잘못된 주민등록번호입니다.</p> -->
+					</li><!-- //error case -->
+
+					<li class="input_wrap type_2">
+						<div class="item soft_select">
+							<select data-name="inpFocus">
+								<option value="">거주형태</option>
+								<option value="">아파트</option>
+								<option value="">단독</option>
+								<option value="">다가구</option>
+								<option value="">다세대</option>
+								<option value="">연립,빌라</option>
+								<option value="">오피스텔</option>
+								<option value="">기타</option>
+							</select>
+						</div>
+						<div class="item soft_select">
+							<select data-name="inpFocus">
+								<option value="">소유형태</option>
+								<option value="">자가</option>
+								<option value="">전세</option>
+								<option value="">월세</option>
+								<option value="">기타</option>
+							</select>
+						</div>
+					</li>
+
+					<!-- error case -->
+					<li class="input_wrap type_2 hide">
+						<div class="item soft_select inp_error"><!-- 에러시 inp_error 추가 -->
+							<select data-name="inpFocus">
+								<option value="">거주형태</option>
+								<option value="">아파트</option>
+								<option value="">단독</option>
+								<option value="">다가구</option>
+								<option value="">다세대</option>
+								<option value="">연립,빌라</option>
+								<option value="">오피스텔</option>
+								<option value="">기타</option>
+							</select>
+							<!-- Case1 -->
+							<p class="remark show">거주형태를 선택해주세요.</p>
+						</div>
+						<div class="item soft_select inp_error"><!-- 에러시 inp_error 추가 -->
+							<select data-name="inpFocus">
+								<option value="">소유형태</option>
+								<option value="">자가</option>
+								<option value="">전세</option>
+								<option value="">월세</option>
+								<option value="">기타</option>
+							</select>
+							<!-- Case2 -->
+							<p class="remark show">소유형태를 선택해주세요.</p>
+						</div>
+
+
+					</li><!-- //error case -->
+
+				</ul>
+
+			</div><!-- //sec_fund_form -->
+
+			<ul class="sec_notice bul_guide">
+				<li class="star_type indent">입력하신 정보는 ‘신용정보의 이용 및 보호에 관한 법률에 의거하여 비밀이 보장됩니다.</li>
+				<li class="star_type indent">입력하신 정보가 KEB하나은행 고객정보로 자동 변경되지 않으며, 대출관련 통지는 KEB하나은행에 등록된 휴대폰번호로 문자 통지 됩니다.(연체안내는 별도 통지)</li>
+				<li class="star_type indent">입력하신 정보 외 고용형태, 직무구분 등은 기타항목으로 분류하여 심사합니다.</li>
+			</ul>
+
+			<div class="hana_logo"><em class="num">Provided by KEB</em>하나은행</div>
+
+		</section>
+		<!-- 하단 붙임 -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">다음</button><!-- // disabled="disabled" -->
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

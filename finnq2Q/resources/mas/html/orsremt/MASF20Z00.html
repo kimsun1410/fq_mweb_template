@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap">
+	<!-- 20180416 팝업을 페이지로 변경 -->
+	<div id="contents" class="market add_sticky">
+		<section class="sec_photoZone">
+			<div class="sec_title">
+				<h3 class="accent_txt">실명 인증을 위해 <strong class="purply_blue">주민등록증</strong> 또는 <br><strong class="purply_blue">운전면허증</strong>을 촬영합니다.</h3><!-- 20180413 문구수정 -->
+				<div class="photoZone">
+				</div>
+				<div class="guide_txt">
+					<ol>
+						<li>1. 신분증은 어두운 바닥에 두고<br>가이드에 맞춰 촬영해주세요.</li>
+						<li>2. 반사광을 최소화하고 정보가 잘 보이게 해주세요.</li>
+						<li>3. 훼손이 심한 신분증은 거절될 수 있습니다.</li><!-- 20180416 거절될 띄어쓰기수정 -->
+						<li>4. 금융실명법상 실명확인을 위한 것으로,<br>법적 용도 이외에는 활용되지 않습니다.</li><!-- 20180413 4번 문구수정 -->
+					</ol>
+				</div>
+			</div>
+		</section>
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">촬영하기</button><!-- 20180416 촬영하기 문구수정 -->
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

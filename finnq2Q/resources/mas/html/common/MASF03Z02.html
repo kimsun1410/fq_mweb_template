@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>SMS점유 인증_MASF03Z02</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="">
+	<div id="contents" class="common add_sticky no_fixed"><!-- no_fixed class 추가 2018-03-20 ock -->
+		<section class="sec_sms_member"><!-- 2018-02-27 클래스 추가 phj -->
+
+			<div class="sec_title">
+				<h2>휴대폰인증</h2>
+				<p class="guide_txt">본인인증을 해 주세요.</p>
+			</div>
+
+			<!-- <div class="sec_text_btn">
+				<div class="btn_text01">
+					<a href="#none" class="ico_arrow">다음에 변경하기</a>
+				</div>
+			</div> -->
+
+			<div class="sec_member_input">
+
+				<ul class="flex_wrap set_type1">
+					<!-- <li class="input_wrap item">
+						<input type="text" placeholder="이름 (성 + 이름)" class="" value="홍길동" readonly="readonly">
+						<p class="remark show">이름을 입력해 주세요.</p>
+					</li> --><!-- 2018-02-27 삭제 phj -->
+
+					<!-- 주민 번호 뒷자리 첫번째가 도트로 보이는 경우: 어떤경우를 사용하게 될지 몰라서 둘다 넣었습니다. -->
+					<!-- <li class="input_wrap resident_num item">
+						<span>
+							<input type="text" data-name="" placeholder="주민번호 앞자리" class=""  value="180101" readonly="readonly">
+						</span>
+						<span class="inp_resident">
+							<input type="password" data-name="resident_num" placeholder="" class="" maxlength="1" readonly="readonly">
+							<div class="resident_dot"></div>
+							<p class="remark show">뒷자리의 첫 자를 입력해 주세요.</p>
+						</span>
+					</li> --> <!-- 2018-02-27 삭제 phj -->
+					<!-- //주민 번호 뒷자리 첫번째가 도트로 보이는 경우 -->
+
+					<!-- 주민 번호 뒷자리 첫번째가 숫자로로 보이는 경우: 어떤경우를 사용하게 될지 몰라서 둘다 넣었습니다. -->
+					<!-- <li class="input_wrap resident_num item">
+						<span>
+							<input type="text" data-name="" placeholder="주민번호 앞자리" class=""  value="180101" readonly="readonly">
+						</span>
+						<span class="inp_resident view">
+							<input type="text" data-name="resident_num" placeholder="" class="" maxlength="1" value="2" readonly="readonly">
+							<div class="resident_dot"></div>
+							<p class="remark show">뒷자리의 첫 자를 입력해 주세요.</p>
+						</span>
+					</li> -->
+					<!-- //주민 번호 뒷자리 첫번째가 숫자로로 보이는 경우 -->
+
+					<!-- <li class="input_wrap item soft_select">
+						<select data-name="inpFocus">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+						</select>
+						<p class="remark show">통신사를 선택해 주세요.</p>
+					</li> --><!-- 2018-02-27 삭제 phj -->
+					<li class="input_wrap item col_box pin_num_have">
+						<span>
+							<input type="text" data-name="inpFocus" placeholder="휴대폰번호" class="">
+							<!-- <p class="remark show">휴대폰번호를 입력해 주세요.</p> -->
+						</span>
+						<span>
+							<button type="button" name="button" class="btn btn_type_f">인증번호 받기</button>
+							<!-- <p class="remark show">dddd</p> -->
+						</span>
+					</li>
+					<li class="input_wrap item pin_number">
+						<input type="text" data-name="inpFocus" placeholder="인증번호" class="">
+						<!-- <p class="remark show">인증시간이 초과되었습니다.</p> -->
+						<div class="time_count">03:00</div>
+						<div class="bul_guide">
+							<p class="star_type indent">SMS재전송은 3회까지만 가능합니다.</p>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="sec_term_type1">
+				<div class="agree_all_terms">
+					<input type="checkbox" id="all_chk" name="test-img" class="purple"><label for="all_chk" name="test-img"><span>본인 인증 이용 동의(필수)</span></label>
+				</div><!-- //agree_all_terms -->
+
+				<div class="agree_terms">
+					<dl class="toggle_list">
+						<dt class="hide"></dt>
+						<dd style="display:block;">
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101"><span>개인정보 이용동의</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102" name="check_action"><span>고유식별정보 처리동의</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103" name="check_action"><span>통신사 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104" name="check_action"><span>서비스 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+						</dd>
+					</dl>
+				</div><!-- //agree_terms -->
+			</div><!-- //sec_term_type1 -->
+
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">인증하기</button>
+		</div>
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//soft_select 로 ui.js 에 있음.
+	//$('.basic_select').on('change', 'select[data-name=selectChange]', function (event) {
+	//	$(this).addClass('color_change');
+	//});
+	//$('.basic_select').on('focus', 'select[data-name=selectChange]', function (event) {
+	//	$(this).addClass('color_change');
+
+	//});
+
+	var residentNum = function () {
+		// 주민번호 앞자리
+		$('input:password[data-name="resident_num"]').on('keydown change', function(e){
+		var imgSum = $('.resident_dot span').length;
+			if ( e.keyCode == 8) {
+				$('.resident_dot span:last').remove();
+			} else {
+				if( imgSum == 1 ) { return false ; }
+				$('.resident_dot').append("<span></span>");
+			}
+		});
+	};	residentNum();
+
+
+
+});
+</script>
+</body>
+</html>

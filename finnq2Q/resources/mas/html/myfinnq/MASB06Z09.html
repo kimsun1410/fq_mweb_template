@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>내 계좌간 이체 - 이체할내역</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASB06Z09 -->
+	<div id="contents" class="open-banking add_sticky">
+		<section>
+
+			<dl class="account__view--detail fix-line finnq">
+				<dt class="account__name">월급통장</dt>
+				<dd class="account__info">
+					국민 <em class="num">52010202020222</em>
+					<div class="account__info--thumb">
+						<span class="thumb">대출약정</span>
+						<span class="thumb">적금이체</span>
+					</div>
+				</dd>
+				<dd class="account__total">출금계좌 잔액 <em class="num">10,000,000</em>원</dd>
+			</dl>
+
+			<div class="list__account-wrap scroll" style="padding-bottom:60px;">
+				<p class="title">입금계좌</p>
+				<!--
+					계좌 이름과 금액이 같이 노출될 경우에만 클래스 half 추가
+					list__account : <ul class="list__account half">
+				-->
+				<ul class="list__account bank-list half">
+					<li class="gradient">
+						<a href="#" data-modal-open="popup-step2">
+							<div class="ico__account bank_003">IBK기업은행</div>
+							<div class="account__info">
+								<span class="account__info--name">생활비통장이름긴통장생활비통장이름긴통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								IBK기업 <em class="num">01000001234-137</em>
+							</div>
+						</a>
+
+						<!-- 계좌 삭제 버튼 -->
+						<button type="button" class="list__btn--delete">계좌 삭제</button>
+					</li>
+					<li class="gradient">
+						<a href="#" data-modal-open="popup-step2">
+							<div class="ico__account bank_027">시티은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								시티 <em class="num">52010202020222</em>
+								<div class="account__info--thumb">
+									<span class="thumb">대출약정</span>
+									<span class="thumb">적금이체</span>
+								</div>
+							</div>
+						</a>
+
+						<!-- 계좌 삭제 버튼 -->
+						<button type="button" class="list__btn--delete">계좌 삭제</button>
+					</li>
+					<li>
+						<a href="#" data-modal-open="popup-step2">
+							<div class="ico__account bank_004">국민</div>
+
+							<div class="account__info">
+								<span class="account__info--name">생활비통장이름긴통장생활비통장이름긴통장</span>
+								<span class="account__info--money"><em class="num bold">100,000,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">01000001234-137</em>
+							</div>
+						</a>
+
+						<!-- 계좌 삭제 버튼 -->
+						<button type="button" class="list__btn--delete">계좌 삭제</button>
+					</li>
+					<li>
+						<a href="#" data-modal-open="popup-step2">
+							<div class="ico__account bank_045">새마을금고</div>
+
+							<div class="account__info">
+								<span class="account__info--name">생활비통장이름긴통장생활비통장이름긴통장</span>
+								<span class="account__info--money"><em class="num bold">100,000,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								새마을금고 <em class="num">01000001234-137</em>
+							</div>
+						</a>
+
+						<!-- 계좌 삭제 버튼 -->
+						<button type="button" class="list__btn--delete">계좌 삭제</button>
+					</li>
+					<li class="account__more">
+						<!-- 계좌 최대 노출 5개 :  5개가 노출된 상태에서 계좌추가 버튼 클릭 시 토스트 팝업 노출 -->
+						<a href="#" class="btn__account--more" data-modal-open="popup-step1">
+							<div class="ico__account more">추가 계좌 연결</div>
+							계좌추가
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- modal__popup--common swipe -->
+			<!-- Default : 노출  / 상하 제스처에 따라 팝업 크기 변경 -->
+			<!-- 은행 아이콘은 개발에서 사용하는 코드와 동일
+				방법(클래스) : bank_ + 코드명
+
+				002 : KDB산업은행
+				003 : IBK기업은행
+				004 : 국민은행
+				007 : 수협중앙회
+				011 : 농협은행
+				020 : 우리은행
+				023 : SC제일은행
+				027 : 한국시티은행
+				031 : 대구은행
+				032 : BNK부산은행
+				034 : 광주은행
+				035 : 제주은행
+				037 : 전북은행
+				039 : 경남은행
+				064 : 산림조합중앙회
+				050 : 상호저축은행
+				045 : 새마을금고
+				048 : 신협중앙회
+				071 : 우체국
+				081 : KEB하나은행
+				089 : 케이뱅크
+				088 : 신한은행
+				090 : 카카오은행
+
+				054 : HSBC
+				055 : 도이치뱅크
+				057 : JP모간
+				060 : BOA은행
+				061 : BNP파리바
+				062 : 중국공상
+
+				209 : 유안타증권
+				218 : 현대증권 ==> KB증권으로 변경
+				222 : 한양증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				223 : 리딩투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				224 : BNK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				225 : IBK투자증권 ==> 사업팀 전달 TOBE 목록에 없음. 디자인 X
+				226 : KB투자증권
+				227 : KTB투자증권
+				238 : 미래에셋대우
+				240 : 삼성증권
+				243 : 한국투자증권
+				247 : NH투자증권
+				261 : 교보증권
+				262 : 하이투자증권
+				263 : HMC ==> 현대차증권 변경
+				264 : 키움증권
+				265 : 이베스트투자증권
+				266 : SK증권
+				267 : 대신증권
+				268 : 솔로몬 투자(삭제) ==> 메리츠종합금융증권 으로 변경
+				269 : 한화투자증권
+				270 : 하나금융투자
+				278 : 신한금융투자
+				279 : DB금융증권
+				280 : 유진투자증권
+				287 : 메리츠종합금융증권
+				290 : 부국증권
+				291 : 신영증권
+				292 : 케이프투자증권
+				294 : 펀드온라인코리아 ==> 한국포스증권 변경
+
+				EX ) bank_004 : 국민은행
+				예외) finnq는 클래스 finnq
+			-->
+			<!-- 스탭 1 -->
+			<article data-step="step1">
+				<div class="modal__popup--common swipe" id="modal-swipe-popup" data-modal-content="popup-step1">
+					<div class="modal__content--wrap">
+						<button type="button" class="modal__btn--close">팝업 닫기</button>
+
+						<p class="modal__title" id="modal-event-area">입금계좌 선택</p>
+
+						<!-- 계좌 등록 팝업 : 호출 버튼
+							data-modal-open="호출할 모달 팝업 명"
+							data-modal-content="호출 될 모달 팝업"
+
+							data-modal-open, data-modal-content은 이름을 서로 매칭
+						-->
+						<div class="scroll">
+							<ul class="list__account">
+								<li class="gradient">
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_002">KDB산업은행</div>
+
+										<div class="account__info">
+											<span class="account__info--name">생활비통장이름긴통장</span>
+										</div>
+										<div class="account__info--detail">
+											KDB산업은행 <em class="num">01000001234-137</em>
+										</div>
+									</a>
+								</li>
+								<li class="gradient">
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_031">대구은행</div>
+
+										<div class="account__info">
+											<span class="account__info--name">마이너스통장</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">52010202020222</em>
+											<div class="account__info--thumb">
+												<span class="thumb">대출약정</span>
+												<span class="thumb">적금이체</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_011">농협은행</div>
+
+										<div class="account__info">
+											<span class="account__info--name">생활비통장이름긴통장</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">01000001234-137</em>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_045">새마을금고중앙회</div>
+
+										<div class="account__info">
+											<span class="account__info--name">마이너스통장</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">52010202020222</em>
+											<div class="account__info--thumb">
+												<span class="thumb">대출약정</span>
+												<span class="thumb">적금이체</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_045">새마을금고중앙회</div>
+
+										<div class="account__info">
+											<span class="account__info--name">이스트스프링다이나믹증권투자신탁(H)[주식-재간접형]클래스C-F</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">52010202020222</em>
+											<div class="account__info--thumb">
+												<span class="thumb">대출약정</span>
+												<span class="thumb">적금이체</span>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_090">카카오뱅크</div>
+
+										<div class="account__info">
+											<span class="account__info--name">월급통장월급통장</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">01000001234-137</em>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_090">카카오뱅크</div>
+
+										<div class="account__info">
+											<span class="account__info--name">월급통장월급통장</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">01000001234-137</em>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-modal-open="popup-step2">
+										<div class="ico__account bank_090">카카오뱅크</div>
+
+										<div class="account__info">
+											<span class="account__info--name">월급통장월급통장</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">01000001234-137</em>
+										</div>
+									</a>
+								</li>
+								<li class="account__more">
+									<a href="#" class="btn__account--more">
+										<div class="ico__account more">추가 계좌 연결</div>
+										직접입력
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+			<!-- //스탭 1 -->
+
+			<!-- 스탭 2 -->
+			<article data-step="step2">
+				<div class="modal__popup--common is-flexible"  data-modal-content="popup-step2">
+					<div class="modal__content--wrap">
+						<button type="button" class="modal__btn--close">팝업 닫기</button>
+
+						<div class="scroll">
+
+							<ul class="list__account no-title">
+								<li>
+									<div class="block--wrap">
+										<div class="ico__account">국민</div>
+
+										<div class="account__info">
+											<span class="account__info--name">생활비통장</span>
+										</div>
+										<div class="account__info--detail">
+											국민 <em class="num">01000001234-137</em>
+										</div>
+									</div>
+								</li>
+							</ul>
+
+							<div class="transfer__number">
+								<input type="tel" data-name="inpFocus" placeholder="이체할 금액 입력" class="comma_wonhan">
+								<span class="focus-border"></span>
+								<button type="button" class="modal__btn--clear">초기화</button>
+							</div>
+
+							<p class="transfer__guite--txt">최소 <em class="num">1</em>만원 / 최대 <em class="num">100</em>만원</p>
+						</div>
+
+						<div class="sticky_wrap set_type1">
+							<button type="button" name="apply" class="btn btn_apply" data-btn-type="confirm-check" disabled="disabled">확인</button>
+						</div>
+
+					</div>
+				</div>
+			</article>
+			<!-- //스탭 2 -->
+			<!-- //modal__popup--common.swipe -->
+
+		</section>
+
+		<!-- 토스트 팝업 TEXT 노출 영역 -->
+		<div id="toast__popup"></div>
+		<!-- //토스트 팝업 TEXT 노출 영역 -->
+
+		<!-- CASE1 : 계좌 추가만 있을 시 - 버튼명 확인 / 상태 : disabled -->
+		<!--
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_apply" data-btn-type="transfer-money" disabled="disabled">확인</button>
+		</div>
+		-->
+
+		<!-- CASE2 : 계좌가 추가 되었을 때 : 총 합계 금액 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_apply" data-btn-type="transfer-money">총 <em class="num bold">11,111</em>원 이체</button>
+		</div>
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script type="text/javascript">
+$(function () {
+
+	// 토스트 팝업 호출 예제
+	$('.btn.toast').on('click', function(){
+		toastPopup('토스트 팝업 샘플.')
+	});
+
+	// 하단 메뉴 노출갯수에 따라 컨텐츠 자동 스크롤 (MAX5)
+	function menuScrollHeightCalc (){
+		var topMenuHeight = $(".account__view--detail.fix-line");
+		var scrollContentHeight = parseInt(topMenuHeight.outerHeight(true), 10) + 20;
+
+		var windowH = $(window).height();
+		var compareListHeight = parseInt($(".list__account-wrap.scroll").outerHeight(), 10) + scrollContentHeight;
+
+		// wiidow 높이와 스크롤할 List 높이 비교
+		if (windowH < compareListHeight)
+		{
+			$(".list__account-wrap").css('top', scrollContentHeight +'px');
+
+			$('.list__account-wrap').scroll(function(event){
+				var _scrollTop = $(this).scrollTop();
+				if (_scrollTop > 0) {
+					$('.open-banking .sec_title.line').addClass('on');
+				}
+				else {
+					$('.open-banking .sec_title.line').removeClass('on');
+				}
+			});
+		}
+		else
+		{
+			$(".list__account-wrap").removeClass('scroll');
+		}
+	}
+	menuScrollHeightCalc ();
+
+
+	// MODAL POPUP SWIPE 모션 감지
+	function swipeModalPopupEvent(){
+		let targetElement = document.getElementById("modal-event-area");
+		let	eventArea 	  = new Hammer(targetElement);
+		let	windowHeight  = $(window).height();
+
+		eventArea.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+		// 스와이프 Up
+		eventArea.on("swipeup", function () {
+			$('.modal__popup--common.swipe').addClass('is-flexible');
+		});
+
+		// 스와이프 Down
+		eventArea.on("swipedown", function () {
+			$('.modal__popup--common.swipe').removeClass('is-flexible');
+		});
+
+		// 해더 영역 클릭시 확장
+		$(document).on('click', '#modal-event-area',  function(){
+			var status = $(this).parents('.modal__popup--common.swipe').hasClass('is-flexible');
+
+			if (status) { $('.modal__popup--common.swipe').removeClass('is-flexible'); }
+			else { $('.modal__popup--common.swipe').addClass('is-flexible'); }
+		});
+	}
+
+	swipeModalPopupEvent();
+
+
+	// 첫 번째 스와이프 팝업, 바닥 페이지 은행 리스트에서 클릭
+	$(document).on('click', '.list__account li a',  function(){
+
+		//  클릭한 이벤트가 추가 계좌 연결인지 확인
+		var status = $(this).hasClass('btn__account--more');
+
+		// 오픈할 Modal Event
+		let openModalPopup = $(this).attr('data-modal-open');
+
+		// 계좌 정보 담기
+		let eventTarget    = $(this).html();
+
+		// 클릭한 버튼이 계좌 추가 버튼이 아닌 경우
+		if (!status)
+		{
+			// 공통 모달 팝업 닫기 : 스탭1 팝업 닫기 - 인자 this 전달
+			modalPopupClose( $(this) );
+
+			// 스탭2 팝업 열기
+			modalPopupOpen( $(this) );
+
+			// 담아놓은 계좌 정보 담기
+			$('[data-modal-content="' + openModalPopup + '"] .block--wrap').html( eventTarget );
+
+			// 금액 정보 삭제, 계좌 상세 정보 삭제
+			$('[data-modal-content="' + openModalPopup + '"]').find('.account__info--money').remove();
+			$('[data-modal-content="' + openModalPopup + '"]').find('.account__info--thumb').remove();
+		}
+	});
+
+
+	//금액 입력 체크
+	$(".modal__popup--common .comma_wonhan").on("keyup focusOut", function(e) {
+		let insertNumText = $(this).val();
+		let insertNumber = insertNumText.replace( /원/gi, '');
+
+		// 공백제거
+		insertNumber = $.trim(insertNumber);
+
+		let insertValue  = parseInt(insertNumber.replace(/,/gi, ''));
+
+		// 키패드 EVENT
+		let key = event.charCode || event.keyCode || 0;
+
+		// 안드로이드 키패드 숨김 함수처리 / IOS는 자동 처리
+		if (key == 13) {
+			hidekeypad();
+		}
+
+		// 금액 필드 초기화 버튼 노출/비노출
+		if (insertNumText.length <= 0) {
+			$('.modal__btn--clear').removeClass('is-visible');
+
+		} else {
+			$('.modal__btn--clear').addClass('is-visible');
+		}
+
+
+		// 금액 입력 오류
+		if (insertValue > 10000000)
+		{ // 1천만원보다 클 때
+			$(this).parent().addClass('error');
+			$('.transfer__guite--txt').addClass('error').empty().text('출금계좌 잔액 초과');
+		}
+		else if (insertValue < 1000)
+		{
+			$(this).parent().addClass('error');
+			$('.transfer__guite--txt').addClass('error').addClass('error').empty().html('<em class="num">1</em>천원부터 이체 가능');
+			$('[data-btn-type="confirm-check"]').attr('disabled', 'disabled');
+			$('[data-btn-type="transfer-money"]').empty().text('확인').attr('disabled', 'disabled');
+		}
+		else if (insertValue >= 1000 )
+		{
+			$(this).parent().removeClass('error');
+			$('.transfer__guite--txt').removeClass('error').empty().html('최소 <em class="num">1</em>만원 / 최대 <em class="num">100</em>만원');
+			$('[data-btn-type="confirm-check"]').removeAttr('disabled');
+			$('[data-btn-type="transfer-money"]').empty().html('총 <em class="num bold">'+ insertNumber +'</em>원 이체').removeAttr('disabled');
+		}
+	});
+
+
+	// 계좌 추가
+	$('[data-btn-type="confirm-check"]').on('click', function(){
+		let insertVal 		= $(".modal__popup--common .comma_wonhan").val().replace( /원/gi, '')
+		let removeCommaVal  = parseInt(insertVal.replace(/,/gi, ''), 10);
+
+		let bankLogo 		= $(this).parents('.modal__content--wrap').find('.ico__account').attr('class').split(' ')[1];
+		let bankAccoutnName = $(this).parents('.modal__content--wrap').find('.account__info--name').text();
+
+		if(  removeCommaVal >= 1000 )
+		{
+			let listLi =
+			'<li>' +
+				'<a href="#" data-modal-open="popup-step2">' +
+					'<div class="ico__account '+ bankLogo +'">시티은행</div>' + // 은행코드값
+					'<div class="account__info">' +
+						'<span class="account__info--name">'+ bankAccoutnName +'</span>' + // 은행 이름
+						'<span class="account__info--money"><em class="num bold">'+ insertVal +'</em>원</span>' +
+					'</div>' +
+					// 노출 여부 조건 절 필요
+					'<div class="account__info--detail">' +
+						'시티 <em class="num">52010202020222</em>' +
+						'<div class="account__info--thumb">' +
+							'<span class="thumb">대출약정</span>' +
+							'<span class="thumb">적금이체</span>' +
+						'</div>' +
+					'</div>' +
+					// 노출 여부 조건 절 필요
+				'</a>' +
+				'<button type="button" class="list__btn--delete">계좌 삭제</button>' +
+			'</li>';
+
+			$('.list__account.bank-list .account__more').before( listLi );
+		}
+	});
+
+
+	// 금액 입력 인풋 필드 초기화 추가
+	$(document).on('click', '.modal__btn--clear', function(){
+		$(this).parent().find('[data-name="inpFocus"]').val('').attr({'placeholder' : "이체할 금액 입력"}).focus();
+		$('.transfer__guite--txt').removeClass('error').empty().html('최소 <em class="num">1</em>만원 / 최대 <em class="num">100</em>만원');
+		$('.sticky_wrap .btn_apply').empty().text('확인').attr('disabled', 'disabled');
+	});
+
+
+	// 모달 팝업 호출 ( 계좌 연결 ), 레이어 부모 페이지 스크롤 막기
+	$('[data-modal-open]').on('click', function(){
+		modalPopupOpen( $(this) );
+	});
+
+
+	// 팝업 닫기, 레이어 부모 페이지 스크롤 해제
+	$(document).on('click', '.modal__btn--close, [data-btn-type="confirm-check"]',  function(){
+		modalPopupClose( $(this) );
+	});
+
+
+	// 계좌 삭제
+	$(document).on('click', '.list__btn--delete', function(){
+		$(this).parents('li').remove();
+	});
+
+
+	// 안드로이드 키패드 대응 스크립트 TEST,
+	// UI 확인용. 개발에서는 이미 사용하는 안드로이드 키패드 대응 스크립트 사용.
+	var winH 		= $(window).height(),
+	btnFixWrap		= $('.sticky_wrap');
+
+	function androidKeypadFunc()
+	{
+		if ( !$('body').hasClass('ios') )
+		{
+			$(window).resize(function(){
+				if ( $(window).height() + 100 >= winH ) {
+					// 키패드 비활성화
+					btnFixWrap.show();
+				} else {
+					// 키패드 활성화
+					btnFixWrap.hide();
+				}
+			});
+		}
+	}
+	androidKeypadFunc();
+
+});
+</script>
+</body>
+</html>

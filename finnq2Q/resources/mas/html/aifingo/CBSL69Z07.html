@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04자산모니터링_03자유입출금상세_03입금내역상세[CBSL69Z07]</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="CBSL69Z07"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo">
+
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item"><button type="button" class="btn btn_type_a open_modal" data-triger="modal-direct-input" data-mtype="fullpop" data-bgclose="">직접입력 팝업</button></span>
+		</div>
+
+		<!-- 
+			UI확인용 팝업 Infomation
+			data-triger : 모달팝업 아이디
+			data-mtype : 모달팝업 오픈타입
+				- fullpop : 풀팝업, window.height가 popSize, reSize()
+				- doublepop : 풀팝업에 또 팝업이 뜸, modal이 없음.
+				- 이외는 값없음
+			data-bgclose : 모달 Background 클릭시 팝업 닫기(true/false)
+
+			>> 사이즈 작은 모달팝업은 triger만 설정
+			>> 전체창 또는 배경클릭시 닫힘의 경우에는 각각의 값 설정
+		//-->
+
+		<!-- popup -->
+		<div id="modal-direct-input" class="modal_wrap fullpop"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+				<div class="modal_content pop_direct_input add_sticky"><!-- 개별 팝업 Class pop_direct_input --><!-- 하단 고정 버튼 변경으로 class 추가 -->
+
+					<!-- <div class="sec_head">
+						<h2 class="modal_title">직접입력</h2>
+						<button class="close_modal show_text"><span>취소</span></button>
+					</div> --> <!-- 2018-02-08 개발팀과 협의 후 풀팝업의 타이틀 일괄 삭제 phj -->
+					<div class="scroll_wrap" style=""><!-- height magicNumber -->
+						<div class="detail_set view_detail off"><!-- on 에서 off 로 변경 -->
+							<div class="d">
+								<strong>날짜 <span class="essential">*</span></strong><!-- 필수 항목 표시 추가 -->
+								<div class="date item"><!-- inpFocus 스타일 적용 class:item 추가 -->
+									<a class="btn_select btn_type_a disabled"><em class="date">2017.11.23</em> <span>(목)</span>&nbsp;<em class="date">20:26</em></a>
+									<!-- <strong><em class="date">2017.11.23</em> <span>(목)</span>&nbsp;<em class="date">20:26</em></strong> 수정 2018-02-21  -->
+									<input type="datetime-local" class="datelocal" disabled="disabled" /><!-- input change이벤트 걸어서 변경되면 UX기획이 요구한 포맷으로 변경작업이 필요합니다. -->
+								</div>
+							</div>
+							<div class="c">
+								<strong>금액 <span class="essential">*</span></strong><!-- 필수 항목 표시 추가 -->
+								<div class="cash prt_won item disabled"><!-- inpFocus 스타일 적용 class:item disabled 추가 --><!-- disabled 일때는 원 value 에 포함.. -->
+									<input type="tel" class="comma_wonhan" value="10,000 원" data-name="inpFocus" disabled="disabled" /><!-- //type이 number로 들어가면 안됨. data-name="inpFocus"  comma에는 inpFocus들어가면 안됩니다. -->
+									<!-- comma_wonhan 변경 -->
+								</div>
+							</div>
+							<div class="cc">
+								<strong>계좌정보</strong>
+								<!-- <div class="category"><strong>현금</strong></div> -->
+								<div class="category item"><!-- inpFocus 스타일 적용 class:item 추가 -->
+									<!-- <input type="text" data-name="inpFocus" placeholder="" value="현금" class="inp_count" disabled ="disabled">disabled 추가 -->
+									<p class="disabled_box"><span>KEB하나은행</span><span class="num">010-1234-1234-567</span></p>
+								</div>
+
+							</div>
+							<div class="w">
+								<strong>입금처</strong>
+								<!-- <div class="where"><strong>(주)핀크</strong></div> -->
+								<div class="where"><input type="text" data-name="inpFocus" placeholder="" value="(주)핀크" class="inp_count" disabled ="disabled"><!--disabled 추가  --></div>
+							</div>
+							<div class="in">
+								<strong>수입설정</strong>
+								<div class="choice">
+									<input type="radio" id="purpleTwo1" name="test-img" checked="checked"><label for="purpleTwo1" name="test-img"><span>급여</span></label>
+									<input type="radio" id="purpleTwo2" name="test-img"><label for="purpleTwo2" name="test-img"><span>급여외수입</span></label>
+									<input type="radio" id="purpleTwo3" name="test-img"><label for="purpleTwo3" name="test-img"><span>사업수입</span></label>
+									<input type="radio" id="purpleTwo4" name="test-img"><label for="purpleTwo4" name="test-img"><span>수입제외</span></label>
+								</div><!-- //choice -->
+							</div>
+							<!-- 2440 [AI핀고] 소비내역 상세 화면 개선 3건 2018-06-18 ock -->
+							<div class="t wrap_count modify"><!-- modify 추가 2018-06-18 -->
+								<strong># 태그</strong>
+								<div class="hash item"><!-- inpFocus 스타일 적용 class:item 추가 -->
+									<input type="text" data-name="inpFocus" value="#노는게_제일_좋아_친구들" maxlength="15" class="inp_count" placeholder="기억하고 싶은 것이 있나요?"><!-- inp_count, maxlength 추가  -->
+								</div>
+								<p class="txt_count"><em>0</em>/<i>15</i></p><!-- txt_count 추가 -->
+
+								<div class="tag_history">
+									<p><a href="#none">#예산초과</a></p>
+									<p><a href="#none">#노는게_제일_좋아_친구들</a></p>
+									<p><a href="#none">#아프지말고_행복하자</a></p>
+									<p><a href="#none">#커피줄이자</a></p>
+									<p><a href="#none">#여행경비</a></p>
+								</div>
+							</div>
+							<!-- //2440 [AI핀고] 소비내역 상세 화면 개선 3건 2018-06-18 ock -->
+						</div><!-- //detail_set -->
+						<!-- 하단 고정 버튼 변경 -->
+						<!-- <ul class="flex_wrap set_type1"> 5개
+							<li class="item on"><button type="button" name="button" class="btn btn_type_f">완료</button></li>
+						</ul> -->
+					</div>
+
+
+					<div class="sticky_wrap set_type1">
+						<button type="button" name="apply" class="btn btn_type_apply">완료</button> <!-- 하단 고정 버튼 변경 -->
+					</div>
+
+				</div><!-- //modal_content -->
+			</div>
+		</div>
+
+			<!-- 카테고리 선택 // 이중팝업 -->
+		<!-- 카테고리 선택 // 이중팝업 -->
+		<div id="modal-choice-category" class="modal_wrap doublepop "><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content pop_direct_input">
+				<!-- 카테고리 선택 슬라이드 -->
+				<div class="slide_wrap">
+					<div class="sec_head">
+						<h3>카테고리를 선택하세요</h3>
+					</div>
+					<div class="scroll_wrap" style=""><!-- height magicNumber -->
+						<div class="swiper-container choice_category">
+							<div class="swiper-wrapper">
+								<!-- 반복문 -->
+								<div class="swiper-slide">
+									<div class="sec_table">
+										<div class="detail_set">
+											<div class="food">
+												<strong>식비</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">커피</button></li>
+														<li><button class="on">외식</button></li>
+														<li><button class="">간식</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="shopping">
+												<strong>생활/쇼핑</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">편의점</button></li>
+														<li><button class="">마트/슈퍼</button></li>
+														<li><button class="">백화점</button></li>
+														<li><button class="">인터넷쇼핑</button></li>
+														<li><button class="">생활용품</button></li>
+														<li><button class="">생활서비스</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="fashion">
+												<strong>패션/미용</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">의류/잡화</button></li>
+														<li><button class="">뷰티/미용</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="traffic">
+												<strong>교통</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">자동차</button></li>
+														<li><button class="">주유</button></li>
+														<li><button class="">대중교통</button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //반복문 -->
+
+								<div class="swiper-slide">
+
+									<div class="sec_table">
+
+										<div class="detail_set">
+											<div class="food">
+												<strong>식비</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">커피</button></li>
+														<li><button class="on">외식</button></li>
+														<li><button class="">간식</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="shopping">
+												<strong>생활/쇼핑</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">편의점</button></li>
+														<li><button class="">마트/슈퍼</button></li>
+														<li><button class="">백화점</button></li>
+														<li><button class="">인터넷쇼핑</button></li>
+														<li><button class="">생활용품</button></li>
+														<li><button class="">생활서비스</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="fashion">
+												<strong>패션/미용</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">의류/잡화</button></li>
+														<li><button class="">뷰티/미용</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="traffic">
+												<strong>교통</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">자동차</button></li>
+														<li><button class="">주유</button></li>
+														<li><button class="">대중교통</button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="sec_table">
+
+										<div class="detail_set">
+											<div class="food">
+												<strong>식비</strong>
+												<div class="date">
+													<ul class="btn_sellist ">
+														<li><button class="">커피</button></li>
+														<li><button class="on">외식</button></li>
+														<li><button class="">간식</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="shopping">
+												<strong>생활/쇼핑</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">편의점</button></li>
+														<li><button class="">마트/슈퍼</button></li>
+														<li><button class="">백화점</button></li>
+														<li><button class="">인터넷쇼핑</button></li>
+														<li><button class="">생활용품</button></li>
+														<li><button class="">생활서비스</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="fashion">
+												<strong>패션/미용</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">의류/잡화</button></li>
+														<li><button class="">뷰티/미용</button></li>
+													</ul>
+												</div>
+											</div>
+											<div class="traffic">
+												<strong>교통</strong>
+												<div class="date">
+													<ul class="btn_sellist">
+														<li><button class="">자동차</button></li>
+														<li><button class="">주유</button></li>
+														<li><button class="">대중교통</button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	$body = $("body");
+	//Contents Size Cal;
+	var docH, docW;
+	docW = $(window).width();
+	docH = $(window).height();
+	//모달팝업
+		/* modal popup */
+		$("button.open_modal,a.open_modal").on("click", function(){
+			var $mpop = $(this);
+
+			var $mpopType = $mpop.data("mtype");
+			var $mpopID = "#"+$mpop.data("triger");
+			var $mpopClose = $mpop.data("bgclose");
+			var conH = $($mpopID).find(".modal_content").outerHeight();
+			//2440 [AI핀고] 소비내역 상세 화면 개선 3건 2018-06-18 ock
+			//팝업 열렸을때 실행 2018-06-19 ock
+			//$('.modal_wrap.fullpop').delay(500).animate({ scrollTop: 150 }, 700);
+			var length = $('.t.modify input').val().length;
+			var count = $('.t.wrap_count').find('.txt_count em');
+			count.text(length);
+			//팝업 열렸을때 실행 2018-06-19 ock
+
+			//popup contents height < window height
+			if(conH >= docH || ($mpopType=="fullpop")) {
+				$($mpopID +"> .modal_content").css({
+					height: docH
+				});
+			}else {
+				$($mpopID).addClass("normal");
+			}
+			if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+			switch($mpopType) {
+				case "fullpop":
+					$($mpopID).toggleClass("visible");
+					break;
+				case "doublepop":
+					$($mpopID).addClass("double").toggleClass("visible");
+					break;
+				default:
+					$($mpopID).toggleClass("visible");
+			}
+			return false;
+		});
+		$(".modal_wrap").on("click","button.close_modal", function(){
+			$(this).closest('.modal_wrap').toggleClass("visible");
+			return false;
+		});
+		$(".modal_wrap").on("click", function(e){
+			var status = $(this).data("bgclose");
+			if(!$(".modal_content").has(e.target).length && status ) { 
+				if($(this).data("bgclose")) $(this).toggleClass("visible");		
+			} 
+		}); 
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		$(".btn_sellist").find("button").removeClass();
+		$(this).addClass("on");
+		//$("#modal-choice-category").toggleClass("visible");
+	});
+
+	$(".btn_select").on("click", function(){
+		if( $(this).parent().hasClass('on') ) {
+			$(this).parent('.item').removeClass('on');
+			$('.sec_finance').addClass('hide');
+			$(this).css({'color':'#222'});
+		} else {
+			$(this).parent('.item').addClass('on');
+			$(this).css({'color':'#731aed'});
+			$('.sec_finance').removeClass('hide');
+		}
+	});
+
+
+
+    var choice_category = new Swiper(".choice_category", {
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+    });
+
+	//2440 [AI핀고] 소비내역 상세 화면 개선 3건 2018-06-18 ock
+	//인풋 클릭시 2018-06-19 ock
+	$('.t.modify input').each(function(){
+		$(this).focus(function(){
+			$('.sticky_wrap').fadeOut(300,function(){
+				$('.tag_history').stop().slideDown(500).addClass('on');
+			});
+		}).blur(function(){
+			$('.tag_history').delay(100).removeClass('on').stop().slideUp(500,function(){
+				$('.sticky_wrap').fadeIn(300);
+			});
+		});
+	});
+
+	//태그 클릭시 2018-06-19 ock
+	$('.tag_history p > a').on('touchstart', function(){
+		//글자수 표시
+		//var limit = parseInt($('.t.modify input').attr("maxlength"));
+		var count = $(this).parents('.tag_history').siblings('.txt_count').find('em');
+		var thisTxt = $(this).text();
+		var length = $(this).text().length;
+		count.text(length);
+		console.log(thisTxt);
+		$('.t.modify input').val(thisTxt);
+		//if (length > limit){
+			//length = limit;
+			//inpVal = $('.t.modify input').val().substring(0,limit);
+			//$('.t.modify input').val(inpVal);
+		//}
+		$(this).css('color', '#c8c8c8');
+	});
+
+	$('.tag_history p > a').on('touchend', function(){
+		$(this).css('color', '#666');
+	});
+
+});
+</script>
+</body>
+</html>

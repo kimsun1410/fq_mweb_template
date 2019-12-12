@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02소비내역_01날짜별_01_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="CBSI69Z06-1"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo">
+
+		<section class="spend_review">
+			
+			<div class="sec_head">
+				<div class="date_control">
+					<button type="button" name="button" class="btn ico_prev">previous month</button>
+					<strong class="date">2017.02</strong>
+					<button type="button" name="button" class="btn ico_next end" disabled="disabled">next month</button><!-- Class: "end", disable둘다 화면표시는 같습니다 -->
+				</div>
+
+				<div class="sec_review">
+					<!-- 스튜핏 -->
+					<dl class="stupid on"><!-- 스튜핏 활성화 상태 --><!-- 활성화시 class : on 추가 2018-03-13 ock -->
+						<dt>스튜핏</dt>
+						<dd class="review_count">0</dd>
+						<dd>
+							<em class="cash">0</em><span>원</span>
+						</dd>
+					</dl>
+					<!-- 그레잇 -->
+					<dl class="great"><!-- 활성화시 class : on 추가 2018-03-13 ock -->
+						<dt>그레잇</dt>
+						<dd class="review_count">0</dd>
+						<dd>
+							<em class="cash">0</em><span>원</span>
+						</dd>
+					</dl>
+				
+				</div>
+			</div>
+
+
+
+			<div class="sec_history spend_detail wrap_result"><!-- 따로 div wrap_result를 만들지 말고 no_result를 감싸고 있는 div에 wrap_result 클래스를 줄것 -->
+				<div class="no_result">
+					<i class="ico ico_chat_no2"></i>
+					<p>문의내역이 없습니다.</p>
+				</div>
+
+			</div><!-- //spend_detail -->
+		</section>
+		<!-- 하단 붙임 -->
+
+
+		<!-- sticky_wrap place -->
+		<!--div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">완료</button>
+		</div --><!-- 1차 수정 : 완료버튼 삭제 -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	var topH = $(".sec_head").outerHeight();
+	var ViewH = $("section").outerHeight();
+	$(window).scroll(function(){
+	  if(ViewH >= 800) {
+		  var sticky = $('.sec_tab'),
+			  scroll = $(window).scrollTop();
+		  if (scroll >= topH) sticky.addClass('fixed');
+		  else sticky.removeClass('fixed');	  
+	  }
+	});
+});
+</script>
+</body>
+</html>

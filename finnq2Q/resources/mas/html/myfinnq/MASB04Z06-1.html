@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04채우기_04하나머니전환_01즉시_web_MASB04Z06-1</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180131" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180131" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- MASB04Z06-1 -->
+	<div id="contents" class="myfinnq add_sticky">
+
+		<section>
+			<div class="sec_title">
+				<h3 class="accent_txt">
+					<strong class="tit_date">설정한 요일</strong>마다,<br>
+					<strong>보유한 하나머니</strong>를<br>
+					핀크계좌로 가져옵니다.<br>
+				</h3>
+			</div>
+
+			<!--
+				설정된 경우 해당 버튼에 클래스 on 추가
+				EX) <li><button class="on">월</button></li>
+			 -->
+			<article class="com_box_wrap week_opt mgt40">
+				<p class="tit_info">오전 <span class="num">00:00</span></p>
+				<ul class="btn_sellist set_type7">
+					<li><button>월</button></li>
+					<li><button>화</button></li>
+					<li><button>수</button></li>
+					<li><button>목</button></li>
+					<li><button>금</button></li>
+					<li><button>토</button></li>
+					<li><button>일</button></li>
+				</ul>
+			</article>
+
+			<article class="notice_wrap gray">
+				<div class="sec_notice bul_guide gray">
+					<ul>
+						<li class="star_type indent">설정한 날의 다음주부터 자동 충전됩니다.</li>
+						<li class="star_type indent">월 최대 10만원까지 충전 가능합니다.</li>
+					</ul>
+				</div>
+			</article>
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">설정</button>
+		</div>
+
+		<!-- 설정 되어 있는 경우  -->
+		<!--
+		<div class="sticky_wrap set_type2">
+			<button type="button" name="apply" class="btn btn_cancel">해제</button>
+			<button type="button" name="apply" class="btn btn_type_apply">변경</button>
+		</div>
+		 -->
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+
+	// 날짜를 설정한 경우 해당 스크립트는 주석
+	// 날짜 옵션 선택 (설정이 되어 있지 않은 경우)
+	$('.btn_sellist').on('click', 'button', function() {
+		var btn = $(this),
+			btnText = $(this).text() + '요일';
+
+		$(this).parents('.btn_sellist').find('button').not(btn).removeClass();
+		$(this).addClass('on');
+		$('.sec_title .tit_date').text(btnText);
+
+		$('.sticky_wrap.set_type1 button').removeAttr('disabled');
+	});
+
+});
+</script>
+</body>
+</html>

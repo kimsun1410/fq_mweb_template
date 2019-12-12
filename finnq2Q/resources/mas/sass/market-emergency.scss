@@ -1,0 +1,215 @@
+@charset 'UTF-8';
+/*
+* 2018-01-04 Park Heejung
+* finnq market 비상금대출
+*/
+
+/* 인포 리스트 */
+.sec_emergency_info li {color:$warm_grey;}
+
+/* KEB하나 로고 */
+.hana_logo {position:absolute; bottom:0px; left:0; @include font(12px); color:$pinkish_grey; text-align:center; padding:42px 0 28px; width:100%; height:15px;}
+#contents.add_hana_logo section {position:relative; padding-bottom:85px;}
+
+.wrap.bg_list #contents.add_hana_logo section {padding-bottom:40px;}
+.wrap.bg_list #contents.add_hana_logo .hana_logo {background:$white_three; bottom:-45px;}
+
+/* 2018-04-04 비상금대출 약관쪽만 수정 phj 2018-04-05 다시 원복
+.emergency_term .hana_logo {bottom:60px !important;}
+@media screen and (max-width:320px){
+	.emergency_term .hana_logo {bottom:auto !important;}
+} */
+
+/* 이자계산 버튼 */
+.btn_interest {text-align:center; margin-top:28px;}
+.btn_interest button {width:162px;}
+.btn_interest p {/* display:none; */ color:$warm_grey; @include font(16px); margin-top:14px; opacity:0;}
+.btn_interest strong {color:$clear_blue; font-weight:bold;}
+
+/* 비상금대출 기본 입력 */
+.emergency_form .sec_fund_form li {position:relative; margin-top:15px; width:100%;}
+.emergency_form .sec_fund_form li:after {content:""; clear:both; display:block; height:0;}
+.emergency_form .sec_fund_form li:first-child {margin-top:0;}
+.emergency_form .sec_fund_form li .item {}
+.emergency_form .sec_fund_form .type_2 .item {float:left; width:calc(50% - 2px)}
+.emergency_form .sec_fund_form .type_2 .item:nth-of-type(2) {float:right;}
+.emergency_form .sec_fund_form .remark {position:static; clear:both; padding-top:5px; width:100%; text-align:right;}
+.emergency_form .pw_input {position:relative; border: 1px solid $white_two; background:$white; border-radius:4px; height:46px; text-align:center; box-sizing: border-box;}
+
+/* 18.09.18 보안키패드 라인 활성화 추가 */
+.emergency_form .inp_focus .pw_input {border-color:$purply_blue; color:$purply_blue; background:$pale_lavender;}
+
+.emergency_form .pw_input p {display:inline-block; text-align:center; padding-top:18px; overflow:hidden; }
+.emergency_form .pw_input p i {display:block; float:left; width:8px; height:8px; margin:0 0 0 8px; background:url('../images/common/ico-pw-grey.png') no-repeat top center; background-size:8px auto; /*border-radius:6px;*/}
+.emergency_form .pw_input p.on {position:absolute; margin:0 auto; z-index:0;}
+.emergency_form .inp_focus .pw_input p.on i {background-position:center -11px;}
+.emergency_form .pw_input p.on i {background-position:center -22px;}
+.emergency_form .pw_input p i:first-child {margin-left:0;}
+.emergency_form .pw_input input {opacity:0; position:absolute; left:0; top:0;}
+.emergency_form .inp_error .pw_input {border-color:$reddish_orange; background:$pale_lavender; color:$purply_blue;}
+.emergency_form .inp_error .pw_input p.on i {background-position:center -11px;}
+.emergency_form .sec_term_type1 .agree_terms {padding-top:0; border-top:0;}
+
+.emergency_form .sec_fund_form .item.soft_select.inp_error:after{top:20px;margin-top:0}
+
+
+@media screen and (max-width:320px){
+	.emergency_form .pw_input p {width:93px;}
+	.emergency_form .pw_input p i {margin:0 0 0 6px;}
+}
+.emergency_form .sec_notice {padding-top:18px;}
+.emergency_form .sec_notice li {margin-top:10px;}
+
+/* 비상금 심사 */
+.emergency_pass {text-align:center;}
+.emergency_pass .sec_count {margin-top:26px;}
+.emergency_pass .sec_count .count_wrap strong {font-size:30px;}
+
+.emergency_pass .sec_pass_info {display:inline-block; text-align:center; padding-top:6px;}
+.emergency_pass .sec_pass_info li {color:$warm_grey; margin-top:8px;}
+.emergency_pass .sec_pass_info li strong {color:$green_blue;}
+
+/* 비상금 심사 완료, 약정 완료 */
+.emergency_result h3 {color:$brownish_grey; margin:28px 0 11px;}
+.emergency_result h3:first-child {margin-top:0;}
+.emergency_result .sec_fund_result {padding:25px 20px 30px;}
+.emergency_result .sec_contract_result {padding:25px 20px 0;}
+.emergency_result .sec_emergency_info {margin-top:28px;}
+.emergency_result .sec_emergency_info li .bul_guide {margin-top:5px;}
+.emergency_result .sec_emergency_info li .bul_guide li {margin-top:8px;}
+.emergency_result .sec_emergency_info li .bul_guide li:before {margin-top:-3px; vertical-align: middle;}
+.emergency_result .sec_emergency_info li .tel_num {border-bottom:1px solid $warm_grey;}
+.emergency_result .wrap_alert {padding:25px 0 5px;}
+.emergency_result .wrap_alert .box_btn {margin:12px auto 0; width:162px;}
+.emergency_result .sec_fund_limit {background:$white_three; text-align:center; font-weight:bold; color:$black; padding-top:29px; border-top:1px solid $white_two; @include font(16px);}
+.emergency_result .sec_fund_limit em {color:$green_blue;}
+
+.emergency_result .wrap_alert.type_red .con {word-break: keep-all;}
+.emergency_result .wrap_alert.type_red .con p + p {margin-top:10px;}
+
+
+/* 비상금 계좌 선택 */
+.emergency_account .sec_emergency_info {margin:28px 20px 0;}
+.emergency_account .sec_emergency_info.gray_cont {background:$white_three; margin: 28px -20px 0 0px; padding:28px 20px 20px 20px; border-top:1px solid $white_two;}
+.emergency_account .pw_box_wrap {padding:28px 20px 2px;}
+.emergency_account .pw_box_wrap .title {font-size:16px; margin-bottom:10px; font-weight:bold; color:$black;}
+.emergency_account .next_step hr.line_division {margin:0;}
+
+.emergency_account .sec_select {margin-top:11px;}
+.emergency_account .sec_select ul li {padding-top:15px;}
+@media screen and (max-width:320px){
+	.emergency_account .sec_select [data-name="acc-button"].btn_type_d {padding:0 0 0 41px; height:50px;}
+}
+
+/* 비상금 약정서 계약서동의 */
+.emergency_form2 .sec_term_type1 {border-bottom:none;}
+.emergency_form2 .sec_term_type1 .agree_terms {padding-top:0;}
+.emergency_form2 .sec_term_type1 .agree_terms dl {background:$white_three;}
+.emergency_form2 .sec_term_type1 .agree_terms dl dt {margin-top:4px; border-bottom:1px solid $white_two;}
+.emergency_form2 .agree_terms dl dt input[type="checkbox"] + label span {color:$brownish_grey; font-weight:normal;}
+.emergency_form2 .agree_terms dl dt .sms_info {border-top:1px dashed $white_three; margin-top:15px; padding:18px 0 0 37px; color:$brownish_grey; @include font(16px); }
+.emergency_form2 .agree_terms dl dt .sub {display:block; color:$warm_grey; @include font(14px); margin-top:6px;}
+.emergency_form2 .agree_terms dl dt .sub a {color:inherit;}
+.emergency_form2 .agree_terms dl dt .method_agree .ico_arrow_more2 {top:24px; margin:0;}
+.emergency_form2 .agree_terms dl dt .service {margin:12px 0 15px 37px;}
+.emergency_form2 .agree_terms dl dt .service .box_check {background:$white_three; border-radius:8px; padding:14px 18px; margin-bottom:14px;}
+.emergency_form2 .agree_terms dl dt .service .box_check p {color:$brownish_grey; @include font(16px);}
+.emergency_form2 .agree_terms dl dt .service .box_check ul {overflow:hidden; padding:0; text-align:left;}
+.emergency_form2 .agree_terms dl dt .service .box_check ul li {float:left; width:54%; margin-top:6px; list-style:none !important;}/*2018-04-06 약관보기관련 리스트 스타일 논처리 phj*/
+.emergency_form2 .agree_terms dl dt .service .box_check ul li:nth-child(even) {width:46%}
+.emergency_form2 .agree_terms dl dt .service .box_check ul li  input[type="checkbox"] + label span {@include font(14px); padding-left:33px; padding-top:6px;}
+.emergency_form2 .agree_terms dl dt .service .box_check input[type="checkbox"] + label {margin-right:0}
+
+/* 비상금조회 */
+.emergency_inquiry .sec_insinfo {margin-top:26px;}
+.emergency_inquiry .sec_inquiry_graph {margin-top:45px;}
+
+/* 그래프 */
+.sec_inquiry_graph { position:relative;width:100%;padding:0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.sec_inquiry_graph:after { content:" "; position:absolute; left:-20px; right:-20px; bottom:0; height:8px; background:url("../images/common/bg_upshadow.png") repeat-x; z-index:10; background-size:4px 8px;}
+.sec_inquiry_graph .progress_wrap { position:relative; height:60px;/* padding-right:3px; background:$pale_lavender_two; */}
+.sec_inquiry_graph .progress_wrap ._progress {height:60px; background:$pale_lavender_two; margin-top:0; border-radius:0; border:none; }
+.progress_wrap ._progress ._bar {background:$purply_blue; width:0; height:60px; border-radius:0; border:none; top:0;}
+.sec_inquiry_graph .progress_wrap .step { font-size:0;}
+.sec_inquiry_graph .progress_wrap .step span { display:inline-block;vertical-align:top;height:60px;background:url("../images/common/bg_process_bar.png") 0 0 no-repeat #eaddfd;background-size:100% 60px;margin:0;padding:0;}
+.sec_inquiry_graph .progress_wrap .step span:first-of-type { background-position:-2px 0;}
+.sec_inquiry_graph .progress_wrap.type_2 span {background-image:none;}
+.sec_inquiry_graph .progress_wrap .step_tooltip { position:absolute; left:0; bottom:4px; width:110px; height:94px; padding:20px 20px 0; margin-left:-20px; background:url("../images/common/bg_boxtooltip_2.png") 0 0 no-repeat; background-size:110px 94px; text-align:center; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; z-index:11;transition: all 0.5s linear;}
+.sec_inquiry_graph .progress_wrap .step_tooltip.loan {padding:20px 15px 0}
+/*.sec_inquiry_graph .progress_wrap .step_tooltip.last {left:unset !important;}*/
+.sec_inquiry_graph .progress_wrap .arrow {position:absolute; right:0; bottom:5px; width:21px; height:18px; background:url("../images/common/bg_boxtooltip_arrow.png") 0 0 no-repeat; background-size:21px 18px; margin-right:-10.5px;}
+.sec_inquiry_graph .progress_wrap .step_tooltip p { color:$sun_yellow;display:block;border-bottom:1px solid rgba(255, 255, 255, 0.2);padding-bottom:3px;margin-bottom:3px;}
+.sec_inquiry_graph .progress_wrap .step_tooltip p.total { color:$white;display:block;border-bottom:0;}
+
+
+/* 비상금조회 관리 */
+.emergency_admin .update {text-align:center; @include font(11px); color:$pinkish_grey; margin-bottom:1px; margin-top:-7px;}
+/*.emergency_admin .update a {vertical-align:middle; display:inline-block; height:30px;}
+.emergency_admin .update a i {margin: 8px 9px 9px;}*/ /* 2018-04-05 common공틍으로 정리 phj */
+.emergency_admin .sec_title h3 + p.guide_txt {margin-top:4px;}
+.emergency_admin .sec_insinfo {margin-top:27px;}
+.emergency_admin .sec_insinfo .money_total {text-align:right;margin-top:-2px}
+.emergency_admin .sec_insinfo .sub {display:block; margin-top:8px; color:$warm_grey; @include font(14px);}
+.emergency_admin .sec_insinfo strong {color:$clear_blue;}
+.emergency_admin .btn_interest {margin-bottom:42px;}
+.emergency_admin .secede_inquiry {border-top:none;}
+
+/* 비상금 해지 */
+.emergency_close .close_info {padding:28px 20px 0;}
+.emergency_close .close_info .tbl_close {border-top:1px solid $white_three;}
+.emergency_close .close_info .tbl_close li {display:table; width:100%; border:1px solid $white_three; border-top:none; background:$white_four;}
+.emergency_close .close_info .tbl_close li p {display:table-cell; width:50%; color:$brownish_grey; @include font(16px); padding:14px 0 13px 20px; vertical-align:middle;}
+.emergency_close .close_info .tbl_close li .money {padding:14px 20px 13px 0; text-align:right; font-weight:bold;}
+.emergency_close .close_info .tbl_close li.total {background:$white; border:1px solid $warm_grey; margin-top:-1px;}
+.emergency_close .close_info .tbl_close li.total p {width:32%; font-weight:bold; color:$black;}
+.emergency_close .close_info .tbl_close li.total .money {width:68%;}
+.emergency_close .close_info .tbl_close li.total .money strong {color:$green_blue; font-weight:bold; @include font(20px);}
+.emergency_close .close_info .tbl_close li.total .money .sub {display:block; font-weight:normal; color:$black; @include font(14px); margin-top:6px;}
+
+@media screen and (max-width:320px){
+	.emergency_close .close_info .tbl_close li p {padding:14px 0 13px 14px;}
+	.emergency_close .close_info .tbl_close li .money {padding:14px 14px 13px 0;}
+
+	/* Jira FQA-61 수정 . 18.08.17 */
+	.emergency_close .close_info .tbl_close li .money .num {display:inline-block;}
+	.emergency_close .close_info .tbl_close li.total .money .num {display:block;}
+
+}
+
+.emergency_close .close_info .sec_emergency_info {margin-top:28px;}
+
+.emergency_close .round_box {text-align:center; @include font(16px);}
+.emergency_close .round_box strong {font-weight:bold;}
+.emergency_close .round_box .bul_guide {margin-top:11px;}
+.emergency_close .round_box .bul_guide p {color:$warm_grey; @include font(12px);}
+
+/* 비상금 신청 실패 */
+/* 18.09.13 추가 */
+.emergency_decline .sec_title .guide_txt {color:$reddish_orange;}
+.emergency_decline .sec_title .guide_txt.point {color:$warm_grey;}
+.emergency_decline .sec_title .guide_txt.point strong {color:$reddish_orange;}
+.emergency_decline .sec_decoration {margin-top:57px;}
+.emergency_decline .sub_txt {text-align:center; margin-top:14px; color:$warm_grey; @include font(14px);}
+
+
+.emergency_decline .img_ad_banner {margin-top:45px; padding:0 20px;}
+.emergency_decline .img_ad_banner img {width:100%; height:auto;}
+
+
+/* 19.04.13 비상금 대출 문구 추가 */
+.emergency_inquiry .loan_info_add {margin-top:27px; background:$white_three; padding:20px 20px 0px;}
+.emergency_inquiry .loan_info_add .info_wrap {position:relative; background:$white; padding:28px 20px 26px; border-radius:8px;}
+.emergency_inquiry .loan_info_add .info_wrap .btn-insert {font-size:12px; color:#666; height:21px; line-height:20px; padding:0 10px; border: 1px solid #e0e0e0; border-radius: 14px; position: absolute; top: 26px; right: 20px; background: #fff; z-index:10;}
+.emergency_inquiry .info_wrap .tit {font-size:14px; font-weight:bold; color:$brownish_grey; margin-bottom:9px;}
+.emergency_inquiry .info_wrap ul li {font-size:14px; color:$brownish_grey;}
+.emergency_inquiry .info_wrap .thumb_cont {font-size:14px; margin-top:7px; color:$warm_grey;}
+.emergency_inquiry .info_wrap .thumb_cont strong {color:$brownish_grey;}
+.emergency_inquiry .loan_info_add .hana_logo {background:$white_three; padding: 34px 0 36px;}
+
+/* 320 대응 */
+@media screen and (max-width:320px){
+    .emergency_inquiry .info_wrap .thumb_cont br {display:none;}
+}
+
+
+

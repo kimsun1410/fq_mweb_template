@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트구매_12구매후기_01_AIBA11Z21</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- AIBA11Z21 -->
+	<!-- contents -->
+	<div id="contents" class="art_wrap">
+
+		<!-- section -->
+		<section class="review_wrap">
+
+			<article>
+				<p class="user_name">김핀크</p>
+				<div class="cont ellipsis" data-state="compact">
+					<div class="txt_inner">
+						와 yba 작가 줄리안오피네요 :) 강렬한 컬러에 미니멀함... 무슨말이 더 필요할까요 정말 감각적입니다. 블로그 태그 이벤트 참여합니다. 와 yba 작가 줄리안오피네ㅇ
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<button type="button" class="btn_more">전체보기</button>
+				</div>
+			</article>
+			<article>
+				<p class="user_name">김핀크</p>
+				<div class="cont ellipsis" data-state="compact">
+					<div class="txt_inner">
+						와 yba 작가 줄리안오피네요 :) 강렬한 컬러에 미니멀함... 무슨말이 더 필요할까요 정말 감각적입니다. 블로그 태그 이벤트 참여합니다~ https://m.blog.naver.com/artist_ny/221442013917 강렬한 컬러에 미니멀함... 무슨말이 더 필요할까요 정말 감각적입니다.
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<button type="button" class="btn_more">전체보기</button>
+				</div>
+			</article>
+			<article>
+				<p class="user_name">김핀크</p>
+				<div class="cont ellipsis" data-state="compact">
+					<div class="txt_inner">
+						와 yba 작가 줄리안오피네요 :)
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<button type="button" class="btn_more">전체보기</button>
+				</div>
+			</article>
+			<article>
+				<p class="user_name">김핀크</p>
+				<div class="cont ellipsis" data-state="compact">
+					<div class="txt_inner">
+						와 yba 작가 줄리안오피네요 :) 강렬한 컬러에 미니멀함... 무슨말이 더 필요할까요 정말 감각적입니다. 블로그 태그 이벤트 참여합니다. 와 yba 작가 줄리안오피네요 :)줄리안오피네요
+					</div>
+				</div>
+				<div class="btn_wrap">
+					<button type="button" class="btn_more">전체보기</button>
+				</div>
+			</article>
+
+
+			<!-- 20개 이상일 때 화면 로딩 IMG -->
+			<div class="more_loading"></div>
+
+		</section>
+		<!-- //section -->
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	//멀티라인 활성화 체크
+	function reviewLinective(){
+		// 라인수 체크
+		$('.review_wrap .cont').each(function(){
+			var _outerH = $(this).outerHeight();
+			var _innerH = $(this).find('.txt_inner').outerHeight();
+			if (_innerH - 5 < _outerH){
+				$(this).removeClass('ellipsis');
+			}
+		});
+
+		//
+		$('.review_wrap .btn_wrap .btn_more').on('click', function(){
+			var _ellipsisObj = $(this).parent().prev();
+
+			if (_ellipsisObj.attr('data-state') == 'compact')
+			{
+				$(this).addClass('on').text('닫기');
+				_ellipsisObj.attr('data-state', 'extend')
+			} // 펼쳐보기
+			else if (_ellipsisObj.attr('data-state') == 'extend')
+			{
+				$(this).removeClass('on').text('전체보기');
+				_ellipsisObj.attr('data-state', 'compact');
+			} // 닫기
+		})
+	}
+	reviewLinective();
+
+});
+</script>
+</body>
+</html>

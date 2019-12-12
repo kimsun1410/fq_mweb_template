@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트투자_05작품투자하기_03구매안내_AIBA11Z27</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap bg_list"><!-- AIBA11Z27 -->
+	<!-- contents -->
+	<div id="contents" class="art_wrap add_sticky">
+
+		<!-- section -->
+		<section class="art_get_wrap">
+			<div class="art_get_title">
+				<div class="sec_title">
+					<h2>구매 전 안내사항을<br> 확인해주세요</h2>
+				</div>
+			</div>
+
+			<div class="sec_history">
+				<ul class="list_expend">
+					<li>
+						<div class="subject">
+							<a href="#open">"모집보장형" 상품입니다<i></i></a>
+						</div>
+
+						<div class="detail_set">
+							<div class="con">
+								모집기간 내 지분이 모두 판매되지 않더라도 회사가 구매 잔여량을 보장하는 상품입니다.
+								모집이 100%달성되지 않아도 펀딩이 취소되지 않으므로 안심하고 구매하세요.
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="subject">
+							<a href="#open">종합보험에 가입하여 안전하게 관리합니다<i></i></a>
+						</div>
+						<div class="detail_set">
+							<div class="con">
+								KB손해보험의 "전시종합보험"에 가입되어 있습니다.
+								또한 전시공간에서 CCTV,실시간 웹캠 등을 통해 철저히 관리되고 있습니다.
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="subject">
+							<a href="#open">모집완료 후 취소가 불가능합니다<i></i></a>
+						</div>
+						<div class="detail_set">
+							<div class="con">
+								아트상품 구매 취소는 모집이 완료되기 전까지 가능하며, 모집이 종료된 후에는 지분 구매를 취소할 수 없습니다.
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="subject">
+							<a href="#open">구입금액 한도가 없습니다<i></i></a>
+						</div>
+						<div class="detail_set">
+							<div class="con">
+								크라우드 펀딩이나 P2P투자와 달리 1인 구매 한도의 제약이 없습니다.
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="subject">
+							<a href="#open">구입/매각 시 플랫폼 이용료가 부가됩니다<i></i></a>
+						</div>
+						<div class="detail_set">
+							<div class="con">
+								아트상품의 지분 구매/매각 시에 (주)투게더아트는 플랫폼 이용료를 수취합니다.<br>
+								플랫폼 이용료는 아트상품의 구매, 매각 과정에서 제공되는 제반 서비스에 대한 요금으로서, 회사가 지출하는 운송료, 보험료, 리워드제작 비용 등을 충당하기 위한 것입니다.
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="subject">
+							<a href="#open">매각으로 수익 발생시 세금을 납부합니다<i></i></a>
+						</div>
+						<div class="detail_set">
+							<div class="con">
+								아트상품 매각으로 인해 수익이 발생할 경우, 세법에 의거하여 수익에 대한 양도소득세를 세금으로 납부합니다.
+								단, 낙찰가 6천만원 이상일 경우 수익금의 4.4%를 세금으로 징수하며, 여타 투자상품 대비 비교적 낮은 세율이 적용됩니다.
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="sec_agree">
+							<div class="agree_wrap line_top_zero">
+								<input type="checkbox" id="art_agree" name="art_agree" class="purple">
+								<label for="art_agree" name="art_agree"><span>구매안내 사항을 확인하였습니다.</span></label>
+							</div>
+						</div>
+					</li>
+				</ul><!-- //list_expend -->
+
+			</div>
+
+
+		</section>
+		<!-- //section -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">확인</button>
+		</div>
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 약관 선택
+	var _target = $('.sec_agree input[type="checkbox"]');
+
+	_target.on('click',function(){
+		if( (_target ).is(':checked') ){
+			$('.sticky_wrap .btn').removeAttr('disabled');
+		} else {
+			$('.sticky_wrap .btn').attr({'disabled' : 'disabled'});
+		}
+	});
+});
+</script>
+</body>
+</html>

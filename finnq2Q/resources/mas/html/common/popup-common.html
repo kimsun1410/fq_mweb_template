@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>팝업 공통</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="add_sticky white">
+		<section class="sec_member_input">
+			<div class="sec_title">
+				<h2>팝업 Type 변경 공통</h2>
+			</div>
+
+
+			<dl class="input_wrap">
+				<dt class="input_tit">
+					<strong>셀렉트 팝업 호출 Scroll X</strong>
+				</dt>
+				<dd class="flex_wrap">
+					<!-- 팝업 호출 :  data-modal-open="팝업 호출 이름1" / Select -->
+					<a href="#none" class="btn_select btn_type_a popup-trigger" data-modal-open="job2">선택해주세요</a>
+				</dd>
+			</dl>
+
+			<dl class="input_wrap type">
+				<dt class="input_tit">
+					<strong>풀팝업</strong>
+				</dt>
+				<dd class="flex_wrap item">
+					<!-- class="btn_type_b" 전체팝업 스타일, data-modal-open = "1" 추가 팝업 불러오기 data-modal-content = "1" 셀렉트 스타일  -->
+					<a href="#none" class="btn_select btn_type_b popup-trigger" data-modal-open="jobsearch">직장명을 검색해주세요</a>
+				</dd>
+			</dl>
+		</section>
+
+
+		<div class="sticky_wrap set_type1">
+			<!-- 팝업 호출 :  data-modal-open="팝업 호출 이름1"-->
+			<button type="button" name="" class="btn btn_type_apply" data-modal-open="pop_tcheck">팝업호출</button>
+		</div>
+
+		<!-- 팝업 호출시 data-modal-content="팝업 호출 이름1과 매칭"-->
+		<div class="modal-toast" data-modal-content="pop_tcheck">
+			<div class="modal-toast-container">
+				<div class="conts_box">
+					<strong class="title">T신용등급 혜택 안내</strong>
+					<p>T신용등급을 선택하지 않으시면<br /><em>금리 및 한도 혜택을 적용 할 수 없습니다.</em><br/>계속하시겠습니까?</p>
+				</div>
+				<div class="sticky_wrap set_type2">
+					<button type="button" name="" class="btn btn_cancel">아니오</button>
+					<button type="button" name="" data-modal-open="agree_pop" class="btn btn_type_apply">네</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- 약관 팝업 : agree 추가 -->
+		<div class="modal-toast agree is-visible" data-modal-content="popup-open-cont">
+				<div class="modal-toast-container">
+					<div class="conts_box">
+						<!-- <strong class="title">타이틀 영역</strong> -->
+						<div class="agree_terms">
+							<!-- 마크업 구조 변경 : 항목 추가 19.11.21 수정 -->
+							<dl>
+								<dt class="agree_wrap">
+									<input type="checkbox" id="all_chk" class="all_chk"><label for="all_chk"><span>전체 동의</span></label>
+								</dt>
+								<dd>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101"><span>오픈뱅킹 서비스약관(필수)</span></label>
+										<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102"><span>오픈뱅킹 금융거래정보제공동의서(필수)</span></label>
+										<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103"><span>오픈뱅킹 개인신용정보 수집이용제공 동의서(필수)</span></label>
+										<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+									</div>
+									<div class="agree_wrap">
+										<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104"><span>잔액부족시 자동충전 설정(선택)</span></label>
+									</div>
+								</dd>
+							</dl>
+							<!-- // 마크업 구조 변경 -->
+						</div>
+					</div><!-- //conts_box -->
+					<div class="sticky_wrap set_type1">
+						<button type="button" name="" data-modal-open="agree_pop" class="btn btn_type_apply">확인</button>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+		<!-- 전체창 하단 선택 class="select 추가" -->
+		<div class="modal-toast select" data-modal-content="job2" role="alert">
+			<div class="modal-toast-container">
+				<button type="button" class="modal-toast-close">창닫기</button>
+				<div class="conts_box">
+					<strong class="title">고용형태</strong>
+					<ul class="list_set">
+						<li><a href="#none">정규직</a></li>
+						<li><a href="#none">계약직</a></li>
+						<li><a href="#none">파견직</a></li>
+						<li><a href="#none">기타1</a></li>
+						<li><a href="#none">기타2</a></li>
+						<li><a href="#none">기타3</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		 <!-- 전체창 팝업 class="fullopen 추가" -->
+		<div class="modal-toast fullopen" data-modal-content="jobsearch" role="alert">
+			<div class="modal-toast-container">
+				<button type="button" class="modal-toast-close">창닫기</button>
+				<div class="conts_box">
+					<div class="sec_member_input item">
+						<div class="search_wrap">
+							<form>
+								<input type="text" style="display:none;" /><!-- 의미 없는 텍스트 박스-->
+								<input type="search" placeholder="직장명을 입력해주세요" data-placeholder="직장명을 입력해주세요" required class="search" maxlength="30">
+								<button class="ic_close" type="reset"></button>
+							</form>
+						</div>
+						<div class="search_hide">
+							<div class="search_box">
+								<div class="keyboard">
+									<span>검색 결과에 없을 경우 직접 입력해주세요</span>
+									<button class="btn_submit">직접입력</button>
+								</div>
+								<form>
+									<input type="text" placeholder="사업자번호를 입력해주세요" pattern="[0-9]*" inputmode="numeric" data-name="inpFocus" required  data-placeholder="사업자번호를 입력해주세요" class="license" maxlength="12">
+									<button class="ic_close" type="reset"></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="conts_line"></div>
+				<div class="conts_search">
+					<div class="search_view">
+						<p class="title"><strong>'핀크'</strong> 검색 결과</p>
+						<ul class="list">
+							<li>
+								<a href="javascript:void(0);">
+									<div class="list_item">
+										<dl>
+											<dt>(주)핀크</dt>
+											<dd>
+												<span>사업자번호</span>
+												<p class="num">299-81-00502</p>
+											</dd>
+											<dd>
+												<span>주소</span>
+												<p>서울 중구 을지로 100, 20층 (을지로2가, 파인에비뉴 B동 20층)</p>
+											</dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<div class="list_item">
+										<dl>
+											<dt>에스케이핀크스(주)</dt>
+											<dd>
+												<span>사업자번호</span>
+												<p class="num">299-81-00502</p>
+											</dd>
+											<dd>
+												<span>주소</span>
+												<p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+											</dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<div class="list_item">
+										<dl>
+											<dt>(주)핀크래프트엔지니어링</dt>
+											<dd>
+												<span>사업자번호</span>
+												<p class="num">299-81-00502</p>
+											</dd>
+											<dd>
+												<span>주소</span>
+												<p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+											</dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<div class="list_item">
+										<dl>
+											<dt>(주)핀다</dt>
+											<dd>
+												<span>사업자번호</span>
+												<p class="num">299-81-00502</p>
+											</dd>
+											<dd>
+												<span>주소</span>
+												<p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+											</dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<div class="list_item">
+										<dl>
+											<dt>(주)무궁화가 피었습니다</dt>
+											<dd>
+												<span>사업자번호</span>
+												<p class="num">299-81-00502</p>
+											</dd>
+											<dd>
+												<span>주소</span>
+												<p>제주 서귀포시 안덕면 산록남로 863 (지번주소가 아래에 나오는 것인가요)</p>
+											</dd>
+										</dl>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div id="loading_box">
+							<div class="more_loading"></div>
+						</div>
+					</div>
+				</div>
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="" class="btn btn_type_apply">확인</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 약관 호출 시 -->
+		<div class="modal-toast fullopen" data-modal-content="agreeprivacy" role="alert">
+			<div class="modal-toast-container privacy">
+				<!-- 창 닫기도 NATIVE로 불러오는 HEADER이면 주석처리 : 혁신금융대출 사용 O  -->
+				<a href="#none" class="btn modal-toast-close">창 닫기</a>
+
+				<!-- 요안에 내용 만  변경하시면 됩니다. 구분(role="privacym-01"), 인클루드(data-include="MASC03M01.html")  -->
+				<div class="agree_details" role="privacym-01" data-include="../provision/000167_20191218.html"></div><!-- // (필수)주식회사 핀크 오픈뱅킹 서비스약관 //  -->
+				<!--<div class="agree_details" role="privacym-02" data-include="../provision/000168_20191218.html"></div> // 오픈뱅킹서비스 개인신용정보 수집이용제공 동의서 // -->
+				<!--<div class="agree_details" role="privacym-03" data-include="../provision/000169_20191218.html"></div> // 오픈뱅킹서비스 금융거래정보제공동의서 // -->
+
+				<!-- 하단 버튼은 GUI에 맞게 사용하시면 됩니다. : 혁신금융대출 사용 X  -->
+				<!-- <div class="sticky_wrap set_type1">
+				   <button type="button" name="약관동의 버튼" class="btn btn_type_apply">확인</button>
+			   </div> -->
+			</div>
+		</div>
+
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// 팝업 호출
+	$('[data-modal-open]').on('click', function(e) {
+		// 팝업 호출
+		modalPopupOpen( $(this) );
+	});
+
+	// 팝업 닫기
+	$(".modal-toast .btn, .modal-toast-close").on('click', function(e) {
+		// 팝업 닫기 공통
+		modalPopupClose( $(this) );
+	});
+
+	function includeLayout(){
+		var includeArea = $('[data-include]');
+		var self, url;
+		$.each(includeArea, function() {
+			self = $(this);
+			url = self.data("include");
+			self.load(url, function() {
+				self.removeAttr("data-include");
+			});
+		});
+	}
+
+	includeLayout();
+});
+
+</script>
+</body>
+</html>

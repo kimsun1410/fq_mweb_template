@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>핀크계좌에 연결 불가 연결미지원 안내_CBSL69Z09</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id=""><!-- 페이지 검색을 위한 아이디 CBSL69Z10 -->
+    <div id="contents" class="fingo add_sticky">
+
+        <div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+            <span class="item"><button type="button" class="btn btn_type_a open_modal" data-triger="MASB12Z15" data-mtype="" data-bgclose="">금융기관 연결 중단 알림[CBSL69Z09]</button></span>
+                <!--
+                    UI확인용 팝업 Infomation
+                    data-triger : 모달팝업 아이디
+                    data-mtype : 모달팝업 오픈타입
+                        - fullpop : 풀팝업, window.height가 popSize, reSize()
+                        - doublepop : 풀팝업에 또 팝업이 뜸, modal이 없음.
+                        - 이외는 값없음
+                    data-bgclose : 모달 Background 클릭시 팝업 닫기(true/false)
+
+                    >> 사이즈 작은 모달팝업은 triger만 설정
+                    >> 전체창 또는 배경클릭시 닫힘의 경우에는 각각의 값 설정
+                //-->
+
+        </div>
+
+        <div id="" class="modal_wrap pop_transfer_error">
+            <div class="modal_content">
+                <div class="sec_title">
+                    <h3 class="accent_txt">
+                        이체할 은행계좌를<br>
+                        <strong>핀크계좌와 연결</strong>해 주세요.<br>
+                        충전과 이체가 더 편해집니다.
+                    </h3>
+                </div>
+
+                <div class="flex_wrap set_type2">
+                    <span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
+                    <span class="item on"><button type="button" name="button" class="btn_type_f">확인</button></span>
+                </div>
+
+            </div>
+        </div>
+
+    </div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

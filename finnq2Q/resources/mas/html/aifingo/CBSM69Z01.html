@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>07분석알림설정_01카드결제알림설정_01리스트없을때_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="CBSM69Z01"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo">
+
+		<section class="add_guide_wrap">
+			<div class="sec_title">
+				<h2><strong class="point_txt3">연체</strong>알리미</h2>
+				<p class="guide_txt">카드 결제일 아침에 청구 금액 알림</p>
+			</div>
+
+			<div class="sec_add_btn">
+				<div class="btn_add">
+					<a href="#none" class="ico_plus">알림 추가하기</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- sticky_wrap place -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		$(".btn_sellist").find("button").removeClass();
+		$(this).addClass("on");
+	});
+
+	$('.expend').on('click','button.ico',function(){
+		//$(this).toggleClass('on').next().toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>

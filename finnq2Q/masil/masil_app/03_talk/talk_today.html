@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko" class="md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Finnq_Well Living_Masil</title>
+    <link rel="stylesheet" href="../css/omo.css">
+  <link rel="stylesheet" href="../css/finnqUi.css">
+</head>
+
+<body>
+
+<div id="app">
+
+
+	<div class='top_nav bg1 hr1'>
+		<button class='back1'></button>
+		<div class='nav_title'>18.01.22 (월)</div>
+		<button class='txt_btn'>전체보기</button>
+	</div>
+
+	<div class="page">
+
+<!-- contents -->
+<div class='body_frame top_pad_type1'>
+
+	<div class='talk_hot_wrap2'>
+		<div class='talk_hot_cont2' style="background-image:url('../img/life_talk_bg_sample.png');">
+			<div class='talk_hot_text2'>
+				<div>
+					<strong>시간이 흘러도 문득<br/>떠오르는 그 사람</strong>
+					<p>결혼이란 서로 다른 문화와 습관을 가진 만큼 그 과정에서 갈등의 원인 역시 부지기수. 누구에게도 말못했던 속상했던 마음 오늘의톡에 나누고 풀어버리세요.</p>
+				</div>					
+			</div>
+		</div>
+	</div>
+
+	<div class='talk_reply_wrap'>
+
+		<div class='talk_reply_info_wrap'>
+			<span class='board_reply_btn'>13</span>
+			<button class='kakao_link'></button>
+		</div>
+		
+		<div id="reply_write_form" class="reply_write_wrap type2"></div>
+
+		<div class='talk_reply_btn'>
+			<!-- 댓글이 없는 경우-->
+			<div class='board_reply_none'><span>첫 번째 댓글을 남겨보세요.</span></div>
+			<!-- 댓글이 없는 경우-->
+		</div>
+
+		<ul class='talk_reply_list_wrap'>
+			<li>
+				<div class='reply_profile'><img src='http://i.telegraph.co.uk/multimedia/archive/02464/potd-otter_2464920k.jpg' alt='친정엄마'></div>
+				<div class='reply_box'>
+					<div class='reply_top'>
+						<strong>친정엄마</strong>
+						<div class='reply_menu '><!-- .select 로 토글 -->
+							<button class='reply_more'></button>
+							<ul>
+								<li><button>신고</button></li>
+							</ul>
+						</div>
+					</div>
+					<div class='reply_cont'>
+						<p>친정 무시하는 시어머니 짜증나요.</p>
+						<span class='replay_date'>1시간 전</span>	
+					</div>
+				</div>
+			</li>
+			<li class='talk_report'>
+				<div class='list_reported_post'>
+					<div>신고된 댓글입니다.</div>
+				</div>
+			</li>
+			<li class='talk_my'>
+				<div class='reply_box'>
+					<div class='reply_top'>
+						<strong>그레이스박</strong>
+						<div class='reply_menu select'><!-- .select 로 토글 -->
+							<button class='reply_more'></button>
+							<ul>
+								<li><button>신고</button></li>
+							</ul>
+						</div>
+					</div>
+					<div class='reply_cont'>
+						<p>요즘 세상에 아들 내외가 홀시아버지 모시고 살아 드리는게 얼마나 효도인데...</p>
+						<span class='replay_date'>1시간 전</span>	
+					</div>
+				</div>
+			</li>
+		</ul>
+		
+	</div>
+	
+
+
+</div>
+<!-- contents -->
+</div><!-- page:end -->
+
+	<div class='app_foot_btn_wrap'>
+		<div class='float_btn_wrap'>
+			<button id='omo_top_btn' class='finnq_float_btn finnq_btn finnq_type4'>맨위로</button>
+		</div>
+	</div>
+
+</div><!-- app:end -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.event.drag-1.5.1.min.js"></script>
+<script src="../js/jquery.touchSlider.js"></script>
+<script src="../js/underscore.js"></script><script src="../js/underscore.js"></script>
+<script src="../js/finnqUi.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	//댓글 달기 이벤트
+	$('#reply_write_form').finnqUiCommentBox({
+		submitCallback:function(data){
+	    	console.log(data.value)// textarea value
+	    	console.log(data.length) // text 길이
+		}
+	});
+	var isMine = true; // 본인인지 아닌지 확인
+	var replyButtonArr, profileButtonArr;
+	
+	if(isMine){
+		replyButtonArr = [
+	        {
+	            name: '삭제',
+	            className:'Declaration1',
+	            closeOption:true,
+	            event:function(){
+	                // 버튼 클릭 이벤트
+	                console.log('btn event');
+	            }
+	        }
+	    ]
+	}else{
+		replyButtonArr = [
+	        {
+	            name: '신고',
+	            className:'Declaration2',
+	            closeOption:true,
+	            event:function(){
+	                // 버튼 클릭 이벤트
+	                console.log('btn event');
+	            }
+	        }
+	    ]
+	}
+	if(isMine){
+		profileButtonArr = [
+			{
+	            name: '수정',
+	            className:'Declaration4',
+	            closeOption:true,
+	            event:function(){
+	                // 버튼 클릭 이벤트
+	                console.log('btn event');
+	            }
+	        },
+			{
+	            name: '삭제',
+	            className:'Declaration3',
+	            closeOption:true,
+	            event:function(){
+	                // 버튼 클릭 이벤트
+	                console.log('btn event');
+	            }
+	        }
+	        
+	    ]
+	}else{
+		profileButtonArr = [
+	        {
+	            name: '신고',
+	            className:'Declaration5',
+	            closeOption:true,
+	            event:function(){
+	                // 버튼 클릭 이벤트
+	                console.log('btn event');
+	            }
+	        }
+	    ]
+	}
+	// 프로필  삭제,수정 or 신고
+	$('.profile_menu').finnqUiSmallPopup({
+	    btn : profileButtonArr
+	});
+	
+	//댓글 삭제 or 신고
+	$('.replay_menu').finnqUiSmallPopup({
+	    btn : replyButtonArr
+	});
+
+});
+</script>
+</body></html>

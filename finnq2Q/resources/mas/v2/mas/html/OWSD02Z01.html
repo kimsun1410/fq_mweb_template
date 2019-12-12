@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>본인인증_OWSD02Z01</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="OWSD02Z01">
+	<div id="contents" class="common ows_wrap">
+		<!-- 오픈웹 타이틀 샘플 2018-03-07 -->
+		<div class="sec_ows_head">
+			<h2 class="ows_title">오픈웹 타이틀 샘플</h2>
+			<button class="close_web" onclick="self.close();"><span class="blind">창닫기</span></button>
+		</div>
+
+		<section class="member_join">
+
+			<!-- 휴대폰인증 -->
+			<div class="sec_step">
+				<ol class="step01">
+					<li class="on"><!-- 진행:on, 완료: complete -->
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>2</strong>
+					</li>
+				</ol>
+			</div>
+			<div class="sec_title">
+				<h2>휴대폰인증</h2>
+				<p class="guide_txt">본인인증을 해 주세요.</p> <!-- case 1 -->
+			</div>
+
+			<div class="sec_member_input">
+
+				<ul class="flex_wrap set_type1">
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" placeholder="이름 (성 + 이름)" class="">
+						<p class="remark hide">이름을 입력해 주세요.</p>
+					</li>
+					<li class="input_wrap item inp_error"> <!-- inp_error 에러 -->
+						<input type="text" data-name="inpFocus" placeholder="이름 (성 + 이름)" class="">
+						<p class="remark show">이름을 입력해 주세요.</p>
+					</li>
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" placeholder="이름 (성 + 이름)" class="" disabled="disabled">
+						<p class="remark hide">이름을 입력해 주세요.</p>
+					</li>
+
+					<!-- 입력 박스 형식 변경 2018-03-24 ock -->
+					<li class="input_wrap type_3 new_marsking">
+						<div class="item"><input type="number" data-name="inpFocus" placeholder="주민번호 앞자리" value=""></div>
+						<div class="item">-</div>
+						<div class="item inp_new_resident"><!-- inp_error --><!-- 뒷자리 첫글자만 입력하는 경우 : inp_new_resident -->
+							<input type="tel" data-name="inpFocus" placeholder="" value="" class="">
+						</div>
+						<p class="remark hide">remark 여기 위치에 넣어주세요.</p>
+					</li>
+
+					<!-- 입력 박스 형식 변경 2018-03-24 ock -->
+					<!-- <li class="input_wrap type_3 new_marsking">
+						<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="901221" disabled="disabled"></div>
+						<div class="item">-</div>
+
+						<div class="item">inp_error
+							<input type="password" data-name="inpFocus" placeholder="주민번호 뒷자리" value="">
+						</div>
+						<p class="remark hide">주민번호 뒷자리를 입력해 주세요</p>show
+					</li> -->
+
+					<li class="input_wrap soft_select item ">
+						<select data-name="inpFocus">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+						</select>
+						<p class="remark hide">통신사를 선택해 주세요.</p>
+					</li>
+					<li class="input_wrap soft_select item inp_error">
+						<select data-name="inpFocus">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+						</select>
+						<p class="remark show">통신사를 선택해 주세요.</p>
+					</li>
+					<li class="input_wrap soft_select item disabled"><!-- disabled 화살표 제어 class -->
+						<select data-name="inpFocus" disabled="disabled">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+						</select>
+						<p class="remark hide">통신사를 선택해 주세요.</p>
+					</li>
+
+					<li class="input_wrap col_box pin_num_have item">
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="" class="">
+							<p class="remark hide">휴대폰번호를 입력해 주세요.</p>
+						</span>
+						<span>
+							<button type="button" name="button" class="btn btn_type_f">인증번호 받기</button><!-- disabled="disabled" -->
+							<!-- <p class="remark show">dddd</p> -->
+						</span>
+					</li>
+					<li class="input_wrap col_box pin_num_have item inp_error">
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="" class="" >
+							<p class="remark show">휴대폰번호를 입력해 주세요.</p>
+						</span>
+						<span>
+							<button type="button" name="button" class="btn btn_type_f">인증번호 받기</button><!-- disabled="disabled" -->
+							<!-- <p class="remark show">dddd</p> -->
+						</span>
+					</li>
+					<li class="input_wrap col_box pin_num_have item">
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="" class="" disabled="disabled">
+							<p class="remark hide">휴대폰번호를 입력해 주세요.</p>
+						</span>
+						<span>
+							<button type="button" name="button" class="btn btn_type_f" disabled="disabled">인증번호 받기</button><!-- disabled="disabled" -->
+							<!-- <p class="remark show">dddd</p> -->
+						</span>
+					</li>
+
+					<li class="input_wrap pin_number item">
+						<input type="number" data-name="inpFocus" placeholder="인증번호" class="">
+						<p class="remark hide">인증시간이 초과되었습니다.</p>
+						<div class="time_count">30:00</div>
+						<div class="bul_guide">
+							<p class="star_type indent">SMS재전송은 3회까지만 가능합니다.</p>
+						</div>
+					</li>
+					<li class="input_wrap pin_number item inp_error">
+						<input type="number" data-name="inpFocus" placeholder="인증번호" class="">
+						<p class="remark show">인증시간이 초과되었습니다.</p>
+						<div class="time_count">30:00</div>
+						<div class="bul_guide">
+							<p class="star_type indent">SMS재전송은 3회까지만 가능합니다.</p>
+						</div>
+					</li>
+					<li class="input_wrap pin_number item">
+						<input type="number" data-name="inpFocus" placeholder="인증번호" class="" disabled="disabled">
+						<p class="remark hide">인증시간이 초과되었습니다.</p>
+						<div class="time_count">30:00</div>
+						<div class="bul_guide">
+							<p class="star_type indent">SMS재전송은 3회까지만 가능합니다.</p>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="sec_all_check">
+				<div class="agree_all_terms">
+					<input type="checkbox" id="all_chk" name="test-img" class="purple"><label for="all_chk" name="test-img"><span>아래 약관에 모두 동의합니다.</span></label>
+				</div><!-- //agree_all_terms -->
+
+				<div class="agree_terms term1">
+					<dl class="toggle_list">
+						<dt class="agree_wrap">
+							<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101" name="check_action"><span>본인인증 이용동의(필수)</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</dt>
+						<dd>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102" name="check_action"><span>개인정보 이용동의 </span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap"">
+								<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103" name="check_action"><span>고유식별정보 처리동의 </span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap"">
+								<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104" name="check_action"><span>통신사 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap"">
+								<input type="checkbox" id="chk0105" name="check_action" class="purple"><label for="chk0105" name="check_action"><span>서비스 이용약관</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+						</dd>
+					</dl>
+				</div><!-- //agree_terms term1 -->
+
+
+				<div class="agree_terms term2">
+					<dl class="toggle_list">
+						<dt class="agree_wrap">
+							<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101" name="check_action"><span>핀크 서비스 이용 동의</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</dt>
+						<dd>
+							<div class="agree_wrap">
+								<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102" name="check_action"><span>전자금융거래 이용약관(필수)</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap"">
+								<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103" name="check_action"><span>서비스 이용약관(필수)</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap"">
+								<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104" name="check_action"><span>개인정보 수집/이용 동의(필수)</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+							<div class="agree_wrap"">
+								<input type="checkbox" id="chk0105" name="check_action" class="purple"><label for="chk0105" name="check_action"><span>제휴/마케팅 동의 (선택)</span></label>
+								<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+							</div>
+						</dd>
+					</dl>
+				</div><!-- //agree_terms term2 -->
+			</div><!-- //sec_all_check -->
+
+			<!-- //휴대폰인증 -->
+
+
+			<div class="sticky_wrap set_type1">
+				<button type="button" name="" class="btn btn_type_apply">인증하기</button>
+			</div><!-- //비밀번호 재설정 01회원_07비밀번호재설정_02비밀번호변경요청 -->
+
+			<div class="sec_text_btn">
+				<div class="btn_text02">
+					<a href="#none" class="ico ico_arrow_more">개인정보처리방침</a>
+				</div>
+			</div>
+
+			<div class="sec_txt_copyright">© Finnq.Co.Ltd ALL RIGHTS RESERVED</div>
+
+		</section>
+
+	</div>
+	<!-- #contents -->
+
+
+</div>
+<script src="../libs/jquery-2.2.4.min.js"></script>
+<script src="../libs/ui.js"></script>
+<script src="../libs/ows.js"></script>
+<script src="../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".toggle_list > dt > button").on("click", function(){
+		$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+});
+</script>
+</body>
+</html>

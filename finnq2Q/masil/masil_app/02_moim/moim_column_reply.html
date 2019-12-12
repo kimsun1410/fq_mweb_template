@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ko" class="md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Finnq_Well Living_Masil</title>
+    <link rel="stylesheet" href="../css/omo.css">
+  <link rel="stylesheet" href="../css/finnqUi.css">
+</head>
+
+<body>
+
+<div id="app">
+
+
+	<div class='top_nav bg1 hr1'>
+		<button class='back1'></button>
+	</div>
+
+	<div class="page">
+
+<!-- contents -->
+<div class='body_frame top_pad_type1'>
+
+
+	<div class='board_reply_wrap type2'>
+		<div id="reply_write_form" class="reply_write_wrap type2"></div>
+		<div id="reply_list"></div>
+	</div>
+
+	<div class='board_reply_wrap'>
+
+		<!-- 댓글이 없는 경우-->
+		<div class='board_reply_none'><span>첫 번째 댓글을 남겨보세요.</span></div>
+		<!-- 댓글이 없는 경우-->
+
+
+		<!-- 댓글이 있는 경우-->
+		<ul class='board_reply_list_wrap'>
+			<li>
+				<div class='reply_profile'><img src='http://i.telegraph.co.uk/multimedia/archive/02464/potd-otter_2464920k.jpg' alt='친정엄마'></div>
+				<div class='reply_box'>
+					<div class='reply_top'>
+						<strong><em>모임장</em>김소봉</strong>
+						<span class='replay_date'>1시간 전</span>
+						<div class='select'>
+							<a href='#' class='reply_more'>더보기</a>
+							<ul>
+								<li><a>신고</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class='reply_cont'>
+						<p>즐거운 경험이었어요. 쉽게 따라할 수 있는 간단한 수업이었습니다! 다만 재료 및 강습 대비 수업료가 조금 비싼 느낌이 들었어요.</p>
+					</div>
+				</div>
+				<div class='board_item_reply'><span class='board_clap_btn clap_on'>255</span></div>
+			</li>
+			<li>
+				<div class='reply_profile'><img src='http://i.telegraph.co.uk/multimedia/archive/02464/potd-otter_2464920k.jpg' alt='친정엄마'></div>
+				<div class='reply_box'>
+					<div class='reply_top'>
+						<strong>친정엄마</strong>
+						<span class='replay_date'>1시간 전</span>
+						<div>
+							<a href='#' class='reply_more'>더보기</a>
+							<ul>
+								<li><a>신고</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class='reply_cont'>
+						<p>즐거운 경험이었어요. 쉽게 따라할 수 있는 간단한 수업이었습니다! 다만 재료 및 강습 대비 수업료가 조금 비싼 느낌이 들었어요.</p>
+					</div>
+				</div>
+				<div class='board_item_reply'><span class='board_clap_btn clap_off'>255</span></div>
+			</li>
+		</ul>
+		<!-- 댓글이 있는 경우-->		
+
+	</div>
+	
+
+</div>
+<!-- contents -->
+</div><!-- page:end -->
+
+
+
+</div><!-- app:end -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/jquery.event.drag-1.5.1.min.js"></script>
+<script src="../js/jquery.touchSlider.js"></script>
+<script src="../js/underscore.js"></script><script src="../js/underscore.js"></script>
+<script src="../js/finnqUi.js"></script>
+	<script>
+
+		<!-- 모임 가입 여부 체크 -->
+		var joinCheck = null;
+		
+		var startRow = 0;
+		var pageSize = 20;
+		var replydId = new Array();
+
+		$(function() {
+			
+			var param = new Object();
+			param.meetNo = '<c:out value="${meetNo}" />';
+	
+			$.ajaxAuth('GET','/api/meeting/meetingJoinCheck', param)
+			.done(function (data) {
+				if(data != ''){
+					if(data.meetingMemberStateCode == "AC"){
+						joinCheck = true;
+					}else{
+						joinCheck = false;
+					}
+				}else{
+					joinCheck = false;
+				}
+			}).fail(function (xhr, status, err) {
+				
+			});
+
+			replyList();
+		});
+		
+		function replyList(option){
+			
+			var param = new Object();
+			param.meetNo = '<c:out value="${meetNo}" />';
+			param.startRow = startRow;
+			param.pageSize = pageSize;
+			param.targetContentTypeCode = 'COL';
+			param.targetContentsNo = '<c:out value="${targetContentsNo}"/>';
+
+			console.log(param);
+
+			$.ajaxAuth("GET",'/api/meeting/reply', param)
+            .done(function (data) {
+            	var data = data.replyList;
+
+				var contents = '';
+
+				if(data.length > 0){
+
+					if(startRow == 0){
+						$('#reply_list').html('');
+						var head = '<ul class="board_reply_list_wrap" id="replyList"></ul>';
+						$('#reply_list').append(head);
+					}
+
+					for(var i=0; i < data.length; i++){
+						startRow++;
+						
+						if(replydId.indexOf(data[i].replyNo) < 0){
+
+							replydId.push(data[i].replyNo);
+
+							contents += '<li>';
+
+							if(data[i].reportYn){
+								contents += '<div class="list_reported_post"><div>신고된 댓글입니다.</div></div>';
+							}else{
+							
+								contents += '<div class="reply_profile">';
+								if(data[i].profileImageUrl != null){
+									contents += '<img src="'+ data[i].profileImageUrl +'">';
+								}
+	
+								var meetingMemberRankCode = '';
+								
+								if(data[i].meetingMemberRankCode != null){
+									
+									meetingMemberRankCode = data[i].meetingMemberRankCode;
+		
+									if(meetingMemberRankCode == 'HOST'){
+										meetingMemberRankCode = '모임장';
+									}else if(meetingMemberRankCode == 'MNGR'){
+										meetingMemberRankCode = '운영진';
+									}else{
+										meetingMemberRankCode = '';
+									}
+								}
+								
+								contents += '</div>';
+								contents += '<div class="reply_box">';
+								contents += '<div class="reply_top">';
+								contents += '<strong><em>'+ meetingMemberRankCode +'</em>'+ data[i].nick +'</strong> <span class="replay_date">'+ localDateFormat(data[i].firstRegistrationDateTime) +'</span>';
+								contents += '<div class="replay_menu">';
+								contents += '<button class="reply_more" id="'+ data[i].replyNo + ',' + data[i].memberNo +'">더보기</button>';
+								contents += '</div>';
+								contents += '</div>';
+								contents += '<div class="reply_cont">';
+								contents += '<p>'+ data[i].content +'</p>';
+								contents += '</div>';
+								contents += '</div>';
+								contents += '<div class="board_item_reply">';
+								contents += '<button onclick="favoriteBrd('+data[i].replyNo+', '+"'COL_RPL'"+' ,this);"><span class="board_clap_btn '+(data[i].favoriteCheck == 1 ? "clap_on" : "clap_off")+'">'+ (data[i].favoriteCount > 99 ? '99+' : data[i].favoriteCount) +'</span></button>';
+								contents += '</div>';
+							}
+							contents += '</li>';
+							
+						}
+					}
+
+					if(option == 0){
+						$('#replyList').html(contents);
+					}else{
+						$('#replyList').append(contents);
+					}
+
+					replyPopup();
+					
+				}else{
+					contents = '<div class="board_reply_none"><span>첫 번째 댓글을 남겨보세요.</span></div>';
+					$('#reply_list').html(contents);
+				}
+            })
+			
+		}
+		
+		<!-- 댓글 달기 이벤트-->
+		$('#reply_write_form').finnqUiCommentBox({
+		    madeCallback: function(){
+		          console.log('madecallback');
+		    },
+		    openCallback:function(){
+			    
+		        var loginSet = null
+		        var auth = loginCondition();
+				
+				if(isEmpty(auth)){
+					checkPhonePermission();
+					loginSet = false;
+				} else {
+					if(!joinCheck){
+						confirmPopup.open({
+						    title:'none'
+						    , content:'모임 회원이 아닙니다.'
+						    , btnList: [
+				    			{ name: '확인'
+				    			  , id:'popupBtn01'
+				    			  , closeOption:true
+				    			  , event:function(){
+				    			  }
+					    		}
+					    	]
+						});
+	
+						loginSet = false;
+					}else{
+						loginSet = true;
+					}
+				}
+		        return loginSet; // false가 return 되면 open 기능이 작동하지 않는다.
+		    },
+		    submitCallback:function(data){
+		        console.log(data.value)// textarea value
+		        console.log(data.length) // text 길이
+	
+		        var param = new Object();
+	
+		        param.meetNo = '<c:out value="${meetNo}" />'; 
+				param.targetContentsTypeCode = 'COL';
+				param.targetContentsNo = '<c:out value="${targetContentsNo}"/>';
+				param.content = data.value;
+				
+				$.ajaxAuth('POST','/api/meeting/reply', JSON.stringify(param))
+				.done(function (data) {
+					$('.board_reply_btn').text(data > 99 ? '99+' : data);
+					startRow = 0;
+					replydId = new Array();
+					replyList(0);
+				}).fail(function (xhr, status, err) {
+					confirmPopup.open({
+					    title:'none'
+					    , content:'에러 입니다.'
+					    , btnList: [
+			    			{ name: '확인'
+			    			  , id:'popupBtn01'
+			    			  , closeOption:true
+			    			  , event:function(){
+			    			  }
+				    		}
+				    	]
+					});
+				});
+		        
+		    }
+		});
+
+		function favoriteBrd(targetContentNo, targetContentTypeCode, id){
+			
+			var auth = loginCondition();
+			
+			if(isEmpty(auth)){
+				checkPhonePermission();
+			} else {
+
+				var param = new Object();
+				param.meetNo = '<c:out value="${meetNo}" />'; 
+				param.targetContentTypeCode = targetContentTypeCode;
+				param.targetContentNo = targetContentNo;
+				
+				$.ajaxAuth('PUT','/api/meeting/favorite', JSON.stringify(param))
+				.done(function (data) {
+					console.log(data);
+					if(!data.meetingJoinCheck){
+						confirmPopup.open({
+						    title:'none'
+						    , content:'모임 회원이 아닙니다.'
+						    , btnList: [
+				    			{ name: '확인'
+				    			  , id:'popupBtn01'
+				    			  , closeOption:true
+				    			  , event:function(){
+				    			  }
+							    }
+							]
+						});
+					}else{
+						id.innerHTML = '<span class="board_clap_btn '+(data.favoriteCheck == true ? "clap_on" : "clap_off")+'">'+ (data.count > 99 ? '99+' : data.count) +'</span>';	
+					}
+				}).fail(function (xhr, status, err) {
+						confirmPopup.open({
+						    title:'none'
+						    , content:'에러 입니다.'
+						    , btnList: [
+				    			{ name: '확인'
+				    			  , id:'popupBtn01'
+				    			  , closeOption:true
+				    			  , event:function(){
+				    			  }
+					    		}
+							]
+						});
+				});
+				
+			}
+		}
+
+		// 삭제 신고 이벤트 바인딩
+	    function replyPopup() {
+
+	        $('.replay_menu').finnqUiSmallPopup({
+	            btn: [
+	                {
+	                    name: '신고',
+	                    closeOption: true,
+	                    event: function (target) {
+	                    	var replyNo = target.find('button').attr('id');
+	                        var replNo = replyNo.split(',');
+	                        confirmPopup.open({
+    						    title:'none'
+    						    , content:'선택한 댓글을 신고하시겠습니까?'
+    						    , btnList: [
+						    			{ name: '예'
+						    			  , id:'popupBtn01'
+						    			  , closeOption:true
+						    			  , event:function(){
+						    					var auth = loginCondition();
+						    			        if (isEmpty(auth)) {
+						    			            checkPhonePermission();
+						    			        } else {
+						    			            AppWrite.callReportView(replNo[0], 'COL_RPL');
+						    			        }
+						    			  }
+							    		},
+							    		{ name: '아니오'
+						    			  , id:'popupBtn02'
+						    			  , closeOption:true
+						    			  , event:function(){
+						    			  }
+							    		}
+							    	]
+    						});
+	                    }
+	                },
+	                {
+	                    name: '삭제',
+	                    closeOption: true,
+	                    event: function (target) {
+	                        var replyNo = target.find('button').attr('id');
+	                        var replNo = replyNo.split(',');
+	                        $.ajaxAuth("DELETE",'/api/meeting/reply?replyNo=' + replNo[0] + '&wirteMemberNo='+ replNo[1] +'&meetNo=' + '<c:out value="${meetNo}" />')
+	                        .done(function (data) {
+		                        if(data){
+		                            location.reload();
+		                        }
+	                        })
+	                    }
+	                },
+	            ]
+	        })
+	    }
+	    
+	</script>
+</body></html>

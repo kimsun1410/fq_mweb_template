@@ -1,0 +1,148 @@
+@charset 'UTF-8';
+
+/* Event_2진행중_MASA06Z01_web */
+
+/*이벤트 리스트 */
+#contents > section.menu_event {padding-top:0;}
+.sec_event_list .tab_wrap {position:fixed;top:0;left:0;right:0;padding:0 20px; margin-top:-8px;z-index:33} /* 상단 탭은 fixed 공통이라함.. 2018-03-27 ock */ /* 2018-02-09 상단 여백 맞추기 위해 margin-top 추가 */
+.sec_event_list {position:relative; /* height:100%; margin-bottom:45px; */}
+.sec_event_list ul {position:relative;background:$white_three;margin-top:48px;z-index:3} /* 상단 탭 fixed 변경되면서 margin 추가 */
+.sec_event_list ul li {display:block;border-bottom:1px solid $white_two;border-top:1px solid $white_two;margin-top:4px; background:$white; padding:30px 20px; } /* a 클릭영역 이슈 2018-03-22 ock */
+.sec_event_list ul li > a{display:block}/* a 클릭영역 이슈 2018-03-22 ock */
+.sec_event_list ul li:first-child {border-top:none;}
+.sec_event_list ul li img {width:100%;}
+.sec_event_list ul li .tit {display:block; padding:28px 0 5px; @include font(16px);}
+.sec_event_list ul li .info {display:block;}
+.sec_event_list ul li .info:after {@include clearfix;}
+
+@mixin event_info {font-family:"LatoM"; letter-spacing:0;}
+.sec_event_list ul li .info .period {@include event_info; float:left; color:$warm_grey;  }
+.sec_event_list ul li .info .remain {float:right; color:$purply_blue;}
+.sec_event_list ul li .info .remain .all_times{margin-left:4px}
+.sec_event_list ul li .info .tag {position:relative; font-family:"LatoB"; letter-spacing:0; display:inline-block; vertical-align:text-bottom; background:url("../images/common/ico-new_02.png") no-repeat; background-size:38px auto; width:38px; height:18px ;line-height:18px;/*  border-radius:9px; color:$white; text-align:center; font-size:9px; margin:0 3px -1px 0;font-weight:bold;  */text-indent:-9999px;overflow:hidden;z-index:9}
+
+.no_event {height:100%;}
+.no_event .sec_event_list {height:100%;}
+.sec_event_list .no_event {position:absolute; top:50%; left:0; margin-top:-50px; width:100%; text-align:center;}
+.sec_event_list .no_event p {margin-top: 18px; color:$warm_grey;}
+.sec_event_list ul .finish a {cursor:none;}
+.sec_event_list ul .finish .tit {color:$warm_grey;}
+.sec_event_list ul .finish .btn_prize {margin-top:12px;}
+.sec_event_list ul .wide {padding:30px 0px;}
+.sec_event_list ul .wide .tit,
+.sec_event_list ul .wide .info {margin:0 20px}
+
+
+.sec_event_detail {padding:10px 0 43px;}/*2018-04-23 padding 으로 변경 phj*/ /* 하단 여백 가져옴 2018-04-25 */
+.sec_event_detail img {width:100%;}
+.sec_event_detail .event_info {padding:19px 20px 0; line-height:22px;} /* sec_event_detail 로 하단 여백 옮김 2018-04-25 ock */
+.sec_event_detail .event_info dt {margin-top:23px; @include font(16px);}
+.sec_event_detail .event_info dd {margin-top:10px; color:$brownish_grey; @include font(16px);}
+.sec_event_detail .event_info dd {font-family:"AppleSDGothicNeo-Light";}
+.sec_event_detail .event_info dd table th{color:$black}
+
+
+/* 친구 초대 */
+.event_friend_invite .sec_friend_search {padding:16px 20px 19px;}
+/* .event_friend_invite .sec_friend_search .item.box_search:before {left:12px; } 아이콘 좌측 20px */
+/* .event_friend_invite .sec_friend_search .item.box_search input {padding-left:46px;} 아이콘 우측 8px */
+.event_friend_invite .sec_friend_search .item.box_search.search_focus input{border: 1px solid #731aed;}
+.event_friend_invite .sec_friend_search .set_type2 {margin-top:19px;}
+.event_friend_invite .sec_friend_search .set_type2 .item {width:60%; text-align:right;}
+.event_friend_invite .sec_friend_search .set_type2 .item:first-child {width:40%; text-align:left;}
+.event_friend_invite .sec_friend_search .set_type2 input[type="checkbox"] + label > span {@include font(16px); color:$warm_grey;}
+.event_friend_invite .sec_friend_search .set_type2 .item:first-child input[type="checkbox"] + label > span {color:$black; font-weight:bold;}
+
+.event_friend_invite .sec_friend_list {border-top:1px solid $white_two; border-bottom:1px solid $white_two; background:$white_three; overflow:auto;}
+.event_friend_invite .sec_friend_list ul {padding-top:4px;}
+.event_friend_invite .sec_friend_list li {padding:18px 20px 18px 19px; background:#fff; border-top:1px solid $white_two;}
+.event_friend_invite .sec_friend_list li input[type="checkbox"] + label {display:block;}
+.event_friend_invite .sec_friend_list li input[type="checkbox"]:disabled + label:before {background-image: url('../images/common/ir-form-checkbox2.png');}
+.event_friend_invite .sec_friend_list li input[type="checkbox"] + label > span {position:relative; color:$black; @include font(16px); display:block; padding-top:0;}
+.event_friend_invite .sec_friend_list li input[type="checkbox"] + label > span em {display:block; margin-top:7px; @include font(14px); color:$pinkish_grey;}
+.event_friend_invite .sec_friend_list li .tag {position:absolute; right:0; top:50%; margin-top:-10px; text-indent:-9999px; overflow:hidden; display:inline-block; width:56px; height:20px; background:url("../images/menu/ir_event_friend.png") no-repeat; background-size:56px auto; }
+.event_friend_invite .sec_friend_list li input[type="checkbox"] + label:before {top:50%; margin-top:-15px;}
+
+.event_friend_invite .sec_friend_list li.finish,
+.event_friend_invite .sec_friend_list li.f_finnq {background:$white_four;}
+.event_friend_invite .sec_friend_list li.finish input[type="checkbox"] + label > span,
+.event_friend_invite .sec_friend_list li.f_finnq input[type="checkbox"] + label > span {color:$warm_grey;}
+.event_friend_invite .sec_friend_list li.f_finnq .tag {background-position:0 -24px;}
+
+.event_friend_invite .sec_friend_list.wrap_result{border-bottom:none;background:$white_three !important}
+.event_friend_invite .sec_friend_list.wrap_result .no_result{background:$white !important;margin-top:4px;border-top: 1px solid $white_two;}
+
+
+/* 친구초대 상세 */
+#contents > section.event_friend_detail {padding-top:10px; position:relative;}
+.event_friend_detail .invite_visual {position:relative; background:url('../images/menu/event-friend-visual.png') no-repeat center 0 $purply_blue; background-size:360px auto; text-align:center; padding:30px 20px;}
+.event_friend_detail .invite_visual .sub_txt {display:inline-block; color:$lavender; background:$purply_blue_three; font-size:12px; padding:0 16px; height:19px; line-height:19px; border-radius:10px;}
+.event_friend_detail .invite_visual .sub_txt em {letter-spacing:0;}
+.event_friend_detail .invite_visual .txt {font-family:"AppleSDGothicNeo-Light"; margin-top:13px; @include font(26px); color:$white;}
+.event_friend_detail .invite_visual .txt strong {font-weight:bold;}
+.event_friend_detail .invite_visual .box_avi {margin:25px auto 0; position: relative; margin:25px auto 0; width:100%; height: 0; padding-bottom: 56.25%;}
+.event_friend_detail .invite_visual .box_avi iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
+.event_friend_detail .invite_visual .box_avi img {width:100%;}
+
+.event_friend_detail.event_close .invite_visual{-webkit-filter: grayscale(100%); opacity:.6;}
+.event_friend_detail.event_close .tag_close {position:absolute; top:30px; left:20px; z-index:2;}
+.event_friend_detail.event_close .invite_visual .box_avi iframe {z-index:0;}
+
+.event_friend_detail .sec_friend_address {text-align:center; margin:30px 20px 0; background:$white_four; border:1px solid $white_three;}
+.event_friend_detail .sec_friend_address .txt {@include font(16px);}
+.event_friend_detail .sec_friend_address .txt strong {color:$purply_blue; font-weight:bold;}
+.event_friend_detail .sec_friend_address .txt em {color:$clear_blue; font-weight:bold;}
+.event_friend_detail .sec_friend_address .box_btn {padding:11px 0 5px;}
+.event_friend_detail .sec_friend_address .box_btn button {width:162px;}
+.event_friend_detail .sec_friend_address .price {color:$purply_blue; @include font(20px); margin-top:2px; font-weight: bold;}
+.event_friend_detail .sec_friend_address .price em {display:inline-block; vertical-align:text-bottom; @include font(40px); margin-right:2px;}
+.event_friend_detail .sec_friend_address dl {margin-top:25px; border-top:1px dashed $white_two; padding-top:15px; overflow:hidden;}
+.event_friend_detail .sec_friend_address dt,
+.event_friend_detail .sec_friend_address dd {margin-top:10px;} /* 12 */
+.event_friend_detail .sec_friend_address dt {float:left; width:60%; @include font(14px); color:$warm_grey; text-align:left; font-family:"AppleSDGothicNeo-Light";}
+.event_friend_detail .sec_friend_address dt:first-child {@include font(16px); color:$brownish_grey; }
+.event_friend_detail .sec_friend_address dd {float:left; width:40%; text-align:right; @include font(16px);}
+.event_friend_detail .sec_friend_address dd .btn_text01 a {@include font(14px); text-align:left; vertical-align: top;}
+.event_friend_detail .sec_friend_address dd .btn_text01.ico a:after {width:6px;}
+
+.event_friend_detail .sec_friend_info {padding:28px 20px 41px;}
+.event_friend_detail .sec_friend_info .txt {@include font(16px)}
+.event_friend_detail .sec_friend_info .list_gray {margin-top:10px;}
+
+/* 친구초대 보상 */
+.friend_invite_reward .sec_head{padding-top:28px;background:$purply_blue}
+.friend_invite_reward .sec_head .money_tit,
+.friend_invite_reward .sec_head .money_total{color:$white; font-weight:bold}
+.friend_invite_reward .sec_head .money_tit {@include font(16px);}
+
+.invite_bar_wrap{padding:20px 20px 0}
+.invite_bar{position:relative;width:100%;height:20px;background:$white_three;z-index:1;}
+.invite_bar .invite_friend{width:auto;height:100%;background:$lavender;}
+.invite_bar .join_cnt{position:absolute;left:0;top:0;width:auto;height:100%;background:$violet_blue;z-index:3}
+
+/* table cell로 변경 2018-04-10 ock */
+.invite_status{position:relative;margin-bottom:8px;display:table;width:100%;}
+.invite_status:after{content:""; display:block; height:0; clear:both;}
+.invite_status li{display:table-cell}
+.invite_status li.friend_finish{text-align:left}
+.invite_status li.friend_all{text-align:right;width:87px}
+.invite_status li.friend_all em{position:absolute;bottom:-27px;right:10px;color:$pinkish_grey;z-index:5;}
+.invite_status li strong{color:$lavender}
+.invite_status li em{color:$pale_lavender}
+
+.friend_invite_reward .sec_history dl{padding: 26px 20px 28px;}
+.friend_invite_reward .sec_history dl:first-child{border-top:none}
+.friend_invite_reward .sec_history dl dt *{line-height:22px;height:22px}
+.friend_invite_reward .sec_history dl dd{margin-top:2px}
+.friend_invite_reward .sec_history dl dd div + div{color:$pinkish_grey}
+
+@media screen and (max-width:320px){
+	.event_friend_invite .sec_friend_search .set_type2 input[type="checkbox"] + label > span {@include font(14px);}
+	.event_friend_detail .sec_friend_address .txt {@include font(14px);}
+}
+
+
+
+
+
+

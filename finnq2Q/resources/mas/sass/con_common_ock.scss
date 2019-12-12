@@ -1,0 +1,313 @@
+@charset 'UTF-8';
+
+/* margin:0 20px; */
+
+small.center { display:inline-block;position:relative;top:2px;padding:0 2px;} /*  계좌, 비번에서 ***중앙,  전체 사용으로 변경 */
+.sec_title strong.bank { display:inline-block;margin-top:2px;color:$brownish_grey;font-weight:bold;}
+
+/* 계좌메인 */
+.myfinnq .sec_head.bg_deco{padding:26px 0 28px;margin:0 20px;background:$white url(../images/common/bg-benefit-main.png) no-repeat center center;background-size:contain;}
+.myfinnq .sec_inquiry{border-top: 1px solid $white_two;background:$white_three;}
+
+/* 전체 con_common_ock 로 옮김 2018-04-11 ock */
+.benefit_main .sec_history dl{padding:28px 20px}
+.benefit_main .sec_history dl dt strong{width:64%;min-height:25px;line-height:20px;vertical-align:middle}
+.benefit_main .sec_history dl dt strong + div{width:34%;min-height:25px;line-height:20px;vertical-align:middle;text-align:right}
+.benefit_main .sec_history dl dt .cash {font-weight:bold}
+.benefit_main .sec_history dl dd {margin-top:0}
+.benefit_main .sec_history.wrap_result{background:$white}
+.benefit_main .sec_history .no_result {padding-top:10%;}
+
+/* 상단 혜택 금액 */
+.benefit_info {}
+.benefit_info .money_total {color:$purply_blue;}
+
+/* 헤택 조회 */
+.benefit_inquiry{margin-top:4px;padding:12px 0 20px;background: $white;border-top:1px solid $white_two}
+
+/* 혜택 리포트 */
+.benefit_report{text-align:center;margin: 15px 20px 0;padding:17px 20px;background:$white_four;border:1px solid $white_three}
+.benefit_report dl > dt{color:$brownish_grey;@include font(16px);}
+.benefit_report dl > dd{margin-top:5px;color:$clear_blue;font-weight:bold;@include font(18px);}
+
+/* 출금 이체 동의 */
+.myfinnq .sec_agree{background:$white_three;}
+
+.account_info{margin-top:20px;text-align:center;}
+.account_info .bank_data{color:$lavender;}
+.account_info .bank_data > strong + em {padding-left:8px;} /* KEB하나 562 계좌띄어쓰기 */
+
+/* 상단 금액 영역 */
+.money_total .cash {font-size:40px;line-height:48px; margin:5px 0;}
+.money_total .cash + span {display: inline-block; margin-top: -11px; vertical-align: middle; @include font(20px);font-weight:bold;}
+.account_info .bank_data.underline {text-decoration:underline; text-decoration-color:#c8c8c8;}
+.account_info .bank_data.underline > strong + em {padding-left:0;}
+
+
+/* .money_detail{overflow:hidden;text-align:center;color:$sun_yellow;} */
+.account_info+.flex_wrap{margin-top:20px;}
+.input_wrap .input_tit .ico_circle_info_b{margin:-2px 0 0 5px;width:20px;height: 20px;}
+
+
+
+/* pw_input, account_input */
+.pw_input input{background:$white}
+
+.account_input{display:flex;padding-bottom:30px}
+.account_input input{background:$white}
+/*.account_input.inp_focus input {border-color:$purply_blue; color:$purply_blue; background:$pale_lavender;}*/
+.account_input .form_wrap:first-child{width:35%;margin-right:2px}
+.account_input .form_wrap:last-child{width:65%;margin-left:2px}
+.account_input .form_wrap:first-child input{padding:0 10px;text-align:center}
+
+.account_input .form_wrap{position:relative}
+.account_input .form_wrap .remark{top:51px}
+/*.account_input div:first-child input:disabled{background:$white_three;color:$pinkish_grey}*/
+
+
+
+/* 내 계좌로 이체 직접입력 */
+.btn_select.btn_type_a{height:46px;border-color:$white_two;color:$pinkish_grey;text-align:left;padding:0 20px;font-weight:normal;@include font(16px);}
+.btn_select.btn_type_a::after{display: inline-block;content:' ';float:right;margin-top:7px;width: 13px;height: 10px;background:url(../images/common/ir-arrow-set.png) no-repeat;background-size: 40px auto;background-position: 0 -191px;}
+
+a.btn_select.btn_type_a{display:inline-block;box-sizing:border-box;font-size:16px;line-height:46px;}
+a.btn_select.btn_type_a::after{margin-top:19px;}
+.on > a.btn_select.btn_type_a{border:1px solid $purply_blue;background:$pale_lavender;color:$purply_blue;}
+.on > a.btn_select.btn_type_a::after{margin-top:15px;background-position:0 -65px;transform: rotateX(180deg);}
+a.btn_select.btn_type_a.disabled{background-color:#eee; color: #999;}
+a.btn_select.btn_type_a.disabled::after{background-position:0 -166px;}
+/* available_time */
+.available_time .sec_title .accent_txt > .num{font-family:'LatoB' !important}
+.available_time .sec_title p em{color:$purply_blue}
+/* .charge_price .sec_title p.error_star_type{margin:0 0 0 9px;text-align:left;font-size:11px} 삭제 예정 -->
+
+/* 계좌 선택 , 채울 방법 선택 공통 수정 잠시 보류 */
+.sec_select{margin:28px 20px 0}
+.sec_select ul li{padding-top:20px;}
+.sec_select ul li:first-child{padding-top:0;}
+.sec_select [data-name="acc-button"]{position:relative;display:inline-block;box-sizing:border-box;padding-left:41px;text-align:left;border:1px solid $white_two}
+.sec_select [data-name="acc-button"]::before,
+.sec_select [data-name="acc-button"]::after{position:absolute;top:50%;clear: both;content:' ';border-radius:50%;box-sizing:border-box}
+.sec_select [data-name="acc-button"]::before{display: none;width:12px;height:12px;background:$purply_blue;left:16px;margin-top:-6px;z-index:22}
+.sec_select [data-name="acc-button"]::after{display:inline-block;width:24px;height:24px;background:$white;border:1px solid $white_two;left:10px;margin-top:-12px;z-index:11}
+.sec_select [data-name="acc-button"] strong,
+.sec_select [data-name="acc-button"] em,
+.sec_select [data-name="acc-button"] span{display:inline-block;line-height:48px;font-weight:normal;vertical-align:-2px}
+.sec_select [data-name="acc-button"] strong {padding-right:5px;color:$pinkish_grey}
+.sec_select [data-name="acc-button"] em{color:$pinkish_grey; font-size:16px}
+.sec_select [data-name="acc-button"] em.txt {font-size:14px}
+.sec_select [data-name="acc-button"] span{color:$warm_grey;font-size:11px}
+
+.sec_select [data-name="acc-button"].ico_dot{background:$pale_lavender;border: 1px solid $purply_blue;}
+.sec_select [data-name="acc-button"].ico_dot::before{display:inline-block;}
+.sec_select [data-name="acc-button"].ico_dot::after{border: 1px solid $purply_blue;}
+.sec_select [data-name="acc-button"].ico_dot strong{color:$purply_blue;}
+.sec_select [data-name="acc-button"].ico_dot em{color:$black;font-size:16px}
+.sec_select [data-name="acc-button"].ico_dot em.txt {font-size:14px;}
+
+.sec_finance .tab_content_wrap article{margin-top:19px}
+/* ico_check 만..
+.sec_select button.ico_check{background:$pale_lavender url(../images/common/bg-btn-check.png) no-repeat 11% center;background-size: 25px auto;border: 1px solid $purply_blue;}
+.sec_select button.ico_check strong{color:$purply_blue;}
+.sec_select button.ico_check em{color:$black;}*/
+
+/* 채울 방법 선택
+.charge_method button{padding-left:0;text-align:center;}
+.charge_method button strong{padding-right:0;}
+.charge_method button.ico_check{background-position:22%} */
+/**/
+/*.sec_select button.ico_dot{background:$pale_lavender;border: 1px solid $purply_blue;}*/
+/*.sec_select button.ico_dot strong::before{clear: both;display: inline-block;width:12px;height:12px;background:$purply_blue;$content:' ';}*/
+/*.sec_select button.ico_dot strong{color:$purply_blue;}*/
+/*.sec_select button.ico_dot em{color:$black;}*/
+/**/
+/*.sec_select [data-name="acc-button"]{display:inline-block;box-sizing:border-box}*/
+/*.sec_select [data-name="acc-button"].ico_dot::before{clear: both;display: inline-block;width:12px;height:12px;background:$purply_blue;$content:' ';}*/
+
+
+.account_add .btn{padding-left:0;text-align:center;border:1px solid $white_two;text-indent:-9999em}
+.account_add .ico_plus{text-indent:-9999em}
+/*.account_add .ico_plus:before,
+.account_add .ico_plus:after{top: 50%;left:50%;margin:-8px 0 0 -1px;width:2px;height: 16px;background:$white_two}*/
+.account_add .ico_plus:before,
+.account_add .ico_plus:after{top: 50%;left:50%;margin:-10px 0 0 -10px;width:20px;height: 20px;background-position:0 -383px;} /* 2018-02-10 수정했는데 확인 필요 phj */
+
+.sec_fincategory article{margin-top:8px}
+.sec_fincategory article + article{margin-top:28px}
+.sec_fincategory article > h3{@include font(16px);font-weight:bold}
+.sec_fincategory article h3 + ul.btn_sellist{margin-top:8px}
+.modal_wrap.fullpop .sec_fincategory{padding-left:0;padding-right:0}
+
+
+
+/* 직접 입력
+.account_direct{margin:0 20px} */
+
+.input_wrap {margin-top:30px}
+.input_wrap .input_tit{position:relative;font-weight:bold;@include font(16px);text-align:left;}
+.input_wrap .input_tit strong{font-weight:bold;@include font(16px);text-align:left;}
+.input_wrap .input_tit .ico_circle_help{margin:-2px 0 0 4px;}
+/* .input_wrap .flex_wrap{margin-top:11px}
+.input_wrap.money_type input + em { position:absolute;right:10px;top:14px;@include font(14px);color:$warm_grey;} */
+.input_wrap .input_tit + .flex_wrap{margin-top:8px} /* 디자인 15 에서 10 으로 변경됨 */
+.input_wrap .flex_wrap + .flex_wrap{margin-top:5px}
+
+.btn_right{position:absolute;top:0;right:0}
+
+/* 채운 후 잔액 */
+.after_price{overflow:hidden;margin-top:15px;padding-top:13px;border-top:1px dashed $white_three}
+.after_price dt{float:left;color:$brownish_grey;line-height:20px}
+.after_price dd{float:right;color:$black;@include font(16px);}
+
+.remark.after_price{color:$clear_blue;margin:0;padding:0;border:none}
+
+/* 기준 설정 설명 charge_standard */
+.sec_comment{overflow:hidden;margin:28px 0 25px;}
+.sec_comment p{text-align:center;color:$warm_grey;@include font(16px)}
+.sec_comment p strong{color:$purply_blue;font-weight:bold;}
+.sec_comment p em{color:$purply_blue;font-weight:bold;}
+
+#contents > section.charge_price_input {padding-top:10px;}
+.sec_top_bar{padding:6.5px 20px; margin:0 -20px;background:$white_three;color:$warm_grey;}
+.sec_top_bar::after{clear: both;display: block;width: 100%;content:' ';}
+.sec_top_bar a{font-size:14px;line-height:18px;color:inherit}
+.sec_top_bar.after_ico a::after{transform: scale(0.7);opacity: 0.5;}
+.sec_top_bar strong+div{float:right}
+.sec_top_bar .cash,.sec_top_bar .cash + span {color:$black}
+.sec_top_bar .cash + span{font-weight:bold}
+.sec_top_bar.error_type{background:$reddish_orange}
+.sec_top_bar.error_type strong{color:$white}
+.sec_top_bar.error_type .btn_type_g{background:$white;border-color:$white;color:$reddish_orange}
+
+.charge_price_hana .sec_agree{margin:65px -20px 0;padding-bottom: 4px;}
+.charge_price_hana .sec_notice{border-top:1px solid $white-two}
+.charge_price_input.transfer_fq .modal_content.add_sticky .scroll_wrap::after{background:$white}
+.charge_price_input.transfer_fq .modal_content.add_sticky .scroll_wrap .sec_top_bar{margin-top:10px}
+.charge_price_input.transfer_fq .modal_content.add_sticky .scroll_wrap .sec_input{padding:0}
+/* 채우기 */
+.charge_price .sec_bank_confirm{padding:0}
+/* 채울 금액 입력 */
+.charge_price_input .flex_wrap{position:relative}
+.charge_price_input .sec_charge{margin-top:28px}
+.charge_price_input .kor_txt{line-height:46px}
+/* 즉시 채우기 */
+.charge_price_direct .flex_wrap{position:relative}
+.charge_price_direct .sec_charge{margin-top:28px;padding-bottom:35px}
+/* .charge_price_direct .sec_top_bar + .sec_input{margin-top:30px} */
+/* .charge_price_direct .sec_top_bar + .sec_input .input_wrap{margin-top:0}
+.charge_price_direct{}
+
+/* 등록계좌 관리 */
+/*.setting_account{border-top:1px solid $white_two}*/
+.setting_account dl.account_list{background:$white_three}
+.setting_account dl.account_list dt{margin:0}
+.setting_account dl.account_list dt +dd{display:inline-block;width:100%;margin-top:0;box-sizing:border-box}
+.setting_account dl.account_list dd{padding:13px 20px;margin-top:4px;background:$white;border-top:1px solid $white_two;border-bottom:1px solid $white_two;}
+.setting_account dl.account_list dd:after{clear: both;display: block;width: 100%;content:' ';}
+.setting_account dl.account_list dd > strong{float:left;line-height:27px;vertical-align:middle}
+.setting_account dl.account_list dd > strong + div{float:right;width:68px}
+.setting_account .tooltip{position:absolute;top:50%;margin-top:-12.5px;/*margin-top: 2px;margin-top:-2px; */ margin-left:15px;}/* 2018-02-12 margin-left 추가 phj*/ /* 툴팁 위치 수정 2018-04-11 ock */
+.setting_account{overflow:hidden}
+.setting_account span.align_left{float:left}
+.setting_account span.align_right{float:right}
+.setting_account .list_expend {margin-top:40px; border-top:1px solid $white_two;}
+.setting_account .list_expend > li .subject a {@include font(16px); padding:28px 50px 25px 19px; border-bottom:none;} /* 2018-03-29 패딩 b를 20에서 25로 phj */
+.setting_account .list_expend > li .detail_set {border-top:none;}
+.setting_account .list_expend > li .detail_set.on {border-bottom:1px solid $white_two}
+.setting_account .list_expend > li .detail_set .con {padding:17px 0 30px; border-top:1px dashed $white_two; border-bottom:none; margin:0 20px;}
+.setting_account .sec_bank_add {padding-top:26px; text-align:center;background:$white_three;}
+.setting_account .sec_bank_add .desc {display:block; margin-top:8px; color:$warm_grey;}
+/* 등록계좌 관리 계좌 없을 경우 */
+.setting_account .sec_new_count {width:100%; margin-top:26px;}
+.setting_account .sec_new_count .wrap_count {background:$white_four; border:1px solid $white_three; border-radius:7px; padding:28px 20px 30px; margin:0 20px; text-align:center; }
+.setting_account .sec_new_count .guide_txt {margin-top:0;color:$warm_grey;}
+.setting_account .sec_new_count .guide_txt strong {color:$clear_blue;}
+.setting_account .sec_new_count .box_btn {width:105px; margin:16px auto 0;}
+.setting_account .bank_inquiry {background:$white_three; @include font(14px); text-align:center; padding-top:30px; color:$warm_grey;} /* 2018-04-11 padding 30 변경 phj */
+.setting_account .bank_inquiry .btn_text01 {display:inline-block; vertical-align:text-top;}
+.setting_account .bank_inquiry a {@include font(14px); margin-left:5px;}
+.setting_account .sec_make_count {position:fixed; bottom:45px; left:0; width:100%; text-align:center; @include font(14px); color:$warm_grey}
+.setting_account .sec_make_count .btn_text01.ico a {vertical-align:0; margin-left:2px;}
+
+/* 총 혜택이란 */
+.benefit_guide{margin-top:3px;position:relative;text-align:center;}
+.benefit_guide > strong{margin-right:10px;font-weight:bold;vertical-align: middle;@include font(16px);}
+
+.account_choice .sec_select{margin-bottom:45px}
+.agree_wrap input[type="checkbox"] + label{margin-right:30px}/*2018-03-29 화살표 버튼 크기가 커져서 마진을 15에서 30으로 phj */
+.agree_follow .agree_wrap input[type="checkbox"] + label{margin-right:0}
+.sticky_wrap .agree_wrap input[type="checkbox"] + label{margin-right:0}
+
+/* sec_impossible_list 로 동일하게 만듦 - 수정 2018-03-05 */
+.sec_basic_list{background:$white_three}
+.sec_basic_list ul{background: #eee;}
+.sec_basic_list ul li{overflow:hidden;margin-top: 4px;border-top: 1px solid $white_two;border-bottom: 1px solid $white_two;background:$white}
+.sec_basic_list ul li > a{position:relative;display:block;padding:19px 20px;@include font(16px);}
+.sec_basic_list ul li > a:after{content:'';display:inline-block;position:absolute;right:20px;top:50%;margin-top:-4px;width:7px;height:11px;background: url(../images/common/ir-arrow-set.png) no-repeat;background-size: 40px auto;background-position: 0 -85px;}
+
+/* .input_wrap .flex_wrap.set_type2 .item.name{position:absolute;width:100px;}
+.input_wrap .flex_wrap.set_type2 .item.phone{float:left;margin-left:105px;width:calc(100% - 105px)} */
+
+
+.sec_btn_box {
+    width: 162px;
+    margin:26px auto 0;
+}
+
+
+/* 임시 */
+@media screen and (max-width:320px){
+/*.sec_select button strong, .sec_select button em{line-height:18px}*/
+/*.sec_select button.ico_check{padding-left:18%;background-position:9% 15px}*/
+/*.modal_content .sec_select button{padding-left:26%;background-position: 11% 15px;}*/
+.sec_payment_step ol li{margin:20px 11% 0;padding-left:80px}
+
+.registration_account .flex_wrap.set_type2 .item{width:37%}
+.registration_account .flex_wrap.set_type2 .item:last-child{width:60%}
+.account_input{display:block;overflow:hidden;}
+.account_input .form_wrap:first-child{float:left;width:37%;margin:0}
+.account_input .form_wrap:last-child{float:right;width:60%;margin:0}
+}
+/* 문구 추가 2018-10-12 ock */
+.sec_basic_txt1{padding:28px 20px 0;background:$white_three;@include font(14px); color:$warm_grey;}
+/* 도움말 레이어 추가 2018-10-16 ock */
+.pop_add_bank article > .add_help_layer:after{clear: both;display: block;width: 100%;content:' ';}
+.pop_add_bank article > .add_help_layer h3{float:left;margin-right:8px;@include font(16px);font-weight:bold}
+.pop_add_bank article > .add_help_layer .layer_wrap{top:38px;left:48px;right:48px}
+.pop_add_bank article > .add_help_layer .ico_circle_help[data-name=open_help]::before{bottom:-9px;z-index:9}
+.pop_add_bank article > .add_help_layer + ul.btn_sellist{margin-top:8px}
+
+/* 문구 추가 2018-11-01 ock */
+.sec_basic_txt2{margin-top:-1px;padding:28px 20px 43px;border-top:1px solid $white_two;background:$white_three;@include font(14px); color:$warm_grey;}
+.sec_basic_txt2 p + p{margin-top:8px}
+
+/* 캐시백 안내 화면 2018-11-01 ock */
+.cashback_info .sec_info_cont{margin:0 20px}
+.cashback_info .sec_info_cont > div{margin-left:-5px}
+.cashback_info .sec_info_cont dl{padding:38px 0px 36px 93px}
+.cashback_info .sec_info_cont dl.info01{padding-top:28px}
+.cashback_info .sec_info_cont dl.info04{padding-bottom:41px}
+.cashback_info .sec_info_cont dl:before{background:url(../images/menu/img-cashback-info.png) no-repeat 0 0;background-size: cover;}
+/* dna add */
+.add_dotline2:before { content:' ';position:absolute;top:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type2.png) 0 0 repeat-x;background-size:18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.add_dotline_under2:before { content:' ';position:absolute;bottom:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type2.png) 0 0 repeat-x;background-size:18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+
+.add_dotline3:before { content:' ';position:absolute;top:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type3.png) 0 0 repeat-x;background-size:18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.add_dotline_under3:before { content:' ';position:absolute;bottom:0;width:100%;height:1px;background:url(../images/common/bg-dotline-type3.png) 0 0 repeat-x;background-size:18px auto;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+
+/* 타이틀 사이즈 공통 키움 2018-11-28 ock */
+.modal_wrap .pop_title{padding-top:28px}
+.modal_wrap .pop_title h3{font-size:20px;line-height: 24px;color: #222;}
+.modal_wrap .pop_title h3 > strong{color:#731aed}
+
+
+/* pop_common 풀팝업 2019-01-10 ock */
+.pop_common .modal_content{}
+.pop_common .modal_content.width_full{padding:0;background:$white_three}
+.pop_common .modal_content .scroll_wrap::after{}
+.pop_common .modal_content .scroll_wrap.white::after{background:$white}
+.pop_common .agree_details{padding:10px 0 0 0;}
+.pop_common .agree_details .list_expend .con .hide:first-child{display:none;}
+.pop_common .agree_details .list_expend .con .hide:first-child + *{padding-top:0;margin-top:0}
+.pop_common .list_expend{padding:0}
+.pop_common .list_expend > li:first-child{border-top:none}

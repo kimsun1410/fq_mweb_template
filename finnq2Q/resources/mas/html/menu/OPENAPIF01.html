@@ -1,0 +1,677 @@
+<html xml:lang="ko" lang="ko">
+
+<head>
+    <title>은행권 공동 오픈플랫폼</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1">
+    <meta content="은행권공동오픈플랫폼" name="description">
+    <meta content="은행권공동오픈플랫폼" name="keywords">
+    <meta content="은행권공동오픈플랫폼" name="subject">
+    <!-- <link rel="stylesheet" href="https://twww.open-platform.or.kr/css/common/style_mobile.css"> -->
+    <script type="text/javascript" src="https://twww.open-platform.or.kr/js/extends/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://twww.open-platform.or.kr/js/extends/common.js"></script>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+
+    <!-- open api 관련 추가 -->
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <script src="../../libs/ui.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        // select onchange
+        /*
+        $(document).on('change', '.select_wrap select', function (event) {
+            $(this).addClass('color_change');
+        });
+
+        // select focus
+        $('select').each(function(){
+            $(this).parent().addClass('select_wrap');
+            $(this).focus(function(){
+                $(this).parent().addClass('focus');
+            }).blur(function(){
+                $(this).parent().removeClass('focus');
+            });
+        });
+        */
+
+        // input + button시 간격 조정 및 하단 버튼 여백
+
+        var headTitle;
+        headTitle =
+        '<div class="sec_title">' +
+            '<h2>본인인증</h2>' +
+            '<p class="guide_txt">계좌등록을 위해 본인인증을 해주세요.</p>' +
+        '</div>';
+
+        // 페이지 최초 로딩시 필요없는 부분 삭제 및 추가
+        function pageInit() {
+            $('#frm br').remove();
+            $('#frm p').first().remove(); // 본인인증 절차 문구 삭제.
+            $('#frm .clear').first().remove(); // 제공되는 정보 삭제.
+            $('#footer').remove(); // Copyright 삭제.
+            $('#step3').addClass('fixed').text('다음'); // 하단 버튼 문구 변경
+            $('#step4').hide().parent().hide(); // 취소버튼 삭제.
+
+            $('#wrap').addClass('add_bottom').prepend( headTitle ); // 하단 버튼 여백 조정, Finnq Design 가이드 문구 추가.
+
+            $('#frm p.center').hide(); // 간격을 위해 존재하던 빈 테그
+
+            $('.form-group.clear').eq(0).addClass('double'); // 성명입력 부분.
+            $('.form-group.clear').eq(1).addClass('double'); // 생년월일 부분.
+            $('.form-group.clear').last().addClass('double confirm'); // 인증코드 부분.
+            $('.form-group.clear.confirm input').attr({'placeholder' : '인증번호'});
+            $('.form-group.clear.confirm .btn.bfop_btn_s1').text('인증번호 받기');
+        }
+        pageInit();
+
+
+        // 약관 제목을 클릭해도 해당 약관이 열릴 수 있게 수정.
+        function termsEvt(){
+            // 약관
+            $('.agree_list li').each(function(){
+                var _tempId = $(this).children('span').find('input[type="checkbox"]').attr('id');
+                $(this).find('label').attr({'for' : _tempId});
+            });
+
+            // 전체 동의
+            var _tempId = $('.all_agree span input[type="checkbox"]').attr('id');
+
+            $('.all_agree label').attr({'for' : _tempId});
+            $('.all_agree label strong').text('전체 동의(필수)'); // 전체동의 문구 변경.
+        }
+        termsEvt();
+
+        // 전체 동의를 눌러도 약관을 펼쳐지지 않고 체크박스만 활성화.
+        $('.all_agree span input[type="checkbox"]').on('change', function(){
+            var status = $('.all_agree span input[type="checkbox"]').prop("checked");
+            $('.agree_list li .cont_box').hide();
+        })
+
+
+        // 옵션 값 활성화 후 클릭 비활성화, 체크 값에 클래스 on
+        $('.btn_choice a').on('click', function(event){
+            event.preventDefault();
+        });
+
+
+    })
+    </script>
+    <!-- //open api 관련 추가 -->
+</head>
+
+<body id="openplatform">
+    <!-- 색상코드 미존재시 기본설정 시작 -->
+    <!-- 색상코드 미존재시 기본설정 종료 -->
+    <!-- 언어설정에 따른 값 생성 시작 -->
+    <!-- 언어설정에 따른 값 생성 종료 -->
+    <!-- S: wrap -->
+    <div id="wrap" class="bfop_bg" style="background: #FAFAFA;">
+        <form name="frm" id="frm" method="post">
+            <p class="text-muted bfop_txt mb10" style="color: #050505;">
+                <strong>주식회사핀크</strong>의 <strong>Finnq</strong> 서비스를 사용하기 위한 고객님의 이용동의 및 본인인증 절차를 진행합니다.
+            </p>
+            <br>
+            <div style="margin-bottom: 10px;" class="clear">
+                <p class="text-muted bfop_txt mb10" style="color: #050505; float: left;">제공되는 정보 : </p>
+                <p style="color: #050505; float: left; padding: 0pt 0pt 5pt 5pt; word-break: break-word;">성명, 생년월일, 성별, 휴대폰번호, 이메일주소, 연계정보(CI)값, 계좌번호</p>
+            </div>
+            <div class="form-group clear">
+                <input style="width: 66%; float: left; color: #050505;" type="text" id="userName" name="userName" value="홍길동" maxlength="50" class="form-control bfop_input" placeholder="성명" title="성명" notnull="" autocomplete="off" disabled="disabled">
+                <p class="btn_choice">
+                    <a class="native on" id="ctry" title="내국인" href="javascript:btnOnOff('ctry','0')">내국인</a>
+                    <a class="foreigner" id="ctry" title="외국인" href="javascript:btnOnOff('ctry','1')">외국인</a>
+                    <input type="hidden" id="ctryTypeCode" name="ctryTypeCode" value="KR" title="내/외국인" notnull="">
+                </p>
+            </div>
+            <div class="form-group clear">
+                <input style="width: 66%; float: left; color: #050505;" type="number" id="brdd" name="brdd" value="19900111" class="form-control bfop_input" placeholder="생년월일(8자리)" maxlength="8" title="생년월일(8자리)" numberonly="" notnull="" autocomplete="off" disabled="disabled">
+                <p class="btn_choice">
+                    <a class="man" id="gndr" href="javascript:btnOnOff('gndr','0')" title="남">남</a>
+                    <a class="woman on" id="gndr" href="javascript:btnOnOff('gndr','1')" title="여">여</a>
+                    <input type="hidden" id="gndrTypeCode" name="gndrTypeCode" value="M" title="성별" notnull="">
+                </p>
+                <label id="brddMsg" style="margin-top: 10px; display: none;"></label>
+            </div>
+            <div class="form-group clear">
+                <input style="color: #050505;" type="number" id="userCellNo" name="userCellNo" value="01012345678" class="form-control bfop_input" placeholder="휴대폰번호(숫자만)" maxlength="11" title="휴대폰번호(숫자만)" numberonly="" notnull="" autocomplete="off" disabled="disabled">
+                <label id="userCellNoMsg" style="margin-top: 10px; display: none;"></label>
+            </div>
+            <div class="form-group">
+                 <div class="">
+                    <select id="phoneCorp" name="phoneCorp" value="SKT" style="color: #050505; height: 55px;" class="form-control bfop_input select_arw" title="이동통신사" notnull="" autocomplete="off" disabled="disabled">
+                        <option value="">이동통신사를 선택하세요</option>
+                        <option value="SKT" selected="selected">
+                            SKT
+                        </option>
+                        <option value="KTF">
+                            KT
+                        </option>
+                        <option value="LGT">
+                            LG U+
+                        </option>
+                        <option value="SKM">
+                            SKT 알뜰폰
+                        </option>
+                        <option value="KTM">
+                            KT 알뜰폰
+                        </option>
+                        <option value="LGM">
+                            LG U+ 알뜰폰
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <p class="center" style="text-decoration: underline; margin: 20px 0;"></p>
+            <div class="inner_wrap">
+                <ul class="agree_list">
+                    <li>
+                        <span class="checkboxblock">
+                    <input type="checkbox" id="chkTrms1" name="chkTrms1" tabindex="5">
+                </span>
+                        <label for="checkbox1" class="bfop_txt" style="color: #050505; margin-left: 5px;">
+                            <string>서비스 이용 및 개인정보처리 동의</string>
+                        </label>
+                        <a href="javascript:;" class="more" id="chkViewTrms1" name="chkViewTrms1">보기</a>
+                        <div class="cont_box" id="dlTrms1" style="display: none;">
+                            &#65279;
+                            <meta charset="utf-8">
+                            <title>일반고객약관동의</title>
+                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                            <style>
+                                p{line-height:1.2; padding: 0; margin: 0;}
+                                .mt20{margin-top: 20px;}
+                                .mt10{margin-top: 10px;}
+                                .mt5{margin-top: 5px;}
+                            </style>
+                            <strong class="tit_clause">은행의 금융서비스를 표준화된 형태로 제공하는“은행권 공동 오픈플랫폼 서비스”이용을 위한 고객의 개인정보 수집·이용에 대한 동의이며, 수집 및 이용하는 개인정보는 아래와 같습니다.</strong>
+                            <div class="clause_box">
+                                <div class="clause_text">
+                                    <div>
+                                        <p class="mt10"><strong>※ 은행권 공동 오픈플랫폼 서비스는 은행권역 공동의 서비스로 금융결제원에서 관련 업무를 위탁받아 운영하고 있습니다. </strong></p>
+                                        <p class="mt20"><strong>1. 회원가입 및 관리 목적</strong></p>
+                                        <p class="mt10">- 수집 정보(필수항목) : 성명, 생년월일, 성별, 내/외국인 구분, 통신사명, 휴대폰번호, 이메일주소, 연계정보(CI)값*, 중복가입확인정보(DI)값*</p>
+                                        <p class="mt5">- 보유 기간 : 회원 탈퇴시까지</p>
+                                        <p class="mt5"><span style="color: rgb(0, 124, 255)">*</span> 본인확인기관으로부터 수집</p>
+                                        <p class="mt20"><strong>2. 이용 신청 및 계좌등록 목적</strong></p>
+                                        <p class="mt10">- 수집 정보(필수항목) : 성명, 생년월일, 성별, 내/외국인 구분, 은행코드, 계좌번호* </p>
+                                        <p class="mt5">- 보유 기간 : 이용 해지 후 5년까지</p>
+                                        <p class="mt5"><span style="color: rgb(0, 124, 255)">*</span> 처리근거 : 금융실명법 제4조 제1항 제5호</p>
+                                        <p class="mt20"><strong>3. 송금인 확인</strong></p>
+                                        <p class="mt10">- 수집 정보(필수항목) : 성명, 계좌번호*</p>
+                                        <p class="mt5"><span style="color: rgb(0, 124, 255)">*</span> 처리근거 : 금융실명법 제4조 제1항 제5호</p>
+                                        <p class="mt20"><strong>4. 민원 관리 목적</strong></p>
+                                        <p class="mt10">- 수집 정보(필수항목) : 성명, 휴대폰번호, 이메일주소</p>
+                                        <p class="mt5">- 보유 기간 : 이용 해지시까지</p>
+                                        <p class="mt20">고객은 개인정보 수집 및 이용을 거부할 권리가 있으며, 거부 시 이용에 제약을 받으실 수 있습니다. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="checkboxblock">
+                    <input type="checkbox" id="chkTrms2" name="chkTrms2" tabindex="7">
+                </span>
+                        <label for="checkbox2" class="bfop_txt" style="color: #050505; margin-left: 5px;"><strong>개인정보 제3자 제공 동의</strong></label>
+                        <a href="javascript:;" class="more" id="chkViewTrms2" name="chkViewTrms2">보기</a>
+                        <div class="cont_box" id="dlTrms2" style="display: none;">
+                            <meta charset="utf-8">
+                            <title>일반고객제3자동의</title>
+                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                            <style>
+                                p{line-height:1.2; padding: 0; margin: 0;}
+                                .mt20{margin-top: 20px;}
+                                .mt10{margin-top: 10px;}
+                                .mt5{margin-top: 5px;}
+                            </style>
+                            <strong class="tit_clause">은행권 공동 오픈플랫폼 서비스 고객 본인확인 및 이용을 위하여 제3자에게 고객 정보를 제공한는 것에 대한 동의이며, 제3자 정보제공 내역은 아래와 같습니다.</strong>
+                            <div class="clause_box">
+                                <div class="clause_text">
+                                    <div>
+                                        <p class="mt20"><strong>1. 본인확인 목적</strong></p>
+                                        <p class="mt10">- 제공받는자 : 이동통신사(SKT, KT, LGU+ 등), ㈜한국모바일인증, ㈜씽크에이티</p>
+                                        <p class="mt5">- 제공 정보 : 성명, 생년월일, 성별, 내/외국인 구분, 휴대폰번호</p>
+                                        <p class="mt5">- 보유 기간 : 서비스 제공일로부터 1개월(이동통신사), 서비스 제공일로부터 100일(㈜한국모바일인증), 서비스 제공일로부터 3년까지(㈜씽크에이티)</p>
+                                        <p class="mt20"><strong>2. 출금동의 확인 목적</strong></p>
+                                        <p class="mt10">- 제공받는자 : (주)쿠콘</p>
+                                        <p class="mt5">- 제공 정보 : 성명, 생년월일, 휴대폰번호, 은행코드, 계좌번호</p>
+                                        <p class="mt5">- 보유 기간 : 서비스 제공일로부터 7일</p>
+                                        <p class="mt20"><strong>3. 이용기관의 고객 확인 목적</strong></p>
+                                        <p class="mt10">- 제공받는자 : 이용기관 </p>
+                                        <p class="mt10">- 제공 정보 : 성명, 생년월일*, 성별*, 휴대폰번호, 이메일주소, 연계정보(CI)값, 계좌번호** </p>
+                                        <p class="mt5">- 보유 기간 : 이용 해지시까지(다만, 1년이상 미이용시 1년 경과 시점까지)</p>
+                                        <p class="mt10"><span style="color: rgb(0, 124, 255)">*</span> 이용기관 상황에 따라 선별적으로 제공</p>
+                                        <p class="mt5"><span style="color: rgb(0, 124, 255)">**</span> 금융실명법 제4조 제1항 제5호에 의거 소액해외송금업자로 등록한 이용기관에 한하여 제공</p>
+                                        <p class="mt20">고객은 제3자에게 정보를 제공하는 것을 거부할 권리가 있으며, 거부 시 이용에 제약을 받으실 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="all_agree">
+                <span class="checkboxblock">
+                <input type="checkbox" id="chkTrms3" name="chkTrms3" tabindex="8">
+            </span>
+                <label for="checkbox3" class="bfop_txt" style="color: #050505;"><strong>전체 동의하기</strong></label>
+            </div>
+            <div class="form-group clear">
+                <input style="width: 67%; float: left; color: #050505;" id="certCode" name="certCode" type="tel" maxlength="6" class="form-control bfop_input" placeholder="인증코드" numberonly="" autocomplete="off">
+                <p style="width: 30%; float: right; margin-left: 7px;">
+                    <a class="btn bfop_btn_s1" id="step1" href="javascript:getCertCode()" title="인증코드 받기" style="background: #006DB8; border: 0; background-position: initial initial; background-repeat: initial initial;">인증코드 받기</a>
+                    <label id="timer_s" style="margin-top: 10px; display: none;">00:00</label>
+                </p>
+            </div>
+            <div style="width: 100%; display: table;"><a class="btn bfop_btn_s2" id="step3" style="background: rgb(129, 132, 135);">본인 확인</a></div>
+            <div style="width: 100%; display: table; margin-top: 10px;"><a class="btn bfop_btn_s2" id="step4" style="color: #050505; background: #FFFFFF;">취소</a></div>
+        </form>
+    </div>
+    <!-- //E: wrap -->
+    <div id="message" class="center" style="display: none;">
+    </div>
+    <div id="footer" class="center">
+        <p>은행권 공동 오픈플랫폼</p>
+        <address>copyright © KFTC</address>
+    </div>
+    <script type="text/javascript">
+    $(document).on("keyup", "input[numberOnly]", function() { $(this).val($(this).val().replace(/[^0-9]/gi, "")); });
+
+    // 정규식
+    var regYMD = /[12][0-9]{3}[01][0-9][0-3][0-9]/; // 날짜체크(YYYYMMDD)
+    var regHP = /^01([0|1|6|7|8|9]?)([0-9]{3,4})([0-9]{4})$/; // 휴대폰체크
+
+    var step1Active = true; // 인증요청 버튼 클릭가능여부
+    var step1Click = false; // 인증요청 버튼 이중클릭 방지
+    var step3Active = false; // 본인확인 버튼 클릭가능여부
+    var step3Click = false; // 본인확인 버튼 이중클릭 방지
+
+    // 가이드메시지 숨김
+    $("#userCellNoMsg").hide();
+    $("#brddMsg").hide();
+
+    // 본인 확인 버튼 이벤트 처리
+    $('#step3').on("click", function(e) {
+        goNext();
+    });
+
+    // 취소 버튼 이벤트 처리
+    $('#step4').on("click", function(e) {
+        var redUri = "https://dapp.finnq.com/MAS90B1003.web";
+        var errStr = "error=access_denied&error_description=사용자가%20'취소'%20버튼을%20클릭한%20경우&client_info=finnq";
+        if (redUri.lastIndexOf("?") != -1 && (redUri.lastIndexOf("?") + 1) == redUri.length) {
+            location.href = redUri + errStr;
+        } else {
+            location.href = redUri + "?" + errStr;
+        }
+    });
+
+    // 버튼 활성/비활성화 색상 처리
+    function activeButton() {
+        if (
+            /*      (
+                    $("#userName").val().trim() != ""
+                    && $("#ctryTypeCode").val().trim() != ""
+                    && $("#brdd").val().trim() != ""
+                    && $("#gndrTypeCode").val().trim() != ""
+                    && $("#userCellNo").val().trim() != ""
+                    && $("#phoneCorp").val() != ""
+                    && $("#chkTrms3").is(":checked") == true
+                    ) || */
+            step1Active == true
+        ) {
+            $('#step1').css('background', '#006DB8'); // 인증요청 버튼 활성화색
+        } else {
+            $('#step1').css('background', '#818487'); // 인증요청 버튼 비활성화색
+        }
+
+        if (step3Active == true) {
+            $('#step3').css('background', '#006DB8'); // 본인확인 버튼 활성화색
+        } else {
+            $('#step3').css('background', '#818487'); // 본인확인 버튼 비활성화색
+        }
+    }
+
+    // 메시지처리
+    $(function() {
+        if ("" != "") {
+            $("#message").show();
+            $("#wrap").hide();
+        } else {
+            $("#message").hide();
+            $("#wrap").show();
+        }
+        // 동의약관내용
+        $("#dlTrms1").hide();
+        $("#dlTrms2").hide();
+        // 기본 버튼세팅
+        if ("kor" == "kor" || "kor" == "" || "kor" == "null") {
+            btnOnOff('ctry', '0'); // 내국인
+        } else {
+            btnOnOff('ctry', '1'); // 외국인
+        }
+        /*  if("0" == "") {
+                btnOnOff('ctry','0');           // 내국인
+            } else {
+                btnOnOff('ctry', "0");
+            }
+         */
+        if ("0" == "") {
+            btnOnOff('gndr', '0'); // 남자
+        } else {
+            btnOnOff('gndr', "0");
+        }
+        // 타이머
+        $("#timer_s").hide();
+        // 버튼 활성화 체크
+        activeButton();
+    });
+
+    // 생년월일 정규식체크
+    $('#brdd').on("change", function(e) {
+        if (!regYMD.test($("#brdd").val())) {
+            $("#brddMsg").show();
+            $("#brddMsg").html("생년월일 입력형식 오류");
+            $("#brdd").focus();
+        } else {
+            $("#brddMsg").html("");
+            $("#brddMsg").hide();
+        }
+    });
+
+    // 휴대폰번호 정규식체크
+    $('#userCellNo').on("change", function(e) {
+        if (!regHP.test($("#userCellNo").val())) {
+            $("#userCellNoMsg").show();
+            $("#userCellNoMsg").html("휴대폰번호 입력형식 오류");
+            $("#userCellNo").focus();
+        } else {
+            $("#userCellNoMsg").html("");
+            $("#userCellNoMsg").hide();
+        }
+    });
+
+    // 버튼처리
+    var sel = new Array();
+
+    function btnOnOff(name, val) {
+        var objs = $("[id^='" + name + "']");
+        var oth = val == "0" ? "1" : "0";
+        var i = name == "ctry" ? 0 : 1;
+        if (sel[i] != val) {
+            if (objs.eq(val).hasClass("on")) {
+                objs.eq(val).removeClass("on");
+                objs.eq(oth).addClass("on");
+            } else {
+                objs.eq(oth).removeClass("on");
+                objs.eq(val).addClass("on");
+            }
+        }
+        if (name == "ctry") {
+            sel[0] = val;
+            $("#ctryTypeCode").val(sel[0] == "0" ? "KR" : "OT");
+        } else if (name == "gndr") {
+            sel[1] = val;
+            $("#gndrTypeCode").val(sel[1] == "0" ? "M" : "F");
+        }
+    }
+
+    // 동의클릭 처리
+    var objAgree = $("[name^='chk']");
+    objAgree.each(function(i) {
+        objAgree.eq(i).on("click", function(e) {
+            if (i == 0 || i == 1) { // 서비스 이용 및 개인정보처리 동의
+                if (i == 1) {
+                    if (objAgree.eq(0).is(":checked") == true) {
+                        objAgree.eq(0).prop("checked", false);
+                    } else {
+                        objAgree.eq(0).prop("checked", true);
+                    }
+                }
+                if (objAgree.eq(0).is(":checked") == true) {
+                    $("#dlTrms1").slideDown();
+                } else {
+                    $("#dlTrms1").slideUp();
+                }
+            }
+            if (i == 2 || i == 3) { // 개인정보 제3자 제공동의
+                if (i == 3) {
+                    if (objAgree.eq(2).is(":checked") == true) {
+                        objAgree.eq(2).prop("checked", false);
+                    } else {
+                        objAgree.eq(2).prop("checked", true);
+                    }
+                }
+                if (objAgree.eq(2).is(":checked") == true) {
+                    $("#dlTrms2").slideDown();
+                } else {
+                    $("#dlTrms2").slideUp();
+                }
+            }
+            if (i == 4) { // 전체 동의하기
+                if (objAgree.eq(i).is(":checked") == true) {
+                    objAgree.eq(0).prop("checked", true);
+                    objAgree.eq(2).prop("checked", true);
+                    $("#dlTrms1").slideDown();
+                    $("#dlTrms2").slideDown();
+                }
+                if (objAgree.eq(i).is(":checked") == false) {
+                    objAgree.eq(0).prop("checked", false);
+                    objAgree.eq(2).prop("checked", false);
+                    $("#dlTrms1").slideUp();
+                    $("#dlTrms2").slideUp();
+                }
+            }
+            if (objAgree.eq(0).is(":checked") == true && objAgree.eq(2).is(":checked") == true) {
+                objAgree.eq(4).prop("checked", true);
+            } else {
+                objAgree.eq(4).prop("checked", false);
+            }
+            // 버튼 활성화 체크
+            activeButton();
+        })
+    });
+
+    // 필수입력체크
+    function validationChk(formId) {
+        var frmObj = $("form[id=" + formId + "]");
+        var objs = frmObj.find("[notNull]");
+
+        for (var i = 0; i < objs.length; i++) {
+            if (objs.eq(i).val().trim() == '') {
+                alert(objs.eq(i).attr("title") + "은(는) 필수입니다.");
+                objs.eq(i).focus();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // SMS 개인인증 코드 발급
+    function getCertCode() {
+        if (step1Click) {
+            return false;
+        }
+
+        if (!step1Active) {
+            return false;
+        }
+
+        if (!validationChk("frm")) {
+            return -1;
+        }
+        $("#certCode").val("");
+
+        if ($("#chkTrms1").is(":checked") != true) {
+            alert("서비스 이용 및 개인정보처리 동의가 되지 않았습니다.")
+            $("#chkTrms1").focus();
+            return false;
+        }
+        if ($("#chkTrms2").is(":checked") != true) {
+            alert("개인정보 제3자 제공 동의가 되지 않았습니다.")
+            $("#chkTrms2").focus();
+            return false;
+        }
+        if ($("#chkTrms3").is(":checked") != true) {
+            alert("전체 동의하기가 되지 않았습니다.")
+            $("#chkTrms3").focus();
+            return false;
+        }
+
+        step1Click = true; // 인증요청 버튼 이중클릭 방지
+
+        var useOrgSeqNo = "2017001384";
+        var param = {
+            lang: "kor",
+            useOrgSeqNo: useOrgSeqNo,
+            userName: $('#userName').val(),
+            brdd: $('#brdd').val(),
+            gndrTypeCode: $('#gndrTypeCode').val(),
+            ctryTypeCode: $('#ctryTypeCode').val(),
+            phoneCorp: $('#phoneCorp').val(),
+            userCellNo: $('#userCellNo').val()
+        }
+        $.ajax({
+            url: "/apt/mobileweb/certSMS",
+            type: "POST",
+            data: param,
+            success: function(data) {
+                if (data.resultYN == 'Y') {
+                    timer_start(); // 타이머 스타트
+                    step1Active = false; // 인증요청 버튼 클릭불가능
+                    step3Active = true; // 본인확인 버튼 클릭가능
+                    activeButton(); // 버튼 활성화 체크
+                } else {
+                    step3Active = false; // 본인확인 버튼 클릭불가능
+                    step1Click = false; // 인증정보 실수로 문자발송 실패시 재인증요청 할수있도록
+                    alert(data.resultMsg);
+                }
+            }
+        });
+    }
+
+    // SMS 개인인증 코드확인
+    function goNext() {
+        if (step3Click) {
+            return false;
+        }
+
+        if (!step3Active) {
+            return false;
+        }
+
+        if (!validationChk("frm")) {
+            return false;
+        }
+        if ($("#certCode").val() == "") {
+            alert("인증코드가 입력되지 않았습니다.");
+            $("#certCode").focus();
+            return false;
+        }
+
+        step3Click = true; // 본인확인 버튼 이중클릭 방지
+
+        var param = {
+            lang: "kor",
+            certCode: $('#certCode').val()
+        }
+        $.ajax({
+            url: "/apt/mobileweb/confirmSMS",
+            type: "POST",
+            data: param,
+            success: function(data) {
+                if (data.resultYN == 'Y') {
+                    tstop(); // 타이머 스탑
+                    // 폼 전송
+                    var f = document.frm;
+                    f.setAttribute("action", "/apt/mobileweb/regiUser");
+                    f.setAttribute("target", "");
+                    f.submit();
+                } else {
+                    alert(data.resultMsg);
+                }
+                step3Click = false;
+            }
+        });
+    }
+
+    // 인증값 변경여부 체크
+    $('#userName').on("change", function(e) {
+        step3Active = false; // 본인확인 버튼 클릭불가능
+        tstop(); // 타이머 스탑
+    });
+    $('#ctryTypeCode').on("change", function(e) {
+        step3Active = false; // 본인확인 버튼 클릭불가능
+        tstop(); // 타이머 스탑
+    });
+    $('#brdd').on("change", function(e) {
+        step3Active = false; // 본인확인 버튼 클릭불가능
+        tstop(); // 타이머 스탑
+    });
+    $('#gndrTypeCode').on("change", function(e) {
+        step3Active = false; // 본인확인 버튼 클릭불가능
+        tstop(); // 타이머 스탑
+    });
+    $('#userCellNo').on("change", function(e) {
+        step3Active = false; // 본인확인 버튼 클릭불가능
+        tstop(); // 타이머 스탑
+    });
+    $('#phoneCorp').on("change", function(e) {
+        step3Active = false; // 본인확인 버튼 클릭불가능
+        tstop(); // 타이머 스탑
+    });
+
+    // 타이머 관련처리 #1
+    function timer_start() {
+        $('#timer_s').show();
+        $('#timer_s').css("display", "table-row");
+        tcounter = 180; // 인증타임설정(초)
+        t1 = setInterval(Timer, 1000);
+    }
+    // 타이머 관련처리 #2
+    function Timer() {
+        tcounter = tcounter - 1;
+        temp = Math.floor(tcounter / 60);
+        if (Math.floor(tcounter / 60) < 10) {
+            temp = '0' + temp;
+        }
+        temp = temp + ":";
+        if ((tcounter % 60) < 10) {
+            temp = temp + "0";
+        }
+        temp = temp + (tcounter % 60);
+
+        document.getElementById("timer_s").innerHTML = temp;
+        if (tcounter < 0) tstop();
+    }
+    // 타이머 관련처리 #3
+    function tstop() {
+        step1Active = true;
+        step3Active = false;
+        //  버튼 활성화 체크
+        activeButton();
+        step1Click = false;
+        if (typeof(t1) != 'undefined') {
+            clearInterval(t1);
+            document.getElementById("timer_s").innerHTML = "00:00";
+            $('#timer_s').hide();
+        }
+    }
+
+    //화면 호출시 파라미터 존재시 세팅
+    var list = JSON.parse('');
+    $.each(list, function(index, value) {
+        $('#' + index).val(value);
+        if (index == "ctry") {
+            btnOnOff('ctry', value);
+        }
+        if (index == "gndr") {
+            btnOnOff('gndr', value);
+        }
+    });
+    </script>
+    <canvas id="__gesture_canvas__" width="0" height="0" style="z-index: 100000000; position: fixed; background: transparent !important; top: 0px; left: 0px;"></canvas><span id="__gesture_preview__" style="z-index: 100000001; position: absolute; background: rgba(255, 255, 225, 0.85); margin: 0px; border: 1px solid black; white-space: nowrap; display: none;"></span>
+</body>
+
+</html>

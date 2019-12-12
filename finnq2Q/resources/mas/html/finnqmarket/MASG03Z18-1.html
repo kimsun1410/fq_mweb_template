@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>07기프티몰_07검색결과_MASG03Z18-1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap" id="MASG03Z18-1"><!-- 내역 없는 경우 bg_list 삭제 -->
+	<!-- contents -->
+	<div id="contents" class="market">
+		<!-- section -->
+		<section class="gifticon_prd">
+			
+			<div class="sec_gifticon_search">
+				<div class="all_prd">총<em class="num bold">0</em>개</div>
+				
+				<ul class="sorting_tab">
+					<li class="on"><a href="#none">인기순</a></li>
+					<li><a href="#none">낮은 가격순</a></li>
+					<li><a href="#none">높은 가격순</a></li>
+				</ul>
+			</div>
+
+			<!-- 검색 결과 -->
+			<div class="sec_sub_wrap">
+				
+				<!-- 1개 타입 -->
+				<div class="sub_cont typeA wrap_result">
+					<div class="no_result">
+						<i class="ico ico_chat_no2"></i>
+						<dl>
+							<dt>‘해피밀’ 검색결과가 없습니다.</dt>
+							<dd>단어의 철자가 정확한지 확인해 보세요.<br />한글을 영어로 혹은 영어를 한글로 입력 해 보세요.<br />두 단어 이상의 검색어인 경우, 띄어쓰기를 변경해 보세요.</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</section>
+		<!-- //section -->
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	//추천상품
+	var productSlide01 = new Swiper(".product_slide01", {
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+	});
+	//금액대별 상품
+	//var productSlide02 = new Swiper(".product_slide02", {
+		//loop: true,
+		//pagination: {
+			//el: ".swiper-pagination",
+		//},
+	//});
+
+	//2018-02-13 tabSorting
+	function tabSorting() {
+		$('.sorting_tab li').on('click',function(){
+			$(this).addClass('on');
+			$(this).siblings('li').removeClass('on');
+		});
+	}tabSorting();
+});
+
+	
+</script>
+</body>
+</html>

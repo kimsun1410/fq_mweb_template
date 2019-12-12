@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<title>개인(신용)정보 조회 동의서</title>
+	<style>
+		/* 비상금 대출 약정서 */
+		html {padding:10px;background:#fff;height: 100%; font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial"; -moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;box-sizing: border-box;}
+		body {height: 100%; font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial";font-size: 100%; line-height: 1;color: #222;vertical-align: baseline;-webkit-font-smoothing: antialiased; /*-webkit-overflow-scrolling: touch; */}
+		address, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, section {display: block;margin: 0;padding: 0;}
+		figcaption {display: block;width: 0;height: 0;position: absolute;top: -9999px;font-size: 0;text-indent: -9999px;}
+		hr, caption {display: none;text-indent: -999px;}
+		img {border: none;vertical-align: middle;-ms-interpolation-mode: bicubic;}
+		ol, ul, li, dl, dt, dd {list-style: disc outside none;font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial";}
+		table {width: 100%;border: 0px;border-spacing: 0px;border-collapse: collapse;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;}
+		th, td {font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial";border: 0px;border-collapse: collapse;word-break: break-all;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;}
+		fieldset {width: 100%;border: 0px;}
+		legend {display: none;}
+		iframe {width: 100%;border: 0px;}
+		em, i, address {font-style: normal;}
+		button, a, select, input, label {font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial"; vertical-align: middle; border:none; background: none;box-sizing: border-box;cursor: pointer}
+		input:focus, select:focus, button:focus , textarea:focus{ outline:none; }
+		button {cursor: pointer;border: 0px;white-space:nowrap;}
+		button::-moz-focus-inner {padding: 0px;}
+		em ,strong { font-weight: normal; font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial";}
+		*{margin:0;padding:0;font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial"; font-size:13px; letter-spacing: -0.03em; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased !important;}
+		a { font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial";color: #222;text-decoration: none;}
+		a:active, a:visited, a:link { font-family:"Dotum", "Dotumche", "돋움", "돋움체", "Arial";}
+		a:hover {text-decoration: none;}
+		:focus{outline:none;}
+		.font4{font-size:0.87em; }
+		.font12{font-size:13px !important}
+		.mt10{margin-top:10px !important}
+		.mt15{margin-top:15px !important}
+		.mtt20{margin-top:20px !important}
+		.mtb10{margin:10px 0}
+		.mr0{margin-right:0 !important}
+
+		.btn_area{ text-align:center;}
+		.float_l{float:left !important}
+		.float_r{float:right !important}
+		.clear_b{clear:both; float:none !important}
+		.o_flow{overflow:hidden !important}
+
+
+		p {line-height: 1.1;}
+		.alignLeft{text-align:left !important}
+		.alignRight{text-align:right !important}
+
+		.btn11, .btn11:hover{display:inline-block; text-align:center; vertical-align:middle; line-height:normal; width:40%; padding:10px 0; /* background:#264193; color:#FFF; */ border-radius:4px; font-weight:bold;
+		background: #8848ff; border: 1px solid #8848ff; color: #fff;}
+		.btn22, .btn22:hover{display:inline-block; text-align:center; vertical-align:middle; line-height:normal; width:40%; padding:10px 0; /* background:#999; color:#FFF; */border-radius:4px; font-weight:bold;
+		background: #eee; border: 1px solid #c8c8c8; color: #666;}
+		a.btn_p, a:hover.btn_p{display:inline-block; text-align:center; line-height:normal; padding:10px 15px;  background:#828282; color:#FFF; border-radius:4px; font-size:13px;  font-weight:bold}
+
+		.product_t2{width:100%; border:1px solid #b7b7b7; margin:10px 0; font-size:24px; letter-spacing:-1;}
+		.product_t2 thead th{text-align:center; font-weight:normal; color:#777; background:#f6f6f6;  padding:10px 5px; border-bottom:1px solid #b7b7b7;  border-left:1px solid #b7b7b7; vertical-align:top;}
+		.product_t2 tbody th{text-align:center; font-weight:normal; letter-spacing:-1; background:none; color:#777; padding:20px 10px 20px 0 ; border-bottom:1px solid #b7b7b7; vertical-align:top;}
+		.product_t2 td{text-align:center; border-bottom:1px solid #b7b7b7; border-left:1px solid #d4d4d4; padding:5px; line-height: 1.2 }
+
+		
+		/* radio3 */
+		.certificate_choice1>input[type="radio"]{position:relative; margin:0 0 10px 0; vertical-align:top; }
+		.certificate_choice1:not(#cssbrowser)>input[type="radio"]{position:absolute; left:0; top:0; margin:0; opacity:0;}
+		.certificate_choice1:not(#cssbrowser)>input[type="radio"] + label {background:url(../resource/images/v2/radio2.png) left -1px no-repeat; height:25px}
+		.certificate_choice1:not(#cssbrowser)>input[type="radio"]:checked + label {background:url(../resource/images/v2/radio1.png) left -1px no-repeat; height:25px}
+		.certificate_choice1:not(#cssbrowser)>input[type="radio"]:disabled + label {background-position:left -1px;}
+		.certificate_choice1:not(#cssbrowser)>input[type="radio"]:checked:disabled + label {background-position:left -1px; height:25px}
+		.agree_check1, .agree_check2{padding:0 5px 0; overflow:hidden;}
+
+		.chk_box {text-align: left;}
+		.chk_box p {position:relative; padding:0 0 10px 0;}
+
+		.chk_box .chk01 input[type='checkbox'] {display: /* none; */ inline-block}
+		.chk_box .chk01 input[type='checkbox']+label {position: relative}
+		.chk_box .chk01 input[type='checkbox']+label:before {position: absolute;top: 0;content: "";display: inline-block;width: 16px;height: 16px;background: url('/resources/mas/images/common/btn_checkbox.png') no-repeat 0 0;background-size: 16px 16px}
+		.chk_box .chk01 input[type='checkbox']:checked+label:before {background: url('/resources/mas/images/common/btn_checkbox_on.png') no-repeat 0 0;background-size: 16px 16px}
+		.chk_box .chk01 input[type='checkbox']+label span {display: inline-block;line-height: 15px;margin-left: 21px}
+		.agree_check3 .chk_box{ margin: 15px 20px 0 30px;}
+
+		.radio_box { text-align: center; margin: 15px auto;}
+		.radio_box .radio01 input[type='radio'] {display: /* none; */ inline-block}
+		.radio_box .radio01 input[type='radio']+label {display: inline-block;height: 16px; width:40%;}
+		.radio_box .radio01 input[type='radio']+label:before {content: "";display: inline-block;width: 16px;height: 16px;background: url('/resources/mas/images/common/btn_radio.png') no-repeat 0 0;background-size: 16px 16px}
+		.radio_box .radio01 input[type='radio']:checked+label:before {background: url('/resources/mas/images/common/btn_radio_on.png') no-repeat 0 0;background-size: 16px 16px}
+		.radio_box .radio01 input[type='radio']+label span {margin-left: 6px;vertical-align: 3px}
+		
+		/* .// common  */
+
+		.alignCenter{text-align:center !important; padding-top: 30px;}
+		#wrapperScroll, #wrapperScroll1, #wrapperScroll2, #wrapperScroll3, #wrapperScroll4{position:relative; z-index:1;}
+
+		.title_agree{display:block; text-align:left;font-size:13px; color:#264193; font-weight:bold;}
+		.inquiry_header h3{color:#222; text-align:center; font-size:16px; margin-bottom:10px; line-height: 1.6;}
+		.inquiry_list h5{font-size:13px; color:#222; margin-bottom:5px;}
+		
+		#s_main { margin-bottom: 10px;}
+		#s_main h2{width:100%; height:45px; background:#fff; font-size:16px; padding-top:10px; font-weight:bold}
+		#s_main .main_inner3{margin:0 10px}
+
+		/* .btn_area a {color: #fff;} */
+		.counsel_agree{padding:25px 0; border-top:1px solid #b7b7b7; border-bottom:1px solid #b7b7b7; overflow:hidden;}
+		.counsel_agree .btn_area {margin:15px auto 0; width:20%;}		
+		.counsel_agree .btn_area a {background: #999;width: 100%;height: 40px;border-radius: 3px;text-align: center;color: #fff;box-sizing: border-box;font-size: 13px;background: #eee; border: 1px solid #c8c8c8; color: #666;}
+
+
+		
+		.counsel_input{padding:25px 0; margin-bottom:20px; border-bottom:1px solid #b7b7b7; overflow:hidden}
+		.counsel_input label{width:25%; float:left; margin-top:20px; text-align:left;}
+		.counsel_input input{width:75%; float:right; text-align:left;}
+		.credit_inquiry{height:140px; text-align:left; font-size:13px; padding:15px 10px; overflow:auto; border: 1px solid #d4d4d4}
+		.type_tit1{text-align:center; font-size:13px; color:#222; background:#f6f6f6; text-align:left; margin:15px 0; padding:15px !important;}
+		.choice_area1{overflow:hidden; }
+		.credit_inquiry ul.inquiry_list li, .credit_inquiry_s ul.inquiry_list li{list-style:none; margin-left:10px; margin-bottom:5px;line-height: 1.1}
+		.credit_inquiry .inquiry_list li ul.inquiry_list_inner li, .credit_inquiry_s .inquiry_list li ul.inquiry_list_inner li{list-style:disc; margin-left:10px;}
+		.inquiry_header li p{margin-left:10px;line-height: 1.2;margin-bottom: 5px; }
+		.inquiry_list h5{font-size:13px; color:#222;font-weight: bold;margin-top: 5px;}
+		.inquiry_list li p {line-height: 1.2;margin-bottom: 5px; }
+		.inquiry_agree1 {margin-top: 15px;}
+	
+	</style>
+	<body>
+		<article>
+			<div id="s_main">
+				<!-- <h2>개인(신용)정보 조회 동의</h2> -->
+				<div class="main_inner3">
+					<div class="inquiry_header">
+						<h3>
+							개인(신용)정보 수집·이용 및 제공 동의서<br />(상품서비스 안내 등)
+						</h3>
+						<h4 class="font12 mtt20">(주)하나은행 귀중</h4>
+						<p class="mt10">
+							귀행이 상품 또는 서비스를 소개하거나 구매를 권유하는 등의 목적으로 본인의 개인(신용)정보를 수집 이용 및 타인앞으로 제공하기 위 해서는「 신용정보의 이용 및 보호에 관한 법률」 제15조 제2항, 제32조 제1항, 제33조 및 제34조,「 개인정보 보호법」 제15조 제1항 제1 호, 제17조 제1항 제1호, 제22조 제3항에 따라 본인의 동의가 필요합니다.
+						</p>
+						<p class="mt10">
+							※ 아래에서 (금융)거래라 함은 은행업무(여신, 수신, 외국환), 겸영업무(신탁, 펀드, 방카슈랑스, 신용카드 등), 부수업무(보증, 팩토링, 대여금고, 보호예수 등) 등 하나은행의 상품 또는 서비스 계약과 관련된 거래를 의미합니다.
+						</p>
+						<p class="mt10">
+							※ 본 동의는 계약 체결에 필수적이지 않으며, 동의하셨더라도 언제든 철회 가능합니다.
+						</p>
+					</div>
+					<!--inquiry_header e-->
+					<div class="inquiry_agree1">
+						<h4 class="title_agree">수집·이용에 관한 사항</h4>
+						<div class="credit_inquiry mt15" id="wrapperScroll1">
+							<div class="scrollInner">
+								<ul class="inquiry_list">
+									<li>
+										<h5>수집·이용목적</h5>
+										<ul class="inquiry_list_inner list_mb ml10">
+											<li>명절선물 등 사은행사, 경품지급, 시황정보서비스 등 편의 제공</li>
+											<li>상품 또는 서비스의 홍보 및 구매권유</li>
+											<li>고객 만족도 조사 ((금융)거래와 관련 없는 경우에 한함)</li>
+										</ul>
+									</li>
+									<li>
+										<h5>수집·이용항목</h5>
+										<ul class="inquiry_list_inner list_mb ml10">
+											<li>
+												개인식별정보
+												<p>성명, 생년월일, 성별, 주소, 직장정보, 국적, 연락처(전자우편주소, 전화번호 등)</p>
+											</li>
+											<li>
+												(금융)거래 정보
+												<p>상품 또는 서비스의 종류, 거래조건(이자율, 만기 등), 거래 일시, 금액 및 거래 과정에서 생성되는 정보</p>
+												<p class="font4">※ 본 동의 이전에 발생한 개인(신용)정보도 포함됩니다.</p>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<h5>보유·이용 기간</h5>
+										<p>(금융)거래 종료일* 또는 동의철회 중 먼저 도래하는 시점까지 보유 이용됩니다. 이후에는 관련된 사고조사, 분쟁해결, 민원처리, 법령상의 의무이행을 위하여 필요한 범위 내에서만 보유 이용 됩니다.</p>
+										<p>* (금융)거래 종료일이란 당행과 거래중인 모든 계약(여·수신, 내·외국환, 카드 및 제3자 담보제공 등)해지 및 서비스(대여금고, 보호예수, 외국환거래지정, 인터넷뱅킹 포함 전자금융거래 등)가 종료한 날을 뜻합니다.</p>
+									</li>
+									<li>
+										<h5>동의를 거부할 권리와 불이익</h5>
+										<p>본 동의는 계약 체결에 필수적이지 않으므로 거부할 수 있으며 동의 후에도 언제든지 철회 가능합니다. 다만, 이 때 위 [수집·이용 목적]란에 기재된 사은행사, 경품지급 및 시황정보서비스 등 편의 제공과 상품 홍보 등이 제한될 수 있습니다.</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--credit_inquiry e-->
+						<h4 class="type_tit1 mtt20">수집·이용 동의 여부</h4>
+						<div class="agree_check2 alignLeft">
+							<p>귀행이 위 목적으로 본인의 개인(신용)정보를 수집·이용하는 것에 동의합니다.</p>
+							<div class="radio_box">
+								<span class="radio01" >
+									<input type="radio" id="btn_radio03_1" name="btn_radio03" value="동의함" checked="checked">
+									<label for="btn_radio03_1"><span>동의안함</span></label>
+								</span>
+								<span class="radio01">
+									<input type="radio" id="btn_radio03_2" name="btn_radio03" value="동의안함" >
+									<label for="btn_radio03_2"><span>동의함</span></label>
+								</span>
+							</div>
+						</div>
+						
+						
+						<!--agree_check1 e-->
+						<h4 class="type_tit1">상품서비스 안내 수단</h4>
+						<div class="alignLeft agree_check3 bor_t_n p0">
+							<div class="chk_box o_flow">
+								<p class="chk01 w60">
+									<input type="checkbox" id="choice_n1" name="choice_n" value="문자메시지 (SMS, LMS 등)" title="문자메시지 (SMS, LMS 등)" checked="checked">
+									<label for="choice_n1"><span>문자메시지(SMS, LMS 등)</span></label>
+								</p>
+								<p class="chk01 w40">
+									<input type="checkbox" id="choice_n2" name="choice_n" value="전화" title="전화" >
+									<label for="choice_n2"><span>전화</span></label>
+								</p>
+								<p class="chk01  w60">
+									<input type="checkbox" id="choice_n3" name="choice_n" value="전자우편(이메일)" title="전자우편(이메일)">
+									<label for="choice_n3"><span>전자우편(이메일)</span></label>
+								</p>
+								<p class="chk01 w40">
+									<input type="checkbox" id="choice_n4" name="choice_n" value="우편,택배 등" title="우편,택배 등" >
+									<label for="choice_n4"><span>우편,택배 등</span></label>
+								</p>
+								<p class="chk01 w60">
+									<input type="checkbox" id="choice_n5" name="choice_n"  value="전체선택" title="전체선택" >
+									<label for="choice_n5"><span>전체선택</span></label>
+								</p>
+							</div>
+							<!-- <div class="o_flow">
+								<p class="check_agree_loan w60 mr0"><input name="choice_n" type="checkbox" id="choice_n1" class="img_chk" value="문자메시지 (SMS, LMS 등)" title="문자메시지 (SMS, LMS 등)"><label for="choice_n1">문자메시지(SMS, LMS 등)</label></p>
+								<p class="check_agree_loan w40 mr0"><input name="choice_n" type="checkbox" id="choice_n2" class="img_chk" value="전화" title="전화"><label for="choice_n2">전화</label></p>
+								<p class="check_agree_loan w60 mr0"><input name="choice_n" type="checkbox" id="choice_n3" class="img_chk" value="전자우편(이메일)" title="전자우편(이메일)"><label for="choice_n3">전자우편(이메일)</label></p>
+								<p class="check_agree_loan w40 mr0"><input name="choice_n" type="checkbox" id="choice_n4" class="img_chk" value="우편,택배 등" title="우편,택배 등"><label for="choice_n4">우편,택배 등</label></p>
+								<p class="check_agree_loan w60 mr0"><input name="choice_n" type="checkbox" id="choice_n5" class="img_chk" value="전체선택" title="전체선택"><label for="choice_n5">전체선택</label></p>
+							</div> -->
+						</div>
+						<!--inquiry_agree_choice e-->
+					</div>
+					<!--inquiry_agree1 e-->
+
+					<div class="inquiry_agree1 mtt20">
+						<h4 class="title_agree">제공에 관한 사항</h4>
+						<div class="credit_inquiry mt15" id="wrapperScroll2">
+							<div class="scrollInner">
+								<ul class="inquiry_list">
+									<li>
+										<h5>제공받는 자와 그의 이용 목적 및 제공받는 개인(신용)정보 항목</h5>
+										<ul class="inquiry_list_inner list_mb ml10">
+											<li>
+												자신의 이익을 위해 상품 또는 서비스를 소개하거나 구매를 권유할 목적 등으로 개인(신용)정보를 제공 받아 이용하는 제3자 앞 제공 : 해당사항 없음
+											</li>
+											<li>
+												위 [수집·이용목적]란의 업무위탁을 위한 제공
+											</li>
+										</ul>
+										<table class="product_t2 mtb10">
+											<caption>제공받는자, 이용목적, 정보 항목 표</caption>
+											<colgroup>
+												<col style="width:35%" />
+												<col style="width:40%" />
+												<col style="width:25%" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">제공받는 자</th>
+													<th scope="col">이용 목적</th>
+													<th scope="col">정보 항목</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="reform_bg1">
+														두레시닝㈜, ㈜국민지에스, 외향산업㈜, ㈜유니포인트, ㈜한국후지제록스 등 사은품, 경품 지급 등 업무 수탁자
+													</td>
+													<td class="reform_bg1">
+														우편, 택배 등에 의한 사은품, 경품 및 홍보물 등 배송업무 수행
+													</td>
+													<td class="reform_bg1">
+														성명, 주소, 전화번호
+													</td>
+												</tr>
+												<tr>
+													<td class="reform_bg1">
+														㈜케이티, ㈜LG유플러스 등 문자메세지 서비스 업무 수탁자
+													</td>
+													<td class="reform_bg1">
+														문자메시지 방식의 사은품, 경품 및 홍보물 등 전송업무 수행
+													</td>
+													<td class="reform_bg1">
+														성명, 전화번호
+													</td>
+												</tr>
+												<tr>
+													<td class="reform_bg1">
+														아이비커리어㈜, ㈜한국고용정보, 외향산업㈜ 등 콜센터 업무 수탁자
+													</td>
+													<td class="reform_bg1">
+														전화에 의한 다음 업무 수행:<br />
+														<ul>
+															<li>상품 또는 서비스 홍보 및 구매권유</li>
+															<li>고객만족도 조사 ((금융)거래와 관련 없는 경우에 한함)</li>
+														</ul>
+													</td>
+													<td class="reform_bg1">
+														위 [수집·이용항목]란의 개인식별정보, (금융)거래 정보
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+									<li>
+										<h5>제공받은 자의 개인(신용)정보 보유·이용 기간</h5>
+										<p>
+											업무위탁 목적인 경우 [수집·이용에 관한 사항]의 보유·이용기간과 동일하게 이용됩니다. 업무위탁 목적을 제외한 경우(금융)거래 종료, 동의철회 또는 동의일로부터 2년째 되는 날 중 먼저 도래하는 시점까지 보유·이용됩니다. 이후에는 관련된 사고조사, 분쟁해결, 민원처리, 법령상 의무이행을 위하여 필요한 범위 내에서만 보유·이용됩니다.
+										</p>
+									</li>
+									<li>
+										<h5>세부 사항 및 변경 안내</h5>
+										<p>
+											위 [제공받는 자와 그의 이용목적 및 개인(신용)정보 항목]과 [제공받는 자의 보유·이용 기간]의 세부사항 및 변경결과는 KEB하나은행 홈페이지(http://www.hanabank.com 또는 http://www.keb.co.kr) 하단의 [개인정보처리(취급)방침] 內 [개인(신용)정보 처리 위탁 및 제공현황]에서 확인하실 수 있습니다.
+										</p>
+									</li>
+									<li>
+										<h5>동의를 거부할 권리와 불이익</h5>
+										<p>본 동의는 계약 체결에 필수적이지 않으므로 거부할 수 있으며, 동의 후에도 언제든지 철회 가능합니다. 다만, 이 때는 위 제공받는 자의 이용 목적에 기재된 사은품, 홍보물 등의 배송, 전송 및 안내 등 편의 제공이 제한될 수 있습니다.</p>
+									</li>
+								</ul>
+								<p class="alignCenter pt30">0000년 00월 00일</p>
+								<p class="mtb10 alignRight">
+									고객명 : 김하나
+								</p>
+								<p class="mtb10 alignRight">
+									생년월일 : 1900년 00월 00일
+								</p>
+							</div>
+						</div>
+						<!--credit_inquiry e-->
+						<h4 class="bor_t type_tit1 c_strong1 mtt20">개인(신용)정보 제공 동의여부</h4>
+				 
+						<div class="agree_check2">
+							<p>[상품서비스 안내 수단]에 대하여는 위 [수집·이용에 관한 사항]에 표기한 바를 동일하게 적용하기로 하며 귀행이 위와 같이 본인의 개인(신용)정보를 제공하는 것에 동의합니다.</p>
+							<div class=" radio_box">
+								<span class="radio01" >
+									<input type="radio" id="btn_radio01" name="radio01" value="동의함" title="정보수집 동의" checked="checked">
+									<label for="btn_radio01"><span>동의안함</span></label>
+								</span>
+								<span class="radio01">
+									<input type="radio" id="btn_radio02" name="radio01" value="동의안함" title="정보 수집 동의안함">
+									<label for="btn_radio02"><span>동의함</span></label>
+								</span>
+							</div>
+						</div>
+							
+						<!--inquiry_agree_choice e-->
+					</div>
+					<!--inquiry_agree1 e-->
+
+					<!-- <div class="counsel_agree  alignLeft mtt20">
+						<p class="float_l chk01"><input type="checkbox" name="chk01" id="clause_agree" class="chk01">
+							<label for="chk01" class="">개인(신용)정보 수집·이용 및 제공 관련 고객 권리 안내문</label></p>
+						<p class="float_r"><a href="" class="btn_p" role="button">확인</a></p>
+					</div> -->
+					<div class="counsel_agree alignLeft chk_box">
+						<p class="chk01 ">
+							<input type="checkbox" id="clause_agree" name="choice_n">
+							<label for="clause_agree"><span>개인(신용)정보 수집·이용 및 제공 관련 고객 권리 안내문</span></label>
+						</p>
+						<p class="btn_area"><a href="" class="btn_p" role="button">확인</a></p>
+					</div>
+					<!-- S: 추가 2016.01.08 -->
+					<p class="mt10 alignLeft">※ 본인은 본 동의서의 내용을 이해하였으며, 개인(신용)정보 수집 이용 제공에 관한 고객권리 안내문에 대하여 자세히 설명 듣고 수령하였습니다.</p>
+					<p class="mt10 alignLeft">※ 본 동의 이후 동일한 목적 또는 이용범위 내에서 개인(신용)정보의 정확성, 최신성을 유지하기 위해 제공하는 경우에는 별도의 추가 동의가 필요하지 않습니다.</p>
+					<!-- //E: 추가 2016.01.08 -->
+					<div class="btn_area mtt20">
+						<a href="#" class="btn22" role="button">취소</a>
+						<a href="#" class="btn11 ml20" role="button">확인</a>
+					</div>
+				</div>
+				<!--main_inner e-->
+			</div>
+			<!-- #s_main e -->
+		</article>
+	</body>
+
+</html>

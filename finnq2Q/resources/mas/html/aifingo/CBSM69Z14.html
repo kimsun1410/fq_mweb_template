@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>07분석알림설정_03계좌잔액알림_03설정_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="CBSM69Z14"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo add_sticky">
+
+		<section class="alram_set">
+			<!-- 신용카드 선택 -->
+			<div class="sec_alram_item">
+				<dl>
+					<dt>1. 계좌 선택</dt>
+					<dd>
+						<ul>
+							<li>
+								<input type="radio" id="purpleOne1" name="test-img" >
+								<label for="purpleOne1" name="test-img">
+									<div class="info">
+										<strong>KEB하나은행</strong>
+										<span>자유입출금 <em class="num">01000001234-137</em></span>
+									</div>
+								</label>
+							</li>
+							<li>
+								<input type="radio" id="purpleOne2" name="test-img">
+								<label for="purpleOne2" name="test-img">
+									<div class="info">
+										<strong>신한은행</strong>
+										<span>자유입출금 <em class="num">01000001234-137</em></span>
+									</div>
+								</label>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- 알림 시간/요일 -->
+			<div class="sec_alram_item" style="display:none;">
+				<dl class="date_setting">
+					<dt>2. 알림 시간/요일</dt>
+					<dd>
+						<div class="time_wrap">
+							<i class="ico ico_clock"><span class="blind">시간 : </span></i>
+							<strong>오전</strong><em class="time">09:00</em>
+						</div>
+						<ul class="btn_sellist set_type7">
+							<li><button class="">월</button></li>
+							<li><button class="">화</button></li>
+							<li><button class="on">수</button></li>
+							<li><button class="">목</button></li>
+							<li><button class="on">금</button></li>
+							<li><button class="">토</button></li>
+							<li><button class="">일</button></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+
+			<!-- 연결동의 -->
+			<div class="sec_alram_item" style="display:none;">
+				<dl>
+					<dt>3. 연결동의</dt>
+					<dd>
+						<div class="user_agree">
+							<input type="checkbox" id="purpleTwo1" name="test-img">
+							<label for="purpleTwo1" name="test-img">
+								<span>알림 내역 확인을 위해 자동으로 정보를<br>업데이트합니다. </span>
+							</label>
+						</div>
+					</dd>
+				</dl>
+			</div>	
+		</section>
+
+		<!-- sticky_wrap place -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">완료</button>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		$(this).toggleClass("on");
+	});
+
+	$('div.sec_alram_item').eq(0).find('input:radio').change(function(){
+		$('.sec_alram_item').eq(1).fadeIn();
+    });
+	$('.btn_sellist').click(function(){
+		$('.sec_alram_item').eq(2).fadeIn();
+    });
+
+
+});
+</script>
+</body>
+</html>

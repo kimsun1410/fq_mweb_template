@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+</head>
+<body>
+<div class="wrap" id="MASV01Z05">
+	<div id="contents" class="market p2p_wrap add_sticky">
+		<section class="sec_MASV01Z05">
+			<div class="sec_title txt_c">
+				<h2 class="bold"><em>8퍼센트</em> 상품의<br>투자신청 내역입니다.</h2>
+				<!-- 09.17 조건에 따른 문구 추가  -->
+				<p class="market_invest">투자 모집이 완료되어 대출 실행을<br class="ios320"> 준비하고 있습니다.</p>
+				<!-- //09.17 조건에 따른 문구 추가  -->
+			</div>
+			<!-- 2018-05-09 수정 라인위치 이동에 의한 구조변경 -->
+			<div class="box_detail round_box">
+				<div class="sec_title txt_c">
+					<h3 class="unbold">울산 우정동 근린생활시설 1차 A동 25층 부동산 담보대출</h3>
+				</div>
+				<div class="cal_wrap5 line_dash line_white"><!-- 2018-05-15 추가 라인클래스 -->
+					<dl class="cal">
+						<dt class="tit">수익률</dt>
+						<dd class="money"><span class="num">19.9</span>%</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">투자기간</dt>
+						<dd class="money"><span class="num">6</span>개월</dd>
+					</dl>
+					<dl class="cal">
+						<dt class="tit">모집금액</dt>
+						<dd class="money"><span class="num numHan numMan">1000000000</span>원</dd><!-- 만원단위 이상 원이 있으면 numMan 추가 -->
+					</dl>
+					<!-- 2018-05-09 삭제 잔여모집액 삭제
+					<dl class="cal">
+						<dt class="tit">잔여모집액</dt>
+						<dd class="money"><span class="num numHan numMan">620000000</span>원</dd>
+					</dl>
+					-->
+					<dl class="cal">
+						<dt class="tit">모집상태</dt>
+						<dd class="money">모집중</dd>
+					</dl>
+				</div>
+				<div class="cal_wrap5 line_dash line_white">
+					<dl class="cal">
+						<dt class="tit">신청일자</dt>
+						<dd class="money"><span class="num">2018.01.23</span></dd>
+					</dl>
+					<dl class="cal total">
+						<dt class="tit">투자금액</dt>
+						<dd class="money point_txt8"><span class="num numHan numMan">1000000</span>원</dd><!-- 만원단위 이상 원이 있으면 numMan 추가 -->
+					</dl>
+				</div>
+			</div>
+
+			<!-- 18.08.07 문구 추가 -->
+			<div class="info_txt_wrap bul_guide">
+				<p class="star_type indent">8퍼센트 투자상품은 투자를 실행한 날로부터 익일 정오<em class="num">(12:00)</em>까지 철회가 가능합니다.</p>
+			</div>
+			<!-- //18.08.07 문구 추가 -->
+
+		</section>
+
+
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply open_modal" data-triger="MASV01Z09">철회하기</button>
+		</div>
+
+		<!-- 투자신청철회 선택_[MASV01Z09] -->
+		<div id="MASV01Z09" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">투자신청을 <strong>철회</strong>하시겠습니까?</h3>
+				</div>
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn_type_f close_modal">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="btn_type_f close_modal">확인</button></span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script type="text/javascript">
+<!--
+//퍼블리싱용 : 내부호출 함수 (이벤트로 호출하는 경우)
+commModal.event();
+
+/*
+	퍼블리싱용 : 외부호출 합수 (function으로 호출하는 경우)
+	호출방법   = commModal.action($mpopID, $mpopType, $mpopClose);
+	$mpopID    = ('ModalID')
+	$mpopType  = (fullpop | nomal)
+	$mpopClose = (true | false) Dim Close
+*/
+//commModal.open('MASV01Z09', '', '');
+//commModal.close('MASV01Z09', '', '');
+//-->
+</script>
+</body>
+</html>

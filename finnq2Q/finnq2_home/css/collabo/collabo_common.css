@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* padding : space */
+.sec_space0 {padding-top:0 !important}
+.sec_space10 {padding-top:10px !important}
+.sec_space28 {padding-top:28px !important}
+.sec_space30 {padding-top:30px !important}
+.sec_gap10 {margin-top:10px !important}
+.sec_gap15 {margin-top:15px !important}
+/* Color Palett */
+.black{color: #222}
+.brownish_grey{color: #666}
+.warm_grey{color: #999}
+.pinkish_grey{color: #c8c8c8}
+.white{color: #fff}
+.white_two{color: #e0e0e0}
+.white_three{color: #eee}
+.white_four{color: #f8f8f8}
+.purply_blue{color: #731aed}
+.reddish_orange{color: #f74b20}
+/* layout */
+html,body{background:#fff;}
+.collabo_wrap { position:relative; min-width:320px; width:100%; height:100%;min-height:100%;margin:0;padding:0;/* -webkit-tap-highlight-color:rgba(0,0,0,0.18); */background:#fff;} /* a, 버튼에만 적용으로 수정 2018-03-24 ock */ /* bg add : 풀팝업시 배경아래로 컨텐츠 밀려올라오는 문제 해결  */
+.collabo_wrap.bg_list { background:#eee}
+#contents { position:relative;height:100%;min-height:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+/*  #contents > section { padding-top:28px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;background:#fff;}공통상단여백  */
+.collabo_wrap.bg_list #contents:after{ content:' '; position:relative;bottom:0;height:45px;background:#eee;z-index:-1;width:100%;display:block;}
+.collabo_wrap.bg_list #contents.add_sticky:after{height:105px; background:#eee;}
+#contents.add_sticky:after {content:' '; position:relative;bottom:0;height:60px; background:#fff;z-index:-1;width:100%;display:block;}
+/* checkbox, radio */
+input[type="checkbox"],
+input[type="radio"] { display:none;}
+input[type="checkbox"] + label,
+input[type="radio"] + label {position:relative;display:inline-block;vertical-align:top;outline:0;background:transparent;}
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before { content:'';position:absolute;left:0;top:0;display:inline-block;}
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before { content:'';position:absolute;left:0;top:0;display:inline-block;}
+input[type="checkbox"] + label span,
+input[type="radio"] + label span { display:inline-block;color:#666;height:auto;-ms-user-select: none; -moz-user-select: -moz-none;-khtml-user-select: none;-webkit-user-select: none;user-select: none;}
+input[type="radio"] + label {height:30px;}
+input[type="radio"] + label:before { width:30px;height:30px;margin:0;background:url('../../image/v2/collabo/common/ir_form_radio.png') 0 0 no-repeat;background-size:30px auto;}
+input[type="radio"]:checked + label:before { background-position: 0 -33.33px}
+input[type="radio"] + label span { padding-left:39px;padding-top:5px;}
+input[type="checkbox"] + label:before { width:30px;height:30px;margin:0;background:url('../../image/v2/collabo/common/ir_form_checkbox.png') 0 0 no-repeat;background-size:30px auto; top:50%; margin-top:-15px;}
+/* .ios input[type="checkbox"] + label:before{margin-top:-14px} */
+input[type="checkbox"]:checked + label:before { background-position: 0 -33.33px}
+input[type="checkbox"] + label > span { padding-left:39px;padding-top:5px;}
+/* modal POPUP */
+.modal_wrap {position: fixed;top: 0;left: 0;z-index: 60;width: 100%;height: 0;opacity: 0;overflow: auto;visibility: hidden;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;background:#fff;}
+
+.modal_wrap.normal {background: rgba(0, 0, 0, 0.3);} /* 윈도우창보다 작은 모달팝업 */
+.modal_wrap.double {background: rgba(0, 0, 0, 0.3);} /* 이중 모달 팝업, 투명시 background:transparent; */
+.modal_wrap.visible {opacity:1;visibility: visible;height:100%}
+.modal_wrap.fullpop {display:block} /* double 상단으로 떠서 수정 *//*2018-03-23 block로 변경 phj */
+.modal_wrap.double{}
+.modal_wrap .modal_content { min-height:50px;margin: 0 20px;padding: 27px 20px 20px;border-radius: 8px;background: #fff;width:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+.modal_wrap.fullpop .modal_content { padding:0; margin:0;border-radius:0;}
+
+/* 약관 */
+.agree_details{padding:30px 20px 25px;background:#fff;}
+.fullpop_header.fixed + .scroll_wrap .agree_details{padding:74px 20px 45px;background:#fff;}
+.agree_details > div > div:first-child{margin-top:0;}
+.agree_details .title{padding-top:38px;color:#444;line-height:1.3;font-weight:bold}
+.agree_details .title + p{line-height:1.5}
+.agree_details .index dl dt{color:#444}
+.agree_details .index dl dd{padding-top:10px;line-height:1.5;color:#444;}
+.agree_details .index > p:first-child{padding-top:10px} /* 여백 추가 2018-05-02 ock */
+.agree_details .index > p,.agree_details .index dl dt{padding-top:10px;line-height:1.5;font-weight:bold}
+
+.agree_details h3:first-child{padding-top:0;}
+.agree_details h3{padding-top:30px;font-size:18px;color:#222;line-height:1.3;font-weight:bold}
+.agree_details h4{padding-top:30px;font-size:18px;color:#444;line-height:1.3;font-weight:bold}
+.agree_details h5{padding-top:20px;font-size:16px;color:#444;line-height:1.3;font-weight:bold}
+.agree_details h6{padding-top:20px;line-height:1.3;color:#444;font-weight:bold}
+.agree_details p{/* padding-top:19px; */ padding-top:12px;line-height:1.3;color:#444}
+.agree_details p:first-child{padding-top:0;}
+.agree_details p.depth02{padding-top:0}
+.agree_details .tbl_tit{margin:10px 0 5px;display:block}
+
+.agree_details .depth01 > li{/* padding-top:20px; */margin-top:12px;line-height:1.3;color:#444}
+.agree_details .depth02 > li{margin-top:5px; line-height:1.3;color:#444}
+.agree_details .bul_text01{padding-top:5px;line-height:1.3;color:#999}
+.agree_details span{display:inline-block;line-height:1.3;vertical-align:2px}
+/* 약관 가로 table */
+.agree_details .tbl_w01{margin-top:10px;border-top:1px solid #999}
+.agree_details .tbl_w01 table{width:100%;border-collapse:collapse;}
+.agree_details .tbl_w01 table tbody th, .agree_details .tbl_w01 table tbody td{font-size:14px;border-bottom:1px solid #eee;text-align:left;padding:14px 13px 11px;box-sizing:border-box}
+.agree_details .tbl_w01 table tbody th{background:#f8f8f8;word-break: keep-all;}
+
+/* 약관 세로 table */
+.agree_details .tbl_v01{border-top:1px solid #999; margin-top:10px;}
+.agree_details .tbl_v01 table {width:100%;border-collapse:collapse;}
+.agree_details .tbl_v01 table th{text-align:center;background:#f8f8f8;}
+.agree_details .tbl_v01 table th,.agree_details .tbl_v01 table td {border-right:1px solid #eee;font-size:14px;border-bottom:1px solid #eee;padding:14px 13px 11px;box-sizing:border-box}
+.agree_details .tbl_v01 table td{text-align:left;vertical-align:top}
+.agree_details .tbl_v01 table th:last-child,.agree_details .tbl_v01 table td:last-child {border-right:none}

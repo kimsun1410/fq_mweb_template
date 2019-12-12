@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>머니 트레이너 Finnq</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<!-- ## style ## -->
+	<link rel="stylesheet" type="text/css" href="/css/reset.css" /><!-- 추가 2017-11-28 -->
+	<link rel="stylesheet" type="text/css" href="/css/common.css" />
+    <title>머니 트레이너 Finnq</title>
+	<!-- ## script ## body 아래에 -->
+	
+	<style type="text/css">
+		/* 수정 2017-11-28 */
+		#introWrapper{height:100%;background:#fff url(/image/bg_img_intro.png) no-repeat 50% 0;background-size:cover;text-indent:-9999em}
+		#introWrapper + .btn_app {position:absolute;bottom:25%;margin:0 12.5%;padding:0 30px;background: #222;width:75%;height: 40px;line-height: 38px;border-radius: 20px;text-align: center;color: #fff;box-sizing: border-box;font-size: 15px;font-weight: bold}
+	</style>
+</head>
+
+<body>
+<!-- introWrapper -->
+<div id="introWrapper" class="app_link">머니 트레이너 Finnq</div>
+	<a style="display:none;" class="btn_app" href="finnq://goto/df/101">Finnq앱으로 이동합니다</a><!-- 추가 2017-11-28 -->
+<!-- //introWrapper -->
+
+	
+	<script src="/js/jquery.lib.js"></script>
+	<script src="/js/ui.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var uagentLow = navigator.userAgent.toLowerCase();
+
+		$('.btn_app').click(function(){
+		
+			interval =  setInterval(intervalCheck, 200);
+			timer = setTimeout(function(){
+				clearTimer();
+				//앱이 설치 안된경우
+				location.href = "https://play.google.com/store/apps/details?id=com.finnq.f1";
+			},delay);
+			
+		});
+
+		if (uagentLow.search("android") > -1) {
+			$('.btn_app').show();
+		}
+		else if (uagentLow.search("iphone") > -1) {
+			location.href = $('.btn_app').attr('href');
+			interval =  setInterval(intervalCheck, 200);
+			timer = setTimeout(function(){
+				clearTimer();
+				//앱이 설치 안된경우
+				location.href = "https://itunes.apple.com/app/id1260871482";
+				
+			},delay);
+		}
+	});
+	var delay = 1000;
+	var timer = null;
+	var interval = null;
+	function clearTimer(){
+		clearInterval(interval);
+		clearTimeout(timer);
+	}
+
+	function intervalCheck(){
+		if(document.webkitHidden || document.hidden){
+			//앱이설치된 경우
+			clearTimer();
+		}
+	}
+
+	
+	</script>
+	
+</body>
+</html>

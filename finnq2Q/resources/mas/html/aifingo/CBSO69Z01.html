@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>05금융기관연결_02은행카드(공인인증서)_web-[CBSO69Z01]</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="CBSO69Z01"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo add_sticky">
+
+		<section class="finins_link ">
+
+			<div class="sec_tab">
+				<div class="tab_wrap set_type2"> <!-- 3개 -->
+					<span class="tab on"><a href="#none">은행/카드</a></span>
+					<span class="tab"><a href="#none">증권사</a></span>
+				</div>
+			</div>
+			<div class="sec_choice add_dotline_under">
+				<ul class="cetichoice">
+					<li class="c">
+						<input type="radio" id="aa11" name="ryellow-default" ><label for="aa11"><span>공인인증서</span></label><br>
+					</li>
+					<li class="i">
+						<input type="radio" id="aa12" name="ryellow-default" checked="checked"><label for="aa12"><span>아이디/비밀번호</span></label><br>
+					</li>
+				</ul>
+
+			</div>
+			<div class="scroll" style="height:auto;"><!-- 전체 Viewport에서 탭부분 제외한 나머지 height -->
+				<div class="sec_fincategory">
+					<div class="help finbank">
+						<span>복수선택 가능</span><!-- 띄어쓰기 수정 2018-04-03 ock -->
+						<button class="btn_ico ico_circle_help" data-name="open_help"><span class="blind">도움말</span></button>
+						<div class="layer_wrap">
+							<p>SMS문자로 카드 결제 내역을 받는 경우 연결이 가능합니다.</p>
+						</div>
+					</div>
+					<div class="list" data-type="card">
+						<strong>카드</strong>
+						<ul class="btn_sellist set_type4">
+							<li><button class="on">하나카드</button></li>
+							<li><button class="">신한카드</button></li>
+							<li><button class="">KB카드</button></li>
+							<li><button class="">삼성카드</button></li>
+							<li><button class="">현대카드</button></li>
+							<li><button class="">롯데카드</button></li>
+							<li><button class="" disabled="disabled">우리카드</button></li>
+							<li><button class="">비씨카드</button></li>
+							<li><button class="">전북카드</button></li>
+						</ul>
+					</div>
+					<div class="list" data-type="bank">
+						<strong>은행</strong>
+						<ul class="btn_sellist set_type4">
+							<li><button class="on">KEB하나</button></li>
+							<li><button class="">국민</button></li>
+							<li><button class="">신한</button></li>
+							<li><button class="">우리</button></li>
+							<li><button class="">기업</button></li>
+							<li><button class="">SC제일</button></li>
+							<li><button class="">새마을금고</button></li>
+							<li><button class="">대구</button></li>
+							<li><button class="">전북</button></li>
+						</ul>
+					</div>
+				</div><!-- //sec_fincategory -->
+			</div>
+		</section>
+
+		<!-- sticky_wrap place -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply" disabled="disabled" >다음</button>
+		</div>
+
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		//$(".btn_sellist").find("button").removeClass();
+		$(this).toggleClass("on");
+	});
+
+	$('.expend').on('click','button.ico',function(){
+		//$(this).toggleClass('on').next().toggleClass('on');
+	});
+
+	var tt = $(window).height()-199; //탭과, 상단여백, 라디오 버튼 높이를 제외한 나머지 viewport height를 스크롤 높이로 가져감.
+	$('.scroll').css({height:tt})
+
+});
+</script>
+</body>
+</html>

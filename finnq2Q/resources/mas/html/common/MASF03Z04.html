@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>04회원_01본인인증_01개인정보입력_02EDD_주민번호입력_MASF03Z04</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+</head>
+<body>
+
+<div class="wrap">
+	<div id="contents" class="cashback_profile add_sticky white">
+		<section>
+
+			<div class="sec_title">
+				<h2>주민번호입력</h2>
+			</div>
+
+			<div class="sec_member_input mgt45">
+
+				<ul class="flex_wrap set_type1">
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" placeholder="이름 (성 + 이름)" class="" disabled="disabled" value="김핀크">
+						<p class="remark hide">이름을 입력해 주세요.</p>
+					</li>
+
+					<li class="input_wrap type_3">
+						<div class="item"><input type="number" data-name="inpFocus" placeholder="주민번호 앞자리" disabled value="880220"></div>
+						<div class="item mgt0">-</div>
+						<div class="item mgt0"><input type="number" data-name="inpFocus" placeholder="주민번호 뒷자리" value=""></div><!-- 에러시 inp_error 추가 -->
+						<p class="remark hide">주민번호를 입력해 주세요..</p>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 19.06.13 : 약관 타입 수정 : 클래스 추가, 변경 및 문구 변경 -->
+			<div class="agree_terms normal minus-mgt15">
+				<dl class="toggle_list line_bottom_zero">
+					<dt class="agree_wrap">
+						<input type="checkbox" id="chk0201" name="check_action" class="purple">
+						<label for="chk0201" name="check_action"><span class="txt depth02">개인정보 수집, 이용 동의</span></label>
+						<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+					</dt>
+					<!-- <dd style="display:block">
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0202" name="check_action" class="purple"><label for="chk0202" name="check_action"><span>개인정보 수집, 이용 동의</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</div>
+					</dd> -->
+				</dl>
+			</div>
+			<!-- //19.06.13 : 약관 타입 수정 : 클래스 추가, 변경 및 문구 변경 -->
+
+		</section><!-- // -->
+
+		<!-- 항목 입력 완료 시 Disable 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">인증하기</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>내 계좌간 이체 - 내 출금계좌 선택</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap"><!-- MASB06Z10 -->
+	<div id="contents" class="open-banking add_sticky">
+		<section>
+			<div class="sec_title line">
+				<h2 class="big txt_l"><strong>이체 실패</strong><br> 사유를 확인해 주세요</h2>
+
+				<dl class="account-desc">
+					<dt>출금계좌</dt>
+					<dd>KB국민 <em class="num">123123123119</em></dd>
+				</dl>
+			</div>
+
+			<div class="list__account-wrap scroll pt0">
+				<!--
+					이체 : 케이스에 따라서 클래스 분기
+					success : 성공  (V)
+					fail    : 실패  (X)
+					alert   : 그 외 (!)
+
+				 	스트로크 종료시 클래스 end 추가
+				 	( 이 부분은 추가로 설명 드리겠습니다.)
+				 		- 회색선이 필요한 경우 end gray
+				 		- 성공처럼 보라색선이 필요한 경우 end purple
+
+					EX : <li class="fail">
+					EX : <li class="success end purple">
+				-->
+				<!--
+					계좌 이름과 금액이 같이 노출될 경우에만 클래스 half 추가
+					list__account : <ul class="list__account half">
+				-->
+				<ul class="list__account half">
+
+					<li class="fail">
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+
+								<!-- 에러시 노출 -->
+								<p class="error-txt">[입금계좌 한도 초과] 출금된금액은 핀크계좌에 남아있습니다.</p>
+								<!-- //에러시 노출 -->
+							</div>
+						</div>
+					</li>
+					<li class="alert">
+						<div class="block--wrap">
+							<div class="ico__account bank_004">국민은행</div>
+
+							<div class="account__info">
+								<span class="account__info--name">마이너스통장</span>
+								<span class="account__info--money"><em class="num bold">1,200,000</em>원</span>
+							</div>
+							<div class="account__info--detail">
+								국민 <em class="num">52010202020222</em>
+
+								<!-- 에러시 노출 -->
+								<p class="error-txt">[처리중] 일시적으로 작동하지 않았습니다. 출금계좌 내역을 확인하거나 다시 시도해 주세요.</p>
+								<!-- //에러시 노출 -->
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sticky_wrap set_type1">
+				<button type="button" name="apply" class="btn btn_apply">확인</button>
+			</div>
+
+		</section>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	// 하단 메뉴 노출갯수에 따라 컨텐츠 자동 스크롤 (MAX5)
+	function menuScrollHeightCalc (){
+		var topMenuHeight = $(".sec_title");
+		var scrollContentHeight = parseInt(topMenuHeight.outerHeight(true), 10) + 18;
+
+		var windowH = $(window).height();
+		var compareListHeight = parseInt($(".list__account-wrap.scroll").outerHeight(), 10) + scrollContentHeight;
+
+		// wiidow 높이와 스크롤할 List 높이 비교
+		if (windowH < compareListHeight)
+		{
+			$(".list__account-wrap").css('top', scrollContentHeight +'px');
+
+			$('.list__account-wrap').scroll(function(event){
+				var _scrollTop = $(this).scrollTop();
+				if (_scrollTop > 0) {
+					$('.open-banking .sec_title.line').addClass('on');
+				}
+				else {
+					$('.open-banking .sec_title.line').removeClass('on');
+				}
+			});
+		}
+		else
+		{
+			$(".list__account-wrap").removeClass('scroll');
+		}
+	}
+	menuScrollHeightCalc ();
+
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04자산모니터링_01_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="CBSL69Z00_back"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo add_sticky">
+
+		<section class="assets_monitor ">
+			
+			<div class="sec_head">
+				<!-- account_info : 01_습관저금_조회, 04자산모니터링 -->
+				<div class="account_info">
+					<div class="money_tit">총액</div>
+					<div class="money_total">
+						<em class="cash bold">12,343,000</em><span>원</span>
+					</div>
+				</div>
+				<div class="alink_info add_topline">
+					<div class="tit">연결계좌</div>
+					<div class="total">
+						<em class="cash">12</em><span>개</span><!-- 2018-01-23 bold 삭제 ,phj -->
+					</div>
+				</div>
+
+
+			</div><!-- //sec_head -->
+			<div class="sec_history account_detail">
+	
+				<div class="account_summary">
+					<ul>
+						<li class="title"><strong>자유입출금 <em class="num">(3)</em></strong></li>
+						<li class="total"><em class="cash bold">367,000</em><span class="f_bold">원</span><button type="button" class="ico ico_arrow_down_type_a on"><span class="blind">자세히 보기</span></button></li><!-- expend시 on Class 추가 --> <!-- 2018-01-23 font bold 처리 phj -->
+					</ul>
+					<div class="expend">
+						<ul class="summary">
+							<li class="category">핀크 X 하나</li>
+						</ul>
+						<ul class="summary_list">
+							<li class="title"><strong>핀크계좌</strong><em class="num account_num">010000001234-77</em></li>
+							<li class="total"><em class="cash bold">134,000</em><span class="f_bold">원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li><!-- 2018-01-23 font bold 처리 phj -->
+						</ul>
+						<ul class="summary_list">
+							<li class="title alert"><strong>저축예금</strong><span class="ico ico_circle_alert"></span><em class="num account_num">010000001234-77</em></li>
+							<li class="total"><em class="cash bold">134,000</em><span class="f_bold">원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li><!-- 2018-01-23 font bold 처리 phj -->
+						</ul>
+						<ul class="summary">
+							<li class="category">KEB하나은행</li>
+						</ul>
+						<ul class="summary_list">
+							<li class="title"><strong>핀크계좌</strong><em class="num account_num">010000001234-77</em></li>
+							<li class="total"><em class="cash bold">99,000</em><span class="f_bold">원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li><!-- 2018-01-23 font bold 처리 phj -->
+						</ul>
+					</div><!-- //expend -->
+				</div>
+				<div class="account_summary">
+					<ul>
+						<li class="title"><strong>예금/적금 (<em class="num">1</em>)</strong></li>
+						<li class="total"><em class="cash bold">367,000</em><span class="f_bold">원</span><button type="button" class="ico ico_arrow_down_type_a on"><span class="blind">자세히 보기</span></button></li><!-- 2018-01-23 font bold 처리 phj -->
+					</ul>
+					<div class="expend">
+						<ul class="summary">
+							<li class="category">우리은행</li>
+						</ul>
+						<ul class="summary_list">
+							<li class="title"><strong>내집마련적금</strong><em class="num account_num">010000001234-77</em></li>
+							<li class="total"><em class="cash bold">134,000</em><span class="f_bold">원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li><!-- 2018-01-23 font bold 처리 phj -->
+						</ul>
+					</div><!-- //expend -->
+				</div>
+				<div class="account_summary">
+					<ul>
+						<li class="title"><strong>주식/펀드/CMA (<em class="num">1</em>)</strong></li>
+						<li class="total"><em class="cash bold">6,800,000</em><span class="f_bold">원</span><button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button></li><!-- 2018-01-23 font bold 처리 phj -->
+					</ul>
+				</div>
+				<div class="account_summary">
+					<ul>
+						<li class="title"><strong>외화</strong></li>
+						<li class="total"><button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button></li>
+					</ul>
+				</div>
+			</div><!-- //spend_detail -->
+
+		</section>
+		<!-- sticky_wrap place -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">+ 계좌연결</button>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$('.expend').on('click','button.ico',function(){
+		//$(this).toggleClass('on').next().toggleClass('on');
+	});
+});
+</script>
+</body>
+</html>

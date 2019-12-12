@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="305" height="447" viewBox="0 0 305 447">
+    <defs>
+        <path id="a" d="M0 289h202V0H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(0 120)">
+            <path fill="#731AED" d="M201 26.616C201 31.246 156.229 35 101 35 45.77 35 1 31.246 1 26.616c0-4.63 44.77-8.383 100-8.383 55.229 0 100 3.753 100 8.383"/>
+            <path stroke="#731AED" stroke-width="2" d="M201 26.616C201 31.246 156.229 35 101 35 45.77 35 1 31.246 1 26.616c0-4.63 44.77-8.383 100-8.383 55.229 0 100 3.753 100 8.383z"/>
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path fill="#731AED" d="M1 25.63h200V7H1z" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M1 25.685h200V7.055H1z" mask="url(#b)"/>
+            <path fill="#FFF" d="M201 6.589c0 3.087-44.771 5.589-100 5.589-55.23 0-100-2.502-100-5.59C1 3.504 45.77 1 101 1c55.229 0 100 2.503 100 5.589" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M201 6.589c0 3.087-44.771 5.589-100 5.589-55.23 0-100-2.502-100-5.59C1 3.504 45.77 1 101 1c55.229 0 100 2.503 100 5.589z" mask="url(#b)"/>
+            <path fill="#731AED" d="M186 77.216c0 4.63-38.056 8.384-85 8.384s-85-3.754-85-8.384c0-4.63 38.056-8.383 85-8.383s85 3.753 85 8.383" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M186 77.216c0 4.63-38.056 8.384-85 8.384s-85-3.754-85-8.384c0-4.63 38.056-8.383 85-8.383s85 3.753 85 8.383z" mask="url(#b)"/>
+            <path fill="#731AED" d="M16 76.63h170V58H16z" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M16 76.285h170v-18.63H16z" mask="url(#b)"/>
+            <path fill="#FFF" d="M186 57.189c0 3.087-38.056 5.589-85 5.589s-85-2.502-85-5.589c0-3.086 38.056-5.589 85-5.589s85 2.503 85 5.589" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M186 57.189c0 3.087-38.056 5.589-85 5.589s-85-2.502-85-5.589c0-3.086 38.056-5.589 85-5.589s85 2.503 85 5.589z" mask="url(#b)"/>
+            <path fill="#731AED" d="M171 127.816c0 4.63-31.34 8.384-70 8.384s-70-3.754-70-8.384c0-4.63 31.34-8.383 70-8.383s70 3.753 70 8.383" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M171 127.816c0 4.63-31.34 8.384-70 8.384s-70-3.754-70-8.384c0-4.63 31.34-8.383 70-8.383s70 3.753 70 8.383z" mask="url(#b)"/>
+            <path fill="#731AED" d="M31 126.885h140v-18.63H31z" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M31 126.885h140v-18.63H31z" mask="url(#b)"/>
+            <path fill="#FFF" d="M171 107.79c0 3.086-31.34 5.588-70 5.588s-70-2.502-70-5.589c0-3.087 31.34-5.589 70-5.589s70 2.502 70 5.59" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M171 107.79c0 3.086-31.34 5.588-70 5.588s-70-2.502-70-5.589c0-3.087 31.34-5.589 70-5.589s70 2.502 70 5.59z" mask="url(#b)"/>
+            <path fill="#731AED" d="M161 178.417c0 4.63-26.862 8.382-60 8.382-33.137 0-60-3.752-60-8.382s26.863-8.385 60-8.385c33.138 0 60 3.754 60 8.385" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M161 178.417c0 4.63-26.862 8.382-60 8.382-33.137 0-60-3.752-60-8.382s26.863-8.385 60-8.385c33.138 0 60 3.754 60 8.385z" mask="url(#b)"/>
+            <path fill="#731AED" d="M41 177.63h120V159H41z" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M41 177.485h120v-18.63H41z" mask="url(#b)"/>
+            <path fill="#FFF" d="M161 158.39c0 3.085-26.862 5.588-60 5.588-33.137 0-60-2.503-60-5.589 0-3.087 26.863-5.589 60-5.589 33.138 0 60 2.502 60 5.59" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M161 158.39c0 3.085-26.862 5.588-60 5.588-33.137 0-60-2.503-60-5.589 0-3.087 26.863-5.589 60-5.589 33.138 0 60 2.502 60 5.59z" mask="url(#b)"/>
+            <path fill="#731AED" d="M151 229.017c0 4.63-22.386 8.383-50 8.383s-50-3.753-50-8.383c0-4.63 22.386-8.384 50-8.384s50 3.754 50 8.384" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M151 229.017c0 4.63-22.386 8.383-50 8.383s-50-3.753-50-8.383c0-4.63 22.386-8.384 50-8.384s50 3.754 50 8.384z" mask="url(#b)"/>
+            <path fill="#731AED" d="M51 227.63h100V209H51z" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M51 228.085h100v-18.63H51z" mask="url(#b)"/>
+            <path fill="#FFF" d="M151 208.99c0 3.085-22.386 5.588-50 5.588s-50-2.503-50-5.589c0-3.087 22.386-5.589 50-5.589s50 2.502 50 5.59" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M151 208.99c0 3.085-22.386 5.588-50 5.588s-50-2.503-50-5.589c0-3.087 22.386-5.589 50-5.589s50 2.502 50 5.59z" mask="url(#b)"/>
+            <path fill="#731AED" d="M138.5 279.616c0 4.63-16.79 8.384-37.5 8.384s-37.5-3.754-37.5-8.384c0-4.63 16.79-8.384 37.5-8.384s37.5 3.754 37.5 8.384" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M138.5 279.384c0 4.63-16.789 8.384-37.5 8.384-20.71 0-37.5-3.754-37.5-8.384 0-4.63 16.79-8.384 37.5-8.384 20.711 0 37.5 3.754 37.5 8.384z" mask="url(#b)"/>
+            <path fill="#731AED" d="M63.5 278.685h75v-18.63h-75z" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M63.5 278.685h75v-18.63h-75z" mask="url(#b)"/>
+            <path fill="#FFF" d="M138.5 259.589c0 3.087-16.79 5.589-37.5 5.589s-37.5-2.502-37.5-5.59c0-3.085 16.79-5.588 37.5-5.588s37.5 2.503 37.5 5.589" mask="url(#b)"/>
+            <path stroke="#731AED" stroke-width="2" d="M138.5 259.589c0 3.087-16.79 5.589-37.5 5.589s-37.5-2.502-37.5-5.59c0-3.085 16.79-5.588 37.5-5.588s37.5 2.503 37.5 5.589z" mask="url(#b)"/>
+            <text fill="#FFF" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-.857" mask="url(#b)">
+                <tspan x="74.294" y="25">1.자동필터링</tspan>
+            </text>
+            <text fill="#FFF" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-.857" mask="url(#b)">
+                <tspan x="78.095" y="76">2.물건심사</tspan>
+            </text>
+            <text fill="#FFF" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-.857" mask="url(#b)">
+                <tspan x="82.851" y="126">3.인터뷰</tspan>
+            </text>
+            <text fill="#FFF" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-.857" mask="url(#b)">
+                <tspan x="78.283" y="177">4.현장실사</tspan>
+            </text>
+            <text fill="#FFF" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-.857" mask="url(#b)">
+                <tspan x="78.227" y="227">5.심사승인</tspan>
+            </text>
+            <text fill="#FFF" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-.857" mask="url(#b)">
+                <tspan x="77.843" y="277">6.대출승인</tspan>
+            </text>
+        </g>
+        <g transform="translate(10)">
+            <path stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M143.267 111.815c-2.78 1.15-7 1.657-12.267.628 2.193-2.676 2.942-5.976 2.248-9.9A26.874 26.874 0 0 1 129 88c0-14.912 12.088-27 27-27s27 12.088 27 27-12.088 27-27 27a26.88 26.88 0 0 1-12.733-3.185zM139.757 42.8c-1.46 1.547-4.227 3.038-8.236 3.568.9-2.578.439-5.278-1.385-8.102a18.416 18.416 0 0 1-5.128-7.743c-3.327-9.66 1.808-20.189 11.469-23.515 9.66-3.327 20.189 1.808 23.515 11.469 3.327 9.66-1.808 20.189-11.469 23.515a18.42 18.42 0 0 1-8.766.807z"/>
+            <text fill="#666" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-1">
+                <tspan x="146.19" y="85">성남 </tspan> <tspan x="141" y="99">다가</tspan> <tspan x="159.76" y="99">구</tspan>
+            </text>
+            <path stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M34.445 112.894c2.247 1.178 5.724 1.946 10.19 1.56-1.595-2.401-1.948-5.185-1.059-8.353a22.948 22.948 0 0 0 5.029-12.125c1.33-12.664-7.856-24.008-20.52-25.34-12.663-1.33-24.008 7.857-25.34 20.52-1.33 12.664 7.857 24.009 20.52 25.34 3.942.414 7.756-.19 11.18-1.602z"/>
+            <text fill="#666" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-1">
+                <tspan x="5.835" y="96.215">가평빌라</tspan>
+            </text>
+            <circle cx="135.5" cy="24.5" r="2.5" fill="#666"/>
+            <circle cx="142.5" cy="24.5" r="2.5" fill="#666"/>
+            <circle cx="149.5" cy="24.5" r="2.5" fill="#666"/>
+            <path stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M86.71 101.708c1.623 3.044 5.218 6.579 11.08 9.285-.218-4.324 1.667-8.19 5.655-11.595A30.857 30.857 0 0 0 116.08 89.22c10.063-13.85 6.992-33.237-6.859-43.3-13.85-10.064-33.237-6.993-43.3 6.858-10.064 13.85-6.993 33.237 6.858 43.3a30.864 30.864 0 0 0 13.93 5.629zM39.838 51.119c1.379.893 3.692 1.535 6.757 1.309-1.089-1.75-1.196-3.795-.322-6.134a14.69 14.69 0 0 0 2.912-7.153c.994-8.09-4.76-15.454-12.85-16.447-8.09-.993-15.453 4.76-16.446 12.85-.994 8.09 4.76 15.453 12.85 16.447 2.49.305 4.911-.028 7.099-.872z"/>
+            <path fill="#666" d="M34.51 44.086c-.404 0-.757-.13-1.057-.392-.303-.262-.453-.627-.453-1.099 0-.41.144-.76.432-1.047a1.44 1.44 0 0 1 1.058-.432c.418 0 .773.144 1.068.432.295.287.442.638.442 1.047 0 .465-.15.83-.447 1.093a1.522 1.522 0 0 1-1.043.398m-1.102-5.58l-.319-4.76A35.63 35.63 0 0 1 33 31.75c0-.55.144-.98.432-1.287.288-.308.666-.463 1.137-.463.57 0 .95.197 1.143.592.192.394.288.962.288 1.704 0 .437-.023.881-.07 1.33l-.426 4.9c-.047.582-.146 1.03-.298 1.34-.154.312-.405.468-.756.468-.357 0-.605-.152-.745-.453-.139-.301-.239-.76-.297-1.376"/>
+            <text fill="#666" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="12" font-weight="bold" letter-spacing="-1">
+                <tspan x="81.57" y="68">제주</tspan> <tspan x="67" y="82">타운하우</tspan> <tspan x="104.52" y="82">스</tspan>
+            </text>
+        </g>
+        <text fill="#731AED" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="16" font-weight="bold" letter-spacing="-1">
+            <tspan x="215" y="262">1주일 내외 소</tspan> <tspan x="290.616" y="262">요</tspan>
+        </text>
+        <path fill="#278DF5" d="M259 108v120-120z"/>
+        <path fill="#8232EF" d="M257.198 118v108.613H253L259.578 238l6.577-11.387h-4.198V118zM257.198 280v108.613H253L259.578 400l6.577-11.387h-4.198V280z"/>
+        <text fill="#666" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-size="14" font-weight="bold" letter-spacing="-1" transform="translate(103 108)">
+            <tspan x=".489" y="330">[ PF대출심사과정 ]</tspan>
+        </text>
+    </g>
+</svg>

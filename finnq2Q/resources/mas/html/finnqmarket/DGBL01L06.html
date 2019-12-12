@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>대출심사 | 비상금 대출</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal">팝업_대출신청중단</button>
+			</span>
+		</div>
+
+		<!-- 클래스 visible로 제어 -->
+		<div class="modal_wrap visible normal">
+			<div class="modal_content">
+				<div class="sec_title">
+					<h3 class="accent_txt">대출 신청이 완료되지 않았습니다.<br>여기서 중단하겠습니까?</h3>
+				</div>
+
+				<div class="sec_info round_box">
+					<p class="gray">
+						<em class="num">2019.07.10</em>(오늘) <em class="num">23</em>시 <em class="num">30</em>분까지<br>신청이 가능합니다.
+					</p>
+				</div>
+
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn_type_f">아니오</button></span>
+					<span class="item on"><button type="button" name="button" class="btn_type_f">네</button></span>
+				</div>
+
+			</div><!-- //modal_content -->
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+</body>
+</html>

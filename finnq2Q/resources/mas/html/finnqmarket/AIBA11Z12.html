@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08아트구매_작품구매완료_01_AIBA11Z12</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap"><!-- AIBA11Z12 -->
+	<!-- contents -->
+	<div id="contents" class="art_wrap add_sticky">
+
+		<!-- section -->
+		<section>
+			<div class="art_invest_result com_box_wrap">
+				<div class="img_review">
+					<div class="img_wrap">
+						<div class="mask">이미지 암막</div>
+						<img src="../../images/finnqmarket/temp_art_main_thumb.png" alt="">
+					</div>
+					<div class="art_info">
+						<p class="tit">마리킴 Mari Kim werdtews</p>
+						<p class="thumb">CinderellaCinderekka12</p>
+					</div>
+				</div>
+				<div class="invest_info">
+					<div class="invest_total">
+						<p class="tit">구매주수</p>
+						<div class="tot_info">
+							<p class="tot_count"><em class="num bold">50</em>주</p>
+							<p class="tot_money"><em class="num">500,000</em>원</p>
+						</div>
+					</div>
+					<div class="item wrap_count"><!-- 텍스트 카운트 기능 있는 input -->
+						<span class="item"><textarea cols="30" rows="3" data-name="inpFocus" placeholder="작품 구매 후기를 들려주세요." maxlength="30" data-length="30" class="inp_count"></textarea></span>
+						<p class="txt_count"><em>0</em>/<i></i></p><!-- inp_count의 maxlength값이 i에 들어감 -->
+						<button type="button" class="btn_clear">초기화</button>
+					</div>
+					<!-- <p class="inp_remark inp_remark_error2">내용을 입력해 주세요.</p> -->
+				</div>
+			</div>
+		</section>
+		<!-- //section -->
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">확인</button>
+		</div>
+	</div>
+	<!-- //contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+
+    // 19.05.31 인풋 필드 초기화 추가
+    $('.invest_info .btn_clear').on('click', function(){
+        $(this).parent().find('textarea').val('').attr({'placeholder' : "작품 구매 후기를 들려주세요."}).focus();
+        $('.invest_info .wrap_count .txt_count em').text('0')
+    });
+});
+</script>
+</body>
+</html>

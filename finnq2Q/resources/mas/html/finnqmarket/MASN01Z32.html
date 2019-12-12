@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>시스템 오류 공통 팝업_MASF01Z21</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+    <div id="contents">
+        <div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+            <span class="item">
+                <button type="button" class="open_modal" data-triger="MASN01Z32">비상금대출 약정서작성 심사중 팝업_MASN01Z32</button>
+            </span>
+        </div>
+
+        <div id="MASN01Z32" class="modal_wrap">
+            <div class="modal_content">
+                <div class="sec_title">
+                    <h3 class="accent_txt"><strong>대출 약정이 불가능합니다.</strong></h3>
+                </div>
+                <div class="scroll_wrap">
+                    <div class="sec_info round_box pop_error">
+                        <h4 class="account_copy">특정금융거래보고법등 관련 법률에<br class="ios320"> 따라 <br class="ios320 close">은행의 고객확인이<br class="ios320"> 필요합니다.
+                            <br class="ios320 close">가까운 KEB하나은행 영업점 방문 후<br class="ios320 close"> 다시 진행해 주세요.</h4>
+                    </div>
+                    <div class="flex_wrap set_type1">
+                        <span class="item on"><button type="button" name="button" class="btn_type_f">확인</button></span>
+                    </div>
+                </div><!-- //scroll_wrap -->
+            </div><!-- //modal_content -->
+        </div>
+    </div>
+    <!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

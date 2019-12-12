@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08핀고Chat_05성적표_01중간고사_web_CBSK69Z05</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+
+	<!-- # chart # -->
+		<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+		<!-- rMateChartH5 라이센스 -->
+		<!-- <script src="rMateChartH5/LicenseKey/rMateChartH5License.js" ></script> -->
+		<!-- 실제적인 rMateChartH5 라이브러리 > 수정불가-! -->
+		<script language="javascript" type="text/javascript" src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+		<script src="../../libs/rMateChartH5/JS/rMateGaugeChartH5.js"></script> <!-- 게이지 그래프 -->
+	<script>
+		// -----------------------차트 설정 시작-----------------------
+ 
+		// rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+		var chartVars10 = "&rMateOnLoadCallFunction=rMateChartOnLoad10";
+		 
+		// rMateChart 를 생성합니다.
+		// 파라메터 (순서대로) 
+		//  1. 차트의 id ( 임의로 지정하십시오. ) 
+		//  2. 차트가 위치할 div 의 id (즉, 차트의 부모 div 의 id 입니다.)
+		//  3. 차트 생성 시 필요한 환경 변수들의 묶음인 chartVars
+		//  4. 차트의 가로 사이즈 (생략 가능, 생략 시 100%)
+		//  5. 차트의 세로 사이즈 (생략 가능, 생략 시 100%)
+		rMateChartH5.create("chart10", "chartHolder10", chartVars10, "100%", "100%"); 
+		 
+		// 차트의 속성인 rMateOnLoadCallFunction 으로 설정된 함수.
+		// rMate 차트 준비가 완료된 경우 이 함수가 호출됩니다.
+		// 이 함수를 통해 차트에 레이아웃과 데이터를 삽입합니다.
+		// 파라메터 : id - rMateChartH5.create() 사용 시 사용자가 지정한 id 입니다.
+		function rMateChartOnLoad10(){
+			chart10.setLayout(layoutStr10);
+			chart10.setData(chartData10);
+		}
+		 
+		// 게이지 영역 범위
+		var trackValues = [0,20,40,60,80,100];
+		 
+		// 게이지 영역 라벨 //2018-04-13 레이블 값 변경 phj
+		var chartData10 = ["1&#xa;탁월","2&#xa;우수","3&#xa;평균","4&#xa;주의필요","5&#xa;경고"];
+ 
+		// 스트링 형식으로 레이아웃 정의
+		 layoutStr10 ='<rMateChart styleName="_chart10">'
+					 +'<NumberFormatter id="numFmt" precision="0"/>'
+					   +'<HalfCircularGauge valueChangeFunction="valueChangeFunc" frameType="flat" trackLabelStyleName="trackText" minimumAngle="180" maximumAngle="360" minimum="0" maximum="100" interval="20" minorInterval="20" formatter="{numFmt}" tickGap="0" padding="-40" showValueLabel="false" tickLabelStyleName="tickText" valueLabelStyleName="valueText" dataTipJsFunction="dataTipFunction" editMode="false" liveDragging="true" showDataTip="true" needleThickness="8" pointThickness="1" needleLengthRatio="0.35" needlePointStyle="steeple" needleBackLengthRatio="0" showTickLabels="false" tickLabelPosition="inside" showTrackColor="true" trackColors="[#e6dfff,#d1c4ff,#a086ff,#731aed,#5906b4]" trackAlphas="[1,1,1,1,1]" trackValues="[' + trackValues.toString() + ']" trackInnerRadius="0.55" trackOuterRadius="1" bounceAnimating="true" majorTickType="line" tickRadius="35" needleCoverRadius="3.4" trackLabels="[' + chartData10.toString() + ']" trackLabelsXOffset="[-0.1,0.1,0,-0.1,0.1]" trackLabelsYOffset="[0.2,-0.1,-0.2,-0.1,0.2]" needleTrackColorEnable="false">'
+						   +'<stroke>'
+							   +'<Stroke color="#222" weight="1" alpha="1"/>'
+						   +'</stroke>'
+						  +'<frameStroke>'
+							  +'<Stroke color="#ffffff" weight="0" alpha="0"/>'
+						 +'</frameStroke>'
+						 +'<tickStroke>'
+							   +'<Stroke color="#ffffff" weight="2"/>'
+						   +'</tickStroke>'
+						  +'<frameFill>'
+								+'<SolidColor color="#ffffff"/>'
+						  +'</frameFill>'
+						   +'<needleFill>'
+							   +'<SolidColor color="#222"/>'
+						  +'</needleFill>'
+						  +'<needleStroke>'
+							 +'<SolidColor color="#222"/>'
+						  +'</needleStroke>'
+							+'<needleCoverStroke>'
+								+'<Stroke color="#222" weight="2"/>'
+						   +'</needleCoverStroke>'
+					   +'</HalfCircularGauge>'
+					   +'<Style>'
+							+'.tickText{fontSize:15;}'
+							+'.trackText{fontSize:14;color:#ffffff;}'
+						+'</Style>'
+				   +'</rMateChart>';
+				  
+		// 게이지 데이터
+		var chartData10 = [30];
+		 
+		 
+		// 게이지 값 보관.
+		var gaugeValue;
+		 
+		// 게이지 value change 이벤트 핸들러 함수.
+		function valueChangeFunc(value)
+		{
+			gaugeValue = value;
+		}
+		 
+		// 확인
+		function commitValue()
+		{
+			var str = "",
+			   index = 0;
+		 
+		  while(true){
+				if(gaugeValue >= trackValues[index] && gaugeValue <= trackValues[index + 1]){
+				 str = trackLabels[index];
+				   break;
+			  }
+			   index++;
+			}
+		 
+		   str += " ( " + gaugeValue + " )";
+		   alert(str);
+		}
+		 
+		// 데이터팁(툴팁) 펑션.
+		function dataTipFunction(str)
+		{
+		   return "<font color='#FF2200'>값 : " + Math.round(str) + "</font>";
+		}
+ 
+
+// -----------------------차트 설정 끝 -----------------------
+
+	</script>
+</head>
+<body>
+<div class="wrap" id="CBSK69Z05"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item"><button type="button" class="btn btn_type_a open_modal" data-triger="CBSK69Z05" data-mtype="fullpop" data-bgclose="">08핀고Chat_05성적표_01중간고사</button></span>
+		</div>
+
+
+
+		<div id="CBSK69Z05" class="modal_wrap fullpop"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content fingo_report"><!-- 개별 팝업 Class pop_direct_input -->
+
+				<div class="scroll_wrap"><!-- height magicNumber -->
+					<div class="sec_suggest_title">
+						<p class="sub"><em class="num">12</em>월 중간평가 <em class="num">(12.01~12.15)</em></p><!-- 2018-04-13 문구 변경 phj -->
+						<p class="tit"><strong><em class="num">2</em>등급 우수</strong></p><!-- 2018-04-13 문구 변경 phj -->
+					</div>
+
+					<div class="sec_spend_graph">
+
+						<!-- 그래프 영역 -->
+						<div class="box_graph">
+							<!-- <img src="../../images/test/temp-graph3.png" alt=""> -->
+							<div class="_chart10">
+								<div class="chart_area">
+									<div class="average"><em class="num">20</em>대 여자 평균<i></i></div> <!-- 2018-04-02 문구 추가 phj --><!-- 2018-04-13 문구 변경 phj -->
+									<div class="chart type-gauge" id="chartHolder10"></div>
+								</div>
+							</div>
+						</div><!-- //그래프 영역 -->
+
+						<!--p class="spend"><span class="tag"><em class="num">1</em>등급에 가까울수록 주머니 사정이 어렵습니다.</span></p--><!-- 2018-04-13 문구 삭제 phj -->
+					</div>
+
+					<div class="sec_spend_summary">
+						<ul>
+							<li><p><em class="num">12</em>월 중간 소비</p><p><em class="num">1,230,000</em>원</p></li><!-- 2018-04-13 문구 변경 phj -->
+							<li><p><em class="num">20</em>대 여자 평균</p><p><em class="num">1,000,000</em>원</p></li><!-- 2018-04-13 문구 변경 phj -->
+						</ul>
+						<p class="talk">‘이렇게 소비하다간 월 말이 되기 전에 예산이 바닥 날것같아요. 자제가 필요해요.’</p>
+					</div>
+
+					<div class="sec_report_ranking">
+						<p class="spend_tit">과목별 석차</p>
+
+						<div class="list_ranking">
+							<div class="ranking">
+								<div class="intro">
+									<p class="item"><span class="num">1</span>
+									커피</p>
+									<p class="level"><em class="num">1</em>등급</p> <!-- 2018-02-19 등급 숫자에 num 클래스 추가--><!-- 2018-04-13 문구 변경 phj -->
+								</div>
+								<div class="graph me">
+									<cite>나</cite>
+									<div class="bar progress_wrap"><!-- test1 -->
+										<div class="_progress" data-value="10" id="ranking_1_1">
+											<i class="_bar style_01" data-value="2" data-rate="10">
+												<span class="icon"><span class="ico ico_me"></span></span>
+											</i>
+										</div>
+									</div>
+									<span class="total"><em class="num">220</em>만원 (<em class="num">25</em>건)</span><!-- 2018-02-19 금액 표기 방식 변경 -->
+								</div><!-- //graph me -->
+								<div class="graph friend">
+									<cite>또래</cite>
+									<div class="bar progress_wrap"><!-- test2 -->
+										<div class="_progress" data-value="100" id="ranking_1_2">
+											<i class="_bar style_01" data-value="0" data-rate="100">
+												<span class="icon"><span class="ico ico_friend"></span></span>
+											</i>
+										</div>
+									</div>
+									<span class="total"><em class="num">30</em>만원 (<em class="num">25</em>건)</span><!-- 2018-02-19 금액 표기 방식 변경 -->
+								</div><!-- //graph friend -->
+							</div><!-- //ranking -->
+
+							<div class="ranking">
+								<div class="intro">
+									<p class="item"><span class="num">2</span>
+									<span class="">쇼핑</span></p>
+									<p class="level"><em class="num">3</em>등급</p> <!-- 2018-02-19 등급 숫자에 num 클래스 추가--><!-- 2018-04-13 문구 변경 phj -->
+								</div>
+								<div class="graph me">
+									<cite>나</cite>
+									<div class="bar progress_wrap">
+										<div class="_progress" data-value="250000" id="ranking_2_1">
+											<i class="_bar style_01" data-value="250000" data-rate="15">
+												<span class="icon"><span class="ico ico_me"></span></span>
+											</i>
+										</div>
+									</div>
+									<span class="total"><em class="num">22</em>만원 (<em class="num">25</em>건)</span><!-- 2018-02-19 금액 표기 방식 변경 -->
+								</div><!-- //graph me -->
+								<div class="graph friend">
+									<cite>또래</cite>
+									<div class="bar progress_wrap">
+										<div class="_progress" data-value="250000" id="ranking_2_2">
+											<i class="_bar style_01" data-value="170000" data-rate="15">
+												<span class="icon"><span class="ico ico_friend"></span></span>
+											</i>
+										</div>
+									</div>
+									<span class="total"><em class="num">22</em>만원 (<em class="num">25</em>건)</span><!-- 2018-02-19 금액 표기 방식 변경 -->
+								</div><!-- //graph friend -->
+							</div><!-- //ranking -->
+
+							<div class="ranking">
+								<div class="intro">
+									<p class="item"><span class="num">2</span>
+									<span class="">택시비</span></p>
+									<p class="level"><em class="num">1</em>등급</p> <!-- 2018-02-19 등급 숫자에 num 클래스 추가--><!-- 2018-04-13 문구 변경 phj -->
+								</div>
+								<div class="graph me">
+									<cite>나</cite>
+									<div class="bar progress_wrap">
+										<div class="_progress" data-value="250000" id="ranking_3_1">
+											<i class="_bar style_01" data-value="250000" data-rate="15">
+												<span class="icon"><span class="ico ico_me"></span></span>
+											</i>
+										</div>
+									</div>
+									<span class="total"><em class="num">22</em>만원 (<em class="num">25</em>건)</span><!-- 2018-02-19 금액 표기 방식 변경 -->
+								</div><!-- //graph me -->
+								<div class="graph friend">
+									<cite>또래</cite>
+									<div class="bar progress_wrap">
+										<div class="_progress" data-value="250000" id="ranking_3_2">
+											<i class="_bar style_01" data-value="170000" data-rate="15">
+												<span class="icon"><span class="ico ico_friend"></span></span>
+											</i>
+										</div>
+									</div>
+									<span class="total"><em class="num">22</em>만원 (<em class="num">25</em>건)</span><!-- 2018-02-19 금액 표기 방식 변경 -->
+								</div><!-- //graph friend -->
+							</div><!-- //ranking -->
+
+						</div><!-- //list_ranking -->
+					</div><!-- //sec_spend_ranking -->
+
+					<div class="sec_report_attend">
+						<p class="spend_tit">출결사항</p>
+
+						<!-- 중간 -->
+						<p class="clearfix">
+							<span class="fl num">12/1~15</span>
+							<span class="fr rate">출석률 <em class="num">20%</em></span>
+						</p>
+						<div class="graph progress_wrap">
+							<div class="_progress" data-value="16" id="attend_01">
+								<i class="_bar style_01" data-value="16" data-rate="14">
+								<span class="txt"><em></em>일</span></i><!-- 2018-02-12 em 추가 -->
+							</div>
+						</div><!-- //중간 -->
+
+						<p class="talk">‘소비평가를 매일 할수록성적표가 정확해집니다.’</p>
+					</div><!-- //sec_spend_attend -->
+
+					<div class="sec_report_poll">
+						<p class="poll_tit"><i>Q.</i> 지금 살고있는 곳은 어디인가요?</p>
+						<ul>
+							<li><button type="button" name="button" class="btn btn_white_s">서울/경기</button></li>
+							<li><button type="button" name="button" class="btn btn_white_s">충청</button></li>
+							<li><button type="button" name="button" class="btn btn_white_s">강원</button></li>
+							<li><button type="button" name="button" class="btn btn_white_s">서울/경기</button></li>
+							<li><button type="button" name="button" class="btn btn_white_s">서울/경기</button></li>
+							<li><button type="button" name="button" class="btn btn_white_s">충청</button></li>
+							<li><button type="button" name="button" class="btn btn_white_s">강원</button></li>
+							<li><button type="button" name="button" class="btn btn_white_s">서울/경기</button></li>
+						</ul>
+						<div class="bul_guide"><p class="star_type indent">성적표는 양현아님과 비슷한 연령, 같은 성별과 비교하여 분석한 결과입니다.</p></div>
+					</div><!-- //sec_report_poll -->
+					
+				</div><!-- //scroll_wrap -->
+
+			</div><!-- //modal_content -->
+		</div>
+
+		
+	</div>
+	<!-- #contents -->
+</div>
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible');
+
+	//과목별 석차
+	drawProgress('#ranking_1_1');
+	drawProgress('#ranking_1_2');
+	drawProgress('#ranking_2_1');
+	drawProgress('#ranking_2_2');
+	drawProgress('#ranking_3_1');
+	drawProgress('#ranking_3_2');
+
+	drawProgress('#attend_01');
+
+	setTimeout(function(){
+		reportRanking();
+	}, 500);
+
+});
+
+
+</script>
+</body>
+</html>

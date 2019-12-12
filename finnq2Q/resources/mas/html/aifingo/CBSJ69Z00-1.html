@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02소비내역_01날짜별_02설정_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="CBSJ69Z00-1"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo">
+
+		<section class="spend_date">
+			
+			<div class="sec_head spend_common">
+				<div class="date_control">
+					<button type="button" name="button" class="btn ico_prev">previous month</button>
+					<strong class="date">2017.02</strong>
+					<button type="button" name="button" class="btn ico_next" disabled="disabled">next month</button><!-- Class: "end", disable둘다 화면표시는 같습니다 -->
+				</div>
+
+				<!-- account_info : 01_습관저금_조회 -->
+				<div class="account_info">
+					<div class="money_total">
+						<em class="cash bold">320,650</em><span>원</span>
+						<button class="btn_ico ico_circle_plus"><span class="blind">추가</span></button>
+					</div>
+				</div>
+
+				<div class="budget_info add_topline">
+					<div class="tit">예산</div>
+					<div class="money_total">
+						<em class="cash">600,000</em><span>원</span>
+						<button class="btn_ico ico_pen_edit"><span class="blind">편집</span></button>					
+					</div>
+				</div>
+			</div><!-- //sec_head -->
+
+			<div class="sec_tab">
+				<div class="tab_wrap set_type3"> <!-- 3개 -->
+					<span class="tab on"><a href="#none">날짜별</a></span>
+					<span class="tab"><a href="#none">분류별</a></span>
+					<span class="tab"><a href="#none">수단별</a></span>
+				</div>
+			</div>
+			<div class="sec_history spend_detail">
+				<!-- 반복문 -->
+				<ul class="summary">
+					<li class="date"><em class="date">11.25</em><span>(목)</span></li>
+					<li class="total"><em class="cash">134,000</em><span>원</span></li>
+				</ul>
+				<ul class="list_wrap">
+					<li>
+						<dl>
+							<dt>
+								<strong>스타벅스</strong>
+								<div><em class="cash">120,000</em><span >원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">20:53, 할부 1/3</strong></div>
+								<div><strong class="place">카드사/유형</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 만족</a></blockquote><!-- 링크 기능이 없으면 a태그 삭제해주세요. -->
+								<blockquote><a href="#"># 소분류</a></blockquote>
+								<blockquote><a href="#"># 고정소비</a></blockquote>
+							</div>
+							<button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button>
+
+							<div class="detail_set">
+								<div class="c">
+									<strong>카테고리</strong>
+									<div class="category"><span>카페/커피</span></div>
+								</div>
+								<div class="t">
+									<strong># 태그</strong>
+									<div class="hash">
+										<input type="text" data-name="inpFocus" placeholder="기억하고 싶은 것이 있나요?" />
+									</div>
+								</div>
+								<div class="s">
+									<strong>소비설정</strong>
+									<div class="choice">
+										<input type="checkbox" id="purpleTwo1"  name="test-img" checked="checked" class="purple"/><label for="purpleTwo1" name="test-img"><span>고정소비</span></label><br/>
+										<input type="checkbox" id="purpleTwo2"  name="test-img"  class="purple"/><label for="purpleTwo2" name="test-img"><span >소비내역에서 제외</span></label><br/>
+									</div><!-- //choice -->
+								</div>
+								<div class="flex_wrap set_type1"> <!-- 1개 -->
+									<span class="item"><button type="button" name="button" class="btn btn_type_e">확인</button></span>
+								</div>
+
+							</div><!-- //detail_set -->
+						</div>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<strong>CU을지로</strong>
+								<div><em class="cash">1,000</em><span >원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">20:07</strong><em></em></div>
+								<div><strong class="place">은행명/계좌</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 해시태그</a></blockquote>
+							</div>
+							<button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button>
+						</div>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<strong>올리브영</strong>
+								<div><em class="cash">13,000</em><span >원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">15:20</strong><em></em></div>
+								<div><strong class="place">현금</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 해시태그</a></blockquote>
+							</div>
+							<button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button>
+						</div>
+					</li>
+				</ul>
+				<!-- //반복문 -->
+
+				<ul class="summary">
+					<li class="date"><em class="date">11.24</em><span>(수)</span></li>
+					<li class="total"><em class="cash">25,000</em><span>원</span></li>
+				</ul>
+				<ul class="list_wrap">
+					<li>
+						<dl>
+							<dt>
+								<strong>어글리스토브</strong>
+								<div><em class="cash">120,000</em><span >원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">08:32</strong><em></em></div>
+								<div><strong class="place">핀크투뿔 신용</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 소비내역제외</a></blockquote>
+							</div>
+							<button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button>
+						</div>
+					</li>
+
+					<!-- 2018-02-19 소비내역 제외일때 추가 -->
+					<li class="except"> <!-- 클래스 except 가 있어야함 -->
+						<dl>
+							<dt>
+								<strong>알수없음</strong> <!-- 가맹점 알 수 없을때 -->
+								<div><em class="cash">120,000</em><span >원</span></div>
+							</dt>
+							<dd>
+								<div><strong class="date">08:32</strong><em></em></div>
+								<div><strong class="place">핀크투뿔 신용</strong></div>
+							</dd>
+						</dl>
+						<div class="expend">
+							<div class="htag">
+								<blockquote><a href="#"># 소비내역제외</a></blockquote>
+							</div>
+							<button type="button" class="ico ico_arrow_down_type_a"><span class="blind">자세히 보기</span></button>
+						</div>
+					</li><!-- //2018-02-19 소비내역 제외일때 추가 -->
+
+				</ul>
+
+			</div>
+		</section>
+		<!-- 하단 붙임 -->
+
+		<!-- sticky_wrap place -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$('.expend').on('click','button.ico',function(){
+		$(this).toggleClass('on').next().toggleClass('on');
+	});
+	$('.expend button.ico').click();
+
+	var topH = $(".sec_head").outerHeight();
+	var ViewH = $("section").outerHeight();
+	$(window).scroll(function(){
+	  if(ViewH >= 800) {
+		  var sticky = $('.sec_tab'),
+			  scroll = $(window).scrollTop();
+		  if (scroll >= topH) sticky.addClass('fixed');
+		  else sticky.removeClass('fixed');	  
+	  }
+	});
+
+});
+</script>
+</body>
+</html>

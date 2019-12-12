@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>01더보기_08비대면계좌개설_06개인정보입력</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.flex_wrap .tab_purple li a').on('click', function(){
+		$(this).parent().addClass('on').siblings().removeClass('on');
+
+		// 하단 버튼 활성화.
+		// $('.sticky_wrap .btn_type_apply').removeAttr('disabled');
+	});
+})
+</script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="add_sticky">
+		<div class="sec_ows_head finnq">
+			<button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button>
+			<h2 class="ows_title">KEB하나 비대면계좌 개설</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section class="">
+			<div class="sec_title">
+				<h2>개인정보 입력</h2>
+				<p class="guide_txt">개인정보를 입력해주세요.</p>
+			</div>
+
+			<div class="padding_add btm_add">
+				<div class="sec_input">
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>개인정보</strong>
+						</dt>
+						<dd class="flex_wrap set_type1">
+							<ul>
+								<li class="input_wrap zero">
+									<input type="email" data-name="inpFocus" placeholder="이메일 주소" class="">
+								</li>
+								<li class="input_wrap item address_input">
+									<textarea cols="30" rows="2" data-name="inpFocus" placeholder="집 주소 검색" maxlength="" class="inp_count"></textarea>
+									<input type="text" data-name=inpFocus placeholder="집 상세 주소" class="mt6">
+								</li>
+								<li class="input_wrap">
+									<input type="tel" data-name="inpFocus" placeholder="집 전화 (선택)" class="">
+								</li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>직업</strong>
+						</dt>
+						<dd>
+							<div class="item soft_select mt10">
+								<select data-name="inpFocus">
+									<option value="">직업 선택</option>
+									<option value="">급여소득자</option>
+									<option value="">전문직</option>
+									<option value="">공무원</option>
+									<option value="">연금소득자</option>
+									<option value="">주부</option>
+									<option value="">학생</option>
+									<option value="">기타</option>
+								</select>
+							</div>
+							<div class="bul_guide">
+								<p class="star_type indent">급여소득자, 전문직, 공무원, 자영업자는 직장정보를 입력하셔야 됩니다.</p>
+							</div>
+						</dd>
+					</dl>
+
+					<!-- 선택 항목에 따라 직장 정보 영역 노출 여부 다름 (급여소득자, 전문직, 공무원의 경우 직장정보 출력 -->
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>직장 정보</strong>
+						</dt>
+						<dd class="flex_wrap set_type1">
+							<ul>
+								<li class="input_wrap zero">
+									<input type="text" data-name="inpFocus" placeholder="직장명" class="">
+									<input type="text" data-name="inpFocus" placeholder="팀명" class="mt10">
+									<input type="text" data-name="inpFocus" placeholder="직위" class="mt10">
+								</li>
+								<li class="input_wrap item address_input">
+									<textarea cols="30" rows="2" data-name="inpFocus" placeholder="직장 주소 검색" maxlength="" class="inp_count"></textarea>
+									<input type="text" data-name="inpFocus" placeholder="직장 상세 주소" class="mt10">
+								</li>
+								<li class="input_wrap">
+									<input type="tel" data-name="inpFocus" placeholder="직장 전화 (선택)" class="">
+								</li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl class="input_wrap">
+						<dt class="input_tit">
+							<strong>우편물 수령처</strong>
+						</dt>
+						<!-- 옵션 추가 -->
+						<dd class="flex_wrap set_type1">
+							<ul class="tab_purple up_three">
+								<li class="on"><a href="#none">원치않음</a></li>
+								<li><a href="#none">집</a></li>
+								<li><a href="#none">직장</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div><!-- //sec_input kebhan -->
+			</div>
+		</section>
+
+		<!-- 모든 항목이 선택되면 disabled 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+	</div><!-- //contents -->
+</div>
+
+</body>
+</html>

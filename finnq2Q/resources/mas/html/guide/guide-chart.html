@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>rMate 그래프</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+		<!-- ## style ## -->
+		<link rel="stylesheet" href="../../css/ui.css" />
+		<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+		<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+		<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+
+		<style media="screen">
+			#GUIDE-CHART .chart_area { margin-bottom: 20px; }
+		</style>
+
+		<!-- # chart # -->
+		<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+		<!-- rMateChartH5 라이센스 -->
+		<!-- <script src="rMateChartH5/LicenseKey/rMateChartH5License.js" ></script> -->
+		<!-- 실제적인 rMateChartH5 라이브러리 > 수정불가-! -->
+		<script language="javascript" type="text/javascript" src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+		<script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+		<script>
+		// -----------------------차트 설정 시작 01 -----------------------
+		// @ rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+		// var chartVars01 = "&rMateOnLoadCallFunction=rMateChartOnLoad";
+		var chartVars02 = "&rMateOnLoadCallFunction=rMateChartOnLoad2";
+		var chartVars03 = "&rMateOnLoadCallFunction=rMateChartOnLoad3";
+		var chartVars04 = "&rMateOnLoadCallFunction=rMateChartOnLoad4";
+
+		// var chartVars05 = "&rMateOnLoadCallFunction=rMateChartOnLoad5";
+		// ##### chartVars05 --> 별도 페이지로 이동 #####
+
+		var chartVars06 = "&rMateOnLoadCallFunction=rMateChartOnLoad6";
+		var chartVars07 = "&rMateOnLoadCallFunction=rMateChartOnLoad7";
+
+		var chartVars09 = "&rMateOnLoadCallFunction=rMateChartOnLoad9";
+
+
+		// ------- 테스트용 임시데이터
+		// @ 차트 데이터
+		var chartData01 = [
+			{"Type" : "기본계좌", "Value":2208000},
+			{"Type" : "대기계정", "Value":80000},
+			{"Type" : "충전한도", "Value":0}
+		];
+
+		var chartData02 = [
+			{"Month":"1월", "Value" : 2520000},
+			{"Month":"2월", "Value" : 3000000},
+			{"Month":"3월", "Value" : 1370000}
+		];
+
+		var chartData03 = [
+			{"Type":"쇼핑과미용", "Value":50, "Legend":"<strong class='tit'>쇼핑과미용</strong><em class='num bold'>50%</em>"},
+			{"Type":"외식", "Value":30, "Legend":"<strong class='tit'>외식</strong><em class='num bold'>30%</em>"},
+			{"Type":"교육", "Value":15, "Legend":"<strong class='tit'>교육</strong><em class='num bold'>15%</em>"},
+			{"Type":"교통", "Value":10, "Legend":"<strong class='tit'>교통</strong><em class='num bold'>10%</em>"},
+			{"Type":"기타", "Value":5, "Legend":"<strong class='tit'>기타</strong><em class='num bold'>5%</em>"}
+		];
+
+		var chartData04 = [
+			{
+				"Month":"Jan",
+				"Type" : "수입",
+				"income": 10000,
+				"pay" : 10000
+			},
+			{
+				"Month":"Feb",
+				"Type" : "지출",
+				"income": 10000,
+				"pay" : 5000
+			}
+		];
+		var chartData06 = [
+			{"Day" : "1", "Cost" : 50000, "Total" : 50000},
+			{"Day" : "5", "Cost" : 150000, "Total" : 13000},
+			{"Day" : "10", "Cost" : 31000, "Total" : 21000},
+			{"Day" : "15", "Cost" : 139000, "Total" : 11000},
+			{"Day" : "18", "Cost" : 150000, "Total" : 87000},
+			{"Day" : "20", "Cost" : 13000, "Total" : 150000},
+			{"Day" : "25", "Cost" : 110000, "Total" : 180000},
+			{"Day" : "30", "Cost" : 250000, "Total" : 255000}
+		];
+
+		var chartData07 = [{
+			"Month" : "8월",
+			"service" : 3613000,
+			"goods" : 4130000,
+			// "income" : 18
+			},
+			{
+				"Month" : "9월",
+				"service" : 2613000,
+				"goods" : 1130000,
+				// "income" : 25
+			},{
+				"Month" : "10월",
+				"service" : 613000,
+				"goods" : 1430000,
+				// "income" : 23
+			},{
+				"Month" : "11월",
+				"service" : 1006130,
+				// "service" : 1150000,
+				"goods" : 515000,
+				// "income" : 17
+			},{
+					"Month" : "12월",
+					"service" : 613000,
+					"goods" : 250000,
+					// "income" : 21
+			},{
+					"Month" : "1월",
+					"service" : 500610,
+					"goods" : 113000,
+					// "income" : 10
+			}
+		];
+
+		var chartData09 = [{
+					"Month" : "1",
+					"Profit" : 40000,
+					"Cost" : 40000,
+					"Over" : 13000
+			},{
+					"Month" : "",
+					"Profit" : 65000,
+					"Cost" : 65000,
+					"Over" : 11000
+			},{
+					"Month" : "",
+					"Profit" : 11000,
+					"Cost" : 11000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 18000,
+					"Cost" : 18000,
+					"Over" : 60000
+			},{
+					"Month" : "5",
+					"Profit" : 26500,
+					"Cost" : 26500,
+					"Over" : 30000
+			},{
+					"Month" : "",
+					"Profit" : 18000,
+					"Cost" : 18000,
+					"Over" : 50000
+			},{
+					"Month" : "",
+					"Profit" : 18000,
+					"Cost" : 18000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 20000,
+					"Cost" : 20000,
+					"Over" : 30000
+			},{
+					"Month" : "",
+					"Profit" : 30000,
+					"Cost" : 30000,
+					"Over" : 20000
+			},{
+					"Month" : "10",
+					"Profit" : 50000,
+					"Cost" : 30000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 50000,
+					"Cost" : 30000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 30000,
+					"Cost" : 30000,
+					"Over" : 11000
+			},{
+					"Month" : "",
+					"Profit" : 30000,
+					"Cost" : 11000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 18000,
+					"Cost" : 18000,
+					"Over" : 40000
+			},{
+					"Month" : "15",
+					"Profit" : 26500,
+					"Cost" : 26500,
+					"Over" : 30000
+			},{
+					"Month" : "",
+					"Profit" : 18000,
+					"Cost" : 18000,
+					"Over" : 50000
+			},{
+					"Month" : "",
+					"Profit" : 60000,
+					"Cost" : 40000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 60000,
+					"Cost" : 20000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 30000,
+					"Cost" : 30000,
+					"Over" : 20000
+			},{
+					"Month" : "20",
+					"Profit" : 80000,
+					"Cost" : 40000,
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 40000,
+					"Cost" : 40000,
+					"Over" : 13000
+			},{
+					"Month" : "",
+					"Profit" : 40000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 40000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 50000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "25",
+					"Profit" : 30000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 20000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 10000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 10000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "",
+					"Profit" : 10000,
+					"Cost" : "",
+					"Over" : ""
+			},{
+					"Month" : "30",
+					"Profit" : 10000,
+					"Cost" : "",
+					"Over" : ""
+			}
+		];
+
+
+	// @ 차트 로드 - setData
+		function rMateChartOnLoad(){
+			// @ xml
+			// chart01.setLayoutURL(layoutURL);
+			chart01.setLayout(layoutStr01);
+			chart01.setData(chartData01);
+
+			// @ 데이터 체크 함수
+			checkData(chartData01); // 데이터가 존재하는지 판별한다.
+			// 0 이면 이미지 띄우는걸로 -
+
+			// # loading 이미지 노출 / 제거
+			// showPreloader();
+			// hidePreloader();
+		}
+
+		function rMateChartOnLoad2(){
+			chart02.setLayout(layoutStr02);
+			chart02.setData(chartData02);
+		}
+		function rMateChartOnLoad3(){
+			chart03.setLayout(layoutStr03);
+			chart03.setData(chartData03);
+		}
+
+		function rMateChartOnLoad4(){
+			chart04.setLayout(layoutStr04);
+			chart04.setData(chartData04);
+		}
+
+		// ##### rMateChartOnLoad5 --> 별도 페이지로 이동 #####
+
+		function rMateChartOnLoad6(){
+
+			// testDataX, testDataY 는 변경해주셔도 됩니다
+			chartData06[4].testDataX = "20"; // x축 데이터
+			chartData06[4].testDataY = 0; // y축 데이터
+
+			chartData06[5].testDataX = "20";
+			chartData06[5].testDataY = chartData06[6].Total;
+
+			chartData06[6].Cost = null;
+			chartData06[6].Total = null;
+
+			chartData06[7].Cost = null;
+			chartData06[7].Total = null;
+
+			chart06.setLayout(layoutStr06);
+			chart06.setData(chartData06);
+			// # loading 이미지 노출 / 제거
+			// showPreloader();
+			// hidePreloader();
+		}
+		function rMateChartOnLoad7(){
+			chart07.setLayout(layoutStr07);
+			chart07.setData(chartData07);
+		}
+
+		function rMateChartOnLoad9(){
+			chart09.setLayout(layoutStr09);
+			chart09.setData(chartData09);
+		}
+
+		// @ 차트 생성
+		// ##### rMateChartH1 --> MASB01M01 #####
+		rMateChartH5.create("chart02", "chartHolder02", chartVars02, "100%", "100%");
+		rMateChartH5.create("chart03", "chartHolder03", chartVars03, "100%", "100%");
+		rMateChartH5.create("chart04", "chartHolder04", chartVars04, "100%", "100%");
+
+		// rMateChartH5.create("chart05", "chartHolder05", chartVars05, "100%", "100%");
+		// ##### rMateChartH5 --> Guide_CHART_05 #####
+
+		rMateChartH5.create("chart06", "chartHolder06", chartVars06, "100%", "100%");
+		rMateChartH5.create("chart07", "chartHolder07", chartVars07, "100%", "100%");
+
+		rMateChartH5.create("chart09", "chartHolder09", chartVars09, "100%", "100%");
+
+		// @ 차트생성 - 함수내부에 onloadcallfunction 등록
+		// # 참고 - /rMateChartH5Web_v5.0_EN_trial/Samples/createOnLoadCallFunction.html
+		// @ chartVars 대신 creat함수 마지막 파라메터에 차트가 준비가 완료될 경우 호출할 함수를 설정합니다.
+		// @ itemClickJsFunction="chartClick"
+		// @ dataTipJsFunction="dataTipFunc"
+
+		// @Line
+		var layoutStr02 ='<rMateChart styleName="_chart02">'
+				+'<CurrencyFormatter id="cft" currencySymbol=" 원" precision="0" alignSymbol="right" />'
+				+'<Line2DChart showDataTips="true" mouseSensitivity="10" selectionMode="none" formatter="{cft}" dataTipJsFunction="dataTipFunc_02" gutterLeft="15" gutterRight="5" gutterTop="30" gutterBottom="40" >'
+					+'<horizontalAxis >'
+						+'<CategoryAxis categoryField="Month" padding="0.15" />'
+					+'</horizontalAxis>'
+					+'<verticalAxis>'
+						+'<LinearAxis id="vAxis" formatter="{cft}" interval="3000000" minimum="-1" maximum="3200000" />' /* maximum="200000"	interval="50000" */
+					+'</verticalAxis>'
+
+					+'<series>'
+							+'<Line2DSeries yField="Value"  showValueLabels="show" labelPosition="outside" showMinValueLabel="true" showLastValueLabel="show" labelJsFunction="labelFunc" fontSize="11" fontFamily="UbuntuB" itemRenderer="CircleItemRenderer" radius="3" fill="#6097f6" >'
+						// +'<Line2DSeries yField="Value" labelPosition="outside" itemRend/erer="CircleItemRenderer" radius="3" fill="#6097f6" >'
+							+'<lineStroke>'
+								+'<Stroke color="#6097f6" weight="2" />'
+							+'</lineStroke>'
+							+'<showDataEffect>'
+								+'<SeriesInterpolate duration="800"/> '
+							+'</showDataEffect>'
+						+'</Line2DSeries>'
+					+'</series>'
+					+'<verticalAxisRenderers >'
+						+'<Axis2DRenderer axis="{vAxis}" visible="false" includeInLayout="false" />'
+					+'</verticalAxisRenderers>'
+					// # 단계 선 추가-
+					+'<backgroundElements >'
+						// +'<GridLines  />'
+						+'<AxisMarker>'
+							+'<lines>'
+								+'<AxisLine value="0" lineStyle="normal" >'
+									+'<stroke>'
+										+'<Stroke color="#e5e5e5" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+								+'<AxisLine value="1100000" lineStyle="dashLine" dashLinePattern="2" >'
+									+'<stroke>'
+										+'<Stroke color="#e5e5e5" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+								+'<AxisLine value="2100000" lineStyle="dashLine" dashLinePattern="2" >'
+									+'<stroke>'
+										+'<Stroke color="#e5e5e5" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+								+'<AxisLine value="3000001" lineStyle="dashLine" dashLinePattern="2" >'
+									+'<stroke>'
+										+'<Stroke color="#e5e5e5" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+							+'</lines>'
+						+'</AxisMarker>'
+				+'</backgroundElements>'
+				// # 단계 선 추가-
+				+'</Line2DChart>'
+			+'</rMateChart>';
+
+		// @Pie
+		var layoutStr03 =	'<rMateChart styleName="_chart03">'
+				+'<Options>'
+					+'<Legend useVisibleCheck="false" legendAllCheck="true" position="right" direction="vertical" width="42%" color="#222" styleName="_legend" fontSize="16" paddingLeft="15" paddingRight="0"/>'
+				+'</Options>'
+				+'<CurrencyFormatter id="nft" precision="0" currencySymbol="%" alignSymbol="right" />'
+					+'<Pie2DChart formatter="{nft}" id="chart" innerRadius="0" showDataTips="false" selectionMode="none" explodable="false" itemClickJsFunction="chartClick_03">' /* dataTipDisplayMode="axis" selectionMode="single" */
+						+'<series>'
+							+'<Pie2DSeries formatter="{nft}" labelPosition="inside" nameField="Legend" field="Value" startAngle="270" renderDirection="clockwise" color="#fff" insideLabelRatio="0.6">'
+								+'<fills>'
+									// +'<SolidColor color="#feb464"/>' // 카테고리01
+									// +'<SolidColor color="#ef949e"/>' // 카테고리02
+									// +'<SolidColor color="#77c9d8"/>' // 카테고리03
+									// +'<SolidColor color="#bfa1f7"/>' // 카테고리04
+									// +'<SolidColor color="#54b8d5"/>' // 카테고리05
+									// +'<SolidColor color="#c5d256"/>' // 카테고리06
+									// +'<SolidColor color="#88c55b"/>' // 카테고리07
+									// +'<SolidColor color="#6dd0c1"/>' // 카테고리08
+									+'<SolidColor color="#ffdb15"/>' // 카테고리09
+									+'<SolidColor color="#9882fd"/>' // 카테고리10
+									+'<SolidColor color="#c7b9fa"/>' // 카테고리11
+									+'<SolidColor color="#eaddfd"/>' // 카테고리12 - 미분류
+									+'<SolidColor color="#c7b9fa"/>' // 카테고리13 - 그외
+								+'</fills>'
+								+'<showDataEffect>'
+									+'<SeriesInterpolate duration="1000"/>'
+								+'</showDataEffect>'
+						+'</Pie2DSeries>'
+					+'</series>'
+				+'</Pie2DChart>'
+			+'</rMateChart>';
+
+		// @stack 100%
+		var layoutStr04 = '<rMateChart styleName="_chart04">'
+
+				+'<CurrencyFormatter id="cft" currencySymbol=" 원" precision="0" alignSymbol="right" />'
+				// chartClick
+				+'<Column2DChart selectionMode="none" showDataTips="false" columnWidthRatio="0.45" fontFamily="LatoM" gutterLeft="0" gutterRight="0">'
+					+'<horizontalAxis>'
+						+'<CategoryAxis id="hAxis" categoryField="Type"/>'
+					+'</horizontalAxis>'
+					+'<verticalAxis>'
+						+'<LinearAxis id="vAxis1" labelJsFunction="labelFunc" padding="0.85"	/>'
+					+'</verticalAxis>'
+					+'<series>'
+						+'<Column2DSet type="overlaid" showTotalLabel="true" totalLabelJsFunction="totalFunc" >' /* showTotalLabel="true" totalLabelJsFunction="totalFunc"*/
+							+'<series>'
+									+'<Column2DSeries id="_CH04-c01" formatter="{cft}" yField="income" displayName="income" color="#444" >'
+										+'<fills>'
+											+'<SolidColor color="#c9f2e5"/>'
+											+'<SolidColor color="#f6f2ff"/>'
+										+'</fills>'
+									+'</Column2DSeries>'
+									+'<Column2DSeries id="_CH04-c02" formatter="{cft}" labelPosition="outside" vertical-align="top" yField="pay" displayName="pay" color="#444" >'
+										+'<fills>'
+											+'<SolidColor color="#b0e6d5"/>'
+											+'<SolidColor color="#c7baf3"/>'
+										+'</fills>'
+									+'</Column2DSeries>'
+							+'</series>'
+						+'</Column2DSet>'
+					+'</series>'
+					+'<horizontalAxisRenderers>'
+						+'<Axis2DRenderer axis="{hAxis}" />'
+					+'</horizontalAxisRenderers>'
+
+					+'<verticalAxisRenderers>'
+						+'<Axis2DRenderer axis="{vAxis1}" visible="false" />'
+					+'</verticalAxisRenderers>'
+
+					// # 단계 선 추가-
+					+'<backgroundElements>'
+						// +'<GridLines	/>'
+						+'<AxisMarker>'
+							+'<lines>'
+								+'<AxisLine value="1" lineStyle="normal"  >'
+									+'<stroke>'
+										+'<Stroke color="#e5e5e5" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+							+'</lines>'
+						+'</AxisMarker>'
+
+				+'</backgroundElements>'
+				+'<annotationElements>'
+					+'<AxisMarker>'
+						+'<lines>'
+							+'<AxisLine value="5000" label="" lineStyle="dashLine" dashLinePattern="2" labelAlign="left" color="#444" labelYOffset="-2" labelXOffset="-2" fontSize="12">'
+								+'<stroke>'
+									+'<Stroke color="#a7a7a7" weight="1"/>'
+								+'</stroke>'
+							+'</AxisLine>'
+						+'</lines>'
+					+'</AxisMarker>'
+				+'</annotationElements>'
+				// # 단계 선 추가-
+				+'</Column2DChart>'
+			+'</rMateChart>';
+
+
+
+		// # 20170704
+		// # font color
+		// 오늘까지 쓴돈 : #731aed
+		// 평균지출 : #999
+		// return class="LatoB" 로 설정하시면 bold로 지정됩니다.
+
+		var layoutStr06 =	'<rMateChart styleName="_chart06">'
+				+'<Options>'
+					+'<Legend position="top" direction="horizontal" useVisibleCheck="true" hAlign="left" color="#222" />'
+				+'</Options>'
+				+'<CurrencyFormatter id="cft" currencySymbol=" 원" alignSymbol="right" />'
+				+'<Area2DChart nullDataAtZero="true" showDataTips="false" selectionMode="none" showLastValueLabel="show" labelPosition="outside">' /*  gutterRight="0" dataTipJsFunction="dataTipFunc_06" */
+					+'<horizontalAxis>'
+						+'<CategoryAxis id="hAxis" categoryField="Day" padding="0" />'
+					+'</horizontalAxis>'
+					+'<horizontalAxisRenderers>'
+						+'<Axis2DRenderer placement="bottom" axis="{hAxis}" borderStyle="dashLine" />'
+					+'</horizontalAxisRenderers>'
+					+'<verticalAxis>'
+						+'<LinearAxis id="vAxis" formatter="{cft}" interval="50000" minimum="0" />'
+					+'</verticalAxis>'
+						+'<verticalAxisRenderers>'
+							+'<Axis2DRenderer axis="{vAxis}"/>'
+					   +'</verticalAxisRenderers>'
+						+'<series>'
+							+'<Area2DSet >'
+									+'<series>'
+										+'<Area2DSeries yField="Total" form="curve" displayName="오늘까지 쓴 돈"  >'
+											+'<showDataEffect>'
+												//+'<SeriesInterpolate duration="1000"/>'
+												+'<SeriesSlide direction="up" duration="1000"/>'
+											+'</showDataEffect>'
+											+'<areaStroke>'
+													+'<Stroke color="#731aed" weight="1"/>'
+											+'</areaStroke>'
+											+'<areaFill>'
+												+'<LinearGradient angle="90">'
+													+'<entries>'
+														+'<GradientEntry color="#731aed" ratio="0" alpha="0.5" />'
+														+'<GradientEntry color="#fff" ratio="1" />'
+													+'</entries>'
+												+'</LinearGradient>'
+											+'</areaFill>'
+										+'</Area2DSeries>'
+
+										+'<Area2DSeries yField="Cost" form="curve" displayName="평균 지출(2개월)">'
+											+'<showDataEffect>'
+												//+'<SeriesInterpolate duration="1000"/>'
+												+'<SeriesSlide direction="up" duration="700"/>'
+											+'</showDataEffect>'
+											+'<areaStroke>'
+												+'<Stroke color="#c8c8c8" weight="1" />'
+											+'</areaStroke>'
+											+'<areaFill>'
+												+'<LinearGradient angle="90">'
+													+'<entries>'
+														+'<GradientEntry color="#c8c8c8" ratio="0" alpha="0.5"/>'
+														+'<GradientEntry color="#fff" ratio="1"/>'
+													+'</entries>'
+												+'</LinearGradient>'
+											+'</areaFill>'
+										+'</Area2DSeries>'
+									+'</series>'
+								+'</Area2DSet>'
+								+'<Area2DSeries verticalAxis="{vAxis}" sortOnXField="false" sortOnYField="false" xField="testDataX" yField="testDataY">'
+									+'<areaStroke>'
+										+'<Stroke color="#fff" weight="1"/>'
+									+'</areaStroke>'
+									+'<areaFill>'
+										+'<SolidColor color="#fff" />'
+									+'</areaFill>'
+								+'</Area2DSeries>'
+							+'</series>'
+						+'<verticalAxisRenderers >'
+							+'<Axis2DRenderer axis="{vAxis}" visible="false" includeInLayout="false"/>'
+						+'</verticalAxisRenderers>'
+
+					+'</Area2DChart>'
+			+'</rMateChart>';
+
+
+		// @고정비 얼마썼어- linear 아님.
+		var layoutStr07 = '<rMateChart styleName="_chart07">'
+		+'<Options>'
+			+'<Legend position="top" direction="horizontal" useVisibleCheck="true" hAlign="left" color="#222" verticalGap="20" />'
+		+'</Options>'
+				+'<NumberFormatter id="numfmt" useThousandsSeparator="true"/>'
+				// dataTipJsFunction="dataTipFunc_07"
+				+'<Column2DChart showDataTips="false" dataTipDisplayMode="axis" selectionMode="none" labelPosition="outside" dataTipJsFunction="dataTipFunc_07" columnWidthRatio="0.45" gutterLeft="0" gutterRight="0" >'
+					+'<horizontalAxis>'
+						+'<CategoryAxis categoryField="Month" padding="0.5" />'
+					+'</horizontalAxis>'
+					+'<verticalAxis>'
+						+'<LinearAxis id="vAxis" formatter="{numfmt}" minimum="-100000" />'
+					+'</verticalAxis>'
+					+'<series>'
+						+'<Column2DSet type="stacked" showTotalLabel="false" totalLabelJsFunction="totalFunc2">'
+							+'<series>'
+							/*	Column2D Stacked 를 생성시에는 Column2DSeries를 최소 2개 정의합니다 */
+								+'<Column2DSeries labelPosition="none" yField="goods" displayName="고정비" showValueLabels="false" columnWidthRatio="0.45"  color="#ffffff">'
+									+'<showDataEffect>'
+										+'<SeriesInterpolate/>'
+									+'</showDataEffect>'
+									+'<fill>'
+										+'<SolidColor color="#8848ff"/>'
+									+'</fill>'
+								+'</Column2DSeries>'
+								+'<Column2DSeries labelPosition="outside" yField="service" displayName="변동비" showValueLabels="[6]" color="#ffffff" >'
+									+'<showDataEffect>'
+										+'<SeriesInterpolate/>'
+									+'</showDataEffect>'
+									+'<fill>'
+										+'<SolidColor color="#b3a1f5"/>'
+									+'</fill>'
+								+'</Column2DSeries>'
+							+'</series>'
+						+'</Column2DSet>'
+					+'</series>'
+					+'<verticalAxisRenderers>'
+						+'<Axis2DRenderer axis="{vAxis}" visible="false" includeInLayout="false" />'
+					+'</verticalAxisRenderers>'
+					// # 단계 선 추가-
+					+'<backgroundElements >'
+						// +'<GridLines  />'
+						+'<AxisMarker>'
+							+'<lines>'
+								+'<AxisLine value="0" lineStyle="normal" >'
+									+'<stroke>'
+										+'<Stroke color="#e0e0e0" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+								+'<AxisLine value="2000000" lineStyle="dashLine" dashLinePattern="2" >'
+									+'<stroke>'
+										+'<Stroke color="#eee" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+								+'<AxisLine value="4000000" lineStyle="dashLine" dashLinePattern="2" >'
+									+'<stroke>'
+										+'<Stroke color="#eee" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+								+'<AxisLine value="6000000" lineStyle="dashLine" dashLinePattern="2" >'
+									+'<stroke>'
+										+'<Stroke color="#eee" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+								+'<AxisLine value="8000000" lineStyle="dashLine" dashLinePattern="2" >'
+									+'<stroke>'
+										+'<Stroke color="#eee" weight="1" />'
+									+'</stroke>'
+								+'</AxisLine>'
+							+'</lines>'
+						+'</AxisMarker>'
+				+'</backgroundElements>'
+				// # 단계 선 추가-
+				+'</Column2DChart>'
+			+'</rMateChart>';
+
+
+
+		// # 예산대비소비금액09- Combination 2D Multi+Area+Line
+		var layoutStr09 = '<rMateChart styleName="_chart09">'
+				+'<Options>'
+					+'<Legend position="top" direction="horizontal" useVisibleCheck="true" hAlign="left" color="#222" verticalGap="20" />'
+				+'</Options>'
+				 +'<NumberFormatter id="numFmt" useThousandsSeparator="true" />'
+					+'<Combination2DChart showDataTips="false">'
+			   /*
+			 Combination2D 차트 생성시에 필요한 Combination2DChart 정의합니다
+			 showDataTips : 데이터에 마우스를 가져갔을 때 나오는 Tip을 보이기/안보이기 속성입니다
+			   */
+					+'<horizontalAxis>'
+						+'<CategoryAxis categoryField="Month" padding="0.2"/>'
+					+'</horizontalAxis>'
+					+'<verticalAxis>'
+						+'<LinearAxis id="vAxis1" interval="20000" maximum="80000" formatter="{numFmt}" labelJsFunction="axisLabelFunc"/>'
+					+'</verticalAxis>'
+						+'<series>'
+					/* Combination2D Multi-Sereis 를 넣고자 하는 series를 여러개 정의합니다 */
+						+'<Area2DSeries yField="Profit" form="segment" displayName="예산">'
+							+'<areaStroke>'
+								+'<Stroke color="#c8c8c8" weight="1"/>'
+							+'</areaStroke>'
+							+'<areaFill>'
+								+'<LinearGradient angle="90">'
+									+'<entries>'
+										+'<GradientEntry color="#c8c8c8" ratio="0" alpha="0.5"/>'
+										+'<GradientEntry color="#fff" ratio="1"/>'
+									+'</entries>'
+								+'</LinearGradient>'
+							+'</areaFill>'
+							+'</Area2DSeries>'
+							+'<Column2DSet type="stacked" showTotalLabel="false" >'
+			 /*
+			 Combination 차트에서는 Column차트와 Bar차트를 사용할때 Column3DSet(Colum2DSet),Bar3DSet(Bar2DSet)을 사용합니다
+			   예제로 Column3DSeries를 사용하려 할 때는 Column3DSet을 정의 후 +'<series>'와+'<Column3DSet>'을 정의합니다
+			 Column3DSet(Colum2DSet),Bar3DSet(Bar2DSet)의 Type은 일반 Type과 동일 합니다
+			   그러나 기본 Type은 overlaid입니다
+				*/
+							+'<series>'
+								+'<Column2DSeries yField="Cost" columnWidthRatio="5" displayName="소비" maxColumnWidth="1.5" showValueLabels="false" labelPosition="none">'
+									+'<showDataEffect>'
+										+'<SeriesInterpolate/>'
+									+'</showDataEffect>'
+									+'<fill>'
+										+'<SolidColor color="#731aed"/>'
+									+'</fill>'
+								+'</Column2DSeries>'
+								+'<Column2DSeries yField="Over" columnWidthRatio="5"  displayName="" maxColumnWidth="1.5" showValueLabels="false" labelPosition="none">'
+									+'<fill>'
+										+'<SolidColor color="#b3a1f5"/>'
+									+'</fill>'
+									+'<showDataEffect>'
+										+'<SeriesInterpolate/>'
+									+'</showDataEffect>'
+								+'</Column2DSeries>'
+							+'</series>'
+						+'</Column2DSet>'
+						+'</series>'
+
+						//style로 정의한 axisLabel
+						+'<verticalAxisRenderers>'
+							 +'<Axis2DRenderer axis="{vAxis1}" styleName="axisLabel"/>'
+						 +'</verticalAxisRenderers>'
+
+						// # 단계 선 추가-
+						+'<backgroundElements >'
+							// +'<GridLines  />'
+							+'<AxisMarker>'
+								+'<lines>'
+									+'<AxisLine value="0" lineStyle="normal" >'
+										+'<stroke>'
+											+'<Stroke color="#e0e0e0" weight="0" />'
+										+'</stroke>'
+									+'</AxisLine>'
+									+'<AxisLine value="20000" lineStyle="dashLine" dashLinePattern="2">'
+										+'<stroke>'
+											+'<Stroke color="#eee" weight="1" />'
+										+'</stroke>'
+									+'</AxisLine>'
+									+'<AxisLine value="40000" lineStyle="dashLine" dashLinePattern="2">'
+										+'<stroke>'
+											+'<Stroke color="#eee" weight="1" />'
+										+'</stroke>'
+									+'</AxisLine>'
+									+'<AxisLine value="60000" lineStyle="dashLine" dashLinePattern="2">'
+										+'<stroke>'
+											+'<Stroke color="#eee" weight="1" />'
+										+'</stroke>'
+									+'</AxisLine>'
+									+'<AxisLine value="80000" lineStyle="dashLine" dashLinePattern="2">'
+										+'<stroke>'
+											+'<Stroke color="#eee" weight="1" />'
+										+'</stroke>'
+									+'</AxisLine>'
+								+'</lines>'
+							+'</AxisMarker>'
+					+'</backgroundElements>'
+					// # 단계 선 추가-
+
+				+'</Combination2DChart>'
+
+			+'</rMateChart>';
+
+			//Chart 9 파라메터 설명
+			function axisLabelFunc(id, value){
+				var s;
+				if (value == 0){
+					s = 0;
+				} else {
+					s = ui.numHan(String(value));
+				}
+				return '<font color="#999">' + s + '</font>';
+			}
+
+			//숫자에 천단위 콤마 찍어 반환하는 함수.
+			function insertComma(n) {
+				var reg = /(^[+-]?\d+)(\d{3})/;   // 정규식
+				n += "";
+				while (reg.test(n))
+				n = n.replace(reg, '$1' + "," + '$2');
+
+				return n;
+			}
+
+
+
+
+
+
+		// -----------------------함수-----------------------
+		// @ 데이터 체크
+
+		/* @ 데이터 없는 경우 대응 : checkData() - hasNoData(false) 이미지로 대체 ---*/
+		// hasNoData(false); 데이터가 존재하지 않으므로 차트의 기본 구조도 보이지 않아야 한다면
+		// false로 주어 차트 전체의 visible을 false로 설정합니다.
+		// hasNoData(true); 데이터가 존재하지 않아도 차트의 기본 구조는 보여야 한다면 true로 주어
+		// visible을 true로 설정합니다.
+		// 데이터가 없을 경우 hasNoData함수를 실행하여 메세지창을 출력한다.
+
+		// 프리로더를 보이게 합니다.
+			function showPreloader(){
+				document.getElementById("chart01").showAdditionalPreloader();
+			}
+			// 프리로더를 제거합니다.
+			function hidePreloader(){
+				document.getElementById("chart01").removeAdditionalPreloader();
+			}
+
+		function checkData(data){
+			if( data.length <= 0 ) {
+				alert('no data');
+				// document.getElementById('chart01').hasNoData(true);
+			} else {
+				return data.length;
+			}
+		}
+
+		function _stackLabelFunc(id,value){
+			return value + "%";
+		}
+
+		function labelFunc(id,value){
+			return  '<font name="num">' + insertComma(value) + '원' + '</font>';
+			// return value + "%";
+		}
+
+		// 스택 수치 합 사용자 정의 함수
+		function totalFunc(index, data, value){
+			if( index == 6 )
+				// return value + " 원" ;
+				return  '<font name="LatoB">' + insertComma(value) + '</font>';
+			return "";
+		}
+
+		// 스택 수치 합 사용자 정의 함수
+		function totalFunc2(index, data, value){
+			if(index == 6)
+				return  '<font name="LatoB">' + insertComma(value) + '</font>';
+			return "";
+		}
+
+		//숫자에 천단위 콤마 찍어 반환하는 함수.
+		function insertComma(n) {
+			var reg = /(^[+-]?\d+)(\d{3})/; // 정규식
+			n += "";
+			while (reg.test(n))
+			n = n.replace(reg, '$1' + "," + '$2');
+			return n;
+		}
+
+		// @ max value
+		function upFunc(seriesId, index, data, values){
+			return '<font name="LatoB" color="#6097f6">' + values[1] + '원' + '</font>';
+		}
+		// @ min value
+		function downFunc(seriesId, index, data, values){
+			return '<font name="LatoB" color="#6097f6">' + values[1] + '원' + '</font>';
+		}
+
+		// @ chart click
+		function chartClick_03(seriesId, displayText, index, data, values) {
+			return '<font name="LatoB" color="#444">' + values[1] + '원' + '</font>';
+		}
+
+		// @ chart click
+		function chartClick_04(seriesId, displayText, index, data, values) {
+			return '<font color="#444">' + values[1] + '원' + '</font>';
+		}
+
+		function averFunc(seriesId, index, data, values) {
+			return '<font color="#6097f6">평균 ' + values + '원' + '</font>';
+		}
+
+		/*		------------------------- 데이터팁 사용자 정의 함수 -----------------------------------
+			챠트에서 showDataTips="true" 설정 후 마우스 오버 시 보이는 데이터팁 정의
+			layout XML 에서 Chart 속성을 넣을때 dataTipJsFunction를 주고, 만든 javascript 함수명을 넣어줍니다
+			예) <Column3DChart showDataTips="true" dataTipJsFunction="dataTipFunc">
+			[ # 파라메터 설명 # ]
+				* seriesId : layout XML에서 부여한 series의 id가 있을 경우, 해당 id를 보내줍니다.
+				* seriesName : 시리즈의 displayName 으로 정의한 시리즈 이름을 보내줍니다.
+				* index : 해당 아이템의 인덱스.
+				* xName : X 축에 displayName 을 정의하였다면 X축의 displayName을 보내줍니다.
+				* yName : Y 축에 displayName 을 정의하였다면 Y축의 displayName을 보내줍니다.
+				* data : 해당 item의 값을 표현하기 위해 입력된 data(입력된 데이타중 해당 row(레코드) 자료입니다)
+				* values : 해당 item의 값 (배열로 전달되며, 챠트 종류에 따라 아래와 같이 들어옵니다.)
+						Bar2D, Bar3DSeries							0:x축값 1:y축값
+						Column2D, Columnd3DSeries				0:x축값 1:y축값
+						Area2DSeries										0:x축값 1:y축값
+						Bubble3DSeries									0:x축값 1:y축값 2:radius값
+						Line2DSeries										0:x축값 1:y축값
+						Candlestick2DSeries							0:x축값 1:open값 2:close값 3:high값 4:low값
+						Pie2D, Pie3DSeries							0:값 1:퍼센트값 2:nameFiled명
+						Bar2D, Column2DWingSeries				0:x축값 1:y축값
+						Histogram2D, Histogram3DSeries	0:x축값 1:y축값
+						TreeMapSeries										0:weight값 1:name값
+						BoxPlotSeries										0:upper값 1:median값 2:lower값 3:min값 4:hidden값
+						Vector2DSeries									0:degree값 1:velocity값 2:meter값
+						WordCloudSeries									0:weight값 1:text값
+		*/
+		function dataTipFunc(seriesId, seriesName, index, xName, yName, data, values){
+			return '<font color="#444">' + values[1] +'</font>';
+		}
+
+		function dataTipFunc_01(seriesId, seriesName, index, xName, yName, data, values){
+			return '<font color="#444">' + values[0] + ' 원'+'</font>';
+		}
+
+		function dataTipFunc_02(seriesId, seriesName, index, xName, yName, data, values){
+
+			return '<font name="LatoR" color="#6097f6">' + values[1] + ' 원'+ '</font>';
+		}
+
+		function dataTipFunc_04(seriesId, seriesName, index, xName, yName, data, values){
+			// seriesid 로 value 값 가져오기
+			var val;
+			if(seriesId === '_CH04-c01') {
+				// console.log(data.income);
+				val = data.income;
+				return '<font color="#444">' + val + '원' +'</font>';
+			} else {
+				// console.log(data.pay);
+				val = data.pay;
+				return '<font color="#444">' + val + '원' +'</font>';
+			}
+		} //. dataTipFunc_04
+
+
+		// # 20170607 - 데이타툴팁-커스터마이징
+		//팁-라벨bg-컬러 별도 구현
+		function dataTipFunc_06(seriesId, seriesName, index, xName, yName, data, values) {
+			var data_cnt = checkData(chartData06);
+			data_cnt -= 1;
+			var tip_table = "<table cellpadding='0' cellspacing='1'>"
+				 +"<tr>"
+					//  +"<td><p><strong class='tit01'>평균대비</strong><em class='noB'>" + insertComma(values[1]) + "</em><span>원 절약</span></p></td>"
+					// +"<td><p><strong class='tit01'>평균대비</strong><em class='noB'>+ " + insertComma(values[1]) + "</em></p></td>"
+					+"<td><p><em class='LatoM'>"+insertComma(values[1]) + "</em>원 절약</p></td>"
+					+"</tr><tr>"
+				+"</tr></table>";
+
+			switch (index) {
+				case 0:
+					return "<div class='_tip_left'>"+tip_table+"</div>";
+					break;
+
+				case data_cnt:
+					return "<div class='_tip_right'>"+tip_table+"</div>";
+					break;
+				default:
+					return "<div class='_tip'>"+tip_table+"</div>";
+			}
+		} //. dataTipFunc_06
+
+
+		function dataTipFunc_07(seriesId, seriesName, index, xName, yName, data, values) {
+			var data_cnt = checkData(chartData07);
+			data_cnt -= 1;
+
+			var len, mwx, class_name;
+			// console.log('data_cnt ' + data_cnt + ' / index : ' + index );
+			var tip_table = "<table cellpadding='0' cellspacing='1'>"
+			 +"<tr>"
+			 +"<td><p><strong class='tit01'>변동비</strong><em class='num'>" + insertComma(values[1]) + " </em></p></td>"
+			 +"</tr><tr>"
+			 +"<td><p><strong class='tit01'>고정비</strong><em class='num'>" + insertComma(values[2]) + " </em></p></td>"
+			+"</tr></table>";
+
+			len = insertComma(values[1]).length;
+			// console.log(len);
+			mwx = 50 + parseInt(len)*5;
+
+			switch (index) {
+				case 0:
+					return "<div class='_tip_left' style='max-width:"+mwx+"px;'>"+tip_table+"</div>";
+					break;
+				case 1:
+					return "<div class='_tip_left2' style='max-width:"+mwx+"px;'>"+tip_table+"</div>";
+					break;
+				case 2:
+					return "<div class='_tip_left3' style='max-width:"+mwx+"px;'>"+tip_table+"</div>";
+					break;
+				case 3:
+					class_name = "_tip_right3";
+					if(len>9) { class_name = "_tip_right4"; }
+					return "<div class='"+class_name+"' style='max-width:"+mwx+"px;'>"+tip_table+"</div>";
+					break;
+				case 4:
+					return "<div class='_tip_right2' style='max-width:"+mwx+"px;'>"+tip_table+"</div>";
+					break;
+				case data_cnt:
+					return "<div class='_tip_right' style='max-width:"+mwx+"px;'>"+tip_table+"</div>";
+					break;
+				default:
+					return "<div class='_tip' style='max-width:"+mwx+"px;'>"+tip_table+"</div>";
+			}
+		} //. dataTipFunc_07
+
+		// -----------------------차트 설정 끝 -----------------------
+		</script>
+
+	</head>
+
+	<body id="GUIDE-CHART">
+		<!-- Wrapper -->
+		<div class="wrap">
+
+			<!-- contents -->
+			<div id="contents">
+				<section class="guide_wrap" >
+
+					<div class="sec_chart">
+
+
+						<!-- # 그래프 03 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">채팅용_카테고리별_얼마썼어</h3>
+
+						<!-- 채팅용 -->
+						<div class="chart_area">
+							<div class="chart type-pie" id="chartHolder03"></div>
+						</div>
+						<!-- //채팅용 -->
+
+
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">페이지용_카테고리별_얼마썼어</h3>
+						<div class="_chart10 item on" style="margin-bottom:10px; ">
+							<button type="button" name="button" class="btn btn_type_c" onclick="window.open('../aifingo/CBSJ69Z07.html');">핀고-지금까지 소비-분류별 소비 리스트</button>
+						</div>
+						<div class="item on" style="margin-bottom:20px; ">
+							<button type="button" name="button" class="btn btn_type_c" onclick="window.open('../aifingo/CBSJ69Z09.html');">핀고-지금까지 소비-수단별 소비 리스트</button>
+						</div>
+
+
+						<!-- # 그래프 08 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">고정비_얼마썼어 -  페이지 이동</h3>
+						<div class="_chart08 item on" style="margin-bottom:20px; ">
+							<button type="button" name="button" class="btn btn_type_c" onclick="window.open('guide-chart-08.html');">chart08</button>
+						</div>
+
+
+						<!-- # 그래프 06 개발에서 작업 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">아직도 그냥 쓰니 - </h3>
+						<p style="font-size:14px;">Finnq 1 버전에서 현재 사용하는 걸로 컬러값만 바꿔서 다시작업 해야할것같습니다. </p>
+						<div class="_chart06">
+							<div class="chart_area">
+								<div class="chart type-area" id="chartHolder06"></div>
+							</div>
+						</div>
+
+						<!-- # 그래프 07 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">고정비 얼마썼어?</h3>
+						<div class="_chart07">
+							<div class="chart_area">
+								<div class="chart type-colum" id="chartHolder07"></div>
+							</div>
+						</div>
+
+						<!-- # 그래프 08 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">핀고 - 02소비내역_02분류별_02상세</h3>
+						<div class="_chart08 item on" style="margin-bottom:20px; ">
+							<button type="button" name="button" class="btn btn_type_c" onclick="window.open('../aifingo/CBSJ69Z08.html');">CBSJ69Z08</button>
+						</div>
+
+
+						<!-- # 그래프 09 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">예산대비 소비금액</h3>
+						<div class="_chart09">
+							<div class="chart_area">
+								<div class="chart type-combination2D" id="chartHolder09"></div>
+							</div>
+						</div>
+
+						<!-- # 그래프10 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">핀고 - 핀고챗 중간고사, 기말고사</h3>
+						<div class="_chart10 item on" style="margin-bottom:20px; ">
+							<button type="button" name="button" class="btn btn_type_c" onclick="window.open('../aifingo/CBSK69Z05.html');">중간고사</button>
+						</div>
+						<div class="_chart10 item on" style="margin-bottom:10px; ">
+							<button type="button" name="button" class="btn btn_type_c" onclick="window.open('../aifingo/CBSK69Z06.html');">기말고사</button>
+						</div>
+
+						<!-- # 그래프 02 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">사용안함</h3>
+						<div class="_chart02 ">
+							<div class="chart_area">
+								<div class="chart type-Line2D" id="chartHolder02"></div>
+							</div>
+						</div>
+
+
+						<!-- # 그래프 04 -->
+						<h3 style="height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">사용안함</h3>
+						<div class="_chart04 ">
+							<div class="chart_area">
+								<div class="chart type-stack" id="chartHolder04"></div>
+							</div>
+						</div>
+
+						<!-- # 그래프 05 Combination 2D + Line -->
+						<h3 style=" height:50px; text-align:center; font-size:20px; line-height:50px; color:#6097f6;">사용안함</h3>
+						<!-- 얼마나남나 -->
+						<div class="_chart05 item on" style="margin-bottom:20px; ">
+							<button type="button" name="button" class="btn btn_type_c" onclick="window.open('guide-chart-05.html');">chart05</button>
+						</div>
+
+
+					</div><!-- //sec_chart -->
+				</section><!-- //section : analysis_wrap -->
+			</div><!-- //contents -->
+		</div><!-- //wrap -->
+
+		<!--// # chart # -->
+		<!-- ## script ## -->
+		<script src="../../libs/jquery-2.2.4.min.js"></script>
+		<script src="../../libs/ui.js"></script>
+		<script src="../../libs/contents.js"></script>
+		<!--// # chart # -->
+	</body>
+</html>

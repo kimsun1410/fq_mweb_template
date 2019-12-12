@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>도전핀크벨</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</style>
+</head>
+<body>
+<div class="wrap">
+
+    <div id="contents">
+        <section class="event finnq-quiz">
+            <div class="visual">
+                <img src="../../images/common/img_event_finnqbell.png" alt="핀크 퀴즈 이벤트. 핀크벨을 울려라! 총 천만원이 걸린 퀴즈레이스" />
+            </div>
+
+            <div class="detail-wrap">
+                <p class="title">Quiz!</p>
+                <p class="detail">핀크 비상금대출은 ‘고백했는데 승인당했어!’ 란<br> 문구로 인기를 끌고 있는데요.</p>
+                <p class="detail sub">대구은행과 함께한<br> <strong>핀크 비상금대출의 출시일은 O월 O일이다. <br>OO에 들어갈 숫자는?</strong></p>
+
+                <div class="box-content">
+                    <div class="cont-info">
+                        <span class="ico hint">Hint</span>
+                        <p class="tit">네이버에 <strong>‘핀크 비상금’</strong>을 검색해보세요.</p>
+                        <p class="tit blue"><a href="https://www.naver.com/" class="ico arrow2">네이버 바로가기</a></p>
+                    </div>
+                    <div class="input_wrap">
+                        <dl>
+                            <dt class="input_tit">
+                                <strong>정답 입력하기</strong>
+                            </dt>
+                            <dd class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+                                <input type="number" data-name="inpFocus" placeholder="정답은 숫자만, 띄어쓰기 없이" data-placeholder="정답은 숫자만, 띄어쓰기 없이">
+                                <p class="remark hide">정답을 입력해 주세요.</p><!-- 에러일때 hide를 빼주세요. -->
+                            </dd>
+                            <dd class="item">
+                                <button type="button" class="btn-send">정답 제출</button>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+    /*
+    $(window).load(function(){
+        init();
+    });
+
+    $(window).scroll(function(){
+        var tg = $('.boxing_layout.mgm .gray_box .img_box').offset().top,
+            scroll = $(window).scrollTop() + 420;
+        if (scroll > tg) {
+            $('.boxing_layout.mgm .gray_box .img_box').addClass('action');
+        }
+    });
+
+    // 상단 Animate
+    function init() {
+        setTimeout(function(){
+            $('.mgm.event2019').addClass('start');
+        },30);
+
+        setTimeout(function(){
+            $('.mgm.event2019').addClass('action');
+        },1200);
+
+        setTimeout(function(){
+            $('.mgm.event2019').addClass('end');
+        },2000);
+    }
+
+    // 문자 카운트
+    var _inpVal,
+        _limit = 40,
+        _length = 0;
+
+    function textCount() {
+        $('.inp_counts').bind('keyup input', function (e) {
+            var attrMax = $(this).attr("maxlength");
+            if ($(this).is("textarea")){
+                if (typeof attrMax !== typeof undefined && attrMax !== false) {
+                    $(this).attr("maxlength", "");
+                }
+            }
+            var count = $(this).parents('.wrap_count').find('.txt_count em');
+            _length = $(this).val().length;
+
+            limitEventVal(_length);
+            count.text(_length);
+        });
+    }
+
+    function limitEventVal(length){
+        if (length > _limit){
+            length = _limit;
+            inpVal = $('.inp_counts').val().substring(0,_limit);
+            $('.inp_counts').val(inpVal);
+        }
+    }
+
+    $(this).on('click', '.quick_msg button', function(){
+        var cont = $('.msg_form .inp_counts').val();
+
+        //클릭 버튼 텍스트, 개수
+        $('.msg_form .inp_counts').val('');
+        var thisText = cont + $(this).text();
+        $('.msg_form .inp_counts').val(thisText);
+
+        limitEventVal(thisText.length)
+        $('.msg_form .inp_counts').trigger('keyup');
+    });
+
+    textCount();
+    */
+});
+</script>
+</body>
+</html>

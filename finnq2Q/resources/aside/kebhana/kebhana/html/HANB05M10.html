@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">`
+<head>
+<meta charset="utf-8">
+<title>T핀크적금 | 영업점정보입력</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.sec_select').on('click','[data-name=acc-button]', function(event){
+            $(this).addClass("ico_dot").parent('li').siblings().find('[data-name=acc-button]').removeClass("ico_dot");
+        });
+    })
+</script>
+<body>
+<div class="wrap">
+
+    <div id="contents">
+
+        <div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+            <span class="item">
+                <button type="button" class="open_modal" data-triger="HANB05M10">T핀크적금 | 영업점정보입력 선택팝업</button>
+            </span>
+        </div>
+
+        <div id="HANB05M10" class="modal_wrap pop_acc_select visible normal"><!-- visible normal -->
+            <div class="modal_content">
+                <div class="sec_title">
+                    <h3 class="accent_txt">직원을 선택하세요</h3>
+                </div>
+                <div class="scroll_wrap" style=""><!-- height magicNumber -->
+                    <div class="sec_select kebhana">
+                        <ul class="flex_wrap set_type1">
+                            <li class="item"><button type="button" name="button" data-name="acc-button" class="ico_dot btn_type_d"><strong>김하나</strong><em class="num">1010215</em></button></li>
+                            <li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>김하나</strong><em class="num">1010215</em></button></li>
+                            <li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>김하나</strong><em class="num">1010215</em></button></li>
+                            <li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>김하나</strong><em class="num">1010215</em></button></li>
+                            <li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>김하나</strong><em class="num">1010215</em></button></li>
+                            <li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>김하나</strong><em class="num">1010215</em></button></li>
+                            <li class="item"><button type="button" name="button" data-name="acc-button" class="btn_type_d"><strong>김하나</strong><em class="num">1010215</em></button></li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="sec_text_btn">
+                        <div class="btn_text01">
+                            <a href="#none" class="ico_arrow">직접입력</a>
+                        </div>
+                    </div> 삭제  -->
+
+                    <div class="flex_wrap set_type2">
+                        <span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
+                        <span class="item on"><button type="button" name="button" class="close_modal btn_type_f">확인</button></span>
+                    </div>
+                </div><!-- //scroll_wrap -->
+            </div>
+        </div><!-- //modal_wrap -->
+
+    </div><!-- //#contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+    $('.modal_wrap').addClass('visible normal');
+    function scrollMake() {
+        scrH = $(window).height()*0.5;
+        console.log(scrH);
+        $('.pop_acc_select .sec_select').css({'height':scrH});
+    } scrollMake();
+
+});
+</script>
+</body>
+</html>

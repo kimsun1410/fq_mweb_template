@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>내 계좌간 이체 - 내 출금계좌 선택</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list gray"><!-- CBSL69Z12-1 -->
+	<div id="contents" class="open-banking my-account__list">
+		<section>
+			<div class="sec_title txt_l">
+				<h2>핀크에서 만든 <strong>계좌 모아보고</strong><br>
+				편하게 관리하세요 :)</h2>
+			</div>
+
+			<div class="gray__box-wrap pt20">
+				<p class="update__info-wrap">
+					<button type="button" class="btn-refresh">오늘 <em class="num">13:20</em> 기준</button>
+				</p>
+				<div class="list__account-wrap">
+					<!-- 은행 아이콘은 개발에서 사용하는 코드와 동일
+						방법(클래스) : bank_ + 코드명
+
+						002 : KDB산업은행
+						003 : IBK기업은행
+						004 : 국민은행
+						007 : 수협중앙회
+						011 : 농협은행
+						020 : 우리은행
+						023 : SC제일은행
+						027 : 한국시티은행
+						031 : 대구은행
+						032 : BNK부산은행
+						034 : 광주은행
+						035 : 제주은행
+						037 : 전북은행
+						039 : 경남은행
+						064 : 산림조합중앙회
+						050 : 상호저축은행
+						045 : 새마을금고중앙회
+						048 : 신협중앙회
+						071 : 우체국
+						081 : KEB하나은행
+						089 : 케이뱅크
+						088 : 신한은행
+						090 : 카카오은행
+						050 : 상호저축은행
+
+						054 : HSBC
+						055 : 도이치뱅크
+						057 : JP모간
+						060 : BOA은행
+						061 : BNP파리바
+						062 : 중국공상
+
+						209 : 유안타증권
+						218 : 현대증권
+						222 : 한양증권
+						223 : 리딩투자증권
+						224 : BNK투자증권
+						225 : IBK투자증권
+						226 : KB투자증권
+						227 : KTB투자증권
+						238 : 미래에셋대우
+						240 : 삼성증권
+						243 : 한국투자증권
+						247 : NH투자증권
+						261 : 교보증권
+						262 : 하이투자증권
+						263 : HMC
+						264 : 키움증권
+						265 : 이베스트투자증권
+						266 : SK증권
+						267 : 대신증권
+						268 : 솔로몬 투자
+						269 : 한화투자증권
+						270 : 하나금융투자
+						278 : 신한금융투자
+						279 : DB금융증권
+						280 : 유진투자증권
+						287 : 메리츠종합금융증권
+						290 : 부국증권
+						291 : 신영증권
+						292 : 케이프투자증권
+						294 : 펀드온라인코리아
+
+						EX ) bank_004 : 국민은행
+						예외) finnq는 클래스 finnq
+						예외) 습관저금은 클래스 market1
+					-->
+					<!--
+						계좌 이름과 금액이 같이 노출될 경우에만 클래스 half 추가
+						list__account : <ul class="list__account half">
+					-->
+					<ul class="list__account bank-list">
+						<li>
+							<a href="#">
+								<div class="ico__account bank_031">대구은행</div>
+								<div class="account__info">
+									<p><span class="account__info--name">대구은행</span></p>
+									<p class="account__info--detail">KEB하나 <em class="num">01000001234-137</em></p>
+								</div>
+								<div class="account__info--money">
+									<em class="num bold">1,200,000</em>원
+								</div>
+							</a>
+						</li>
+						<li>
+							<!-- A 링크가 없는 경우 Div : 클래스 / block-wrap -->
+							<div class="block-wrap">
+								<div class="ico__account bank_004">국민은행</div>
+								<div class="account__info">
+									<p><span class="account__info--name">국민은행</span></p>
+									<p class="account__info--detail">KEB하나 <em class="num">01000001234-137</em></p>
+								</div>
+								<div class="account__info--money">
+									<em class="num bold">1,200,000</em>원
+								</div>
+							</div>
+						</li>
+						<li>
+							<!--
+								습관저금은 계좌 상세 정보가 없음. /
+								계좌 이름 : account__info에 클래스 single 추가
+							 -->
+							<a href="#">
+								<div class="ico__account market1">습관저금</div>
+								<div class="account__info single">
+									<p><span class="account__info--name">습관저금</span></p>
+								</div>
+								<div class="account__info--money">
+									<em class="num bold">1,200,000</em>원
+								</div>
+							</a>
+						</li>
+					</ul>
+
+					<p class="star_type mgt20">해당 은행 점검 또는 오류일 경우, 리스트에 보이지 않을 수 있습니다.</p>
+				</div>
+				<!-- //list__account-wrap -->
+			</div>
+			<!-- //gray__box-wrap -->
+
+		</section>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 화면 새로고침
+	$('.btn-refresh').on('click', function(){
+		var _this = $(this);
+		var status = $(this).hasClass('loading');
+
+		if (!status) {
+
+			_this.addClass('loading');
+
+			// 임시 : Ajax 호출 종료 시 실행
+			setTimeout(function(){
+				_this.removeClass('loading');
+			},2000);
+		}
+	});
+});
+</script>
+</body>
+</html>

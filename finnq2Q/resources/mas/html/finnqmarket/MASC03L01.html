@@ -1,0 +1,150 @@
+<!-- //************************************************
+    decrition by : kim tae yang
+    update : 2019-11-01
+    원스탑 혁신금융대출
+************************************************// -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">
+    <title>17_혁신금융대출_10T신용등급_03상세_03실패_MASC02T02-2_web</title><!-- 임시 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20190918" />
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- 하단 버튼 scrollup down시 class="show" 추가 -->
+            <div id="contents" class="one_stop add_sticky">
+                <!-- 상품상세 페이지 class="view" -->
+                <section class="view">
+                   <article>
+                       <div class="load_box">
+                           <div class="round">
+                               <div class="hide_note">
+                                    <!--<div class="note slide01">
+                                        <div class="note_box"></div>
+                                        <div class="note_topline"></div>
+                                    </div>-->
+                                    <div class="note slide01">
+                                        <div class="inner_box">
+                                            <div class="note_box">
+                                                <svg class="checkmark" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                                            </div>
+                                        </div>
+                                        <div class="note_topline"></div>
+                                    </div>
+                               </div>
+                           </div>
+                           <div class="motion_box">
+                               <div class="progress"><div class="check_bar"></div></div>
+                               <div class="text">
+                                    <div class="slide">
+                                        <p>홈택스 및 건강보험 공단에서</p>
+                                        <p class="comma">정보를 확인중 입니다<span>&middot;</span><span>&middot;</span><span>&middot;</span></p>
+                                    </div>
+                               </div>
+                           </div>
+                       </div>
+                   </article>
+                </section>
+            </div>
+            <!-- #contents -->
+        </div>
+        
+        <script src="../../libs/jquery-2.2.4.min.js"></script>
+        <script src="../../libs/ui.js"></script>
+        <script src="../../libs/contents.js"></script>
+        <script type="text/javascript">//<![CDATA
+            var timer = 0,
+                perc = 0,
+                timeTotal = 10000,
+                timeCount = 1,
+                cFlag;
+            $(document).ready(function(){
+                function updateProgress(percentage) {
+                    var x = (percentage/timeTotal)*100,
+                        y = x.toFixed(3);
+                    $('.check_bar').css("width", x + "%");
+                }
+                function animateUpdate() {
+                    if(perc < timeTotal) {
+                        perc++;
+                        updateProgress(perc);
+                        timer = setTimeout(animateUpdate, timeCount);
+                        if(perc >= 3000){
+                            clearTimeout(timer);
+                            complete();
+                            perc = 0;
+                        }
+                    }
+                } 
+                if (cFlag == undefined) {
+                    clearTimeout(timer);
+                    perc = 0;
+                    cFlag = true;
+                    animateUpdate();
+                }
+                else if (!cFlag) {
+                    cFlag = true;
+                    animateUpdate();
+                }
+                else {
+                    clearTimeout(timer);
+                    cFlag = false;
+                }
+                function complete(){
+                    $('.check_bar').css({"width": "100%","-webkit-transition": ".8s ease"});  
+                }           
+                var elem = $('.slide'),
+                    slideAelements = $('.note');
+                    slideAelements1 = $('.note.slide01');
+                    slideBelements = $('.go_btn');
+                    i = 0;
+                    j = 0;
+
+                function gettimer() {
+                    $(elem).each(function(index) {
+                        if ( i == index ) {
+                            $(this).addClass("active");
+                        } else if ( i == $(elem).length) {
+                            $(this).addClass("active");
+                        }else {
+                            //$(this).removeClass("active");
+                        }	
+                    });
+                    i++;
+                }gettimer();
+                window.setInterval(gettimer,  15000);
+
+                function slidenote() {
+                    $(slideAelements).each( function(index) {
+                        $(this).addClass("on");
+                        setTimeout(function () {
+                            $(slideAelements).removeClass("on");
+                            //$(slideAelements1).removeClass('is-visible');
+                        }, 4000);
+                    }); 
+                }
+                slidenote();
+                window.setInterval(function () {
+                    slidenote();
+                    slideAelements1.removeClass('is-visible');
+                    slideAelements1.find('.note_box').removeClass('is-visible');
+                    animateSlideB();
+                }, 5000);
+                
+                function animateSlideB() {
+                    slideAelements1.each(function (i) {
+                        setTimeout(function () {
+                            slideAelements1.addClass('is-visible');
+                        }, 1000);
+                    });
+                    setTimeout(function () {
+                        slideAelements1.find('.note_box').addClass('is-visible');
+                    }, 2800);
+                }animateSlideB();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02소비내역_02분류별_01_web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+
+	<!-- 2018-03-13 차트 스크립트 추가 phj -->
+	<!-- # chart # -->
+	<link rel="stylesheet" href="../../libs/rMateChartH5/Assets/Css/rMateChartH5.css"/>
+	<!-- rMateChartH5 라이센스 -->
+	<!-- <script src="rMateChartH5/LicenseKey/rMateChartH5License.js" ></script> -->
+	<!-- 실제적인 rMateChartH5 라이브러리 > 수정불가-! -->
+	<script language="javascript" type="text/javascript" src="../../libs/LicenseKey/rMateChartH5License.js"></script>
+	<script src="../../libs/rMateChartH5/JS/rMateChartH5.js"></script>
+	<script>
+	// -----------------------차트 설정 시작 01 -----------------------
+	// @ rMate 차트 생성 준비가 완료된 상태 시 호출할 함수를 지정합니다.
+	var chartVars03 = "&rMateOnLoadCallFunction=rMateChartOnLoad3";
+
+	var chartData03 = [
+		{"Type":"미분류", "Value":71, "Legend":"<strong class='tit'>미분류</strong><em class='num bold'>71%</em>"},
+		{"Type":"교통/자동차", "Value":11, "Legend":"<strong class='tit'>교통/자동차</strong><em class='num bold'>11%</em>"},
+		{"Type":"식비", "Value":10, "Legend":"<strong class='tit'>식비</strong><em class='num bold'>10%</em>"},
+		{"Type":"패션/미용", "Value":8, "Legend":"<strong class='tit'>패션/미용</strong><em class='num bold'>8%</em>"}
+	];
+
+	// @ 차트 로드 - setData
+	function rMateChartOnLoad3(){
+		chart03.setLayout(layoutStr03);
+		chart03.setData(chartData03);
+	}
+
+	// @ 차트 생성
+	// ##### rMateChartH1 --> MASB01M01 #####
+	rMateChartH5.create("chart03", "chartHolder03", chartVars03, "100%", "100%");
+
+	// @ 차트생성 - 함수내부에 onloadcallfunction 등록
+	// # 참고 - /rMateChartH5Web_v5.0_EN_trial/Samples/createOnLoadCallFunction.html
+	// @ chartVars 대신 creat함수 마지막 파라메터에 차트가 준비가 완료될 경우 호출할 함수를 설정합니다.
+	// @ itemClickJsFunction="chartClick"
+	// @ dataTipJsFunction="dataTipFunc"
+
+	// @Pie
+		var layoutStr03 =	'<rMateChart styleName="_chart03">'
+			+'<Options>'
+				+'<Legend useVisibleCheck="false" legendAllCheck="true" position="right" direction="vertical" width="147" color="#222" styleName="_legend" fontSize="16" paddingLeft="15" paddingRight="0"/>'
+			+'</Options>'
+			+'<CurrencyFormatter id="nft" precision="0" currencySymbol="%" alignSymbol="right" />'
+				+'<Pie2DChart formatter="{nft}" id="chart" innerRadius="0" showDataTips="false" selectionMode="none" explodable="false" itemClickJsFunction="chartClick_03">' /* dataTipDisplayMode="axis" selectionMode="single" */
+					+'<series>'
+						+'<Pie2DSeries formatter="{nft}" labelPosition="inside" nameField="Legend" field="Value" startAngle="270" renderDirection="clockwise" color="#fff" insideLabelRatio="0.6">'
+							+'<fills>'
+								+'<SolidColor color="#ffdb15"/>' // 카테고리01
+								+'<SolidColor color="#9882fd"/>' // 카테고리02
+								+'<SolidColor color="#c7b9fa"/>' // 카테고리03
+								+'<SolidColor color="#eaddfd"/>' // 카테고리04
+								+'<SolidColor color="#c7b9fa"/>' // 카테고리05
+							+'</fills>'
+							+'<showDataEffect>'
+								+'<SeriesInterpolate duration="1000"/>'
+							+'</showDataEffect>'
+					+'</Pie2DSeries>'
+				+'</series>'
+			+'</Pie2DChart>'
+		+'</rMateChart>';
+
+		// -----------------------함수-----------------------
+		// @ 데이터 체크
+
+		/* @ 데이터 없는 경우 대응 : checkData() - hasNoData(false) 이미지로 대체 ---*/
+		// hasNoData(false); 데이터가 존재하지 않으므로 차트의 기본 구조도 보이지 않아야 한다면
+		// false로 주어 차트 전체의 visible을 false로 설정합니다.
+		// hasNoData(true); 데이터가 존재하지 않아도 차트의 기본 구조는 보여야 한다면 true로 주어
+		// visible을 true로 설정합니다.
+		// 데이터가 없을 경우 hasNoData함수를 실행하여 메세지창을 출력한다.
+
+		// 프리로더를 보이게 합니다.
+			function showPreloader(){
+				document.getElementById("chart01").showAdditionalPreloader();
+			}
+			// 프리로더를 제거합니다.
+			function hidePreloader(){
+				document.getElementById("chart01").removeAdditionalPreloader();
+			}
+
+		function checkData(data){
+			if( data.length <= 0 ) {
+				alert('no data');
+				// document.getElementById('chart01').hasNoData(true);
+			} else {
+				return data.length;
+			}
+		}
+
+		function _stackLabelFunc(id,value){
+			return value + "%";
+		}
+
+		function labelFunc(id,value){
+			return  '<font name="num">' + insertComma(value) + '원' + '</font>';
+			// return value + "%";
+		}
+
+		// 스택 수치 합 사용자 정의 함수
+		function totalFunc(index, data, value){
+			if( index == 6 )
+				// return value + " 원" ;
+				return  '<font name="LatoB">' + insertComma(value) + '</font>';
+			return "";
+		}
+
+		// 스택 수치 합 사용자 정의 함수
+		function totalFunc2(index, data, value){
+			if(index == 6)
+				return  '<font name="LatoB">' + insertComma(value) + '</font>';
+			return "";
+		}
+
+		//숫자에 천단위 콤마 찍어 반환하는 함수.
+		function insertComma(n) {
+			var reg = /(^[+-]?\d+)(\d{3})/; // 정규식
+			n += "";
+			while (reg.test(n))
+			n = n.replace(reg, '$1' + "," + '$2');
+			return n;
+		}
+
+		// @ max value
+		function upFunc(seriesId, index, data, values){
+			return '<font name="LatoB" color="#6097f6">' + values[1] + '원' + '</font>';
+		}
+		// @ min value
+		function downFunc(seriesId, index, data, values){
+			return '<font name="LatoB" color="#6097f6">' + values[1] + '원' + '</font>';
+		}
+
+		// @ chart click
+		function chartClick_03(seriesId, displayText, index, data, values) {
+			return '<font name="LatoB" color="#444">' + values[1] + '원' + '</font>';
+		}
+
+		// @ chart click
+		function chartClick_04(seriesId, displayText, index, data, values) {
+			return '<font color="#444">' + values[1] + '원' + '</font>';
+		}
+
+		function averFunc(seriesId, index, data, values) {
+			return '<font color="#6097f6">평균 ' + values + '원' + '</font>';
+		}
+
+	</script>
+	<!-- //2018-03-13 차트 스크립트 추가 phj -->
+
+</head>
+<body>
+<div class="wrap bg_list" id="CBSJ69Z07"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo">
+
+		<section class="spend_category">
+			
+			<div class="sec_head spend_common">
+				<div class="date_control">
+					<button type="button" name="button" class="btn ico_prev">previous month</button>
+					<strong class="date">2017.02</strong>
+					<button type="button" name="button" class="btn ico_next end" disabled="disabled">next month</button><!-- Class: "end", disable둘다 화면표시는 같습니다 -->
+				</div>
+
+				<!-- account_info : 01_습관저금_조회 -->
+				<div class="account_info">
+					<div class="money_total">
+						<em class="cash bold">320,650</em><span>원</span>
+						<button class="btn_ico ico_circle_plus"><span class="blind">추가</span></button>
+					</div>
+				</div>
+
+				<div class="budget_info add_topline">
+					<div class="tit">예산</div>
+					<div class="money_total">
+						<em class="cash">600,000</em><span>원</span>
+						<button class="btn_ico ico_pen_edit"><span class="blind">편집</span></button>					
+					</div>
+				</div>
+			</div><!-- //sec_head -->
+
+			<div class="sec_tab">
+				<div class="tab_wrap set_type3"> <!-- 3개 -->
+					<span class="tab"><a href="#none">날짜별</a></span>
+					<span class="tab on"><a href="#none">분류별</a></span>
+					<span class="tab"><a href="#none">수단별</a></span>
+				</div>
+			</div>
+
+			<div class="sec_graph">
+				<!-- 2018-03-13 차트 추가 phj -->
+				<div class="_chart03">
+					<div class="chart_area">
+						<div class="chart type-pie" id="chartHolder03"></div>
+					</div>
+				</div>
+				<!-- //2018-03-13 차트 추가 phj -->
+			</div>
+
+			<div class="sec_history spend_detail spend_history"> <!-- 2018-03-30 spend_history 클래스 추가 phj -->
+				<!-- <ul class="summary">
+					<li class="category">일상생활 소비</li>
+				</ul> --><!-- 2018-03-27 기획 요청에 의한 삭제 phj -->
+				<!-- 반복문 -->
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>식비</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<!-- //반복문 -->
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>생활/쇼핑</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>건강/의료</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>미분류</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>생활/쇼핑</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>건강/의료</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>미분류</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>생활/쇼핑</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>건강/의료</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+				<div class="category_summary">
+					<ul>
+						<li class="title"><span>미분류</span></li>
+						<li class="total"><em class="cash bold">134,000</em><span>원</span><button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- 하단 붙임 -->
+
+		<!-- sticky_wrap place -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$('.expend').on('click','button.ico',function(){
+		$(this).toggleClass('on').next().toggleClass('on');
+	});
+	$('.expend button.ico').click();
+
+	var topH = $(".sec_head").outerHeight();
+	var ViewH = $("section").outerHeight();
+	$(window).scroll(function(){
+	if(ViewH >= 800) {
+		var sticky = $('.sec_tab'),
+			  scroll = $(window).scrollTop();
+
+		//2018-03-30 스크립트 변경 phj
+		var graph = $('.sec_history.spend_detail.spend_history');
+
+		if (scroll >= topH) {
+			sticky.addClass('fixed');
+			$('.sec_graph').css('margin-top',48);
+			$('.sec_history.spend_detail').not(graph).css('margin-top',48);
+		} else {
+			sticky.removeClass('fixed');
+			$('.sec_graph').css('margin-top',0);
+			$('.sec_history.spend_detail').not(graph).css('margin-top',0);
+		}
+		//2018-03-30 스크립트 변경 phj
+	  }
+	});
+
+});
+</script>
+</body>
+</html>

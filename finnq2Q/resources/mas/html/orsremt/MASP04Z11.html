@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+		<!-- 20180312 sec_sendConfirm 클래스변경 -->
+		<section class="sec_sendConfirm">
+			<!-- 20180308 화면문구변경 -->
+			<div class="sec_title">
+				<h3 class="accent_txt">
+					보내기 완료
+				</h3>
+				<p class="guide_txt">
+					<!-- 20180320 줄바꿈 위치수정, SMS를 띄어쓰기 수정 -->
+					해외 지급처에서 송금 준비가 완료되면<br>받는분께 국제 SMS를 발송합니다.
+				</p>
+			</div>
+			<div class="box_detail round_box">
+				<dl class="define type_flag">
+					<dt class="tit">송금 금액</dt>
+					<dd class="cont">
+						<span class="stit">
+							<img src="../../images/orsremt/img-ph.png" alt="PH" class="flag_img size-min"><span class="num flag_txt">PHP</span>
+						</span>
+						<span class="money">
+							<span class="num">2,000.00</span>
+						</span>
+					</dd>
+				</dl>
+				<!-- 20180308 띄어쓰기 변경 -->
+				<div class="line_dash">
+					<div class="cal_wrap2">
+						<dl class="cal">
+							<dt class="tit">송금 금액(원화)</dt><!-- 20180326 (원화) 추가 -->
+							<dd class="money"><span class="num">0,000</span>원
+								<!-- 20180323 확정환율 위치변경 -->
+								<p class="txt_info txt_r">확정 환율 : <span class="num">0,000</span></p><!-- 20180326 <span class="star_type">블릿삭제 --><!-- 20180418 원 삭제 -->
+							</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit">송금 수수료(면제)</dt><!-- 2018-06-04 수수료면제(일시적용) -->
+							<dd class="money"><span class="num strike">0,000</span>원</dd>
+						</dl>
+						<dl class="cal">
+							<dt class="tit">수취 수수료(면제)</dt><!-- 2018-06-04 수수료면제(일시적용) -->
+							<dd class="money"><span class="num strike">0,000</span>원</dd>
+						</dl>
+						<dl class="cal total">
+							<dt class="tit">인출 금액</dt>
+							<dd class="money"><span class="num">0,000,000</span>원</dd>
+						</dl>
+					</div>
+				</div>
+				<!-- 20180308 위치변경, 클래스수정 -->
+				<div class="line_dash">
+					<div class="cal_wrap2">
+						<dl class="cal">
+							<dt class="tit">거래번호</dt><!-- 2018-05-18 거래번호로 변경, tit_eng삭제 -->
+							<dd class="money">9DDD8DDDD7DD6DD</dd><!-- 20180313 UI/UX팀에서 예외적으로 Num 삭제요청 --><!-- 2018-05-18 len_v2 클래스 삭제 -->
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<!-- 20180308 친구에게 공유하기 기능 제거 -->
+			<!-- sec_sns_list
+			<div class="sec_sns_list">
+				<p class="txt_info">다른 방법으로 송금을 알리고 싶다면,<br>송금 알리기를 이용해보세요!</p>
+				<p class="tit">친구에게 공유하기</p>
+				<ul class="clearfix">
+					<li>
+						<button type="button" class="ico ico_sns_facebook"><span class="blind">Facebook</span></button>
+					</li>
+					<li>
+						<button type="button" class="ico ico_sns_kakaotalk"><span class="blind">Kakao Talk</span></button>
+					</li>
+					<li>
+						<button type="button" class="ico ico_sns_kakaostory"><span class="blind">Kakao Story</span></button>
+					</li>
+					<li>
+						<button type="button" class="ico ico_sns_line"><span class="blind">Line</span></button>
+					</li>
+				</ul>
+			</div>
+			//sec_sns_list -->
+
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+</body>
+</html>

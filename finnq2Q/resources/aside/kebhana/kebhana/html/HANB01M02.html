@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>비대면계좌개설 | 본인인증</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/kebhana_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="add_sticky">
+		<div class="sec_ows_head finnq">
+			<button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button>
+			<h2 class="ows_title">KEB하나 비대면계좌 개설</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section class="">
+			<div class="sec_title">
+				<h2>본인인증</h2>
+				<p class="guide_txt">본인인증을 해 주세요.</p>
+			</div>
+
+			<div class="sec_member_input">
+
+				<ul class="flex_wrap set_type1">
+					<li class="input_wrap item">
+						<input type="text" data-name="inpFocus" class="" value="홍길동" disabled="disabled">
+					</li>
+
+					<li class="input_wrap type_3 new_marsking">
+						<div class="item"><input type="number" data-name="inpFocus" value="890123" disabled="disabled"></div>
+						<div class="item">-</div>
+						<div class="item">
+							<input type="password" data-name="inpFocus" placeholder="주민번호 뒷자리" value="">
+						</div>
+					</li>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : item에 inp_error 추가 -->
+					<li class="input_wrap type_3 new_marsking">
+						<div class="item"><input type="number" data-name="inpFocus" value="890123" disabled="disabled"></div>
+						<div class="item">-</div>
+						<div class="item inp_error">
+							<input type="password" data-name="inpFocus" placeholder="주민번호 뒷자리" value="">
+						</div>
+						<p class="remark show">유효하지 않은 주민등록번호 입니다.</p>
+					</li>
+					<!-- //에러가 날 경우 -->
+
+					<li class="input_wrap soft_select item">
+						<select data-name="inpFocus">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+							<option value="">KT</option>
+						</select>
+						<p class="remark hide">통신사를 선택해 주세요.</p>
+					</li>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : inp_error 추가 -->
+					<li class="input_wrap soft_select item inp_error">
+						<select data-name="inpFocus">
+							<option value="">통신사</option>
+							<option value="">U+</option>
+							<option value="">SKT</option>
+						</select>
+						<p class="remark show">통신사를 선택해 주세요.</p>
+					</li>
+					<!-- //에러가 날 경우 -->
+
+					<li class="input_wrap col_box item">
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="휴대폰번호" class="">
+							<p class="remark hide">휴대폰번호를 입력해 주세요.</p>
+						</span>
+						<span>
+							<button type="button" name="button" class="btn btn_type_f">인증번호 받기</button>
+						</span>
+					</li>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : inp_error 추가 -->
+					<li class="input_wrap col_box item inp_error">
+						<span>
+							<input type="number" data-name="inpFocus" placeholder="휴대폰번호" class="">
+							<p class="remark show">휴대폰번호를 입력해 주세요.</p>
+						</span>
+						<span>
+							<button type="button" name="button" class="btn btn_type_f">인증번호 받기</button>
+						</span>
+					</li>
+					<!-- //에러가 날 경우 -->
+
+					<li class="input_wrap pin_number item">
+						<input type="number" data-name="inpFocus" placeholder="인증번호" class="">
+						<p class="remark hide">인증시간이 초과되었습니다.</p>
+						<div class="time_count">03:00</div>
+						<div class="bul_guide">
+							<p class="star_type indent">SMS 재전송은 3회까지만 가능합니다.</p>
+						</div>
+					</li>
+
+					<!-- 에러가 날 경우 -->
+					<!-- 클래스 : inp_error 추가 -->
+					<li class="input_wrap pin_number item inp_error">
+						<input type="number" data-name="inpFocus" placeholder="인증번호" class="">
+						<p class="remark show">인증시간이 초과되었습니다.</p>
+						<div class="time_count">30:00</div>
+						<div class="bul_guide">
+							<p class="star_type indent">SMS 재전송은 3회까지만 가능합니다.</p>
+						</div>
+					</li>
+					<!-- //에러가 날 경우 -->
+				</ul>
+
+			</div><!-- //sec_member_input -->
+		</section>
+
+		<!-- 입력값이 모두 입력되면 disabled 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+	</div><!-- //contents -->
+</div>
+</body>
+</html>

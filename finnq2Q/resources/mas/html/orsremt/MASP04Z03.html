@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>08해외송금_07수취은행검색_web_</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css" />
+</head>
+<body>
+<div class="wrap bg_list">
+	<div id="contents" class="market orsremt orsremt_from">
+		<!-- 풀팝업 오픈버튼 샘플 -->
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_1" data-mtype="fullpop">상세보기(검색전)</button></span>
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_2" data-mtype="fullpop">상세보기(검색후_결과없음)</button></span>
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_3" data-mtype="fullpop">상세보기(검색후_목록)</button></span>
+		<br><br>
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_4" data-mtype="fullpop">상세보기(캐나다 검색전)</button></span>
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_5" data-mtype="fullpop">상세보기(캐나다 검색후)</button></span>
+		<br><br>
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_6" data-mtype="fullpop">상세보기(일본 검색전)</button></span>
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_7" data-mtype="fullpop">상세보기(일본 검색후_결과없음)</button></span>
+		<span class="item"><button type="button" name="button" class="btn btn_type_e open_modal" data-triger="MASP04Z03_8" data-mtype="fullpop">상세보기(일본 검색후_목록)</button></span>
+
+		<!-- 해외송금_수취은행검색_(검색전) -->
+		<div id="MASP04Z03_1" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list">
+						<div class="orsremt_out">
+							<div class="sec_input sec_notice_search"><!-- 20180313 마크업변경 -->
+								<div class="item box_search">
+									<input type="text" data-name="inpFocus" placeholder="은행명" value="" class="" autofocus="autofocus">
+									<a href="#none" class="search_del">del</a>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+				</div><!-- #contents -->
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_apply" disabled="disabled">검색</button>
+				</div><!-- //하단 붙임 -->
+			</div>
+		</div>
+
+		<!-- 해외송금_수취은행검색_(검색후_결과없음) -->
+		<div id="MASP04Z03_2" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list">
+						<div class="orsremt_out">
+							<div class="sec_input sec_notice_search"><!-- 20180313 마크업변경 -->
+								<div class="item box_search">
+									<input type="text" data-name="inpFocus" placeholder="은행명" value="Royal Bank of Canada(ASDFGHJ)" class="" autofocus="autofocus">
+									<a href="#none" class="search_del">del</a>
+								</div>
+							</div>
+							<div class="list_title ">
+								<p>검색결과</p>
+							</div>
+							<div class="sec_history">
+								<!-- 검색결과 없을시 -->
+								<div class="wrap_result">
+									<div class="no_result">
+										<i class="ico ico_chat_no2"></i>
+										<p>검색결과가 없습니다.</p>
+									</div>
+								</div>
+								<!-- // 검색결과 없을시 -->
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+				</div><!-- #contents -->
+			</div>
+		</div>
+
+		<!-- 해외송금_수취은행검색_(검색후_목록) -->
+		<div id="MASP04Z03_3" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list">
+						<div class="orsremt_out">
+							<div class="sec_input sec_notice_search"><!-- 20180313 마크업변경 -->
+								<div class="item box_search">
+									<input type="text" data-name="inpFocus" placeholder="은행명" value="Royal Bank of Canada(ASDFGHJ)" class="" autofocus="autofocus">
+									<a href="#none" class="search_del">del</a>
+								</div>
+							</div>
+							<div class="list_title ">
+								<p>검색결과</p>
+							</div>
+							<div class="sec_history">
+								<div class="inner">
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행코드(swift code)</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<div class="more_loading"></div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+				</div><!-- #contents -->
+			</div>
+		</div>
+
+		<!-- 해외송금_수취은행검색_(캐나다_검색전) -->
+		<div id="MASP04Z03_4" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list type_tab">
+						<div class="orsremt_out">
+							<div class="tab_wrap set_type2"> <!-- 2개 -->
+								<span class="tab on"><a href="#none">수취은행</a></span>
+								<span class="tab"><a href="#none">Swift Code</a></span>
+							</div><!-- //tab_wrap -->
+							<div class="tab_content_wrap">
+								<!-- 수취은행 탭 -->
+								<div class="tab_content on">
+									<div class="sec_input sec_notice_search">
+										<div class="item box_search">
+											<input type="text" data-name="inpFocus" placeholder="은행명" value="" class="" autofocus="autofocus">
+											<a href="#none" class="search_del">del</a>
+										</div>
+									</div>
+								</div>
+								<!-- //수취은행 탭 -->
+								<!-- Swift Code 탭 -->
+								<div class="tab_content">
+									<div class="sec_input sec_notice_search">
+										<div class="item box_search">
+											<input type="text" data-name="inpFocus" placeholder="코드(Swift)" value="" class="" autofocus="autofocus">
+											<a href="#none" class="search_del">del</a>
+										</div>
+									</div>
+								</div>
+								<!-- //Swift Code 탭 -->
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+				</div><!-- #contents -->
+			</div>
+		</div>
+
+		<!-- 해외송금_수취은행검색_(캐나다_검색후) -->
+		<div id="MASP04Z03_5" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list type_tab">
+						<div class="orsremt_out">
+							<div class="tab_wrap set_type2"> <!-- 2개 -->
+								<span class="tab on"><a href="#none">수취은행</a></span>
+								<span class="tab"><a href="#none">Swift Code</a></span>
+							</div><!-- //tab_wrap -->
+							<div class="tab_content_wrap">
+								<!-- 수취은행 탭 -->
+								<div class="tab_content on">
+									<div class="sec_input sec_notice_search">
+										<div class="item box_search">
+											<input type="text" data-name="inpFocus" placeholder="은행명" value="" class="" autofocus="autofocus">
+											<a href="#none" class="search_del">del</a>
+										</div>
+									</div>
+									<div class="list_title">
+										<p>검색결과</p>
+									</div>
+									<div class="sec_history">
+										<!-- 검색결과 없을시 -->
+										<div class="wrap_result">
+											<div class="no_result">
+												<i class="ico ico_chat_no2"></i>
+												<p>검색결과가 없습니다.</p>
+											</div>
+										</div>
+										<!-- // 검색결과 없을시 -->
+
+										<div class="inner hide">
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+													<dd>
+														<address><strong>802dong 101ho, 30-20, Deongneung-ro 10-gil, Nowon-gu, Seoul, Republic of K</strong></address>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>은행명(Full name)</strong>
+													</dt>
+													<dd>
+														<div><strong>은행코드(swift code)</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<div class="more_loading"></div>
+										</div>
+									</div>
+								</div>
+								<!-- //수취은행 탭 -->
+								<!-- Swift Code 탭 -->
+								<div class="tab_content">
+									<div class="sec_input sec_notice_search">
+										<div class="item box_search">
+											<input type="text" data-name="inpFocus" placeholder="코드(Swift)" value="" class="" autofocus="autofocus">
+											<a href="#none" class="search_del">del</a>
+										</div>
+									</div>
+									<div class="list_title ">
+										<p>검색결과</p>
+									</div>
+									<div class="sec_history">
+										<div class="inner">
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<a href="#">
+												<dl>
+													<dt>
+														<strong>호주 은행명</strong>
+													</dt>
+													<dd>
+														<div><strong>BSB No. 000000</strong></div>
+													</dd>
+												</dl>
+											</a>
+											<div class="more_loading"></div>
+										</div>
+									</div>
+								</div>
+								<!-- //Swift Code 탭 -->
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+
+				</div><!-- #contents -->
+			</div>
+		</div>
+
+		<!-- 2018-06-14 추가 일본 유형 -->
+		<!-- 해외송금_수취은행검색_(일본_검색전) -->
+		<div id="MASP04Z03_6" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list type_coment">
+						<div class="orsremt_out">
+							<div class="sec_input sec_notice_search"><!-- 20180313 마크업변경 -->
+								<div class="item box_search">
+									<input type="text" data-name="inpFocus" placeholder="은행명 또는 지점명" value="" class="" autofocus="autofocus">
+									<a href="#none" class="search_del">del</a>
+								</div>
+								<div class="bul_guide">
+									<p class="star_type indent">예시 : AOMORI BANK(은행명) TOKYO(지점명) 을 찾는 경우, AOMORI BANK 또는 TOKYO로 검색</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+				</div><!-- #contents -->
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_apply" disabled="disabled">검색</button>
+				</div><!-- //하단 붙임 -->
+			</div>
+		</div>
+
+		<!-- 해외송금_수취은행검색_(일본_검색후_결과없음) -->
+		<div id="MASP04Z03_7" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list type_coment">
+						<div class="orsremt_out">
+							<div class="sec_input sec_notice_search"><!-- 20180313 마크업변경 -->
+								<div class="item box_search">
+									<input type="text" data-name="inpFocus" placeholder="은행명 또는 지점명" value="Royal Bank of Japan" class="" autofocus="autofocus">
+									<a href="#none" class="search_del">del</a>
+								</div>
+								<div class="bul_guide">
+									<p class="star_type indent">예시 : AOMORI BANK(은행명) TOKYO(지점명) 을 찾는 경우, AOMORI BANK 또는 TOKYO로 검색</p>
+								</div>
+							</div>
+							<div class="list_title">
+								<p>검색결과</p>
+							</div>
+							<div class="sec_history">
+								<!-- 검색결과 없을시 -->
+								<div class="wrap_result">
+									<div class="no_result">
+										<i class="ico ico_chat_no2"></i>
+										<p>검색결과가 없습니다.</p>
+									</div>
+								</div>
+								<!-- // 검색결과 없을시 -->
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+				</div><!-- #contents -->
+			</div>
+		</div>
+
+		<!-- 해외송금_수취은행검색_(일본_검색후_목록) -->
+		<div id="MASP04Z03_8" class="modal_wrap fullpop">
+			<div class="modal_content">
+				<div class="scroll_wrap" style="">
+					<section class="sec_remitDetail orsremt_list type_coment">
+						<div class="orsremt_out">
+							<div class="sec_input sec_notice_search"><!-- 20180313 마크업변경 -->
+								<div class="item box_search">
+									<input type="text" data-name="inpFocus" placeholder="은행명 또는 코드(Swift)" value="Royal Bank of Canada(ASDFGHJ)" class="" autofocus="autofocus">
+									<a href="#none" class="search_del">del</a>
+								</div>
+								<div class="bul_guide">
+									<p class="star_type indent">예시 : AOMORI BANK(은행명) TOKYO(지점명) 을 찾는 경우, AOMORI BANK 또는 TOKYO로 검색</p>
+								</div>
+							</div>
+							<div class="list_title">
+								<p>검색결과</p>
+							</div>
+							<div class="sec_history">
+								<div class="inner">
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<a href="#">
+										<dl>
+											<dt>
+												<strong>은행명(Full name)</strong>
+											</dt>
+											<dd>
+												<div><strong>은행지점명</strong></div>
+											</dd>
+										</dl>
+									</a>
+									<div class="more_loading"></div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- 하단 붙임 -->
+				</div><!-- #contents -->
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$body = $("body");
+	//Contents Size Cal;
+	var docH, docW;
+	docW = $(window).width();
+	docH = $(window).height();
+
+	//모달팝업
+	/* modal popup */
+
+	$("button.open_modal,a.open_modal").on("click", function(){
+		var $mpop = $(this);
+
+		var $mpopType = $mpop.data("mtype");
+		var $mpopID = "#"+$mpop.data("triger");
+		var $mpopClose = $mpop.data("bgclose");
+		var conH = $($mpopID).find(".modal_content").outerHeight();
+
+		//popup contents height < window height
+		if(conH >= docH || ($mpopType=="fullpop")) {
+			$($mpopID +"> .modal_content").css({
+				height: docH
+			});
+		}else {
+			$($mpopID).addClass("normal");
+		}
+		if($mpopClose) 	$($mpopID).data("bgclose", true);
+
+		switch($mpopType) {
+			case "fullpop":
+				$($mpopID).toggleClass("visible");
+				break;
+			case "doublepop":
+				$($mpopID).addClass("double").toggleClass("visible");
+				break;
+			default:
+				$($mpopID).toggleClass("visible");
+		}
+
+		//마우스 무한스크롤
+		var setTimeHTML = null;
+		$('.sec_history').scroll(function() {
+			var $this = $(this);
+			var maxHeight = $this.scrollTop() + $this.outerHeight();
+			var morePos = $this.find('.more_loading').offset().top - 45;
+
+			if (maxHeight > morePos) {
+				//Test Append (개발시 삭제)
+				var appendHTML = '';
+					appendHTML = appendHTML + '<a href="#">';
+					appendHTML = appendHTML + '	<dl>';
+					appendHTML = appendHTML + '		<dt>';
+					appendHTML = appendHTML + '			<strong>은행명(Full name)</strong>';
+					appendHTML = appendHTML + '		</dt>';
+					appendHTML = appendHTML + '		<dd>';
+					appendHTML = appendHTML + '			<div><strong>은행코드(swift code)</strong></div>';
+					appendHTML = appendHTML + '		</dd>';
+					appendHTML = appendHTML + '	</dl>';
+					appendHTML = appendHTML + '</a>';
+
+				clearTimeout(setTimeHTML);
+				setTimeHTML = setTimeout(function(){
+					for (var i = 0;i < 10 ;i++ ){
+						$this.find('.inner .more_loading').before(appendHTML);
+					}
+				}, 500)
+
+				//ajax Apeend
+				$.ajax({
+					// Append next contents
+				})
+			}
+		})
+		return false;
+	});
+	$(".modal_wrap").on("click","button.close_modal", function(){
+		$(this).closest('.modal_wrap').toggleClass("visible");
+		return false;
+	});
+	$(".modal_wrap").on("click", function(e){
+		var status = $(this).data("bgclose");
+		if(!$(".modal_content").has(e.target).length && status ) {
+			if($(this).data("bgclose")) $(this).toggleClass("visible");
+		}
+	});
+});
+</script>
+</body>
+</html>

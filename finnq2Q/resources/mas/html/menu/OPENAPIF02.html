@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html xml:lang="ko" lang="ko">
+
+<head>
+    <title>은행권 공동 오픈플랫폼</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, Chrome=1" />
+    <meta content="은행권공동오픈플랫폼" name="description" />
+    <meta content="은행권공동오픈플랫폼" name="keywords" />
+    <meta content="은행권공동오픈플랫폼" name="subject" />
+    <!-- <link rel="stylesheet" href="https://twww.open-platform.or.kr/css/common/style_mobile.css"> -->
+    <script type="text/javascript" src="https://twww.open-platform.or.kr/js/extends/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://twww.open-platform.or.kr/js/extends/common.js"></script>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+
+    <!-- open api 관련 추가 -->
+    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+    <script src="../../libs/ui.js"></script>
+    <script type="text/javascript">
+    $(function(){
+
+        var headTitle;
+        headTitle =
+        '<div class="sec_title">' +
+            '<h2>계좌 입력</h2>' +
+            '<p class="guide_txt">등록할 은행계좌를 확인해 주세요.</p>' +
+        '</div>';
+
+        // 해당 페이지에서 약관이 하나라면 전체동의도 히든 처리 부탁드립니다.
+
+        // 페이지 최초 로딩시 필요없는 부분 삭제 및 추가
+        function pageInit() {
+            $('#frm p').first().remove(); // ARS로 진행 절차 문구 삭제.
+            $('#wrap').addClass('add_bottom') // 하단 버튼 여백 조정
+            $('.btn.bfop_btn_s1').addClass('gray'); // 버튼 이벤트 변경
+            $('.form-group').eq(2).hide(); // 계좌 별명 숨감(선택)
+            $('#nextStep').addClass('fixed').text('다음'); // 하단 버튼 문구 변경
+            $('#step4').hide().parent().hide();; // 취소버튼 삭제.
+            $('.all_agree label strong').text('전체 동의(필수)'); // 전체동의 문구 변경.
+
+            $('#wrap').prepend( headTitle ); // Finnq Design 가이드 문구 추가.
+
+
+            $('#footer').hide(); // Copyright 숨김
+        }
+
+        pageInit();
+
+        // 약관 제목을 클릭해도 해당 약관이 열릴 수 있게 수정.
+        function termsEvt(){
+            $('.agree_list li').each(function(){
+                var _tempId = $(this).children('span').find('input[type="checkbox"]').attr('id');
+                $(this).find('label').attr({'for' : _tempId});
+            });
+
+            var _tempId = $('.all_agree span input[type="checkbox"]').attr('id');
+            $('.all_agree label').attr({'for' : _tempId});
+            $('.all_agree label strong').text('전체 동의(필수)'); // 전체동의 문구 변경.
+        }
+        termsEvt();
+
+        // 전체 동의를 눌러도 약관을 펼쳐지지 않고 체크박스만 활성화.
+        $('.all_agree span input[type="checkbox"]').on('change', function(){
+            var status = $('.all_agree span input[type="checkbox"]').prop("checked");
+            $('.agree_list li .cont_box').hide();
+        })
+    });
+    </script>
+    <!-- //open api 관련 추가 -->
+</head>
+
+<body id="openplatform">
+    <!-- 색상코드 미존재시 기본설정 시작 -->
+    <!-- 색상코드 미존재시 기본설정 종료 -->
+    <!-- 언어설정에 따른 값 생성 시작 -->
+    <!-- 언어설정에 따른 값 생성 종료 -->
+    <!-- S: wrap -->
+    <div id="wrap" class="bfop_bg" style="background: #FAFAFA;">
+        <div id="container">
+            <form name="frm" id="frm" method="post">
+                <p class="text-muted bfop_txt mb10" style="color: #050505;">
+                    <strong>주식회사핀크</strong>의 <strong>Finnq</strong> 서비스를 사용하기 위한 <strong>김종수</strong>님의 <strong> 출금/조회 동의</strong> 절차를 ARS로 진행합니다.
+                </p>
+                <div class="form-group">
+                    <div class="">
+                        <select id="prtpOrgCode" name="prtpOrgCode" value="081" class="form-control bfop_input select_arw" notNull style="color: #050505; height: 55px;" autocomplete="off" disabled="disabled">
+                            <option value="">은행을 선택하세요</option>
+                            <option value="002">
+                                산업
+                            </option>
+                            <option value="003">
+                                기업
+                            </option>
+                            <option value="004">
+                                국민
+                            </option>
+                            <option value="007">
+                                수협
+                            </option>
+                            <option value="011">
+                                농협
+                            </option>
+                            <option value="020">
+                                우리
+                            </option>
+                            <option value="023">
+                                SC제일
+                            </option>
+                            <option value="027">
+                                씨티
+                            </option>
+                            <option value="031">
+                                대구
+                            </option>
+                            <option value="032">
+                                부산
+                            </option>
+                            <option value="034">
+                                광주
+                            </option>
+                            <option value="035">
+                                제주
+                            </option>
+                            <option value="037">
+                                전북
+                            </option>
+                            <option value="039">
+                                경남
+                            </option>
+                            <option value="045">
+                                새마을
+                            </option>
+                            <option value="050">
+                                상호저축
+                            </option>
+                            <option value="081" selected>
+                                KEB하나
+                            </option>
+                            <option value="088">
+                                신한
+                            </option>
+                            <option value="097">
+                                오픈
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control bfop_input" placeholder="계좌번호 (숫자만)" title="계좌번호 (숫자만)" maxlength="16" id="acntNum" name="acntNum" value="324234234" numberOnly notNull style="color: #050505;" autocomplete="off" disabled="disabled">
+                    <label id="acntNumMsg" style="margin-top: 10px;"></label>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control bfop_input" placeholder="계좌별명 (선택사항/20글자 이내)" title="계좌별명 (선택사항/20글자 이내)" maxlength="50" id="acntNkname" value="" name="acntNkname" style="color: #050505;" autocomplete="off">
+                </div>
+                <div class="inner_wrap">
+                    <ul class="agree_list">
+                        <li id="viewTrms1">
+                            <span class="checkbox">
+                 <input type="checkbox" id="agreeTrms1" name="agreeTrms1" tabindex="5">
+                 </span>
+                            <label for="checkbox1" id="checkbox1_label" class="bfop_txt" style="color: #050505; margin-left: 5px;"><strong>출금서비스(은행) 약관 동의</strong></label>
+                            <a href="javascript:;" class="more" name="agreeViewTrms1" >보기</a>
+                            <div class="cont_box" id="divTrms1">
+
+                                    <meta charset="utf-8">
+                                    <title>일반고객약관동의</title>
+                                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                                    <style>
+                                        p{line-height:1.2; padding: 0; margin: 0;}
+                                        .mt20{margin-top: 20px;}
+                                        .mt10{margin-top: 10px;}
+                                        .mt5{margin-top: 5px;}
+                                    </style>
+                                    <strong class="tit_clause">은행의 금융서비스를 표준화된 형태로 제공하는“은행권 공동 오픈플랫폼 서비스”이용을 위한 고객의 개인정보 수집·이용에 대한 동의이며, 수집 및 이용하는 개인정보는 아래와 같습니다.</strong>
+                                    <div class="clause_box">
+                                        <div class="clause_text">
+                                            <div>
+                                                <p class="mt10"><strong>※ 은행권 공동 오픈플랫폼 서비스는 은행권역 공동의 서비스로 금융결제원에서 관련 업무를 위탁받아 운영하고 있습니다. </strong></p>
+                                                <p class="mt20"><strong>1. 회원가입 및 관리 목적</strong></p>
+                                                <p class="mt10">- 수집 정보(필수항목) : 성명, 생년월일, 성별, 내/외국인 구분, 통신사명, 휴대폰번호, 이메일주소, 연계정보(CI)값*, 중복가입확인정보(DI)값*</p>
+                                                <p class="mt5">- 보유 기간 : 회원 탈퇴시까지</p>
+                                                <p class="mt5"><span style="color: rgb(0, 124, 255)">*</span> 본인확인기관으로부터 수집</p>
+                                                <p class="mt20"><strong>2. 이용 신청 및 계좌등록 목적</strong></p>
+                                                <p class="mt10">- 수집 정보(필수항목) : 성명, 생년월일, 성별, 내/외국인 구분, 은행코드, 계좌번호* </p>
+                                                <p class="mt5">- 보유 기간 : 이용 해지 후 5년까지</p>
+                                                <p class="mt5"><span style="color: rgb(0, 124, 255)">*</span> 처리근거 : 금융실명법 제4조 제1항 제5호</p>
+                                                <p class="mt20"><strong>3. 송금인 확인</strong></p>
+                                                <p class="mt10">- 수집 정보(필수항목) : 성명, 계좌번호*</p>
+                                                <p class="mt5"><span style="color: rgb(0, 124, 255)">*</span> 처리근거 : 금융실명법 제4조 제1항 제5호</p>
+                                                <p class="mt20"><strong>4. 민원 관리 목적</strong></p>
+                                                <p class="mt10">- 수집 정보(필수항목) : 성명, 휴대폰번호, 이메일주소</p>
+                                                <p class="mt5">- 보유 기간 : 이용 해지시까지</p>
+                                                <p class="mt20">고객은 개인정보 수집 및 이용을 거부할 권리가 있으며, 거부 시 이용에 제약을 받으실 수 있습니다. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                            </div>
+                        </li>
+                        <li id="viewTrms3">
+                            <span class="checkbox">
+                 <input type="checkbox" id="agreeTrms3" name="agreeTrms3" tabindex="7">
+                 </span>
+                            <label for="checkbox3" id="checkbox3_label" class="bfop_txt" style="color: #050505; margin-left: 5px;"><strong>금융정보조회 이용 동의</strong></label>
+                            <a href="javascript:;" class="more" name="agreeViewTrms3">보기</a>
+                            <div class="cont_box" id="divTrms3">
+                                <dd id="content3"></dd>
+                            </div>
+                        </li>
+                        <li id="viewTrms2">
+                            <span class="checkbox">
+                 <input type="checkbox" id="agreeTrms2" name="agreeTrms2" tabindex="7">
+                 </span>
+                            <label for="checkbox2" id="checkbox2_label" class="bfop_txt" style="color: #050505; margin-left: 5px;"><strong>금융정보 제3자 제공 동의</strong></label>
+                            <a href="javascript:;" class="more" name="agreeViewTrms2">보기</a>
+                            <div class="cont_box" id="divTrms2">
+                                <dd id="content2"></dd>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="all_agree" id="viewTrms4">
+                    <span class="checkbox">
+           <input type="checkbox" id="agreeTrms4" name="agreeTrms4" tabindex="8">
+           </span>
+                    <label for="checkbox4" id="checkbox4_label" class="bfop_txt" style="color: #050505;"><strong>전체 동의하기</strong></label>
+                </div>
+                <div style="width: 100%; display: table;">
+                    <a class="btn bfop_btn_s1" id="nextStep">ARS
+
+
+				출금/조회
+
+
+
+
+		동의
+		</a>
+                </div>
+                <div style="width: 100%; display: table; margin-top: 10px;"><a class="btn bfop_btn_s2" id="step4" style="color: #050505; background: #FFFFFF; margin-top: 10px;">취소</a></div>
+        </div>
+        <!--//container-->
+    </div>
+    <!-- //E: wrap -->
+    </form>
+    <div id="footer" class="center">
+        <p>은행권 공동 오픈플랫폼</p>
+        <address>copyright © KFTC</address>
+    </div>
+    <script type="text/javascript">
+    $(document).on("keyup", "input[numberOnly]", function() { $(this).val($(this).val().replace(/[^0-9]/gi, "")); });
+
+    // 계좌번호 선거절 처리
+    // (1) 지역농축협 계좌 검증
+    // (2) 기업은행 평생계좌 검증
+    $("#acntNumMsg").hide();
+    var acntNCH = "";
+    if ("" == "9107") {
+        acntNCH = "Y";
+    }
+    $('#prtpOrgCode').on("change", function(e) {
+        if ($("select[name='prtpOrgCode']").val() == "011") { // 농협은행 선택
+            if (!chkNHAcntNum()) {
+                acntNCH = "Y";
+                $("select[name='prtpOrgCode']").focus();
+            } else {
+                acntNCH = "";
+            }
+        } else if ($("select[name='prtpOrgCode']").val() == "003") { // 기업은행 선택
+            if (!chkIBKAcntNum()) {
+                acntNCH = "Y";
+                $("select[name='prtpOrgCode']").focus();
+            } else {
+                acntNCH = "";
+            }
+        }
+    });
+    $('#acntNum').on("keyup", function(e) {
+        if ($("select[name='prtpOrgCode']").val() == "011") { // 농협은행 선택
+            if (!chkNHAcntNum()) {
+                acntNCH = "Y";
+                $("input[name='acntNum']").focus();
+            } else {
+                acntNCH = "";
+            }
+        } else if ($("select[name='prtpOrgCode']").val() == "003") { // 기업은행 선택
+            if (!chkIBKAcntNum()) {
+                acntNCH = "Y";
+                $("input[name='acntNum']").focus();
+            } else {
+                acntNCH = "";
+            }
+        }
+    });
+
+    // 지역농축협 계좌 검증로직
+    function chkNHAcntNum() {
+        var d13_chk1 = ["351", "352", "356", "355"]; // 13자리 : 앞의 3자리 체크
+        var d13_chk2 = ["3", "4", "5"]; // 13자리 : 13번째자리 체크
+        var d13_chk3 = ["354", "360", "384", "394", "398", "028"]; // 13자리 : 앞의 3자리 체크
+        var d14_chk1 = ["792"]; // 14자리 : 앞의 3자리 체크
+        var d14_chk2 = ["51", "52", "56", "55", "66", "67"]; // 14자리 : 7,8번째 2자리 체크
+        if ($('#acntNum').val().length == 13) { // 13자리 계좌의 경우
+            for (var i = 0; i < d13_chk1.length; i++) {
+                if ($('#acntNum').val().substring(0, 3) == d13_chk1[i]) { // [앞의 3자리 체크] chk1에 해당하는 경우 체크
+                    $("#acntNumMsg").show();
+                    $("#acntNumMsg").html("농협중앙회(지역농축협) 계좌는 해당기관의 미참가로 지원되지 않습니다.");
+                    return false;
+                }
+            }
+            for (var i = 0; i < d13_chk2.length; i++) { // [13번째자리 체크] chk2에 해당되면서
+                if ($('#acntNum').val().substring(12) == d13_chk2[i]) {
+                    for (var k = 0; k < d13_chk3.length; k++) { // [앞의 3자리 체크] chk3에 해당하는 경우 체크
+                        if ($('#acntNum').val().substring(0, 3) == d13_chk3[k]) {
+                            $("#acntNumMsg").show();
+                            $("#acntNumMsg").html("농협중앙회(지역농축협) 계좌는 해당기관의 미참가로 지원되지 않습니다.");
+                            return false;
+                        }
+                    }
+                }
+            }
+        } else if ($('#acntNum').val().length == 14) { // 14자리 계좌의 경우
+            for (var i = 0; i < d14_chk1.length; i++) {
+                if ($('#acntNum').val().substring(0, 3) == d14_chk1[i]) { // [앞의 3자리 체크] chk1에 해당하는 경우 체크
+                    $("#acntNumMsg").show();
+                    $("#acntNumMsg").html("농협중앙회(지역농축협) 계좌는 해당기관의 미참가로 지원되지 않습니다.");
+                    return false;
+                }
+            }
+            for (var i = 0; i < d14_chk2.length; i++) {
+                if ($('#acntNum').val().substring(6, 8) == d14_chk2[i]) { // [7~8번째자리 체크] chk1에 해당하는 경우 체크
+                    $("#acntNumMsg").show();
+                    $("#acntNumMsg").html("농협중앙회(지역농축협) 계좌는 해당기관의 미참가로 지원되지 않습니다.");
+                    return false;
+                }
+            }
+        }
+        $("#acntNumMsg").hide();
+        return true;
+    }
+
+    // 기업은행 평생계좌 검증로직
+    function chkIBKAcntNum() {
+        var d11_chk1 = ["010"]; // 11자리 : 앞의 3자리 체크
+
+        if ($('#acntNum').val().length == 11) { // 13자리 계좌의 경우
+            for (var i = 0; i < d11_chk1.length; i++) {
+                if ($('#acntNum').val().substring(0, 3) == d11_chk1[i]) { // [앞의 3자리 체크] chk1에 해당하는 경우 체크
+                    $("#acntNumMsg").show();
+                    $("#acntNumMsg").html("기업은행 평생계좌는 계좌등록이 불가합니다.");
+                    return false;
+                }
+            }
+        }
+        $("#acntNumMsg").hide();
+        return true;
+    }
+
+    // 동의 버튼 활성화/비활성화
+    function setBtnColor() {
+        if ($('#prtpOrgCode').val().trim() != "" && $('#acntNum').val().trim() != "" && $("#agreeTrms4").is(":checked") == true && acntNCH == "") {
+            $('#nextStep').css('background', '#006DB8'); // 활성화색
+            return true;
+        } else {
+            $('#nextStep').css('background', '#818487'); // 비활성화색
+            return false;
+        }
+    }
+
+    // 인증하기 버튼 이벤트 처리
+    $('#nextStep').on("click", function(e) {
+        if (setBtnColor()) {
+            goNext();
+        } else {
+            $('#nextStep').css('background', '#818487'); // 비활성화색
+        }
+    });
+
+    //취소 버튼 이벤트 처리
+    $('#step4').on("click", function(e) {
+        var redUri = "https://dapp.finnq.com/MAS90B1003.web";
+        var errStr = "error=access_denied&error_description=사용자가%20'취소'%20버튼을%20클릭한%20경우&client_info=finnq";
+        if (redUri.lastIndexOf("?") != -1 && (redUri.lastIndexOf("?") + 1) == redUri.length) {
+            location.href = redUri + errStr;
+        } else {
+            location.href = redUri + "?" + errStr;
+        }
+    });
+
+    // 전역변수
+    var scope = 'login transfer inquiry';
+
+    // 메시지처리
+    $(function() {
+        if ("" == "9107") {
+            $("#acntNumMsg").show();
+            $("#acntNumMsg").html("농협중앙회(지역농축협) 계좌는 해당기관의 미참가로 지원되지 않습니다.");
+        }
+        if ("" != "" && "" != "9107") {
+            alert("");
+        }
+        if ("" == "9901") { // 장시간 미사용하여 세션 정보 손실시 G/W부터 재시작해야함.
+            window.close();
+        }
+        // 동의약관
+        if (scope.indexOf("transfer") >= 0 && scope.indexOf("inquiry") >= 0) {
+            $("#divTrms1").hide(); // 출금서비스
+            $("#divTrms3").hide(); // 금융정보조회
+            $("#divTrms2").hide(); // 제3자제공
+        } else if (scope.indexOf("transfer") >= 0) {
+            $("#viewTrms2").hide();
+            $("#viewTrms3").hide();
+            $("#divTrms1").hide();
+        } else if (scope.indexOf("inquiry") >= 0) {
+            $("#viewTrms1").hide();
+            $("#divTrms2").hide();
+            $("#divTrms3").hide();
+        }
+        $("#viewTrms4").show();
+        // ARS출금동의
+        $('#nextStep').css('background', '#818487'); // 비활성화색
+    });
+
+    // 은행선택시 약관가져오기 이벤트
+    $("select[name='prtpOrgCode']").change(function() {
+        $("[id^='agreeTrms']").prop("checked", false);
+        if ($("select[name='prtpOrgCode']").val() != "") {
+            trmsShow($("select[name='prtpOrgCode']").val());
+            //20181205 은행선택시 별명 값 바꿔주기 곽윤이
+            //	$("#acntNkname").val($.trim($("#prtpOrgCode option:selected").text()));
+        } else {
+            $("[id^='content']").html("");
+            $("[id^='divTrms']").hide();
+        }
+    });
+
+    // 은행별 약관정보 가져오기
+    function trmsShow(bankCode) {
+        /*
+        var gw_app_key = 'l7xxac0116fc61b14c26a3b52f3b42415258';
+        $.ajax({
+        	url : "https://twww.open-platform.or.kr/apt/prvr/accountRegistration/trmsBalance",
+        	type : "POST",
+        	data : {"prtpOrgCode":bankCode, "scope":scope, "gwAppKey":gw_app_key, "returnType":"jsonView"},
+        	success : function(data) {
+        		if(data.result != "") {
+        			alert(data.resultMsg);
+        			$("select[name='prtpOrgCode']").val("");
+        		} else {
+        			if(scope.indexOf("transfer") >= 0 && scope.indexOf("inquiry") >= 0) {
+        				// 조회동의
+        				$("#content2").html(data.data[0].contents);
+        				$("#divTrms2").hide();
+        				$("#content3").html(data.data[1].contents);
+        				$("#divTrms3").hide();
+        				// 출금동의
+        				$("#content1").html(data.data[2].contents);
+        				$("#divTrms1").hide();
+        			} else if(scope.indexOf("transfer") >= 0) {
+        				$("#content1").html(data.data[0].contents);
+        				$("#divTrms1").hide();
+        			} else if(scope.indexOf("inquiry") >= 0) {
+        				$("#content2").html(data.data[0].contents);
+        				$("#divTrms2").hide();
+
+        				$("#content3").html(data.data[1].contents);
+        				$("#divTrms3").hide();
+        			}
+        		}
+        	}, 	error : function (data) {
+        		alert("약관정보 조회중 알수없는 오류가 발생하였습니다.\n은행을 재선택하여 주시기 바랍니다.");
+        		$("select[name='prtpOrgCode']").val("");
+        	}
+        });
+        */
+    }
+
+    // 동의클릭 처리
+    var objAgree = $("[name^='agree']");
+    objAgree.each(function(i) {
+        objAgree.eq(i).on("click", function(e) {
+            if (i == 0 || i == 1) { // 출금서비스 약관동의
+                if ($("#prtpOrgCode").val() == "") {
+                    alert("은행을 먼저 선택해주세요.");
+                    return false;
+                }
+                if (i == 1) {
+                    if (objAgree.eq(0).is(":checked") == true) {
+                        objAgree.eq(0).prop("checked", false);
+                    } else {
+                        objAgree.eq(0).prop("checked", true);
+                    }
+                }
+                if (objAgree.eq(0).is(":checked") == true) {
+                    $("#divTrms1").slideDown();
+                } else {
+                    $("#divTrms1").slideUp();
+                }
+            }
+            if (i == 4 || i == 5) { // 제3자 제공동의
+                if ($("#prtpOrgCode").val() == "") {
+                    alert("은행을 먼저 선택해주세요.");
+                    return false;
+                }
+                if (i == 5) {
+                    if (objAgree.eq(4).is(":checked") == true) {
+                        objAgree.eq(4).prop("checked", false);
+                    } else {
+                        objAgree.eq(4).prop("checked", true);
+                    }
+                }
+                if (objAgree.eq(4).is(":checked") == true) {
+                    $("#divTrms2").slideDown();
+                } else {
+                    $("#divTrms2").slideUp();
+                }
+            }
+            if (i == 2 || i == 3) { // 정보조회 제공동의
+                if ($("#prtpOrgCode").val() == "") {
+                    alert("은행을 먼저 선택해주세요.");
+                    return false;
+                }
+                if (i == 3) {
+                    if (objAgree.eq(2).is(":checked") == true) {
+                        objAgree.eq(2).prop("checked", false);
+                    } else {
+                        objAgree.eq(2).prop("checked", true);
+                    }
+                }
+                if (objAgree.eq(2).is(":checked") == true) {
+                    $("#divTrms3").slideDown();
+                } else {
+                    $("#divTrms3").slideUp();
+                }
+            }
+            if (i == 6) { // 모두 동의시
+                if (scope.indexOf("transfer") >= 0 && scope.indexOf("inquiry") >= 0) {
+                    if ($("#prtpOrgCode").val() == "") {
+                        alert("은행을 먼저 선택해주세요.");
+                        return false;
+                    }
+                    if (objAgree.eq(i).is(":checked") == true) {
+                        objAgree.eq(0).prop("checked", true);
+                        objAgree.eq(2).prop("checked", true);
+                        objAgree.eq(4).prop("checked", true);
+                        $("#divTrms1").slideDown();
+                        $("#divTrms2").slideDown();
+                        $("#divTrms3").slideDown();
+                    }
+                    if (objAgree.eq(i).is(":checked") == false) {
+                        objAgree.eq(0).prop("checked", false);
+                        objAgree.eq(2).prop("checked", false);
+                        objAgree.eq(4).prop("checked", false);
+                        $("#divTrms1").slideUp();
+                        $("#divTrms2").slideUp();
+                        $("#divTrms3").slideUp();
+                    }
+                } else if (scope.indexOf("transfer") >= 0) {
+                    if ($("#prtpOrgCode").val() == "") {
+                        alert("은행을 먼저 선택해주세요.");
+                        return false;
+                    }
+                    if (objAgree.eq(i).is(":checked") == true) {
+                        objAgree.eq(0).prop("checked", true);
+                        $("#divTrms1").slideDown();
+                    }
+                    if (objAgree.eq(i).is(":checked") == false) {
+                        objAgree.eq(0).prop("checked", false);
+                        $("#divTrms1").slideUp();
+                    }
+                } else if (scope.indexOf("inquiry") >= 0) {
+                    if ($("#prtpOrgCode").val() == "") {
+                        alert("은행을 먼저 선택해주세요.");
+                        return false;
+                    }
+                    if (objAgree.eq(i).is(":checked") == true) {
+                        objAgree.eq(2).prop("checked", true);
+                        objAgree.eq(4).prop("checked", true);
+                        $("#divTrms2").slideDown();
+                        $("#divTrms3").slideDown();
+                    }
+                    if (objAgree.eq(i).is(":checked") == false) {
+                        objAgree.eq(2).prop("checked", false);
+                        objAgree.eq(4).prop("checked", false);
+                        $("#divTrms2").slideUp();
+                        $("#divTrms3").slideUp();
+                    }
+                }
+            }
+            if (scope.indexOf("transfer") >= 0 && scope.indexOf("inquiry") >= 0) {
+                if (objAgree.eq(0).is(":checked") == true && objAgree.eq(2).is(":checked") == true && objAgree.eq(4).is(":checked") == true) {
+                    objAgree.eq(6).prop("checked", true);
+                } else {
+                    objAgree.eq(6).prop("checked", false);
+                }
+            } else if (scope.indexOf("transfer") >= 0) {
+                if (objAgree.eq(0).is(":checked") == true) {
+                    objAgree.eq(6).prop("checked", true);
+                } else {
+                    objAgree.eq(6).prop("checked", false);
+                }
+            } else if (scope.indexOf("inquiry") >= 0) {
+                if (objAgree.eq(2).is(":checked") == true && objAgree.eq(4).is(":checked") == true) {
+                    objAgree.eq(6).prop("checked", true);
+                } else {
+                    objAgree.eq(6).prop("checked", false);
+                }
+            }
+        })
+    });
+
+    // ARS출금 동의 버튼 활성화 체크
+    $('#prtpOrgCode').on("change", function(e) {
+        setBtnColor();
+    });
+    $('#acntNum').on("keyup", function(e) {
+        setBtnColor();
+    });
+    $('#acntNkname').on("keyup", function(e) {
+        setBtnColor();
+    });
+    $("[id^='agreeTrms']").on("change", function(e) {
+        setBtnColor();
+    });
+
+    // 필수입력체크
+    function validationChk(formId) {
+        var frmObj = $("form[id=" + formId + "]");
+        var objs = frmObj.find("[notNull]");
+
+        for (var i = 0; i < objs.length; i++) {
+            if (objs.eq(i).val().trim() == '') {
+                alert(objs.eq(i).attr("title") + "은(는) 필수입니다.");
+                objs.eq(i).focus();
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // ARS 출금 동의
+    function goNext() {
+        if (!validationChk("frm")) {
+            return -1;
+        }
+
+        if ($("#acntNum").val().length < 9) {
+            alert("계좌번호는 최소 9자리 이상이어야 합니다.");
+            $("#acntNum").focus();
+            return false;
+        }
+
+        if (scope.indexOf("transfer") >= 0 && scope.indexOf("inquiry") >= 0) {
+            if (objAgree.eq(0).is(":checked") != true) {
+                alert("출금서비스(은행) 약관 동의가 되지 않았습니다.");
+                objAgree.eq(0).focus();
+                return false;
+            }
+            if (objAgree.eq(2).is(":checked") != true) {
+                alert("금융정보 제3자 제공 동의가 되지 않았습니다.");
+                objAgree.eq(2).focus();
+                return false;
+            }
+            if (objAgree.eq(4).is(":checked") != true) {
+                alert("금융정보조회 이용 동의가 되지 않았습니다.");
+                objAgree.eq(4).focus();
+                return false;
+            }
+            if (objAgree.eq(6).is(":checked") != true) {
+                alert("조회/출금계좌등록 동의가 되지 않았습니다.");
+                return false;
+            }
+        } else if (scope.indexOf("transfer") >= 0) {
+            if (objAgree.eq(0).is(":checked") != true) {
+                alert("출금서비스(은행) 약관 동의가 되지 않았습니다.");
+                objAgree.eq(0).focus();
+                return false;
+            }
+            if (objAgree.eq(6).is(":checked") != true) {
+                alert("출금계좌등록 동의가 되지 않았습니다.");
+                return false;
+            }
+        } else if (scope.indexOf("inquiry") >= 0) {
+            if (objAgree.eq(2).is(":checked") != true) {
+                alert("금융정보 제3자 제공 동의가 되지 않았습니다.");
+                objAgree.eq(2).focus();
+                return false;
+            }
+            if (objAgree.eq(4).is(":checked") != true) {
+                alert("금융정보조회 이용 동의가 되지 않았습니다.");
+                objAgree.eq(4).focus();
+                return false;
+            }
+            if (objAgree.eq(6).is(":checked") != true) {
+                alert("조회계좌등록 동의가 되지 않았습니다.");
+                return false;
+            }
+        }
+
+        var f = document.frm;
+        f.setAttribute("action", "/apt/mobileweb/callArsRec");
+        f.setAttribute("target", "");
+        f.submit();
+    }
+
+    // 페이지 돌아왔을때 약관정보 가져오기
+    if ($("#prtpOrgCode").val() != "") {
+        trmsShow($("#prtpOrgCode").val());
+    }
+
+    // 화면 호출시 파라미터 존재시 세팅
+    var list = JSON.parse('');
+    $.each(list, function(index, value) {
+        $('#' + index).val(value);
+    });
+    </script>
+</body>
+
+</html>

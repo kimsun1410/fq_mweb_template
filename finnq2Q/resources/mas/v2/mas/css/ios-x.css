@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* Color Palett */
+/* black */
+/* #000 사용안함 2018-04-11 ock */
+/* $black-two 사용안함 #222로 합침 */
+/* white */
+/* 습관저금 박스라인 */
+/* purple */
+/* 습관저금 버튼 활성화 백그라운드 */
+/* etc color */
+/* Size Variables */
+/* width Variables */
+/* test */
+/*clearfix */
+.clearfix:after { content: ' '; display: block; clear: both; height: 0; line-height: 0; visibility: hidden; }
+
+/* 페이지 > 하단 고정 버튼 */
+/* .ios 추가 2018-04-12 ock */
+.ios #contents.add_sticky { padding-bottom: 94px; }
+
+/* 60 */
+.ios #contents.add_sticky:after { height: 94px; }
+
+/* 60 */
+.ios #contents.add_sticky .sticky_wrap button { padding-bottom: 34px; height: 94px; }
+
+.ios .wrap.bg_list #contents:after { height: 79px; }
+
+/* 45 */
+.ios .wrap.bg_list #contents.add_sticky:after { height: 139px; }
+
+/* 105 */
+/* 페이지 > 하단 일반 버튼 */
+.sticky_wrap button { padding-bottom: 34px; height: 94px; }
+
+/* 페이지 > 하단 여백 */
+#contents .mar_b34 { margin-bottom: 34px !important; }
+
+#contents .sec_member_input { margin-bottom: 79px; }
+
+/* 45 */
+#contents .transfer_agree .deposit_name { margin-bottom: 79px; }
+
+/* 45 */
+#contents .finnq_login .login_support { bottom: 54px; }
+
+/* 20 */
+#contents .sec_common_error .round_box { margin-bottom: 79px; }
+
+/* 45 */
+#contents .sec_fincategory { padding-bottom: 79px; }
+
+/* 45 */
+#contents .modal_content.add_sticky .scroll_wrap::after { height: 139px; }
+
+/* 105 */
+#contents .sec_report_poll { padding-bottom: 75px; }
+
+/* 41 */
+#contents .stupid_index .sec_notice { margin-bottom: 79px; }
+
+/* 45 */
+#contents .live_stupid { height: 110px; border-bottom: 34px solid transparent; }
+
+#contents .sec_card_benefit { padding-bottom: 34px; }
+
+/* 40 */
+#contents .sec_suggest_info { padding-bottom: 76px; }
+
+/* 42 */
+#contents .sec_notice_detail:after { height: 79px; }
+
+/* 45 */
+#contents .common_certify .sec_notice { margin-bottom: 79px; }
+
+/* 45 */
+#contents .license_cont { margin-bottom: 79px; }
+
+/* 45 */
+#contents .sec_sns_list { padding-bottom: 79px; }
+
+/* 45 */
+/* #contents .sec_notice_qna{padding-bottom:57px} 23 */
+#contents .sec_form.round_box { margin-bottom: 79px; }
+
+/* 45 */
+#contents .fqsave_family .sec_fqsave_note { padding-bottom: 56px; }
+
+/* 22 */
+/* #contents.add_hana_logo section {padding-bottom:119px}85 */
+#contents section .hana_logo { margin-bottom: 34px; }
+
+/* 0 */
+#contents.add_hana_logo section .hana_logo { margin-bottom: 0px; }
+
+/* 0 */
+#contents .sec_buy_help + .sec_notice { padding-bottom: 75px; }
+
+/* 41 */
+#contents .gifti_guide .tab_content { padding-bottom: 56px; }
+
+/*  22 */
+#contents .agree_details { padding-bottom: 59px; }
+
+/* 25 */
+/* bg_list 사용하면서, 탭바가 붙은 경우 */
+#contents .gifticon_main { margin-bottom: -34px; }
+
+#contents .menu_event .sec_event_list { margin-bottom: -34px; }
+
+/* 풀팝업 > 하단 고정 버튼 */
+.modal_wrap.fullpop .modal_content.add_sticky .sticky_wrap button { padding-bottom: 34px; height: 94px; }
+
+.modal_wrap.fullpop .modal_content.add_sticky .scroll_wrap::after { height: 139px; }
+
+/* 105 */
+/* 2018-03-26 캐시백 신청 후 화면 */
+.wrap.bg_list #contents.cashback_after_profile:after { height: 45px; }
+
+/* 2018-03-29 bg_list + add_hana_logo  있는 화면 */
+/* .wrap.bg_list #contents.add_hana_logo section{padding-bottom:119px}85 */
+
+/*# sourceMappingURL=ios-x.css.map */

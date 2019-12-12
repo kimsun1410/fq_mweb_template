@@ -1,0 +1,86 @@
+@charset 'UTF-8';
+@import "variables";
+
+/* 페이지 > 하단 고정 버튼 */  /* .ios 추가 2018-04-12 ock */
+.ios #contents.add_sticky{padding-bottom:94px}/* 60 */
+.ios #contents.add_sticky:after{height:94px}/* 60 */
+.ios .modal-toast .sticky_wrap button,
+.ios .modal__popup--common .sticky_wrap button,
+.ios #contents.add_sticky .sticky_wrap button{padding-bottom:34px;height:94px}
+.ios .wrap.bg_list #contents:after{ height:79px;}/* 45 */
+.ios .wrap.bg_list #contents.add_sticky:after{height:139px;}/* 105 */
+
+/* 페이지 > 하단 일반 버튼 */
+.sticky_wrap button{padding-bottom:34px;height:94px}
+/* iframe > 하단 일반 버튼 */
+#iframePullPopup .sticky_wrap button.ios_sticky_btn{padding-bottom:34px;height:94px}
+
+/* 페이지 > 하단 여백 */
+#contents .mar_b34 {margin-bottom:34px !important;}
+#contents .sec_member_input{margin-bottom:79px;}/* 45 */
+#contents .transfer_agree .deposit_name{margin-bottom:79px;}/* 45 */
+#contents .finnq_login .login_support{bottom:54px}/* 20 */
+#contents .sec_common_error .round_box{margin-bottom:79px}/* 45 */
+#contents .sec_fincategory{padding-bottom:79px;}/* 45 */
+#contents .modal_content.add_sticky .scroll_wrap::after{height:139px;}/* 105 */
+#contents .sec_report_poll{padding-bottom:75px}/* 41 */
+#contents .stupid_index .sec_notice{margin-bottom:79px;}/* 45 */
+#contents .live_stupid{height:110px;border-bottom:34px solid transparent;}
+#contents .sec_card_benefit{padding-bottom:34px}/* 40 */
+#contents .sec_suggest_info{padding-bottom:76px}/* 42 */
+#contents .sec_notice_detail:after{height: 79px;}/* 45 */
+#contents .common_certify .sec_notice{margin-bottom:79px}/* 45 */
+#contents .license_cont{margin-bottom:79px}/* 45 */
+#contents .sec_sns_list{padding-bottom:79px}/* 45 */
+/* #contents .sec_notice_qna{padding-bottom:57px} 23 */
+#contents .sec_form.round_box{margin-bottom:79px}/* 45 */
+#contents .fqsave_family .sec_fqsave_note{padding-bottom:56px}/* 22 */
+/* #contents.add_hana_logo section {padding-bottom:119px}85 */
+#contents section .hana_logo{margin-bottom:34px}/* 0 */
+#contents.add_hana_logo section .hana_logo{margin-bottom:0px}/* 0 */
+#contents .sec_buy_help + .sec_notice{padding-bottom:75px}/* 41 */
+#contents .gifti_guide .tab_content{padding-bottom:56px}/*  22 */
+#contents .sec_security_license{}
+#contents .agree_details{padding-bottom:59px;} /* 25 */
+.ios .wrap.bg_list #contents .gifticon_prd{margin-bottom:-34px}
+.ios .wrap.bg_list #contents .sec_notice_list{margin-bottom:-34px}
+
+/* p2p  */
+#contents.p2p_wrap.add_sticky .sec_txt_copyright {bottom:124px;} /* 90 */
+/* #contents.p2p_wrap section > .sec_satisfact:last-child {padding-bottom:79px;} 45 */
+/* #contents.p2p_wrap .sec_scroll > .sec_satisfact:last-child {padding-bottom:79px;} 45 */
+/* #contents.p2p_wrap .sec_MASV07Z12 .sec_info1 {padding-bottom:73px;} 39 */
+/* #contents.p2p_wrap .knowHow_detail {padding-bottom:79px;} 45 */
+/* #contents.p2p_wrap .sec_MASV04Z01 .box_detail {padding-bottom:79px;} 45 */
+/* 버튼이 있는 경우는 제외 */
+#contents.p2p_wrap.add_sticky section > .sec_satisfact:last-child {padding-bottom:45px;}
+/* bg_list 사용하면서, 탭바가 붙은 경우 */
+/* .bg_list #contents.p2p_wrap section{margin-bottom:-34px} */
+.wrap.bg_list .p2p_wrap#contents:after{height: 45px}
+
+#contents.p2p_wrap .sec_MASV07Z03{background:#eee}
+#contents.p2p_wrap .sec_MASV07Z03 .no_result:after{content:"";display:inline-block;width:100%;height:34px}
+#contents.p2p_wrap .sec_MASV07Z12 .no_result:after{content:"";display:inline-block;width:100%;height:34px}
+
+/* bg_list 사용하면서, 탭바가 붙은 경우 */
+#contents .gifticon_main{margin-bottom:-34px}
+#contents .menu_event .sec_event_list{margin-bottom:-34px}
+
+.ios .sec_MASV01Z04{height:calc(100vh - 94px);}
+
+/* 풀팝업 > 하단 고정 버튼 */
+.modal_wrap.fullpop .modal_content.add_sticky .sticky_wrap button{padding-bottom:34px;height:94px}
+.modal_wrap.fullpop .modal_content.add_sticky .scroll_wrap::after{height:139px;}/* 105 */
+
+/* 2018-03-26 캐시백 신청 후 화면 */
+.wrap.bg_list #contents.cashback_after_profile:after {height:45px;}
+/* 2018-03-29 bg_list + add_hana_logo  있는 화면 */
+/* .wrap.bg_list #contents.add_hana_logo section{padding-bottom:119px}85 */
+
+/* 핀크카드 상세내역 등록 - 아이폰 X 대응 */
+.wrap.card_reg .finnqcard_reg_info .guide_box {margin-bottom:34px !important;}
+.wrap.card_reg #contents.add_sticky:after {height:185px !important;}
+
+
+/* 오픈뱅킹 - 내계좌 이체 리스트 간격 */
+.open-banking .list__account {padding-bottom:40px;}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01더보기_01프로필_01_MASF02Z05</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="menu cashback_profile add_sticky">
+		<section>
+			<div class="sec_step">
+				<ol class="step01">
+					<li class="on"><strong>1</strong><i class="step_dot"></i></li>
+					<li><strong>2</strong><i class="step_dot"></i></li>
+					<li><strong>3</strong><i class="step_dot"></i></li>
+					<li><strong>4</strong></li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>개인정보 입력</h2>
+            </div>
+
+			<div class="sec_input com_box_wrap mgt40">
+				<div class="sec_info_list">
+					<dl>
+						<dt>이름</dt>
+						<dd>홍길동</dd>
+					</dl>
+					<dl>
+						<dt>전화번호</dt>
+						<dd class="num">(SKT) 010-0000-0000</dd>
+					</dl>
+					<dl>
+						<dt>생년월일</dt>
+						<dd class="num">2018.01.10</dd>
+					</dl>
+				</div>
+
+				<div class="input_wrap">
+					<dl>
+						<dt class="input_tit">
+							<strong>주소<em>(필수)</em></strong>
+						</dt>
+						<dd class="item"><!-- 에러일때 inp_error 추가해주세요. -->
+							<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소 검색" maxlength="" class="inp_count" data-placeholder="주소 검색"></textarea>
+						</dd>
+						<dd class="item text"><!-- 에러일때 inp_error 추가 -->
+							<input type="text" data-name="inpFocus" placeholder="상세 주소" data-placeholder="상세 검색">
+							<p class="remark hide">집 주소를 입력해 주세요.</p><!-- 에러일때 hide를 빼주세요. -->
+						</dd>
+					</dl>
+				</div>
+
+				<div class="agree_wrap single_add_chk">
+					<input type="checkbox" id="chkVal" class="purple">
+					<label for="chkVal"><span>개인정보 수집, 이용동의(필수)</span></label>
+					<button type="button" class="ico ico_arrow_more2"><span class="blind">더보기</span></button>
+				</div>
+
+			</div>
+			<!-- //sec_input com_box_wrap -->
+
+		</section><!-- // -->
+
+		<!-- 항목 입력 완료 시 Disable 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">완료</button>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+});
+</script>
+</body>
+</html>

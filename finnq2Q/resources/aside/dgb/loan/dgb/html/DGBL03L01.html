@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>대출심사 | 비상금 대출</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../css/dgb_finnq.css" />
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="../js/finnq_ui.js"></script>
+</head>
+<body>
+<div class="wrap bg_list">
+
+	<div id="contents" class="partner common add_sticky">
+		<div class="sec_ows_head finnq">
+			<!-- <button class="ows_prev" onclick="history.back();"><span class="blind">이전</span></button> -->
+			<h2 class="ows_title">비상금대출</h2>
+			<button class="btn_cancel" onclick="">취소</button>
+		</div>
+
+		<section>
+			<div class="sec_step">
+				<!--
+					1) 활성화 단계에 li에 클래스 "on"
+						ex) <li class="on">
+					2) 진행 완료된 step은 클래스 "complete" 추가
+						ex) <li class="on complete">
+				 -->
+				<ol>
+					<li class="on complete">
+						<strong>1</strong><i class="step_dot"></i>
+					</li>
+					<li class="on">
+						<strong>2</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>3</strong><i class="step_dot"></i>
+					</li>
+					<li>
+						<strong>4</strong>
+					</li>
+				</ol>
+			</div>
+
+			<div class="sec_title">
+				<h2>대출약정</h2>
+			</div>
+
+			<!-- 19.07.29 수정 -->
+			<div class="term_list dgb_list">
+				<ul>
+					<li>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0102" name="check_action" class="purple">
+							<label for="chk0102" name="check_action"><span>대출거래약정서(가계용) (필수)</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0103" name="check_action" class="purple">
+							<label for="chk0103" name="check_action"><span>가계대출 상품설명서 (필수)</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0104" name="check_action" class="purple">
+							<label for="chk0104" name="check_action"><span>가계대출 핵심 상품설명서 (필수)</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0105" name="check_action" class="purple">
+							<label for="chk0105" name="check_action"><span>은행여신거래기본약관 (필수)</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</div>
+					</li>
+					<li>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0106" name="check_action" class="purple">
+							<label for="chk0106" name="check_action"><span>대출금리 산정 내역서</span></label>
+							<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 19.07.29 수정 -->
+
+		</section>
+
+		<!-- 모두 동의 하면 disabled 속성 삭제 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply" disabled="disabled">다음</button>
+		</div>
+
+	</div>
+	<!-- #contents -->
+</div>
+</body>
+</html>

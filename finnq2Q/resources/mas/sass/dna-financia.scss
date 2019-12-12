@@ -1,0 +1,221 @@
+@charset 'UTF-8';
+/* 금융생활 */
+/* 금융생활 - 소득정보가 없음 */
+#contents > section.finance_life{padding-top:0}
+#contents > section.finance_life .bnner_wrap > img{width:100%}
+#contents > section.finance_life .sec_head,
+#contents > section.finance_life .sec_top_notice.hide + .sec_head{padding-top:28px}
+#contents > section.finance_life .sec_top_notice + .sec_head{padding-top:45px}
+.finance_dna .sec_top_notice{overflow: hidden;margin-top:10px;padding: 0 20px;height:33px; background:$white_four}
+.finance_dna .sec_top_notice:after { content: '.'; display: block; clear: both; height: 0; line-height: 0; visibility: hidden; }
+.finance_dna .sec_top_notice > p {float:left;color:$reddish_orange;font-size: 11px; line-height: 33px;}
+.finance_dna .sec_top_notice > p > .ico_circle_alert{vertical-align: -3px;}
+.finance_dna .sec_top_notice > span {float:right;margin-top:5px}
+.finance_dna .sec_top_notice > span a{position:relative;padding-right:10px;font-size:12px}
+.finance_dna .sec_top_notice > span a:after{content: "";display: block;position:absolute;top:4px;right: 0;width: 6px;height:9px;background: url(../images/dna/ico_arrow_black02.png) no-repeat 0 0;background-size: cover;}
+/* 금융생활 - 오늘까지 입금된 금액 */
+.finance_life .sec_head{padding-bottom:0}
+.finance_life .sec_head .money_tit{@include font(16px);font-family: "AppleSDGothicNeo-Light", "LatoL";}
+.finance_life .sec_head .money_cont{display:inline-block;@include font(40px);margin-top:8px;}
+.finance_life .sec_head .money_cont.purply{@include font(30px);color:$purply_blue;margin-top:5px;}
+.finance_life .sec_head .money_cont.more_arrow{position:relative;padding-right:11px;}
+.finance_life .sec_head .money_cont.more_arrow:after{display:block; position:absolute; bottom:8px; right:0; content:""; width:6px; height:10px; background:url(../images/dna/ico_arrow_black01.png) no-repeat 0 0; background-size:cover;}
+.finance_life .sec_head .money_cont .cash + span {position:relative;display:inline-block;top:-1px;margin-left:3px;@include font(20px);font-weight:bold}
+.finance_life .sec_head .money_cont + .btn_wrap{width:155px;margin:15px auto 0}
+/* 4개 서브 링크 */
+.sec_today_info{padding-bottom:4px;background:$white_three;border-bottom:1px solid $white_two}
+.sec_today_info ul{padding:45px 20px;background:$white;border-bottom:1px solid $white_two}
+.sec_today_info ul:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.sec_today_info ul > li {position:relative;float:left;width:25%;min-height:40px;text-align:center;}
+.sec_today_info ul > li + li:before{content:'';display:inline-block;position:absolute;top:0;left:0;width:1px;height:calc(100%);background:$white_three}
+.sec_today_info ul > li > a{display:block}
+.sec_today_info ul > li > a > strong{display:inline-block;margin-bottom:8px;height:20px;@include font(20px);}
+.sec_today_info ul > li > a > p{position:relative;padding-top:28px}
+.sec_today_info ul > li > a > strong + p{padding-top:0}
+.sec_today_info ul > li.ico_salary p{background:url(../images/dna/ico_salary.png) no-repeat center 0; background-size:20px;}
+.sec_today_info ul > li.ico_the_age p{background:url(../images/dna/ico_the_age.png) no-repeat center 0; background-size:20px;}
+
+.finance_life_tab .tab_wrap.fixed{position:fixed}
+.finance_life_tab .tab_wrap{position:relative;top:0;left:0;right:0}
+.finance_life_cont{border-bottom:1px solid $white_two}
+
+.life_report{padding:30px 20px;background:$white_four}
+/* 오늘까지 ~~ 금액 */
+.today_report{background:$white;padding:30px 20px;border-radius:8px;border:1px solid $white_three;text-align:center}
+.today_report .today_tit{@include font(16px);font-family: "AppleSDGothicNeo-Light", "LatoL";}
+.today_report .today_money{position:relative;display:inline-block;margin-top:5px;padding-right:11px;color:$purply_blue;@include font(30px);}
+.today_report .today_money:after{display:block; position:absolute; bottom:8px; right:0; content:""; width:6px; height:10px; background:url(../images/dna/ico_arrow.png) no-repeat 0 0; background-size:cover;}
+.today_report .today_money .cash + span {position:relative;display:inline-block;top:-1px;margin-left:3px;color:$purply_blue;@include font(20px);font-weight:bold}
+
+.report_detail{position:relative;margin-top:23px;padding-top:28px}
+.report_detail:before{left:0;right:0;width:auto}
+.report_detail .row_type{position:relative;}
+.report_detail .row_type:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.report_detail .row_type .info_tit{float:left;font-family: 'AppleSDGothicNeo-Light', 'LatoL';@include font(16px);color:$brownish_grey}
+.report_detail .row_type .info_cont{float:right;@include font(16px);}
+.report_detail .row_type .info_cont.ico_more_arrow{position:relative;padding-right:13px}
+.report_detail .row_type .info_cont.ico_more_arrow:after{display:block; position:absolute; bottom:5px; right:0; content:""; width:6px; height:10px; background:url(../images/dna/ico_arrow_black01.png) no-repeat 0 0; background-size:cover;}
+.report_detail .row_type .info_cont .cash + span{font-weight:bold}
+.report_detail .row_type + .row_type{margin-top:14px}
+.report_detail .row_type .ico_circle_help{margin-top:-2px;margin-left:5px}
+.report_detail .row_type .layer_wrap{top:31px}
+
+.subtract_wrap > .tit{font-family: 'AppleSDGothicNeo-Light', 'LatoL';@include font(16px);color:$black;text-align:center}
+.subtract_wrap > .tit + .cal_wrap03{margin-top:18px}
+
+/* 이번달 적정소비 */
+.graph_report{margin-top:10px;background:$white;padding:30px 20px;border-radius:8px;border:1px solid $white_three}
+.graph_report > h4{@include font(18px);text-align:center;font-family: "AppleSDGothicNeo-Light", "LatoM";}
+.graph_report > h4 > strong{color:$purply_blue}
+.graph_report > h4 > strong.orange{color:#f74b20}
+.graph_report .finance_graph{margin-top:30px;padding:60px 40px 0px 27px;}
+.graph_report .finance_graph .graph_wrap .item .label_value._left{left: -27px; width: 17px;}
+.graph_report .finance_graph .graph_wrap .item .label_value._right{right: -42px; width: 32px;}
+.graph_report .finance_graph .graph_wrap  .item .bar.orange{width:100% !important}
+
+.graph_report .proper_info{margin-top:30px;overflow:hidden;}
+.graph_report .proper_info > dl{float:left;color:$purply_blue;text-align:left}
+.graph_report .proper_info > dl dt{font-family: "AppleSDGothicNeo-Light", "LatoL";color:$purply_blue;}
+.graph_report .proper_info > dl dd{margin-top:3px;@include font(14px);}
+.graph_report .proper_info > dl dd > .num + span{font-family: "AppleSDGothicNeo-Light", "LatoL";}
+.graph_report .proper_info > dl.proper_money{float:right;color:$brownish_grey;text-align:right}
+.graph_report .proper_info > dl.proper_money dt{color:$brownish_grey;}
+/* 평가 상중하 */
+.level_report{margin-top:10px;background:$white;padding:30px 0;border-radius:8px;border:1px solid $white_three}
+.level_report > ul{position: relative;}
+.level_report > ul:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.level_report > ul > li{position:relative;float:left;width:50%;text-align:center}
+.level_report > ul > li + li{position:relative;float:right}
+.level_report > ul > li + li:before{content:'';display:inline-block;position:absolute;top:0;left:0;width:1px;height:calc(100%);background:$white_three}
+.level_report > ul > li .tit{font-family: "AppleSDGothicNeo-Light", "LatoL";color:$brownish_grey;}
+.level_report > ul > li .cont{margin-top:6px;font-weight:bold;@include font(24px);color:$purply_blue}
+.level_report > ul > li .sub_cont{margin-top:6px;@include font(12px);color:$pinkish_grey}
+.level_report > ul > li .ico_circle_help{}
+.level_report > ul > li .layer_wrap{width:118px;box-sizing:border-box;top:32px;right:unset;text-align:center}
+.ios .level_report > ul > li .layer_wrap{top:33px;}
+.level_report > ul > li .help_layer_area{position: absolute;width: 65px;left: 50%;margin-left: -13px;top: -2.5px;text-align: right;}
+
+.life_detail{padding:30px 20px 43px}
+.life_detail > h3{@include font(16px);font-weight:bold;text-align:center}
+/* 한줄 평 */
+.life_review_box{margin-top:20px;padding:30px 20px;border:1px solid $warm_grey}
+.life_review_box > p{@include font(18px);text-align:center; font-family: "AppleSDGothicNeo-Light";white-space:pre-line}
+.life_review_box > p > em{color:$clear_blue}
+/* 오늘까지 많이 소비한 곳 */
+.today_incom_ranking{margin-top:28px}
+.today_incom_ranking > h4{text-align:center;font-family: "AppleSDGothicNeo-Light", "LatoL";@include font(16px);}
+.today_graph{margin-top:28px}
+.today_graph .legend_wrap{margin-left:100px}
+.today_graph .legend_wrap:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.today_graph .legend_wrap > li{float:left;width:50%;text-align:center}
+.today_graph .legend_wrap > li > span{display:inline-block;width:40px;height:20px;text-align:center;border:1px solid $white_two;border-radius:16px;color:$brownish_grey;font-size:11px;line-height:20px}
+.today_graph .graph_group { position: relative;margin-top:15px;height:20px}
+.today_graph .graph_group + .graph_group { margin-top: 20px; }
+.today_graph .graph_group > dl:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.today_graph .graph_group > dl dt{position:absolute;width:90px;height:20px;line-height:20px}
+.today_graph .graph_group > dl dt > span{padding-right:4px}
+.today_graph .graph_group > dl dd{position:relative;margin-left:95px;}
+.today_graph .graph_group > dl dd:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.today_graph .item{position:relative;width:50%;height:20px;}
+.today_graph .item .label_value{position:absolute;height:20px;font-size:12px;line-height:20px}
+.today_graph .item > div{position: relative;margin-top:5px;height:10px;}
+.today_graph .item > div .bar {position:absolute;display: block; text-indent: -999em; width: 0; height: 100%; -webkit-transition: width 0.5s; -moz-transition: width 0.5s; -o-transition: width 0.5s; transition: width 0.5s; }
+.today_graph .item.my_income {float:left;}
+.today_graph .item.my_income .label_value{left:0;color:$clear_blue}
+.today_graph .item.my_income > div{margin-left: 50px;}
+.today_graph .item.my_income > div .bar {right:0;background-color: $clear_blue; }
+.today_graph .item.friend_income {float:right;}
+.today_graph .item.friend_income .label_value {right:0.5px;color:$brownish_grey}
+.today_graph .item.friend_income > div{margin-right: 50px;}
+.today_graph .item.friend_income > div .bar {left:0.5px;background-color: $pinkish_grey;}
+
+.graph_report.no_data > p{padding-bottom:110px;@include font(18px);font-family:"AppleSDGothicNeo-Light", "LatoL";background: url(../images/dna/bg_no_income02.png) no-repeat center 57px;background-size:114px 78px;text-align:center}
+.graph_report.no_data > .btn_wrap{margin:0 auto;width:162px;}
+
+/* 금융자산을 모으는 방법 */
+.saving_method{position:relative;margin-top:30px;background:$white;padding:30px 20px;border-radius:8px;border:1px solid $white_three}
+.saving_method > h4{text-align:center;font-family: "AppleSDGothicNeo-Light", "LatoL";@include font(16px);}
+.saving_method .legend_wrap{position:absolute;top:65px;right:20px}
+.saving_method .legend_wrap:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.saving_method .legend_wrap > li{float:left;margin-left:10px}
+.saving_method .legend_wrap > li > span{position:relative;color:$warm_grey;@include font(12px);}
+.saving_method .legend_wrap > li > span:before {content: "";display: inline-block;margin-right: 4px;width: 6px;height: 6px;border-radius: 3px;vertical-align: 2px;}
+.saving_method .legend_wrap > li.my_data > span:before {background:$purply_blue}
+.saving_method .legend_wrap > li.friend_data > span:before {background:$white_two}
+
+.saving_method .legend_wrap + .graph_group{margin-top:45px}
+.saving_method .graph_group + .graph_group{margin-top:25px}
+
+.saving_method .graph_group > dl:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.saving_method .graph_group > dl dt{}
+.saving_method .graph_group > dl dt > span{padding-right:4px}
+.saving_method .graph_group > dl dd{position:relative;padding-top:7px}
+.saving_method .graph_group > dl dd:after {content:''; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
+.saving_method .item{position:relative;}
+.saving_method .item .label_value{position:absolute;right:0;height:20px;line-height:20px}
+.saving_method .item .label_value .num + span{font-family: "AppleSDGothicNeo-Light", "LatoL";}
+.saving_method .item > div{position: relative;width:50%;padding-top:5px;height:20px;box-sizing:border-box}
+.saving_method .item > div .bar {position:absolute;display: block; text-indent: -999em; width: 0; height: 10px; box-sizing: border-box;-webkit-transition: width 0.5s; -moz-transition: width 0.5s; -o-transition: width 0.5s; transition: width 0.5s; }
+.saving_method .item.my_method .label_value{color:$purply_blue}
+.saving_method .item.friend_method .label_value{color:$brownish_grey}
+.saving_method .item.my_method > div .bar {background-color: $purply_blue; border-left:1px solid $purply_blue}
+.saving_method .item.friend_method > div .bar {background-color: $white_two; border-left:1px solid $white_two}
+
+.round_line_box{margin-top:10px;background:$white;border:1px solid $white_two;border-radius:8px}
+.round_line_box > dl{position:relative}
+.round_line_box > dl:after{position:absolute;top:0;right:0;content:"";display:inline-block;width:80px;height:65px;background:url(../images/dna/img_saving_item.png) no-repeat right 0;background-size:80px 260px}
+.round_line_box > dl > dt{@include font(16px);font-weight:bold}
+.round_line_box > dl > dt > span{font-weight:normal}
+.ios .round_line_box > dl > dt > span{font-weight:bold}
+.round_line_box > dl > dd{margin-top:7px;@include font(16px);color:$brownish_grey;font-family: "AppleSDGothicNeo-Light", "LatoL";}
+.round_color_box{margin-top:10px;background:$white_four;border:1px solid $white_two;border-radius:8px}
+.round_color_box > .row_type{overflow:hidden;text-align:center}
+.round_color_box > .row_type > .info_tit{float:left;font-weight:bold;@include font(16px);}
+.round_color_box > .row_type > .info_tit > span{font-weight:normal;}
+.ios .round_color_box > .row_type > .info_tit > span{font-weight:bold}
+.round_color_box > .row_type > .info_cont{float:right;@include font(16px);}
+.round_color_box > .row_type > .info_cont .cash + span{font-weight:bold}
+.round_color_box > .row_type._sub{margin-top:29px}
+.round_color_box > .row_type._sub > .info_tit{color:$clear_blue;@include font(14px);font-family: "AppleSDGothicNeo-Light", "LatoL";font-weight:normal}
+.round_color_box > .row_type._sub > .info_cont{color:$pinkish_grey;@include font(14px);}
+.round_color_box.detali_more > .row_type > .info_cont{position:relative;padding-right:15px}
+.round_color_box.detali_more > .row_type > .info_cont:after{content:"";position:absolute;top:50%;right:0;margin-top:-15px;background:url('../images/common/ico-arrow-list.png') no-repeat right 0; width:15px; height:30px; background-size:30px auto;}
+.round_color_box.detali_more > .row_type._sub > .info_cont{padding-right:0}
+.round_color_box.detali_more > .row_type._sub > .info_cont:after{display:none}
+
+.sec_saving_list{margin:43px 20px 0;padding-bottom:45px}
+.sec_saving_list > article{position:relative;padding:28px 20px}
+.sec_saving_list > article:first-child{margin-top:0}
+.sec_saving_list .saving_item01 > dl:after{background-position:right 5px}
+.sec_saving_list .saving_item02 > dl:after{background-position:right -60px}
+.sec_saving_list .saving_item03 > dl:after{background-position:right -125px}
+.sec_saving_list .saving_item04 > dl:after{background-position:right -190px}
+
+.sec_head + .sec_saving_list {margin-top:8px}
+
+.salary_report.sec_round_box{margin-top:45px;margin-bottom:45px}
+.salary_report article > .salary_review{font-family: "AppleSDGothicNeo-Light", "LatoL";@include font(16px);color:$brownish_grey;text-align:center}
+.salary_report article > .salary_review .btn_modify {position:relative;width:20px; height:20px;vertical-align: top;}
+.salary_report article > .salary_review .btn_modify:before {display:block; position:absolute; top:50%; margin-top:-4px;left:50%; margin-left:-4px;content:""; width:8px; height:8px; background:url(../images/dna/ico_modify.png) no-repeat 0 0; background-size:cover;}
+.salary_report article > .percent{display:block;margin-top:10px;@include font(20px);font-weight:bold;text-align:center}
+
+.salary_report .no_info > .salary_review{font-family: "AppleSDGothicNeo-Light", "LatoL";@include font(14px);color:$warm_grey;}
+.salary_report .no_info > .salary_review + .btn_text05{display:block;text-align:center;margin-top:6px}
+
+/* 소득_또래비교설정 FIAA04Z10 ~ 11 지역 선택, 이중팝업*/
+.modal-choice-zone1.modal_wrap,
+.modal-choice-zone2.modal_wrap{ align-items:flex-end;}
+.pop_choice_zone .sec_head { margin:0 0 0;padding:0;text-align:center;color:$black;}
+.pop_choice_zone .sec_head h3 { @include font(16px);font-family:"AppleSDGothicNeo-Light";}
+.pop_choice_zone .sec_table .detail_set {/*  margin-top:28px; */padding:0 20px;}
+/* .pop_choice_zone .sec_table .detail_set > div { margin-top:10px;} */
+.pop_choice_zone .sec_table .detail_set > div:first-of-type {margin:28px 0 55px}
+.pop_choice_zone .sec_table .detail_set > div > strong { display:inline-block;margin-top:13px;width:80px;}
+.pop_choice_zone .sec_table .detail_set .btn_sellist { margin-top:0;}
+.pop_choice_zone .sec_table .detail_set .btn_sellist.up_four li{ width:25%}
+.pop_choice_zone .sec_table .detail_set .btn_sellist li button { color:$warm_grey;@include font(14px);}
+.pop_choice_zone .sec_table .detail_set .btn_sellist li button.on { color:$purply_blue;}
+.pop_choice_zone .swiper-container-horizontal >.swiper-pagination-bullets,
+.pop_choice_zone .swiper-pagination-custom, .swiper-pagination-fraction{bottom:28px}
+
+/* 2019-01-14 기획,디자인 변경으로 안 쓰는 css 삭제함 */

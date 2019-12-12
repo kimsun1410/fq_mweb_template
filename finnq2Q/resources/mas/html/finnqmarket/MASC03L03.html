@@ -1,0 +1,105 @@
+<!-- //************************************************
+    decrition by : kim tae yang
+    update : 2019-11-01
+    원스탑 혁신금융대출
+************************************************// -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">
+    <title>17_혁신금융대출_09상품상세_01기본_MASC04I01_web</title><!-- 임시 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- 하단 버튼 scrollup down시 class="show" 추가 -->
+            <div id="contents" class="one_stop show add_sticky">                
+                <div class="bt-popup is-visible" data-popup-con="pop_loan02"  role="alert">
+                    <div class="bt-popup-container">
+                        <div class="conts_box">
+                            <strong class="title">정보 확인 실패</strong>
+                            <p>재직/소득 정보 확인에 실패하였습니다.<br />다시 시도해 주세요</p>
+                        </div>
+                        <!-- class="set_type1" 버튼 한개 , class="set_type2" 추가시 버튼 두개  -->
+                        <div class="sticky_wrap set_type1">
+                            <button type="button" name="" data-popup="agree_pop" class="btn btn_type_apply">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #contents -->
+        </div>
+        <script src="../../libs/jquery-2.2.4.min.js"></script>
+        <script src="../../libs/ui.js"></script>
+        <script src="../../libs/contents.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                function popup() {
+                    var openBtn = '[data-popup]',
+                        closeBtn = '.bt-popup-close';
+
+                    function getTarget(t) {
+                        return $(t).attr('data-popup')
+                    }
+                    function open(t) {
+                        var showTarget = $('[data-popup-con="' + t + '"]');
+                        showTarget.addClass('is-visible').focus();
+                        showTarget.find('.bt-popup-close').data('is-visible', t);
+                    }
+                    function close(t) {
+                        var activeTarget = $('[data-popup-con="' + t + '"]');
+                        $('[data-popup="' + t + '"]').focus();
+                        activeTarget.removeClass('is-visible');
+                        $('.popup-trigger').removeClass('on');
+                    }
+                    $(document).on('click', openBtn, function(e) {
+                        e.preventDefault();
+                        open(getTarget(e.target));
+                        $(this).addClass('on');
+                        $('.bt-popup').on('scroll touchmove mousewheel', function(e){
+                            e.preventDefault();
+                            e.stopPropagation();
+                            return false;
+                        });
+                    }).on('click', closeBtn, function(e) {
+                        e.preventDefault();
+                        close($(this).data('is-visible'));
+                        $(this).removeClass('on');
+                        $('.bt-popup').off('scroll touchmove mousewheel');
+                    })
+                    $(".one_stop .bt-popup a").on('click', function(e) {
+                        $('.popup-trigger').text($(this).text());
+                        $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                        $('.popup-trigger').removeClass('on');
+                        
+                    });
+                    $(".one_stop .bt-popup .btn").on('click', function(e) {
+                        $('.hide_box').show().find('.ost_mobile').addClass('inp_focus');
+                        $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                    });
+                    $('.ost_mobile').each(function(){
+                        $(this).focus(function(){
+                            var Hei = $(window).height() - 60 ;
+                            $('.one_stop').addClass('no_fixed');
+                            $('.one_stop > section').css('height', Hei +'px');
+                        });
+                    });
+                    $('.bt-popup').each(function(){
+                        if($(this).hasClass('is-visible')){
+                            $('.bt-popup').on('scroll touchmove mousewheel', function(e){
+                                e.preventDefault();
+                                e.stopPropagation();
+                                return false;
+                            });
+                        }else{
+                            $('.bt-popup').off('scroll touchmove mousewheel');
+                        }
+                    });  
+                }
+                popup();
+            });
+        </script>
+    </body>
+</html>

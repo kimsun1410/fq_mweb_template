@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04습관저금_02최초_web - MASM01Z12</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180117" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="market add_sticky">
+		<section class="market_wrap make_deposit">
+			<div class="sec_slide">
+				<div class="sub_tit">
+					<span>STEP1</span>
+					<h2 class="bold">자주 소비하는 카테고리 선택</h2>
+					<!-- input type="text" style="width:50%;height:20px;display:block;margin:0 auto;border:1px solid red;"/ test  -->
+				</div>
+				<div class="slide_wrap">
+
+					<div class="swiper-container market_category">
+						<div class="swiper-wrapper">
+							<!--
+								.ico_cvs : 편의점
+								.ico_fastfood : 패스트푸드
+								.ico_coffee : 커피
+								.ico_chicken : 치킨
+								.ico_bread : 빵
+								.ico_shopping : 쇼핑
+							-->
+							<div class="swiper-slide" data-category="fastfood"><!-- data-category 개발선택사항입니다. 삭제하셔도 무방합니다. -->
+								<div class="form_wrap"><input type="radio" id="aa1" name="ryellow" class="yellow" /><label for="aa1"><span></span></label></div>
+								<div class="category_tit"><span>패스트푸드</span></div>
+								<div class="category_ico ico_fastfood"></div>
+							</div><!-- //slide -->
+							<div class="swiper-slide on" data-category="coffee">
+								<div class="form_wrap"><input type="radio" id="aa1" name="ryellow" checked="checked" class="yellow" /><label for="aa1"><span></span></label></div>
+								<div class="category_tit"><span>커피</span></div>
+								<div class="category_ico ico_coffee"></div>
+							</div><!-- // -->
+							<div class="swiper-slide" data-category="chicken">
+								<div class="form_wrap"><input type="radio" id="aa1" name="ryellow" class="yellow" /><label for="aa1"><span></span></label></div>
+								<div class="category_tit"><span>치킨</span></div>
+								<div class="category_ico ico_chicken"></div>
+							</div><!-- //slide -->
+							<div class="swiper-slide" data-category="bread">
+								<div class="form_wrap"><input type="radio" id="aa1" name="ryellow" class="yellow" /><label for="aa1"><span></span></label></div>
+								<div class="category_tit"><span>빵</span></div>
+								<div class="category_ico ico_bread"></div>
+							</div><!-- //slide -->
+							<div class="swiper-slide" data-category="cvs">
+								<div class="form_wrap"><input type="radio" id="aa1" name="ryellow" class="yellow" /><label for="aa1"><span></span></label></div>
+								<div class="category_tit"><span>편의점</span></div>
+								<div class="category_ico ico_cvs"></div>
+							</div><!-- //slide -->
+							<div class="swiper-slide" data-category="shopping">
+								<div class="form_wrap"><input type="radio" id="aa1" name="ryellow" class="yellow" /><label for="aa1"><span></span></label></div>
+								<div class="category_tit"><span>쇼핑</span></div>
+								<div class="category_ico ico_shopping"></div>
+							</div><!-- //slide -->
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div><!-- //swiper-container -->
+				</div>
+			</div>
+
+			<div class="sec_choice">
+				<div class="sub_tit">
+					<span>STEP2</span>
+					<h2>결제 금액의 저금액 선택</h2>
+				</div>
+
+				<ul class="btn_percent">
+					<li><button>5%</button></li>
+					<li ><button class="on">10%</button></li>
+					<li><button>15%</button></li>
+					<li><button>20%</button></li>
+					<li><button>30%</button></li>
+					<li><button>50%</button></li>
+				</ul>
+			<div><!-- //sec_intro -->
+
+		</section>
+		<!-- 하단 붙임 -->
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">확인</button>
+		</div>
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+		//저금액 선택버튼
+		$('.sec_choice .btn_percent').on('click', 'button', function() {
+			$(this).parents('.btn_percent').find('button').removeClass();
+			$(this).addClass('on');
+		});
+
+		// 카테고리 선택 슬라이드
+		var marketCategory = new Swiper('.market_category', {
+		  slidesPerView: 3,
+		  spaceBetween: 10,
+		  slidesPerGroup: 1,
+		  centeredSlides: false,
+		  loop: true,
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  }
+		});
+
+		// 카테고리 선택 "on"클래스 추가
+		$('.swiper-container').on('click', '.swiper-slide, .swiper-button-next, .swiper-button-prev', function() {
+			var cnum = $('.swiper-slide-next').index();
+			$('.swiper-container .swiper-slide').removeClass('on');
+			$('.swiper-container .swiper-slide').eq(cnum).addClass('on').find(':radio').prop('checked',true);
+		});
+
+});
+</script>
+</body>
+</html>

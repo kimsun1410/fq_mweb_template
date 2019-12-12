@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>01더보기_01프로필_04캐시백정보변경_web_</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+</head>
+<body>
+<div class="wrap" id="MASA02Z04"><!-- bg_list 삭제 하고 하단 버튼 test -->
+	<div id="contents" class="menu">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" name="button" class="btn_select btn_type_a open_modal" data-triger="01010201" data-mtype="fullpop">01더보기_01프로필_04캐시백정보변경_web_MASA02Z04</button>
+			</span>
+		</div>
+
+
+		<div id="MASA02Z04" class="modal_wrap fullpop cashback_terms"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+			<div class="modal_content add_sticky modified"><!-- 개별 팝업 Class pop_direct_input -->
+
+				<!-- <div class="sec_head">
+					<h2 class="modal_title">하나멤버스 약관동의</h2>
+					<button class="close_modal" onclick="self.close();"><span class="blind">창닫기</span></button>
+				</div> --> <!-- 2018-02-08 개발팀과 협의 후 풀팝업의 타이틀 일괄 삭제 phj -->
+
+				<div class="scroll_wrap" style=""><!-- height magicNumber -->
+					<div class="sec_title">
+						<h2>개인정보 수정</h2>
+						<p class="guide_txt">회원명과 주민등록번호를 제외한<br>주소만 수정이 가능합니다.</p>
+					</div>
+
+					<div class="sec_personal_input">
+						<ul class="flex_wrap set_type1">
+							<li class="input_wrap item name_gap">
+								<input type="text" data-name="inpFocus" placeholder="" class=""  value="홍길동" disabled="disabled">
+							</li>
+
+							<li class="input_wrap type_3">
+								<div class="item"><input type="text" data-name="inpFocus" placeholder="" value="901221" disabled="disabled"></div>
+								<div class="item">-</div>
+								<div class="item">
+									<input type="text" data-name="inpFocus" placeholder="" value="2******" disabled="disabled">
+									<!-- <div class="pw_input accountPwd">개발 사용 class
+										<p class="on">
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+										</p>
+										<p>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+											<i></i>
+										</p>
+										<div class="box_password" data-name="inpFocus"></div>
+									</div> -->
+								</div>
+							</li>
+
+							<li class="input_wrap item address_input">
+								<textarea cols="30" rows="2" data-name="inpFocus" placeholder="주소검색" maxlength="800" class="inp_count">
+04551
+서울특별시 중구 을지로 100</textarea>
+								<input type="text" data-name="inpFocus" placeholder="상세주소" value="파인애비뉴 B동 20층">
+							</li>
+						</ul>
+					</div>
+					
+					
+				</div><!-- //scroll_wrap -->
+
+				<div class="sticky_wrap set_type1">
+					<button type="button" name="apply" class="btn btn_type_apply">변경하기</button>
+				</div>
+
+
+			</div><!-- //modal_content -->
+		</div>
+
+		
+	</div>
+	<!-- #contents -->
+</div>
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible');
+
+	$(".toggle_list > dt").on("click", 'button', function(){
+		$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+
+	var residentNum = function () {
+		// 주민번호 앞자리
+		$('input:password[data-name="resident_num"]').on('keydown change', function(e){
+		var imgSum = $('.resident_dot span').length;
+			if ( e.keyCode == 8) {
+				$('.resident_dot span:last').remove();
+			} else {
+				if( imgSum == 1 ) { return false ; }
+				$('.resident_dot').append("<span></span>");
+			}
+		});
+	};	residentNum();
+
+});
+</script>
+
+
+</body>
+</html>

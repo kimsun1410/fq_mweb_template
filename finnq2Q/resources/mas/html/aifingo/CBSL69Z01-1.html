@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>04자산모니터링_03자유입출금상세_web_거래내역없음_CBSL69Z01-1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+<div class="wrap bg_list" id="CBSL69Z01-1"><!-- 페이지 검색을 위한 아이디 -->
+	<div id="contents" class="fingo"><!-- 2018-01-23 add_sticky 삭제 -->
+
+		<section class="assets_list">
+			
+			<div class="sec_head spend_common">
+				<div class="date_control">
+					<button type="button" name="button" class="btn ico_prev">previous month</button>
+					<strong class="date">2017.11</strong>
+					<button type="button" name="button" class="btn ico_next end" disabled="disabled">next month</button><!-- Class: "end", disable둘다 화면표시는 같습니다 -->
+				</div>
+				<!-- account_info : 01_습관저금_조회 -->
+				<div class="account_info">
+					<div class="bank_data"><strong>KEB하나은행</strong><em class="num">333-125123-1233</em></div>
+					<div class="money_total">
+						<em class="cash bold">320,650</em><span>원</span>
+					</div>
+				</div>
+
+			</div><!-- //sec_head -->
+
+			<div class="sec_tab">
+				<div class="tab_wrap set_type3"> <!-- 3개 -->
+					<span class="tab on"><a href="#none">전체</a></span>
+					<span class="tab"><a href="#none">입금</a></span>
+					<span class="tab"><a href="#none">출금</a></span>
+				</div>
+			</div>
+			<div class="sec_history spend_detail wrap_result">
+				<div class="no_result">
+					<span class="ico ico_chat_no2"></span>
+					<p>거래 내역이 없습니다.</p>
+				</div>
+			</div><!-- //spend_detail -->
+		</section>
+		<!-- 하단 붙임 -->
+
+
+		<!-- sticky_wrap place -->
+		<!-- <div class="sticky_wrap set_type1">
+			<button type="button" name="apply" class="btn btn_type_apply">완료</button>
+		</div> --> <!-- 2018-01-23 버튼 삭제 phj -->
+
+	</div><!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('.expend').on('click','button.ico',function(){
+		$(this).toggleClass('on').next().toggleClass('on');
+	});
+	$('.expend button.ico').click();
+
+	var topH = $(".sec_head").outerHeight();
+	var ViewH = $("section").outerHeight();
+	$(window).scroll(function(){
+	  if(ViewH >= 800) {
+		  var sticky = $('.sec_tab'),
+			  scroll = $(window).scrollTop();
+		  if (scroll >= topH) sticky.addClass('fixed');
+		  else sticky.removeClass('fixed');	  
+	  }
+	});
+
+});
+</script>
+</body>
+</html>

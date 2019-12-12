@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>구매하기 완료_MASG03Z14</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css?time=20180209" />
+</head>
+<body>
+<div class="wrap">
+	<div id="contents" class="">
+		<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+			<span class="item">
+				<button type="button" class="open_modal" data-triger="MASG03Z14">구매하기 완료</button>
+			</span>
+		</div>
+
+		<div id="MASG03Z14" class="modal_wrap">
+			<div class="modal_content">
+				<div class="sec_title">
+					<!-- 문구 수정 2018-11-07 ock -->
+					<h3 class="accent_txt">구매가 완료되었습니다.<br />구매 내역은 <strong>My 핀크 메인 &gt; 기프티콘몰<br /></strong>카드에서 확인 할 수 있습니다.<br><br>구매한 기프티콘을 공유하시겠습니까?</h3>
+				</div>
+
+				<!-- 버튼 수정 2018-11-07 ock -->
+				<div class="flex_wrap set_type2">
+					<span class="item"><button type="button" name="button" class="btn_type_f close_modal">취소</button></span>
+					<span class="item on"><button type="button" name="button" class="btn_type_f close_modal">확인</button></span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script>
+$(document).ready(function(){
+	$('.modal_wrap').addClass('visible normal');
+});
+</script>
+</body>
+</html>

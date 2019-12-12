@@ -1,0 +1,9 @@
+@charset 'UTF-8';
+
+@import "variables";
+/* DNA */
+/* @import "dna-main"; DNA - 메인 (차트만 전달) */
+@import "dna-detail"; /* DNA - 공통 UI */
+@import "dna-fscore"; /* DNA - F 스코어 */
+@import "dna-credit"; /* DNA - 신용관리 */
+@import "dna-financia"; /* DNA - 금융생활 */

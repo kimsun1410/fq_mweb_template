@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<title>My투자</title>
+	<link rel="stylesheet" href="../../css/ui.css" />
+	<link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+</head>
+<body>
+<div class="wrap bg_list" id="MASV07Z01"><!-- 2018-06-22 bg_list 추가 -->
+	<div id="contents" class="market p2p_wrap">
+		<!-- 페이지명 -->
+		<section class="sec_MASV07Z01 myp2p_wrap">
+			<div class="myp2p_header">
+				<div class="sec_title">
+					<h2><span class="name"><em>김핀크</em>님</span>의 투자<span class="arw_title_white"></span></h2><!-- 2018-05-09 수정 라인추가 HTML변경 -->
+				</div>
+				<div class="sec_quick">
+					<div class="item">
+						<a href="#" class="item_btn"><i class="ico ico_quick_01"></i><span class="txt">상환일정보기</span></a>
+					</div>
+					<div class="item">
+						<a href="#" class="item_btn"><i class="ico ico_quick_02"></i><span class="txt">누적현황 보기</span></a>
+					</div>
+				</div>
+			</div>
+			<!-- <span class="strike">2018-05-09 추가 투자내역 없는 경우 숨김적용</span>
+			<div class="wrap_result auto_height">
+				<div class="no_result">
+					<i class="ico ico_chat_no2"></i>
+					<p>상환일정이 없습니다.</p>
+				</div>
+			</div>
+			-->
+			<div class="myp2p_body">
+				<div class="myp2p_item">
+					<div class="box_shadow">
+						<div class="box_header">
+							<h3 class="box_tit"><a href="#">헬로펀딩 <i class="ico ico_arrow_more2"></i></a></h3>
+						</div>
+						<div class="box_body">
+							<div class="repay_graph_wrap">
+								<!-- 상환중 + 연체 -->
+								<div class="repay_define">
+									<div class="total">
+										<p class="tit">투자 예상 상환금</p>
+										<p class="money"><span class="num numComma bold">1100000</span>원</p>
+									</div>
+									<div class="legend">
+										<dl class="legend_repay">
+											<dt>상환</dt>
+											<dd><span class="num numComma">440000</span>원</dd>
+										</dl>
+										<!-- 2018-05-09 수정 예정으로 변경 -->
+										<dl class="legend_ing">
+											<dt>예정</dt>
+											<dd><span class="num">660,000</span>원</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="figuer_graph">
+									<div class="svg_graph xl" data-total="1100000" data-repay="440000" data-overdue="0">
+										<svg class="basic"><circle  /></svg>
+										<svg class="divider"><circle  /></svg><!-- 구분선 -->
+										<svg class="repay"><circle  /></svg><!-- 상환중 -->
+										<svg class="overdue"><circle  /></svg><!-- 연체 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="myp2p_item">
+					<div class="box_shadow">
+						<div class="box_header">
+							<h3 class="box_tit"><a href="#">투게더펀딩 <i class="ico ico_arrow_more2"></i></a></h3>
+						</div>
+						<div class="box_body">
+							<div class="alert_wrap"><!-- 2018-05-09 수정 클래스명 변경 -->
+								<i class="ico ico_alert_done"></i>
+								<p>투자가 모두 상환 완료되었습니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="myp2p_item">
+					<div class="box_shadow">
+						<div class="box_header">
+							<h3 class="box_tit"><a href="#">소딧 <i class="ico ico_arrow_more2"></i></a></h3>
+						</div>
+						<div class="box_body">
+							<!-- 2018-05-09 추가 업데이트 텍스트 -->
+							<div class="update_wrap">
+								<p class="update">업데이트  오늘  <span class="num">13:20</span> <a href="#none"><i class="ico ico_reload"></i></a></p><!-- 업데이트 기본상태 -->
+								<p class="update hide"><span class="txt_loading">업데이트 중</span> <a href="#none"><i class="ico ico_reload loading"></i></a></p><!-- 업데이트 중일때 -->
+							</div>
+							<div class="alert_wrap"><!-- 2018-05-09 수정 클래스명 변경 -->
+								<i class="ico ico_alert_warning"></i>
+								<p>서비스 접속이 원활하지 않습니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //페이지명 -->
+	</div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script type="text/javascript">
+//SVG그래프 Active
+svgGraph();
+</script>
+</body>
+</html>

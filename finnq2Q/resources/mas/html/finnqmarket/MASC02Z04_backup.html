@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+    <title>핀크 카드 선택</title>
+    <link rel="stylesheet" href="../../css/ui.css" />
+    <link rel="stylesheet" href="../../css/ui_finnqmarket.css" />
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div class="wrap"> <!-- MASC02Z04 -->
+    <div id="contents" class="add_sticky">
+        <!-- 페이지명 -->
+        <section>
+
+            <div class="sec_title">
+                <h2>디자인 선택</h2>
+                <p class="guide_txt">기본 디자인부터 한정판까지<br>망설이다가 품절주의!</p>
+            </div>
+
+            <div class="card_slide_wrap finnq_card">
+                <!-- D : label 과 input의 ID 매칭 필수 -->
+                <div class="swiper-continer finnq_card">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <a href="#" class="no_highlight">
+                                <div class="form_wrap">
+                                    <input type="radio" name="finnq_card" id="cardVal1">
+                                    <label for="cardVal1"></label>
+                                </div>
+
+                                <div class="item">
+                                    <img src="../../images/finnqmarket/img_finnq_card1.png" alt="" />
+                                    <div class="mask"></div>
+                                </div>
+                            </a>
+                            <span class="tit">핀고, 소비를 부탁해</span>
+                        </div>
+                        <!--
+                            D : Sold out 일 경우 클래스 off 추가
+                                radio 속성에 disabled 속성 추가
+                                하단 - 카드가 Sold OUT일 경우
+                        -->
+
+                       <!-- <div class="swiper-slide off">
+                            <div class="form_wrap">
+                                <input type="radio" name="finnq_card" id="cardVal2-1" class="option" disabled="disabled">
+                                <label for="cardVal2-1"></label>
+                            </div>
+
+                            <div class="item">
+                                <img src="../../images/finnqmarket/img_finnq_card2.png" alt="" />
+                                <div class="mask"></div>
+                            </div>
+                            <span class="tit">SOLD OUT</span>
+                        </div> -->
+
+                        <div class="swiper-slide">
+                            <a href="#" class="no_highlight">
+                                <div class="form_wrap">
+                                    <input type="radio" name="finnq_card" id="cardVal2-2" class="option">
+                                    <label for="cardVal2-2"></label>
+                                </div>
+
+                                <div class="item">
+                                    <img src="../../images/finnqmarket/img_finnq_card2.png" alt="" />
+                                    <div class="mask"></div>
+                                </div>
+                            </a>
+                            <span class="tit">긁을 때면 난 울어</span>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="#" class="no_highlight">
+                                <div class="form_wrap">
+                                    <input type="radio" name="finnq_card" id="cardVal3">
+                                    <label for="cardVal3"></label>
+                                </div>
+
+                                <div class="item">
+                                    <img src="../../images/finnqmarket/img_finnq_card3.png" alt="" />
+                                </div>
+                            </a>
+                            <span class="tit">넌 감자칩 난 IC칩</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <ul class="list_type star finnq_card">
+                <li>유병재 카드는 수량이 한정되어 조기 소진될 수 있습니다.</li>
+                <li>핀크카드는 1인당 1개만 발급 가능하며, 카드 디자인 변경을 위해서는 기존 카드의 해지 및 재신청이 필요합니다.</li>
+            </ul>
+            <div class="sticky_wrap set_type1">
+                <button type="button" name="apply" class="btn btn_type_apply" disabled="disabled">확인</button>
+            </div>
+
+        </section>
+        <!-- //페이지명 -->
+    </div>
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script><!-- UI관련 자바스크립트, 필요없는 부분은 개발에서 삭제 처리 부탁드립니다. -->
+<script src="../../libs/contents.js"></script><!-- 외부 라이브러리 집합 -->
+<script>
+
+//메인스와이퍼
+function finnqCardSwiper(){
+    var _cardSwiper = $('.card_slide_wrap .finnq_card');
+    var swiper1 = new Swiper(_cardSwiper, {
+        // effect: 'coverflow',
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        centeredSlides: false,
+        loop: true,
+        slidesPerView: 'auto',
+        slideToClickedSlide:true,
+        autoplay : 200,
+        speed:300,
+    });
+
+    _cardSwiper.addClass('active');
+}
+finnqCardSwiper();
+
+// function finnqCardSwiper(){
+//  var _cardSwiper = $('.card_slide_wrap .finnq_card');
+//  var swiper1 = new Swiper(_cardSwiper, {
+//      loop: false,
+//      slidesPerView:'auto',
+//      spaceBetween: 20,
+//      slidesOffsetBefore : 20,
+//      slidesOffsetAfter : 20,
+//      pagination: {
+//              el: '.swiper-pagination',
+//          clickable: true,
+//          }
+//  });
+//  _cardSwiper.addClass('active');
+// }
+// finnqCardSwiper();
+
+
+$(document).ready(function(){
+    $('.swiper-continer.finnq_card .swiper-slide > a').on('click', function(){
+        $('.swiper-continer.finnq_card input:radio').prop('checked', false);
+
+        // var _pagingEvt = $('.swiper-pagination');
+        $(this).find('input:radio').prop('checked', true);
+        $('.sticky_wrap .btn_type_apply').removeAttr('disabled');
+        // var idx = $(this).parent().index();
+        // if ( idx == 0) {
+        //  _pagingEvt.find('span').eq(0).trigger( 'click' );
+        // } else {
+        //  _pagingEvt.find('span').eq(1).trigger( 'click' );
+        // }
+    });
+})
+
+</script>
+</body>
+</html>

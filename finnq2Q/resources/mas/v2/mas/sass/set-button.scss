@@ -1,0 +1,91 @@
+@charset 'UTF-8';
+.btn_group.group_type3 {width:(100%/3)}
+
+.btn {text-align: center;box-sizing: border-box;line-height:1.3em;}
+.btn_type_a { width:100%;height:40px;background:$white;border:1px solid $pinkish_grey;color:$black;border-radius:4px;font-weight: bold;}
+.btn_type_b { width:100%;height:30px;background:$pinkish_grey;color:$white;border-radius:4px;/* font-weight: bold; 2018-02-08 볼드 삭제 */}
+.btn_type_c { width:100%;height:40px;background:$white_three;border:1px dashed $pinkish_grey;color:$pinkish_grey;border-radius:4px;@include font(16px);/* font-weight: bold; 볼드 삭제 2018-02-08 */}
+.btn_type_c.btn_xl {height:46px; font-weight:bold;}
+.btn_type_d { width:100%;height:50px;background:$white;border: 1px solid $white_two;border-radius:30px;font-weight: bold;}
+.btn_type_e { width:100%;height:34px;background:$white_three;border:1px solid $pinkish_grey;color:$brownish_grey;border-radius:4px;/* font-weight: bold; 볼드 삭제 하기로, 2018-02-08 */} /* 버튼회색, 라인 회색 */
+.btn_type_e:disabled { color:$white_two;border-color:$white_two}
+.btn_type_a:disabled { background:$white_three;color:$white_two;border-color:$white_two}
+.item.on .btn_type_c:disabled { background:$white_three;color:$white_two;border:1px solid $white_two}
+.btn_type_f { width:100%;height:46px;background:$warm_grey;color:$white;border-radius:4px;font-weight: bold;font-size:16px} /* 2.2.1 full-popup  */ /* 폰트 사이즈 추가 */
+.item.on .btn_type_f { background:$purply_blue;} /* active button */
+
+.btn_type_g {padding:0 10px;height:21px;background:$white_three;border:1px solid $white_two;color:$warm_grey;border-radius:14px;font-size:12px;/* font-weight: bold; 볼드 삭제 하기로, 2018-02-08 */}
+
+.btn_type_h { width:100%;height:40px;background:$white_three;border:1px solid $pinkish_grey;color:$brownish_grey;border-radius:4px;font-size:14px;font-weight: bold;} /* 핀크적금 버튼추가, 보라색에서 회색으로 *//* 2018-03-22 폰트사이즈 14로 변경 (민영맨 요청) phj */
+.btn_type_h:disabled { background:$white_three;border:1px solid $white_two;color:$white_two;} /* 개발자요청에 의해서 활성화 추가 */
+
+.btn_type_i {width:100%; height:40px; background:$lighter_purple; color:$white; border-radius:4px; font-weight: bold;}
+.btn_type_j {width:162px; height:40px; background:$white; color:$black; border:1px solid $pinkish_grey; border-radius:4px; font-weight: bold;}/* SNS공유하기 공통 */
+.btn_type_j .ico {position:relative; top:-1px; vertical-align:middle; margin-right:6px;}
+
+.btn_type_k {width:auto; height:26px; padding:0 10px; border:1px solid $clear_blue; border-radius:4px; line-height:24px; color:#1c8af8;}
+.btn_type_l {width:auto; height:26px; padding:0 10px; border:1px solid $white_two; border-radius:4px; line-height:24px; color:$brownish_grey;}
+.btn_type_k.fixed_4,
+.btn_type_l.fixed_4 {width:68px; padding:0;}
+
+.btn_white_s {display:inline-block; color:$warm_grey; border:1px solid $white_two; background:$white; height:32px; line-height:32px; border-radius:16px; padding:0 15px;}
+/* icon button common type */
+.btn_ico { display:inline-block;position:relative;text-indent:-9999em;text-align:left;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;} /* 아이콘 버튼 공통 */
+.btn_ico:after {content:' ';position:absolute;left:-5px;top:-5px;width:100%;height:100%;padding:5px;} /* UX. 버튼 영역 확장 debug시 background:yellow;opacity:0.2 */
+
+.item.on .btn_type_a {}
+.item.on .btn_type_b {}
+.item.on .btn_type_c {background:$purply_blue;border:1px solid $purply_blue;color:$white;} /* myfinnq, market ARS에 폰트사이즈가 없어서 14->16으로 셋팅*/
+.item.on .btn_type_d {background:$pale_lavender;border:1px solid $purply_blue;}
+.item.on .btn_type_d strong{color:$purply_blue;}
+.item.on .btn_type_d em{color:$black;}
+
+.btn_add { margin:0 auto;width:140px;height:140px;border-radius:50%;border:11px solid $pale_lavender;background:$purply_blue;}
+.btn_add a {position:relative;display:inline-block;width:100%;height:100%;padding:77px 0 0;color:$white;@include font(18px);text-align:center;
+-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;
+}
+/* 최하단 버튼 */
+.sticky_wrap { position:fixed;bottom:0;width:100%;height:auto;z-index:50;transform: translateZ(0);-moz-transform: translatez(0);-ms-transform: translatez(0);-o-transform: translatez(0);-webkit-transform: translateZ(0);-webkit-font-smoothing: antialiased;}
+.sticky_wrap	button {background:$purply_blue;color:$white;border-radius:0;@include font(18px);font-weight: bold;}
+
+/* 최하단 fixed 버튼 1개 스타일(100%) */
+.sticky_wrap.set_type1 button {width:100%;height:100%;min-height:60px;background:$purply_blue;color:$white;}
+
+/* 최하단 fixed 버튼 2개 스타일(50%) */
+.sticky_wrap.set_type2 button {float:left;width:50%;height:100%;min-height:60px;background:$purply_blue;color:$white;}
+.sticky_wrap.set_type2 button:last-child { float:right;}
+.sticky_wrap.set_type2 button.btn_cancel { background-color:$warm_grey;}
+
+.sticky_wrap.set_type2 button:disabled,
+.sticky_wrap.set_type1 button:disabled { background:$pinkish_grey;color:$white_two;}
+
+.sticky_wrap .sec_agree{padding-bottom:4px}
+
+.add_sticky.no_fixed .sticky_wrap{position:static;padding-top:45px;background:$white;}
+.bg_list .add_sticky.no_fixed .sticky_wrap{background:$white_three;}
+
+
+
+.btn_text01{text-align:center;}
+.btn_text01 a{display:inline-block;padding-right:10px;border-bottom:1px solid $clear_blue;@include font(16px);font-weight:bold;color:$clear_blue;}
+.btn_text01.ico a{padding-right:13px;@include font(14px);}
+.btn_text01.ico a:before{display:none}
+.btn_text01.ico a:after{top: 50%;right:0;display: inline-block;content: ' ';margin-top: -5.5px;width: 7px;height: 11px;background: url(../images/common/ir-arrow-set.png) no-repeat;background-size: 40px auto;background-position: 0 -177px;transform:rotate(0deg)}
+
+.btn_text02{text-align:center;}
+.btn_text02 a{display:inline-block;width:auto;height:auto;@include font(14px);color:$black;background:none;}
+.btn_text02 a.ico_arrow_more::after{content:"";display:inline-block;float:right;width:10px;height:14px;margin:2px 0 0 7px;background: url(../images/common/ir-arrow-set.png) no-repeat;background-position: 0 -6px;background-size: 30px auto;}
+
+.btn_text03{text-align:center;padding-bottom:1px;border-bottom:1px solid $brownish_grey;text-decoration:none}
+
+.sec_app_down{margin-top:41px}
+.sec_app_down .item button::after{content:"";display:inline-block;width:98px;height:30px;margin:4px 0;background: url(../images/common/btn_app_down.png) no-repeat; background-size: cover}
+.sec_app_down .down_apple button::after{background-position:center -20px}
+.sec_app_down .down_android button::after{background-position:center 5px}
+
+.sticky_wrap.set_type1 button:disabled.status,
+.sticky_wrap.set_type2 button:disabled.status {background:$warm_grey;} /* 2차수정 진행상태표시 */
+
+.btn_control_down,.btn_control_up{position:relative}
+.btn_control_down::after{content:"";position:absolute;top:50%;left:50%;margin:-6px 0 0 -6px;display:inline-block;width:12px;height:12px;background:$white url(../images/common/ir-icon-set.png) no-repeat 0 -420px;background-size: 40px auto;}
+.btn_control_up::after{content:"";position:absolute;top:50%;left:50%;margin:-6px 0 0 -6px;display:inline-block;width:12px;height:12px;background:$white url(../images/common/ir-icon-set.png) no-repeat 0 -406px;background-size: 40px auto;}

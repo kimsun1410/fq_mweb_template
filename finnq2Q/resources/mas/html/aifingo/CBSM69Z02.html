@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>07분석알림설정_01카드결제알림설정_03설정_web_CBSM69Z02</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+	<link rel="stylesheet" href="../../css/ui_aifingo.css?time=20180117" />
+</head>
+<body>
+	<div class="wrap">
+		<div id="contents" class="fingo">
+			<div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
+				<span class="item">
+					<button type="button" name="button" class="btn_select btn_type_a open_modal" data-triger="CBSM69Z02" data-mtype="fullpop">07분석알림설정_01카드결제알림설정_03설정_web</button>
+				</span>
+			</div>
+
+
+			<div id="CBSM69Z02" class="modal_wrap fullpop pop_fingo_alarm"><!-- id는 개발에서 사용할 수 도 있으므로, UI는 class로 제어해주세요 -->
+				<div class="modal_content add_sticky"><!-- 개별 팝업 Class pop_direct_input -->
+
+					<!-- <div class="sec_head">
+						<h2 class="modal_title">카드</h2>
+						<button class="close_modal"><span class="blind">창닫기</span></button>
+						<<button class="close_modal" onclick="self.close();"><span class="blind">창닫기</span></button> 팝업 형태의 페이지인 경우 
+					</div>-->
+					<div class="scroll_wrap" style=""><!-- height magicNumber -->
+
+							<section class="alram_set">
+								<!-- 신용카드 선택 -->
+								<div class="sec_alram_item card">
+									<dl>
+										<dt>1. 신용카드 선택</dt>
+										<dd>
+											<ul>
+												<li>
+													<input type="radio" id="purpleOne1" name="test-img"><!-- type="radio" -->
+													<label for="purpleOne1" name="test-img">
+														<div class="info">
+															<strong>삼성카드</strong>
+														</div>
+													</label>
+												</li>
+												<li>
+													<input type="radio" id="purpleOne2" name="test-img"><!-- type="radio" -->
+													<label for="purpleOne2" name="test-img">
+														<div class="info">
+															<strong>KB 국민카드</strong>
+														</div>
+													</label>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+								<!-- 연결계좌 선택 -->
+								<div class="sec_alram_item acc" style="display:none;">
+									<dl>
+										<dt>2. 연결계좌 선택</dt>
+										<dd>
+											<ul>
+												<li>
+													<input type="radio" id="purpleOne21" name="test-img2">
+													<label for="purpleOne21" name="test-img">
+														<div class="info">
+															<strong>신한은행</strong>
+															<span>자유입출금 <em class="num">110-057-040753</em></span>
+														</div>
+													</label>
+												</li>
+												<li>
+													<input type="radio" id="purpleOne22" name="test-img2">
+													<label for="purpleOne22" name="test-img">
+														<div class="info">
+															<strong>신한은행</strong>
+															<span>자유입출금 <em class="num">110-057-040753</em></span>
+														</div>
+													</label>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+								<!-- 연결동의 -->
+								<div class="sec_alram_item" style="display:none;">
+									<dl>
+										<dt>3. 연결동의</dt>
+										<dd>
+											<div class="user_agree">
+												<input type="checkbox" id="purpleTwo1" name="test-img" class="purple">
+												<label for="purpleTwo1" name="test-img">
+													<span>알림 내역 확인을 위해 자동으로 정보를<br>업데이트합니다. </span>
+												</label>
+											</div>
+										</dd>
+									</dl>
+								</div>
+							</section>
+
+							<!-- sticky_wrap place -->
+							<div class="sticky_wrap set_type1">
+								<button type="button" name="apply" class="btn btn_type_apply">완료</button>
+							</div>
+						
+					</div><!-- //scroll_wrap -->
+
+				</div><!-- //modal_content -->
+			</div>
+
+			
+		</div><!-- #contents -->
+	</div><!-- //wrap -->
+
+
+
+
+
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$('.modal_wrap').addClass('visible');
+
+	//저금액 선택버튼
+	$(".btn_sellist").on("click", "button", function() {
+		$(this).toggleClass("on");
+	});
+	$('div.sec_alram_item').eq(0).find('input:radio').change(function(){
+		$('.sec_alram_item').eq(1).fadeIn();
+	});
+	$('div.sec_alram_item').eq(1).find('input:radio').change(function(){
+		$('.sec_alram_item').eq(2).fadeIn();
+	});
+
+
+
+
+});
+</script>
+</body>
+</html>

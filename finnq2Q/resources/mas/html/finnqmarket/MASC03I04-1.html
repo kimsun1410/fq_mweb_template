@@ -1,0 +1,144 @@
+<!-- //************************************************
+    decrition by : kim tae yang
+    update : 2019-11-01
+    원스탑 혁신금융대출
+************************************************// -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>17_혁신금융대출_04휴대폰본인인증_01최초_5회오류_popup_MASC03I04-1_web</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+</head>
+<body>
+
+<div class="wrap">
+	<div id="contents" class="one_stop add_sticky white">
+		<section>
+
+			<div class="sec_title">
+				<h2>휴대폰 본인인증</h2>
+			</div>
+
+			<div class="sec_member_input mgt40">
+
+                    <ul class="flex_wrap set_type1">
+    
+                        <li class="input_wrap soft_select item disabled"><!-- 비활성화 화살표 추가됨 class 추가 disabled -->
+                            <select data-name="inpFocus" disabled="disabled">
+                                <option value="">SKT</option>
+                                <option value="">U+</option>
+                                <option value="">KT</option>
+                            </select>
+                            <!-- class="hide" 삭제시 오류 메시지 -->
+                            <p class="remark hide">통신사를 선택해 주세요.</p>
+                        </li>
+                        <li class="input_wrap col_box pin_num_have item">
+                            <span>
+                                <input type="number" pattern="\d*"  data-name="inpFocus" placeholder="010-1234-5678" class="" disabled="disabled"><!-- 2018-03-15 placeholder 내용 추가 phj -->
+                                <!-- class="hide" 삭제시 오류 메시지 -->
+                                <p class="remark hide">휴대폰번호를 입력해 주세요.</p>
+                            </span>
+                            <span class="letter_min">
+                                <button type="button" name="button" class="btn btn_type_f" data-popup="agree_pop">인증번호 재전송</button><!-- disabled="disabled" -->
+                                <!-- <p class="remark hide">dddd</p> -->
+                            </span>
+                        </li>
+                        <!-- 숨길시 class="hide_box" 추가-->
+                        <li class="input_wrap pin_number item hide_box">
+                            <input type="number" pattern="\d*" data-name="inpFocus" placeholder="인증번호 6자리" class="ost_mobile" max="999999">
+                            <p class="remark hide">인증시간이 초과되었습니다.</p>
+                            <div class="time_count">03:00</div>
+                        </li>
+                    </ul>
+    
+                </div>
+		</section>
+
+
+		<div class="sticky_wrap set_type1" >
+            <!-- 비홝성 disabled="disabled" 추가--> <!-- data-popup = "1" 추가 팝업 불러오기 data-popup-con = "1" -->
+			<button type="button" name=""  data-popup="pop_error" class="btn btn_type_apply" disabled="disabled">확인</button>
+        </div>
+        
+        <div class="bt-popup is-visible" data-popup-con="pop_error"  role="alert">
+            <div class="bt-popup-container">
+                <div class="conts_box">
+                    <strong class="title">인증번호 5회 오류</strong>
+                    <p>인증번호가 5회 잘못 입력되었습니다.<br /><em>내일 오전 9시까지 서비스 이용이 제한</em>됩니다.</p>
+                </div>
+                <div class="sticky_wrap set_type1">
+                    <button type="button" name="" class="btn btn_type_apply">확인</button>
+                </div>
+            </div>
+        </div>
+        
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){  
+        $('input[type=number][max]:not([max=""])').on('input', function(ev) {
+            var $this = $(this);
+            var maxlength = $this.attr('max').length;
+            var value = $this.val();
+            if (value && value.length >= maxlength) {
+            $this.val(value.substr(0, maxlength));
+            }
+        });
+
+        function popup() {
+            var openBtn = '[data-popup]',
+                closeBtn = '.bt-popup-close';
+
+            function getTarget(t) {
+                return $(t).attr('data-popup')
+            }
+            function open(t) {
+                var showTarget = $('[data-popup-con="' + t + '"]');
+                showTarget.addClass('is-visible').focus();
+                showTarget.find('.bt-popup-close').data('is-visible', t);
+            }
+            function close(t) {
+                var activeTarget = $('[data-popup-con="' + t + '"]');
+                $('[data-popup="' + t + '"]').focus();
+                activeTarget.removeClass('is-visible');
+                $('.popup-trigger').removeClass('on');
+            }
+            $(document).on('click', openBtn, function(e) {
+                e.preventDefault();
+                open(getTarget(e.target));
+                $(this).addClass('on');
+                $('.bt-popup').on('scroll touchmove mousewheel', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                });
+            }).on('click', closeBtn, function(e) {
+                e.preventDefault();
+                close($(this).data('is-visible'));
+                $(this).removeClass('on');
+                $('.bt-popup').off('scroll touchmove mousewheel');
+            })
+            $(".one_stop .bt-popup a").on('click', function(e) {
+                $('.popup-trigger').text($(this).text());
+                $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                $('.popup-trigger').removeClass('on');
+                $('.bt-popup').off('scroll touchmove mousewheel');
+            });
+            $(".one_stop .bt-popup .btn").on('click', function(e) {
+                $('.hide_box').show().find('.ost_mobile').addClass('inp_focus');
+                $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+            }); 
+        }
+        popup();
+    });
+    
+</script>
+</body>
+</html>

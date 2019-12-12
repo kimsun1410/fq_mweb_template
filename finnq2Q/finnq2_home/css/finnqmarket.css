@@ -1,0 +1,1001 @@
+@charset 'utf-8';
+
+.cont-finnqmarket.container .inner{width:100%;max-width:100%;padding-right:0;padding-left:0;}
+.cont-finnqmarket mark{letter-spacing: 0;color: inherit; background: transparent;}
+/* .cont-finnqmarket .tab-container *{-webkit-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in;} */
+.cont-finnqmarket .cont-head{max-width:1280px;margin:0 auto;padding-left:40px;padding-right:40px}
+.cont-finnqmarket .key-visual .inner { height: 400px; padding: 169px 0; background: url("../image/v2/key_visual02.jpg") no-repeat 50% 50%; background-size: cover; text-align: center;}
+.cont-finnqmarket .tab-type1:before{content:"";position:absolute;left:0;bottom:-1px;display:inline-block;width:40px;height:1px;background:#fff;}
+.cont-finnqmarket .tab-type1:after{content:"";position:absolute;right:0;bottom:-1px;display:inline-block;width:40px;height:1px;background:#fff;}
+.cont-finnqmarket .tab-type1{position:relative;max-width:1280px;margin:0 auto;padding-left:40px;padding-right:40px;z-index:1}
+.cont-finnqmarket .tab-type1 li{width:20%}
+.cont-finnqmarket .tab-type1.col6 li {width:16.66%;}
+.cont-finnqmarket .tab-type1.col6 li:first-of-type {width:16.7%;}
+.cont-finnqmarket .tab-type1.col7 li {width:14.3%;}
+.cont-finnqmarket .tab-type1.col7 li:first-of-type {width:14.2%;}
+.cont-finnqmarket .tab-type1.col8 li {width:12.5%;}
+.cont-finnqmarket .tab-type1 li a{width:100%;background-color: #f8f8f8;}
+.cont-finnqmarket .tab-type1 li.is-active a{background-color: #fff;}
+.cont-finnqmarket .cont-visual{position:relative;max-width:1280px;height:450px;margin:0 auto;padding:72px 40px 80px;-webkit-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in;}
+.cont-finnqmarket .cont-visual h4{font-size:36px;line-height:46px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .cont-visual h4 .cl_r{color:#ec1840;}
+.cont-finnqmarket .cont-visual h4 + p{padding-top:12px;font-size:16px;line-height:20px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
+.cont-finnqmarket .cont-visual h4 span br{display:none}
+.cont-finnqmarket .cont-visual > div{position:absolute;top:271px;left:40px;right:0;}
+.cont-finnqmarket .cont-visual h5{padding-bottom:18px;width:calc(50% - 40px);border-bottom:1px solid #e0e0e0;font-size:20px;line-height:24px;letter-spacing:-1px;color:#222;font-family: 'SpoqaB';}
+.cont-finnqmarket .cont-visual h5 + ul{overflow:hidden;padding-top:17px;}
+.cont-finnqmarket .cont-visual h5 + ul li{float:left;margin-right:4.5%;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break: keep-all;}
+.cont-finnqmarket .cont-visual h5 + ul li > strong{font-family: 'SpoqaR';}
+.cont-finnqmarket .cont-visual h5 + ul li p{margin-top:6px;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break:keep-all;}
+.cont-finnqmarket .finnq_5savings .cont-visual h5 + ul li{float:left;margin-right:14.033%;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break: keep-all;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5 + ul li{float:left;margin-right:14.033%;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break: keep-all;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual h5 + ul li{float:left;margin-right:14.033%;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break: keep-all;}
+.cont-finnqmarket .cont-detail1{overflow:hidden;padding:72px 0 80px;width:100%;background:#f8f8f8}
+.cont-finnqmarket .cont-detail1.v1{padding:80px 0 77px;}
+.cont-finnqmarket .cont-detail1 .cont-wrap{position:relative;overflow:hidden;max-width:1280px;margin:0 auto;padding-top:0;padding-left:40px;padding-right:40px;}
+.cont-finnqmarket .cont-detail1 article{float:left}
+.cont-finnqmarket .cont-detail1 article:last-child{float:right}
+.cont-finnqmarket .cont-detail1 article .img_info{margin-top:38px}
+.cont-finnqmarket .cont-detail1 .ico_plus{position: absolute;top: 50%;margin-top: -25px;left: 50%;margin-left: -25px;}
+.cont-finnqmarket .cont-detail1 .ico_plus > img{width:50px;height:50px}
+.cont-finnqmarket .cont-detail1.v1 .img_info{float:right;padding-right:29px;}
+.cont-finnqmarket .cont-detail1.v1 .img_info img{width:400px;height:200px;}
+.cont-finnqmarket .cont-detail1.v1 .desc_info{float:left;}
+.cont-finnqmarket .cont-detail1 .desc_info > h6{margin-top:14px;font-size:36px;line-height:46px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .cont-detail1 .desc_info > p{padding-top:29px;font-size:20px;line-height:30px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';}
+.cont-finnqmarket .cont-detail1 .desc_info > p > span:first-child{display:block;}
+.cont-finnqmarket .cont-detail1 .desc_info > p > span em{color:#00b389}
+.cont-finnqmarket .cont-detail1 .desc_info > p > span{display:inline-block;line-height:30px;}
+.cont-finnqmarket .cont-detail1 .desc_info > span{display:block;margin-top:9px;font-size:16px;line-height:20px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
+.cont-finnqmarket .cont-detail1 .desc_info > span.ico_attention:before{content:"";display:inline-block;margin-right:5px;width:16px;height:16px;vertical-align:-2px;background: url("../image/v2/product/ico_attention.png") no-repeat 0 0;background-size:contain}
+.cont-finnqmarket .cont-detail2{max-width:1280px;margin:0 auto;padding:72px 40px 0 40px;}
+.cont-finnqmarket .cont-detail2 > h6{font-size:36px;line-height:46px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .cont-detail2 > ul.bul_text{}
+.cont-finnqmarket .cont-detail2 > ul.bul_text li{padding-left:18px;font-size:16px;line-height:20px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';text-indent:-18px}
+.cont-finnqmarket .cont-detail2 > ul.bul_text li em{letter-spacing:0;}
+.cont-finnqmarket .cont-detail2 > ul.bul_text li + li{margin-top:6px}
+.cont-finnqmarket .cont-detail2 > ul.bul_text li br{display:none}
+.cont-finnqmarket .cont-detail3{overflow:hidden;padding:72px 0 80px;width:100%;background:#f8f8f8}
+.cont-finnqmarket .cont-detail3 .cont-wrap{position:relative;overflow:hidden;max-width:1280px;margin:0 auto;padding-top:0;padding-left:40px;padding-right:40px;}
+.cont-finnqmarket .cont-detail3 .img_info {float: right; margin-top: 7px;}
+.cont-finnqmarket .cont-detail3 .img_info img {width:400px;}
+.cont-finnqmarket .cont-detail3 .desc_info {float: left; width: 445px; min-width: 360px;}
+.cont-finnqmarket .cont-detail3 .desc_info h6 {font-size: 36px; line-height: 40px; letter-spacing: -1px; color: #222; font-family: 'SpoqaR';}
+.cont-finnqmarket .cont-detail3 .desc_info h6 em{color:#731aed}
+.cont-finnqmarket .cont-detail3 .desc_info > p  {padding-top: 15px; font-size: 20px; line-height: 24px; letter-spacing: -1px; color: #666; font-family: 'SpoqaR'; word-break: keep-all;}
+.cont-finnqmarket .cont-detail3 > h6{font-size:36px;line-height:46px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .cont-detail3 > ul.bul_text{}
+.cont-finnqmarket .cont-detail3 > ul.bul_text li{padding-left:18px;font-size:16px;line-height:20px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';text-indent:-18px}
+.cont-finnqmarket .cont-detail3 > ul.bul_text li + li{margin-top:6px}
+.cont-finnqmarket .cont-detail3 > ul.bul_text li br{display:none}
+.cont-finnqmarket .tab-cont .list.star {margin-top:33px; max-width:500px;font-size:18px; line-height:22px; color:#999;}
+.cont-finnqmarket .tab-cont .list.star li {position:relative; padding-left:11px;}
+.cont-finnqmarket .tab-cont .list.star li:before {position:absolute; top:4px; left:0; display:block;content:"*";}
+
+/* 습관저금 */
+.cont-finnqmarket .habit_saving .cont-visual{height:463px;background: url("../image/v2/product/bg_habit_saving.png") no-repeat right 137px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .habit_saving .cont-visual h5 + ul{padding-top:14px}
+.cont-finnqmarket .habit_saving .cont-visual h5 + ul li{float:none;width:auto;line-height:30px;word-break: keep-all;}
+.cont-finnqmarket .habit_saving .cont-detail1{padding: 80px 0;}
+.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .desc_info{display:table;float:left;/* padding:83px 0 77px; */width:36%;min-width:310px;}
+.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .desc_info h6{display:table-cell;font-size:36px;line-height:46px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';word-break: keep-all;height:260px;vertical-align:middle}
+.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .img_info{float:right}
+.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .img_info img{width:550px;height:260px}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap{}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > h6{font-size:36px;line-height:40px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol{overflow:hidden;margin-top:31px;}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li{float:left;font-size:20px;line-height:30px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li p{height:95px;font-family: 'SpoqaR';}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li + li{float:right}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step02{width:42%}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step02 p br{display:none}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step03{clear:both;float:none;padding-top:34px;}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step03 p{height:auto}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step03 p br{display:none}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol > li div{}
+.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol > li div img{width:420px;height:150px}
+
+/* 핀크카드 */
+.cont-finnqmarket .finnq_card .cont-visual{height:463px;background: url("../image/v2/product/bg_market_card.png") no-repeat right 95px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .finnq_card .cont-visual .ios320 {display:none;}
+.cont-finnqmarket .finnq_card .cont-visual h5 + ul li {float:none;}
+/* .cont-finnqmarket .finnq_card .cont-visual h5 + ul li{margin-right:55%} */
+.cont-finnqmarket .finnq_card .cont-detail1 .desc_info h6 em{color:#731aed}
+.cont-finnqmarket .finnq_card .cont-detail1 article:first-child .desc_info h6 + p br{display:none}
+.cont-finnqmarket .finnq_card .cont-detail1 article .img_info{margin-top:33px}
+.cont-finnqmarket .finnq_card .cont-detail1 .ico_plus + article .img_info{margin-top:65px}
+.cont-finnqmarket .finnq_card .cont-detail1 article .img_info img,
+.cont-finnqmarket .finnq_card .cont-detail2 .img_info img {width:400px;}
+.cont-finnqmarket .finnq_card .cont-detail2{padding:72px 40px 80px 40px;}
+.cont-finnqmarket .finnq_card .cont-detail2 .desc_info h6 {font-size: 36px; line-height: 40px; letter-spacing: -1px; color: #222; font-family: 'SpoqaR';}
+.cont-finnqmarket .finnq_card .cont-detail2 .desc_info > p  {padding-top: 15px; font-size: 20px; line-height: 24px; letter-spacing: -1px; color: #666; font-family: 'SpoqaR'; word-break: keep-all;}
+.cont-finnqmarket .finnq_card .cont-detail2 .cont-wrap {overflow: hidden; min-height: 245px;}
+.cont-finnqmarket .finnq_card .cont-detail2 .desc_info {float: left; width: 445px; min-width: 360px;}
+.cont-finnqmarket .finnq_card .cont-detail2 .desc_info h6 em{color:#731aed}
+.cont-finnqmarket .finnq_card .cont-detail2 .img_info {float: right; margin-top: 7px; width:49%}
+.cont-finnqmarket .finnq_card .cont-detail2 .img_info img{width:100%}
+.cont-finnqmarket .finnq_card .cont-detail2 .list.bar {margin-top:-54px; max-width:437px;font-size:14px; line-height:18px; color:#999;}
+.cont-finnqmarket .finnq_card .cont-detail2 .list.bar li {position:relative; padding-left:8px;}
+.cont-finnqmarket .finnq_card .cont-detail2 .list.bar li:before {position:absolute; top:0; left:0; display:block; content:"-";}
+.cont-finnqmarket .finnq_card .cont-detail2 .list.bar li.black {color:#222;}
+.cont-finnqmarket .finnq_card .cont-detail2 .bul_text {margin-top:68px; font-size:16px; font-family: 'SpoqaR'; color:#666;}
+.cont-finnqmarket .finnq_card .desc_info em br {display:none;}
+.cont-finnqmarket .finnq_card .cont-detail2 .list.bar li br {display:none;}
+.cont-finnqmarket .finnq_card .cont-detail2 .bul_text .date {letter-spacing:0;}
+.cont-finnqmarket .finnq_card .cont-detail3 .desc_info h6 br{display:none}
+.cont-finnqmarket .cont-detail3 .bul_text{max-width:1280px;margin:68px  auto 0; padding-left:40px;padding-right:40px;}
+.cont-finnqmarket .cont-detail3 .bul_text .date {letter-spacing:0;}
+.cont-finnqmarket .finnq_card .card_slide_wrap.finnq_card {display:none;overflow:hidden;margin-top: -134px; }
+.cont-finnqmarket .finnq_card .card_slide_wrap.finnq_card + .bul_guide {margin-top: 23px; }
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide {width: 50%;margin-left: 2px; text-align:center}
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide > a {display: block;position: relative;z-index: 5; }
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide .stit {margin-top: 15px;display: inline-block; padding: 0 10px; height: 26px; line-height: 26px; font-size: 14px; background: #e0e0e0; color: #666; border-radius: 15px; font-weight: bold; }
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide .item {position: relative;margin:0;border-radius: 8px;overflow: hidden;}
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide .item img {width: 100%;height: auto;}
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide-next .stit,
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide-prev .stit {margin-top: 20px;-webkit-transform:scale(1.2);-ms-transform: scale(1.2);transform: scale(1.2);}
+.cont-finnqmarket .finnq_card .swiper-continer.finnq_card .swiper-slide .stit {margin-top: 15px;display:inline-block;padding:0 10px;height:26px;line-height:26px;font-size:14px;background:#e0e0e0;color: #666;border-radius:15px;font-weight:bold;}
+.cont-finnqmarket .finnq_card .swiper-container-3d .swiper-slide-shadow-left,
+.cont-finnqmarket .finnq_card .swiper-container-3d .swiper-slide-shadow-right{opacity:0;display:none}
+.no_highlight {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+.cont-finnqmarket .finnq_card .card_slide_wrap + .list.bar{display:none}
+.cont-finnqmarket .finnq_card .cont-detail3{padding-bottom:95px;margin-bottom:-95px}
+.cont-finnqmarket .finnq_card .cont-detail3 .cont-wrap {overflow: hidden; min-height: 245px;}
+.cont-finnqmarket .finnq_card .cont-detail3 .list.bar {max-width:1280px;margin:-54px  auto 0; padding-left:40px;padding-right:40px;font-size:14px; line-height:18px; color:#999;}
+.cont-finnqmarket .finnq_card .cont-detail3 .list.bar li {position:relative; padding-left:8px;}
+.cont-finnqmarket .finnq_card .cont-detail3 .list.bar li:before {position:absolute; top:0; left:0; display:block; content:"-";}
+.cont-finnqmarket .finnq_card .cont-detail3 .desc_info em br {display:none;}
+.cont-finnqmarket .finnq_card .cont-detail3 .list.bar li br {display:none;}
+
+/* 투뿔카드 */
+.cont-finnqmarket .twoplus_card .cont-visual{height:463px;background: url("../image/v2/product/bg_twoplus_card.png") no-repeat right 140px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .twoplus_card .cont-visual > div h5 + ul li {margin-right:80px}
+.cont-finnqmarket .twoplus_card .cont-visual > div h5 + ul li p.ico_master:before{content:"";display:inline-block;margin-right:5px;width:28px;height:18px;vertical-align:-2px;background: url("../image/v2/product/ico_master.png") no-repeat 0 0;background-size:contain}
+.cont-finnqmarket .twoplus_card .cont-detail1 article h6 em{color:#f07400}
+.cont-finnqmarket .twoplus_card .cont-detail1 article .desc_info h6{word-break: keep-all;}
+.cont-finnqmarket .twoplus_card .cont-detail1 article .desc_info > p{padding-top:30px}
+.cont-finnqmarket .twoplus_card .cont-detail1 article .img_info img{width:400px}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap{display:table;margin:36px 0 79px;width:100%;height:100px}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div{display:table-cell;padding-left:103px; padding-right:20px; height:100px;vertical-align:middle}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div:last-child {padding-right:0;}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_movie{min-width:310px;background: url("../image/v2/product/ico_benefit_movie.png") no-repeat 9px 0;background-size: 64.5px 100px}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_coffee{min-width:335px;background: url("../image/v2/product/ico_benefit_coffee.png") no-repeat 11.5px 0;background-size: 68.5px 100px}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_coffee dl dd{}/*width:225px*/
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_coffee dl dd br{display:none;}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_restaurant{width:256px;background: url("../image/v2/product/ico_benefit_restaurant.png") no-repeat 0 0;background-size: 80px 100px}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_restaurant dl dt{white-space: nowrap;}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl{}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl dt{font-size:24px;line-height:28px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl dd{margin-top:14px;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break: keep-all;}
+.cont-finnqmarket .twoplus_card .cont-detail2 > ul.bul_text li br {display:none;}
+
+@media screen and (min-width: 1060px) {
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl dd .dis_b {display:block;}
+}
+@media screen and (max-width: 960px) {
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl dd .dis_b {display:block;}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > ul.bul_text li br {display:block;}
+}
+
+/* T핀크적금 */
+.cont-finnqmarket .finnq_savings .cont-visual{height:465px;padding-bottom:77px;background: url("../image/v2/product/bg_finnq_savings.png") no-repeat right 140px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .finnq_savings .cont-visual h5 + ul li p br{display:none}
+.cont-finnqmarket .finnq_savings .cont-detail1{padding-bottom:77px}
+.cont-finnqmarket .finnq_savings .cont-detail1 article .desc_info > p{line-height:30px;padding-top:29px}
+.cont-finnqmarket .finnq_savings .cont-detail1 article .img_info img{width:400px}
+.cont-finnqmarket .finnq_savings .cont-detail1 article .desc_info > span{margin-top:12px;}
+.cont-finnqmarket .finnq_savings .cont-detail2{padding-top:78px}
+
+/* 2019.05.13 Thight5적금 KTY */
+.cont-finnqmarket .finnq_5savings .cont-detail1 article h6 em{color:#ec1940;}
+.cont-finnqmarket .finnq_5savings .cont-visual{height:523px;padding-bottom:60px;background: url("../image/v2/product/bg_finnq_t5savings.png?v=1") no-repeat right 130px bottom 108px; background-size: 400px 370px;}
+.cont-finnqmarket .finnq_5savings .cont-visual h5 + ul li p br{display:none}
+.cont-finnqmarket .finnq_5savings .cont-visual > div .btn-wrap{position:relative;top:0;left:0;width:50%;margin-top:29px;}
+.cont-finnqmarket .finnq_5savings .cont-visual > div .btn-wrap a{width:calc(50% - 32px);border: solid 1px #c8c8c8;}
+.cont-finnqmarket .finnq_5savings .cont-visual > div .btn-wrap .btn-google{background: url(../image/v2/logo_googleplay_black.png) no-repeat 50% 50%;background-size:110px;}
+.cont-finnqmarket .finnq_5savings .cont-visual > div .btn-wrap .btn-apple {color:#222;}
+.cont-finnqmarket .finnq_5savings .cont-visual > div .btn-wrap .btn-apple span{background: url(../image/v2/ico_apple_black.png) no-repeat 0 50%;background-size: 19px;}
+.cont-finnqmarket .finnq_5savings .cont-detail1{padding-bottom:77px}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article {float:none;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .desc_info > p{line-height:30px;padding-top:9px}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .img_info img{width:400px}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .desc_info > span{margin-top:12px;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .desc_info .spacer{display:none;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list{overflow:hidden;width:100%;margin-top:-4px;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li{float:left;width:50%;margin-top:40px;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li:first-child .thigh5_box{background: url(../image/v2/product/bg_finnq_t5ico_01.png) no-repeat 0 0;background-size:150px 150px;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box{display: table-cell;padding-left:169px;height:150px;vertical-align: middle;background: url(../image/v2/product/bg_finnq_t5ico_02.png) no-repeat 0 0;background-size:150px 150px;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li:last-child .thigh5_box{background: url(../image/v2/product/bg_finnq_t5ico_03.png) no-repeat 0 0;background-size:150px 150px;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box dl dt{font-family:'SpoqaR';font-size:24px;line-height:30px;color:#ec1940;text-align:left;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box dl dd{font-family:'SpoqaR';margin-top:9px;font-size:20px;line-height:27px;color:#666;text-align:left;}
+.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li:last-child .thigh5_box dl dt{color:#278df5;}
+
+/* 2019.10.18 KDB Thight5적금 KTY */
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article h6 em{color:#ec1940;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual{height:523px;padding-bottom:60px;background: url("../image/v2/product/bg_finnq_t5kdbsavings.png?v=1") no-repeat right 130px bottom 108px; background-size: 400px 370px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual h4 .cl_r{color: #ec1840;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5 + ul li p br{display:none}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual > div .btn-wrap{position:relative;top:0;left:0;width:50%;margin-top:29px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual > div .btn-wrap a{width:calc(50% - 32px);border: solid 1px #c8c8c8;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual > div .btn-wrap .btn-google{background: url(../image/v2/logo_googleplay_black.png) no-repeat 50% 50%;background-size:110px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual > div .btn-wrap .btn-apple {color:#222;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-visual > div .btn-wrap .btn-apple span{background: url(../image/v2/ico_apple_black.png) no-repeat 0 50%;background-size: 19px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article {float:none;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 .desc_info > h6{letter-spacing:-2px;margin-top:0;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 .desc_info > h6 br{display:none;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info > p{line-height:30px;padding-top:29px}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info > .in_txt{padding-top:10px;font-size:16px;line-height:24px;color:#999;font-family: 'SpoqaL';}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box{display:flex;margin-top:72px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half{float:left;width:50%;min-width:600px;justify-content:space-between;align-content:center;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half + .half{width:auto;float:right;padding:0 41px 0 159px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half > p{font-size:30px;line-height:33px;font-family:'SpoqaR';}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half > p br{display:none;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half > p em{font-family: 'SpoqaL';}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt{position:relative;padding:0 10px;margin-top:9px;font-family: 'SpoqaL';font-size:14px;line-height:20px;letter-spacing:-1px;color:#999;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt.dot::before{content:'*';position:relative;left:0;top:3px;margin-right:3px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt.dot{margin-top:34px;text-indent:-8px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt.dot br{display:block;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .in_text{margin-top:66px;font-size:24px;line-height:30px;font-family:'SpoqaR';}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .in_text br{display:block;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .img_box{display:block;margin-top:13px;width:400px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .img_box img{display:block;width:100%;max-width:100%;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .img_box .mobile_svg{display:none;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .img_info img{width:400px}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info > span{margin-top:12px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info .spacer{display:none;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list{overflow:hidden;width:100%;margin-top:-4px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:first-child{margin-top:38px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li{float:left;width:auto;margin-top:70px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:first-child .thigh5_box{background: url(../image/v2/product/bg_finnq_t5ico_01.png) no-repeat 0 0;background-size:150px 150px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box{display: table-cell;padding-left:169px;height:150px;vertical-align: middle;background: url(../image/v2/product/bg_finnq_t5ico_04.png) no-repeat 0 0;background-size:150px 150px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:last-child .thigh5_box{background: url(../image/v2/product/bg_finnq_t5ico_04.png) no-repeat 0 0;background-size:150px 150px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box.v2{background: url(../image/v2/product/bg_finnq_t5ico_03.png) no-repeat 0 0;background-size:150px 150px;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dt{font-family:'SpoqaR';font-size:24px;line-height:30px;color:#ec1940;text-align:left;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dt .txt{position:relative;top:-2px;margin-left:2px;padding:0;font-family:'SpoqaL';font-size:16px;line-height:24px;letter-spacing:0;color:#999;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dd{font-family:'SpoqaR';margin-top:9px;font-size:20px;line-height:27px;color:#666;text-align:left;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li + li .thigh5_box dl dt{color:#278df5;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:last-child .thigh5_box dl dt{color:#278df5;}
+.cont-finnqmarket .finnq_5kdbsavings .cont-detail2{padding:76px 40px 0 40px;}
+
+
+/* 2019.11.12 핀크마켓 -> 대출비교T스코어 KTY */
+.cont-finnqmarket.container.dgbfq_tscore .inner{padding:90px 0 0px;}
+.cont-finnqmarket.container.dgbfq_tscore .key-visual .inner{padding: 169px 0;}
+.cont-finnqmarket .market_loan_tscore .cont-visual h5{width: calc(50% - 20px);line-height:30px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article h6 em{color:#ec1940;}
+.cont-finnqmarket .market_loan_tscore .cont-visual h4 .clear_m{display:none;}
+.cont-finnqmarket .market_loan_tscore .cont-visual h4 .clear{display:block;}
+.cont-finnqmarket .market_loan_tscore .cont-visual h5 + ul li p{margin-top:4px;}
+.cont-finnqmarket .market_loan_tscore .cont-visual{height:468px;padding-bottom:48px;background: url("../image/v2/product/bg_finnq_loantscore.png") no-repeat right 110px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .market_loan_tscore .cont-visual h5 + ul li p br{display:none}
+.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box{position:relative;top:0;left:0;margin-top:29px;}
+.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box p{font-size:20px;line-height:30px;color:#666;}
+.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box .btn-wrap{overflow:hidden;position:relative;top:0;left:0;width:50%;margin-top:110px;}
+.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box .btn-wrap a{float:left;width:calc(50% - 10px);border: solid 1px #c8c8c8;}
+.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box .btn-wrap .btn-google{background: url(../image/v2/logo_googleplay_black.png) no-repeat 50% 50%;background-size:110px;}
+.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box .btn-wrap .btn-apple {margin-left:20px;color:#222;}
+.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box .btn-wrap .btn-apple span{background: url(../image/v2/ico_apple_black.png) no-repeat 0 50%;background-size: 19px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1{padding:63px 0 78px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 .desc_info > h6{margin-top:0;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article {float:none;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info{float:left;margin-top:30px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info > p{line-height:30px;padding-top:29px}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info > span{margin-top:12px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info .spacer{display:none;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article .img_info{float:right;margin-top:0;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1 article .img_info img{padding-top:17px;width:450px;height:273px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan{padding:80px 0 100px;width:100%;overflow:hidden;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .desc_info{float:left;margin-top:33px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .desc_info > p{padding-top:29px;font-size:20px;line-height:30px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .desc_info > span{margin-top:12px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .desc_info .spacer{display:none;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .img_info{float:right;margin-top:0;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .img_info img{padding-top:0;width:450px;height:auto;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2{padding:80px 0;width:100%;overflow:hidden;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 .cont-wrap{position:relative;overflow:hidden;max-width:1280px;margin:0 auto;padding-top:0;padding-left:40px;padding-right:40px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 article {float:none;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 .desc_info > h6{font-size:36px;line-height:46px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 article .desc_info{float:left;margin-top:34px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 article .desc_info > p{padding-top:29px;font-size:20px;line-height:30px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 article .desc_info > span{margin-top:12px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 article .desc_info .spacer{display:none;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 article .img_info{float:right;margin-top:0;}
+.cont-finnqmarket .market_loan_tscore .cont-detail2 article .img_info img{width:450px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice{padding:72px 0 93px;background:#fff;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice strong{display:block;font-family:'SpoqaR';font-weight:normal;font-size:20px;line-height:34px;color:#222;text-align:left;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box{float:left;width:400px;margin-top:17px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .wd3201{width:45%;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .wd3202{width:34%;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .wd3203{width:21%;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table{width:100%;border-collapse: collapse;border-spacing: 0px;text-align:left;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table th{padding:12px 0;font-family:'SpoqaR';font-size:16px;line-height:22px;color:#666;border-bottom:1px solid #e0e0e0;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .frt td{padding-top:7px;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table td{padding-top:2px;font-family:'SpoqaR';font-size:16px;line-height:31px;color:#666;text-align:left;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table td a{display:block;color:#666;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .lts_0{letter-spacing:0;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .ico_bank{display:inline-block;margin:4px 6px 0 0;width:22px;height:22px;vertical-align:top;}
+.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .ico_bank img{width:100%;max-width:100%;vertical-align:top;}
+
+/* 2019.09.10 핀크마켓 -> DGB비상금대출 KTY */
+.cont-finnqmarket.container.dgbfq .inner{padding:90px 0 78px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual h5{width: calc(50% - 20px);line-height:30px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article h6 em{color:#ec1940;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual h4 .clear_m{display:none;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual h4 .clear{display:block;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual h5 + ul li p{margin-top:4px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual{height:529px;padding-bottom:60px;background: url("../image/v2/product/bg_finnq_dgbfq.png?v=1") no-repeat right 110px bottom 108px; background-size: 400px 370px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual h5 + ul li p br{display:none}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual > div .btn-wrap{position:relative;top:0;left:0;width:48.388%;margin-top:29px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual > div .btn-wrap a{width:calc(50% - 12px);border: solid 1px #c8c8c8;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual > div .btn-wrap .btn-google{background: url(../image/v2/logo_googleplay_black.png) no-repeat 50% 50%;background-size:110px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual > div .btn-wrap .btn-apple {color:#222;}
+.cont-finnqmarket .market_loan_dgbfq .cont-visual > div .btn-wrap .btn-apple span{background: url(../image/v2/ico_apple_black.png) no-repeat 0 50%;background-size: 19px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1{padding:73px 0 75px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article {float:none;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info{float:left;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .img_info{float:right;margin-top:5px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info > p{line-height:30px;padding-top:29px}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 .desc_info > h6{margin-top:0;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .img_info img{width:400px}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info > span{margin-top:12px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info .spacer{display:none;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1{padding:80px 0;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .img_info img{width:220px;height:220px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 .desc_info > h6{margin-top:24px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info .txt_blue{padding-top:9px;color:#278df5;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2{padding:73px 40px 81px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info:after{content:'';display:table;clear:both;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info > h6{font-size:36px;line-height:46px;letter-spacing:-1px;color:#222;font-family:'SpoqaR';}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list{overflow:hidden;margin-top:28px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li{float:left;width:calc(50% - 85px);margin-left:170px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li:first-child{margin-left:0;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .tit{display:block;font-size:30px;line-height:33.5px;font-family:'SpoqaR';font-weight:normal;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box{display:block;margin-top:40px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box .icon{float:left;width:150px;height:150px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box .icon img{width:100%;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p{padding:8px 0 0 180px;font-family:'SpoqaR';}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p > span{display:block;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p .tit_blue{font-size:28px;line-height:30px;color:#278df5;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p .tit_blue em{letter-spacing:0;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p .text{margin-top:13px;font-size:20px;line-height:30px;color:#666;font-family:'SpoqaR';}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1{padding:75px 40px 78px;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1 .bul_text li{padding-left:16px;text-indent:-17px;font-size:16px;line-height:24px;color:#666;font-family:'SpoqaR';}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1 .bul_text li em,
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1 .bul_text li span{letter-spacing:0;}
+.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1 .bul_text li br{display:block;}
+
+/* 해외송금 */
+.cont-finnqmarket .market_foregin .cont-visual{height:497px;background: url("../image/v2/product/bg_market_foregin.png") no-repeat right 140px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .market_foregin .cont-visual h4 span br{display:none}
+.cont-finnqmarket .market_foregin .cont-visual h5 + ul{padding-top:11px;}
+.cont-finnqmarket .market_foregin .cont-visual h5 + ul li{float:none;width:auto}
+.cont-finnqmarket .market_foregin .cont-visual h5 + ul li + li p{margin-top:8px}
+.cont-finnqmarket .market_foregin .cont-visual h5 + ul li + li p em{display:inline-block;padding-top:5px;padding-left:63px;color:#999;}
+.cont-finnqmarket .market_foregin .cont-detail1{padding-bottom:77px}
+.cont-finnqmarket .market_foregin .cont-detail1 .cont-wrap{background: url("../image/v2/product/bg_dotline.png") no-repeat 50% 50%; background-size: 2px 402px}
+.cont-finnqmarket .market_foregin .cont-detail1 article{min-width:400px;width:37%}
+.cont-finnqmarket .market_foregin .cont-detail1 article .img_info{margin-top:35px}
+.cont-finnqmarket .market_foregin .cont-detail1 article .img_info.second{margin-top:64px}
+.cont-finnqmarket .market_foregin .cont-detail1 article .img_info img{width:400px}
+.cont-finnqmarket .market_foregin .cont-detail1 article .desc_info > span{font-size:18px;line-height:22px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
+.cont-finnqmarket .market_foregin .cont-detail1 article .desc_info > p{padding-top:32px;line-height:26px;word-break: keep-all;}
+.cont-finnqmarket .market_foregin .cont-detail1 article:first-child .desc_info > p > span br{display:block}
+.cont-finnqmarket .market_foregin .cont-detail1 article:first-child .desc_info > p > span:first-child{display:inline-block;margin-bottom:4px}
+.cont-finnqmarket .market_foregin .cont-detail1 article:first-child .desc_info > p > span:last-child{display:inline;}
+.cont-finnqmarket .market_foregin .cont-detail1 article:last-child .desc_info > p > span{display:inline;}
+.cont-finnqmarket .market_foregin .cont-detail1 article .desc_info{overflow:hidden;min-height:188px}
+.cont-finnqmarket .market_foregin .cont-detail2 .cont-wrap{overflow:hidden;}
+.cont-finnqmarket .market_foregin .cont-detail2 .desc_info{float:left;margin-top:63px;width:44%;min-width:360px;}
+.cont-finnqmarket .market_foregin .cont-detail2 .desc_info h6{font-size:36px;line-height:40px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .market_foregin .cont-detail2 .desc_info > p{padding-top:15px;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break: keep-all;}
+.cont-finnqmarket .market_foregin .cont-detail2 .desc_info > p > span br{display:none;}
+.cont-finnqmarket .market_foregin .cont-detail2 .desc_info > span{display:inline-block;margin-top:15px;font-size: 18px;line-height: 22px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
+.cont-finnqmarket .market_foregin .cont-detail2 .img_info{float:right}
+.cont-finnqmarket .market_foregin .cont-detail2 .img_info img{width:400px}
+.cont-finnqmarket .market_foregin .cont-visual .list.bar {}
+.cont-finnqmarket .market_foregin .cont-visual .list.bar li:first-child {margin-top:0;}
+.cont-finnqmarket .market_foregin .cont-visual .list.bar li {position:relative; padding-left:9px; margin-top:12px; line-height:26px;}
+.cont-finnqmarket .market_foregin .cont-visual .list.bar li:before {position: absolute; top:12px; left: 0; display: inline-block; content: ""; width:5px; height:1px; border-top:1px solid #666;}
+.cont-finnqmarket .market_foregin .cont-visual .list.bar li > em {color:#999;}
+
+/* P2P */
+.cont-finnqmarket .market_p2p .cont-visual{height:464px;background: url("../image/v2/product/bg_market_p2p.png?v=1") no-repeat right 137px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .market_p2p .cont-visual h4 span{display:inline-block}
+.cont-finnqmarket .market_p2p .cont-visual h5 + ul{padding-top:14px}
+.cont-finnqmarket .market_p2p .cont-visual h5 + ul li{float:none;width:auto;line-height:30px;word-break: keep-all;}
+.cont-finnqmarket .market_p2p .cont-detail1{padding-bottom:77px;}
+.cont-finnqmarket .market_p2p .cont-detail1 .cont-wrap {min-height:425px;background: url("../image/v2/product/bg_dotline.png") no-repeat 50% 50%; background-size: 2px 402px}
+.cont-finnqmarket .market_p2p .cont-detail1 article{min-width:400px;width:37%}
+.cont-finnqmarket .market_p2p .cont-detail1 article .img_info {position:absolute;bottom:42px;margin-top:0}
+.cont-finnqmarket .market_p2p .cont-detail1 article .img_info.first {bottom:52px;}
+.cont-finnqmarket .market_p2p .cont-detail1 article + article .img_info{bottom:5px;}
+.cont-finnqmarket .market_p2p .cont-detail1 article .img_info img{width:400px}
+.cont-finnqmarket .market_p2p .cont-detail1 article .img_info.first img {width:300px;}
+.cont-finnqmarket .market_p2p .cont-detail1 article .desc_info{overflow:hidden;min-height:188px}
+.cont-finnqmarket .market_p2p .cont-detail1 article .desc_info > p{padding-top:32px;line-height:26px;word-break: keep-all;}
+.cont-finnqmarket .market_p2p .cont-detail1 article .desc_info > p br{display:none}
+.cont-finnqmarket .market_p2p .cont-detail2 .cont-wrap{overflow:hidden;min-height:245px;}
+.cont-finnqmarket .market_p2p .cont-detail2 .desc_info{float:left;margin-top:84px;width:44%;min-width:360px;}
+.cont-finnqmarket .market_p2p .cont-detail2 .desc_info h6{font-size:36px;line-height:40px;letter-spacing:-1px;color:#222;font-family: 'SpoqaR';}
+.cont-finnqmarket .market_p2p .cont-detail2 .desc_info > p{padding-top:15px;font-size:20px;line-height:24px;letter-spacing:-1px;color:#666;font-family: 'SpoqaR';word-break: keep-all;}
+.cont-finnqmarket .market_p2p .cont-detail2 .desc_info > p > span br{display:none;}
+.cont-finnqmarket .market_p2p .cont-detail2 .desc_info > span{display:inline-block;margin-top:15px;font-size: 18px;line-height: 22px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
+.cont-finnqmarket .market_p2p .cont-detail2 .img_info{float:right;margin-top:7px}
+.cont-finnqmarket .market_p2p .cont-detail2 .img_info img{width:400px}
+
+/* 비상금 대출 */
+.cont-finnqmarket .market_loan .cont-visual{height:463px; background: url("../image/v2/product/bg_market_loan.png") no-repeat right 140px bottom 55px; background-size: 400px 370px;}
+.cont-finnqmarket .market_loan .cont-detail1 {padding: 72px 0 72px;}
+.cont-finnqmarket .market_loan .cont-detail1 .cont-wrap {min-height:495px; background: url("../image/v2/product/bg_dotline.png") no-repeat 50% 50%; background-size: 2px 400px}
+.cont-finnqmarket .market_loan .cont-detail1 article {min-width: 400px; max-width:407px;}
+.cont-finnqmarket .market_loan .cont-detail1 article .desc_info {overflow: hidden; min-height: 188px;}
+.cont-finnqmarket .market_loan .cont-detail1 article .desc_info > p {padding-top: 32px; line-height: 26px; word-break: keep-all;}
+/* .cont-finnqmarket .market_loan .cont-detail1 article .img_info {position: absolute; bottom: 42px; margin-top: 0;} */
+.cont-finnqmarket .market_loan .cont-detail1 article .img_info img {width: 400px;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num {margin-top:27px; padding-right:35px;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num li {position:relative; padding-left:20px; font-size:20px; line-height:26px; margin-top:8px; color:#666; font-family: 'SpoqaR';}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num li:first-child {margin-top:0;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num li .num {position:absolute; top:0; left:0;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num li em {color:#00b389;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num li p {font-family: 'SpoqaR'; word-break: keep-all;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num li .sub {font-family:"SpoqaL"; font-size:18px; line-height:24px; color:#999; margin-top:7px;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num li p + p {margin-top:7px;}
+.cont-finnqmarket .market_loan .desc_info > h6 {font-size: 36px; line-height: 46px; letter-spacing: -1px; color: #222; font-family: 'SpoqaR';}
+.cont-finnqmarket .market_loan .desc_info .list.ico {margin-top:35px;}
+.cont-finnqmarket .market_loan .desc_info .list.ico:after {display:block; clear:both; content:"";}
+.cont-finnqmarket .market_loan .desc_info .list.ico li {float:left; width:50%; margin-bottom:40px;}
+.cont-finnqmarket .market_loan .desc_info .list.ico li:nth-of-type(3),
+.cont-finnqmarket .market_loan .desc_info .list.ico li:nth-of-type(4) {margin-bottom:0;}
+.cont-finnqmarket .market_loan .desc_info .list.ico li > div {width:auto; font-family: 'SpoqaR'; color:#222;}
+.cont-finnqmarket .market_loan .desc_info .list.ico li > div br {display:none;}
+.cont-finnqmarket .market_loan .desc_info .list.ico li i {display:inline-block; width:120px; height:120px;}
+.cont-finnqmarket .market_loan .desc_info .list.ico li i img {width:100%;}
+.cont-finnqmarket .market_loan .desc_info .list.ico li:nth-child(even) {float:right;}
+.cont-finnqmarket .market_loan .desc_info .list.ico li:nth-child(even) > div {float:right; width:395px;}
+.cont-finnqmarket .market_loan .bul_text {margin-top:35px;}
+.cont-finnqmarket .market_loan .bul_text li {font-size:16px; margin-top:4px; line-height:18px; color:#666; font-family: 'SpoqaR';}
+.cont-finnqmarket .market_loan .bul_text li:first-child {margin-top:0;}
+.cont-finnqmarket .market_loan .bul_text li br {display:none;}
+.cont-finnqmarket .market_loan .cont-detail1 .desc_info h6 br.w320 {display:none;}
+.cont-finnqmarket .market_loan .cont-detail2 .desc_info h6 br {display:none;}
+.cont-finnqmarket .market_loan .cont-visual h4 br.phone {display:none;}
+.cont-finnqmarket .market_loan .cont-visual h4 br.phone.pc {display:block;}
+.cont-finnqmarket .market_loan .cont-detail1 article .list.num .w320 {display:none;}
+.cont-finnqmarket .market_loan .cont-visual h5 + ul li {line-height:30px;}
+
+/* 보험맞춤추천 */
+.cont-finnqmarket .insurance .cont-visual{height:463px;background: url("../image/v2/product/bg_insurance.png") no-repeat right 145px bottom 48px; background-size: 400px 370px;}
+.cont-finnqmarket .insurance .ios320 {display:none;}
+.cont-finnqmarket .insurance .cont-visual h5 + ul li {line-height:30px;}
+.cont-finnqmarket .insurance .cont-detail1 article .desc_info > p {padding-top:26px; line-height:30px;}
+.cont-finnqmarket .insurance .cont-detail1 article .img_info img,
+.cont-finnqmarket .insurance .cont-detail2 .img_info img {width:400px;}
+.cont-finnqmarket .insurance .cont-detail1 article .img_info {margin-top:35px;}
+.cont-finnqmarket .insurance .cont-detail2 .desc_info {float: left; width: 432px; min-width: 360px; margin-top:55px;}
+.cont-finnqmarket .insurance .cont-detail2 .desc_info h6 {font-size: 36px; line-height: 40px; letter-spacing: -1px; color: #222; font-family: 'SpoqaR';}
+.cont-finnqmarket .insurance .cont-detail2 .desc_info > p  {padding-top:27px; font-size: 20px; line-height: 24px; letter-spacing: -1px; color: #666; font-family: 'SpoqaR'; word-break: keep-all;}
+.cont-finnqmarket .insurance .cont-detail2 .desc_info > p em {letter-spacing:-1px;}
+.cont-finnqmarket .insurance .cont-detail2 .cont-wrap {overflow: hidden; min-height: 245px;}
+.cont-finnqmarket .insurance .cont-detail2 .img_info {float: right; margin-top: 7px;}
+.cont-finnqmarket .insurance .cont-detail2 .list.bar {margin-top:-54px; font-size:14px; line-height:18px; color:#999;}
+.cont-finnqmarket .insurance .cont-detail2 .list.bar li {position:relative; padding-left:8px;}
+.cont-finnqmarket .insurance .cont-detail2 .list.bar li:before {position:absolute; top:0; left:0; display:block; content:"-";}
+.cont-finnqmarket .insurance .cont-detail2 .bul_text {margin-top:68px; font-size:16px; font-family: 'SpoqaR'; color:#666;}
+.cont-finnqmarket .insurance .desc_info em br {display:none;}
+.cont-finnqmarket .insurance .cont-detail2 .list.bar li br {display:none;}
+.cont-finnqmarket .insurance .cont-detail2 .bul_text .date {letter-spacing:0;}
+.mobile_block{display:none !important}
+.mobile_none{display:block !important}
+
+@media screen and (max-width: 960px) {
+	.cont-finnqmarket .key-visual .inner {height: 250px;padding: 64px 0 0;background: url("../image/v2/key_visual02_m.jpg") no-repeat 50% 50%; background-size: cover;}
+	.cont-finnqmarket .key-visual .inner h2 em{display:block}
+	.cont-finnqmarket .cont-head{padding-left:20px;padding-right:20px}
+	.cont-finnqmarket .tab-type1{padding-left:20px;padding-right:20px}
+	.cont-finnqmarket .tab-type1:before{display:none}
+	.cont-finnqmarket .tab-type1:after{display:none}
+	.cont-finnqmarket .tab-type1 li{position:relative;float:left;display:inline-block;margin-top:-1px;margin-right:-1px;width:50% !important;}
+	.cont-finnqmarket .tab-type1 li:nth-child(even){border-right:1px solid #c8c8c8}
+	.cont-finnqmarket .tab-type1 li.is-active:after{content:"";display:inline-block;width:100%;height:100%;box-sizing:border-box;border:2px solid #731aed;position:absolute;top:0;left:0;z-index:2}
+	.cont-finnqmarket .tab-type1 li.is-active:nth-child(even) + li{border-left:1px solid #c8c8c8}
+	.cont-finnqmarket .tab-type1 li:nth-of-type(3),
+	.cont-finnqmarket .tab-type1 li:nth-of-type(5),
+	.cont-finnqmarket .tab-type1 li:nth-of-type(7) {border-right:1px solid #c8c8c8}
+	.cont-finnqmarket .tab-type1 li:last-child a{border-right:none}
+	.cont-finnqmarket .tab-type1 li.is-active{border:none}
+	.cont-finnqmarket .cont-visual{height:auto;padding:34px 20px 40px;}
+	.cont-finnqmarket .cont-visual h4{font-size:30px;line-height:40px;}
+	.cont-finnqmarket .cont-visual h4 span br{display:block}
+	.cont-finnqmarket .cont-visual h4 + p{padding-top:15px;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .cont-visual .hid{display:none;}
+	.cont-finnqmarket .cont-visual > div{position:static}
+	.cont-finnqmarket .cont-detail1.v1 .img_info{float:none;padding:0;}
+	.cont-finnqmarket .cont-visual h5{padding-top:0;border-bottom:none;width:auto;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .cont-visual h5 + ul{border-top:1px solid #e0e0e0}
+	.cont-finnqmarket .cont-visual h5 + ul li{float:left;margin-right:0;width:45%;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .cont-visual h5 + ul li + li{float:right;width:auto}
+	.cont-finnqmarket .cont-visual h5 + ul li > strong{font-size:14px;line-height:18px;}
+	.cont-finnqmarket .cont-visual h5 + ul li p{font-size:14px;line-height:18px;}
+	.cont-finnqmarket .finnq_5savings .cont-visual h5 + ul li{float:left;margin-right:0;width:45%;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .finnq_5savings .cont-visual > div .btn-wrap{display:none;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info > .in_txt{padding:15px 0 0 0;font-size:12px;line-height:16px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dt .txt{position:relative;top:-2px;margin-left:2px;padding:0;font-family:'SpoqaL';font-size:12px;line-height:16px;letter-spacing:-1px;color:#999;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5 + ul li{float:left;margin-right:0;width:45%;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual > div .btn-wrap{display:none;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt{margin-top:5px;padding:0 8px;font-family: 'SpoqaL';font-size:12px;line-height:16px;letter-spacing:-1px;color:#999;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt.dot::before{content:'*';position:relative;left:0;top:3px;margin-right:2px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt.dot{margin-top:25px;text-indent:-8px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail2 > ul.bul_text li{padding:0 0 0 30px;}
+	.cont-finnqmarket .market_loan_dgbfq  .cont-visual h5 + ul li{float:left;margin-right:0;width:45%;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .market_loan_dgbfq  .cont-visual > div .btn-wrap{display:none;}
+	.cont-finnqmarket .market_loan_tscore  .cont-visual h5 + ul li{float:left;margin-right:0;width:45%;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .market_loan_tscore  .cont-visual > div .btn-wrap{display:none;}
+	.cont-finnqmarket .cont-detail1{padding:36px 0 39px}
+	.cont-finnqmarket .cont-detail1 .cont-wrap{padding-left:20px;padding-right:20px;background-size:33px 33px;background-position:center 350px}
+	.cont-finnqmarket .cont-detail1 .cont-wrap{padding-top:0;padding-bottom:0;background-position:center 470px}
+	.cont-finnqmarket .cont-detail1 .cont-wrap article,
+	.cont-finnqmarket .cont-detail1 .cont-wrap article:last-child{float:none;text-align:center}
+	.cont-finnqmarket .cont-detail1 .cont-wrap .ico_plus{position:static;margin:40px auto;width:33px;height:33px}
+	.cont-finnqmarket .cont-detail1 .cont-wrap .ico_plus img{width:33px;height:33px}
+	.cont-finnqmarket .cont-detail1 .img_info{float:none;text-align:center;margin-top:35px;padding:0;}
+	.cont-finnqmarket .cont-detail1 .desc_info{float:none;}
+	.cont-finnqmarket .cont-detail1.v1 .desc_info{float:none;}
+	.cont-finnqmarket .cont-detail1 .desc_info h6{margin-top:0;text-align:center;font-size:26px;line-height:30px;}
+	.cont-finnqmarket .cont-detail1 .desc_info > p{padding-top:15px;text-align:center;font-size:16px;line-height:20px;}
+	.cont-finnqmarket .cont-detail1 .desc_info > p > span{display:block;font-size:16px;line-height:20px;}
+	.cont-finnqmarket .cont-detail1 .desc_info > span{margin-top:6px;text-align:center;font-size:14px;line-height:18px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
+	.cont-finnqmarket .cont-detail2{padding:36px 0 20px 0;}
+	.cont-finnqmarket .cont-detail2 h6{text-align:center;font-size:26px;line-height:30px;}
+	.cont-finnqmarket .cont-detail2 > ul.bul_text{}
+	.cont-finnqmarket .cont-detail2 > ul.bul_text li{padding-left:34px;text-indent:-14px;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .cont-detail2 > ul.bul_text li + li{margin-top:6px}
+	.cont-finnqmarket .cont-detail2 > ul.bul_text li br{display:block}
+	.cont-finnqmarket .cont-detail3{padding:36px 0 20px 0;}
+	.cont-finnqmarket .cont-detail3 .desc_info h6{text-align:center;font-size:26px;line-height:30px;}
+	.cont-finnqmarket .cont-detail3 .desc_info > p{padding-top:12px; font-size:16px;}
+	.cont-finnqmarket .cont-detail3 > ul.bul_text{margin-top:36px;padding-left:20px;padding-right:20px}
+	.cont-finnqmarket .cont-detail3 > ul.bul_text li{padding-left:14px;text-indent:-14px;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .cont-detail3 > ul.bul_text li + li{margin-top:6px}
+	.cont-finnqmarket .cont-detail3 > ul.bul_text li br{display:block}
+	.cont-finnqmarket .tab-cont .list.star {margin-top:38px;font-size:12px; line-height:16px;}
+	.cont-finnqmarket .tab-cont .list.star li {position:relative; padding-left:11px;text-align:left}
+	.cont-finnqmarket .tab-cont .list.star li:before {position:absolute; top:2px; left:0; display:block;content:"*";}
+
+	/* 습관저금 */
+	.cont-finnqmarket .habit_saving .cont-visual{height:auto;padding-bottom:39px;background: url("../image/v2/product/bg_habit_saving.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .habit_saving .cont-visual h5{padding-top:240px;padding-bottom:19px}
+	.cont-finnqmarket .habit_saving .cont-visual h5 + ul{padding-top:17px}
+	.cont-finnqmarket .habit_saving .cont-visual h5 + ul li br{display:none}
+	.cont-finnqmarket .habit_saving .cont-visual h5 + ul li{line-height:18px}
+	.cont-finnqmarket .habit_saving .cont-detail1{padding:36px 0 39px}
+	.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .desc_info{display:block;padding:0;float:none;width:auto;min-width:unset;text-align:center}
+	.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .desc_info h6{display:block;height:auto;text-align:center;font-size:26px;line-height:30px;}
+	.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .img_info{float:none;margin-top:38px;text-align:center}
+	.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .img_info img{width:308px;height:auto}
+	.cont-finnqmarket .habit_saving .cont-detail2{padding-top:36px;}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > h6{text-align:center;font-size:26px;line-height:30px;}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol{margin-top:0}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li{margin-top:16px}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step02,
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step03{padding-top:20px}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step01,
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step02,
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step03{float:none;max-width:350px;width:calc(100% - 40px);margin-left:auto;margin-right:auto;text-align:center;}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step01 p br{display:block}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step02 p br{display:block}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li.step03 p br{display:block}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li p{height:auto;font-size:16px;line-height:20px;}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li p + div{margin-top:18px}
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li p + div img{width:308px;height:auto}
+
+	/* 핀크카드 */
+	.cont-finnqmarket .finnq_card .cont-visual{height:auto;background: url("../image/v2/product/bg_market_card.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .finnq_card .cont-visual h5{padding-top:201px}
+	.cont-finnqmarket .finnq_card .cont-visual .ios320 {display:block;}
+	.cont-finnqmarket .finnq_card .cont-detail1 article:first-child .desc_info h6 + p br{display:block}
+	.cont-finnqmarket .finnq_card .cont-detail1 .ico_plus + article .img_info{margin-top:33px}
+	.cont-finnqmarket .finnq_card .cont-detail1 .ico_plus + article .img_info{margin-top:33px}
+	.cont-finnqmarket .finnq_card .cont-detail1 .list.bar br{display:none}
+	.cont-finnqmarket .finnq_card .cont-detail2{padding: 36px 0 20px 0;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .desc_info h6{font-size: 26px;line-height: 30px;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .desc_info > p {padding-top:12px; font-size:16px;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .img_info{display:none}
+	.cont-finnqmarket .finnq_card .cont-detail1 article .img_info img,
+	.cont-finnqmarket .finnq_card .cont-detail2 .img_info img {width:308px; height:auto;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .desc_info {float: none; margin-top: 0; min-width: unset; width: auto; text-align: center;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .img_info {margin-top: 37px; float: none; text-align: center; padding:0 20px;}
+	.cont-finnqmarket .finnq_card .desc_info em br {display:block;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .list.bar {display:none;margin:34px 20px 0;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .bul_text {margin:32px 20px 0; font-size:14px; line-height:18px;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .bul_text .date {display:block; margin-left:14px;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .list.bar li br {display:block;}
+	.cont-finnqmarket .finnq_card .cont-visual h5 + ul li {width: 100%;}
+	.cont-finnqmarket .finnq_card .cont-detail3{padding-bottom:60px;margin-bottom:-35px}
+	.cont-finnqmarket .finnq_card .cont-detail3 .cont-wrap{padding-left:20px;padding-right:20px}
+	.cont-finnqmarket .finnq_card .cont-detail3 .img_info {margin-top: 37px; float: none; text-align: center; padding:0;width:auto}
+	.cont-finnqmarket .finnq_card .cont-detail3 .img_info img {width:100%;max-width:308px;min-width:280px; height:auto;}
+	.cont-finnqmarket .finnq_card .cont-detail3 .desc_info {float: none; margin-top: 0; min-width: unset; width: auto; text-align: center;}
+	.cont-finnqmarket .finnq_card .cont-detail3 .desc_info h6 br{display:block}
+	.cont-finnqmarket .finnq_card .cont-detail3 .desc_info > p{line-height:20px}
+	.cont-finnqmarket .finnq_card .cont-detail3 .list.bar {padding:0;margin:34px 20px 0;}
+	.cont-finnqmarket .finnq_card .cont-detail3 .list.bar li + li{margin-top:5px;}
+	.cont-finnqmarket .finnq_card .card_slide_wrap.finnq_card {display:block;}
+	.cont-finnqmarket .finnq_card .card_slide_wrap + .list.bar {display:block;margin:36px 20px 58px;max-width:437px;font-size:14px; line-height:18px; color:#999;}
+	.cont-finnqmarket .finnq_card .card_slide_wrap + .list.bar li {position:relative; padding-left:8px;}
+	.cont-finnqmarket .finnq_card .card_slide_wrap + .list.bar li.black {color:#222;}
+	.cont-finnqmarket .finnq_card .card_slide_wrap + .list.bar li + li{margin-top:5px;}
+	.cont-finnqmarket .finnq_card .card_slide_wrap + .list.bar li:before {position:absolute; top:0; left:0; display:block; content:"-";}
+	.cont-finnqmarket .finnq_card .card_slide_wrap + .list.bar li br {display:none;}
+
+	/* 투뿔카드 */
+	.cont-finnqmarket .twoplus_card .cont-visual{height:auto;background: url("../image/v2/product/bg_twoplus_card.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .twoplus_card .cont-visual h5{padding-top:201px}
+	.cont-finnqmarket .twoplus_card .cont-visual > div h5 + ul li{margin-right:0;width:auto}
+	.cont-finnqmarket .twoplus_card .cont-visual > div h5 + ul li + li{float:right;margin-right:20px}
+	.cont-finnqmarket .twoplus_card .cont-detail1 article .img_info{margin-top:37px;}
+	.cont-finnqmarket .twoplus_card .cont-detail1 article .img_info img{width:308px;height:auto}
+	.cont-finnqmarket .twoplus_card .cont-detail1 article .desc_info h6 br{display:none}
+	.cont-finnqmarket .twoplus_card .cont-detail1 article .desc_info > p {padding-top:16px}
+	.cont-finnqmarket .twoplus_card .cont-detail1 article .desc_info > span.ico_attention:before{vertical-align:-3px;}
+	.cont-finnqmarket .twoplus_card .cont-detail1 .cont-wrap .ico_plus{margin:40px auto 36px}
+	.cont-finnqmarket .twoplus_card .cont-detail2{padding-bottom:24px}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap{display:inline-block;height:auto;margin-top:40px;margin-bottom:35px}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div{position:relative;display:block;margin:0 auto 20px;padding-left:88px;height:80px;}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_movie{min-width:unset;padding-left:80px;width:260px;background: url("../image/v2/product/ico_benefit_movie.png") no-repeat 6px 0;background-size: auto 80px}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_coffee{min-width:unset;padding-left:80px;width:260px;background: url("../image/v2/product/ico_benefit_coffee.png") no-repeat 5px 0;background-size: auto 80px}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_restaurant{min-width:unset;padding-left:80px;width:260px;background: url("../image/v2/product/ico_benefit_restaurant.png") no-repeat 0 0;background-size: auto 80px;margin-bottom:0}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl{position:absolute;top:50%}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl dt{font-size:20px;line-height:24px;}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div > dl dd{margin-top:7px;font-size:16px;line-height:20px;}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_movie > dl{margin-top:-24px}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_coffee > dl{margin-top:-34px}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_coffee dl dd br{display:block}
+	.cont-finnqmarket .twoplus_card .cont-detail2 > .benefit-wrap > div.benefit_restaurant > dl{margin-top:-36px}
+
+	/* T핀크적금 */
+	.cont-finnqmarket .finnq_savings .cont-visual{height:auto;padding-bottom:40px;background: url("../image/v2/product/bg_finnq_savings.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .finnq_savings .cont-visual h4 + p{padding-top:14px}
+	.cont-finnqmarket .finnq_savings .cont-visual h5{padding-top:208px;padding-bottom:19px;}
+	.cont-finnqmarket .finnq_savings .cont-visual h5 + ul{padding-top:16px}
+	.cont-finnqmarket .finnq_savings .cont-visual h5 + ul li p{margin-top:5px}
+	.cont-finnqmarket .finnq_savings .cont-detail1{padding:36px 0 39px}
+	.cont-finnqmarket .finnq_savings .cont-detail1 .img_info img{text-align:center;min-width:unset;width:280px;height:auto}
+	.cont-finnqmarket .finnq_savings .cont-detail1 article .desc_info > p{padding-top:16px}
+	.cont-finnqmarket .finnq_savings .cont-detail1 article .desc_info > p span{display:block}
+	.cont-finnqmarket .finnq_savings .cont-detail1 article .desc_info > span{margin-top:4px}
+	.cont-finnqmarket .finnq_savings .cont-detail1 .cont-wrap .ico_plus{margin:38px auto 36px}
+	.cont-finnqmarket .finnq_savings .cont-detail2{padding:37px 0 24px 0}
+	.cont-finnqmarket .finnq_savings .cont-detail2 > ul.bul_text li + li{margin-top:5px}
+
+	/* 2019.05.13 Thight5적금 KTY */
+	.cont-finnqmarket .finnq_5savings .cont-visual{height:auto;padding-bottom:40px;background: url("../image/v2/product/bg_finnq_t5savings.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .finnq_5savings .cont-visual h4 + p{padding-top:14px}
+	.cont-finnqmarket .finnq_5savings .cont-visual h5{padding-top:204px;padding-bottom:19px;}
+	.cont-finnqmarket .finnq_5savings .cont-visual h5 + ul{padding-top:16px}
+	.cont-finnqmarket .finnq_5savings .cont-visual h5 + ul li p{margin-top:5px}
+	.cont-finnqmarket .finnq_5savings .cont-visual h5 + ul li + li{float:right;width:auto}
+	.cont-finnqmarket .finnq_5savings .cont-detail1{padding:36px 0 40px}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .img_info img{min-width:unset;width:308px;height:auto}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .desc_info > p{padding-top:11px;line-height:20px;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .desc_info > p span{display:block}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .desc_info > span{margin-top:4px}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 .cont-wrap{padding:0 33px;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 .cont-wrap .ico_plus{margin:38px auto 36px}
+	.cont-finnqmarket .finnq_5savings .cont-detail2{padding:37px 0 24px 0}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list{margin-top:0;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li:first-child {margin:30px auto 0;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li{float:none;margin:20px auto 0;max-width:320px;width:calc(100%);}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li:first-child .thigh5_box{background-size:auto 90px;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li:last-child .thigh5_box{background-size:auto 90px;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box{height:90px;padding-left:109px;margin:0 auto;background-size:auto 90px;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box dl dt{font-size:18px;line-height:24px;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box dl dd{margin-top:3.6px;font-size:16px;line-height:20px;}
+
+	/* 2019.10.18 KDB Thight5적금 KTY */
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual{height:auto;padding-bottom:40px;background: url("../image/v2/product/bg_finnq_t5kdbsavings.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h4 + p{padding-top:14px}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h4 .cl_r{color: #222;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h4 .cl_r > em{color: #ec1840;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5{padding-top:204px;padding-bottom:19px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5 + ul{padding-top:16px}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5 + ul li p{margin-top:5px}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5 + ul li + li{float:right;width:auto}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1{padding:36px 0 40px}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .img_info img{min-width:unset;width:308px;height:auto}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 .desc_info > h6 br{display:block;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box{display:block;margin-top:54px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info > p{padding-top:13px;line-height:20px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info > p span{display:block}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info > span{margin-top:4px}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half{min-width:100%;width:100%;float:none;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half + .half{float:none;padding:0;margin-top:40px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half > p{font-size:26px;line-height:30px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half > p br{display:block;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .in_text{margin-top:55px;font-size:18px;line-height:22px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .img_box{width:100%;height:auto;margin-top:33px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .img_box img{display:none;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .img_box .mobile_svg{display:block;margin:0 auto;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 .cont-wrap{padding:0 30px 0 38px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 .cont-wrap .ico_plus{margin:38px auto 36px}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail2{padding:37px 0 24px 0}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list{margin-top:0;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:first-child {margin:39px auto 0;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li{float:none;margin:20px auto 0;max-width:320px;width:calc(100%);}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:first-child .thigh5_box{background-size:auto 90px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:last-child .thigh5_box{background-size:auto 90px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box{height:90px;padding-left:109px;margin:0 auto;background-size:auto 90px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dt{font-size:18px;line-height:24px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dd{margin-top:3.6px;font-size:16px;line-height:20px;}
+
+	/* 2019.09.10 핀크마켓 -> 대출비교T스코어 KTY */
+	.cont-finnqmarket.container.dgbfq_tscore .inner{padding:54px 0 0;}
+	.cont-finnqmarket.container.dgbfq_tscore .key-visual .inner{padding:64px 0;}
+	.cont-finnqmarket .market_loan_tscore .cont-visual{height:390px;padding-bottom:40px;background: url("../image/v2/product/bg_finnq_loantscore.png") no-repeat right 20px top 95px; background-size: 300px 277.5px;}
+	.cont-finnqmarket .market_loan_tscore .cont-visual h4 .clear_m{display:block;}
+	.cont-finnqmarket .market_loan_tscore .cont-visual{padding:34px 20px 20.5px;}
+	.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box{margin-top:8px;}
+	.cont-finnqmarket .market_loan_tscore .cont-visual .inner_box p{font-size:14px;line-height:30px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1{padding:36px 26px 40px}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 .cont-wrap{padding:0;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info{float:none;margin-top:0;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 article .img_info{float:none;margin-top:39px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 article .img_info img{min-width:unset;padding-top:0;width:308px;height:auto}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info > p{padding-top:15px;line-height:20px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info > p span{display:block}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 article .desc_info > span{margin-top:4px}
+	.cont-finnqmarket .market_loan_tscore .cont-detail2{padding:36px 26px 39px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail2 article .desc_info{margin-top:0;float:none;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail2 article .desc_info > p{padding-top:14px;font-size:16px;line-height:20px;color:#666;text-align:center;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail2 article .img_info{float:none;margin-top:39px;text-align:center;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail2 article .img_info img{width:308px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail2 .desc_info > h6{font-size:26px;line-height:31px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail2 .cont-wrap{padding:0;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan{padding:30px 26px 60px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan .cont-wrap{padding:0;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .desc_info{float:none;margin-top:0;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan .desc_info > h6{line-height:31px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .desc_info > p{font-size:16px;line-height:20px;padding-top:14px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .img_info{float:none;margin-top:39px;text-align:center;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .img_info img{width:308px;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice{padding:37px 30px 34px;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice strong{font-size:16px;line-height:20px;color:#222;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box{float:none;width:100%;margin-top:16px;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table th{padding:7px 0;font-family:'SpoqaR';font-size:12px;line-height:22px;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .frt td{padding-top:5px;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table td{padding-top:1px;font-family:'SpoqaR';font-size:12px;line-height:24px;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .lts_0{letter-spacing:0;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .ico_bank{display:inline-block;margin:3px 4px 0 0;width:18px;height:18px;vertical-align:top;}
+    .cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .ico_bank img{width:100%;max-width:100%;vertical-align:top;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .wd3201{width:45%;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .wd3202{width:30%;}
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-notice .tbl_box table .wd3203{width:30%;}
+
+	/* 2019.09.10 핀크마켓 -> DGB비상금대출 KTY */
+	.cont-finnqmarket.container.dgbfq .inner{padding:54px 0 40px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-visual{height:auto;padding-bottom:40px;background: url("../image/v2/product/bg_finnq_dgbfq.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-visual h4 .clear_m{display:block;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-visual h4 + p{padding-top:14px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-visual h5{line-height:22px;padding-top:193px;padding-bottom:17px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-visual h5 + ul{padding-top:18px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-visual h5 + ul li p{margin-top:5px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1{padding:36px 0 40px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info{float:none;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .img_info{float:none;margin-top:39px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .img_info img{min-width:unset;width:308px;height:auto}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info > p{padding-top:15px;line-height:20px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info > p span{display:block}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info > span{margin-top:4px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 .cont-wrap{overflow:visible;padding:0 33px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 .cont-wrap .ico_plus{margin:38px auto 36px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1{padding:36px 0 79px;position:relative;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 .desc_info > h6{margin-top:0;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info > p{padding-top:13px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info .txt_blue{position:absolute;bottom:-79px;left:0;width:100%;text-align:center;padding:0 33px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .img_info{padding:0;margin:39px 0 38px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .img_info img{min-width:unset;width:169px;height:auto}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2{padding:37px 0 39px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info > h6{font-size:26px;line-height:31px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list{margin-top:29px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li{width:100%;float:none;text-align:center;margin:31px 0 0 0;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li:first-child{margin-top:0;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .tit{font-size:22px;line-height:33.6px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box{margin-top:25px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box .icon{float:none;display:block;margin:0 auto;width:auto;height:auto;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box .icon img{min-width: unset;width:120px;height:auto;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p{padding:0;margin-top:29px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p .tit_blue{font-size:18px;line-height:18px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2 .desc_info .list li .list_box p .text{font-size:16px;line-height:20px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1{padding:37px 40px 59px 20px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1 .bul_text li{font-size:14px;line-height:18px;padding-left:13px;text-indent:-14px;}
+
+	/* 해외송금 */
+	.cont-finnqmarket .market_foregin .cont-visual{height:auto;background: url("../image/v2/product/bg_market_foregin.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .market_foregin .cont-visual h4 span br{display:block}
+	.cont-finnqmarket .market_foregin .cont-visual h5{padding-top:201px}
+	.cont-finnqmarket .market_foregin .cont-visual h5 + ul{padding-top:10px;height:auto}
+	.cont-finnqmarket .market_foregin .cont-visual h5 + ul li + li p{margin-top:5px}
+	.cont-finnqmarket .market_foregin .cont-visual h5 + ul li + li p em{padding-left:43px}
+	.cont-finnqmarket .market_foregin .cont-detail1{padding:36px 0 38px}
+	.cont-finnqmarket .market_foregin .cont-detail1 .cont-wrap{padding:0 20px;background:none}
+	.cont-finnqmarket .market_foregin .cont-detail1 article{min-width:unset;width:auto;}
+	.cont-finnqmarket .market_foregin .cont-detail1 article .desc_info{min-height:auto}
+	.cont-finnqmarket .market_foregin .cont-detail1 article .desc_info > p{padding-top:16px;line-height:20px}
+	.cont-finnqmarket .market_foregin .cont-detail1 article .desc_info > span{margin-top:4px;font-size: 14px;line-height: 18px;}
+	.cont-finnqmarket .market_foregin .cont-detail1 article .img_info img{width:308px;height:auto}
+	.cont-finnqmarket .market_foregin .cont-detail1 article + article{margin-top:36px}
+	.cont-finnqmarket .market_foregin .cont-detail1 article:first-child .desc_info > p > span{display:inline;}
+	.cont-finnqmarket .market_foregin .cont-detail1 article:first-child .desc_info > p > span:first-child{margin-bottom:0}
+	.cont-finnqmarket .market_foregin .cont-detail1 article:first-child .desc_info > p > br{display:none}
+	.cont-finnqmarket .market_foregin .cont-detail1 article:first-child .desc_info > p > span:last-child{display:block}
+	.cont-finnqmarket .market_foregin .cont-detail1 article:last-child .desc_info > p > span:first-child{display:block;}
+	.cont-finnqmarket .market_foregin .cont-detail2{padding-top:35px;padding-bottom:25px}
+	.cont-finnqmarket .market_foregin .cont-detail2 .cont-wrap{padding:0 20px}
+	.cont-finnqmarket .market_foregin .cont-detail2 .desc_info{float:none;margin-top:0;min-width:unset;width:auto;text-align:center}
+	.cont-finnqmarket .market_foregin .cont-detail2 .desc_info h6{font-size: 26px;line-height: 30px;}
+	.cont-finnqmarket .market_foregin .cont-detail2 .desc_info > p{padding-top:15px;font-size: 16px;line-height: 20px;}
+	.cont-finnqmarket .market_foregin .cont-detail2 .desc_info > p span br{display:block}
+	.cont-finnqmarket .market_foregin .cont-detail2 .desc_info > span{margin-top:7px;font-size: 14px;line-height: 18px;}
+	.cont-finnqmarket .market_foregin .cont-detail2 .img_info{margin-top:36px;float:none;text-align:center}
+	.cont-finnqmarket .market_foregin .cont-detail2 .img_info img{width:308px;height:auto}
+	.cont-finnqmarket .market_foregin .cont-detail1 article .img_info.second {margin-top:35px;}
+	.cont-finnqmarket .market_foregin .cont-visual .list.bar li {margin-top: 6px; line-height: 20px;}
+
+	/* p2p */
+	.cont-finnqmarket .market_p2p .cont-visual{height:auto;padding-bottom:38px;background: url("../image/v2/product/bg_market_p2p.png?v=1") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .market_p2p .cont-visual h4 span{display:block}
+	.cont-finnqmarket .market_p2p .cont-visual h5{padding-top:201px;padding-bottom:18px}
+	.cont-finnqmarket .market_p2p .cont-visual h5 + ul{padding-top:17px}
+	.cont-finnqmarket .market_p2p .cont-visual h5 + ul li br{display:none}
+	.cont-finnqmarket .market_p2p .cont-visual h5 + ul li{line-height:18px}
+	.cont-finnqmarket .market_p2p .cont-detail1{padding:36px 0 40px}
+	.cont-finnqmarket .market_p2p .cont-detail1 .cont-wrap{padding:0 20px;background:none}
+	.cont-finnqmarket .market_p2p .cont-detail1 article{min-width:unset;width:auto;}
+	.cont-finnqmarket .market_p2p .cont-detail1 article .desc_info{min-height:auto}
+	.cont-finnqmarket .market_p2p .cont-detail1 article .desc_info > p{padding-top:16px;line-height:20px}
+	.cont-finnqmarket .market_p2p .cont-detail1 article .desc_info > p br{display:block}
+	.cont-finnqmarket .market_p2p .cont-detail1 article .img_info{margin-top:33px;position:static}
+	.cont-finnqmarket .market_p2p .cont-detail1 article .img_info img{width:308px;height:auto}
+	.cont-finnqmarket .market_p2p .cont-detail1 article + article{margin-top:36px}
+	.cont-finnqmarket .market_p2p .cont-detail2{padding-top:35px;padding-bottom:23px}
+	.cont-finnqmarket .market_p2p .cont-detail2 .cont-wrap{padding:0 20px}
+	.cont-finnqmarket .market_p2p .cont-detail2 .desc_info{float:none;margin-top:0;min-width:unset;width:auto;text-align:center}
+	.cont-finnqmarket .market_p2p .cont-detail2 .desc_info h6{font-size: 26px;line-height: 30px;}
+	.cont-finnqmarket .market_p2p .cont-detail2 .desc_info > p{padding-top:15px;font-size: 16px;line-height: 20px;}
+	.cont-finnqmarket .market_p2p .cont-detail2 .desc_info > p span br{display:block}
+	.cont-finnqmarket .market_p2p .cont-detail2 .img_info{margin-top:36px;float:none;text-align:center}
+	.cont-finnqmarket .market_p2p .cont-detail2 .img_info img{width:308px;height:auto}
+
+	/* 비상금대출 */
+	.cont-finnqmarket .market_loan .cont-visual{height:auto; background: url("../image/v2/product/bg_market_loan.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .market_loan .cont-detail1 {padding: 36px 0 40px;}
+	.cont-finnqmarket .market_loan .cont-detail1 .cont-wrap{padding:0 20px;background:none}
+	.cont-finnqmarket .market_loan .cont-visual h5{padding-top:161px;padding-bottom:18px}
+	.cont-finnqmarket .market_loan .cont-detail1 article {min-width: unset; width: auto; max-width:100%;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .desc_info h6 {text-align: center; font-size: 26px; line-height: 30px;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .desc_info > p {padding-top: 16px; line-height: 20px;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .img_info {margin-top: 37px;position: static;}
+	.cont-finnqmarket .cont-detail1 .cont-wrap article, .cont-finnqmarket .cont-detail1 .cont-wrap article:last-child {float: none; text-align: center;}
+	.cont-finnqmarket .market_loan .cont-detail1 article {min-width: unset; width: auto;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .desc_info {min-height:auto;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .img_info img {width: 308px; height: auto;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .list.num {width:296px; margin: 36px auto 0; text-align: left; padding-right:0;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .list.num li {font-size:16px; line-height:20px;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .list.num li .sub {font-size:14px; line-height:18px; margin-top: 4px;}
+	.cont-finnqmarket .market_loan .cont-detail1 .cont-wrap article:last-child h6 {margin-top:40px; font-size:26px; line-height:31px;}
+	.cont-finnqmarket .cont-detail2 .desc_info h6 {font-size:26px; line-height:31px;}
+	.cont-finnqmarket .cont-detail2 .desc_info h6 br {display:block;}
+	.cont-finnqmarket .market_loan .desc_info .list.ico li {float:none !important; width:100%; text-align:center; margin-top: 60px;}
+	.cont-finnqmarket .market_loan .desc_info .list.ico li > div {display:inline-block; position:relative; padding-left:90px; width:255px !important; font-size:20px; line-height:24px; text-align:left;}
+	.cont-finnqmarket .market_loan .desc_info .list.ico li:nth-child(even) > div {float:none;}
+	.cont-finnqmarket .market_loan .desc_info .list.ico li > div br {display:block;}
+	.cont-finnqmarket .market_loan .desc_info .list.ico li i {position:absolute; top:50%; margin-top:-35px; left:0; width:70px; height:70px;}
+	.cont-finnqmarket .market_loan .desc_info .list.ico li .txt_wrap {display: inline-block; position:relative; padding-left: 18px;}
+	.cont-finnqmarket .market_loan .desc_info .list.ico li .txt_wrap .num {position:absolute; top:0; left:0;}
+	.cont-finnqmarket .market_loan .bul_text {margin:58px 20px 0;}
+	.cont-finnqmarket .market_loan .bul_text li {font-size:14px; line-height:18px;}
+	.cont-finnqmarket .market_loan .cont-visual h5 + ul li {width:100%; line-height:18px;}
+	.cont-finnqmarket .market_loan .cont-visual h4 br.phone {display:block;}
+
+	/* 보험맞춤 추천 */
+	.cont-finnqmarket .insurance .cont-visual{height:auto;background: url("../image/v2/product/bg_insurance.png") no-repeat right 20px top 64px; background-size: 300px 278px;}
+	.cont-finnqmarket .insurance .cont-visual h5{padding-top:160px}
+	.cont-finnqmarket .insurance .cont-detail2 .desc_info h6 {font-size:26px; line-height:30px;}
+	.cont-finnqmarket .insurance .cont-detail2 .desc_info > p {padding-top:12px; font-size:16px; line-height:20px;}
+	.cont-finnqmarket .insurance .cont-detail1 article .img_info img,
+	.cont-finnqmarket .insurance .cont-detail2 .img_info img,
+	.cont-finnqmarket .insurance .cont-detail2 .img_info img {width:308px; height:auto;}
+	.cont-finnqmarket .insurance .cont-detail2 .desc_info {float: none; margin-top: 0; min-width: unset; width: auto; text-align: center;}
+	.cont-finnqmarket .insurance .cont-detail2 .img_info {margin-top: 17px; float: none; text-align: center; padding:0 20px;}
+	.cont-finnqmarket .insurance .cont-detail1 article .desc_info > p {padding-top:11px; line-height:20px;}
+	.cont-finnqmarket .insurance .desc_info em br {display:block;}
+	.cont-finnqmarket .insurance .cont-visual h5 + ul li {width: 100%; line-height:18px;}
+	.cont-finnqmarket .insurance .desc_info.infos {margin-top:34px;}
+	.cont-finnqmarket .insurance .cont-detail1 article .img_info {margin-top:18px;}
+	.mobile_block{display:block !important}
+	.mobile_none{display:none !important}
+}
+
+@media screen and (max-width: 768px) {
+	.cont-finnqmarket .cont-detail1 article,
+	.cont-finnqmarket .cont-detail1 article:last-child{float:none}
+	.cont-finnqmarket .market_loan .bul_text li br {display:block;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .desc_info .spacer{display:block;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .desc_info .spacer{display:block;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .desc_info .spacer{display:block;}
+	.cont-finnqmarket .market_loan .cont-detail2 .desc_info h6 br {display:block;}
+	.cont-finnqmarket .market_loan .cont-detail1 .cont-wrap{padding:0 15px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info .txt_blue{padding:0 50px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info .txt_blue br{display:block;}
+}
+@media screen and (max-width: 578px) {
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info .txt_blue br{display:none;}
+}
+@media screen and (max-width: 360px){
+	.cont-finnqmarket .twoplus_card .cont-detail1 article .img_info img,
+	.cont-finnqmarket .finnq_savings .cont-detail1 article .img_info img,
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .img_info img,
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .img_info img,
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .img_info img,
+	.cont-finnqmarket .habit_saving .cont-detail1 .cont-wrap > .img_info img,
+	.cont-finnqmarket .habit_saving .cont-detail2 .cont-wrap > ol li p + div img,
+	.cont-finnqmarket .market_p2p .cont-detail1 article .img_info img,
+	.cont-finnqmarket .market_p2p .cont-detail2 .img_info img,
+	.cont-finnqmarket .finnq_card .cont-detail1 article .img_info img,
+	.cont-finnqmarket .market_loan_tscore .cont-detail1 article .img_info img,
+	.cont-finnqmarket .market_loan_tscore .cont-detail2 article .img_info img,
+	.cont-finnqmarket .market_loan_tscore .cont-detail1.type-loan article .img_info img,
+	.cont-finnqmarket .finnq_card .cont-detail2 .img_info img{width: 100%;height: auto;}
+	.cont-finnqmarket .cont-visual h5 + ul li{width:auto}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box dl dt,
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box dl dd{word-break:keep-all;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 article .list li .thigh5_box dl dd br{display:none;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual h5 + ul li{width:auto;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dt,
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dd{word-break:keep-all;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dd br{display:none;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .list li .thigh5_box dl dt,
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .list li .thigh5_box dl dd{word-break:keep-all;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 article .list li .thigh5_box dl dd br{display:none;}
+	.cont-finnqmarket .habit_saving .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .twoplus_card .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .finnq_savings .cont-visual{background-size: 270px 250px;background-position:right 20px top 80px}
+	.cont-finnqmarket .finnq_5savings .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .market_loan_tscore .cont-visual{background-size: 270px 250px;background-position:right 20px top 120px}
+	.cont-finnqmarket .market_foregin .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .market_p2p .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .market_loan .cont-visual{background-size: 270px 250px;background-position:right 20px top 100px}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail2.newv1{padding:37px 20px 59px;}
+}
+@media screen and (max-width: 320px){
+	.cont-finnqmarket .twoplus_card .cont-detail1 article .desc_info h6 br{display:block}
+	.cont-finnqmarket .finnq_savings .cont-visual h5 + ul li p br{display:none;}
+	.cont-finnqmarket .cont-detail1 .desc_info h6 br.w320 {display:block;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .img_info img,
+	.cont-finnqmarket .insurance .cont-detail1 article .img_info img,
+	.cont-finnqmarket .insurance .cont-detail2 .img_info img,
+	.cont-finnqmarket .finnq_card .cont-detail3 .img_info img{width:280px; height: auto;}
+	.cont-finnqmarket .finnq_card .cont-detail3 .img_info img{padding-left:0;padding-right:0}
+	.cont-finnqmarket .market_loan .cont-detail1 article .list.num {width:auto;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .list.num .w320 {display:block;}
+	.cont-finnqmarket .finnq_5savings .cont-detail1 .cont-wrap{padding:0 27px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li:first-child{margin-top:28px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half .txt.dot{padding:0;word-break: keep-all;text-align:center;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dt{font-size:17px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .list li .thigh5_box dl dd{font-size:15px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 article .info_box .half > p br{display:block;}
+	.ios .cont-finnqmarket .finnq_5kdbsavings .cont-detail1 .cont-wrap{padding:0 25px;}
+	.ios .cont-finnqmarket .finnq_5kdbsavings .cont-detail2 > ul.bul_text li{padding: 0 0 0 25px;}
+	.cont-finnqmarket .finnq_5kdbsavings .cont-detail1 .cont-wrap{padding:0 27px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1 .cont-wrap{padding:0 27px;}
+	.cont-finnqmarket .finnq_card .cont-detail2 .list.bar li br {display:none;}
+	.cont-finnqmarket .market_loan .cont-detail1 article .img_info img {}
+	
+	.cont-finnqmarket .insurance .ios320 {display:block;}
+	.cont-finnqmarket .insurance .close {display:none;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info .txt_blue{padding:0 29px;}
+	.cont-finnqmarket .market_loan_dgbfq .cont-detail1.newv1 article .desc_info .txt_blue br{display:none;word-break: keep-all;}
+}
+
+

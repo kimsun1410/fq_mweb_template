@@ -1,0 +1,102 @@
+<!-- //************************************************
+    decrition by : kim tae yang
+    update : 2019-11-01
+    원스탑 혁신금융대출 금융사선택 Popup(혜택안내)
+************************************************// -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>17_혁신금융대출_02금융사선택_03_popup_MASC03F03_web</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180222" />
+</head>
+<body>
+
+<div class="wrap">
+	<div id="contents" class="one_stop add_sticky white">
+        <div class="bt-popup is-visible" data-popup-con="pop_tcheck"  role="alert">
+            <div class="bt-popup-container">
+                <div class="conts_box">
+                    <strong class="title">혜택 안내</strong>
+                    <p><em>금리 인하 및 한도 혜택</em>적용을 위해 핀크 T스코어를<br />사용합니다.</p>
+                </div>
+                <div class="sticky_wrap set_type2">
+                    <button type="button" name="" class="btn btn_cancel">아니오</button>
+                    <button type="button" name="" data-popup="agree_pop" class="btn btn_type_apply">네</button>
+                </div>
+            </div>
+        </div>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){  
+        $('body').on('click','#chk_allbank',function() {
+            var checked = $(this).is(':checked');
+            $('input:checkbox[name="check_bank"]').prop('checked',checked);
+            if(checked){
+                $('input:checkbox[name="check_bank"]').each(function(){
+                   var opt = $(this).prop("disabled");
+                    if(!opt){
+                        $(this).attr("checked",true);
+                    } 
+                });
+            }else{
+                $('input:checkbox[name="check_bank"]').attr("checked",false);
+            }
+        });
+
+        function popup() {
+            var openBtn = '[data-popup]',
+                closeBtn = '.bt-popup-close';
+
+            function getTarget(t) {
+                return $(t).attr('data-popup')
+            }
+            function open(t) {
+                var showTarget = $('[data-popup-con="' + t + '"]');
+                showTarget.addClass('is-visible').focus();
+                showTarget.find('.bt-popup-close').data('is-visible', t);
+            }
+            function close(t) {
+                var activeTarget = $('[data-popup-con="' + t + '"]');
+                $('[data-popup="' + t + '"]').focus();
+                activeTarget.removeClass('is-visible');
+                $('.popup-trigger').removeClass('on');
+            }
+            $(document).on('click', openBtn, function(e) {
+                e.preventDefault();
+                open(getTarget(e.target));
+                $(this).addClass('on');
+                $('.bt-popup').on('scroll touchmove mousewheel', function(e){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return false;
+                });
+            }).on('click', closeBtn, function(e) {
+                e.preventDefault();
+                close($(this).data('is-visible'));
+                $(this).removeClass('on');
+                $('.bt-popup').off('scroll touchmove mousewheel');
+            })
+            $(".one_stop .bt-popup a").on('click', function(e) {
+                $('.popup-trigger').text($(this).text());
+                $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+                $('.popup-trigger').removeClass('on'); 
+            });
+            $(".one_stop .bt-popup .btn").on('click', function(e) {
+                $('.hide_box').show().find('.ost_mobile').addClass('inp_focus');
+                $(this).parents('.bt-popup').removeClass('is-visible').css({"-webkit-transition": "all 0.3s ease-in-out"});
+            });
+        }
+        popup();
+    });
+    
+</script>
+</body>
+</html>
