@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.wrap { position:relative; min-width:320px; width:100%; height:100%;min-height:100%;margin:0;padding:0;background:#fff;font-family: 'SpoqaR';} 
+#contents { position:relative;height:100%;min-height:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+#contents > section { padding-top:0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;background:#fff;}/*  공통상단여백  */
+.wrap.bg_list #contents:after{ content:' '; position:relative;bottom:0;height:45px;background:#fff;z-index:-1;width:100%;display:block;}
+.wrap.bg_list #contents.add_sticky:after{height:105px; background:#fff;}
+#contents.add_sticky {padding-bottom:60px;}
+#contents.add_sticky:after {content:' '; position:relative;bottom:0;height:60px; background:#fff;z-index:-1;width:100%;display:block;}
+.sec_account_visual {margin: 0 20px;padding:60px 0 20px;min-height:414px;background: url(../img/bg_finnq_loantscore.png) no-repeat 100% 93%; background-size:300px 278px; font-family: 'SpoqaR';}
+.sec_account_visual .title { display:block; font-family: 'SpoqaR'; font-size: 20px; color: #222; letter-spacing: -1px; }
+.sec_account_visual .title:after { content: ''; display: block; margin:18px 0 0 2px; width: 30px; height: 2px; background-color: #222; }
+.sec_account_visual .txt { font-family: 'SpoqaR'; font-size:34px;line-height:40px;margin-top:38px;letter-spacing:-1px;}
+.sec_account_visual .inner_box p{font-family: 'SpoqaR';font-size:14px;line-height:30px;color:#666;margin-top:8px;}
+.sec_account_visual .dues {margin-top:152px;border-bottom: 1px solid #e0e0e0; font-size: 14px; line-height: 22px;padding-bottom:5px;margin-bottom:12px;font-family: 'SpoqaR';}
+.dis_table {display:block;width:100%;position:relative;}
+.sec_account_visual .dis_cell {font-family: 'SpoqaR'; font-size:14px;line-height:18px;}
+.sec_account_visual .dis_cell + .dis_cell{width:auto;position:absolute;right:0;top:0;}
+.sec_account_visual .dis_cell span{display:block;color:#666;margin-top:4px;}
+.mloan_bridge .cont-detail1{overflow:hidden;padding: 36px 26px 40px;background:#f8f8f8}
+.mloan_bridge .cont-detail1 .cont-wrap{padding:0;}
+.mloan_bridge .cont-detail1 .desc_info h6{margin-top:0;text-align:center;font-size:26px;line-height:30px;letter-spacing: -1px;color: #222;font-family: 'SpoqaR';}
+.mloan_bridge .cont-detail1 .desc_info > p{padding-top:15px;text-align:center;font-size:16px;line-height:20px;color:#666;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail1 .desc_info > p > span{display:block;font-size:16px;line-height:20px;}
+.mloan_bridge .cont-detail1 .desc_info > span{margin-top:6px;text-align:center;font-size:14px;line-height:18px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
+.mloan_bridge .cont-detail1 article .img_info{float:none;margin-top:39px;text-align:center;}
+.mloan_bridge .cont-detail1 article .img_info img{min-width:unset;padding-top:0;width:100%;max-width:100%;margin:0 auto;height:auto;}
+.mloan_bridge .cont-detail1.type-loan{padding:36px 26px 40px;}
+.mloan_bridge .cont-detail1.type-loan .cont-wrap{padding:0;}
+.mloan_bridge .cont-detail1.type-loan article .desc_info{float:none;margin-top:0;}
+.mloan_bridge .cont-detail1.type-loan .desc_info > h6{line-height:30px;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail1.type-loan article .desc_info > p{font-size:16px;line-height:20px;margin-top:14px;padding-top:0;color:#666;}
+.mloan_bridge .cont-detail1.type-loan article .img_info{float:none;margin-top:39px;text-align:center;}
+.mloan_bridge .cont-detail1.type-loan article .img_info img{width:100%;max-width:100%;}
+.mloan_bridge .cont-detail1.type-notice{padding:37px 30px 34px;background: #fff;}
+.mloan_bridge .cont-detail1.type-notice strong{font-size:16px;line-height:20px;color:#222;font-family:'SpoqaR';text-align: left;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box{float:none;width:100%;margin-top:16px;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table th{padding:7px 0;font-family:'SpoqaR';font-size:12px;color:#666;line-height:22px;text-align: left;border-bottom: 1px solid #e0e0e0;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table .frt td{padding-top:5px;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table td{padding-top:1px;font-family:'SpoqaR';color:#666;font-size:12px;line-height:24px;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table td a{display:block;color:#666;text-decoration:none;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table .lts_0{letter-spacing:0;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table .ico_bank{display:inline-block;margin:3px 4px 0 0;width:18px;height:18px;vertical-align:top;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table .ico_bank img{width:100%;max-width:100%;vertical-align:top;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table .wd3201{width:45%;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table .wd3202{width:30%;}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table .wd3203{width:30%;}
+.mloan_bridge .cont-detail1.adress{padding:40px 20px;}
+.mloan_bridge .cont-detail1.adress .noti_title{display:block;font-size:14px;letter-spacing:-1px;font-family:'SpoqaR';color:#222;}
+.mloan_bridge .cont-detail1.adress .adlist{width:100%;margin-top:8px;}
+.mloan_bridge .cont-detail1.adress .adlist li{font-family:'SpoqaR';font-size:12px;line-height:18px;color:#666;letter-spacing:-1px;}
+.mloan_bridge .cont-detail1.adress .adlist li mark{letter-spacing:0;color:#666;background-color: transparent;}
+.mloan_bridge .cont-detail1.adress .adlist li a{position:relative;top:-2px;font-family:'SpoqaR';color:#666;text-decoration:none;letter-spacing:0;}
+.mloan_bridge .cont-detail2{padding:36px 26px 39px;}
+.mloan_bridge .cont-detail2 article .desc_info{margin-top:0;float:none;}
+.mloan_bridge .cont-detail2 article .desc_info > p{font-size:16px;line-height:20px;margin-top:14px;padding-top:0;color:#666;text-align:center;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail2 article .img_info{float:none;margin-top:39px;text-align:center;}
+.mloan_bridge .cont-detail2 article .img_info img{width:100%;max-width:100%;}
+.mloan_bridge .cont-detail2 .desc_info > h6{text-align:center;font-size:26px;line-height:30px;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail2 .cont-wrap{padding:0;}
+.mloan_bridge .cont-detail2{padding:36px 26px 39px;}
+.mloan_bridge .cont-detail2 article .desc_info{margin-top:0;float:none;}
+.mloan_bridge .cont-detail2 article .desc_info > p{font-size:16px;line-height:20px;margin-top:14px;padding-top:0;color:#666;text-align:center;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail2 article .img_info{float:none;margin-top:39px;text-align:center;}
+.mloan_bridge .cont-detail2 article .img_info img{width:100%;max-width:100%;}
+.mloan_bridge .cont-detail2 .desc_info > h6{text-align:center;font-size:26px;line-height:30px;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail2 .cont-wrap{padding:0;}
+.sticky_wrap { position:fixed;bottom:0;width:100%;height:auto;z-index:50;transform: translateZ(0);-moz-transform: translatez(0);-ms-transform: translatez(0);-o-transform: translatez(0);-webkit-transform: translateZ(0);-webkit-font-smoothing: antialiased;}
+.sticky_wrap.set_type1 button {width:100%;height:100%;min-height:60px;background:#731aed;color:#fff;font-size: 18px;line-height: 22px;font-weight: bold;}
+
+@media screen and (max-width: 768px){
+	.sec_account_info .bul_guide .info_type.indent br{display:block;}
+}
+@media screen and (max-width: 360px){
+	.sec_account_saving .list_benefit dd br{display:none;}
+	.sec_account_saving .list_benefit dd .device{display:block;}
+}
+@media screen and (max-width: 320px){
+	.sec_account_saving .list_benefit dd br{display:none;}
+	.sec_account_saving .list_benefit dd .device{display:none;}
+	.sec_account_saving article + article .sub_tit{letter-spacing:-2px}
+	.sec_account_saving .txt{}
+	.sec_account_saving{padding: 40px 29px 43px;}
+	.sec_account_saving .txt.dot{margin-top:25px;position:relative;padding-left:0;}
+	.ios .sec_account_saving .list_benefit dt {font-family: 'SpoqaR';font-size:14px;}
+	.ios .sec_account_saving .list_benefit dd {font-family: 'SpoqaR';margin-top:5px; font-size:14px; color:#666; line-height:20px;word-break:keep-all;}
+}
