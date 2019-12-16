@@ -38,7 +38,7 @@
 .mloan_bridge .cont-detail1.type-notice .tbl_box table th{padding:7px 0;font-family:'SpoqaR';font-size:12px;color:#666;line-height:22px;text-align: left;border-bottom: 1px solid #e0e0e0;}
 .mloan_bridge .cont-detail1.type-notice .tbl_box table .frt td{padding-top:5px;}
 .mloan_bridge .cont-detail1.type-notice .tbl_box table td{padding-top:1px;font-family:'SpoqaR';color:#666;font-size:12px;line-height:24px;}
-.mloan_bridge .cont-detail1.type-notice .tbl_box table td a{display:block;color:#666;text-decoration:none;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail1.type-notice .tbl_box table td a{display:block;color:#666;text-decoration:none;font-family:'SpoqaR';letter-spacing:0;}
 .mloan_bridge .cont-detail1.type-notice .tbl_box table .lts_0{letter-spacing:0;}
 .mloan_bridge .cont-detail1.type-notice .tbl_box table .ico_bank{display:inline-block;margin:3px 4px 0 0;width:18px;height:18px;vertical-align:top;}
 .mloan_bridge .cont-detail1.type-notice .tbl_box table .ico_bank img{width:100%;max-width:100%;vertical-align:top;}
@@ -49,7 +49,7 @@
 .mloan_bridge .cont-detail1.adress .noti_title{display:block;font-size:14px;letter-spacing:-1px;font-family:'SpoqaR';color:#222;}
 .mloan_bridge .cont-detail1.adress .adlist{width:100%;margin-top:8px;}
 .mloan_bridge .cont-detail1.adress .adlist li{font-family:'SpoqaR';font-size:12px;line-height:18px;color:#666;letter-spacing:-1px;}
-.mloan_bridge .cont-detail1.adress .adlist li mark{letter-spacing:0;color:#666;background-color: transparent;}
+.mloan_bridge .cont-detail1.adress .adlist li mark{font-family:'SpoqaR';letter-spacing:0;color:#666;background-color: transparent;}
 .mloan_bridge .cont-detail1.adress .adlist li a{position:relative;top:-2px;font-family:'SpoqaR';color:#666;text-decoration:none;letter-spacing:0;}
 .mloan_bridge .cont-detail2{padding:36px 26px 39px;}
 .mloan_bridge .cont-detail2 article .desc_info{margin-top:0;float:none;}
@@ -66,7 +66,7 @@
 .mloan_bridge .cont-detail2 .desc_info > h6{text-align:center;font-size:26px;line-height:30px;font-family:'SpoqaR';}
 .mloan_bridge .cont-detail2 .cont-wrap{padding:0;}
 .sticky_wrap { position:fixed;bottom:0;width:100%;height:auto;z-index:50;transform: translateZ(0);-moz-transform: translatez(0);-ms-transform: translatez(0);-o-transform: translatez(0);-webkit-transform: translateZ(0);-webkit-font-smoothing: antialiased;}
-.sticky_wrap.set_type1 button {width:100%;height:100%;min-height:60px;background:#731aed;color:#fff;font-size: 18px;line-height: 22px;font-weight: bold;}
+.sticky_wrap.set_type1 button {font-family: 'SpoqaR';width:100%;height:100%;min-height:60px;background:#731aed;color:#fff;font-size: 18px;line-height: 22px;font-weight: bold;}
 
 @media screen and (max-width: 768px){
 	.sec_account_info .bul_guide .info_type.indent br{display:block;}
