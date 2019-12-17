@@ -91,11 +91,11 @@
 #openplatform input[type="text"]:focus,
 #openplatform input[type='password']:focus,
 #openplatform input[type='submit']:focus,
-#openplatform input[type='date']:focus,,
-#openplatform input[type='email']:focus,,
+#openplatform input[type='date']:focus,
+#openplatform input[type='email']:focus,
 #openplatform input[type='search']:focus,
 #openplatform input[type='tel']:focus,
-#openplatform input[type='number']:focus  {border-color: #731aed; color: #731aed; background: #f5eeff; }
+#openplatform input[type='number']:focus {border-color: #731aed; color: #731aed; background: #f5eeff; }
 
 #openplatform input[type='text']:disabled,
 #openplatform input[type='password']:disabled,
@@ -289,7 +289,7 @@ ul.summary_list.disabled + div.alert { padding:0 20px 12px;background:$white;box
 .list_wrap .expend .htag { color:$seafoam_blue;width:100%;@include font(14px);line-height:16px;letter-spacing:-1px;padding-right:18px;padding-bottom:2px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
 .list_wrap .expend .htag a { color:$seafoam_blue;}
 .list_wrap .expend .htag blockquote { display:inline-block;margin-right:8.9px;}
-.list_wrap .expend .ico_arrow_down_type_a { position:absolute;right:20px;top:20px;display:none;} /* 핑고,확장 제거 */
+.list_wrap .expend .ico_arrow_down_type_a { position:absolute;right:20px;top:20px;display:none;} /* 핑고, 확장 제거 */
 .list_wrap .expend .detail_set { max-height:0;overflow:hidden;padding-top:0;max-height: 0;transition: max-height 0.15s ease-out;}
 .list_wrap .expend .detail_set.on { max-height: 500px; transition: max-height 0.25s ease-in;}
 .list_wrap .expend .detail_set > div {margin-top:15px;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
@@ -306,7 +306,6 @@ ul.summary_list.disabled + div.alert { padding:0 20px 12px;background:$white;box
 .list_wrap .expend .detail_set > div.i div.choice label { float:left;width:50%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
 .list_wrap .expend .detail_set > div.i div.choice label span { color:$black;}
 .list_wrap .expend .detail_set > div.i div.choice:after {content:'.'; display:block; clear:both; height:0; line-height:0; visibility:hidden;}
-
 
 /* .sec_history dl dt strong + div {width: 34%;min-height: 25px;line-height: 20px;vertical-align: middle;text-align: right;} */
 .spend_review{}
@@ -1302,15 +1301,27 @@ hr.dot_line {height:1px; background:url(../images/common/bg-dotline-type3.png) 0
 .my-account__list .gray__box-wrap .star_type {position:relative; padding-left:10px; font-size:14px; line-height:18px; color:#999;}
 .my-account__list .gray__box-wrap .star_type:before {position:absolute; top:0; left:0;}
 
-.gradient:after {display:block; width:100%; content:""; border-radius:4px;
-    background-image: linear-gradient(90deg,#f0f0f0 0%, #f8f8f8 100%);
-    background-size:100% auto;
-}
+/* 스켈레톤 */
+.modal__popup--common .list__account .gradient .ico__account:after,
+.modal__popup--common .list__account .gradient .account__info:after,
+.modal__popup--common .list__account .gradient .account__info--detail:after,
+.list__account-wrap .list__account .gradient .ico__account:after,
+.list__account-wrap .list__account .gradient .account__info:after,
+.list__account-wrap .list__account .gradient .account__info--detail:after {display:block; position:absolute; content:""; border-radius:4px; background-image: linear-gradient(90deg,#f0f0f0 0%, #f8f8f8 100%); background-size:100% auto;}
 
-.modal__popup--common .list__account .gradient:after,
-.list__account-wrap .list__account .gradient:after {position:absolute; top:15px; height:46px;}
-.list__account-wrap .list__account .gradient {}
+.modal__popup--common .list__account .gradient .account__info,
+.modal__popup--common .list__account .gradient .account__info--detail,
+.list__account-wrap .list__account .gradient .account__info,
+.list__account-wrap .list__account .gradient .account__info--detail {position:relative;}
 
+.modal__popup--common .list__account .ico__account:after,
+.list__account-wrap .list__account .gradient .ico__account:after {top:-1px; left:-1px; width:47px; height:47px;}
+
+.modal__popup--common .list__account .gradient .account__info:after,
+.modal__popup--common .list__account .gradient .account__info--detail:after,
+.list__account-wrap .list__account .gradient .account__info:after,
+.list__account-wrap .list__account .gradient .account__info--detail:after {top:0; left:0; width:calc(100% + 1px); height:20px;}
+/* //스켈레톤 */
 
 /* 오픈뱅킹 소개 */
 .openbank__info--wrap {padding-top:20px;}

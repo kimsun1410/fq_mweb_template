@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@font-face { font-family: 'SpoqaT'; src: local("※"), url("../fonts/Spoqa_Han_Sans_Thin.woff") format("woff"), url("./fonts/Spoqa_Han_Sans_Thin.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+@font-face { font-family: 'SpoqaL'; src: local("※"), url("../fonts/Spoqa_Han_Sans_Light.woff") format("woff"), url("./fonts/Spoqa_Han_Sans_Light.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+@font-face { font-family: 'SpoqaR'; src: local("※"), url("../fonts/Spoqa_Han_Sans_Regular.woff") format("woff"), url("./fonts/Spoqa_Han_Sans_Regular.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+@font-face { font-family: 'SpoqaB'; src: local("※"), url("../fonts/Spoqa_Han_Sans_Bold.woff") format("woff"), url("./fonts/Spoqa_Han_Sans_Bold.ttf") format("truetype"); font-style: normal; font-weight: normal; }
+
 .wrap { position:relative; min-width:320px; width:100%; height:100%;min-height:100%;margin:0;padding:0;background:#fff;font-family: 'SpoqaR';} 
 #contents { position:relative;height:100%;min-height:100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
 #contents > section { padding-top:0;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;background:#fff;}/*  공통상단여백  */
@@ -10,7 +15,7 @@
 .sec_account_visual {margin: 0 20px;padding:60px 0 20px;min-height:414px;background: url(../img/bg_finnq_loantscore.png) no-repeat 100% 93%; background-size:300px 278px; font-family: 'SpoqaR';}
 .sec_account_visual .title { display:block; font-family: 'SpoqaR'; font-size: 20px; color: #222; letter-spacing: -1px; }
 .sec_account_visual .title:after { content: ''; display: block; margin:18px 0 0 2px; width: 30px; height: 2px; background-color: #222; }
-.sec_account_visual .txt { font-family: 'SpoqaR'; font-size:34px;line-height:40px;margin-top:38px;letter-spacing:-1px;}
+.sec_account_visual .txt { font-family: 'SpoqaR'; font-size:30px;line-height:40px;margin-top:38px;letter-spacing:-1px;}
 .sec_account_visual .inner_box p{font-family: 'SpoqaR';font-size:14px;line-height:30px;color:#666;margin-top:8px;}
 .sec_account_visual .dues {margin-top:152px;border-bottom: 1px solid #e0e0e0; font-size: 14px; line-height: 22px;padding-bottom:5px;margin-bottom:12px;font-family: 'SpoqaR';}
 .dis_table {display:block;width:100%;position:relative;}
@@ -21,6 +26,8 @@
 .mloan_bridge .cont-detail1 .cont-wrap{padding:0;}
 .mloan_bridge .cont-detail1 .desc_info h6{margin-top:0;text-align:center;font-size:26px;line-height:30px;letter-spacing: -1px;color: #222;font-family: 'SpoqaR';}
 .mloan_bridge .cont-detail1 .desc_info > p{padding-top:15px;text-align:center;font-size:16px;line-height:20px;color:#666;font-family:'SpoqaR';}
+.mloan_bridge .cont-detail1 .desc_info .inner_txt{display:block;text-align:center;font-size:12px;font-family: 'SpoqaL';line-height:18px;color:#666;padding-top:28px;}
+.mloan_bridge .cont-detail1 .desc_info .inner_txt::before{content:'*';display:inline-block;position:relative;top:3px;line-height:18px;margin-right:3px;}
 .mloan_bridge .cont-detail1 .desc_info > p > span{display:block;font-size:16px;line-height:20px;}
 .mloan_bridge .cont-detail1 .desc_info > span{margin-top:6px;text-align:center;font-size:14px;line-height:18px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
 .mloan_bridge .cont-detail1 article .img_info{float:none;margin-top:39px;text-align:center;}
@@ -33,7 +40,8 @@
 .mloan_bridge .cont-detail1.type-loan article .img_info{float:none;margin-top:39px;text-align:center;}
 .mloan_bridge .cont-detail1.type-loan article .img_info img{width:100%;max-width:100%;}
 .mloan_bridge .cont-detail1.type-notice{padding:37px 30px 34px;background: #fff;}
-.mloan_bridge .cont-detail1.type-notice strong{font-size:16px;line-height:20px;color:#222;font-family:'SpoqaR';text-align: left;}
+.mloan_bridge .cont-detail1.type-notice .noti_title{font-family:'SpoqaR';}
+.mloan_bridge .cont-detail1.type-notice strong{font-size:16px;line-height:20px;color:#222;text-align: left;}
 .mloan_bridge .cont-detail1.type-notice .tbl_box{float:none;width:100%;margin-top:16px;font-family:'SpoqaR';}
 .mloan_bridge .cont-detail1.type-notice .tbl_box table th{padding:7px 0;font-family:'SpoqaR';font-size:12px;color:#666;line-height:22px;text-align: left;border-bottom: 1px solid #e0e0e0;}
 .mloan_bridge .cont-detail1.type-notice .tbl_box table .frt td{padding-top:5px;}

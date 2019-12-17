@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>연결계좌동의 | 연결계좌선택 | 은행계좌연결</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+</style>
+</head>
+<body>
+<div class="wrap">
+
+	<div id="contents" class="add_sticky">
+		<section class="openbank__info--wrap">
+			<p class="title pd_zero">
+				<span class="bold">핀크</span>가 <span class="bold">오픈뱅킹</span>으로<br>
+				더~ 편리해졌습니다!
+			</p>
+
+			<ul>
+				<li>모든 은행계좌 연결가능</li>
+				<li>실시간 계좌 잔액조회</li>
+				<li>여러개의 내 계좌로 한번에 이체</li>
+			</ul>
+
+			<div class="visual"></div>
+			<p class="thumb-desc star_type txt_left">이용중인 계좌는 모두 오픈뱅킹 서비스로 전환됩니다.</p>
+
+
+			<div class="agree_terms white pb30">
+				<dl class="toggle_list line_bottom_zero">
+					<dt class="agree_wrap">
+						<input type="checkbox" id="all_chk">
+						<label for="all_chk"><span>오픈뱅킹 이용약관 전체동의</span></label>
+						<button type="button" class="ico ico_arrow_more"><span class="blind">더보기</span></button>
+					</dt>
+					<dd class="line_top_zero">
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0101" name="check_action" class="purple"><label for="chk0101"><span>오픈뱅킹 서비스약관(필수)</span></label>
+							<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+						</div>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0102" name="check_action" class="purple"><label for="chk0102"><span>오픈뱅킹 금융거래정보제공동의서(필수)</span></label>
+							<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+						</div>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0103" name="check_action" class="purple"><label for="chk0103"><span>오픈뱅킹 개인신용정보 수집이용제공 동의서(필수)</span></label>
+							<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+						</div>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0105" name="check_action" class="purple"><label for="chk0105"><span>오픈뱅킹 출금/조회 약관(필수)</span></label>
+							<button type="button" class="ico ico_arrow_more" data-modal-open="agreeprivacy"><span class="blind">더보기</span></button>
+						</div>
+						<div class="agree_wrap">
+							<input type="checkbox" id="chk0104" name="check_action" class="purple"><label for="chk0104"><span>잔액부족시 자동충전 설정(선택)</span></label>
+						</div>
+					</dd>
+				</dl>
+			</div>
+
+		</section>
+
+		<div class="sticky_wrap set_type1">
+			<button type="button" name="" class="btn btn_type_apply">확인</button>
+		</div>
+
+	</div><!-- #contents -->
+</div>
+
+
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 약관 토글 추가 19.06.03
+	$(".toggle_list > dt > button").on("click", function(){
+		$(this).parent().toggleClass('on').next('dd').stop().slideToggle();
+	});
+
+
+
+});
+</script>
+</body>
+</html>
