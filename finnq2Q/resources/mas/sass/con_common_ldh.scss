@@ -1222,16 +1222,21 @@ hr.dot_line {height:1px; background:url(../images/common/bg-dotline-type3.png) 0
 
 .modal__popup--common .transfer__number {position:relative; /* margin-top:55px; */  margin-top:25px;}
 .modal__popup--common .transfer__guite--txt {font-size:11px; margin-top:6px; text-align:right; color:#c8c8c8}
-.modal__popup--common .transfer__number [data-name="inpFocus"] {font-size:24px; border:0; border-bottom:1px solid #eee; border-radius:0; padding: 0 20px 2px 0; font-weight:bold; color:#222;}
+.modal__popup--common .transfer__number [data-name="inpFocus"],
+.modal-toast .input-wrap.btm-line [data-name="inpFocus"] {font-size:24px; border:0; border-bottom:1px solid #eee; border-radius:0; padding: 0 20px 2px 0; font-weight:bold; color:#222; background:#fff;}
 .modal__popup--common .transfer__number [data-name="inpFocus"].inp_focus {color:#731aed;}
-.modal__popup--common .transfer__number [data-name="inpFocus"] ~ .focus-border{position: absolute; bottom: 0;left:0;width:100;height:1px;background-color:$purply_blue;opacity:0;transform:scaleX(0);transition:transform 300ms cubic-bezier(0.4, 0, 0.2, 1),opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);}
-.modal__popup--common .transfer__number [data-name="inpFocus"]:focus ~ .focus-border{width:100%;opacity:1;transform:scaleX(1);}
-
+.modal__popup--common [data-name="inpFocus"] ~ .focus-border,
+.modal-toast [data-name="inpFocus"] ~ .focus-border {position: absolute; bottom: 0;left:0;width:100;height:1px;background-color:$purply_blue;opacity:0;transform:scaleX(0);transition:transform 300ms cubic-bezier(0.4, 0, 0.2, 1),opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);}
+.modal__popup--common [data-name="inpFocus"]:focus ~ .focus-border,
+.modal-toast [data-name="inpFocus"]:focus ~ .focus-border {width:100%;opacity:1;transform:scaleX(1);}
 .modal__popup--common .transfer__number.error [data-name="inpFocus"] {border-color:#f74b20;}
 .modal__popup--common .transfer__guite--txt.error {color:#f74b20;}
-.modal__popup--common .transfer__number .modal__btn--clear {display:none; position:absolute; top:11px; right:-7px; width:30px; height:30px; background:url(../images/common/btn_text_clear.png) no-repeat 50% 50%; background-size:100% auto; overflow:hidden; text-indent:-999em;}
-.modal__popup--common .transfer__number .modal__btn--clear.is-visible {display:block;}
-
+.modal__popup--common .transfer__number .modal__btn--clear,
+.modal-toast .modal__btn--clear {display:none; position:absolute; top:9px; right:-7px; width:30px; height:30px; background:url(../images/common/btn_text_clear.png) no-repeat 50% 50%; background-size:100% auto; overflow:hidden; text-indent:-999em;}
+.modal__popup--common .transfer__number .modal__btn--clear.is-visible,
+.modal-toast .modal__btn--clear.is-visible {display:block;}
+.modal-toast .input-wrap {position:relative;}
+.modal-toast .wrap_count .txt_count em {color:#222;}
 .scroll-stop {position: fixed; overflow: hidden; width: 100%; height: 100%;}
 
 
