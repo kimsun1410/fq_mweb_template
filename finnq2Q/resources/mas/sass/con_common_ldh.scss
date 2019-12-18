@@ -1351,6 +1351,26 @@ hr.dot_line {height:1px; background:url(../images/common/bg-dotline-type3.png) 0
 .openbank__info--wrap .visual.img2.on,
 .openbank__info--wrap .visual.img4.on  {opacity:1;}
 
+
+/* 연결 계좌 관리 */
+.agree_terms.white dt {padding:0;}
+.agree_terms.white dd {margin-top:15px;}
+.agree_terms.white dd > div {background:#fff; padding:0; margin-top:15px;}
+.agree_terms.white dl dt > .ico_arrow_more,
+.agree_terms.white dd .agree_wrap .ico_arrow_more {right:0;}
+.agree_terms.white input[type=checkbox]+label:before {top:1px; margin-top:0; background: url(../images/common/ir-form-checkbox_allimg.png) 0 -40px no-repeat; background-size: 30px auto;}
+.agree_terms.white input[type="checkbox"]:checked + label:before{background-position: 0 -80px}
+
+.openbank__info--wrap.box-comm {padding:0 30px;}
+.openbank__info--wrap .agree_terms.white {margin-top:30px;}
+.openbank__info--wrap .visual-desc {position:relative; margin-top:12px; text-align:center;}
+.openbank__info--wrap .visual-desc:before {display:inline-block; width:226px; height:243px; content:""; background: url(../images/common/img-openbank-terms.png) 50% 50% no-repeat; background-size:100% auto;}
+.openbank__info--wrap .list__type--check {margin-top:25px;}
+.openbank__info--wrap .list__type--check li {position:relative; padding-left:30px; margin-top:10px; font-size:16px;}
+.openbank__info--wrap .list__type--check li:first-of-type {margin-top:0;}
+.openbank__info--wrap .list__type--check li:before {display:inline-block; position:absolute; top:-2px; left:0; content:""; width:22px; height:22px; background:url(../images/common/img-list-check.png) no-repeat 0 0; background-size:100% auto;}
+/* //연결 계좌 관리 */
+
 /* 약관 뎁스/간격/스타일 추가 */
 .agree_details .iframewrap ul,
 .agree_details .iframewrap ol,
@@ -1365,6 +1385,7 @@ hr.dot_line {height:1px; background:url(../images/common/bg-dotline-type3.png) 0
 .agree_details .iframewrap dl dd {padding: 0 19px; font-size: 14px; line-height:1.3}
 .agree_details .iframewrap ul li {margin-top:10px; font-size: 14px; line-height:1.3;}
 /* //약관 뎁스/간격/스타일 추가 */
+
 
 @media screen and (max-width:320px){
 	/* CBSO69Z16 화면  : 하단 잘림으로 마진 30px; */

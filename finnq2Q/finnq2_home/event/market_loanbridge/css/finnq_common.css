@@ -26,8 +26,9 @@
 .mloan_bridge .cont-detail1 .cont-wrap{padding:0;}
 .mloan_bridge .cont-detail1 .desc_info h6{margin-top:0;text-align:center;font-size:26px;line-height:30px;letter-spacing: -1px;color: #222;font-family: 'SpoqaR';}
 .mloan_bridge .cont-detail1 .desc_info > p{padding-top:15px;text-align:center;font-size:16px;line-height:20px;color:#666;font-family:'SpoqaR';}
-.mloan_bridge .cont-detail1 .desc_info .inner_txt{display:block;text-align:center;font-size:12px;font-family: 'SpoqaL';line-height:18px;color:#666;padding-top:28px;}
-.mloan_bridge .cont-detail1 .desc_info .inner_txt::before{content:'*';display:inline-block;position:relative;top:3px;line-height:18px;margin-right:3px;}
+.mloan_bridge .cont-detail1 .desc_info .inner_txt{display:block;text-align:center;font-size:12px;font-family: 'SpoqaL';line-height:18px;color:#666;padding-top:25px;}
+.mloan_bridge .cont-detail1 .desc_info .inner_txt .txt{font-family:'SpoqaR';display:inline-block;font-size:12px;color:#666;}
+.mloan_bridge .cont-detail1 .desc_info .inner_txt .txt::before{content:'*';display:inline-block;position:relative;top:3px;line-height:18px;margin-right:3px;}
 .mloan_bridge .cont-detail1 .desc_info > p > span{display:block;font-size:16px;line-height:20px;}
 .mloan_bridge .cont-detail1 .desc_info > span{margin-top:6px;text-align:center;font-size:14px;line-height:18px;letter-spacing:-1px;color:#999;font-family: 'SpoqaL';}
 .mloan_bridge .cont-detail1 article .img_info{float:none;margin-top:39px;text-align:center;}
