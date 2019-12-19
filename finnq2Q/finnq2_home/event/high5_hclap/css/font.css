@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+@font-face {
+	font-family: 'LatoL';
+	src: local('※'), url('../fonts/Lato-Light-subset.woff') format('woff'), url('../fonts/Lato-Light-subset.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'LatoM';
+	src: local('※'), url('../fonts/Lato-Medium-subset.woff') format('woff'), url('../fonts/Lato-Medium-subset.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'LatoB';
+	src: local('※'), url('../fonts/Lato-Bold-subset.woff') format('woff'), url('../fonts/Lato-Bold-subset.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}
+/* Android */
+@font-face {
+	font-family: 'DeviceF';
+	src: local('※'), url('../fonts/DroidSans.woff') format('woff'), url('../fonts/DroidSans.ttf') format('truetype');
+	font-style: normal;
+	font-weight: normal;
+}

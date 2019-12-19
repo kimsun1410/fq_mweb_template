@@ -2,68 +2,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <title>핀크카드 배송지연 안내 - MASC02Z08</title><!-- 임시 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+<meta charset="utf-8">
+<title>핀크카드 배송지연 안내 - MASB01Z02</title><!-- 임시 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
 <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="../../css/ui.css?time=20180117" />
-    <link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
+<link rel="stylesheet" href="../../css/ui.css?time=20180117" />
+<link rel="stylesheet" href="../../css/ui_myfinnq.css?time=20180117" />
 </head>
 <body>
 <div class="wrap">
-    <div id="contents" class="myfinnq">
-        <div class="flex_wrap set_type1" style="padding:20px;"> <!-- 1개 -->
-            <span class="item">
-                <button type="button" class="btn btn_type_a open_modal" data-triger="MASC02Z07" data-mtype="" data-bgclose="">
-                    적금가입불가안내(SKT)-MASC02Z07
-                </button>
-            </span>
-                <!--
-                    UI확인용 팝업 Infomation
-                    data-triger : 모달팝업 아이디
-                    data-mtype : 모달팝업 오픈타입
-                        - fullpop : 풀팝업, window.height가 popSize, reSize()
-                        - doublepop : 풀팝업에 또 팝업이 뜸, modal이 없음.
-                        - 이외는 값없음
-                    data-bgclose : 모달 Background 클릭시 팝업 닫기(true/false)
+	<div id="contents" class="add_sticky">
+		<section>
+			<!--
+				 팝업 사용 UI 방법
+				1) 호출 하려는 팝업의 이름을 data-modal-open, data-modal-content : 안에  동일하게 선언
+				2) 오픈 / 닫기 모두 매개변수는 $(this)
+				3) 해당 UI는 ui.js에 선언 / 단 팝업 안에 내용이 스크롤이 되어야 하는 팝업에선는
+				바닥 스크롤 막기 사용 금지 (컨텐츠도 스크롤 안됨.)
+			-->
+			<button type="button" data-modal-open="popup-open-cont">팝업 호출 버튼</button>
 
-                    >> 사이즈 작은 모달팝업은 triger만 설정
-                    >> 전체창 또는 배경클릭시 닫힘의 경우에는 각각의 값 설정
-                //-->
-        </div>
+			<!-- 클래스 : is-visible로 제어 -->
+			<div class="modal-toast is-visible" data-modal-content="popup-open-cont">
+				<div class="modal-toast-container">
+					<a href="#none" class="btn modal-toast-close">창 닫기</a>
+					<div class="conts_box pb25">
+						<strong class="title">통장 별칭 입력</strong>
+						<div class="item wrap_count mgt30">
+							<div class="input-wrap btm-line">
+								<input type="text" data-name="inpFocus" placeholder="원래 통장명" maxlength="8" class="inp_count">
+								<span class="focus-border"></span>
+								<button type="button" class="modal__btn--clear">초기화</button>
+							</div>
+							<p class="txt_count mgt10"><em>0</em>/<i></i></p>
+						</div>
+					</div>
+					<div class="sticky_wrap set_type1">
+						<button type="button" name="" class="btn btn_type_apply">확인</button>
+					</div>
+				</div>
+			</div>
 
-        <div id="MASC02Z07" class="modal_wrap">
-            <div class="modal_content">
-                <div class="sec_title">
-                    <h3 class="accent_txt">통장 별칭을 입력하세요</h3>
-                </div>
-
-                <div>
-                    <div class="item wrap_count mgt15">
-                        <input type="text" data-name="inpFocus" placeholder="통장 별칭을 입력하세요" maxlength="8" class="inp_count">
-                        <p class="txt_count mgt10"><em>0</em>/<i></i></p>
-                    </div>
-                </div>
-
-                <div class="flex_wrap set_type2">
-                    <span class="item"><button type="button" name="button" class="close_modal btn_type_f">취소</button></span>
-                    <span class="item on"><button type="button" name="button" class="btn_type_f">확인</button></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #contents -->
+		</section>
+	</div>
+	<!-- #contents -->
 </div>
 <script src="../../libs/jquery-2.2.4.min.js"></script>
 <script src="../../libs/ui.js"></script>
 <script src="../../libs/contents.js"></script>
-<script>
-$(document).ready(function(){
+<script type="text/javascript">
+$(function () {
+	// 팝업 호출
+	$('[data-modal-open]').on('click', function(e) {
+		// 팝업 호출
+		modalPopupOpen( $(this) );
+	});
 
-    $('.modal_wrap').addClass('visible normal');
+	// 팝업 닫기
+	$(".modal-toast .btn").on('click', function(e) {
+		// 팝업 닫기 공통
+		modalPopupClose( $(this) );
+	});
 
+	// 모달팝업 계좌 번호 입력 체크
+	$('.modal-toast .input-wrap [data-name="inpFocus"]').on("keyup focusOut", function(e) {
+
+		var insertNumText = $(this).val();
+		// 키패드 EVENT
+		var key = event.charCode || event.keyCode || 0;
+
+		// 안드로이드 키패드 숨김 함수처리 / IOS는 자동 처리
+		if (key == 13) {
+			// hidekeypad();
+		}
+
+		// 초기화 버튼 노출/비노출  : 하단 버튼 활성화/비 활성화
+		if (insertNumText.length > 0) {
+			$('.modal__btn--clear').addClass('is-visible');
+			$('.modal__popup--common .sticky_wrap .btn_apply').removeAttr('disabled');
+		} else {
+			$('.modal__btn--clear').removeClass('is-visible');
+			$('.modal__popup--common .sticky_wrap .btn_apply').attr('disabled', 'disabled');
+		}
+
+		// 계좌 입력 인풋 필드 초기화 추가
+	    $(document).on('click', '.modal__btn--clear', function(){
+	        $(this).parent().find('[data-name="inpFocus"]').val('').attr({'placeholder' : "원래 통장명"}).focus();
+	        $('.modal-toast .wrap_count .txt_count em').text('0')
+	        $('.modal__popup--common .sticky_wrap .btn_apply').attr('disabled', 'disabled');
+	    });
+	});
 });
 </script>
- <script data-prepros-origin-host="192.168.0.123" src="http://192.168.0.123:8000/__prepros-server__/prepros.js"> </script>
 </body>
 </html>

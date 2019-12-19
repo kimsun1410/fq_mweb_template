@@ -7451,7 +7451,7 @@ ul.summary_list.disabled + div.alert { padding: 0 20px 12px; background: #fff; -
 
 .list_wrap .expend .ico_arrow_down_type_a { position: absolute; right: 20px; top: 20px; display: none; }
 
-/* 핑고, 확장 제거 */
+/* 핑고,확장 제거 */
 .list_wrap .expend .detail_set { max-height: 0; overflow: hidden; padding-top: 0; max-height: 0; -webkit-transition: max-height 0.15s ease-out; -o-transition: max-height 0.15s ease-out; transition: max-height 0.15s ease-out; }
 
 .list_wrap .expend .detail_set.on { max-height: 500px; -webkit-transition: max-height 0.25s ease-in; -o-transition: max-height 0.25s ease-in; transition: max-height 0.25s ease-in; }
@@ -8578,25 +8578,21 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .modal__popup--common .transfer__guite--txt { font-size: 11px; margin-top: 6px; text-align: right; color: #c8c8c8; }
 
-.modal__popup--common .transfer__number [data-name="inpFocus"], .modal-toast .input-wrap.btm-line [data-name="inpFocus"] { font-size: 24px; border: 0; border-bottom: 1px solid #eee; border-radius: 0; padding: 0 20px 2px 0; font-weight: bold; color: #222; background: #fff; }
+.modal__popup--common .transfer__number [data-name="inpFocus"] { font-size: 24px; border: 0; border-bottom: 1px solid #eee; border-radius: 0; padding: 0 20px 2px 0; font-weight: bold; color: #222; }
 
 .modal__popup--common .transfer__number [data-name="inpFocus"].inp_focus { color: #731aed; }
 
-.modal__popup--common [data-name="inpFocus"] ~ .focus-border, .modal-toast [data-name="inpFocus"] ~ .focus-border { position: absolute; bottom: 0; left: 0; width: 100; height: 1px; background-color: #731aed; opacity: 0; -webkit-transform: scaleX(0); -ms-transform: scaleX(0); transform: scaleX(0); -webkit-transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1); transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1); -o-transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1); transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1); transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+.modal__popup--common .transfer__number [data-name="inpFocus"] ~ .focus-border { position: absolute; bottom: 0; left: 0; width: 100; height: 1px; background-color: #731aed; opacity: 0; -webkit-transform: scaleX(0); -ms-transform: scaleX(0); transform: scaleX(0); -webkit-transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1); transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1); -o-transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1); transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1); transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1); }
 
-.modal__popup--common [data-name="inpFocus"]:focus ~ .focus-border, .modal-toast [data-name="inpFocus"]:focus ~ .focus-border { width: 100%; opacity: 1; -webkit-transform: scaleX(1); -ms-transform: scaleX(1); transform: scaleX(1); }
+.modal__popup--common .transfer__number [data-name="inpFocus"]:focus ~ .focus-border { width: 100%; opacity: 1; -webkit-transform: scaleX(1); -ms-transform: scaleX(1); transform: scaleX(1); }
 
 .modal__popup--common .transfer__number.error [data-name="inpFocus"] { border-color: #f74b20; }
 
 .modal__popup--common .transfer__guite--txt.error { color: #f74b20; }
 
-.modal__popup--common .transfer__number .modal__btn--clear, .modal-toast .modal__btn--clear { display: none; position: absolute; top: 9px; right: -7px; width: 30px; height: 30px; background: url(../images/common/btn_text_clear.png) no-repeat 50% 50%; background-size: 100% auto; overflow: hidden; text-indent: -999em; }
+.modal__popup--common .transfer__number .modal__btn--clear { display: none; position: absolute; top: 11px; right: -7px; width: 30px; height: 30px; background: url(../images/common/btn_text_clear.png) no-repeat 50% 50%; background-size: 100% auto; overflow: hidden; text-indent: -999em; }
 
-.modal__popup--common .transfer__number .modal__btn--clear.is-visible, .modal-toast .modal__btn--clear.is-visible { display: block; }
-
-.modal-toast .input-wrap { position: relative; }
-
-.modal-toast .wrap_count .txt_count em { color: #222; }
+.modal__popup--common .transfer__number .modal__btn--clear.is-visible { display: block; }
 
 .scroll-stop { position: fixed; overflow: hidden; width: 100%; height: 100%; }
 
@@ -8701,16 +8697,10 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .my-account__list .gray__box-wrap .star_type:before { position: absolute; top: 0; left: 0; }
 
-/* 스켈레톤 */
-.modal__popup--common .list__account .gradient .ico__account:after, .modal__popup--common .list__account .gradient .account__info:after, .modal__popup--common .list__account .gradient .account__info--detail:after, .list__account-wrap .list__account .gradient .ico__account:after, .list__account-wrap .list__account .gradient .account__info:after, .list__account-wrap .list__account .gradient .account__info--detail:after { display: block; position: absolute; content: ""; border-radius: 4px; background-image: -webkit-gradient(linear, left top, right top, from(#f0f0f0), to(#f8f8f8)); background-image: -webkit-linear-gradient(left, #f0f0f0 0%, #f8f8f8 100%); background-image: -o-linear-gradient(left, #f0f0f0 0%, #f8f8f8 100%); background-image: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 100%); background-size: 100% auto; }
+.gradient:after { display: block; width: 100%; content: ""; border-radius: 4px; background-image: -webkit-gradient(linear, left top, right top, from(#f0f0f0), to(#f8f8f8)); background-image: -webkit-linear-gradient(left, #f0f0f0 0%, #f8f8f8 100%); background-image: -o-linear-gradient(left, #f0f0f0 0%, #f8f8f8 100%); background-image: linear-gradient(90deg, #f0f0f0 0%, #f8f8f8 100%); background-size: 100% auto; }
 
-.modal__popup--common .list__account .gradient .account__info, .modal__popup--common .list__account .gradient .account__info--detail, .list__account-wrap .list__account .gradient .account__info, .list__account-wrap .list__account .gradient .account__info--detail { position: relative; }
+.modal__popup--common .list__account .gradient:after, .list__account-wrap .list__account .gradient:after { position: absolute; top: 15px; height: 46px; }
 
-.modal__popup--common .list__account .ico__account:after, .list__account-wrap .list__account .gradient .ico__account:after { top: -1px; left: -1px; width: 47px; height: 47px; }
-
-.modal__popup--common .list__account .gradient .account__info:after, .modal__popup--common .list__account .gradient .account__info--detail:after, .list__account-wrap .list__account .gradient .account__info:after, .list__account-wrap .list__account .gradient .account__info--detail:after { top: 0; left: 0; width: calc(100% + 1px); height: 20px; }
-
-/* //스켈레톤 */
 /* 오픈뱅킹 소개 */
 .openbank__info--wrap { padding-top: 20px; }
 
@@ -8752,36 +8742,6 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .openbank__info--wrap .visual.img2.on, .openbank__info--wrap .visual.img4.on { opacity: 1; }
 
-/* 연결 계좌 관리 */
-.agree_terms.white dt { padding: 0; }
-
-.agree_terms.white dd { margin-top: 15px; }
-
-.agree_terms.white dd > div { background: #fff; padding: 0; margin-top: 15px; }
-
-.agree_terms.white dl dt > .ico_arrow_more, .agree_terms.white dd .agree_wrap .ico_arrow_more { right: 0; }
-
-.agree_terms.white input[type=checkbox] + label:before { top: 1px; margin-top: 0; background: url(../images/common/ir-form-checkbox_allimg.png) 0 -40px no-repeat; background-size: 30px auto; }
-
-.agree_terms.white input[type="checkbox"]:checked + label:before { background-position: 0 -80px; }
-
-.openbank__info--wrap.box-comm { padding: 0 30px; }
-
-.openbank__info--wrap .agree_terms.white { margin-top: 30px; }
-
-.openbank__info--wrap .visual-desc { position: relative; margin-top: 12px; text-align: center; }
-
-.openbank__info--wrap .visual-desc:before { display: inline-block; width: 226px; height: 243px; content: ""; background: url(../images/common/img-openbank-terms.png) 50% 50% no-repeat; background-size: 100% auto; }
-
-.openbank__info--wrap .list__type--check { margin-top: 25px; }
-
-.openbank__info--wrap .list__type--check li { position: relative; padding-left: 30px; margin-top: 10px; font-size: 16px; }
-
-.openbank__info--wrap .list__type--check li:first-of-type { margin-top: 0; }
-
-.openbank__info--wrap .list__type--check li:before { display: inline-block; position: absolute; top: -2px; left: 0; content: ""; width: 22px; height: 22px; background: url(../images/common/img-list-check.png) no-repeat 0 0; background-size: 100% auto; }
-
-/* //연결 계좌 관리 */
 /* 약관 뎁스/간격/스타일 추가 */
 .agree_details .iframewrap ul, .agree_details .iframewrap ol, .agree_details .iframewrap li { list-style: none; word-break: keep-all; }
 
@@ -8799,9 +8759,9 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .agree_details .iframewrap dl dt { margin-top: 6px; font-size: 14px; line-height: 1.3; font-weight: normal; }
 
-.agree_details .iframewrap dl dd { padding: 0 19px; font-size: 14px; line-height: 1.3; }
+.agree_details .iframewrap dl dd { padding: 0 19px; font-size: 14px; line-height: 26px; }
 
-.agree_details .iframewrap ul li { margin-top: 10px; font-size: 14px; line-height: 1.3; }
+.agree_details .iframewrap ul li { margin: 10px 0; font-size: 14px; line-height: 1.3; }
 
 /* //약관 뎁스/간격/스타일 추가 */
 @media screen and (max-width: 320px) { /* CBSO69Z16 화면  : 하단 잘림으로 마진 30px; */
