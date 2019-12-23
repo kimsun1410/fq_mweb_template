@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>Finnq - 친구야 핀크하자!! 이벤트</title>
+	<title>Finnq - 친구야 핀크하자!! bridge Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
@@ -15,7 +15,7 @@
 	<div class="wrap">
 		<div id="contents" class="add_sticky">
 			<section class="menu_wrap">
-				<div class="sec_event_detail high5_hclap">
+				<div class="sec_event_detail high5_hclap_bridge">
 					<article class="sec_event_visual">
 						<img src="img/event_high5_clap.png" alt="오픈뱅킹 런칭 이벤트! 친구야 이제 뱅크말고 핀크하자! 무제한 무료송금 핀크 소개하고 무제한 송금지원금 받자" />
 						<div class="blind">
@@ -31,11 +31,7 @@
 							<div class="section_box first">
 								<h3 class="title">추천코드 발급받기</h3>
 								<strong class="txt">아직도 오픈뱅킹 안써봤다면<br><em class="ft_cb">은행계좌 연결하기<mark>!</mark></em></strong>
-								<div class="btnevent_box">
-									<div class="area">
-										<button type="button" name="button" class="btn">계좌연결하기</button>
-									</div>
-								</div>
+								<div class="btnevent_box"></div>
 							</div>
 							<!-- /// 추천코드 발급받기 /// -->
 
@@ -53,11 +49,7 @@
 										</span>
 									</li>
 								</ul>
-								<div class="btnevent_box">
-									<div class="area">
-										<button type="button" name="button" class="btn">추천코드 보내기</button>
-									</div>
-								</div>
+								<div class="btnevent_box"></div>
 							</div>
 							<!-- /// 추천코드 보내기 /// -->
 
@@ -65,20 +57,9 @@
 							<div class="section_box last">
 								<h3 class="title">추천코드 입력하기</h3>
 								<strong class="txt">계좌 연결후 <br>친구에게 받은 추천코드 입력하고 <br><em class="ft_cb"><mark>2,000</mark>원 받기<mark>!</mark></em></strong>
-								<div class="btnevent_box">
-									<form method="">
-										<input type="text" class="inp" placeholder="추천코드 입력">
-										<button type="button" name="button" class="btn">확인</button>
-									</form>
-									<!-- 4가지 케이스입니다. class="hide" 없으면 보입니다.-->
-									<p class="remark">내 추천코드로는 하이파이브를 할 수 없습니다.</p>
-									<p class="remark hide">잘못된 추천코드 입니다.</p>
-									<p class="remark hide">T high5적금을 먼저 가입해주세요.</p>
-									<p class="remark hide">이미 T high5적금에 모두 가입하셨습니다.</p>
-								</div>
 							</div>
 							<!-- /// 추천코드 입력하기 /// -->
-							
+
 						</div>
 					</article>
 					<article class="sec_account_info">
@@ -98,59 +79,11 @@
 				</div>
 			</section>
 
-			<!-- bottom sheet 팝업 -->
-			<div class="event_popup" data-popup-con="pop_bottomsheet" role="alert">
-				<div class="container">
-					<div class="conts_box">
-						<p>T high5적금 가입 후 하이파이브가 가능합니다.</p>
-					</div>
-					<div class="sticky_wrap set_type2">
-						<button type="button" name="" class="pop_btn btn_type_cancel">취소</button>
-						<button type="button" name="" class="pop_btn btn_type_apply">적금 알아보기</button>
-					</div>
-				</div>
+			<!-- 버튼 -->
+			<div class="sticky_wrap set_type1">
+				<button type="button" name="apply" class="btn btn_type_apply" onclick="window.open('https://finnq.onelink.me/YERF/4f539033')">이벤트 참여하기</button>
 			</div>
-
-			<!-- 버튼 삭제 -->
-			<!--<div class="sticky_wrap set_type1">
-				<button type="button" name="apply" class="btn btn_type_apply" data-popup="pop_bottomsheet">하이파이브 보내기</button>
-			</div>-->
 		</div><!-- #contents -->
 	</div>
-	<script type="text/javascript">
-		$(document).ready(function(){ 
-			function popup() {
-				var openBtn = '[data-popup]';
-	
-				function getTarget(t) {
-					return $(t).attr('data-popup')
-				}
-				function open(t) {
-					var showTarget = $('[data-popup-con="' + t + '"]');
-					showTarget.addClass('is-visible').focus();
-				}
-				function close(t) {
-					var activeTarget = $('[data-popup-con="' + t + '"]');
-					$('[data-popup="' + t + '"]').focus();
-					activeTarget.removeClass('is-visible');
-				}
-				$(document).on('click', openBtn, function(e) {
-					e.preventDefault();
-					open(getTarget(e.target));
-					$(this).addClass('on');
-					$('.event_popup').on('scroll touchmove mousewheel', function(e){
-						e.preventDefault();
-						e.stopPropagation();
-						return false;
-					});
-				}); 
-				$(".event_popup .pop_btn").on('click', function(e) {
-					$(this).parents('.event_popup').removeClass('is-visible').css({"-webkit-transition": "all 0.2s ease-in-out"});
-				}); 
-			}
-			popup();
-		});
-		
-	</script>
 </body>
 </html>

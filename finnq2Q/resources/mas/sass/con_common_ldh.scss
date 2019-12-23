@@ -95,7 +95,7 @@
 #openplatform input[type='email']:focus,
 #openplatform input[type='search']:focus,
 #openplatform input[type='tel']:focus,
-#openplatform input[type='number']:focus {border-color: #731aed; color: #731aed; background: #f5eeff; }
+#openplatform input[type='number']:focus {border-color:#731aed; color:#731aed; background:#f5eeff;}
 
 #openplatform input[type='text']:disabled,
 #openplatform input[type='password']:disabled,
@@ -108,7 +108,7 @@
 #openplatform select.select_arw:disabled {background-color: #eee; color: #999 !important; opacity: 1;}
 
 #openplatform .select_wrap {position:relative;}
-#openplatform .select_wrap.focus:after { background-position: 0 -65px; -webkit-transform: rotateX(180deg); transform: rotateX(180deg); }
+#openplatform .select_wrap.focus:after { background-position: 0 -65px; -webkit-transform: rotateX(180deg); transform: rotateX(180deg);}
 #openplatform select.form-control {padding: 0 40px 0 20px; height: 46px !important; border: 1px solid #e0e0e0 !important; border-radius: 4px !important; color:#c8c8c8 !important;}
 #openplatform select.form-control.color_change {color:#222 !important;}
 #openplatform .select_wrap.focus select.form-control {color: #731aed !important; border-color: #731aed !important; background: #f5eeff;}
@@ -696,7 +696,7 @@ hr.dot_line {height:1px; background:url(../images/common/bg-dotline-type3.png) 0
 .modal-toast.agree .agree_terms input[type="checkbox"]:checked + label:before{background-position:0 -80px;}
 .modal-toast.agree .agree_terms input[type="checkbox"] + label:before{background: url(../images/common/ir-form-checkbox_allimg.png) 0 0 no-repeat;background-size: 30px auto;background-position:0 -40px; margin-top:0; top:-5px;}
 .modal-toast.agree .agree_terms dl dt.agree_wrap input[type=checkbox].all_chk+label span {font-size:16px; line-height:18px;}
-.modal-toast.agree .agree_terms input[type="checkbox"] + label span{float:left;line-height:30px;padding:0 20px 0 38px;font-size:16px; text-align:left; line-height:18px; word-break:keep-all;}
+.modal-toast.agree .agree_terms input[type="checkbox"] + label span{float:left;line-height:30px;padding:0 20px 0 38px;font-size:16px; text-align:left; line-height:18px; /* word-break:keep-all; */}
 .modal-toast.agree .agree_terms .agree_wrap {position:relative;}
 .modal-toast.agree .agree_terms .agree_wrap + .agree_wrap {margin-top:20px;}
 .modal-toast.agree .agree_terms .agree_wrap .ico_arrow_more,
@@ -706,6 +706,7 @@ hr.dot_line {height:1px; background:url(../images/common/bg-dotline-type3.png) 0
 
 .modal-toast.fullopen{z-index:150; overflow-y: auto}
 .modal-toast.fullopen .conts_box{padding:64px 20px 30px;}
+.modal-toast.fullopen .conts_box.white {background:#fff;}
 .modal-toast.fullopen .conts_line{display:none;position:relative;;left:0;top:0;width:100%;height:6px;background:#eee;}
 .modal-toast.fullopen .conts_search{display:none;position:absolute;top:0;left:0;right:0;bottom:0;width:100%;margin-top:6px;overflow:hidden;overflow-y: auto;}
 .modal-toast.fullopen .conts_search .search_view{padding:30px 20px 0;background:#fff;}
@@ -1334,7 +1335,7 @@ hr.dot_line {height:1px; background:url(../images/common/bg-dotline-type3.png) 0
 .openbank__info--wrap .sub-title {padding:0 40px; font-family:"AppleSDGothicNeo-Light"; word-break:keep-all;}
 .openbank__info--wrap .title strong,
 .openbank__info--wrap .sub-title strong {font-weight:bold; word-break:keep-all;}
-.openbank__info--wrap .title {font-size:24px; line-height:28px;}
+.openbank__info--wrap .title {font-size:24px; line-height:28px; color:#222;}
 .openbank__info--wrap .title + .sub-title {margin-top:20px;}
 .openbank__info--wrap .sub-title {font-size:16px; line-height:24px; font-family:"AppleSDGothicNeo-Light";}
 .openbank__info--wrap .sub-title strong {color:#731aed;}
