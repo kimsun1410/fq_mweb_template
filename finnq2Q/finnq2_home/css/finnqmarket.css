@@ -729,7 +729,7 @@
 
 	/* 2019.09.10 핀크마켓 -> 대출비교T스코어 KTY */
 	.cont-finnqmarket.container.dgbfq_tscore .inner{padding:54px 0 0;}
-	.cont-finnqmarket.container.dgbfq_tscore .key-visual .inner{padding:64px 0;}
+	.cont-finnqmarket.container.dgbfq_tscore .key-visual .inner{padding:80px 0 49px;}
 	.cont-finnqmarket .market_loan_tscore .cont-visual{height:390px;padding-bottom:40px;background: url("../image/v2/product/bg_finnq_loantscore.png") no-repeat right 20px top 95px; background-size: 300px 277.5px;}
 	.cont-finnqmarket .market_loan_tscore .cont-visual h4 .clear_m{display:block;}
 	.cont-finnqmarket .market_loan_tscore .cont-visual{padding:34px 20px 20.5px;}

@@ -214,10 +214,10 @@
 .high5_hclap .sec_event_info .info_listbox .btnevent_box .area::after{content: '';display:table;clear:both;}
 .high5_hclap .sec_event_info .info_listbox .btnevent_box .area button{position:relative;left:0;width:220px;font-family:"AppleSDGothicNeo-Bold";font-size:14px;color:#fff;text-align:center;background:#8848ff;}
 .high5_hclap .sec_event_info .info_listbox .btnevent_box form{display:block;overflow:hidden;width:auto;position:relative;padding-right:88px;}
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp{width:100%;padding:0 16px;height:46px;font-family:"AppleSDGothicNeo-Medium";font-size:16px;line-height:46px;letter-spacing:0;border:1px solid #e0e0e0;border-radius:4px;box-sizing:border-box;-webkit-appearance: none;-webkit-border-radius:4px;}
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp{width:100%;padding:0 16px;height:46px;font-size:16px;letter-spacing:0;border:1px solid #e0e0e0;border-radius:4px;box-sizing:border-box;-webkit-appearance: none;-webkit-border-radius:4px;}
 .high5_hclap .sec_event_info .info_listbox .btnevent_box .inp.on,
 .high5_hclap .sec_event_info .info_listbox .btnevent_box .inp:focus{outline:none;border-color:#731aed;color:#731aed;background: #f5eeff;}
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp::placeholder{font-family:"AppleSDGothicNeo-Medium";font-size:16px;color:#c8c8c8;letter-spacing:-1px;line-height:22px;}
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp::placeholder{font-size:16px;color:#c8c8c8;letter-spacing:-1px;}
 .high5_hclap .sec_event_info .info_listbox .btnevent_box .btn{position:absolute;top:0;right:0;width:80px;height:46px;color:#fff;font-size:14px;font-family:"AppleSDGothicNeo-Bold";font-weight:bold;border-radius:4px;letter-spacing:-1px;background-color:#8848ff;}
 .high5_hclap .sec_event_info .info_listbox .btnevent_box .remark{position:absolute;left:0;top:46px;margin-top:5px;font-size:11px;letter-spacing:-1px;color:#f74b20;}
 .high5_hclap .sec_event_info .info_listbox .title{display:inline-block;padding:0 15px;height:20px;background:#278df5;border-radius:10px;font-size:14px;line-height:20px;letter-spacing:-1px;color:#fff;}
