@@ -1,27 +1,28 @@
 @charset 'utf-8';
 
 /********** main */
-.main .key-visual .inner { height: 800px; padding: 230px 0; background: url("../image/v2/key_visual.jpg") no-repeat 50% 50%; background-size: cover; }
+.main .key-visual .inner { height: 800px; padding:256px 0 259px; background: url("../image/v2/main_visual.jpg") no-repeat 50% 50%; background-size: cover; }
 .main .key-visual .logo { margin: 0 0 15px 0; }
 .main .key-visual .logo img { width:112px; }
-.main .key-visual .desc { font-size:14px; }
-.main .key-visual h2 { margin: 0 0 15px 0; font-size: 22px; color: #fff; -webkit-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
+.main .key-visual .desc { font-size:20px;line-height:30px;letter-spacing:0;font-family: 'SpoqaL';font-weight: 300; }
+.main .key-visual h2 { margin: 0 0 20px 0; font-family: 'SpoqaL';font-size:68px;font-weight: 300; letter-spacing:-3px; color: #fff; -webkit-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
 .main .key-visual h2 em { font-family: 'SpoqaB'; }
-.main .key-visual h2 img { display: block; width:160px; margin: 4px auto auto; }
+.main .key-visual h2 img { display: block; width:160px; margin: 4px auto auto;}
 .main .key-visual h2.pc { display: block; }
 .main .key-visual h2.m { display: none; }
 
 @media screen and (max-width: 960px) {
-  .main .key-visual .inner { height: 600px; padding-top: 117px; padding-bottom: 117px; }
+  .main .key-visual .inner { height: 600px; padding-top:184px; padding-bottom:184px;}
   .main .key-visual .logo img { width:96px; }
+  .main .key-visual .desc { display:block;font-size:16px;line-height:22px;letter-spacing:-1px;margin:0 0 27px 0;}
 }
 
 @media screen and (max-width: 640px) {
-  .main .key-visual .inner { height: 400px; padding-top: 94px; padding-bottom: 94px; background-position-x:-196px; }
+  .main .key-visual .inner { height: 400px; padding-top:101px; padding-bottom: 120px; background-position-x:-196px; }
   .main .key-visual .logo { margin-bottom: 12px; }
   .main .key-visual h2.pc { display: none; }
-  .main .key-visual h2.m { display: block; margin-bottom: 7px; font-size: 30px; }
-  .main .key-visual .desc { display: none; } }
+  .main .key-visual h2.m { display: block; margin-bottom:12px; font-size: 36px; font-weight:300;}
+ }
 
 
 .primary-area {}

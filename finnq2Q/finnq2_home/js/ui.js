@@ -281,11 +281,13 @@ $(window).on("load", function() {
 	initSize();
 	init();
 	//scroll_chk();
+	check_android_version();
 }).on("resize", function() {
 	refreshPg();
 	initSize();
 	init();
 	//scroll_chk();
+	check_android_version();
 }).on("scroll", function() {
 	scrT = $(this).scrollTop();
 	scrolling = !0;
