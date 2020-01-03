@@ -912,6 +912,8 @@
 .one_stop .view .tcredit_title{display:block;padding-top:23px;@include font(24px);text-align:left;}
 .one_stop .view .tcredit_title > .stiker{display:inline-block;position:relative;top:5px;left:6px;width:28px;height:28px;background: url(../images/common/ir_icon_chktbox_on.png) 0 0 no-repeat;background-size:100% 100%;}
 .one_stop .view .tcredit_title > .stiker.blue{background: url(../images/common/ir_icon_chktbox_on.png) 0 0 no-repeat;background-size:28px auto;}
+.one_stop .view .tcredit_title.type{font-family:"AppleSDGothicNeo-Light";padding-top:0;font-size:20px;line-height:24px;color:#222;}
+.one_stop .view .tcredit_title.type .nbold{font-family:"AppleSDGothicNeo-Bold";font-weight:bold;}
 .one_stop .view .tcredit_box{display:flex;margin-top:37px;}
 .one_stop .view .tcredit_box:after{content:'';display:table;clear:both;}
 .one_stop .view .tcredit_box .list{display:inline-flex;flex-basis:140px;flex-grow:1;align-content:stretch;align-items:flex-start;justify-content:center;flex-direction:column;}
@@ -936,6 +938,7 @@
 .one_stop .view .tcredit_box .circle_box .counter.up .lank_text .updown:before{border-top:8px solid none;border-bottom:8px solid #ff5967;border-right:4px solid transparent;border-left:4px solid  transparent;}
 .one_stop .view .tcredit_box .circle_box .counter.down .lank_text .updown:before{border-top:8px solid #278df5;border-bottom:8px solid none;border-right:4px solid transparent;border-left:4px solid  transparent;}
 .one_stop .view .tcredit_box .circle_box .counter .percentage {position:absolute;text-align:center;top:50%;left:0;right:0;vertical-align:middle;transform:translate3d(0,-50%,0);}
+.one_stop .view.tcredit .sec_head{padding:0 30px 10px;}
 .one_stop .view.tcredit .sec_head .tit_info_box .btn_box{margin-top:17px;}
 .one_stop .view.tcredit .sec_head .tit_info_box .add_btn{min-width:140px;background:$brownish_grey;}
 .one_stop .view.tcredit .sec_head .tit_info_box .add_btn:disabled{background:#c8c8c8;color:#e0e0e0;}
@@ -946,13 +949,34 @@
 .one_stop .view.tcredit .tit_info_box{margin:28px 0 0 0;padding:28px 0 0 0;}
 .one_stop .view.tcredit .sec_history > .loan_info{margin-top:0;}
 .one_stop .view.tcredit .sec_history > .loan_info + .loan_info{margin-top:6px;}
-.one_stop .view.tcredit .sec_visual{position:relative;margin-top:-11px;padding:43px 20.835% 201px 20%;}
+.one_stop .view.tcredit .sec_visual{position:relative;margin-top:-11px;padding:43px 20.835% 31px 20%;}
 .one_stop .view.tcredit .sec_visual .day_box {position:relative;z-index:10;padding-bottom:132.4%;}
 .one_stop .view.tcredit .sec_visual .day_box .bg_visual{position:absolute;left:0;top:0;width:100%;height:100%;z-index:10;background: url(../images/finnqmarket/img_visual_phonebg.png) 0 0 no-repeat;background-size:100% 100%;}
-.one_stop .view.tcredit .sec_visual .day_box .box_inner{position:absolute;padding: 35.215%;top:50%;left:50%;margin:-26.765% 0 0 -35.218%;border:1px solid #eeeeee;border-radius:50%;background:#f8f8f8;}
+.one_stop .view.tcredit .sec_visual .day_box .box_inner{position:absolute;padding:34.745%;top:50%;left:50%;margin:-26.765% 0 0 -35.218%;border:1px solid #eeeeee;border-radius:50%;background:#f8f8f8;}
 .one_stop .view.tcredit .sec_visual .day_box .box_inner .num{position:absolute;left:50%;top:50%;display:flex;align-items:center;justify-content:center;margin:-20px 0 0 -46px;@include font(40px);min-width:92px;}
-.one_stop .view.tcredit .sec_visual .box_shadow{position:absolute;width:100%;height:100%;padding:0 11.5% 6.7%;left:-11.5%;top:-5.05%;background: url(../images/finnqmarket/img_visual_phoneshabows.png) left top  no-repeat;background-size:100% auto;}
+.one_stop .view.tcredit .sec_visual .box_shadow{position:absolute;width:100%;height:100%;padding:0 11.5% 6.7%;left:-11.5%;top:-5.099%;background: url(../images/finnqmarket/img_visual_phoneshabows.png) left top  no-repeat;background-size:100% auto;}
 .one_stop .view.tcredit .sec_visual .day_box .bg_line{position:absolute;left:-20%;bottom:0;z-index:15;width:100%;padding: 0 20.43%;height:1px;background:url(../images/common/img_visual_lineshabows.png) left top no-repeat;background-size:100% auto;}
+.one_stop .view.tcredit .sec_tbox{padding:28px 30px 30px;margin:0 30px 45px;border-radius:10px;background-color: #fff;box-sizing:content-box;-moz-box-shadow:0px 2px 10px rgba(0,0,0,0.1);-webkit-box-shadow:0px 2px 10px rgba(0,0,0,0.1);box-shadow:0px 2px 10px rgba(0,0,0,0.1);}
+.one_stop .view.tcredit .sec_tbox .text{font-size:16px;line-height:20px;color:#222;}
+.one_stop .view.tcredit .sec_tbox .text strong{position:relative;top:0;display:inline-block;vertical-align:top;font-size:16px;line-height:20px;font-weight:normal;font-family:"AppleSDGothicNeo-Bold";font-weight:bold;}
+.one_stop .view.tcredit .sec_tbox .btn{display:block;width:100%;margin-top:17px;box-sizing:border-box;height:46px;border:1px solid #731aed;border-radius:4px;text-align:center;font-size:16px;line-height:18px;font-family:"AppleSDGothicNeo-Bold";color:#731aed;cursor:pointer;}
+.one_stop .view.tcredit .sec_tscorebox{padding:30px;margin:16px 30px 30px;border-radius:8px;background-color: #fff;box-sizing:content-box;background: linear-gradient( to bottom, #fff 20%, #fff 20%, #e9e9e9 200%);-moz-box-shadow:0px 2px 10px rgba(0,0,0,0.1);-webkit-box-shadow:0px 2px 10px rgba(0,0,0,0.1);box-shadow:0px 2px 10px rgba(0,0,0,0.1);}
+.one_stop .view.tcredit .sec_tscorebox .img{position:relative;left:0;top:0;margin:0 10.42%;}
+.one_stop .view.tcredit .sec_tscorebox .img .box{padding:34.215%;background: url(../images/finnqmarket/img_tscorebox_money.png) 0 0 no-repeat;background-size:90% 90%;background-position:50% 100%;text-indent:-9999px;font-size:0;}
+.one_stop .view.tcredit .sec_tscorebox .info_txt{margin-top:19px;text-align:center;}
+.one_stop .view.tcredit .sec_tscorebox .info_txt .title{font-size:24px;line-height:28px;color:#222;font-family:"AppleSDGothicNeo-Bold";font-weight:bold;}
+.one_stop .view.tcredit .sec_tscorebox .info_txt .text{margin-top:4px;font-size:14px;color:#999;}
+.one_stop .view.tcredit .sec_tscorebox .info_txt .more{display:inline-block;margin-top:10px;padding-right:20px;font-size:14px;}
+.one_stop .view.tcredit .sec_tscorebox .info_txt .more a{position:relative;display:block;color:#c8c8c8;font-family:"AppleSDGothicNeo-Bold";font-size:14px;cursor:pointer;}
+.one_stop .view.tcredit .sec_tscorebox .info_txt .more a::after{content:'';display:inline-block;vertical-align:middle;position:absolute;top:50%;right:-10px;width:30px;height:30px;margin-top:-14.8px;background: url(../images/common/ico_arr_cc88.png) 0 0 no-repeat;background-size:100% 100%;}
+.ios .one_stop .view.tcredit .sec_tscorebox .info_txt .more a::after{margin-top:-15.8px;}
+.one_stop .view.tcredit .sec_tscorebox .type_box{margin-top:21px;text-align:center;}
+.one_stop .view.tcredit .sec_tscorebox .type_box .txt{display:none;}
+.one_stop .view.tcredit .sec_tscorebox .type_box .btn{display:block;width:100%;height:46px;background:#731aed;color:#fff;text-align:center;font-size:16px;line-height:18px;border-radius:4px;font-family:"AppleSDGothicNeo-Bold";cursor:pointer;}
+.one_stop .view.tcredit .sec_tscorebox .type_box.line{position:relative;margin-top:25px;}
+.one_stop .view.tcredit .sec_tscorebox .type_box.line::before{content:'';display:block;position:absolute;top:1px;left:0;margin:0 -30px;width:calc(100% + 60px;);height:1px;background:#eee;}
+.one_stop .view.tcredit .sec_tscorebox .type_box.line .btn{display:none;}
+.one_stop .view.tcredit .sec_tscorebox .type_box.line .txt{display:block;padding-top:29px;text-align:center;font-size:14px;line-height:18px;color:#999;}
 .one_stop .view.tcredit .loan_info .list_tbl{margin-top:17px;}
 .one_stop .view.tcredit .loan_info .list_tbl li{position:relative;line-height:30px;margin-top:5px;}
 .one_stop .view.tcredit .loan_info .list_tbl .line{padding-bottom:13px;margin-bottom:8px;}
@@ -1339,6 +1363,8 @@
   .one_stop .bt-popup.agree .wd320 .sticky_wrap{position:fixed;}
   .one_stop .bt-popup.agree .wd320 .agree_terms {overflow-y:scroll;overflow-x:hidden;padding:0 28px 16px;height:calc(100% - 141px);}
   .one_stop .bt-popup.agree .wd320 .agree_terms input[type="checkbox"] + label span{font-size:14px;text-align:left;}
+  .one_stop .view.tcredit .sec_tscorebox .info_txt .text{word-break: keep-all;}
+  .one_stop .view.tcredit .sec_tscorebox .info_txt .more a::after{margin-top:-15px;}
 }
 
 

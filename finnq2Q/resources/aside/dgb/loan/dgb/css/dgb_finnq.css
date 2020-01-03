@@ -659,6 +659,11 @@ body.iphoneX  #contents.add_sticky:after{height:94px;} /* 60 */
 .sec_decoration.reject {margin-top:43px;}
 .sec_decoration.reject > div {width:120px; height:140px; background:url(../images/common/img_reject.png) no-repeat; background-size:100% auto; overflow:hidden; text-indent:-999em;}
 
+/* 19.12.23 비상금 대출 안내 실패 */
+.sec_decoration.reject > div.add-info {width:100%; height:auto; margin:80px 0 45px; padding:0 20px; background:none; box-sizing:border-box;}
+.sec_decoration.reject > div.add-info a {display:block;}
+.sec_decoration.reject > div.add-info img {display:block; width:100%; height:auto;}
+
 .loan-result-wrap {padding:0 20px 28px; margin-top:27px;}
 .loan-result-wrap > div {position:relative; box-sizing:border-box; padding:27px 20px; margin-bottom:10px; border:1px solid #e0e0e0; overflow:hidden;}
 .loan-result-wrap > div:first-of-type {border-color:#999;}
@@ -823,6 +828,8 @@ body.iphoneX  #contents.add_sticky:after{height:94px;} /* 60 */
 .agree_details .terms-title.big:first-of-type {margin-top:0;}
 .agree_details .depth02 > li {margin-top:7px;}
 .agree_details strong {font-weight:bold;}
+
+
 
 
 @-webkit-keyframes rotation {

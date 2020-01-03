@@ -3,21 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
-	<meta name="format-detection" content="telephone=no">
-	<title>Finnq - 친구야 핀크하자!! 이벤트 Page</title>
-	<link rel="stylesheet" type="text/css" href="css/font.css">
-	<link rel="stylesheet" type="text/css" href="css/finnq_reset.css">
-	<link rel="stylesheet" type="text/css" href="css/finnq_common.css">
-	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="js/ui_common.js"></script>
+	<meta name="format-detection" content="telephone=no"> 
+	<title>Finnq - 친구야 핀크하자!! 마주쳐라 하이파이프 이벤트</title>
+	<link rel="stylesheet" href="../../css/ui.css?time=20191227" />
+    <link rel="stylesheet" href="../../css/ui_event.css" />
 </head>
 <body>
 	<div class="wrap">
-		<div id="contents" class="add_sticky">
-			<section class="menu_wrap">
+		<div id="contents">
+			<section class="menu_wrap menu_event">
 				<div class="sec_event_detail high5_hclap">
 					<article class="sec_event_visual">
-						<img src="img/event_high5_clap.png" alt="오픈뱅킹 런칭 이벤트! 친구야 이제 뱅크말고 핀크하자! 무제한 무료송금 핀크 소개하고 무제한 송금지원금 받자" />
+						<img src="../../images/event/high5/event_high5_clap.png" alt="오픈뱅킹 런칭 이벤트! 친구야 이제 뱅크말고 핀크하자! 무제한 무료송금 핀크 소개하고 무제한 송금지원금 받자" />
 						<div class="blind">
 							<h2>오픈뱅킹 런칭 이벤트!</h2>
 							<strong>친구야 이제 뱅크말고 핀크하자!</strong>
@@ -98,7 +95,7 @@
 				</div>
 			</section>
 
-			<!-- bottom sheet 팝업 -->
+
 			<div class="event_popup" data-popup-con="pop_bottomsheet" role="alert">
 				<div class="container">
 					<div class="conts_box">
@@ -111,12 +108,16 @@
 				</div>
 			</div>
 
-			<!-- 버튼 삭제 -->
-			<!--<div class="sticky_wrap set_type1">
+			<!-- 하다 버튼 숨김
+			<div class="sticky_wrap set_type1">
 				<button type="button" name="apply" class="btn btn_type_apply" data-popup="pop_bottomsheet">하이파이브 보내기</button>
-			</div>-->
+            </div>-->
+            
 		</div><!-- #contents -->
-	</div>
+    </div>
+    <script src="../../libs/jquery-2.2.4.min.js"></script>
+    <script src="../../libs/ui.js"></script>
+    <script src="../../libs/contents.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){ 
 			function popup() {
@@ -149,8 +150,7 @@
 				}); 
 			}
 			popup();
-		});
-		
+		});	
 	</script>
 </body>
 </html>
