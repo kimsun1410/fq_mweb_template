@@ -4779,14 +4779,14 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 ._chart12 .chart_area .chart_legend .legend_myself:before { background: #66d9d4; }
 
-/* 2019.05.21 웰컴머니 1천원 지급 추가 KTY */
+/* 2019.05.21 웰컴머니 1천원 지급 추가 : 김태양 */
 .tphone_send .t_send .title.wel_com { font-family: "AppleSDGothicNeo-Bold"; }
 
 .tphone_send .t_send .title.wel_com span { color: #731aed; }
 
 .tphone_send .t_send .title.wel_com span em { font-size: 27px; }
 
-/* 2019.11.07 핀크회원가입 KDB변경 */
+/* 2019.11.07 핀크회원가입 KDB변경 : 김태양 */
 .kdbjoin .finnqcard_join_wrap .thum_title { padding-top: 44px; }
 
 .kdbjoin .finnqcard_join_wrap .thum_title .box_btnst { position: relative; display: inline-block; padding: 0 15px 0 14px; border-radius: 13.5px; background: rgba(39, 141, 245, 0.1); font-size: 14px; line-height: 18px; line-height: 22px; height: 22px; color: #295e94; letter-spacing: 0; font-family: "AppleSDGothicNeo-Bold"; font-weight: bold; }
@@ -4815,7 +4815,7 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .kdbjoin .finnqcard_join_wrap { margin-bottom: 0; padding-bottom: 45px; }
 
-/* 2019.06.17 캐시백이벤트 캐시백현황 KTY */
+/* 2019.06.17 캐시백이벤트 캐시백현황 : 김태양 */
 .cashback .sec_head { padding: 0 0 40px; }
 
 .cashback .date_control { height: 30px; }
@@ -4878,7 +4878,7 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .cashback .sec_history .detail_set .con .con_inner .day.num > span { padding-left: 5px; }
 
-/* 2019.06.18 캐시백이벤트 캐시백확인 KTY */
+/* 2019.06.18 캐시백이벤트 캐시백확인 : 김태양 */
 #contents > section.sec_cashmy { padding-top: 0; overflow: hidden; }
 
 .scrolloff { position: fixed; overflow: hidden; width: 100%; height: 100%; }
@@ -4987,7 +4987,7 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .agree_details .depth02 > li .cl_rtxt { color: red; vertical-align: 0; }
 
-/* 2019.08.26 원스탑 혁신금융대출 KTY */
+/* 2019.08.26 원스탑 혁신금융대출 : 김태양 */
 #contents.one_stop .bgf8 { background: #f8f8f8; padding: 0; }
 
 #contents.one_stop .bgf8 .bgff { padding: 20px 0 0 0; }
@@ -5176,15 +5176,18 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_okbk:before { background-position: 0 -236px; }
 
 /* OK저축은행 */
-.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_scbk:before { background-position: 0 -270px; }
+.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_scbk:before { background-position: 0 -269px; }
 
 /* SC제일은행 */
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_ppbk:before { background-position: 0 -302px; }
 
 /* 피플펀드 */
-.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_ctbk:before { background-position: 0 -338px; }
+.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_ctbk:before { background-position: 0 -337px; }
 
 /* 씨티은행 */
+.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_jcbk:before { background-position: 0 -362px; }
+
+/* JT친애저축은행 */
 .one_stop .sec_member_input .bank_inner .inner_list li:first-child .check_box > input[type="checkbox"] + label span { position: relative; top: 14px; }
 
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label span { position: relative; top: 15px; padding: 0; margin-left: 52px; }
@@ -5253,15 +5256,15 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .btn_select.btn_type_b.popup-trigger.on { border-color: #731aed; background: #f5eeff; color: #731aed; }
 
-.one_stop .bt-popup { position: fixed; left: 0; top: 0; height: 100%; min-height: 100%; width: 100%; z-index: 100; background-color: rgba(0, 0, 0, 0.3); visibility: hidden; opacity: 0; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.one_stop .bt-popup { overflow: hidden; position: fixed; left: 0; top: 0; height: 100%; min-height: 100%; width: 100%; z-index: 100; background-color: rgba(0, 0, 0, 0.3); visibility: hidden; opacity: 0; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
 
-.one_stop .bt-popup.is-visible { opacity: 1; visibility: visible; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.one_stop .bt-popup.is-visible { opacity: 1; visibility: visible; -webkit-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; overflow: hidden; }
 
 .one_stop .bt-popup.fullopen.is-visible { -webkit-transition: none; -o-transition: none; transition: none; }
 
 .one_stop .bt-popup.is-visible .bt-popup-container { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; visibility: visible; }
 
-.one_stop .bt-popup .bt-popup-container { position: absolute; bottom: 0; width: 100%; background: #FFF; text-align: center; -webkit-transform: translate3d(0, 90%, 0); transform: translate3d(0, 30%, 0); opacity: 0; -webkit-transition-property: all; -o-transition-property: all; transition-property: all; -webkit-transition-duration: 400ms; -o-transition-duration: 400ms; transition-duration: 400ms; -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0, 1); -o-transition-timing-function: cubic-bezier(0.5, 0, 0, 1); transition-timing-function: cubic-bezier(0.5, 0, 0, 1); -webkit-animation-duration: 800ms; animation-duration: 800ms; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: cubic-bezier(0.2, 0, 0, 1); animation-timing-function: cubic-bezier(0.2, 0, 0, 1); }
+.one_stop .bt-popup .bt-popup-container { position: absolute; bottom: 0; width: 100%; z-index: 150; background: #FFF; text-align: center; -webkit-transform: translate3d(0, 90%, 0); transform: translate3d(0, 30%, 0); opacity: 0; -webkit-transition-property: all; -o-transition-property: all; transition-property: all; -webkit-transition-duration: 400ms; -o-transition-duration: 400ms; transition-duration: 400ms; -webkit-transition-timing-function: cubic-bezier(0.5, 0, 0, 1); -o-transition-timing-function: cubic-bezier(0.5, 0, 0, 1); transition-timing-function: cubic-bezier(0.5, 0, 0, 1); -webkit-animation-duration: 800ms; animation-duration: 800ms; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-timing-function: cubic-bezier(0.2, 0, 0, 1); animation-timing-function: cubic-bezier(0.2, 0, 0, 1); }
 
 .one_stop .bt-popup.agree .conts_box { padding: 29px 28px 35px; }
 
@@ -5344,7 +5347,10 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_ctbk { background-position: 0 -377px; }
 
 /* 씨티은행 */
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item .ft_blue { position: absolute; right: 0; top: 50%; margin-top: -27px; height: 55px; text-align: right; letter-spacing: 0; line-height: 54px; }
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_jcbk { background-position: 0 -405px; }
+
+/* JT친애저축은행 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item .ft_blue { position: absolute; right: 0; top: 50%; margin-top: -27px; padding-left: 0; height: 55px; text-align: right; letter-spacing: 0; line-height: 54px; }
 
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item .ft_blue .num { color: #731aed; }
 
@@ -5592,7 +5598,142 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .bt-popup-container .bt-popup-close::after { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); right: 9px; }
 
-/* 원스탑 혁신금융대출 검색결과 KTY */
+/* 원스탑 혁신금융대출 금융기관 선택 , 대출중계 수정 : 김태양 */
+.one_stop .loan_rev .sec_title { text-align: left; }
+
+.one_stop .loan_rev .sec_member_input { margin: 0 30px; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner { margin-top: 11px; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .inner_list li { position: relative; height: 96px; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 1px solid #f8f8f8; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .inner_list li a { overflow: hidden; display: block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .inner_list li .disabled { outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .inner_list li .disabled .list_area, .one_stop .loan_rev .sec_member_input .bank_inner .inner_list li .disabled .list_area strong { color: #c8c8c8; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .inner_list li .disabled .list_area > i { background-blend-mode: luminosity; background-color: #f8f8f8; opacity: .2; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area { position: relative; height: 39px; padding: 28px 0 29px; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i { position: absolute; top: 50%; left: 0; margin-top: -18px; float: left; width: 36px; height: 36px; background: url(../images/common/ir_icon_bank.png) 0 50px no-repeat; background-size: 36px auto; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_wcbk { background-position: -1px -90px; }
+
+/* 웰컴저축은행  */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_dgbk { background-position: -1px -45px; }
+
+/* DGB대구은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_wdbk { background-position: -1px -91px; }
+
+/* 웰컴디지털뱅크 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_kjbk { background-position: -1px -135px; }
+
+/* 광주은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_hnbk { background-position: 0 -179px; }
+
+/* 하나은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_smbk { background-position: 0 -225px; }
+
+/* 스마트저축은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_hkbk { background-position: 0 -269px; }
+
+/* 한국투자저축은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_okbk { background-position: 0 -317px; }
+
+/* OK저축은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_scbk { background-position: 0 -360px; }
+
+/* SC제일은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_ppbk { background-position: 0 -405px; }
+
+/* 피플펀드 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_ctbk { background-position: 0 -452px; }
+
+/* 씨티은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_jcbk { background-position: -1px -486px; }
+
+/* JT친애저축은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area .pr_text { position: relative; padding: 0 0 0 45px; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area .pr_text > strong { float: none; display: block; line-height: 18px; color: #999; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area .pr_text .txt { display: block; margin-top: 3px; font-size: 16px; line-height: 20px; }
+
+.one_stop .loan_rev .sec_notice { margin: 43px 0; padding: 0 39px 0 30px; background: #fff; }
+
+.one_stop .loan_rev .sec_areabox { padding: 30px; margin: 0 30px 15px; border-radius: 10px; background-color: #fff; -webkit-box-sizing: content-box; box-sizing: content-box; -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); background: url(../images/finnqmarket/img_bgloan_m.png) 100% bottom no-repeat; background-size: 125px auto; }
+
+.one_stop .loan_rev .sec_areabox .title_name { display: block; position: relative; }
+
+.one_stop .loan_rev .sec_areabox .title_name > i { position: absolute; top: 0; left: 0; float: left; width: 20px; height: 20px; background: url(../images/common/ir_icon_bank.png) 0 50px no-repeat; background-size: 20px auto; }
+
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_wcbk { background-position: 0 -50px; }
+
+/* 웰컴저축은행  */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_dgbk { background-position: 0 -25px; }
+
+/* DGB대구은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_wdbk { background-position: 0 -50px; }
+
+/* 웰컴디지털뱅크 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_kjbk { background-position: 0 -75px; }
+
+/* 광주은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_hnbk { background-position: 0 -100px; }
+
+/* 하나은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_smbk { background-position: 0 -125px; }
+
+/* 스마트저축은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_hkbk { background-position: 0 -150px; }
+
+/* 한국투자저축은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_okbk { background-position: 0 -176px; }
+
+/* OK저축은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_scbk { background-position: 0 -200px; }
+
+/* SC제일은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_ppbk { background-position: 0 -225px; }
+
+/* 피플펀드 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_ctbk { background-position: 0 -251px; }
+
+/* 씨티은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_jcbk { background-position: 0 -270px; }
+
+/* JT친애저축은행 */
+.one_stop .loan_rev .sec_areabox .title_name p { padding-left: 24px; font-size: 14px; line-height: 20px; color: #999; }
+
+.one_stop .loan_rev .sec_areabox .text { margin-top: 13px; font-size: 20px; line-height: 24px; color: #222; }
+
+.one_stop .loan_rev .sec_areabox .text strong { display: inline-block; line-height: 24px; font-family: "AppleSDGothicNeo-Bold"; }
+
+.one_stop .loan_rev .sec_areabox .text .ftc_p { margin-top: 8px; font-size: 18px; line-height: 22px; color: #731aed; }
+
+.one_stop .loan_rev .sec_areabox .text .ftc_p > span + span { margin-left: 30px; }
+
+.one_stop .loan_rev .sec_areabox .btn { display: block; margin-top: 28px; width: 150px; height: 36px; background: #731aed; color: #fff; text-align: center; font-size: 14px; border-radius: 4px; font-family: "AppleSDGothicNeo-Bold"; cursor: pointer; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p { padding-bottom: 45px; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p li { height: auto; padding: 28px 0; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p li .list_area { height: 100%; padding: 0; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p li .list_area i { top: 0; margin-top: 0; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p .list_area .pr_text .amount { margin-top: 8px; font-size: 18px; font-family: "LatoB"; font-weight: bold; line-height: 23px; color: #222; letter-spacing: 0; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p .list_area .pr_text .amount::after { content: ''; display: table; clear: both; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p .list_area .pr_text .amount .percent { float: left; text-align: left; }
+
+.one_stop .loan_rev .sec_member_input .bank_inner .type_p .list_area .pr_text .amount .money { float: right; text-align: right; }
+
+/* 원스탑 혁신금융대출 검색결과 : 김태양 */
 .one_stop .sec_head { padding: 0 30px 37px; }
 
 .one_stop .sec_head .tit_info { margin-top: 25px; font-size: 24px; line-height: 28px; color: #999; text-align: left; }
@@ -5716,6 +5857,9 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 .one_stop .sec_history .inner_box dl dt .products > i.icon_ctbk { background-position: 0 -452px; }
 
 /* 씨티은행 */
+.one_stop .sec_history .inner_box dl dt .products > i.icon_jcbk { background-position: 0 -486px; }
+
+/* JT친애저축은행 */
 .one_stop .sec_history .inner_box dl dt .pr_text { position: relative; padding: 0 30px 0 42px; }
 
 .one_stop .sec_history .inner_box dl dt .pr_text > strong { float: none; display: block; line-height: 17px; color: #999; }
@@ -5806,16 +5950,19 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 .one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_ppbk { background-position: 8px -442px; }
 
 /* 피플펀드 */
-.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_ctbk { background-position: 8px -494px; }
+.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_ctbk { margin: 8px; padding: 0; background-position: 0px -502px; }
 
 /* 씨티은행 */
+.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_jcbk { background-position: 8px -533px; }
+
+/* JT친애저축은행 */
 .one_stop .slide_onestop .swiper-pagination { position: relative; bottom: 0; font-size: 0; height: 6px; padding-top: 15px; }
 
 .one_stop .slide_onestop .swiper-pagination .swiper-pagination-bullet { margin: 0 2px; width: 6px; height: 6px; opacity: .3; }
 
 .one_stop .slide_onestop .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active { opacity: .7; background: #222; }
 
-/* 원스탑 혁신금융대출 검색결과 상품상세 KTY */
+/* 원스탑 혁신금융대출 검색결과 상품상세 : 김태양 */
 .one_stop .view .sec_head { padding: 0 30px 45px; }
 
 .one_stop .view .prt_inner { text-align: left; }
@@ -5824,39 +5971,42 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .view .prt_info > i { display: inline-block; width: 40px; height: 40px; background: url(../images/common/ir_icon_bank.png) 0 50px no-repeat; background-size: 40px auto; }
 
-.one_stop .view .prt_info > i.icon_wcbk { background-position: -6px -100px; }
+.one_stop .view .prt_info > i.icon_wcbk { background-position: -2px -100px; }
 
 /* 웰컴저축은행 */
 .one_stop .view .prt_info > i.icon_dgbk { background-position: 0 -50px; }
 
 /* DGB대구은행 */
-.one_stop .view .prt_info > i.icon_wdbk { background-position: -6px -100px; }
+.one_stop .view .prt_info > i.icon_wdbk { background-position: -2px -100px; }
 
 /* 웰컴디지털뱅크 */
-.one_stop .view .prt_info > i.icon_kjbk { background-position: -6px -150px; }
+.one_stop .view .prt_info > i.icon_kjbk { background-position: -1px -150px; }
 
 /* 광주은행 */
-.one_stop .view .prt_info > i.icon_hnbk { background-position: -2px -200px; }
+.one_stop .view .prt_info > i.icon_hnbk { background-position: 0 -200px; }
 
 /* 하나은행 */
-.one_stop .view .prt_info > i.icon_smbk { background-position: -6px -250px; }
+.one_stop .view .prt_info > i.icon_smbk { background-position: -2px -250px; }
 
 /* 스마트저축은행 */
-.one_stop .view .prt_info > i.icon_hkbk { background-position: -6px -300px; }
+.one_stop .view .prt_info > i.icon_hkbk { background-position: -2px -300px; }
 
 /* 한국투자저축은행 */
 .one_stop .view .prt_info > i.icon_okbk { background-position: 0 -351px; }
 
 /* OK저축은행 */
-.one_stop .view .prt_info > i.icon_scbk { background-position: -9px -400px; }
+.one_stop .view .prt_info > i.icon_scbk { background-position: -5px -400px; }
 
 /* SC제일은행 */
-.one_stop .view .prt_info > i.icon_ppbk { background-position: 0 -450px; }
+.one_stop .view .prt_info > i.icon_ppbk { background-position: -4px -450px; }
 
 /* 피플펀드 */
-.one_stop .view .prt_info > i.icon_ctbk { background-position: -2px -501px; }
+.one_stop .view .prt_info > i.icon_ctbk { background-position: 0 -501px; }
 
 /* 씨티은행 */
+.one_stop .view .prt_info > i.icon_jcbk { background-position: 0 -540px; }
+
+/* JT친애저축은행 */
 .one_stop .view .prt_info > strong { display: block; margin-top: 2px; font-size: 16px; line-height: 20px; color: #999; }
 
 .one_stop .view .tit_info_box { margin: 28px 0 25px 0; text-align: left; }
@@ -6023,7 +6173,7 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .view .loan_notice p { color: #999; line-height: 22px; }
 
-/* 원스탑 혁신금융대출 T신용등급 상세 KTY */
+/* 원스탑 혁신금융대출 T신용등급 상세 : 김태양 */
 .one_stop .view .tcredit_title { display: block; padding-top: 23px; font-size: 24px; line-height: 28px; text-align: left; }
 
 .one_stop .view .tcredit_title > .stiker { display: inline-block; position: relative; top: 5px; left: 6px; width: 28px; height: 28px; background: url(../images/common/ir_icon_chktbox_on.png) 0 0 no-repeat; background-size: 100% 100%; }
@@ -6126,6 +6276,8 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .view.tcredit .sec_tbox .btn { display: block; width: 100%; margin-top: 17px; -webkit-box-sizing: border-box; box-sizing: border-box; height: 46px; border: 1px solid #731aed; border-radius: 4px; text-align: center; font-size: 16px; line-height: 18px; font-family: "AppleSDGothicNeo-Bold"; color: #731aed; cursor: pointer; }
 
+.one_stop .view.tcredit .sec_tbox .btn:disabled { background: #c8c8c8; color: #e0e0e0; border-color: #c8c8c8; }
+
 .one_stop .view.tcredit .sec_tscorebox { padding: 30px; margin: 16px 30px 30px; border-radius: 8px; background-color: #fff; -webkit-box-sizing: content-box; box-sizing: content-box; background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), color-stop(20%, #fff), color-stop(200%, #e9e9e9)); background: -webkit-linear-gradient(top, #fff 20%, #fff 20%, #e9e9e9 200%); background: -o-linear-gradient(top, #fff 20%, #fff 20%, #e9e9e9 200%); background: linear-gradient(to bottom, #fff 20%, #fff 20%, #e9e9e9 200%); -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); }
 
 .one_stop .view.tcredit .sec_tscorebox .img { position: relative; left: 0; top: 0; margin: 0 10.42%; }
@@ -6192,7 +6344,7 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .view.tcredit .loan_notice p em { display: inline-block; color: #666; font-family: "AppleSDGothicNeo-Bold"; }
 
-/* 원스탑 혁신금융대출 T신용등급 소개 KTY */
+/* 원스탑 혁신금융대출 T신용등급 소개 : 김태양 */
 .one_stop .view.page article { position: relative; width: 100%; height: 100%; }
 
 .one_stop .view.page article.cont { overflow: visible; height: 135px; background: #fff; }
@@ -6441,7 +6593,7 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .view.page .spinner { -webkit-animation-name: spinner; animation-name: spinner; }
 
-/* 원스탑 혁신금융대출 T신용등급 소개 로딩 KTY */
+/* 원스탑 혁신금융대출 T신용등급 소개 로딩 : 김태양 */
 .one_stop .view .load_box { position: absolute; top: 50%; left: 0; width: 100%; margin-top: -204px; }
 
 .one_stop .view .load_box .round { overflow: hidden; z-index: 30; width: 180px; height: 180px; margin: 5px auto; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: #f8f8f8; }
@@ -6514,7 +6666,7 @@ a.btn_select.btn_type_a.disabled::after { background-position: 0 -166px; }
 
 .one_stop .view .load_box .go_main button::after { content: ''; display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background: url(../images/common/icon_split_loadingarr.png) 0 0 no-repeat; background-size: 16px auto; }
 
-/* MASA01Z08 : RCS송금 가입완료 KTY */
+/* MASA01Z08 : RCS송금 가입완료 : 김태양 */
 #contents > .rcs_send { padding-top: 0; }
 
 .rcs_send .s_send { position: relative; padding-top: 19px; padding-bottom: 45px; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; overflow: hidden; }
@@ -9790,7 +9942,7 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .finnq-quiz .input_wrap input[data-name="inpFocus"] { background: #fff; }
 
-/* 마주쳐라 하이파이브 상세 */
+/* 친구야 이제 뱅크말고 핀크하자! mgm 이벤트 상세 KTY */
 .high5_hclap { padding: 0; }
 
 .high5_hclap button { outline: 0 none; cursor: pointer; }
@@ -9803,51 +9955,67 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .high5_hclap .sec_event_info { background: #fff; }
 
-.high5_hclap .sec_event_info .info_listbox { padding: 42px 20px 43px; }
+.high5_hclap .sec_event_info .info_listbox { padding: 45px 30px; }
 
 .high5_hclap .sec_event_info .info_listbox .section_box { overflow: hidden; margin-top: 45px; }
 
 .high5_hclap .sec_event_info .info_listbox .section_box.first { margin-top: 0; }
 
-.high5_hclap .sec_event_info .info_listbox .section_box.first .title { display: inline-block; padding: 0 15px; height: 20px; background: #278df5; border-radius: 10px; font-size: 14px; line-height: 20px; letter-spacing: -1px; color: #fff; }
+.high5_hclap .sec_event_info .info_listbox .section_box.first .title { display: inline-block; padding: 0 15px; height: 22px; background: #278df5; border-radius: 10px; font-size: 16px; line-height: 22px; letter-spacing: -1px; color: #fff; }
+
+.high5_hclap .sec_event_info .info_listbox .section_box.first .btnevent_box { position: relative; margin-top: 24px; }
+
+.high5_hclap .sec_event_info .info_listbox .section_box.first .btnevent_box .area { display: block; margin-top: 17px; }
 
 .high5_hclap .sec_event_info .info_listbox .section_box.last .btnevent_box { padding-bottom: 21px; margin-top: 24px; }
 
 .high5_hclap .sec_event_info .info_listbox .section_box.last .btnevent_box::after { display: none; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box { position: relative; margin-top: 26px; padding-bottom: 45px; }
+.high5_hclap .sec_event_info .info_listbox .section_box .info_txt { margin-top: 23px; font-size: 16px; line-height: 20px; color: #222; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: url(../images/event/high5/bg-dotline-type1.png) 6px 0 repeat-x; background-size: contain; }
+.high5_hclap .sec_event_info .info_listbox .btnevent_box { position: relative; margin-top: 0; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .area { display: block; height: 46px; }
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .area { display: block; margin-top: 16px; }
 
 .high5_hclap .sec_event_info .info_listbox .btnevent_box .area::after { content: ''; display: table; clear: both; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .area button { position: relative; left: 0; width: 220px; font-family: "AppleSDGothicNeo-Bold"; font-size: 14px; color: #fff; text-align: center; background: #8848ff; }
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .area button { position: relative; left: 0; width: 100%; height: 46px; border-radius: 4px; font-family: "AppleSDGothicNeo-Bold"; font-size: 14px; color: #fff; text-align: center; background: #8848ff; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box form { display: block; overflow: hidden; width: auto; position: relative; padding-right: 88px; }
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .list { overflow: hidden; margin-top: 24px; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp { width: 100%; padding: 0 16px; height: 46px; font-size: 16px; letter-spacing: 0; border: 1px solid #e0e0e0; border-radius: 4px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; -webkit-border-radius: 4px; }
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .list li:first-child { margin-top: 0; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp.on, .high5_hclap .sec_event_info .info_listbox .btnevent_box .inp:focus { outline: none; border-color: #731aed; color: #731aed; background: #f5eeff; }
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .list li { margin-top: 30px; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp::-webkit-input-placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
+.high5_hclap .sec_event_info .info_listbox .btnevent_box .list li span { display: block; font-size: 20px; line-height: 20px; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp:-ms-input-placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox { position: relative; margin-top: 17px; padding-bottom: 45px; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp::-ms-input-placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox form { display: block; overflow: hidden; width: auto; position: relative; padding-right: 88px; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .inp::placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox .inp { width: 100%; padding: 0 16px; height: 46px; font-size: 16px; letter-spacing: 0; border: 1px solid #e0e0e0; border-radius: 4px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-appearance: none; -webkit-border-radius: 4px; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .btn { position: absolute; top: 0; right: 0; width: 80px; height: 46px; color: #fff; font-size: 14px; font-family: "AppleSDGothicNeo-Bold"; font-weight: bold; border-radius: 4px; letter-spacing: -1px; background-color: #8848ff; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox .inp.on, .high5_hclap .sec_event_info .info_listbox .area_codebox .inp:focus { outline: none; border-color: #731aed; color: #731aed; background: #f5eeff; }
 
-.high5_hclap .sec_event_info .info_listbox .btnevent_box .remark { position: absolute; left: 0; top: 46px; margin-top: 5px; font-size: 11px; letter-spacing: -1px; color: #f74b20; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox .inp::-webkit-input-placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
 
-.high5_hclap .sec_event_info .info_listbox .title { display: inline-block; padding: 0 15px; height: 20px; background: #278df5; border-radius: 10px; font-size: 14px; line-height: 20px; letter-spacing: -1px; color: #fff; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox .inp:-ms-input-placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
 
-.high5_hclap .sec_event_info .info_listbox .txt { display: block; margin-top: 15px; font-size: 20px; line-height: 24px; color: #222; font-family: "AppleSDGothicNeo-Bold"; font-weight: bold; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox .inp::-ms-input-placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
 
-.high5_hclap .sec_event_info .info_listbox .txt .ft_cb { display: block; line-height: 24px; color: #278df5; font-family: "AppleSDGothicNeo-Bold"; font-weight: bold; }
+.high5_hclap .sec_event_info .info_listbox .area_codebox .inp::placeholder { font-size: 16px; color: #c8c8c8; letter-spacing: -1px; }
+
+.high5_hclap .sec_event_info .info_listbox .area_codebox .btn { position: absolute; top: 0; right: 0; width: 80px; height: 46px; color: #fff; font-size: 14px; font-family: "AppleSDGothicNeo-Bold"; border-radius: 4px; letter-spacing: -1px; background-color: #8848ff; }
+
+.high5_hclap .sec_event_info .info_listbox .area_codebox .remark { position: absolute; left: 0; top: 46px; margin-top: 7px; font-size: 11px; line-height: 13px; letter-spacing: -1px; color: #f74b20; }
+
+.high5_hclap .sec_event_info .info_listbox .area_codebox::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: url(../images/event/high5/bg-dotline-type1.png) 6px 0 repeat-x; background-size: contain; }
+
+.high5_hclap .sec_event_info .info_listbox .title { display: inline-block; padding: 0 15px; height: 22px; background: #278df5; border-radius: 10px; font-size: 16px; line-height: 22px; letter-spacing: -1px; color: #fff; }
+
+.high5_hclap .sec_event_info .info_listbox .txt { display: block; margin-top: 15px; font-size: 24px; line-height: 28px; color: #222; font-family: "AppleSDGothicNeo-Bold"; font-weight: bold; }
+
+.high5_hclap .sec_event_info .info_listbox .txt .ft_cb { display: block; line-height: 28px; color: #278df5; font-family: "AppleSDGothicNeo-Bold"; font-weight: bold; }
 
 .high5_hclap .sec_event_info .info_listbox .txt .ft_cb mark { letter-spacing: 0; font-family: 'LatoB'; font-weight: bold; color: #278df5; background-color: transparent; }
 
@@ -9901,13 +10069,13 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .high5_hclap .event_info .indent.letter_0 .clear { letter-spacing: -1px; }
 
-.high5_hclap .event_info .indent { position: relative; margin-top: 9px; line-height: 20px; padding-left: 9px; color: #666; text-indent: 0; font-size: 16px; font-family: "AppleSDGothicNeo-Light"; }
+.high5_hclap .event_info .indent { position: relative; margin-top: 9px; line-height: 20px; padding-left: 9px; color: #666; font-size: 16px; font-family: "AppleSDGothicNeo-Light"; text-indent: 0; word-break: keep-all; }
 
 .high5_hclap .event_info .indent em { display: inline-block; font-family: 'LatoM'; letter-spacing: 0; color: #666; }
 
 .high5_hclap .event_info .indent .latoL { font-family: 'LatoL'; }
 
-.high5_hclap .sec_account_info { margin-top: 0; background: #f8f8f8; padding: 42px 20px; }
+.high5_hclap .sec_account_info { margin-top: 0; background: #f8f8f8; padding: 42px 30px; }
 
 .high5_hclap .sec_account_info .event_info dt { margin-top: 0; }
 
@@ -9939,18 +10107,11 @@ hr.dot_line { height: 1px; background: url(../images/common/bg-dotline-type3.png
 
 .sticky_wrap { position: fixed; bottom: 0; width: 100%; height: auto; margin: 0 auto; z-index: 50; }
 
-.sticky_wrap.set_type1 button { width: 100%; height: 100%; min-height: 60px; background: #731aed; color: #fff; font-size: 18px; line-height: 22px; font-weight: bold; font-family: "AppleSDGothicNeo-Bold"; }
+.sticky_wrap.set_type1 button { width: 100%; height: 100%; min-height: 60px; background: #731aed; color: #fff; font-size: 18px; line-height: 22px; font-family: "AppleSDGothicNeo-Bold"; }
 
 #contents .high5_hclap button:disabled { background: #c8c8c8; color: #e0e0e0; }
 
 #contents .high5_hclap input:disabled { background: #eee; color: #999; }
-
-@media screen and (max-width: 360px) { .high5_hclap .event_info .indent { word-break: keep-all; }
-  .high5_hclap .event_info .indent br { display: none; }
-  .high5_hclap .sec_event_info .info_listbox .list li.depth .conts ol li br { display: none; }
-  .high5_hclap .sec_event_info .info_listbox .list li.depth .conts ol li { word-break: keep-all; }
-  .high5_hclap .sec_event_info .info_listbox .inner_tit { word-break: keep-all; }
-  .high5_hclap .sec_event_info .info_listbox .inner_tit br { display: none; } }
 
 /* 이벤트 */
 /* @import "ows"; 오픈 웹 */

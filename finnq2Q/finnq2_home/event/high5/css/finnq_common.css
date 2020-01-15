@@ -8,15 +8,16 @@
 #contents.add_sticky:after {content:' '; position:relative;bottom:0;height:60px; background:#fff;z-index:-1;width:100%;display:block;}
 
 
-.sec_account_visual {margin: 0 20px;padding: 42px 0; background: url(../img/bg_visual_high5.png?v=1) no-repeat 100% 128.5px; background-size:270px auto; font-family: 'SpoqaR';}
-.sec_account_visual .txt { font-family: inherit; font-size: 34px;line-height: 40px;}
+.sec_account_visual {margin: 0 20px;padding: 42px 0; background: url(../img/bg_visual_high5.png?v=1) no-repeat 100% 90px; background-size:270px auto; font-family: 'SpoqaR';}
+.sec_account_visual .txt { font-family: inherit; font-size: 30px;line-height: 36px;}
 .sec_account_visual .txt em{color:#ec1840;}
-.sec_account_visual .dues {margin-top:272px;border-bottom: 1px solid #e0e0e0; font-size: 14px; line-height: 22px; padding-bottom:15px; margin-bottom: 15px;font-family: 'SpoqaB';font-weight: bold;}
+.sec_account_visual .date_txt{margin-top:5px;font-family: 'SpoqaL';font-size:13px;line-height:40px;color:#999;letter-spacing:0;}
+.sec_account_visual .dues {margin-top:160px;border-bottom: 1px solid #e0e0e0; font-size: 14px; line-height: 22px; padding-bottom:15px; margin-bottom: 15px;font-family: 'SpoqaB';font-weight: bold;}
 .dis_table {display: table; width: 100%;}
 .dis_cell {display: table-cell;}
 .sec_account_visual .dis_cell {font-family: 'SpoqaR'; font-size:14px;line-height:18px;width:50%;}
 .sec_account_visual .dis_cell span{display:block;color:#666;margin-top:4px;}
-.sec_account_saving {font-family: 'SpoqaR';background: #f8f8f8;padding:34px 27px 40px 27px;text-align: center;border-top: 1px solid #e0e0e0;}
+.sec_account_saving {font-family: 'SpoqaR';background: #f8f8f8;padding:34px 24px 40px 24px;text-align: center;border-top: 1px solid #e0e0e0;}
 .sec_account_saving .tit {font-family: inherit;font-size: 26px;line-height: 30px;letter-spacing: -1px;}
 .sec_account_saving .tit em{color: #ec1940;}
 .sec_account_saving .present{margin-top:13px;font-family: inherit;font-size: 16px;line-height:20px;color:#666;}
@@ -27,7 +28,7 @@
 .sec_account_saving .list_benefit:nth-of-type(1) dl:before {background-position:0 0;}
 .sec_account_saving .list_benefit:nth-of-type(2) dl:before {background-position:0 -100px;}
 .sec_account_saving .list_benefit:nth-of-type(3) dl:before {background-position:0 -200px;}
-.sec_account_saving .list_benefit dt {font-family: inherit;font-size:18px; color:#ec1940;}
+.sec_account_saving .list_benefit dt {font-family: inherit;font-size:18px; color:#ec1940;word-break: keep-all;}
 .sec_account_saving .list_benefit dt.color_b {color:#278df5;}
 .sec_account_saving .list_benefit dt em{letter-spacing:0;}
 .sec_account_saving .list_benefit dd {font-family: inherit;margin-top:5px; font-size:16px; color:#666; line-height:20px;word-break:keep-all;}

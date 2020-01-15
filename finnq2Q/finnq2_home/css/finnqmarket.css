@@ -506,7 +506,7 @@
 	.cont-finnqmarket .cont-visual{height:auto;padding:34px 20px 40px;}
 	.cont-finnqmarket .cont-visual h4{font-size:30px;line-height:40px;}
 	.cont-finnqmarket .cont-visual h4 span br{display:block}
-	.cont-finnqmarket .cont-visual h4 + p{padding-top:15px;font-size:14px;line-height:18px;}
+	.cont-finnqmarket .cont-visual h4 + p{padding-top:15px;font-size:13px;line-height:18px;letter-spacing:0;}
 	.cont-finnqmarket .cont-visual .hid{display:none;}
 	.cont-finnqmarket .cont-visual > div{position:static}
 	.cont-finnqmarket .cont-detail1.v1 .img_info{float:none;padding:0;}

@@ -20,6 +20,8 @@
 .sec_account_visual .txt {@include font(34px);}
 .sec_account_visual.high5 .txt {@include font(30px);}
 .sec_account_visual.high5 .txt .txt_red {color:#ec1940;}
+.sec_account_visual.high5 .thumb-add-txt {margin-top:4px; font-size:12px; line-height:16px; color:#999;}
+.sec_account_visual.high5 .thumb-add-txt .num {letter-spacing:0;}
 .sec_account_visual.loan-dgb {background:url(../images/finnqmarket/img-loan-visual.png) no-repeat 100% 93px; background-size:203px auto;}
 .sec_account_visual.loan-dgb .txt {height:245px;}
 
@@ -781,9 +783,9 @@ h1 {@include font(18px);margin-top:42px;}
 .dgb_detail_wrap .add_info_box span {color:$clear_blue;}
 
 /* high5 적금 소개 상세 :19.05.07 */
-.high5_detail .sec_account_visual {background: url(../images/finnqmarket/bg_visual_high5.png?v=1) no-repeat 100% 46px;
+.high5_detail .sec_account_visual {background: url(../images/finnqmarket/bg_visual_high5.png?v=1) no-repeat 100% 53px;
     background-size: 248px auto;}
-.high5_detail .sec_account_visual .dues {margin-top:172px;}
+.high5_detail .sec_account_visual .dues {margin-top:145px;}
 .high5_detail .sec_account_visual .dis_cell.w50p {width:50%;}
 .high5_detail .sec_account_saving .tit strong {font-weight:bold; color:#ec1940;}
 .high5_detail .sec_account_saving .present {font-size:16px; color:$brownish_grey;}
@@ -791,6 +793,7 @@ h1 {@include font(18px);margin-top:42px;}
 .high5_detail .sec_account_saving .list_benefit {position:relative; height:90px; width: 295px;
     margin: 0 auto;}
 .high5_detail .sec_account_saving .list_benefit dl:before {display:inline-block; position:absolute; top:50%; left:0px; margin-top:-45px; width:90px; height:90px; content:""; background-image:url(../images/finnqmarket/img_hight5_detail1.png); background-repeat:no-repeat; background-size:100% auto;}
+.high5_detail .sec_account_saving .list_benefit .add-info {font-size:14px; font-weight:normal; font-family:"AppleSDGothicNeo-Light";}
 .high5_detail .sec_account_saving .list_benefit:first-of-type {margin-top:27px;}
 .high5_detail .sec_account_saving .list_benefit dl {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; box-sizing: border-box; text-align: left; padding-left:110px; box-sizing:border-box;}
 .high5_detail .sec_account_saving .list_benefit:nth-of-type(1) dl:before {background-position:0 0;}
@@ -856,6 +859,7 @@ h1 {@include font(18px);margin-top:42px;}
 .high5_detail.kdb .sub_thumb_tit {margin-top:20px; font-size:12px; line-height:16px; color:#999;}
 .high5_detail.kdb .sec_account_saving .list_benefit dl:before {background-image: url(../images/finnqmarket/img_kdb_high5_detail1.png);}
 .high5_detail.kdb .sec_account_saving .list_benefit.add dl:before {background-image: url(../images/finnqmarket/img_kdb_high5_detail2.png);}
+
 .high5_detail.kdb .sec_account_saving .list_benefit:nth-of-type(2) dl:before {background-position: 0 -110px;}
 .high5_detail.kdb .sec_account_saving .list_benefit:nth-of-type(3) dl:before {background-position: 0 -220px;}
 .high5_detail.kdb .sec_account_saving .list_benefit dd {line-height:20px; word-break:keep-all;}

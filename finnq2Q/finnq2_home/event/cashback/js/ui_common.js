@@ -165,21 +165,12 @@ function init() {
                         graph.restart();
                         secBool01 = false;
                     }
-                }else{
-                    if(!secBool01){
-                        graph.reverse();
-                        secBool01 = true;
-                    }
                 }
 
                 if(winSc > secH02-$('.sec_event_share').height()- 200){
                     if(secBool02){
                         num_cc();
                         secBool02 = false;
-                    }
-                }else{
-                    if(!secBool02){
-                        secBool02 = true;
                     }
                 }
 

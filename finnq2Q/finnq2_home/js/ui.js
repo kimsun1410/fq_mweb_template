@@ -154,56 +154,55 @@ $(function() {
 	$(".key-visual .app-down a").on("click", function(b) {
 		switch ($(this).index()) {
 			case 0:
-				window.open("https://play.google.com/store/apps/details?id=com.finnq.f1", "_blank")
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank")
 				break;
 			case 1:
-				window.open("https://itunes.apple.com/app/id1260871482", "_blank");
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank");
 		}
 	});
 	$(".app-download .btns .g-btn").on("click", function(b) {
 		switch ($(this).index()) {
 			case 0:
-				window.open("https://itunes.apple.com/app/id1260871482", "_blank");
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank");
 				break;
 			case 1:
-				window.open("https://play.google.com/store/apps/details?id=com.finnq.f1",
-					"_blank")
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank")
 		}
 	});
 	$(".finnq_5savings .app-down a").on("click", function(b) {
 		switch ($(this).index()) {
 			case 0:
-				window.open("https://play.google.com/store/apps/details?id=com.finnq.f1", "_blank")
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank")
 				break;
 			case 1:
-				window.open("https://itunes.apple.com/app/id1260871482", "_blank");
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank");
 		}
 	});
 	$(".finnq_5kdbsavings .app-down a").on("click", function(b) {
 		switch ($(this).index()) {
 			case 0:
-				window.open("https://play.google.com/store/apps/details?id=com.finnq.f1", "_blank")
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank")
 				break;
 			case 1:
-				window.open("https://itunes.apple.com/app/id1260871482", "_blank");
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank");
 		}
 	});
 	$(".market_loan_dgbfq .app-down a").on("click", function(b) {
 		switch ($(this).index()) {
 			case 0:
-				window.open("https://play.google.com/store/apps/details?id=com.finnq.f1", "_blank")
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank")
 				break;
 			case 1:
-				window.open("https://itunes.apple.com/app/id1260871482", "_blank");
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank");
 		}
 	});
 	$(".market_loan_tscore .app-down a").on("click", function(b) {
 		switch ($(this).index()) {
 			case 0:
-				window.open("https://play.google.com/store/apps/details?id=com.finnq.f1", "_blank")
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank")
 				break;
 			case 1:
-				window.open("https://itunes.apple.com/app/id1260871482", "_blank");
+				window.open("https://finnq.onelink.me/YERF/45a24e3", "_blank");
 		}
 	});
 
@@ -361,9 +360,11 @@ $(function() {
 	if ($('.js-tab').length) {
 		jsTab();
 	}
+	location_gnb();
+	location_mgnb();
 });
 
-$(document).on('click', '.sub-menu a', function(e){
+/*$(document).on('click', '.sub-menu a', function(e){
 	//finnqmarket.html 페이지
 	if ($(this).is('[href*=finnqmarket.html]')){
 		e.preventDefault();
@@ -372,9 +373,44 @@ $(document).on('click', '.sub-menu a', function(e){
 		//jsTabAction(0, idx);
 	}
 	$(this).parents('li').addClass('is-on').siblings('li').removeClass('is-on');
-})
+})*/
 
-$(document).on('click', '.m-sub-menu a', function(e){
+function location_gnb() {
+	var subPage = new Array;
+    subPage[0] = "finnqmarket-card.html";
+    subPage[1] = "finnqmarket-saving.html";
+	subPage[2] = "finnqmarket-loan.html";
+	subPage[3] = "finnqmarket-investment.html";
+    subPage[4] = "finnqmarket-insurance.html";
+    subPage[5] = "finnqmarket-remittance.html";
+    var url = location.href;
+    var getAr0 = url.indexOf(subPage[0]);
+    var getAr1 = url.indexOf(subPage[1]);
+	var getAr2 = url.indexOf(subPage[2]);
+	var getAr3 = url.indexOf(subPage[3]);
+    var getAr4 = url.indexOf(subPage[4]);
+    var getAr5 = url.indexOf(subPage[5]);
+    if(getAr0 != -1){
+        $(".sub-menu li:eq(0)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr1 != -1){
+        $(".sub-menu li:eq(1)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr2 != -1){
+        $(".sub-menu li:eq(2)").addClass("is-on").siblings('li').removeClass('is-on');
+	};
+	if(getAr3 != -1){
+        $(".sub-menu li:eq(3)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr4 != -1){
+        $(".sub-menu li:eq(4)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr5 != -1){
+        $(".sub-menu li:eq(5)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+}
+
+/*$(document).on('click', '.m-sub-menu a', function(e){
 	if ($(this).is('[href*=finnqmarket.html]')){
 		e.preventDefault();
 		var idx = $(this).parent().index();
@@ -384,9 +420,47 @@ $(document).on('click', '.m-sub-menu a', function(e){
 		$('html,body').css({'overflow-y':'unset'});
 		$('.m-gnb').stop().animate({'left':'-100%'},500);
 		$('.m-gnb-deem').css({'display':'none'});
-		$(this).parent('li').addClass('is-on').siblings('li').removeClass('is-on');
+		
 	}
-})
+});*/
+
+function location_mgnb() {
+	var subPage = new Array;
+    subPage[0] = "finnqmarket-card.html";
+    subPage[1] = "finnqmarket-saving.html";
+	subPage[2] = "finnqmarket-loan.html";
+	subPage[3] = "finnqmarket-investment.html";
+    subPage[4] = "finnqmarket-insurance.html";
+    subPage[5] = "finnqmarket-remittance.html";
+    var url = location.href;
+    var getAr0 = url.indexOf(subPage[0]);
+    var getAr1 = url.indexOf(subPage[1]);
+	var getAr2 = url.indexOf(subPage[2]);
+	var getAr3 = url.indexOf(subPage[3]);
+    var getAr4 = url.indexOf(subPage[4]);
+    var getAr5 = url.indexOf(subPage[5]);
+    if(getAr0 != -1){
+        $(".m-sub-menu li:eq(0)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr1 != -1){
+        $(".m-sub-menu li:eq(1)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr2 != -1){
+        $(".m-sub-menu li:eq(2)").addClass("is-on").siblings('li').removeClass('is-on');
+	};
+	if(getAr3 != -1){
+        $(".m-sub-menu li:eq(3)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr4 != -1){
+        $(".m-sub-menu li:eq(4)").addClass("is-on").siblings('li').removeClass('is-on');
+    };
+    if(getAr5 != -1){
+        $(".m-sub-menu li:eq(5)").addClass("is-on").siblings('li').removeClass('is-on');
+	};
+	$('html,body').css({'overflow-y':'unset'});
+	$('.m-gnb').stop().animate({'left':'-100%'},500);
+	$('.m-gnb-deem').css({'display':'none'});
+}
 
 
 

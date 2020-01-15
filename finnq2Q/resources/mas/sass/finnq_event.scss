@@ -84,6 +84,41 @@
 .boxing_layout.mgm .flex_wrap .item {display:block; float:none;}
 .boxing_layout.mgm hr {display: block; margin:30px 0 -2px; border: none; border-top: 1px dashed #eee; width: 100%;}
 
+@keyframes movingTop {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(-500px);}
+}
+
+@keyframes lighting {
+    0%{opacity:0;}
+    50%{opacity:1; transform:scale(1)}
+    100%{opacity:0;}
+}
+
+@keyframes movingTail {
+    0%   {transform:rotate(-15deg);}
+    50% {transform:rotate(20deg);}
+    100% {transform:rotate(-15deg);}
+}
+
+@media screen and (max-width:768px){
+    .hight5 .event_info .indent br{display:block;}
+    .hight5 .info_type li br{display:block;}
+    .hight5 .info_type li br.spacer{display:none;}
+    .dgbkdbhight5 .event_info .indent br{display:block;}
+    .dgbkdbhight5 .event_info .indent .spacer{display:block;}
+    .kdbhight5 .event_info .indent br{display:block;}
+    .kdbhight5 .event_info .indent .spacer{display:block;}
+}
+@media screen and (max-width:320px){
+    .hight5 .event_info .indent br{display:none;}
+    .hight5 .event_info .indent br.spacer{display:block;}
+    .hight5 .info_type li br{display:block;}
+    .hight5 .info_type li br.spacer{display:block;}
+    .dgbkdbhight5 .event_info .indent br{display:none;}
+    .kdbhight5 .event_info .indent br{display:none;}
+
+}
 
 /* 2019.05.17 Thigh5적금 이벤트 상세 */
 .hight5{padding:10px 0 0;}
@@ -100,7 +135,7 @@
 .hight5 .event_tit .images{padding: 0px 14.5%;margin-top:23px;text-align:center;}
 .hight5 .event_tit .images img{display:block;vertical-align:top;}
 .hight5 .event_info {padding:0;}
-.hight5 .event_info dt:first-child{margin-top:25px;} 
+.hight5 .event_info dt:first-child{margin-top:25px;}
 .hight5 .event_info dt{margin-top:20px;line-height:22px;}
 .hight5 .event_info .letter_0{letter-spacing:0;}
 .hight5 .event_info .indent.letter_0 .clear{letter-spacing:-1px;}
@@ -132,7 +167,7 @@
 .dgbkdbhight5 .event_tit .images{padding: 0px 9.375%;margin-top:26px;text-align:center;}
 .dgbkdbhight5 .event_tit .images img{display:block;vertical-align:top;}
 .dgbkdbhight5 .event_info {padding:0;}
-.dgbkdbhight5 .event_info dt:first-child{margin-top:27px;} 
+.dgbkdbhight5 .event_info dt:first-child{margin-top:27px;}
 .dgbkdbhight5 .event_info dt{margin-top:20px;line-height:22px;}
 .dgbkdbhight5 .event_info .letter_0{letter-spacing:0;}
 .dgbkdbhight5 .event_info .indent.letter_0 .clear{letter-spacing:-1px;}
@@ -166,7 +201,7 @@
 .kdbhight5 .event_tit .images{padding: 0px 18.91%;margin-top:26px;text-align:center;}
 .kdbhight5 .event_tit .images img{display:block;vertical-align:top;}
 .kdbhight5 .event_info {padding:0;}
-.kdbhight5 .event_info dt:first-child{margin-top:27px;} 
+.kdbhight5 .event_info dt:first-child{margin-top:27px;}
 .kdbhight5 .event_info dt{margin-top:20px;line-height:22px;}
 .kdbhight5 .event_info .letter_0{letter-spacing:0;}
 .kdbhight5 .event_info .indent.letter_0 .clear{letter-spacing:-1px;}
@@ -185,38 +220,14 @@
 .kdbhight5 .sec_account_info {margin-top:38px;background:$white_four;padding:38px 20px;}
 .kdbhight5 .sec_account_info .event_info dt{margin-top:0;}
 
-@keyframes movingTop {
-    0% {transform:translateY(0);}
-    100% {transform:translateY(-500px);}
-}
 
-@keyframes lighting {
-    0%{opacity:0;}
-    50%{opacity:1; transform:scale(1)}
-    100%{opacity:0;}
-}
 
-@keyframes movingTail {
-    0%   {transform:rotate(-15deg);}
-    50% {transform:rotate(20deg);}
-    100% {transform:rotate(-15deg);}
-}
+/* 2020 세뱃돈 : 경자년 */
+.kdbhight5.event2020 .event_box {padding:0 30px}
+.kdbhight5.event2020 .event_tit .title .bold .color_r {color:#ff1d1d;}
+.kdbhight5.event2020 .event_tit .images {padding: 0px 14.91%;}
 
-@media screen and (max-width:768px){
-	.hight5 .event_info .indent br{display:block;}
-    .hight5 .info_type li br{display:block;}
-    .hight5 .info_type li br.spacer{display:none;}
-    .dgbkdbhight5 .event_info .indent br{display:block;}
-    .dgbkdbhight5 .event_info .indent .spacer{display:block;}
-    .kdbhight5 .event_info .indent br{display:block;}
-    .kdbhight5 .event_info .indent .spacer{display:block;}
-}
-@media screen and (max-width:320px){
-	.hight5 .event_info .indent br{display:none;}
-	.hight5 .event_info .indent br.spacer{display:block;}
-    .hight5 .info_type li br{display:block;}
-    .hight5 .info_type li br.spacer{display:block;}
-    .dgbkdbhight5 .event_info .indent br{display:none;}
-    .kdbhight5 .event_info .indent br{display:none;}
-
-}
+.kdbhight5.event2020 .event_info .sub-info {margin-top:10px;}
+.kdbhight5.event2020 .event_info .sub-info .tit,
+.kdbhight5.event2020 .event_info .sub-info li {font-size:14px;}
+.kdbhight5.event2020 .event_info .sub-info .tit {text-indent:-8px; font-family:'AppleSDGothicNeo-Medium';}
