@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>02캐시백라이브_캐시백확인</title><!-- 임시 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/ui.css?time=20190618" />
+</head>
+<body>
+<div class="wrap" id="MASA02CB2">
+	<div id="contents" class="cashback money">
+		<section class="sec_cashmy">
+			<!-- 캐시백 이벤트 종료시 class="cashmy_inner end" end추가 -->
+			<div class="cashmy_inner end">
+				<div class="close_box">
+					<button class="close">나중에 확인</button>
+					<button class="close animate">X</button>
+				</div>
+				<article class="slide slide-a">
+					<div class="slide-content">
+						<p><strong>캐시백</strong>이 도착했어요</p>
+						<p>이번엔 얼마?</p>
+						<p class="slide-a-child info">하단의 봉투를 터치해주세요</p>
+					</div>
+				</article>
+				<article class="slide slide-b">
+					<div class="slide-content">
+						<!-- 케이스 2가지 입니다. 밑에는 글씨색깔이 틀립니다.
+							<p class="slide-b-child">축하합니다!</p>
+							<p class="slide-b-child"><em class="ft_cp">터졌다 잭팟!!!</em></p> 
+						-->
+						<p class="slide-b-child"><em class="ft_cp">터졌다 잭팟!!!</em></p>
+						<p class="slide-b-child">100번째 거래 당첨!</p>
+						<p class="slide-b-child">
+							<strong class="cash_money"><em class="cash_num num bold" data-count="5000">0</em>원</strong>
+						</p>
+					</div>
+				</article>
+				<article class="slide">
+					<div class="slide-content">
+						<p>캐시백 확인 기간이</p>
+						<p><strong>만료</strong>되었어요</p>
+						<p class="info">새로운 LIVE를 기대하세요!</p>
+					</div>
+				</article>
+				<article class="slide_money">
+					<div class="animation_box">
+						<div class="stop">캐시백 종료</div>
+						<div class="play" id="image">캐시백 봉투</div>
+						<div class="play2" id="image2">
+							<div class="share_box">
+								<button class="view" onclick="window.open('http://www.naver.com')">내 캐시백 현황</button>
+								<button class="sns_view">공유하기</button>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		</section>
+	</div>
+	<!-- #contents -->
+</div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="../../libs/ui.js"></script>
+<script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+	eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(q).15(0(){$(17).18(0(){$(\'.19\').g(0(){j($(4).1a("1b")){5(0(){$(\'.r\').1c(\'D\')},E)}s{0 F(){$(\'1d\').6(\'1e\').1f(\'1g 1h 1i\',0(e){e.1j()})}F();8 k;8 t;5(0(){G()},1k);5(0(){$(\'#H\').1l(\'1m\',0(){I();J 1n})},1o);0 I(){$(\'.1p\').6(\'1q\');u(k);7.g(0(i){j(i<1){5(0(){7.l(i).1r()})}});K();L();5(0(){M();$(\'.1s\').6(\'m-n\')},1t);5(0(){$(\'.1u\').6(\'1v\')},N)}0 G(){8 9=v;o O=1w;o P=v;k=Q(()=>{q.R("H").S.T=`-${9}U V`;j(9<1x){9=9+P}s{9=v;u(k)}},O)}0 W(){u(t)}0 L(){8 f=w;o X=16;o Y=w;t=Q(()=>{q.R("1y").S.T=`-${f}U V`;j(f<1z){f=f+Y}s{f=w;W()}},X)}8 7=$(\'.7\'),x=$(\'.7-a-y\'),z=$(\'.7-b-y\'),1A=$(\'.7-c-y\');0 Z(){x.g(0(i){5(0(){$(\'.r\').6(\'m-n\')},N*(i+1));5(0(){$(\'.r\').6(\'D\');x.l(i).6(\'m-n\')},E)})}Z();0 11(){8 i=A.12((A.1B()*10));$(\'.7-b\').l(i).6(\'1C\')}0 K(){z.g(0(i){5(0(){z.l(i).6(\'m-n\');11()},1D*(i+1))})}0 M(){$(\'.1E\').g(0(){8 $4=$(4),13=$4.1F(\'1G-1H\');$({p:$4.B()}).1I({p:13},{1J:1K,1L:\'1M\',1N:0(){$4.B(C(A.12(4.p)))},1O:0(){$4.B(C(4.p))}})});0 C(h){1P(/(\\d+)(\\d{3})/.1Q(h.14())){h=h.14().1R(/(\\d+)(\\d{3})/,\'$1\'+\',\'+\'$2\')}J h}}}})})});',62,116,'function||||this|setTimeout|addClass|slide|var|position||||||position2|each|val||if|tID|eq|is|visible|const|countNum|document|slide_money|else|tID2|clearInterval|280|320|slideAelements|child|slideBelements|Math|text|commaSeparateNumber|shake|2500|scrollOff|animateScript|image|stopAnimate|return|animateSlideB|animateScript2|num_cc|1000|interval|diff|setInterval|getElementById|style|backgroundPosition|px|0px|stopAnimate2|interval2|diff2|animateSlideA||changeUp|floor|countTo|toString|ready||window|load|cashmy_inner|hasClass|end|removeClass|body|scrolloff|on|scroll|touchmove|mousewheel|preventDefault|1800|one|click|false|3000|animation_box|active|fadeOut|close_box|100|share_box|open|45|3640|image2|8640|slideCelements|random|win|120|cash_num|attr|data|count|animate|duration|500|easing|swing|step|complete|while|test|replace'.split('|'),0,{}))
+</script>
+</body>
+</html>
