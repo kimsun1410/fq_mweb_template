@@ -229,5 +229,8 @@
 
 .kdbhight5.event2020 .event_info .sub-info {margin-top:10px;}
 .kdbhight5.event2020 .event_info .sub-info .tit,
-.kdbhight5.event2020 .event_info .sub-info li {font-size:14px;}
-.kdbhight5.event2020 .event_info .sub-info .tit {text-indent:-8px; font-family:'AppleSDGothicNeo-Medium';}
+.kdbhight5.event2020 .event_info .sub-info li {font-size:14px; line-height:18px; margin-top:15px;}
+.kdbhight5.event2020 .event_info .sub-info .tit {text-indent:-2px; font-family:'AppleSDGothicNeo-Medium'; color:#222;}
+.kdbhight5.event2020 .event_info .sub-info .tit + ul {margin-left:6px;}
+.kdbhight5.event2020 .event_info .tel {color:#666; margin: -4px 0 0 10px;
+    display: inline-block;}

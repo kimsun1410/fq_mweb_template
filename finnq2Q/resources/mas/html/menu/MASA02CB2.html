@@ -26,8 +26,12 @@
 				</article>
 				<article class="slide slide-b">
 					<div class="slide-content">
-						<p class="slide-b-child">축하합니다!</p>
-						<p class="slide-b-child">1000번째 거래 당첨!</p>
+						<!-- 케이스 2가지 입니다. 밑에는 글씨색깔이 틀립니다.
+							<p class="slide-b-child">축하합니다!</p>
+							<p class="slide-b-child"><em class="ft_cp">터졌다 잭팟!!!</em></p> 
+						-->
+						<p class="slide-b-child"><em class="ft_cp">터졌다 잭팟!!!</em></p>
+						<p class="slide-b-child">100번째 거래 당첨!</p>
 						<p class="slide-b-child">
 							<strong class="cash_money"><em class="cash_num num bold" data-count="5000">0</em>원</strong>
 						</p>
@@ -51,7 +55,6 @@
 							</div>
 						</div>
 					</div>
-					
 				</article>
 			</div>
 
@@ -63,144 +66,7 @@
 <script src="../../libs/ui.js"></script>
 <script src="../../libs/contents.js"></script>
 <script type="text/javascript">
-$( document ).ready(function() {
-	$(window).load(function(){
-		$('.cashmy_inner').each(function () {
-		    if ($(this).hasClass("end")) {
-			      setTimeout(function () {
-		              $('.slide_money').removeClass('shake');
-		          }, 2500);
-	        } else {
-	        	function scrollOff(){
-				   $('body').addClass('scrolloff').on('scroll touchmove mousewheel', function(e){
-				      e.preventDefault();
-				   });
-				}scrollOff();
-	            var tID;
-				var tID2;
-				setTimeout(function () {
-			       animateScript();
-			    }, 1800);
-				setTimeout(function () {
-					$('#image').one('click', function () {
-						stopAnimate();
-						return false;
-					});
-				},3000);
-				function stopAnimate() { 
-					$('.animation_box').addClass('active');
-					clearInterval(tID);
-			   		slide.each(function (i) {
-				        if (i < 1) {
-				            setTimeout(function () {
-				                slide.eq(i).fadeOut();
-				            });
-				        }
-				    });
-				    animateSlideB();
-				    animateScript2();
-				    setTimeout(function () {
-			       		num_cc();
-			       		$('.close_box').addClass('is-visible');
-			    	},100);
-			    	setTimeout(function () {
-			       		$('.share_box').addClass('open');
-			    	},1000);
-			           
-				}
-				function animateScript() {
-					var    position = 280; 
-					const  interval = 50; 
-					const  diff = 280;    
-					tID = setInterval ( () => {
-						document.getElementById("image").style.backgroundPosition = 
-						`-${position}px 0px`; 
-						if (position < 3640){ 
-							position = position + diff;
-						}
-						else{ 
-							position = 280;
-							clearInterval(tID);
-						}
-					}, interval );
-				}
-				function stopAnimate2() {
-					clearInterval(tID2);
-				}
-				function animateScript2() {
-					var    position2 = 320; 
-					const  interval2 = 15; 
-					const  diff2 = 320;    
-					tID2 = setInterval ( () => {
-						document.getElementById("image2").style.backgroundPosition = 
-						`-${position2}px 0px`; 
-						if (position2 < 8640){ 
-							position2 = position2 + diff2;
-						}
-						else{ 
-							position2 = 320;
-							stopAnimate2(); 
-						}
-					}, interval2 );
-				}
-				var slide  = $('.slide'),
-			        slideAelements = $('.slide-a-child'),
-			        slideBelements = $('.slide-b-child'),
-			        slideCelements = $('.slide-c-child');
-
-			    function animateSlideA() {
-			      slideAelements.each(function (i) {
-			          setTimeout(function () {
-			              $('.slide_money').addClass('is-visible');
-			          }, 1000 * (i + 1));
-			          setTimeout(function () {
-			              $('.slide_money').addClass('shake');
-			              slideAelements.eq(i).addClass('is-visible');
-			          }, 2500);
-			      });
-			    }animateSlideA();
-				function changeUp() {
-				  var i = Math.floor((Math.random() * 99999 ));
-				   $('.slide-b').eq(i).addClass('win');
-				}
-
-			    function animateSlideB() {
-			      slideBelements.each(function (i) {
-			          setTimeout(function () {
-			              slideBelements.eq(i).addClass('is-visible');
-			              changeUp();
-			          }, 100 * (i + 1));
-			      });
-			    }
-			    function num_cc(){
-			       $('.cash_num').each(function() {
-			          var $this = $(this),
-			            countTo = $this.attr('data-count');
-			          $({countNum: $this.text()}).animate({countNum: countTo},
-			            {
-			              duration: 500, // 카운터 타임
-			              easing: 'swing',
-			              step: function() {
-			                $this.text(commaSeparateNumber(Math.floor(this.countNum)));
-			              },
-			              complete: function() {
-			                $this.text(commaSeparateNumber(this.countNum));
-			              }
-			            }
-			          );
-			        });
-
-			        function commaSeparateNumber(val) {
-			          while (/(\d+)(\d{3})/.test(val.toString())) {
-			            val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
-			          }
-			          return val;
-			        }
-				}
-	        }
-	    });
-	});  		
-});
+	eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(q).15(0(){$(17).18(0(){$(\'.19\').g(0(){j($(4).1a("1b")){5(0(){$(\'.r\').1c(\'D\')},E)}s{0 F(){$(\'1d\').6(\'1e\').1f(\'1g 1h 1i\',0(e){e.1j()})}F();8 k;8 t;5(0(){G()},1k);5(0(){$(\'#H\').1l(\'1m\',0(){I();J 1n})},1o);0 I(){$(\'.1p\').6(\'1q\');u(k);7.g(0(i){j(i<1){5(0(){7.l(i).1r()})}});K();L();5(0(){M();$(\'.1s\').6(\'m-n\')},1t);5(0(){$(\'.1u\').6(\'1v\')},N)}0 G(){8 9=v;o O=1w;o P=v;k=Q(()=>{q.R("H").S.T=`-${9}U V`;j(9<1x){9=9+P}s{9=v;u(k)}},O)}0 W(){u(t)}0 L(){8 f=w;o X=16;o Y=w;t=Q(()=>{q.R("1y").S.T=`-${f}U V`;j(f<1z){f=f+Y}s{f=w;W()}},X)}8 7=$(\'.7\'),x=$(\'.7-a-y\'),z=$(\'.7-b-y\'),1A=$(\'.7-c-y\');0 Z(){x.g(0(i){5(0(){$(\'.r\').6(\'m-n\')},N*(i+1));5(0(){$(\'.r\').6(\'D\');x.l(i).6(\'m-n\')},E)})}Z();0 11(){8 i=A.12((A.1B()*10));$(\'.7-b\').l(i).6(\'1C\')}0 K(){z.g(0(i){5(0(){z.l(i).6(\'m-n\');11()},1D*(i+1))})}0 M(){$(\'.1E\').g(0(){8 $4=$(4),13=$4.1F(\'1G-1H\');$({p:$4.B()}).1I({p:13},{1J:1K,1L:\'1M\',1N:0(){$4.B(C(A.12(4.p)))},1O:0(){$4.B(C(4.p))}})});0 C(h){1P(/(\\d+)(\\d{3})/.1Q(h.14())){h=h.14().1R(/(\\d+)(\\d{3})/,\'$1\'+\',\'+\'$2\')}J h}}}})})});',62,116,'function||||this|setTimeout|addClass|slide|var|position||||||position2|each|val||if|tID|eq|is|visible|const|countNum|document|slide_money|else|tID2|clearInterval|280|320|slideAelements|child|slideBelements|Math|text|commaSeparateNumber|shake|2500|scrollOff|animateScript|image|stopAnimate|return|animateSlideB|animateScript2|num_cc|1000|interval|diff|setInterval|getElementById|style|backgroundPosition|px|0px|stopAnimate2|interval2|diff2|animateSlideA||changeUp|floor|countTo|toString|ready||window|load|cashmy_inner|hasClass|end|removeClass|body|scrolloff|on|scroll|touchmove|mousewheel|preventDefault|1800|one|click|false|3000|animation_box|active|fadeOut|close_box|100|share_box|open|45|3640|image2|8640|slideCelements|random|win|120|cash_num|attr|data|count|animate|duration|500|easing|swing|step|complete|while|test|replace'.split('|'),0,{}))
 </script>
 </body>
 </html>

@@ -324,8 +324,13 @@
 .cashback .benefit_box .box_inner{position:relative;margin:30px 0 0;}
 .cashback .benefit_box .box_inner .benefit_guide{margin-top:0;width:auto;padding:0;text-align:left;}
 .cashback .benefit_box .box_inner .benefit_guidenum{position:absolute;right:0;top:0;width:auto;text-align:right;font-size:16px;letter-spacing:0;}
-.cashback .benefit_guide > strong{font-weight:normal;margin-right:8px;color:$brownish_grey;}
+.cashback .benefit_guide > strong{font-weight:normal;margin-right:8px;font-family:'AppleSDGothicNeo-Light';color:$brownish_grey;}
 .cashback .benefit_main .layer_wrap{top:32px;margin-left:0;left:0;}
+.cashback .benefit_box .cuppon_inner{margin-top:14px;}
+.cashback .benefit_box .cuppon_inner .benefit_cuppon::after{content:'';display:table;clear:both;}
+.cashback .benefit_box .cuppon_inner .benefit_cuppon > strong{float:left;font-size:16px;font-family:'AppleSDGothicNeo-Light';line-height:20px;color:#666;text-align:left;}
+.cashback .benefit_box .cuppon_inner .benefit_cuppon > p{padding-left:140px;text-align:right;font-family:'LatoM';font-size:16px;line-height:20px;letter-spacing:0;color:#222;}
+.cashback .benefit_box .cuppon_inner .benefit_cuppon .btn_cuppon{float:right;margin-left:8px;padding:0 8px;height:20px;font-size:10px;line-height:1px;color:#731aed;box-sizing:border-box;border:1px solid #731aed;border-radius:4px;vertical-align:bottom;cursor: pointer;}
 .cashback .ico_circle_help{vertical-align:top;}
 .cashback .sec_history{overflow:hidden;padding:0;}
 .cashback .sec_history dl{margin-top:6px;border:0 none;}
@@ -354,7 +359,7 @@
 #contents > section.sec_cashmy{padding-top:0;overflow:hidden;}
 .scrolloff{position:fixed;overflow:hidden;width:100%;height:100%;}
 .cashback.money{overflow:hidden;max-width:700px;margin:0 auto;}
-.cashback.money .cashmy_inner{position:relative;width:100%;height:100%;background:url(../images/event/cashback/bg_cashmoney.png) no-repeat;background-size:100% 100%;}
+.cashback.money .cashmy_inner{position:relative;width:100%;height:100%;/*background:url(../images/event/cashback/bg_cashmoney.png) no-repeat;background-size:100% 100%;*/}
 .cashback.money .cashmy_inner .close_box{display:block;min-height:100vh;}
 .cashback.money .cashmy_inner .close_box .close{position:absolute;right:20px;top:18px;font-size:16px;line-height:20px;transition:all .3s;}
 .cashback.money .cashmy_inner .close_box .close.animate{position:absolute;right:-500px;opacity:0;}
@@ -393,6 +398,7 @@
 .cashback.money .cashmy_inner .slide.slide-b.win .slide-content p:nth-child(1).is-visible {opacity:1;display:block;}
 .cashback.money .cashmy_inner .slide.slide-b.win .slide-content p:nth-child(2).is-visible {opacity:1;display:block;}
 .cashback.money .cashmy_inner .slide.slide-b.win .slide-content p:nth-child(3).is-visible{-webkit-transform:translateY(30px);transform: translateY(30px);}
+.cashback.money .cashmy_inner .slide.slide-b.win .slide-content p .ft_cp{color:#731aed;}
 .cashback.money .cashmy_inner .slide .slide-content p {font-size:30px;line-height:34px;font-family:"AppleSDGothicNeo-Light";}
 .cashback.money .cashmy_inner .slide .slide-content p strong{font-family: "AppleSDGothicNeo-Bold";font-weight:bold;}
 .cashback.money .cashmy_inner .slide .slide-content p.info{font-size:18px;line-height:22px;margin-top:0;}
@@ -502,9 +508,10 @@
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_hkbk:before{background-position:0 -201px;}/* 한국투자저축은행 */
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_okbk:before{background-position:0 -236px;}/* OK저축은행 */
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_scbk:before{background-position:0 -269px;}/* SC제일은행 */
-.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_ppbk:before{background-position:0 -302px;}/* 피플펀드 */
+.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_ppbk:before{background-position:0 -301px;}/* 피플펀드 */
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_ctbk:before{background-position:0 -337px;}/* 씨티은행 */
-.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_jcbk:before{background-position:0 -362px;}/* JT친애저축은행 */
+.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_jcbk:before{background-position:0 -370px;}/* JT친애저축은행 */
+.one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label.icon_dfbk:before{background-position:0 -403px;}/* 데일리 펀딩 */
 .one_stop .sec_member_input .bank_inner .inner_list li:first-child .check_box > input[type="checkbox"] + label span{position:relative;top:14px;}
 .one_stop .sec_member_input .bank_inner .inner_list li .check_box > input[type="checkbox"] + label span{position:relative;top:15px;padding:0;margin-left:52px;}
 .one_stop .sec_member_input .bank_inner .inner_list li:first-child .check_box > input[type="checkbox"] + label .sticker{top:11px;}
@@ -568,18 +575,19 @@
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item{display:block;position:relative;width:100%;height:55px;}
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span{display:inline-block;float:left;position:relative;padding-left:35px;height:55px;font-size:16px;letter-spacing:-1.14px;color:#222;text-align:left;}
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span i{content:'';position:absolute;top:50%;left:0;margin-top:-15px;width:30px;height:30px;background: url(../images/common/ir_icon_bank.png) 0 50px no-repeat;background-size:30px auto;}
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_wcbk{background-position: 0 -76px;} /* 웰컴저축은행 */
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_dgbk{background-position: 0 -33px;} /* DGB대구은행 */
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_wdbk{background-position: 0 -76px;}  /* 웰컴디지털뱅크 */
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_kjbk{background-position: 0 -113px;} /* 광주은행 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_wcbk{background-position: 0 -75px;} /* 웰컴저축은행 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_dgbk{background-position: 0 -38px;} /* DGB대구은행 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_wdbk{background-position: 0 -75px;}  /* 웰컴디지털뱅크 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_kjbk{background-position: 0 -112px;} /* 광주은행 */
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_hnbk{background-position: 0 -150px;} /* 하나은행 */
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_smbk{background-position:0 -187px;}/* 스마트저축은행 */
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_hkbk{background-position:0 -225px;}/* 한국투자저축은행 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_hkbk{background-position:0 -224px;}/* 한국투자저축은행 */
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_okbk{background-position:0 -263px;}/* OK저축은행 */
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_scbk{background-position:0 -300px;}/* SC제일은행 */
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_ppbk{background-position:0 -337px;}/* 피플펀드 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_ppbk{background-position:0 -336px;}/* 피플펀드 */
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_ctbk{background-position:0 -377px;}/* 씨티은행 */
-.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_jcbk{background-position:0 -405px;}/* JT친애저축은행 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_jcbk{background-position:0 -412px;}/* JT친애저축은행 */
+.one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item span .icon_dfbk{background-position:0 -450px;}/* 데일리 펀딩 */
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item .ft_blue{position:absolute;right:0;top:50%;margin-top:-27px;padding-left:0;height:55px;text-align:right;letter-spacing:0;line-height:54px;}
 .one_stop .bt-popup.fullopen .tel .conts_box .sec_list .list li .item .ft_blue .num{color:#731aed;}
 .one_stop .bt-popup.fullopen .tel .bt-popup-close {transition:none;}
@@ -707,7 +715,6 @@
 .one_stop .bt-popup-container .bt-popup-close::after{-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);right:9px;}
 
 /* 원스탑 혁신금융대출 금융기관 선택 , 대출중계 수정 : 김태양 */
-.one_stop .loan_rev{}
 .one_stop .loan_rev .sec_title{text-align:left;}
 .one_stop .loan_rev .sec_member_input{margin:0 30px;}
 .one_stop .loan_rev .sec_member_input .bank_inner{margin-top:11px;}
@@ -719,23 +726,28 @@
 .one_stop .loan_rev .sec_member_input .bank_inner .inner_list li .disabled .list_area > i{background-blend-mode:luminosity;background-color: #f8f8f8;opacity:.2;}
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area{position:relative;height:39px;padding:28px 0 29px;}
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area > i{position:absolute;top:50%;left:0;margin-top:-18px;float:left;width:36px;height:36px;background: url(../images/common/ir_icon_bank.png) 0 50px no-repeat;background-size:36px auto;}
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_wcbk{background-position:-1px -90px;} /* 웰컴저축은행  */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_dgbk{background-position:-1px -45px;} /* DGB대구은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_wcbk{background-position:-1px -91px;} /* 웰컴저축은행  */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_dgbk{background-position:0 -45px;} /* DGB대구은행 */
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_wdbk{background-position:-1px -91px;} /* 웰컴디지털뱅크 */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_kjbk{background-position:-1px -135px;} /* 광주은행 */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_hnbk{background-position:0 -179px;} /* 하나은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_kjbk{background-position:-1px -136px;} /* 광주은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_hnbk{background-position:0 -180px;} /* 하나은행 */
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_smbk{background-position:0 -225px;}/* 스마트저축은행 */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_hkbk{background-position:0 -269px;}/* 한국투자저축은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_hkbk{background-position:0 -270px;}/* 한국투자저축은행 */
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_okbk{background-position:0 -317px;}/* OK저축은행 */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_scbk{background-position:0 -360px;}/* SC제일은행 */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_ppbk{background-position:0 -405px;}/* 피플펀드 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_scbk{background-position:0 -361px;}/* SC제일은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_ppbk{background-position:0 -404px;}/* 피플펀드 */
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_ctbk{background-position:0 -452px;}/* 씨티은행 */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_jcbk{background-position:-1px -486px;}/* JT친애저축은행 */
-.one_stop .loan_rev .sec_member_input .bank_inner .list_area .pr_text{position:relative;padding:0 0 0 45px;}
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_jcbk{background-position:0 -495px;}/* JT친애저축은행 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area > i.icon_dfbk{background-position:0 -541px;}/* 데일리 펀딩 */
+.one_stop .loan_rev .sec_member_input .bank_inner .list_area .pr_text{position:relative;padding:0 0 0 51px;}
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area .pr_text > strong{float:none;display:block;line-height:18px;color:$warm_grey;}
 .one_stop .loan_rev .sec_member_input .bank_inner .list_area .pr_text .txt{display:block;margin-top:3px;@include font(16px);}
 .one_stop .loan_rev .sec_notice{margin:43px 0;padding:0 39px 0 30px;background:#fff;}
-.one_stop .loan_rev .sec_areabox{padding:30px;margin:0 30px 15px;border-radius:10px;background-color: #fff;box-sizing:content-box;-moz-box-shadow:0px 2px 10px rgba(0,0,0,0.1);-webkit-box-shadow:0px 2px 10px rgba(0,0,0,0.1);box-shadow:0px 2px 10px rgba(0,0,0,0.1);background: url(../images/finnqmarket/img_bgloan_m.png) 100% bottom no-repeat;background-size:125px auto;}
+
+.one_stop .loan_rev .slide_loan_rev{margin:0 0 15px 30px;overflow:visible;}
+.one_stop .loan_rev .slide_loan_rev .swiper-slide a{display:block;}
+
+.one_stop .loan_rev .sec_areabox{padding:30px;border-radius:10px;background-color: #fff;box-sizing:content-box;-moz-box-shadow:0px 2px 10px rgba(0,0,0,0.1);-webkit-box-shadow:0px 2px 10px rgba(0,0,0,0.1);box-shadow:0px 2px 10px rgba(0,0,0,0.1);background: url(../images/finnqmarket/img_bgloan_m.png) 100% bottom no-repeat;background-size:125px auto;}
 .one_stop .loan_rev .sec_areabox .title_name{display:block;position:relative;}
 .one_stop .loan_rev .sec_areabox .title_name > i{position:absolute;top:0;left:0;float:left;width:20px;height:20px;background: url(../images/common/ir_icon_bank.png) 0 50px no-repeat;background-size:20px auto;}
 .one_stop .loan_rev .sec_areabox .title_name > i.icon_wcbk{background-position:0 -50px;} /* 웰컴저축은행  */
@@ -747,9 +759,10 @@
 .one_stop .loan_rev .sec_areabox .title_name > i.icon_hkbk{background-position:0 -150px;}/* 한국투자저축은행 */
 .one_stop .loan_rev .sec_areabox .title_name > i.icon_okbk{background-position:0 -176px;}/* OK저축은행 */
 .one_stop .loan_rev .sec_areabox .title_name > i.icon_scbk{background-position:0 -200px;}/* SC제일은행 */
-.one_stop .loan_rev .sec_areabox .title_name > i.icon_ppbk{background-position:0 -225px;}/* 피플펀드 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_ppbk{background-position:0 -224px;}/* 피플펀드 */
 .one_stop .loan_rev .sec_areabox .title_name > i.icon_ctbk{background-position:0 -251px;}/* 씨티은행 */
-.one_stop .loan_rev .sec_areabox .title_name > i.icon_jcbk{background-position:0 -270px;}/* JT친애저축은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_jcbk{background-position:0 -275px;}/* JT친애저축은행 */
+.one_stop .loan_rev .sec_areabox .title_name > i.icon_dfbk{background-position:0 -300px;}/* 데일리 펀딩 */
 .one_stop .loan_rev .sec_areabox .title_name p{padding-left:24px;font-size:14px;line-height:20px;color:#999;}
 .one_stop .loan_rev .sec_areabox .text{margin-top:13px;font-size:20px;line-height:24px;color:#222;}
 .one_stop .loan_rev .sec_areabox .text strong{display:inline-block;line-height:24px;font-family:"AppleSDGothicNeo-Bold";}
@@ -764,6 +777,9 @@
 .one_stop .loan_rev .sec_member_input .bank_inner .type_p .list_area .pr_text .amount::after{content:'';display:table;clear:both;}
 .one_stop .loan_rev .sec_member_input .bank_inner .type_p .list_area .pr_text .amount .percent{float:left;text-align:left;}
 .one_stop .loan_rev .sec_member_input .bank_inner .type_p .list_area .pr_text .amount .money{float:right;text-align:right;}
+
+
+
 
 /* 원스탑 혁신금융대출 검색결과 : 김태양 */
 .one_stop .sec_head{padding:0 30px 37px;}
@@ -820,9 +836,10 @@
 .one_stop .sec_history .inner_box dl dt .products > i.icon_hkbk{background-position:0 -271px;}/* 한국투자저축은행 */
 .one_stop .sec_history .inner_box dl dt .products > i.icon_okbk{background-position:0 -317px;}/* OK저축은행 */
 .one_stop .sec_history .inner_box dl dt .products > i.icon_scbk{background-position:0 -361px;}/* SC제일은행 */
-.one_stop .sec_history .inner_box dl dt .products > i.icon_ppbk{background-position:0 -405px;}/* 피플펀드 */
+.one_stop .sec_history .inner_box dl dt .products > i.icon_ppbk{background-position:0 -404px;}/* 피플펀드 */
 .one_stop .sec_history .inner_box dl dt .products > i.icon_ctbk{background-position:0 -452px;}/* 씨티은행 */
-.one_stop .sec_history .inner_box dl dt .products > i.icon_jcbk{background-position:0 -486px;}/* JT친애저축은행 */
+.one_stop .sec_history .inner_box dl dt .products > i.icon_jcbk{background-position:0 -495px;}/* JT친애저축은행 */
+.one_stop .sec_history .inner_box dl dt .products > i.icon_dfbk{background-position:0 -540px;}/* 데일리 펀딩 */
 .one_stop .sec_history .inner_box dl dt .pr_text{position:relative;padding:0 30px 0 42px;}
 .one_stop .sec_history .inner_box dl dt .pr_text > strong{float:none;display:block;line-height:17px;color:$warm_grey;}
 .one_stop .sec_history .inner_box dl dt .pr_text .txt{display:block;margin-top:3px;@include font(16px);}
@@ -861,10 +878,11 @@
 .one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_smbk{background-position:10px -243px;}/* 스마트저축은행 */
 .one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_hkbk{background-position:8px -293px;}/* 한국투자저축은행 */
 .one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_okbk{background-position:8px -344px;}/* OK저축은행 */
-.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_scbk{background-position:8px -394px;}/* SC제일은행 */
-.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_ppbk{background-position:8px -442px;}/* 피플펀드 */
+.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_scbk{background-position:8px -392px;}/* SC제일은행 */
+.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_ppbk{background-position:8px -441px;}/* 피플펀드 */
 .one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_ctbk{margin:8px;padding:0;background-position:0px -502px;}/* 씨티은행 */
-.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_jcbk{background-position:8px -533px;}/* JT친애저축은행 */
+.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_jcbk{background-position:8px -542px;}/* JT친애저축은행 */
+.one_stop .slide_onestop li.swiper-slide .list_item .item_box .icon i.icon_dfbk{background-position:8px -592px;}/* 데일리 펀딩 */
 .one_stop .slide_onestop .swiper-pagination{position:relative;bottom:0;font-size:0;height:6px;padding-top:15px;}
 .one_stop .slide_onestop .swiper-pagination .swiper-pagination-bullet{margin:0 2px;width:6px;height:6px;opacity:.3;}
 .one_stop .slide_onestop .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{opacity:.7;background:$black;}
@@ -883,9 +901,10 @@
 .one_stop .view .prt_info > i.icon_hkbk{background-position:-2px -300px;}/* 한국투자저축은행 */
 .one_stop .view .prt_info > i.icon_okbk{background-position:0 -351px;}/* OK저축은행 */
 .one_stop .view .prt_info > i.icon_scbk{background-position:-5px -400px;}/* SC제일은행 */
-.one_stop .view .prt_info > i.icon_ppbk{background-position:-4px -450px;}/* 피플펀드 */
+.one_stop .view .prt_info > i.icon_ppbk{background-position:-4px -449px;}/* 피플펀드 */
 .one_stop .view .prt_info > i.icon_ctbk{background-position:0 -501px;}/* 씨티은행 */
-.one_stop .view .prt_info > i.icon_jcbk{background-position:0 -540px;}/* JT친애저축은행 */
+.one_stop .view .prt_info > i.icon_jcbk{background-position:0 -550px;}/* JT친애저축은행 */
+.one_stop .view .prt_info > i.icon_dfbk{background-position:0 -600px;}/* 데일리 펀딩 */
 .one_stop .view .prt_info > strong{display:block;margin-top:2px;@include font(16px);color:$warm_grey;}
 .one_stop .view .tit_info_box{margin:28px 0 25px 0;text-align:left;}
 .one_stop .view .tit_info_box:before{background:#f8f8f8;}

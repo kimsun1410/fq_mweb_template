@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Finnq - 캐시백 라이브 Renewal 이벤트 종료</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no ,viewport-fit=cover" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/finnq_reset.css">
+	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
+	<link rel="stylesheet" type="text/css" href="css/finnq_common.css">
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/flipclock.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div id="contents">
+			<section class="menu_wrap">
+				<div class="sec_event_detail cashback">
+					<article class="sec_event_area">
+						<div class="inner">
+							<!-- class="on" 추가시 show 없을시 hide -->
+							<div class="cash_tooltip on">
+								<a href="javascript:void(0);" class="arrow_box">
+									<span>캐시백 받으세요!</span>
+								</a>
+							</div>
+							<div class="cash_title">
+								<h3 class="title">
+									<em>핀크 쓸 때마다</em><br>캐시백 주는<br><em class="fc-p">캐시백 LIVE!</em>
+								</h3>
+								<span class="date">01.01~01.31</em></span>
+							</div>
+							<!-- 라이브 종료시 end 추가 -->
+							<div class="cnt_cupponbox end">
+								<div class="list">
+									<!-- 캐시백 라이브 종료  -->
+									<span class="num_box">캐시백 LIVE 종료</span>
+								</div>
+								<!-- 캐시백 라이브 종료 -->
+								<button type="button" class="btn_more">Coming soon!</button>
+							</div>
+
+							<!-- 캐시백 라이브 종료 class="close" 추가해주세요. -->
+							<div class="cash_titbox close">
+								<h4 class="cnt_title">
+									<em class="num">100</em>번째 마다 <em class="num">10%!</em><br>
+									<span class="text">랜덤으로 <em class="num">100%</em> <em class="bold">잭팟</em><em class="num">!</em></span>
+								</h4>
+								<div class="cnt_wrap">
+									<div class="wrap_inner">
+										<div class="check"></div>
+									</div>
+								</div>
+								<div class="cnt_btnbox">
+									<button type="button" class="btn">송금하기</button type="button">
+									<button type="button" class="btn"><em class="let_0">T</em>전화 송금하기</button>
+									<button type="button" class="btn">핀크카드 결제</button>
+									<button type="button" class="btn">SK pay 결제</button>
+									<button type="button" class="btn">채우기</button type="button">
+								</div>
+							</div>
+
+							<div class="cnt_banner">
+								<a href="http://www.naver.com" class="bn_box" target="_blank">
+									<span class="ir"><em>TIP</em></span>
+									<div class="text">
+										KDB산업은행 <em class="ft_m">계좌로 채우면 <em class="ft_l">X</em></em> <em class="num bold">2</em>배!<br>
+										<span class="fc-b">없다면 지금 개설하기</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</article>
+					<article class="sec_event_rank">
+						<div class="inner">
+							<div class="box_inner">
+								<p class="text">현재 남은 지급액</p>
+								<strong class="counter"><em id="counter_num" class="num bold" data-count="2000000">0</em>원</strong>
+                            </div>
+                            <!-- 종료시 class="end" 추가 -->
+							<div class="cnt_ranking end">
+								<ul class="rank_box">
+                                    <!-- class="load_section" 추가시 준비중 이미지 -->
+									<li>
+										<div class="box_list">
+											<strong>핀크카드</strong>
+											<p>
+												<span>권*탁</span>
+												<span class="fr"><em class="num">50,000</em>원</span>
+											</p>
+										</div>
+									</li>
+									<li>
+										<div class="box_list">
+											<strong>연락처송금/T전화<i class="cnt_box yellow">x<em class="num bold">2</em></i></strong>
+											<p>
+												<span>홍*동</span>
+												<span class="fr"><em class="num">200</em>원</span>
+											</p>
+										</div>
+									</li>
+									<li>
+										<div class="box_list">
+											<strong>채우기<i class="cnt_box yellow"><em class="num bold">100%</em></i></strong>
+											<p>
+												<span>홍*동</span>
+												<span class="fr"><em class="num">700</em>원</span>
+											</p>
+										</div>
+									</li>
+									<li>
+										<div class="box_list">
+											<strong>SK pay</strong>
+											<p>
+												<span>김가나다라</span>
+												<span class="fr"><em class="num">200,000</em>원</span>
+											</p>
+										</div>
+									</li>
+									<li>
+										<div class="box_list">
+											<strong>채우기/KDB</strong>
+											<p>
+												<span>홍*동</span>
+												<span class="fr"><em class="num">1,000,000</em>원</span>
+											</p>
+										</div>
+									</li>
+									<li style="opacity: 0.1;">
+										<div class="box_list">
+											<strong>연락처송금<i class="cnt_box yellow"><em class="num bold">10%</em></i></strong>
+											<p>
+												<span>홍*동</span>
+												<span class="fr"><em class="num">5,000</em>원</span>
+											</p>
+										</div>
+									</li>
+								</ul>
+								<div class="end_box"><p>LIVE가 종료되었습니다.</p></div>
+							</div>
+							<div class="share_box">
+								<button><span class="ico"></span>공유하기</button>
+							</div>
+						</div>
+					</article>
+					<article class="sec_event_info">
+						<ul class="list_expend">
+							<li>
+								<div class="subject">
+									<a href="javascript:void(0);">서비스 안내<i></i></a>
+								</div>
+								<div class="detail_set">
+									<div class="con">
+										<ul class="list">
+											<li>
+												<span class="tit">대상</span>
+												<span class="conts">만 18세 이상 핀크회원</span>
+												<span class="conts">핀크계좌에 은행계좌를 연결한 고객</span>
+											</li>
+											<li class="depth">
+												<span class="tit">참여방법</span>
+												<span class="conts">
+													<ol>
+														<li>은행계좌 연결 후 채우기, 송금(T전화송금 포함),<br>핀크카드, SKpay 결제 중 하나를 이용한다.</li>
+														<li>도착한 Push 메시지 or 현재 페이지 우측 상단의<br>‘쿠폰 보기’를 누르고</li>
+														<li>‘캐시백 현황’ 페이지의 ‘캐시백 받기’를 눌러<br>캐시백을 받는다!</li>
+													</ol>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="subject">
+									<a href="javascript:void(0);">유의사항<i></i></a>
+								</div>
+								<div class="detail_set">
+									<div class="con">
+										<ul class="event_info">
+											<li class="dash_type indent">쿠폰은 기간 내 NaN개 기본 제공됩니다. (취소포함)</li>
+											<li class="dash_type indent">건당 최대 지급 캐시백은 NaN원이며, 잭팟 당첨시 건당<br> 최대 지급 캐시백은 NaN원입니다.</li>
+											<li class="dash_type indent">기간 내 확인하지 않은 캐시백은 소멸됩니다.</li>
+											<li class="dash_type indent">캐시백 지급 후 원거래(송금/결제) 취소 시 캐시백은<br> 환수됩니다.</li>
+											<li class="dash_type indent">[송금] 동일 연락처 송금은 %% N회만 지급됩니다.</li>
+											<li class="dash_type indent">[송금] 동일 계좌번호 송금은 %% N회만 지급됩니다.</li>
+											<li class="dash_type indent">[채우기] N원 이상 채워야 지급됩니다.</li>
+											<li class="dash_type indent">[채우기] %% N회만 지급됩니다.</li>
+											<li class="dash_type indent">[채우기] 자동 충전 및 직접 입금을 제외한 연결계좌<br> 채우기일 때만 캐시백이 지급됩니다.</li>
+											<li class="dash_type indent">총 지급액 소진 시 캐시백LIVE는 조기 종료됩니다.</li>
+											<li class="dash_type indent">캐시백LIVE의 상세내용은 별도 고지없이 변경될 수<br> 있습니다.</li>
+											<li class="dash_type indent">Push 메시지가 오지 않으면 더보기 > 로그인/알림설정<br> > 알림설정을 On하세요.</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</article>
+				</div>
+			</section>
+		</div><!-- #contents -->
+	</div>
+	<script type="text/javascript">init();</script>
+</body>
+</html>

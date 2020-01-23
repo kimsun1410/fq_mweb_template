@@ -19,17 +19,28 @@
 	<div id="contents" class="one_stop show">
         <!-- 리뉴얼 class="loan_rev" 추가 -->
 		<section class="loan_rev">
-            <div class="sec_areabox">
-                <div class="title_name">
-                    <i class="icon_hnbk"><em class="blind">KEB하나은행 CI</em></i>
-                    <p>KEB하나은행</p>
-                </div>
-                <div class="text">
-                    <em class="num">300</em>만원까지 바로 꺼내쓰는<br ><strong>핀크 비상금대출</strong>
-                    <p class="ftc_p"><span class="num bold">3.08%~</span><span class="num bold">300만원</span></p>
-                </div>
-                <button class="btn">지금 신청하기</button>
+            <div class="swiper-container slide_loan_rev"> 
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="javascript:void(0);">
+                            <div class="sec_areabox">
+                                <div class="title_name">
+                                    <i class="icon_hnbk"><em class="blind">KEB하나은행 CI</em></i>
+                                    <p>KEB하나은행</p>
+                                </div>
+                                <div class="text">
+                                    <em class="num">300</em>만원까지 바로 꺼내쓰는<br ><strong>핀크 비상금대출</strong>
+                                    <p class="ftc_p"><span class="num bold">3.08%~</span><span class="num bold">300만원</span></p>
+                                </div>
+                                <button class="btn">지금 신청하기</button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
+
             <div class="sec_member_input">
                 <div class="bank_inner">
                     <!-- 대출중계 class="type_p" 추가 -->
@@ -102,10 +113,23 @@
                          </li>
                          <li>
                             <div class="list_area">
-                                <i class="icon_ctbk"><em class="blind">씨티은행 CI</em></i>
+                                <i class="icon_jcbk"><em class="blind">JT친애저축은행 CI</em></i>
                                 <div class="pr_text">
-                                    <strong>씨티은행</strong>
-                                    <p class="txt">씨티 부채통합 서비스</p>
+                                    <strong>JT친애저축은행</strong>
+                                    <p class="txt">JT친애저축은행 부채통합 서비스</p>
+                                    <div class="amount">
+                                        <span class="percent">2.58%~</span>
+                                        <span class="money">1억8천만원</span>
+                                    </div>
+                                </div>
+                            </div>
+                         </li>
+                         <li>
+                            <div class="list_area">
+                                <i class="icon_dfbk"><em class="blind">데일리 펀딩 CI</em></i>
+                                <div class="pr_text">
+                                    <strong>데일리 펀딩</strong>
+                                    <p class="txt">데일리 펀딩 서비스</p>
                                     <div class="amount">
                                         <span class="percent">2.58%~</span>
                                         <span class="money">1억8천만원</span>
@@ -123,5 +147,21 @@
 <script src="../../libs/jquery-2.2.4.min.js"></script>
 <script src="../../libs/ui.js"></script>
 <script src="../../libs/contents.js"></script>
+<script type="text/javascript">
+    /*function Slide() {
+        var loan_rev_onestop = new Swiper(".slide_loan_rev", {
+            loop: true,
+            autoHeight: true,
+            slidesPerView: 'auto',
+            spaceBetween : 10,
+            resize : true,
+            autoplay: false,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    } Slide();*/
+</script>
 </body>
 </html>
